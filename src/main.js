@@ -1,6 +1,14 @@
-import { example } from './data.js';
-// import data from './data/lol/lol.js';
-import data from './data/pokemon/pokemon.js';
+import data  from './data/countries/countries.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 
-console.log(example, data);
+const countries = data.countries;
+
+const commonCountriesNames = [];
+
+countries.forEach((country) => {
+  commonCountriesNames.push(country.name.common)
+});
+
+const sortedCommonCountriesNames = commonCountriesNames.slice().sort();
+
+console.log(sortedCommonCountriesNames);
