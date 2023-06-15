@@ -1,12 +1,109 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon</title>
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <header>
+        <img src="assets/logo-pokemon.png">
+        <nav>
+            <h3>POKEMONS</h3>
+            <h3>COMPARE</h3>
+        </nav>
+    </header>
+    <main>
+        <section class="welcome">
+            <div class="caja-welcome">
+                <h1>Welcome</h1>
+                <p>Everything you need to know about Pokémon</p>
+                <div class="options-welcome">
+                    <a href="#allpokemon"><button>All pokémon</button></a>
+                    <a href="#compare"><button>Compare</button></a>
+                </div> 
+            </div>
+        </section>
+        <section  id="allpokemon"></a>
+            <h2>All Pokémon</h2>
+            <form class="process-data">
+                <section class="filter">
+                    <label>Filter</label>
+                    <button>Type<span class="material-symbols-outlined">add</span></button>
+                    <div>
+                        <ul class="list-type">
+                            <div><input type="checkbox"><li>Bug</li></div>
+                            <div><input type="checkbox"><li>Dark</li></div>
+                            <div><input type="checkbox"><li>Dragon</li></div>
+                            <div><input type="checkbox"><li>Electric</li></div>
+                            <div><input type="checkbox"><li>Fairy</li></div>
+                            <div><input type="checkbox"><li>Fighting</li></div>
+                            <div><input type="checkbox"><li>Fire</li></div>
+                            <div><input type="checkbox"><li>Flying</li></div>
+                            <div><input type="checkbox"><li>Ghost</li></div>
+                            <div><input type="checkbox"><li>Grass</li></div>
+                            <div><input type="checkbox"><li>Ground</li></div>
+                            <div><input type="checkbox"><li>Ice</li></div>
+                            <div><input type="checkbox"><li>Normal</li></div>
+                            <div><input type="checkbox"><li>Poison</li></div>
+                            <div><input type="checkbox"><li>Psychic</li></div>
+                            <div><input type="checkbox"><li>Rock</li></div>
+                            <div><input type="checkbox"><li>Steel</li></div>
+                            <div><input type="checkbox"><li>Water</li></div>
+                        </ul>
+                    </div>
+                </section>
+                <section class="sort">
+                    <label for="sort-by">Sort by</label>
+                    <select name="sort-by">
+                        <option>Choose</option>
+                        <option>A-Z</option>
+                        <option>Z-A</option>
+                    </select>
+                    <section class="view-pokemon">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </section>
+                </section>
+                <section class="search">
+                    <div>
+                        <span class="material-symbols-outlined">search</span>
+                        <input type="search" placeholder="Search Pokémon" name="q">
+                    </div>
+                </section>
+            </form>
+        </section>
+    </main>
+    <script src="main.js" type="module"></script>   
+</body>
 </html>
