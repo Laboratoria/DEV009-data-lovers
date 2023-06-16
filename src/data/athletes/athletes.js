@@ -2944,7 +2944,7 @@ export default {
       "event": "Hockey Men's Hockey",
       "medal": "Gold"
     },
-    {
+    /*{
       "name": "Eva Calvo Gmez",
       "gender": "F",
       "height": "176",
@@ -24279,6 +24279,6 @@ export default {
       "age": 29,
       "event": "Hockey Men's Hockey",
       "medal": "Bronze"
-    }
+    }*/
   ]
 }
