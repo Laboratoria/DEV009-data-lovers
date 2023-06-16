@@ -1,5 +1,4 @@
 import data from "./data/countries/countries.js";
-// import data from './data/rickandmorty/rickandmorty.js';
 
 const countries = data.countries;
 const commonCountriesNames = [];
@@ -8,51 +7,50 @@ countries.forEach((country) => {
   commonCountriesNames.push(country.name.common);
 });
 
-const result = countries.find(({ name }) => name.common === "Singapore");
-console.log(result);
-const flagCountry = result.flags.png;
-console.log(flagCountry);
-
 const sortedCommonCountriesNames = commonCountriesNames.slice().sort();
-
-console.log(sortedCommonCountriesNames);
 
 const countriesMain = document.querySelector(".countries-main");
 
-const containerCountriesList = document.querySelector(
-  ".common-countries-name-ul-A"
-);
-
-// Section Creation
-
 countriesMain.innerHTML = "";
 for (let i = 65; i <= 90; i++) {
-  const htmlSection = `<section class="alphabet-section">
-  <h3>${String.fromCharCode(i)}</h3>
-  <ul class="common-countries-name-ul-${String.fromCharCode(i)}">  
-  </ul>`;
-  countriesMain.insertAdjacentHTML("beforebegin", htmlSection);
-}
+  const sectionLetter = String.fromCharCode(i);
+  const sectionCountries = sortedCommonCountriesNames.filter((country) => country.startsWith(sectionLetter));
 
-// Countries list creation
+  // Section Creation
+  if(sectionCountries.length > 0){
+    const htmlSection = `
+      <section class="alphabet-section">
+      <h3>${sectionLetter}</h3>
+      <ul class="common-countries-name-ul-${sectionLetter}"></ul>`;
+    countriesMain.insertAdjacentHTML("beforeend", htmlSection);
+  }
 
-//containerCountriesList.innerHTML = "";
-
-for (let i = 65; i <= 90; i++) {
-  for (const country of sortedCommonCountriesNames) {
-    if (country.startsWith(String.fromCharCode(i))) {
+  // Countries list creation
+  const containerList = document.querySelector(`.common-countries-name-ul-${sectionLetter}`)
+  for (const country of sectionCountries) {
+    if (country.startsWith(sectionLetter)) {
       const item = countries.find(({ name }) => name.common === country);
       const flagCountry = item.flags.png;
-      let stringC = `.common-countries-name-ul-${String.fromCharCode(i)}`;
-      let containerList = document.querySelector(`${stringC}`);
       const html = `
-      <li>${country} <img
+        <li>${country} <img
         class="flag-country"
         src="${flagCountry}"
         alt="flag country"
-        width="20"
-        /></li>`;
-      containerList.insertAdjacentHTML("beforebegin", html);
+        width="20">
+        </li>`;
+      containerList.insertAdjacentHTML("beforeend", html);
     }
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
