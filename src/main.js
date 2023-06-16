@@ -2,7 +2,6 @@ import data from "./data/countries/countries.js";
 // import data from './data/rickandmorty/rickandmorty.js';
 
 const countries = data.countries;
-
 const commonCountriesNames = [];
 
 countries.forEach((country) => {
@@ -24,17 +23,20 @@ const containerCountriesList = document.querySelector(
   ".common-countries-name-ul-A"
 );
 
+// Section Creation
+
 countriesMain.innerHTML = "";
 for (let i = 65; i <= 90; i++) {
   const htmlSection = `<section class="alphabet-section">
   <h3>${String.fromCharCode(i)}</h3>
-  <ul class="common-countries-name-ul-${String.fromCharCode(i)}">
-    
+  <ul class="common-countries-name-ul-${String.fromCharCode(i)}">  
   </ul>`;
   countriesMain.insertAdjacentHTML("beforebegin", htmlSection);
 }
 
-containerCountriesList.innerHTML = "";
+// Countries list creation
+
+//containerCountriesList.innerHTML = "";
 
 for (let i = 65; i <= 90; i++) {
   for (const country of sortedCommonCountriesNames) {
@@ -42,18 +44,14 @@ for (let i = 65; i <= 90; i++) {
       const item = countries.find(({ name }) => name.common === country);
       const flagCountry = item.flags.png;
       let stringC = `.common-countries-name-ul-${String.fromCharCode(i)}`;
-      const stringTest = "Hola";
-      console.log(stringTest);
-      console.log(stringC);
-      console.log("Hola");
       let containerList = document.querySelector(`${stringC}`);
       const html = `
       <li>${country} <img
         class="flag-country"
         src="${flagCountry}"
         alt="flag country"
-        width="15"
-      /></li>`;
+        width="20"
+        /></li>`;
       containerList.insertAdjacentHTML("beforebegin", html);
     }
   }
