@@ -1,0 +1,11 @@
+.alphabet-section {
+  border-bottom: 5px solid rgb(80, 79, 79);
+}
+
+ul {
+  line-height: 1.4;
+}
+
+li {
+  color: #777;
+}
