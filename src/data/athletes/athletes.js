@@ -1,21 +1,21 @@
-export default {
-  "games": "Olympic Games",
-  "year": 2016,
-  "season": "summer",
-  "city": "Rio de Janeiro",
-  "athletes": [
-    {
-      "name": "Giovanni Abagnale",
-      "gender": "M",
-      "height": "198",
-      "weight": "90",
-      "sport": "Rowing",
-      "team": "Italy",
-      "noc": "ITA",
-      "age": 21,
-      "event": "Rowing Men's Coxless Pairs",
-      "medal": "Bronze"
-    },
+  export default {
+    "games": "Olympic Games",
+    "year": 2016,
+    "season": "summer",
+    "city": "Rio de Janeiro",
+    "athletes": [
+      {
+        "name": "Giovanni Abagnale",
+        "gender": "M",
+        "height": "198",
+        "weight": "90",
+        "sport": "Rowing",
+        "team": "Italy",
+        "noc": "ITA",
+        "age": 21,
+        "event": "Rowing Men's Coxless Pairs",
+        "medal": "Bronze"
+      },
     {
       "name": "Patimat Abakarova",
       "gender": "F",
