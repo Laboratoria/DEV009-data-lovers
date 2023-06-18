@@ -1,56 +1,55 @@
 import data from "./data/countries/countries.js";
 
-const countries = data.countries;
-const commonCountriesNames = [];
+import countriesDataAdmin from "./data.js";
 
-countries.forEach((country) => {
-  commonCountriesNames.push(country.name.common);
+const buttonLoadCountriesList = document.querySelector(".load-section-button");
+const buttonClearCountriesList = document.querySelector(
+  ".clear-section-button"
+);
+const section = document.querySelector(".countries-main");
+const countryInput = document.getElementById("country-input");
+
+let countryToSearch;
+let countriesFinded;
+let countriesFindedCommonNames = [];
+
+countriesDataAdmin.generatesCountriesList();
+buttonClearCountriesList.addEventListener("click", function () {
+  countriesDataAdmin.clearCountriesList();
 });
 
-const sortedCommonCountriesNames = commonCountriesNames.slice().sort();
+buttonLoadCountriesList.addEventListener("click", function () {
+  countriesDataAdmin.generatesCountriesList();
+});
 
-const countriesMain = document.querySelector(".countries-main");
-
-countriesMain.innerHTML = "";
-for (let i = 65; i <= 90; i++) {
-  const sectionLetter = String.fromCharCode(i);
-  const sectionCountries = sortedCommonCountriesNames.filter((country) => country.startsWith(sectionLetter));
-
-  // Section Creation
-  if(sectionCountries.length > 0){
-    const htmlSection = `
-      <section class="alphabet-section">
-      <h3>${sectionLetter}</h3>
-      <ul class="common-countries-name-ul-${sectionLetter}"></ul>`;
-    countriesMain.insertAdjacentHTML("beforeend", htmlSection);
+countryInput.addEventListener("input", () => {
+  const countryInputTxet = countryInput.value;
+  countryToSearch =
+    countryInputTxet.charAt(0).toUpperCase() + countryInputTxet.slice(1);
+  section.innerHTML = "";
+  const countriesFinded = countriesDataAdmin.search(
+    data.countries,
+    countryToSearch
+  );
+  countriesFinded.forEach((countriesFinded) => {
+    countriesFindedCommonNames.push(countriesFinded.name.common);
+  });
+  console.log(countriesFindedCommonNames);
+  if (countryInputTxet.length > 0 && countriesFinded.length === 0) {
+    countriesDataAdmin.clearCountriesList();
+    section.textContent = "Country not found";
+  } else {
+    countriesDataAdmin.generateSection(
+      countryInputTxet.charAt(0).toUpperCase()
+    );
+    countriesDataAdmin.generatesCountriesFindedList(
+      countriesFinded,
+      countryInputTxet.charAt(0).toUpperCase()
+    );
   }
-
-  // Countries list creation
-  const containerList = document.querySelector(`.common-countries-name-ul-${sectionLetter}`)
-  for (const country of sectionCountries) {
-    if (country.startsWith(sectionLetter)) {
-      const item = countries.find(({ name }) => name.common === country);
-      const flagCountry = item.flags.png;
-      const html = `
-        <li>${country} <img
-        class="flag-country"
-        src="${flagCountry}"
-        alt="flag country"
-        width="20">
-        </li>`;
-      containerList.insertAdjacentHTML("beforeend", html);
-    }
+  if (countryInputTxet.length === 0) {
+    countriesDataAdmin.generatesCountriesList();
   }
-}
-
-
-
-
-
-
-
-
-
-
-
-
+});
+console.log(countryToSearch);
+console.log(countriesFinded);

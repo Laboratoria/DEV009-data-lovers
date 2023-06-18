@@ -7,11 +7,37 @@ body {
   border-bottom: 5px solid rgb(80, 79, 79);
 }
 
-li {
-  color: #777;
+#country-input {
+  background-image: url("./images/search-icon.png"); /* Add a search icon to input */
+  background-position: 10px 10px; /*Position the search icon */
+  background-size: 25px;
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 95%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
 }
 
-li:hover {
-  text-decoration: underline;
-  cursor: pointer;
+li {
+  margin: 5px;
+  display: block;
+  background-color: #f6f6f6;
+  padding: 12px; /* Add some padding */
+  text-decoration: none; /* Remove default text underline */
+  font-size: 18px; /* Increase the font-size */
+  color: black; /* Add a black text color */
+}
+
+li a {
+  margin-top: -1px; /* Prevent double borders */
+  padding: 12px; /* Add some padding */
+  text-decoration: none; /* Remove default text underline */
+  font-size: 18px; /* Increase the font-size */
+  color: black;
+  display: inline; /* Make country name and flag appear in the same line */
+}
+
+li a:hover:not(.header) {
+  background-color: #eee; /* Add a hover effect to all links, except for headers */
 }
