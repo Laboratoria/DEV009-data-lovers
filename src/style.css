@@ -34,8 +34,6 @@ li a {
   padding: 12px; /* Add some padding */
   text-decoration: none; /* Remove default text underline */
   font-size: 18px; /* Increase the font-size */
-  color: black;
-  display: inline; /* Make country name and flag appear in the same line */
 }
 
 li a:hover:not(.header) {

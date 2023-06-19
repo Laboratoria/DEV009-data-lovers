@@ -23,10 +23,11 @@ buttonLoadCountriesList.addEventListener("click", function () {
 });
 
 countryInput.addEventListener("input", () => {
-  const countryInputTxet = countryInput.value;
+  const countryInputText = countryInput.value;
   countryToSearch =
-    countryInputTxet.charAt(0).toUpperCase() + countryInputTxet.slice(1);
-  section.innerHTML = "";
+    countryInputText.charAt(0).toUpperCase() +
+    countryInputText.slice(1).toLowerCase();
+  countriesDataAdmin.clearCountriesList();
   const countriesFinded = countriesDataAdmin.search(
     data.countries,
     countryToSearch
@@ -35,19 +36,19 @@ countryInput.addEventListener("input", () => {
     countriesFindedCommonNames.push(countriesFinded.name.common);
   });
   console.log(countriesFindedCommonNames);
-  if (countryInputTxet.length > 0 && countriesFinded.length === 0) {
+  if (countryInputText.length > 0 && countriesFinded.length === 0) {
     countriesDataAdmin.clearCountriesList();
     section.textContent = "Country not found";
   } else {
     countriesDataAdmin.generateSection(
-      countryInputTxet.charAt(0).toUpperCase()
+      countryInputText.charAt(0).toUpperCase()
     );
     countriesDataAdmin.generatesCountriesFindedList(
       countriesFinded,
-      countryInputTxet.charAt(0).toUpperCase()
+      countryInputText.charAt(0).toUpperCase()
     );
   }
-  if (countryInputTxet.length === 0) {
+  if (countryInputText.length === 0) {
     countriesDataAdmin.generatesCountriesList();
   }
 });
