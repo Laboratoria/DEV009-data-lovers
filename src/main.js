@@ -1,24 +1,22 @@
 import data from "./data/countries/countries.js";
-
 import countriesDataAdmin from "./data.js";
 
 const buttonLoadCountriesList = document.querySelector(".load-section-button");
-const buttonClearCountriesList = document.querySelector(
-  ".clear-section-button"
-);
+const buttonClearCountriesList = document.querySelector(".clear-section-button");
 const section = document.querySelector(".countries-main");
 const countryInput = document.getElementById("country-input");
 
 let countryToSearch;
-let countriesFinded;
-let countriesFindedCommonNames = [];
+const countriesFindedCommonNames = [];
 
 countriesDataAdmin.generatesCountriesList();
-buttonClearCountriesList.addEventListener("click", function () {
+
+buttonClearCountriesList.addEventListener("click", () => {
   countriesDataAdmin.clearCountriesList();
+  countryInput.value = "";
 });
 
-buttonLoadCountriesList.addEventListener("click", function () {
+buttonLoadCountriesList.addEventListener("click", () => {
   countriesDataAdmin.generatesCountriesList();
 });
 
@@ -35,7 +33,7 @@ countryInput.addEventListener("input", () => {
   countriesFinded.forEach((countriesFinded) => {
     countriesFindedCommonNames.push(countriesFinded.name.common);
   });
-  console.log(countriesFindedCommonNames);
+  
   if (countryInputText.length > 0 && countriesFinded.length === 0) {
     countriesDataAdmin.clearCountriesList();
     section.textContent = "Country not found";
@@ -52,5 +50,4 @@ countryInput.addEventListener("input", () => {
     countriesDataAdmin.generatesCountriesList();
   }
 });
-console.log(countryToSearch);
-console.log(countriesFinded);
+

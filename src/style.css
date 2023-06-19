@@ -1,10 +1,41 @@
 body {
   font-family: sans-serif;
   line-height: 1.4;
+  background-image: url(./images/pexels-monstera-7412094.jpg);
+  background-size: 100%;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-.alphabet-section {
-  border-bottom: 5px solid rgb(80, 79, 79);
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-heading {
+  font-family: stoke;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 50px;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 50px;
+  padding: 10px;
+  background-color: #FFFFFF;
+  width: 200px;
+  border-radius: 10px;
+}
+
+.search-section{
+  background: #F5F5F5;
+  border: none;
+  width: 1137px;
+  height: 30px;
+  opacity: 60%;
+  display: block;
+  margin: 0 auto;
 }
 
 #country-input {
@@ -17,6 +48,64 @@ body {
   padding: 12px 20px 12px 40px; /* Add some padding */
   border: 1px solid #ddd; /* Add a grey border */
   margin-bottom: 12px; /* Add some space below the input */
+}
+
+.button-section{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px 30px 30px 30px;
+  padding: 40px 20px 20px 20px;
+  gap: 20px;
+  
+}
+
+button.load-section-button{
+  font-family: stoke;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+button.clear-section-button{
+  font-family: stoke;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.countries-main {
+  overflow-y: scroll;
+  height: 100vh; /*Ajusta la altura según sea necesario */
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+}
+
+.alphabet-section {
+  background-color: #FFFFFF;
+  width: 800px;
+}
+
+h3 {
+  display: flex;
+  margin: 10px 10px 10px 10px;
+  padding: 10px;
+  font-family: stoke;
+  font-size: x-large;
+}
+
+ul {
+  list-style: none;
+  column-count: 2;
+  padding: 0px 20px 20px 20px;
+  margin: 0px 20px 20px 20px;
+}
+
+li:hover {
+  cursor: pointer;
 }
 
 li {
@@ -33,9 +122,9 @@ li a {
   margin-top: -1px; /* Prevent double borders */
   padding: 12px; /* Add some padding */
   text-decoration: none; /* Remove default text underline */
-  font-size: 18px; /* Increase the font-size */
+  font-size: 16px; /* Increase the font-size */
+  color: #000000;
 }
+ 
 
-li a:hover:not(.header) {
-  background-color: #eee; /* Add a hover effect to all links, except for headers */
-}
+

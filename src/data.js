@@ -2,14 +2,19 @@ import data from "./data/countries/countries.js";
 
 const countriesDataAdmin = {
   countriesMain: document.querySelector(".countries-main"),
+  
   generatesCountriesList() {
     const countries = data.countries;
+    
     const commonCountriesNames = [];
     countries.forEach((country) => {
       commonCountriesNames.push(country.name.common);
     });
+    
     const sortedCommonCountriesNames = commonCountriesNames.slice().sort();
+    
     this.countriesMain.innerHTML = "";
+    
     for (let i = 65; i <= 90; i++) {
       const sectionLetter = String.fromCharCode(i);
       const sectionCountries = sortedCommonCountriesNames.filter((country) =>
@@ -26,7 +31,7 @@ const countriesDataAdmin = {
       }
 
       // Countries list creation
-      let containerList = document.querySelector(
+      const containerList = document.querySelector(
         `.common-countries-name-ul-${sectionLetter}`
       );
       for (const country of sectionCountries) {
@@ -56,7 +61,7 @@ const countriesDataAdmin = {
   },
 
   generatesCountriesFindedList(countryList, letter) {
-    let containerList = document.querySelector(
+    const containerList = document.querySelector(
       `.common-countries-name-ul-${letter}`
     );
     containerList.innerHTML = "";
