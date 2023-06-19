@@ -7,31 +7,51 @@
   </head>
   <body>
     <header> 
-      <h1> JUEGOS OLIMPICOS RIO DE JANEIRO 2016 <img id="logo2016" src="https://img.olympicchannel.com/images/image/private/w_300/f_auto/primary/fzntd3nnabdno6x16pns"> </h1>
+      <script src="main.js" type="module"></script>
+      <div class="contenedor"> 
+        <div class="iconofiltro">
+          <label for="btnFiltro">☰</label>
+        </div>
+        <div class="logo">
+          <h1> <img id="logo2016" src="https://tentulogo.com/wp-content/uploads/2016/07/aros-de-los-juegos-olimpicos.jpg"> </h1>
+        </div>
+        <nav class="division">
+          <a href="#">Atletas</a>
+          <a href="#">Deportes</a>
+        </nav>
+      </div>
     </header>
-    <div class="div1">
-      <nav> 
-        <ul>
-          <li>DEPORTES</li>
-          <li>ATLETAS</li>
-        </ul>
-      </nav>
+    <input type="checkbox" id="btnFiltro">
+    <div class="contenedorFiltros">
+      <div class="contenedorFiltros2">
+        <nav>
+          <a href="#">Team</a>
+            <ul>
+              <a> Italy</a>
+            </ul>>
+          <a href="#">Sport</a>
+          <a href="#">Gender</a>
+          <a href="#">Medal</a>
+        </nav>
+        <label for="btnFiltro">✖️</label>
+        </div>
     </div>
     <input id="barra" type="search">
-    <button id="buscar">Buscar</button> 
-    <br>
-    <br>
-    <div class="filtro">
-    <button id="filtrar">Filtrar</button>
-      <a href="paises.html">País</a>
-      <a href="#">Deporte</a>
-      <a href="#">Edad</a>
-      <a href="#">Género</a>
-      <a href="#">Medallas</a>
-     </div>
-    
-    <div id="cartillaContenedor"> </div>>
+    <button id="buscar">Buscar</button>
+    <div class ="sortBy">
+      <nav class ="navOrden">Ordenar Por:
+        <ul class = "sortOptions">
+          <li id="athleteAtoZ">Edad Atleta: Mayor a Menor</li>
+          <li id="athleteZtoA">Edad Atleta: Menor a Mayor</li>
+          <li id="youngestToOldest">Nombre Atleta A - Z</li>
+          <li id="oldestToYoungest">Nombre Atleta Z - A</li>
+          <li>País A - Z</li>
+          <li>País Z - A</li>
+        </ul>
+      </nav>
+    </div> 
+    <div id="cartillaContenedor"></div>
     <div id="root"></div>
-    <script src="main.js" type="module"></script>
+    
   </body>
 </html>
