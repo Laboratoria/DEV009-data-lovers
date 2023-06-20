@@ -6,6 +6,7 @@ function generateCountriesList(countries) {
   });
   // Se realiza una copia del array `commonCountriesNames` usando el método `slice` y se ordena alfabéticamente con el método `sort`
   const sortedCommonCountriesNames = commonCountriesNames.slice().sort();
+  // console.log(sortedCommonCountriesNames)
   return sortedCommonCountriesNames;
 }
 
