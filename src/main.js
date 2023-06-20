@@ -79,9 +79,7 @@ function clearCountriesList() {
   section.innerHTML = "";
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  generatesCountriesList(countries.countries);
-});
+generatesCountriesList(countries.countries);
 
 buttonClearCountriesList.addEventListener("click", () => {
   clearCountriesList();
