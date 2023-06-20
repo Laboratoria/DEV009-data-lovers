@@ -1,11 +1,10 @@
-import { example } from './data.js';
+import { filterTeam } from './data.js';
 import data from './data/athletes/athletes.js';
 import { sortData } from './data.js';
 import athletes from './data/athletes/athletes.js';
 
 //llamar a los datos de Athletes
 const dataArr = Object.values(data.athletes)
-console.log("Arr", dataArr);
 //Barra de busqueda
 const barra = document.getElementById('barra')
 //Boton buscar
@@ -26,7 +25,7 @@ const cardsHTML = dataArr.map((object) => {
   return cardsHTML.join('');
 }
 
-  //Se agregan las cartillas con la información
+//Se agregan las cartillas con la información
 const cardsContainer = document.getElementById('cartillaContenedor');
 cardsContainer.innerHTML = generateCards(dataArr);
 
@@ -37,7 +36,6 @@ function sortby(){
     const sortResult = sortData.sortbyAge1(dataArr);
     const createHTML = generateCards(sortResult);
     cardsContainer.innerHTML = createHTML;
-    console.log("mayormenor", dataArr);
   });
 
   document.getElementById("youngestToOldest").addEventListener("click", () => 
@@ -45,7 +43,6 @@ function sortby(){
     const sortResult = sortData.sortbyAge2(dataArr);
     const createHTML = generateCards(sortResult);
     cardsContainer.innerHTML = createHTML;
-    console.log("menormayor", dataArr);
   });
 
   document.getElementById("athleteAtoZ").addEventListener("click", () => 
@@ -78,6 +75,14 @@ function sortby(){
 
 }
 sortby();
+//Filtrat por Team
+function fteam () {
+  const funcData = filterTeam(dataArr);
+  const createHTML = generateCards(funcData);
+  return createHTML
+}
+document.getElementById('Italy').addEventListener('click', ()=>
+cardsContainer.innerHTML = fteam())
 
 
 
@@ -89,6 +94,3 @@ sortby();
 
 
 
-
-
-console.log(example, data);

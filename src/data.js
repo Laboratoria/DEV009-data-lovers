@@ -1,10 +1,9 @@
-export const example = {
-paisAtlethes: (datos) => {
-     const name = datos.filter( objeto => objeto.team === Italia)
-     return name
+//filtrar team Italy
+export function filterTeam (datos) {
+  const x = datos.filter((obj) => {
+  return obj.team === 'Italy';})
+  return x
 }
-}
-
 export const sortData = {
      //ordena los atletas por edad: Mayor a Menor
      sortbyAge1: (data) => {
