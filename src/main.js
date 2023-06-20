@@ -1,9 +1,11 @@
 import { example } from './data.js';
 import data from './data/athletes/athletes.js';
 import { sortData } from './data.js';
+import athletes from './data/athletes/athletes.js';
 
 //llamar a los datos de Athletes
-const datos = data.athletes
+const dataArr = Object.values(data.athletes)
+console.log("Arr", dataArr);
 //Barra de busqueda
 const barra = document.getElementById('barra')
 //Boton buscar
@@ -14,22 +16,66 @@ buscar.addEventListener('click', () =>{
     return 
 })
 // Extrar los datos
-const cartillasHTML = datos.map((objeto) => {
-    const propiedadesHTML = Object.entries(objeto).map(([clave, valor]) => {
-      return `<p><strong>${clave}:</strong> ${valor}</p>`;
+function generateCards () {
+const cardsHTML = dataArr.map((object) => {
+    const propiedadesHTML = Object.entries(object).map(([clave, valor]) => {
+        return `<p><strong>${clave}:</strong> ${valor}</p>`;
     }).join('');
     return `<div class="cartilla">${propiedadesHTML}</div>`;
-  });
-  const cartillasContainer = document.getElementById('cartillaContenedor');
-    cartillasContainer.innerHTML = cartillasHTML.join('');
+});
+  return cardsHTML.join('');
+}
+
+  //Se agregan las cartillas con la información
+const cardsContainer = document.getElementById('cartillaContenedor');
+cardsContainer.innerHTML = generateCards(dataArr);
 
 //Ordenar por
 function sortby(){
-  document.getElementById("athleteAtoZ").addEventListener("click", () => {
-    sortData.sortbyAge1(data.athletes);
-    // Aquí puedes realizar la lógica para mostrar los atletas ordenados
-    console.log(data.athletes);
+  document.getElementById("oldestToYoungest").addEventListener("click", () => 
+  {
+    const sortResult = sortData.sortbyAge1(dataArr);
+    const createHTML = generateCards(sortResult);
+    cardsContainer.innerHTML = createHTML;
+    console.log("mayormenor", dataArr);
   });
+
+  document.getElementById("youngestToOldest").addEventListener("click", () => 
+  {
+    const sortResult = sortData.sortbyAge2(dataArr);
+    const createHTML = generateCards(sortResult);
+    cardsContainer.innerHTML = createHTML;
+    console.log("menormayor", dataArr);
+  });
+
+  document.getElementById("athleteAtoZ").addEventListener("click", () => 
+  {
+    const sortResult = sortData.sortbyNameAtoZ(dataArr);
+    const createHTML = generateCards(sortResult);
+    cardsContainer.innerHTML = createHTML;
+  });
+
+  document.getElementById("athleteZtoA").addEventListener("click", () => 
+  {
+    const sortResult = sortData.sortbyNameZtoA(dataArr);
+    const createHTML = generateCards(sortResult);
+    cardsContainer.innerHTML = createHTML;
+  });
+
+  document.getElementById("teamAtoZ").addEventListener("click", () => 
+  {
+    const sortResult = sortData.sortbyCountryAtoZ(dataArr);
+    const createHTML = generateCards(sortResult);
+    cardsContainer.innerHTML = createHTML;
+  });
+
+  document.getElementById("teamZtoA").addEventListener("click", () =>
+  {
+    const sortResult = sortData.sortbyCountryZtoA(dataArr);
+    const createHTML = generateCards(sortResult);
+    cardsContainer.innerHTML = createHTML;
+  });
+
 }
 sortby();
 
