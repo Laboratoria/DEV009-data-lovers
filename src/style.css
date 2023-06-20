@@ -15,14 +15,6 @@ a {
   color: orange;
 }
 
-h2 {
-  color: #000;
-  margin: 2rem 0 .5rem;
-  font-size: 1.25rem;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-
 img {
   display: block;
     border: 0;
@@ -38,7 +30,6 @@ img {
   grid-auto-rows: minmax(200px, auto);
   grid-gap: 1rem;
 }
-
 .card {
   /*height: 200px;*/
   /*background: red;*/
@@ -93,10 +84,18 @@ img {
 }
 
 footer {
-  border-top: 2px solid #e7e7e7;
+  border-top: 2px solid #998c8c;
   margin: .5rem 0 0;
   min-height: 30px;
-  font-size: .5rem;
+  font-size: .9rem;
+  color: rgb(110, 151, 204);
+  font-weight: 700;
+}
+
+p{
+  font-size: .9rem;
+  color: rgba(8, 42, 94, 0.842);
+  text-align: justify;
 }
 
 .category {
