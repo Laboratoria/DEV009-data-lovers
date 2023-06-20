@@ -13,7 +13,7 @@
           <label for="btnFiltro">☰</label>
         </div>
         <div class="logo">
-          <h1> <img id="logo2016" src="https://tentulogo.com/wp-content/uploads/2016/07/aros-de-los-juegos-olimpicos.jpg"> </h1>
+          <h1> <img id="logo2016" src="https://logodownload.org/wp-content/uploads/2020/03/olimpiada-olympic-games-logo-0.png"> </h1>
         </div>
         <nav class="division">
           <a href="#">Atletas</a>
@@ -33,24 +33,33 @@
           <a href="#">Gender</a>
           <a href="#">Medal</a>
         </nav>
-        <label for="btnFiltro">✖️</label>
+        <label for="btnFiltro"> ✖️ </label>
         </div>
     </div>
-    <input id="barra" type="search">
-    <button id="buscar">Buscar</button>
-    <div class ="sortBy">
-      <nav class ="navOrden">Ordenar Por:
-        <ul class = "sortOptions">
-          <li id="oldestToYoungest">Edad Atleta: Mayor a Menor</li>
-          <li id="youngestToOldest">Edad Atleta: Menor a Mayor</li>
-          <li id="athleteAtoZ">Nombre Atleta A - Z</li>
-          <li id="athleteZtoA">Nombre Atleta Z - A</li>
-          <li id="teamAtoZ">País A - Z</li>
-          <li id="teamZtoA">País Z - A</li>
-        </ul>
-      </nav>
-    </div> 
-    <div id="cartillaContenedor"></div>
+    <div id="contenedorImg">
+      <img id="imgOficial"  src="https://uci.ac.cr/wp-content/uploads/2016/08/rio2016.jpg">
+    </div>
+    <div id="barraBuscador"> 
+      <input id="barra" type="search">
+      <button id="buscar">Search</button>
+    </div>
+    <br>
+    <div id="boxSortBy">
+      <div class ="sortBy">
+        <button class="order"> SortBy </button>
+          <div class="sortOptions">
+           <a  id="oldestToYoungest"> Age(Mor to let)</a>
+           <a  id="youngestToOldest"> Age(Let to Mor)</a>
+           <a  id="athleteAtoZ"> Name(A to Z)</a>
+           <a  id="athleteZtoA"> Name(Z to A)</a>
+           <a  id="teamAtoZ"> Team(A to Z)</a>
+           <a  id="teamZtoA"> Team(Z to A)</a>
+          </div> 
+      </div>   
+    </div>
+      <br>
+      <br>
+      <div id="cartillaContenedor"></div>
     <div id="root"></div>
     
   </body>
