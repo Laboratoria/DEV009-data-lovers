@@ -1,101 +1,30 @@
-import data from "./data/countries/countries.js";
+// La función `generateCountriesList` lee una lista de países y devuelve un array ordenado con los nombres comunes de los países.
+function generateCountriesList(countries) {
+  const commonCountriesNames = [];
+  countries.forEach((country) => {
+    commonCountriesNames.push(country.name.common);
+  });
+  // Se realiza una copia del array `commonCountriesNames` usando el método `slice` y se ordena alfabéticamente con el método `sort`
+  const sortedCommonCountriesNames = commonCountriesNames.slice().sort();
+  return sortedCommonCountriesNames;
+}
 
-const countriesDataAdmin = {
-  countriesMain: document.querySelector(".countries-main"),
-  
-  generatesCountriesList() {
-    const countries = data.countries;
-    
-    const commonCountriesNames = [];
-    countries.forEach((country) => {
-      commonCountriesNames.push(country.name.common);
-    });
-    
-    const sortedCommonCountriesNames = commonCountriesNames.slice().sort();
-    
-    this.countriesMain.innerHTML = "";
-    
-    for (let i = 65; i <= 90; i++) {
-      const sectionLetter = String.fromCharCode(i);
-      const sectionCountries = sortedCommonCountriesNames.filter((country) =>
-        country.startsWith(sectionLetter)
-      );
-
-      // Section Creation
-      if (sectionCountries.length > 0) {
-        const htmlSection = `
-        <section class="alphabet-section">
-        <h3>${sectionLetter}</h3>
-        <ul class="common-countries-name-ul-${sectionLetter}" id="common-countries-name-ul-${sectionLetter}"></ul>`;
-        this.countriesMain.insertAdjacentHTML("beforeend", htmlSection);
-      }
-
-      // Countries list creation
-      const containerList = document.querySelector(
-        `.common-countries-name-ul-${sectionLetter}`
-      );
-      for (const country of sectionCountries) {
-        if (country.startsWith(sectionLetter)) {
-          const item = countries.find(({ name }) => name.common === country);
-          const flagCountry = item.flags.png;
-          const html = `
-          <li class="country-item-li"><a href="#">${country}</a><img
-                  class="flag-country"
-                  src="${flagCountry}"
-                  alt="flag country"
-                  width="30"
-                />
-            </li>`;
-          containerList.insertAdjacentHTML("beforeend", html);
-        }
-      }
+// La función `searchCountries` lee una lista de países y un texto de búsqueda, y devuelve un array con los países que coinciden con el texto de búsqueda.
+function searchCountries(countries, inputText) {
+  const result = [];
+  countries.forEach((eachCountry) => {
+    const countryName = eachCountry.name.common;
+    const lengthText = inputText.length;
+    if (countryName.slice(0, lengthText) === inputText) {
+      result.push(eachCountry);
     }
-  },
+  });
+  return result;
+}
 
-  generateSection(letter) {
-    const htmlSection = `
-        <section class="alphabet-section">
-        <h3>${letter}</h3>
-        <ul class="common-countries-name-ul-${letter}" id="common-countries-name-ul-${letter}"></ul>`;
-    this.countriesMain.insertAdjacentHTML("beforeend", htmlSection);
-  },
+// La expresión countryName.slice(0, lengthText) === inputText
+// countryName: es una cadena de texto que representa el nombre del país.
+// slice(0, lengthText): toma una subcadena de countryName desde el índice 0 hasta el índice lengthText. Esto significa que se extraen los primeros lengthText caracteres del nombre del país.
+// inputText: es la cadena de texto de entrada, es decir, el texto de búsqueda.
 
-  generatesCountriesFindedList(countryList, letter) {
-    const containerList = document.querySelector(
-      `.common-countries-name-ul-${letter}`
-    );
-    containerList.innerHTML = "";
-    for (const country of countryList) {
-      const countryName = country.name.common;
-      const flagCountry = country.flags.png;
-      const html = `
-        <li class="country-item-li"><a href="#">${countryName}</a><img
-                class="flag-country"
-                src="${flagCountry}"
-                alt="flag country"
-                width="30"
-              />
-          </li>`;
-      containerList.insertAdjacentHTML("beforeend", html);
-    }
-  },
-
-  clearCountriesList() {
-    this.countriesMain.innerHTML = "";
-  },
-
-  search(data, inputText) {
-    const result = [];
-    // Searching countries
-    data.forEach((eachCountry) => {
-      const countryName = eachCountry.name.common;
-      const lengthText = inputText.length;
-      if (countryName.slice(0, lengthText) === inputText) {
-        result.push(eachCountry);
-      }
-    });
-    return result;
-  },
-};
-
-export default countriesDataAdmin;
+export {generateCountriesList, searchCountries}; 
