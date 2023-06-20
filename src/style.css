@@ -59,18 +59,13 @@ header {
   
 }
 
-button.load-section-button{
+button.button-start{
   font-family: stoke;
   border: none;
   border-radius: 10px;
   padding: 10px;
-}
-
-button.clear-section-button{
-  font-family: stoke;
-  border: none;
-  border-radius: 10px;
-  padding: 10px;
+  font-size: larger;
+  width: 300px;
 }
 
 .countries-main {
@@ -86,7 +81,7 @@ button.clear-section-button{
 
 .alphabet-section {
   background-color: #FFFFFF;
-  width: 800px;
+  width: 1100px;
 }
 
 h3 {
@@ -125,6 +120,28 @@ li a {
   font-size: 16px; /* Increase the font-size */
   color: #000000;
 }
+
+
+/* @media screen and (min-width: 300px) and (max-width: 500px) {
+  .search-section {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .countries-main {
+    height: calc(100vh - 150px);
+  }
+
+  .alphabet-section {
+    max-width: 100%;
+  }
+
+  ul {
+    column-count: 1;
+  }
+} */
+
+
  
 
 
