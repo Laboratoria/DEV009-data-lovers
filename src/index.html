@@ -2,17 +2,80 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
+    <title>STUDIO GHIBLI MAGICAL WORLD</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;900&display=swap" rel="stylesheet">
   </head>
+  <div class="encabezado">
+    <img src="img/logo ghibli.png">
+    <div class="menu"></div>
+      <h2>Inicio</h2>
+      <h2>Peliculas</h2>
+    </div>
+  </div>
+  <div class="presentation">
+    <div class="content">
+      <h1>STUDIO GHIBLI</h1>
+      <h1>MAGICAL WORLD</h1>
+      <p>Explora Studio Ghibli y sus cautivadores largometrajes. Descubre datos fascinantes: nombres, años, puntuaciones y directores. Filtra y personaliza tu búsqueda. </p>
+      <p>¡Bienvenide a nuestro sitio web lleno de magia y curiosidades únicas!.</p>
+    </div>
+    <img src="img/logo ghibli.png">
+  </div>
   <body>
-    HOLA GRACIELA !!!
+    <div class="orderby">
+      <h3>ORDENAR POR</h3>
+      <div id="opciones">
+        <select name="opciones">
+          <option value="opcion1">Ordenar de A -Z</option>
+          <option value="opcion2">Ordenar de Z - A</option>
+          <option value="opcion3">Mas rankeado</option>
+        </select>
+      </div>
+    </div>
+    <h3>FILTROS</h3>
+    <h4>Director</h4>
+    <div id="director">
+      <input type="checkbox" name="opcion1" value="opcion1">
+      <label for="opcion1">Hayao Miyazaki</label><br>
+      <input type="checkbox" name="opcion2" value="opcion2">   
+      <label for="opcion2">Isao Takahata</label><br>
+      <input type="checkbox" name="opcion3" value="opcion3">
+      <label for="opcion3">Yoshifumi Kondo</label><br>
+      <input type="checkbox" name="opcion4" value="opcion4">   
+      <label for="opcion4">Hiroyuki Morita</label><br>
+      <input type="checkbox" name="opcion5" value="opcion5">
+      <label for="opcion5">Goro Miyazaki</label><br>
+      <input type="checkbox" name="opcion6" value="opcion6">   
+      <label for="opcion6">Hiromasa Yonebayashi</label><br>
+    </div>
 
-    Holi Cammiiiiiiii
-
-    COMO ESTAAAAS!
-    necesitamos un airecito de la Rosa de Guadalupe.
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
+    <h4>Year</h4>
+    <div id="year">
+      <input type="checkbox" name="opcion1" value="opcion1">
+      <label for="opcion1">1986</label><br>
+      <input type="checkbox" name="opcion2" value="opcion2">   
+      <label for="opcion2">1988</label><br>
+      <input type="checkbox" name="opcion3" value="opcion3">
+      <label for="opcion3">1989</label><br>
+      <input type="checkbox" name="opcion4" value="opcion4">   
+      <label for="opcion4">1991</label><br>
+      <input type="checkbox" name="opcion5" value="opcion5">
+      <label for="opcion5">1992</label><br>
+      <input type="checkbox" name="opcion6" value="opcion6">   
+      <label for="opcion6">1994</label><br>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Director</th>
+        </tr>
+      </thead>
+      <tbody id="table-body"></tbody>
+    </table>
   </body>
 </html>
