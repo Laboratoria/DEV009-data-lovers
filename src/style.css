@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   font-family: sans-serif;
   line-height: 1.4;
@@ -21,7 +26,7 @@ header {
   line-height: 50px;
   text-align: center;
   color: #000000;
-  margin-bottom: 50px;
+  margin: 50px auto;
   padding: 10px;
   background-color: #ffffff;
   width: 200px;
@@ -36,6 +41,7 @@ header {
   opacity: 60%;
   display: block;
   margin: 0 auto;
+  align-items: center;
 }
 
 #country-input {
@@ -48,6 +54,7 @@ header {
   padding: 12px 20px 12px 40px; /* Add some padding */
   border: 1px solid #ddd; /* Add a grey border */
   margin-bottom: 12px; /* Add some space below the input */
+  margin: 5px, auto;
 }
 
 .button-section {
@@ -80,7 +87,7 @@ button.button-start {
 
 .alphabet-section {
   background-color: #ffffff;
-  width: 1100px;
+  width: 70%;
 }
 
 h3 {
@@ -120,19 +127,40 @@ li a {
   color: #000000;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
   .title-heading {
     font-size: x-large;
-    margin-bottom: 10px;
-    padding: 10px;
+    height: 50px;
+    margin: 10px auto;
+    /* padding: 10px; */
+  }
+
+  #country-input {
+    width: 70%; /* Full-width */
+    font-size: medium; /* Increase font-size */
+    margin-left: 45px;
+    margin-top: 5px;
+  }
+
+  .countries-main {
+    margin-top: 0;
+  }
+
+  h3 {
+    margin: 0;
+    padding: 0;
+
+    font-size: large;
   }
 
   .search-section {
+    display: flex;
     border: none;
     width: 1137px;
     height: 30px;
     opacity: 60%;
     display: block;
+    align-items: center;
   }
 
   button.button-start {
@@ -147,7 +175,7 @@ li a {
 
   .alphabet-section {
     background-color: #ffffff;
-    width: 300px;
+    width: 70%;
   }
 
   ul {
@@ -184,16 +212,97 @@ li a {
     display: block;
     margin: 0 auto;
   }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+  .title-heading {
+    font-size: larger;
+    height: 50px;
+    margin: 10px auto;
+    /* padding: 10px; */
+  }
 
   #country-input {
-    background-image: url("./images/search-icon.png"); /* Add a search icon to input */
-    background-position: 10px 10px; /*Position the search icon */
-    background-size: 25px;
-    background-repeat: no-repeat; /* Do not repeat the icon image */
     width: 70%; /* Full-width */
-    font-size: 16px; /* Increase font-size */
-    padding: 12px 20px 12px 40px; /* Add some padding */
-    border: 1px solid #ddd; /* Add a grey border */
-    margin-bottom: 12px; /* Add some space below the input */
+    font-size: medium; /* Increase font-size */
+    margin-left: 45px;
+    margin-top: 5px;
+  }
+
+  .countries-main {
+    margin-top: 0;
+  }
+
+  .country-item-li {
+    margin-left: 1px;
+    padding-left: 1px;
+  }
+
+  .search-section {
+    display: flex;
+    border: none;
+    width: 70%px;
+    height: 30px;
+    opacity: 60%;
+    display: block;
+    align-items: center;
+  }
+
+  button.button-start {
+    font-family: stoke;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: small;
+    width: 2000px;
+    font-weight: bold;
+  }
+
+  .alphabet-section {
+    background-color: #ffffff;
+    width: 70%;
+  }
+
+  h3 {
+    display: flex;
+    /* margin: 10px 10px 10px 10px; */
+    /* padding: 10px; */
+    font-family: stoke;
+    font-size: large;
+  }
+
+  ul {
+    list-style: none;
+    column-count: 2;
+    padding: 0px 2px 2px 2px;
+    margin: 0px 3px 30px 3px;
+  }
+
+  li {
+    margin: 5px;
+    display: block;
+    background-color: #f6f6f6;
+    /* padding: 12px; Add some padding */
+    text-decoration: none; /* Remove default text underline */
+    font-size: 12px; /* Increase the font-size */
+    color: black; /* Add a black text color */
+  }
+
+  li a {
+    margin-top: -1px; /* Prevent double borders */
+    /* padding: 12px; Add some padding */
+    text-decoration: none; /* Remove default text underline */
+    font-size: 12px; /* Increase the font-size */
+    color: #000000;
+  }
+
+  .search-section {
+    /* background: #f5f5f5; */
+    border: none;
+    width: 70%;
+    height: 30px;
+    opacity: 60%;
+    display: block;
+    margin: 0 auto;
   }
 }
