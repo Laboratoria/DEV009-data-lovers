@@ -16,7 +16,7 @@
     </div>
   </div>
   <div class="presentation">
-    <div class="content">
+    <div class="contenido">
       <h1>STUDIO GHIBLI</h1>
       <h1>MAGICAL WORLD</h1>
       <p>Explora Studio Ghibli y sus cautivadores largometrajes. Descubre datos fascinantes: nombres, años, puntuaciones y directores. Filtra y personaliza tu búsqueda. </p>
@@ -25,57 +25,57 @@
     <img src="img/logo ghibli.png">
   </div>
   <body>
-    <div class="orderby">
-      <h3>ORDENAR POR</h3>
-      <div id="opciones">
-        <select name="opciones">
-          <option value="opcion1">Ordenar de A -Z</option>
-          <option value="opcion2">Ordenar de Z - A</option>
-          <option value="opcion3">Mas rankeado</option>
-        </select>
+    <div class="content">
+    <div class="left">
+      <h3>FILTROS</h3>
+      <h4>Director</h4>
+      <div id="director">
+        <input type="checkbox" name="opcion1" value="opcion1">
+        <label for="opcion1">Hayao Miyazaki</label><br>
+        <input type="checkbox" name="opcion2" value="opcion2">   
+        <label for="opcion2">Isao Takahata</label><br>
+        <input type="checkbox" name="opcion3" value="opcion3">
+        <label for="opcion3">Yoshifumi Kondo</label><br>
+        <input type="checkbox" name="opcion4" value="opcion4">   
+        <label for="opcion4">Hiroyuki Morita</label><br>
+        <input type="checkbox" name="opcion5" value="opcion5">
+        <label for="opcion5">Goro Miyazaki</label><br>
+        <input type="checkbox" name="opcion6" value="opcion6">   
+        <label for="opcion6">Hiromasa Yonebayashi</label><br>
+      </div>
+    
+      <h4>Year</h4>
+      <div id="year">
+        <input type="checkbox" name="opcion1" value="opcion1">
+        <label for="opcion1">1986</label><br>
+        <input type="checkbox" name="opcion2" value="opcion2">   
+        <label for="opcion2">1988</label><br>
+        <input type="checkbox" name="opcion3" value="opcion3">
+        <label for="opcion3">1989</label><br>
+        <input type="checkbox" name="opcion4" value="opcion4">   
+        <label for="opcion4">1991</label><br>
+        <input type="checkbox" name="opcion5" value="opcion5">
+        <label for="opcion5">1992</label><br>
+        <input type="checkbox" name="opcion6" value="opcion6">   
+        <label for="opcion6">1994</label><br>
       </div>
     </div>
-    <h3>FILTROS</h3>
-    <h4>Director</h4>
-    <div id="director">
-      <input type="checkbox" name="opcion1" value="opcion1">
-      <label for="opcion1">Hayao Miyazaki</label><br>
-      <input type="checkbox" name="opcion2" value="opcion2">   
-      <label for="opcion2">Isao Takahata</label><br>
-      <input type="checkbox" name="opcion3" value="opcion3">
-      <label for="opcion3">Yoshifumi Kondo</label><br>
-      <input type="checkbox" name="opcion4" value="opcion4">   
-      <label for="opcion4">Hiroyuki Morita</label><br>
-      <input type="checkbox" name="opcion5" value="opcion5">
-      <label for="opcion5">Goro Miyazaki</label><br>
-      <input type="checkbox" name="opcion6" value="opcion6">   
-      <label for="opcion6">Hiromasa Yonebayashi</label><br>
-    </div>
+    <div class="right">
+      <div class="orderby">
+        <h3>ORDENAR POR</h3>
+        <div id="opciones">
+          <select name="opciones">
+            <option value="opcion1">Ordenar de A -Z</option>
+            <option value="opcion2">Ordenar de Z - A</option>
+            <option value="opcion3">Mas rankeado</option>
+          </select>
+        </div>
+      </div>
 
-    <h4>Year</h4>
-    <div id="year">
-      <input type="checkbox" name="opcion1" value="opcion1">
-      <label for="opcion1">1986</label><br>
-      <input type="checkbox" name="opcion2" value="opcion2">   
-      <label for="opcion2">1988</label><br>
-      <input type="checkbox" name="opcion3" value="opcion3">
-      <label for="opcion3">1989</label><br>
-      <input type="checkbox" name="opcion4" value="opcion4">   
-      <label for="opcion4">1991</label><br>
-      <input type="checkbox" name="opcion5" value="opcion5">
-      <label for="opcion5">1992</label><br>
-      <input type="checkbox" name="opcion6" value="opcion6">   
-      <label for="opcion6">1994</label><br>
+      <div id="dataContainer" ></div>
+      <div id="imagenContainer" ></div>
+      <script src="main.js" type="module"></script>
     </div>
-    <table>
-      <thead>
-        <tr>
-          <th>Title</th>
-          <th>Description</th>
-          <th>Director</th>
-        </tr>
-      </thead>
-      <tbody id="table-body"></tbody>
-    </table>
+   </div>
   </body>
 </html>

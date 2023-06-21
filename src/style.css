@@ -9,20 +9,37 @@
 body{
     font-family: 'Geologica', sans-serif;
 } 
+.content {
+    display: flex;
+}
+
+.left {
+    flex: 1;
+    background-color: #f0f0f0;
+    padding:3vh;
+}
+
+.right {
+    flex: 1;
+    background-color: #dcdcdc;
+    padding:3vh;
+}
 .presentation img {
     margin-right: 10px;
     width: 600px; /* Ancho deseado */
     height: auto; /* Altura automática proporcional */
 }
-.content {
+.contenido {
     flex-grow: 1;
 }
 .encabezado{
     background-color: #0EA0D9;
     display: flex;
     align-items: center;
+    color:white;
+    padding:2vh;
     }
-      
+    
 .encabezado img {
     margin-left: 10px;
     width: 100px; /* Ancho deseado */
@@ -41,3 +58,16 @@ body{
 #opciones{
     padding: 2vh;
 }
+
+.film.title{
+    font-family: 'Geologica', sans-serif;
+}
+.film-title {
+    font-weight: bold;
+}
+
+.imagen-reducida {
+    width: 200px; /* Puedes ajustar el tamaño según tus necesidades */
+    height: auto; /* Mantén la proporción de la imagen */
+  }
+  

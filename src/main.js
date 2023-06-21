@@ -3,30 +3,55 @@
 //import data from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 import data from './data/ghibli/ghibli.js'
+console.log(data);
 
+window.addEventListener('DOMContentLoaded', (event) => {
+  const dataContainer = document.getElementById('dataContainer');
+  const films = data.films;
 
-document.addEventListener("DOMContentLoaded", function() {
-    const tableBody = document.querySelector("#table-body");
+  // Recorre el arreglo de películas y muestra los títulos en el contenedor HTML
+  films.forEach((film) => {
 
-    // Loop a través de los datos y crea las filas en la tabla
-    data.forEach((item) => {
-      // Crea una nueva fila
-      const row = document.createElement("tr");
+      const filmTitle = document.createElement('p');
+      filmTitle.style.fontWeight = 'bold';
+      filmTitle.textContent = film.title;
+      dataContainer.appendChild(filmTitle);
 
-      // Crea las celdas y asigna los valores
-      const titleCell = document.createElement("td");
-      titleCell.textContent = item.title;
-      row.appendChild(titleCell);
+      const filmReleasedate = document.createElement('p');
+      filmTitle.style.fontWeight = 'bold';
+      filmReleasedate.textContent = 'Año: '+ film.release_date;
+      dataContainer.appendChild(filmReleasedate);
 
-      const descriptionCell = document.createElement("td");
-      descriptionCell.textContent = item.description;
-      row.appendChild(descriptionCell);
+      const filmDescription = document.createElement('p');
+      filmDescription.textContent =film.description;
+      dataContainer.appendChild(filmDescription);
 
-      const directorCell = document.createElement("td");
-      directorCell.textContent = item.director;
-      row.appendChild(directorCell);
+      const filmDirector = document.createElement('p');
+      filmDirector.textContent = 'Director: '+ film.director;
+      dataContainer.appendChild(filmDirector);
 
-      // Agrega la fila al tbody
-      tableBody.appendChild(row);
-    });
+      const filmPoster = document.createElement('p');
+      filmPoster.textContent ='Score: '+ film.rt_score;
+      dataContainer.appendChild(filmPoster);
+  });
+});
+window.addEventListener('DOMContentLoaded', (event) => {
+  const dataContainer = document.getElementById('imagenContainer');
+  const films = data.films;
+  const imageSize = '200px'
+  // Recorre el arreglo de películas y muestra los títulos en el contenedor HTML
+  films.forEach((film) => {
+    // Obtén el contenedor de la imagen
+
+    // Crea un elemento <img>
+    const imagen = document.createElement('img');
+
+    // Establece la URL de la imagen en el atributo src
+    imagen.src = film.poster;
+        // Agrega la clase CSS a la imagen
+    imagen.classList.add('imagen-reducida');
+
+    // Agrega la imagen al contenedor
+    imagenContainer.appendChild(imagen);
+  });
 });
