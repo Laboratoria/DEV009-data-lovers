@@ -72,7 +72,7 @@ document.getElementById("teamZtoA").addEventListener("click", () =>
     cardsContainer.innerHTML = createHTML;
   });
 
-//Filtrat por Team
+//Filtrar por Team
 function fteam (team) {
   const funcData = filterTeam(team);
   const createHTML = generateCards(funcData);
@@ -81,7 +81,7 @@ function fteam (team) {
 document.getElementById('Italy').addEventListener('click', ()=>
 cardsContainer.innerHTML = fteam(dataArr))
 
-//Filtrat por Genero M
+//Filtrar por Genero M
 function fteamG (genem) {
   const funcData = filterGenM(genem);
   const createHTML = generateCards(funcData);
@@ -90,7 +90,7 @@ function fteamG (genem) {
 document.getElementById('m').addEventListener('click', ()=>
 cardsContainer.innerHTML = fteamG(dataArr))
 
-//Filtrat por Genero F
+//Filtrar por Genero F
 function fteamGF (genef) {
   const funcData = filterGenF(genef);
   const createHTML = generateCards(funcData);
