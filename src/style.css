@@ -23,15 +23,15 @@ header {
   color: #000000;
   margin-bottom: 50px;
   padding: 10px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   width: 200px;
   border-radius: 10px;
 }
 
-.search-section{
-  background: #F5F5F5;
+.search-section {
+  /* background: #f5f5f5; */
   border: none;
-  width: 1137px;
+  width: 80%;
   height: 30px;
   opacity: 60%;
   display: block;
@@ -50,16 +50,15 @@ header {
   margin-bottom: 12px; /* Add some space below the input */
 }
 
-.button-section{
+.button-section {
   display: flex;
   justify-content: center;
   margin-top: 30px 30px 30px 30px;
   padding: 40px 20px 20px 20px;
   gap: 20px;
-  
 }
 
-button.button-start{
+button.button-start {
   font-family: stoke;
   border: none;
   border-radius: 10px;
@@ -80,7 +79,7 @@ button.button-start{
 }
 
 .alphabet-section {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   width: 1100px;
 }
 
@@ -121,27 +120,80 @@ li a {
   color: #000000;
 }
 
-
-/* @media screen and (min-width: 300px) and (max-width: 500px) {
-  .search-section {
-    max-width: 100%;
-    width: 100%;
+@media screen and (max-width: 480px) {
+  .title-heading {
+    font-size: x-large;
+    margin-bottom: 10px;
+    padding: 10px;
   }
 
-  .countries-main {
-    height: calc(100vh - 150px);
+  .search-section {
+    border: none;
+    width: 1137px;
+    height: 30px;
+    opacity: 60%;
+    display: block;
+  }
+
+  button.button-start {
+    font-family: stoke;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: smaller;
+    width: 100px;
+    font-weight: bold;
   }
 
   .alphabet-section {
-    max-width: 100%;
+    background-color: #ffffff;
+    width: 300px;
   }
 
   ul {
+    list-style: none;
     column-count: 1;
+    padding: 0px 2px 2px 2px;
+    margin: 0px 3px 30px 3px;
   }
-} */
 
+  li {
+    margin: 5px;
+    display: block;
+    background-color: #f6f6f6;
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove default text underline */
+    font-size: 12px; /* Increase the font-size */
+    color: black; /* Add a black text color */
+  }
 
- 
+  li a {
+    margin-top: -1px; /* Prevent double borders */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove default text underline */
+    font-size: 12px; /* Increase the font-size */
+    color: #000000;
+  }
 
+  .search-section {
+    /* background: #f5f5f5; */
+    border: none;
+    width: 70%;
+    height: 30px;
+    opacity: 60%;
+    display: block;
+    margin: 0 auto;
+  }
 
+  #country-input {
+    background-image: url("./images/search-icon.png"); /* Add a search icon to input */
+    background-position: 10px 10px; /*Position the search icon */
+    background-size: 25px;
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 70%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+  }
+}
