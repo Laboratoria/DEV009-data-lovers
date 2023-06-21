@@ -73,13 +73,25 @@
     font-size: 18px;
     color:white;
 }    
+#general {
+    display: flex;
+    justify-content: space-around;
+}
 #cartillaContenedor {
     display: grid;
-    grid-template-columns: repeat(2, minmax(1, 1fr));
-    justify-content: center;
-    align-items: center;
     gap: 50px;
     line-height: 1.3;
+}
+#pet1 {
+    width:250px;
+    display: flex;
+    align-items: start;
+}
+#pet2 {
+    width:250px;
+    padding-top:180px;
+    display:flex;
+    align-items: baseline;
 }
 #teams a{
     cursor: pointer;

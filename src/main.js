@@ -1,6 +1,5 @@
-import { filterTeam } from './data.js';
+import { filterTeam, sortData, filterGenM , filterGenF} from './data.js';
 import data from './data/athletes/athletes.js';
-import { sortData } from './data.js';
 import athletes from './data/athletes/athletes.js';
 
 //llamar a los datos de Athletes
@@ -10,13 +9,14 @@ const barra = document.getElementById('barra')
 //Boton buscar
 const buscar = document.getElementById('buscar')
 //Lo que se busque en la barra me muestre el resultado
-buscar.addEventListener('click', () =>{
-    console.log(barra.value)
-    return 
+buscar.addEventListener('click', () =>{/*
+    const texto = document.getElementById('buscar').value
+    const a =  generateCards(texto)
+    cardsContainer.innerHTML = a;*/
 })
 // Extrar los datos
-function generateCards () {
-const cardsHTML = dataArr.map((object) => {
+function generateCards (cards) {
+const cardsHTML = cards.map((object) => {
     const propiedadesHTML = Object.entries(object).map(([clave, valor]) => {
         return `<p><strong>${clave}:</strong> ${valor}</p>`;
     }).join('');
@@ -30,61 +30,74 @@ const cardsContainer = document.getElementById('cartillaContenedor');
 cardsContainer.innerHTML = generateCards(dataArr);
 
 //Ordenar por
-function sortby(){
-  document.getElementById("oldestToYoungest").addEventListener("click", () => 
+document.getElementById("oldestToYoungest").addEventListener("click", () => 
   {
     const sortResult = sortData.sortbyAge1(dataArr);
     const createHTML = generateCards(sortResult);
     cardsContainer.innerHTML = createHTML;
   });
 
-  document.getElementById("youngestToOldest").addEventListener("click", () => 
+document.getElementById("youngestToOldest").addEventListener("click", () => 
   {
     const sortResult = sortData.sortbyAge2(dataArr);
     const createHTML = generateCards(sortResult);
     cardsContainer.innerHTML = createHTML;
   });
 
-  document.getElementById("athleteAtoZ").addEventListener("click", () => 
+document.getElementById("athleteAtoZ").addEventListener("click", () => 
   {
     const sortResult = sortData.sortbyNameAtoZ(dataArr);
     const createHTML = generateCards(sortResult);
     cardsContainer.innerHTML = createHTML;
   });
 
-  document.getElementById("athleteZtoA").addEventListener("click", () => 
+document.getElementById("athleteZtoA").addEventListener("click", () => 
   {
     const sortResult = sortData.sortbyNameZtoA(dataArr);
     const createHTML = generateCards(sortResult);
     cardsContainer.innerHTML = createHTML;
   });
 
-  document.getElementById("teamAtoZ").addEventListener("click", () => 
+document.getElementById("teamAtoZ").addEventListener("click", () => 
   {
     const sortResult = sortData.sortbyCountryAtoZ(dataArr);
     const createHTML = generateCards(sortResult);
     cardsContainer.innerHTML = createHTML;
   });
 
-  document.getElementById("teamZtoA").addEventListener("click", () =>
+document.getElementById("teamZtoA").addEventListener("click", () =>
   {
     const sortResult = sortData.sortbyCountryZtoA(dataArr);
     const createHTML = generateCards(sortResult);
     cardsContainer.innerHTML = createHTML;
   });
 
-}
-sortby();
 //Filtrat por Team
-function fteam () {
-  const funcData = filterTeam(dataArr);
+function fteam (team) {
+  const funcData = filterTeam(team);
   const createHTML = generateCards(funcData);
   return createHTML
 }
 document.getElementById('Italy').addEventListener('click', ()=>
-cardsContainer.innerHTML = fteam())
+cardsContainer.innerHTML = fteam(dataArr))
 
+//Filtrat por Genero M
+function fteamG (genem) {
+  const funcData = filterGenM(genem);
+  const createHTML = generateCards(funcData);
+  return createHTML
+}
+document.getElementById('m').addEventListener('click', ()=>
+cardsContainer.innerHTML = fteamG(dataArr))
 
+//Filtrat por Genero F
+function fteamGF (genef) {
+  const funcData = filterGenF(genef);
+  const createHTML = generateCards(funcData);
+  return createHTML
+}
+document.getElementById('f').addEventListener('click', ()=>
+cardsContainer.innerHTML = fteamGF(dataArr))
 
 
 
