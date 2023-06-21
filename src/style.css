@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+}
+
+header{
+  background: url(fondo-pag1.jpg);
+  width: 100%;
+  height: 100vh;
+}
+
+#header_h1{
+  text-align: center;
+  font-size: 128px;
+}
+.header_p{
+  text-align: center;
+  font-family: 'Knewave', cursive;
+  font-size: 48px;
+  color: #fff;
+  -webkit-text-stroke: 2px #000;
+}
+.header_p1{
+  text-align: center;
+  font-family: 'Knewave', cursive;
+  font-size: 150px;
+  color: #fff;
+  -webkit-text-stroke: 2px #000;
+}
+.header_p2{
+  text-align: center;
+  font-size: 32px;
+  color: #fff;
+  -webkit-text-stroke: 0.5px #000;
+}
