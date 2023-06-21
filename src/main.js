@@ -5,12 +5,19 @@
 import data from './data/ghibli/ghibli.js'
 console.log(data);
 
+//A que se refiere el parametro event? 
 window.addEventListener('DOMContentLoaded', (event) => {
   const dataContainer = document.getElementById('dataContainer');
+  const imgContainer = document.getElementById('imagenContainer');
   const films = data.films;
 
   // Recorre el arreglo de películas y muestra los títulos en el contenedor HTML
   films.forEach((film) => {
+
+      const filmImg = document.createElement('img');
+      filmImg.src = film.poster;
+      filmImg.classList.add('imagen-reducida');
+      dataContainer.appendChild(filmImg);
 
       const filmTitle = document.createElement('p');
       filmTitle.style.fontWeight = 'bold';
@@ -18,7 +25,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
       dataContainer.appendChild(filmTitle);
 
       const filmReleasedate = document.createElement('p');
-      filmTitle.style.fontWeight = 'bold';
+      filmReleasedate.style.fontWeight = 'bold';
       filmReleasedate.textContent = 'Año: '+ film.release_date;
       dataContainer.appendChild(filmReleasedate);
 
@@ -35,6 +42,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
       dataContainer.appendChild(filmPoster);
   });
 });
+/*
 window.addEventListener('DOMContentLoaded', (event) => {
   const dataContainer = document.getElementById('imagenContainer');
   const films = data.films;
@@ -54,4 +62,4 @@ window.addEventListener('DOMContentLoaded', (event) => {
     // Agrega la imagen al contenedor
     imagenContainer.appendChild(imagen);
   });
-});
+}); */
