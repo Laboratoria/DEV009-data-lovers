@@ -1,8 +1,7 @@
 // estas funciones son de ejemplo
 
-export const data = {
+const data = {
 
-  
 
 };
 
