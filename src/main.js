@@ -106,4 +106,3 @@ cardsContainer.innerHTML = fteamGF(dataArr))
 
 
 
-
