@@ -1,8 +1,8 @@
 * {
   margin: 0;
 }
-
-header{
+/*PRESENTACION*/
+.header{
   background: url(fondo-pag1.jpg);
   width: 100%;
   height: 100vh;
@@ -32,3 +32,43 @@ header{
   color: #fff;
   -webkit-text-stroke: 0.5px #000;
 }
+
+/*HOME*/
+main{
+  width: 100%;
+  height: 100vh;
+}
+
+#main_h2{
+  text-align: center;
+  font-size: 110px;
+}
+
+/*Barra de Navegacion*/
+.menú{
+  padding: 0;
+  background: #092328;
+  width: 1000px;
+  margin: auto;
+}
+
+.menú li a{
+  text-decoration: none;
+  color: #fff;
+  padding: 20px;
+  display: block;
+  font-size: 20px;
+  text-align: center;
+}
+
+.menú li{
+  display: inline-block;
+  width: 33%;
+}
+
+.menú li a:hover{
+  background: #000;
+}
+
+/*roles de campeones*/
+
