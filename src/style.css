@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Londrina+Solid');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Staatliches&display=swap');
+
+
+
+.body1 {
+    background-image: url('https://www.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2022/10/profesor-oak-2855433.jpg');
+}
+
+
+footer {
+    text-align: center;
+    font-family:'Londrina Solid';
+    color: white;
+    display: flex;
+    background-color: #747bbff5;
+    max-width: -webkit-fill-available;
+    margin: 41%;
+    border-radius: 18px;
+    justify-content: center;
+    }
+
+.titulo{
+    font-family: 'Londrina Solid';
+    font-size:xx-large;
+    display:center;
+}
+
+.colorDeFondo {
+    background-image: url('https://3.bp.blogspot.com/-8OBE7UfGie8/U9KGHYE2JzI/AAAAAAAABuw/za0_UzzM6xY/s1600/Prof_Juniper_Lab_anime.png');
+    background-size:cover;
+}
+
+.headerDos{
+    background-color: #747bbff5;
+    border-radius: 50px;
+    margin-top: 11px;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-bottom: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.nav-text-titulo {
+    font-family: 'Londrina Solid';
+    font-size:xx-large;
+    color: white;
+    display: flex;
+    justify-content: center;
+    letter-spacing: 5px;
+}
+
+.nav-text {
+    display: flex;
+    flex-direction: unset;
+    font-family: 'Londrina Solid';
+    font-size: medium;
+    gap: 0px;
+    height: 49px;
+    justify-content: space-around;
+    letter-spacing: 5px;
+}
+
+li{ 
+    padding: 10px;
+    border: 3px solid #c8fc77;
+    border-radius: 8px;
+}
+
+ul{
+    list-style-type: none
+}
+
