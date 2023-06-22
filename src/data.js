@@ -1,3 +1,22 @@
+//Top atletas con más medallas
+export function topAthletes(medalCount){
+  const topMedals = Object.entries(medalCount)
+  .sort(([, a], [, b]) => {
+    // se compara la suma total de medallas de cada atleta
+    const totalMedalsA = Object.values(a).reduce((sum, count) => sum + count, 0);
+    const totalMedalsB = Object.values(b).reduce((sum, count) => sum + count, 0);
+
+    return totalMedalsB - totalMedalsA; // Ordenar de mayor a menor
+  })
+  .slice(0, 10) // Sacar el top 10 con más medallas
+  .map(([name, medals]) => ({
+    name,
+    medals
+  }));
+
+return topMedals;
+}
+
 //filtrar team Italy
 export function filterTeam (datos) {
   const x = datos.filter((obj) => {
