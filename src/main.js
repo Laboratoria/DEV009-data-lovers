@@ -12,12 +12,18 @@ window.addEventListener('DOMContentLoaded', (event) => {
   const films = data.films;
 
   // Recorre el arreglo de películas y muestra los títulos en el contenedor HTML
-  films.forEach((film) => {
+    films.forEach((film) => {
 
+      const containerArticle = document.createElement('article');
+      dataContainer.appendChild(containerArticle);
+      
       const filmImg = document.createElement('img');
       filmImg.src = film.poster;
       filmImg.classList.add('imagen-reducida');
-      dataContainer.appendChild(filmImg);
+      containerArticle.appendChild(filmImg);
+
+      const containerDiv = document.createElement('div');
+      containerArticle.appendChild(containerDiv);
 
       const filmTitle = document.createElement('p');
       filmTitle.style.fontWeight = 'bold';
