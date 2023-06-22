@@ -73,3 +73,11 @@ ul{
     list-style-type: none
 }
 
+
+.VistaDeTarjetas {
+    background-color: lightblue;
+    border-color: black;
+    margin: 1%;
+    max-width: 15%;
+    text-align: center;
+}
