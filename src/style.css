@@ -4,6 +4,7 @@
     --welcome-background-color: #0EA0D9;
     --container-color: #EAF3F5;
     --accent-font-color: #DFEDF2;
+    --body-font-color: #1E1E1E;
     --font-family-intro: 'Poppins', sans-serif;
     --font-family-body: 'Inter', sans-serif;
 }
@@ -20,31 +21,17 @@
 
 body{
     font-family: var(--font-family-body);
+    color: var(--body-font-color);
     margin: 0px;
+    background-color: var(--background-color);
 } 
-.content {
-    display: flex;
-}
 
-.left {
-    flex: 1;
-    background-color: #f0f0f0;
-    padding:3vh;
-}
-
-.right {
-    flex: 1;
-    background-color: #dcdcdc;
-    padding:3vh;
-}
 .presentation img {
     margin-right: 10px;
     width: 600px; /* Ancho deseado */
     height: auto; /* Altura automática proporcional */
 }
-.contenido {
-    flex-grow: 1;
-}
+
 
 header{
     background-color: #0EA0D9;
@@ -57,7 +44,7 @@ header{
     
 .logo img {
     margin-left: 10px;
-    width: 100px; /* Ancho deseado */
+    width: 160px; /* Ancho deseado */
     height: auto; /* Altura automática proporcional */
 }
 
@@ -78,28 +65,33 @@ header{
     padding:20px;
 }
 
-.dataCard{
+
+.data-peliculas-contenedor{
     display:grid;
-}
-.orderby{
-    display: flex; 
-    justify-content: flex-end;
-}
-
-div {
-    display: initial;
-}
-
-#opciones{
-    padding: 2vh;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+    padding: 48px;
+    background-color: var(--container-color);
+    margin-bottom: 40px;
+    margin-right: 40px;
+    margin-left: 120px;
+    border-radius: 18px;
+    border-style: outset;
+    width: 1000px;
 }
 
-.film.title{
-    font-family: 'Geologica', sans-serif;
-}
-.film-title {
+.data-title{
     font-weight: bold;
 }
+
+.data-year{
+    font-weight: bold;
+}
+
+.data-description{
+    width: px;
+}
+
 
 .imagen-reducida {
     width: 200px; /* Puedes ajustar el tamaño según tus necesidades */
