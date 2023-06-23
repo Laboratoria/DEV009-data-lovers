@@ -8,6 +8,7 @@
 
 body {
   font-family: "Montserrat";
+  margin: 2rem 4rem;
 }
 
 a {
@@ -31,12 +32,41 @@ img {
     height: auto;
 }
 
-.cards {
-    display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* see notes below */
-  grid-auto-rows: minmax(150px, auto);
-  grid-gap: 1rem;
-    text-shadow: 1px 1px 1px rgb(208, 204, 204);
+.main-links {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+.main-links li {
+  padding: 0.5rem 1rem;
+  background-color: rgb(10, 207, 197);
+}
+
+.dropdown-li {
+  position: relative;
+}
+
+.dropdown-li:hover .dropdown {
+  display: block;
+  opacity: 1;
+}
+
+.dropdown {
+  background-color: slateblue;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  opacity: 0;
+  display: none;
+  background: red;
+}
+
+.dropdown li {
+  list-style: none;
 }
 
 .card {
@@ -46,6 +76,7 @@ img {
     box-shadow: 2px 2px 2px lightgray;
     max-width: 200px;
     margin: 0 auto;
+    display: inline-block;
 }
 
 .imagen {
