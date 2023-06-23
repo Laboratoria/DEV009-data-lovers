@@ -26,36 +26,36 @@ function generateCards(cards) {
   }
 
 //Conteo de medallas por atleta
-function medalCount () {
-    const counter = {};
-  
-    dataArr.forEach((athlete) => {
+function medalCount() {
+  const counter = {};
+
+  dataArr.forEach((athlete) => {
     const nameAth = athlete.name;
     const team = athlete.team;
-      // Si el nombre se repite incrementa el recuento de medallas
-      if (counter.hasOwnProperty(nameAth)) {
-        if (counter[nameAth].hasOwnProperty(athlete.medal)) {
-          counter[nameAth][athlete.medal] += 1;
-        } else {
-          counter[nameAth][athlete.medal] = 1;
-        }
+    const medal = athlete.medal;
+
+    // Verificar si el atleta ya existe en el contador
+    if (counter.hasOwnProperty(nameAth)) {
+      // Verificar si el atleta ya tiene la medalla registrada
+      if (counter[nameAth].hasOwnProperty(medal)) {
+        counter[nameAth][medal] += 1; // Sumar 1 a la cuenta de medallas
       } else {
-        // Si el nombre no existe crea una nueva entrada y cuenta 1 medalla
-        counter[nameAth] = {
-          Gold: 0,
-          Silver: 0,
-          Bronze: 0,
-          team,
-        };
-        counter[nameAth][athlete.medal] = 1;
+        counter[nameAth][medal] = 1; // Inicializar la cuenta de medallas en 1
       }
-    });
-  
-    return counter;
-  }
-  console.log("medcount", medalCount());
-  
-  
+    } else {
+      // Si el atleta no existe en el contador, crear una entrada nueva
+      counter[nameAth] = {
+        Gold: 0,
+        Silver: 0,
+        Bronze: 0,
+        team,
+      };
+      counter[nameAth][medal] = 1; // Inicializar la cuenta de medallas en 1
+    }
+  });
+
+  return counter;
+}
   //Top 10 atletas
   function top10Athletes() {
     const top10 = topAthletes(medalCount(dataArr))
