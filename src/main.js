@@ -39,13 +39,9 @@ function mostrarPeliculas(peliculas) {
     carSeccion.innerHTML = cards;
 }
 
-import data from './data/ghibli/ghibli.js';
-// import data from './data/lol/lol.js';
-
-console.log(data.films);
 
 let peopleElement = document.getElementById('people');
-data.films[10].people.forEach(person => {
+peliculas.films[10].people.forEach(person => {
   // Crear un nuevo elemento para contener el nombre del personaje
   let personElement = document.createElement('div');
   personElement.classList.add('card'); // Agregamos una clase para dar estilo
