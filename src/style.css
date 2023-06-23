@@ -334,3 +334,42 @@ ul.alphabet-list {
 .alphabet-item:hover {
   text-decoration: underline;
 }
+
+/* Aside bar */
+
+.row {
+  display: flex;
+  gap: 75px;
+  margin-bottom: 60px;
+  align-items: self-start;
+}
+
+article.countries-container {
+  flex: 0 0 70%;
+  margin-bottom: 0;
+}
+
+aside.side-bar-aside {
+  /*  DEFAULT PROPERTIES
+        flex-grow: 0;
+        flex-shrink: 1; reduces width elements 
+        flex-basis: auto;
+        */
+  flex: 0 0 auto;
+  background-color: #ffffff;
+  padding: 0 40px;
+  margin-top: 40px;
+}
+
+ul.container-side-bar-ul {
+  column-count: 1;
+  list-style: none;
+}
+
+ol.container-continent-ol{
+  list-style: none;
+}
+
+ol.container-languages-ol {
+  list-style: none;
+}

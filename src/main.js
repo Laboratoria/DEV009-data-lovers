@@ -1,5 +1,14 @@
 import countries from "./data/countries/countries.js";
-import { generateCountriesList, searchCountries, generateAlphabet } from "./data.js";
+import { 
+  generateCountriesList, 
+  searchCountries, 
+  generateAlphabet,
+  filterByContinents, 
+  filterBySubregion, 
+  filterByLanguages, 
+  sortByPopulation,
+  sortByArea 
+} from "./data.js";
 
 const buttonLoadCountriesList = document.querySelector(".load-section-button");
 const buttonClearCountriesList = document.querySelector(".clear-section-button");
@@ -8,6 +17,7 @@ const countryInput = document.getElementById("country-input");
 const alphabetContainer = document.querySelector('.alphabet-list');
 const allCountries = document.querySelector('.alphabet-list li:first-child');
 const allSections = document.querySelectorAll('.alphabet-section');
+const continentList = document.querySelectorAll(".continent-name-li");
 
 function generatesCountriesList(countries) {
   const sortedCommonCountriesNames = generateCountriesList(countries);
@@ -144,6 +154,62 @@ generateAlphabet().forEach(letter => {
     });
   });
 });
+
+// const countriesSortedByPopulationDown = sortByPopulation(countries, -1);
+// console.log("Sorted by population down");
+// console.log(countriesSortedByPopulationDown);
+
+// const countriesSortedByPopulationUp = sortByPopulation(countries, 1);
+// console.log("Sorted by population up");
+// console.log(countriesSortedByPopulationUp);
+
+// const countruiessortedByAreaUp = sortByArea(countries, 1);
+// console.log("Sorted by area up");
+// console.log(countruiessortedByAreaUp);
+
+// const countruiessortedByAreaDown = sortByArea(countries, -1);
+// console.log("Sorted by area down");
+// console.log(countruiessortedByAreaDown);
+
+// console.log("Filter Asia countries:");
+// console.log(filterByContinents(countries, "Asia"));
+
+// console.log("Filter countries by subregion Eastern Asia");
+// console.log(filterBySubregion(countries, "Eastern Asia"));
+
+// console.log("Filter countries by subregion Western Europe");
+// console.log(filterBySubregion(countries, "Western Europe"));
+
+//Testing filtering by language
+// console.log("Filter countries spanish language:");
+// console.log(filterByLanguages(countries, "spa"));
+
+// console.log("Filter countries Portuguese language");
+// console.log(filterByLanguages(countries, "por"));
+
+continentList.forEach((continent) => {
+  continent.addEventListener("click", () => {
+    const actualContinent = continent.getAttribute("id");
+    console.log(actualContinent);
+    handleContinentClick(actualContinent);
+  });
+});
+
+const handleContinentClick = (actualContinent) => {
+  const continentCountriesList = filterByContinents(countries, actualContinent);
+  const continentCountriesCommonNames = generateCountriesList(
+    continentCountriesList
+  );
+  console.log(continentCountriesCommonNames);
+};
+
+
+
+
+
+
+
+
 
 
 

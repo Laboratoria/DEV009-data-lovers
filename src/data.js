@@ -22,7 +22,6 @@ function searchCountries(countries, inputText) {
   });
   return result;
 }
-
 // La expresión countryName.slice(0, lengthText) === inputText
 // countryName: es una cadena de texto que representa el nombre del país.
 // slice(0, lengthText): toma una subcadena de countryName desde el índice 0 hasta el índice lengthText. Esto significa que se extraen los primeros lengthText caracteres del nombre del país.
@@ -41,5 +40,89 @@ function generateAlphabet() {
   return alphabet;
 }
 
+const filterByContinents = (data, continent) => {
+  const result = [];
+  data.countries.map((country) => {
+    const continentSearch = country.continents;
+    if (continentSearch[0] === continent) result.push(country);
+  });
+  // console.log(result);
+  return result;
+};
 
-export {generateCountriesList, searchCountries, generateAlphabet}; 
+const filterBySubregion = (data, subregion) => {
+  const result = [];
+  data.countries.map((country) => {
+    if (country.subregion === subregion) result.push(country);
+  });
+  return result;
+};
+
+
+const filterByLanguages = (data, language) => {
+  const countriesLanguage = [];
+  data.countries.map((country) => {
+    if (country.hasOwnProperty("languages")) {
+      const actualCountry = country.languages;
+      if (actualCountry.hasOwnProperty(language)) {
+        countriesLanguage.push(country);
+      }
+    }
+  });
+  return countriesLanguage;
+};
+
+const sortByPopulation = (data, sortOrder) => {
+  //sortOrder could be 1 for ascending order  or -1 for descending order
+  const result = [];
+  switch (sortOrder) {
+  case 1: {
+    const resultUp = data.countries.sort((a, b) => a.population - b.population);
+    resultUp.forEach((element) => {result.push(element)});
+    break;
+  }
+  case -1: {
+    const resultDown = data.countries.sort((a, b) => b.population - a.population);
+    resultDown.forEach((element) => {result.push(element)});
+    break;
+  }
+  default: {
+    break;
+  }
+  }
+
+  return result;
+};
+
+const sortByArea = (data, sortOrder) => {
+  //sortOrder could be 1 for ascending order  or -1 for descending order
+  const result = [];
+  switch (sortOrder) {
+  case 1: {
+    const resultUp = data.countries.sort((a, b) => a.area - b.area);
+    resultUp.forEach((element) => {result.push(element)});
+    break;
+  }
+  case -1: {
+    const resultDown = data.countries.sort((a, b) => b.area - a.area);
+    resultDown.forEach((element) => {result.push(element)});
+    break;
+  }
+  default: {
+    break;
+  }
+  }
+  
+  return result;
+};
+
+export {
+  generateCountriesList, 
+  searchCountries, 
+  generateAlphabet, 
+  filterByContinents, 
+  filterBySubregion, 
+  filterByLanguages, 
+  sortByPopulation,
+  sortByArea
+}; 

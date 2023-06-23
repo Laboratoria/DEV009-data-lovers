@@ -6,53 +6,86 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <h1 class="title-heading">Countries</h1>
-    </header>
-
-    <section class="search-section">
-      <input
-        type="text"
-        id="country-input"
-        placeholder="Search for countries..."
-      />
-    </section>
-
+    <div class="container-header">
+      <header>
+        <h1 class="title-heading">Countries</h1>
+      </header>
   
-
-    <section class="button-section">
-      <button class="load-section-button button-start">
-        Show All Countries
-      </button>
-      <button class="clear-section-button button-start">Clear Content</button>
-    </section>
-
-    <nav class="alphabet-navigation">
-      <ul class="alphabet-list">
-        <li class="alphabet-item active">ALL</li>
-        <!-- JAVASCRIPT WILL COMPLETE THE WHOLE ALPHABET LIST -->
-      </ul>
-    </nav>
-
-    <main class="countries-main">
-      <!-- JAVASCRIPT WILL COMPLETE THE WHOLE ALPHABET SECTIONS -->
-      <section class="alphabet-section">
-        <h3>A</h3>
-        <ul id="common-countries">
-          <!-- JAVASCRIPT WILL COMPLETE ELEMENTS HERE FOLLOWING NEXT SCHEME 
-          <li class="country-item-li">
-            <a href="#">Country Name</a
-            ><img
-              class="flag-country"
-              src="https://flagcdn.com/w320/gt.png"
-              alt="flag country"
-              width="20"
-            />
-          </li>-->
-        </ul>
+      <section class="search-section">
+        <input
+          type="text"
+          id="country-input"
+          placeholder="Search for countries..."
+        />
       </section>
-      <!-- JAVASCRIPT WILL COMPLETE ALL THE SECTION ALPHABET WITH EVERY LIST-->
-    </main>
+      
+      <section class="button-section">
+        <button class="load-section-button button-start">
+          Show All Countries
+        </button>
+        <button class="clear-section-button button-start">Clear Content</button>
+      </section>
+  
+      <nav class="alphabet-navigation">
+        <ul class="alphabet-list">
+          <li class="alphabet-item active">ALL</li>
+          <!-- JAVASCRIPT WILL COMPLETE THE WHOLE ALPHABET LIST -->
+        </ul>
+      </nav>
+    </div>
+
+    <div class="row">
+      <article class="countries-container">
+        <main class="countries-main">
+          <!-- JAVASCRIPT WILL COMPLETE THE WHOLE ALPHABET SECTIONS -->
+          <section class="alphabet-section">
+            <h3>A</h3>
+            <ul id="common-countries">
+              <!-- JAVASCRIPT WILL COMPLETE ELEMENTS HERE FOLLOWING NEXT SCHEME 
+              <li class="country-item-li">
+                <a href="#">Country Name</a
+                ><img
+                  class="flag-country"
+                  src="https://flagcdn.com/w320/gt.png"
+                  alt="flag country"
+                  width="20"
+                />
+              </li>-->
+            </ul>
+          </section>
+          <!-- JAVASCRIPT WILL COMPLETE ALL THE SECTION ALPHABET WITH EVERY LIST-->
+        </main>
+      </article>
+      
+      <aside class="side-bar-aside">
+        <ul class="container-side-bar-ul">
+          <li class="container-continent-li">
+            <h3>Continent</h3>
+            <ol class="container-continent-ol">
+              <li class="continent-name-li" id="Africa">Africa</li>
+              <li class="continent-name-li" id="America"">America</li>
+              <li class="continent-name-li" id="Asia">Asia</li>
+              <li class="continent-name-li" id="Europe"">Europe</li>
+              <li class="continent-name-li" id="Oceania">Oceania</li>
+            </ol>
+          </li>
+          <li class="container-Languages-li">
+            <h3>Languages</h3>
+            <ol class="container-languages-ol">
+              <li class="language-li">Arabic</li>
+              <li class="language-li">French</li>
+              <li class="language-li">Greek</li>
+              <li class="language-li">Dutch</li>
+              <li class="language-li">Spanish</li>
+              <li class="language-li">English</li>
+              <li class="language-li">Italian</li>
+              <li class="language-li">Portuguese</li>
+            </ol>
+          </li>
+        </ul>
+      </aside>
+    </div>
+
     <div id="root"></div>
     <script src="main.js" type="module"></script>
   </body>
