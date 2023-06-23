@@ -98,7 +98,7 @@
     left: 0px;
 }
 #petTom {
-    margin-top: 160px;
+    margin-top: 180px;
     width: 450px;
     height: auto;
 }
@@ -108,7 +108,8 @@
     position: fixed;
     top:500px;
     right: 0px;
-}
+    margin-right: 100px;
+}   
 #pet3 {
     height: 350px;
     width: auto;
@@ -135,12 +136,13 @@
     display: flex;
     justify-content: center;
 }
-.sortBy .order {
-    background-color: #EC692C;
-    color: white;
+.order {
+    background-color: #081778d0;
+    color: rgba(255, 255, 255, 0.982);
     padding: 8px;
     border: none;
     cursor: pointer;
+    border-radius: 4px;
 }
 .sortOptions a{
     text-decoration: none;
@@ -154,7 +156,7 @@
 }
 .sortOptions {
     width: 150px;
-    background-color: #F2CAB7; 
+    background-color: #f4d4d3; 
     display: none;
 }
 .sortBy:hover .sortOptions{
@@ -176,3 +178,19 @@
     margin-right: 50px;
     margin-left: 10px;
 }
+#barra {
+    width: 200px;
+    padding: 8px;
+    border: 1.5px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+#clear {
+    background-color: #081778d0;
+    color: rgba(255, 255, 255, 0.982);
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+ 

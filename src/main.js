@@ -7,13 +7,24 @@ const dataArr = Object.values(data.athletes)
 //Barra de busqueda
 const barra = document.getElementById('barra')
 //Boton buscar
-const buscar = document.getElementById('buscar')
+const clear = document.getElementById('clear')
+
 //Lo que se busque en la barra me muestre el resultado
-buscar.addEventListener('click', () =>{/*
-    const texto = document.getElementById('buscar').value
-    const a =  generateCards(texto)
-    cardsContainer.innerHTML = a;*/
+barra.addEventListener('input', (e) => {
+  const searchTerm = e.target.value.toLowerCase();
+  const filteredData = dataArr.filter(atleta => atleta.name.toLowerCase().includes(searchTerm)||
+    atleta.team.toLowerCase().includes(searchTerm) ||
+    atleta.sport.toLowerCase().includes(searchTerm) ||
+    atleta.medal.toLowerCase().includes(searchTerm));
+  const createHTML = generateCards(filteredData);
+  cardsContainer.innerHTML = createHTML;
 })
+
+// Limpiar input text
+clear.addEventListener('click', () => {
+  return barra = ""
+})
+
 // Extrar los datos
 function generateCards (cards) {
 const cardsHTML = cards.map((object) => {
