@@ -190,18 +190,50 @@ generateAlphabet().forEach(letter => {
 continentList.forEach((continent) => {
   continent.addEventListener("click", () => {
     const actualContinent = continent.getAttribute("id");
-    console.log(actualContinent);
+    // console.log(actualContinent);
     handleContinentClick(actualContinent);
   });
 });
 
 const handleContinentClick = (actualContinent) => {
   const continentCountriesList = filterByContinents(countries, actualContinent);
-  const continentCountriesCommonNames = generateCountriesList(
-    continentCountriesList
+  // const continentCountriesCommonNames = generateCountriesList(
+  //   continentCountriesList
+  // );
+
+  // Ocultar el container
+  section.innerHTML = "";
+
+  // Mostrar información del filtro del aside
+  const htmlSection = `
+        <section class="section-${actualContinent}">
+        <h3>${actualContinent}</h3>
+        <ul class="common-countries-name-ul-${actualContinent}" id="common-countries"></ul>`;
+  section.insertAdjacentHTML("beforeend", htmlSection);
+
+  const containerList = document.querySelector(
+    `.common-countries-name-ul-${actualContinent}`
   );
-  console.log(continentCountriesCommonNames);
+  for (const country of continentCountriesList) {
+ 
+    const countryName = country.name.common;
+    const flagCountry = country.flags.png;
+    const html = `
+        <li class="country-item-li"><a href="#">${countryName}</a><img
+                class="flag-country"
+                src="${flagCountry}"
+                alt="flag country"
+                width="30"
+              />
+          </li>`;
+    containerList.insertAdjacentHTML("beforeend", html);
+  }
+  
 };
+
+
+
+
 
 
 

@@ -10,6 +10,7 @@ body {
   background-size: 100%;
   background-position: center;
   background-attachment: fixed;
+  margin: 10px 50px;
 }
 
 header {
