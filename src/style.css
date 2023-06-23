@@ -78,9 +78,16 @@ header{
     padding:20px;
 }
 
+.dataCard{
+    display:grid;
+}
 .orderby{
     display: flex; 
     justify-content: flex-end;
+}
+
+div {
+    display: initial;
 }
 
 #opciones{
