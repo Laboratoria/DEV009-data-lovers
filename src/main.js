@@ -1,10 +1,13 @@
 import countries from "./data/countries/countries.js";
-import { generateCountriesList, searchCountries } from "./data.js";
+import { generateCountriesList, searchCountries, generateAlphabet } from "./data.js";
 
 const buttonLoadCountriesList = document.querySelector(".load-section-button");
 const buttonClearCountriesList = document.querySelector(".clear-section-button");
 const section = document.querySelector(".countries-main");
 const countryInput = document.getElementById("country-input");
+const alphabetContainer = document.querySelector('.alphabet-list');
+const allCountries = document.querySelector('.alphabet-list li:first-child');
+const allSections = document.querySelectorAll('.alphabet-section');
 
 function generatesCountriesList(countries) {
   const sortedCommonCountriesNames = generateCountriesList(countries);
@@ -19,9 +22,9 @@ function generatesCountriesList(countries) {
     // Section Creation
     if (sectionCountries.length > 0) {
       const htmlSection = `
-        <section class="alphabet-section">
+        <section id="section-${sectionLetter}" class="alphabet-section">
         <h3>${sectionLetter}</h3>
-        <ul class="common-countries-name-ul-${sectionLetter}" id="common-countries-name-ul-${sectionLetter}"></ul>`;
+        <ul class="common-countries-name-ul-${sectionLetter}" id="common-countries"></ul>`;
       section.insertAdjacentHTML("beforeend", htmlSection);
     }
 
@@ -81,16 +84,6 @@ function clearCountriesList() {
 
 generatesCountriesList(countries.countries);
 
-buttonClearCountriesList.addEventListener("click", () => {
-  clearCountriesList();
-  countryInput.value = "";
-});
-
-buttonLoadCountriesList.addEventListener("click", () => {
-  generatesCountriesList(countries.countries);
-});
-
-
 countryInput.addEventListener("input", () => {
   const countryInputText = countryInput.value;
   const countryToSearch = countryInputText.charAt(0).toUpperCase() + countryInputText.slice(1).toLowerCase();
@@ -111,6 +104,65 @@ countryInput.addEventListener("input", () => {
     generatesCountriesList(countries.countries);
   }
 });
+
+buttonClearCountriesList.addEventListener("click", () => {
+  clearCountriesList();
+  countryInput.value = "";
+});
+
+buttonLoadCountriesList.addEventListener("click", () => {
+  generatesCountriesList(countries.countries);
+});
+
+// Agrega el controlador de eventos al elemento "ALL"
+allCountries.addEventListener('click', () => {
+  // Muestra todas las secciones de países ocultas
+  allSections.forEach(section => section.classList.remove('hidden'));
+});
+
+// Generar elementos del alfabeto y agregar controladores de eventos
+generateAlphabet().forEach(letter => {
+  const li = document.createElement('li');
+  li.textContent = letter;
+  li.classList.add('alphabet-item');
+  alphabetContainer.appendChild(li);
+
+  li.addEventListener('click', () => {
+    const sectionId = `section-${letter}`;
+    // console.log(sectionId)
+    const section = document.getElementById(sectionId);
+    // console.log(section)
+
+    // Mostrar sección de países seleccionada
+    section.classList.remove('hidden');
+    
+    // Ocultar las demás secciones de países
+    allSections.forEach(section => {
+      if (section.id !== sectionId) {
+        section.classList.add('hidden');
+      }
+    });
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

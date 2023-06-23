@@ -91,14 +91,14 @@ button.button-start {
 }
 
 h3 {
-  display: flex;
+  /* display: flex; */
   margin: 10px 10px 10px 10px;
   padding: 10px;
   font-family: stoke;
   font-size: x-large;
 }
 
-ul {
+ul#common-countries {
   list-style: none;
   column-count: 2;
   padding: 0px 20px 20px 20px;
@@ -109,7 +109,7 @@ li:hover {
   cursor: pointer;
 }
 
-li {
+li.country-item-li {
   margin: 5px;
   display: block;
   background-color: #f6f6f6;
@@ -149,7 +149,6 @@ li a {
   h3 {
     margin: 0;
     padding: 0;
-
     font-size: large;
   }
 
@@ -178,14 +177,14 @@ li a {
     width: 70%;
   }
 
-  ul {
+  ul#common-countries {
     list-style: none;
     column-count: 1;
     padding: 0px 2px 2px 2px;
     margin: 0px 3px 30px 3px;
   }
 
-  li {
+  li.country-item-li {
     margin: 5px;
     display: block;
     background-color: #f6f6f6;
@@ -264,21 +263,21 @@ li a {
   }
 
   h3 {
-    display: flex;
+    /* display: flex; */
     /* margin: 10px 10px 10px 10px; */
     /* padding: 10px; */
     font-family: stoke;
     font-size: large;
   }
 
-  ul {
+  ul#common-countries {
     list-style: none;
     column-count: 2;
     padding: 0px 2px 2px 2px;
     margin: 0px 3px 30px 3px;
   }
 
-  li {
+  li.country-item-li {
     margin: 5px;
     display: block;
     background-color: #f6f6f6;
@@ -305,4 +304,33 @@ li a {
     display: block;
     margin: 0 auto;
   }
+}
+
+/* New styles to alphabet */
+.hidden {
+  display: none;
+}
+
+nav.alphabet-navigation {
+  display: flex;
+  justify-content: center;
+}
+
+ul.alphabet-list li.active {
+  color: #22A6F5;
+  text-decoration: underline;
+}
+
+ul.alphabet-list {
+  display: flex;
+  list-style: none;
+  background-color: #ffffff;
+  width: 60%;
+  justify-content: space-evenly; /*reparte el espacio equitativamente */
+  /* align-items: center; */
+  padding: 10px;
+}
+
+.alphabet-item:hover {
+  text-decoration: underline;
 }

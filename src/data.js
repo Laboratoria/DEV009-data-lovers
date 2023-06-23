@@ -28,4 +28,18 @@ function searchCountries(countries, inputText) {
 // slice(0, lengthText): toma una subcadena de countryName desde el índice 0 hasta el índice lengthText. Esto significa que se extraen los primeros lengthText caracteres del nombre del país.
 // inputText: es la cadena de texto de entrada, es decir, el texto de búsqueda.
 
-export {generateCountriesList, searchCountries}; 
+
+// La función `generateAlphabet` genera las letras del alfabeto.
+function generateAlphabet() {
+  const alphabet = [];
+  
+  for (let i = 65; i <= 90; i++) {
+    const letter = String.fromCharCode(i);
+    alphabet.push(letter);
+  }
+  
+  return alphabet;
+}
+
+
+export {generateCountriesList, searchCountries, generateAlphabet}; 
