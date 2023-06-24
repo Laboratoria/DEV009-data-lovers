@@ -14,9 +14,6 @@ const buttonLoadCountriesList = document.querySelector(".load-section-button");
 const buttonClearCountriesList = document.querySelector(".clear-section-button");
 const section = document.querySelector(".countries-main");
 const countryInput = document.getElementById("country-input");
-const alphabetContainer = document.querySelector('.alphabet-list');
-const allCountries = document.querySelector('.alphabet-list li:first-child');
-const allSections = document.querySelectorAll('.alphabet-section');
 const continentList = document.querySelectorAll(".continent-name-li");
 
 function generatesCountriesList(countries) {
@@ -124,14 +121,11 @@ buttonLoadCountriesList.addEventListener("click", () => {
   generatesCountriesList(countries.countries);
 });
 
-// Agrega el controlador de eventos al elemento "ALL"
-allCountries.addEventListener('click', () => {
-  // Muestra todas las secciones de países ocultas
-  allSections.forEach(section => section.classList.remove('hidden'));
-});
-
 // Generar elementos del alfabeto y agregar controladores de eventos
-generateAlphabet().forEach(letter => {
+const alphabet = generateAlphabet();
+const alphabetContainer = document.querySelector('.alphabet-list');
+
+alphabet.forEach(letter => {
   const li = document.createElement('li');
   li.textContent = letter;
   li.classList.add('alphabet-item');
@@ -147,12 +141,23 @@ generateAlphabet().forEach(letter => {
     section.classList.remove('hidden');
     
     // Ocultar las demás secciones de países
+    const allSections = document.querySelectorAll('.alphabet-section');
     allSections.forEach(section => {
       if (section.id !== sectionId) {
         section.classList.add('hidden');
       }
     });
   });
+});
+
+// Obtiene la referencia al elemento "ALL"
+const allCountries = document.querySelector('.alphabet-list li:first-child')
+
+// Agrega el controlador de eventos al elemento "ALL"
+allCountries.addEventListener('click', () => {
+  // Muestra todas las secciones de países ocultas
+  const hiddenSections = document.querySelectorAll('.alphabet-section.hidden');
+  hiddenSections.forEach(section => section.classList.remove('hidden'));
 });
 
 // const countriesSortedByPopulationDown = sortByPopulation(countries, -1);
