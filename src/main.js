@@ -188,7 +188,7 @@ allCountries.addEventListener("click", () => {
 // console.log(countruiessortedByAreaDown);
 
 // console.log("Filter Asia countries:");
-// console.log(filterByContinents(countries, "Asia"));
+// console.log(filterByContinents(countries, "America"));
 
 // console.log("Filter countries by subregion Eastern Asia");
 // console.log(filterBySubregion(countries, "Eastern Asia"));
@@ -213,7 +213,7 @@ languageList.forEach((language) => {
 });
 
 const handleLanguageClick = (actualLanguage, actualTittle) => {
-  const languageCountriesList = filterByLanguages(countries, actualLanguage);
+  const languageCountriesList = filterByLanguages(countries.countries, actualLanguage);
   // const continentCountriesCommonNames = generateCountriesList(
   //   continentCountriesList
   // console.log(languageCountriesList);
@@ -233,7 +233,6 @@ continentList.forEach((continent) => {
 
 const handleContinentClick = (actualContinent, actualTittle) => {
   const continentCountriesList = filterByContinents(countries, actualContinent);
-
   generateSection(actualContinent, actualTittle);
   generateCountriesUl(continentCountriesList, actualContinent);
 };

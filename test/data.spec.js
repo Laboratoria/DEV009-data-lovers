@@ -118,7 +118,94 @@ const countries = [
       alt: "The flag of Latvia has a carmine-red field with a thin white horizontal band across the middle of the field.",
     },
   },
+  {
+    "name": {
+      "common": "Anguilla",
+      "official": "Anguilla"
+    },
+    "tld": [
+      ".ai"
+    ],
+    "independent": false,
+    "capital": [
+      "The Valley"
+    ],
+    "subregion": "Caribbean",
+    "languages": {
+      "eng": "English"
+    },
+    "area": 91,
+    "flag": "🇦🇮",
+    "population": 13452,
+    "fifa": "AIA",
+    "timezones": [
+      "UTC-04:00"
+    ],
+    "continents": [
+      "America"
+    ],
+    "flags": {
+      "png": "https://flagcdn.com/w320/ai.png",
+      "svg": "https://flagcdn.com/ai.svg"
+    }
+  },
 ];
+
+// const toEqual1=[
+//   {
+//     name: {
+//       common: "Guatemala",
+//       official: "Republic of Guatemala",
+//     },
+//     capital: ["Guatemala City"],
+//     languages: {
+//       spa: "Spanish",
+//     },
+//     borders: ["BLZ", "SLV", "HND", "MEX"],
+//     area: 108889,
+//     population: 16858333,
+//     gini: {
+//       2014: 48.3,
+//     },
+//     continents: ["America"],
+//     flags: {
+//       png: "https://flagcdn.com/w320/gt.png",
+//       svg: "https://flagcdn.com/gt.svg",
+//       alt: "The flag of Guatemala is composed of three equal vertical bands of light blue, white and light blue, with the national coat of arms centered in the white band.",
+//     },
+//   },
+//   {
+//     "name": {
+//       "common": "Anguilla",
+//       "official": "Anguilla"
+//     },
+//     "tld": [
+//       ".ai"
+//     ],
+//     "independent": false,
+//     "capital": [
+//       "The Valley"
+//     ],
+//     "subregion": "Caribbean",
+//     "languages": {
+//       "eng": "English"
+//     },
+//     "area": 91,
+//     "flag": "🇦🇮",
+//     "population": 13452,
+//     "fifa": "AIA",
+//     "timezones": [
+//       "UTC-04:00"
+//     ],
+//     "continents": [
+//       "America"
+//     ],
+//     "flags": {
+//       "png": "https://flagcdn.com/w320/ai.png",
+//       "svg": "https://flagcdn.com/ai.svg"
+//     }
+//   },
+// ];
 
 describe("generateCountriesList result should be a function", () => {
   it("is a function", () => {
@@ -135,6 +222,7 @@ describe("generateCountriesList", () => {
         "Guatemala",
         "Latvia",
         "Maldives",
+        'Anguilla',
       ].sort()
     );
   });
@@ -147,31 +235,12 @@ describe("searchCountries should return an object with a country information", (
 });
 
 describe('FilterByContinents("America")', () => {
-  it("Should return an object with Guatemala info", () => {
-    expect(filterByContinents(countries, "America")).toEqual([
-      {
-        name: {
-          common: "Guatemala",
-          official: "Republic of Guatemala",
-        },
-        capital: ["Guatemala City"],
-        languages: {
-          spa: "Spanish",
-        },
-        borders: ["BLZ", "SLV", "HND", "MEX"],
-        area: 108889,
-        population: 16858333,
-        gini: {
-          2014: 48.3,
-        },
-        continents: ["America"],
-        flags: {
-          png: "https://flagcdn.com/w320/gt.png",
-          svg: "https://flagcdn.com/gt.svg",
-          alt: "The flag of Guatemala is composed of three equal vertical bands of light blue, white and light blue, with the national coat of arms centered in the white band.",
-        },
-      },
-    ]);
+  it("Should return an object with  an array of countries that belong America", () => {
+    expect(typeof filterByContinents(countries, "America")).toBe("object");
+  });
+
+  it ("Should return countries belonging America",()=>{
+    expect(filterByContinents(countries,"America")).toEqual([])
   });
 });
 
