@@ -1,12 +1,10 @@
 import countries from "./data/countries/countries.js";
 import {
-  // generateCountriesList,
   searchCountries,
   generateAlphabet,
-  // filterByLetter,
   filterByContinents,
-  // filterBySubregion,
   filterByLanguages,
+  // filterBySubregion,
   // sortByPopulation,
   // sortByArea,
 } from "./data.js";
@@ -17,6 +15,7 @@ const buttonClearCountriesList = document.querySelector(
 );
 const section = document.querySelector(".countries-main");
 const countryInput = document.getElementById("country-input");
+const allLetters=document.querySelector(".active");
 const continentList = document.querySelectorAll(".continent-name-li");
 const languageList = document.querySelectorAll(".language-li");
 
@@ -70,26 +69,6 @@ const generateCountriesUl = (data, tittle) => {
   }
 };
 
-// function generatesCountriesFindedList(countryList, letter) {
-//   const containerList = document.querySelector(
-//     `.common-countries-name-ul-${letter}`
-//   );
-//   containerList.innerHTML = "";
-//   for (const country of countryList) {
-//     const countryName = country.name.common;
-//     const flagCountry = country.flags.png;
-//     const html = `
-//         <li class="country-item-li"><a href="#">${countryName}</a><img
-//                 class="flag-country"
-//                 src="${flagCountry}"
-//                 alt="flag country"
-//                 width="30"
-//               />
-//           </li>`;
-//     containerList.insertAdjacentHTML("beforeend", html);
-//   }
-// }
-
 function clearCountriesList() {
   section.innerHTML = "";
 }
@@ -127,46 +106,107 @@ buttonLoadCountriesList.addEventListener("click", () => {
   generatesCountriesList(countries.countries);
 });
 
+allLetters.addEventListener('click',()=>{
+  generatesCountriesList(countries.countries);
+})
+
 // Generar elementos del alfabeto y agregar controladores de eventos
 const alphabet = generateAlphabet();
 const alphabetContainer = document.querySelector(".alphabet-list");
 
+
+// Genera la barra de navegación por letras
 alphabet.forEach((letter) => {
-  const li = document.createElement("li");
-  li.textContent = letter;
-  li.classList.add("alphabet-item");
-  alphabetContainer.appendChild(li);
+  const htmlAlphabetList=`<li class="alphabet-item letter" id="${letter}">${letter}</li>`;
+  alphabetContainer.insertAdjacentHTML("beforeend", htmlAlphabetList);
+})
+const alphabetList=document.querySelectorAll(".letter");
 
-  li.addEventListener("click", () => {
-    const sectionId = `section-${letter}`;
-    // console.log(sectionId)
-    const section = document.getElementById(sectionId);
-    // console.log(section)
+alphabetList.forEach((letter) => {
+  letter.addEventListener("click", () => {
+    const actualLetter = letter.getAttribute("id");
+    const actualTittle = letter.getAttribute("id");
+    // console.log(actualTittle);
+    handleLetterClick(actualLetter, actualTittle);
+  });
+});
+  
+const handleLetterClick = (actualLetter, actualTittle) => {
+  const letterCountriesList = searchCountries(countries.countries, actualLetter);
+  generateSection(actualLetter, actualTittle);
+  generateCountriesUl(letterCountriesList, actualLetter);
+};
+  
+//Version de Andrea
+// const li = document.createElement("li");
+// li.textContent = letter;
+// li.classList.add("alphabet-item");
+// li.idList.add("letter");
+// alphabetContainer.appendChild(li);
+//   li.addEventListener("click", () => {
+//     const sectionId = `section-${letter}`;
+//     // console.log(sectionId)
+//     const section = document.getElementById(sectionId);
+//     // console.log(section)
 
-    // Mostrar sección de países seleccionada
-    section.classList.remove("hidden");
+//     // Mostrar sección de países seleccionada
+//     section.classList.remove("hidden");
 
-    // Ocultar las demás secciones de países
-    const allSections = document.querySelectorAll(".alphabet-section");
-    allSections.forEach((section) => {
-      if (section.id !== sectionId) {
-        section.classList.add("hidden");
-      }
-    });
+//     // Ocultar las demás secciones de países
+//     const allSections = document.querySelectorAll(".alphabet-section");
+//     allSections.forEach((section) => {
+//       if (section.id !== sectionId) {
+//         section.classList.add("hidden");
+//       }
+//     });
+//   });
+// });
+
+// // Obtiene la referencia al elemento "ALL"
+// const allCountries = document.querySelector(".alphabet-list li:first-child");
+
+// // Agrega el controlador de eventos al elemento "ALL"
+// allCountries.addEventListener("click", () => {
+//   // Muestra todas las secciones de países ocultas
+//   const hiddenSections = document.querySelectorAll(".alphabet-section.hidden");
+//   hiddenSections.forEach((section) => section.classList.remove("hidden"));
+// });
+
+
+///                     hasta aca de andrea           ///
+//////////////////////////////////////////////////////////////////////////
+
+languageList.forEach((language) => {
+  language.addEventListener("click", () => {
+    const actualLanguage = language.getAttribute("id");
+    const actualTittle = language.getAttribute("tittle");
+    handleLanguageClick(actualLanguage, actualTittle);
   });
 });
 
-// Obtiene la referencia al elemento "ALL"
-const allCountries = document.querySelector(".alphabet-list li:first-child");
+const handleLanguageClick = (actualLanguage, actualTittle) => {
+  const languageCountriesList = filterByLanguages(countries, actualLanguage);
+  generateSection(actualLanguage, actualTittle);
+  generateCountriesUl(languageCountriesList, actualLanguage);
+};
 
-// Agrega el controlador de eventos al elemento "ALL"
-allCountries.addEventListener("click", () => {
-  // Muestra todas las secciones de países ocultas
-  const hiddenSections = document.querySelectorAll(".alphabet-section.hidden");
-  hiddenSections.forEach((section) => section.classList.remove("hidden"));
+continentList.forEach((continent) => {
+  continent.addEventListener("click", () => {
+    const actualContinent = continent.getAttribute("id");
+    const actualTittle = continent.getAttribute("tittle");
+    handleContinentClick(actualContinent, actualTittle);
+  });
 });
 
+const handleContinentClick = (actualContinent, actualTittle) => {
+  const continentCountriesList = filterByContinents(countries, actualContinent);
+  generateSection(actualContinent, actualTittle);
+  generateCountriesUl(continentCountriesList, actualContinent);
+};
+
 ///////////////////////////////////////////////////////////////////////
+
+/////////////           Test para los filtros           ///////////////
 
 // const countriesByG = filterByLetter(countries.countries, "G");
 // console.log(countriesByG);
@@ -202,37 +242,26 @@ allCountries.addEventListener("click", () => {
 
 // console.log("Filter countries Portuguese language");
 // console.log(filterByLanguages(countries, "por"));
+////////////////   aque terminan pruebas de filtros   //////////////////
 
-languageList.forEach((language) => {
-  // console.log(languageList);
-  language.addEventListener("click", () => {
-    const actualLanguage = language.getAttribute("id");
-    const actualTittle = language.getAttribute("tittle");
-    handleLanguageClick(actualLanguage, actualTittle);
-  });
-});
 
-const handleLanguageClick = (actualLanguage, actualTittle) => {
-  const languageCountriesList = filterByLanguages(countries.countries, actualLanguage);
-  // const continentCountriesCommonNames = generateCountriesList(
-  //   continentCountriesList
-  // console.log(languageCountriesList);
-
-  generateSection(actualLanguage, actualTittle);
-  generateCountriesUl(languageCountriesList, actualLanguage);
-};
-
-continentList.forEach((continent) => {
-  continent.addEventListener("click", () => {
-    const actualContinent = continent.getAttribute("id");
-    const actualTittle = continent.getAttribute("tittle");
-    // console.log(actualTittle);
-    handleContinentClick(actualContinent, actualTittle);
-  });
-});
-
-const handleContinentClick = (actualContinent, actualTittle) => {
-  const continentCountriesList = filterByContinents(countries, actualContinent);
-  generateSection(actualContinent, actualTittle);
-  generateCountriesUl(continentCountriesList, actualContinent);
-};
+//////////////////////////  codigo que sobra /////////////////////////////
+// function generatesCountriesFindedList(countryList, letter) {
+//   const containerList = document.querySelector(
+//     `.common-countries-name-ul-${letter}`
+//   );
+//   containerList.innerHTML = "";
+//   for (const country of countryList) {
+//     const countryName = country.name.common;
+//     const flagCountry = country.flags.png;
+//     const html = `
+//         <li class="country-item-li"><a href="#">${countryName}</a><img
+//                 class="flag-country"
+//                 src="${flagCountry}"
+//                 alt="flag country"
+//                 width="30"
+//               />
+//           </li>`;
+//     containerList.insertAdjacentHTML("beforeend", html);
+//   }
+// }
