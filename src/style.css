@@ -76,8 +76,9 @@ button.button-start {
 }
 
 .countries-main {
-  overflow-y: scroll;
-  height: 100vh; /*Ajusta la altura según sea necesario */
+  /* overflow-y: scroll; */
+  background-color: #ffffff;
+  /* height: 100vh; Ajusta la altura según sea necesario */
   margin-top: 40px;
   display: flex;
   flex-direction: column;
@@ -100,6 +101,12 @@ h3 {
 }
 
 ul#common-countries {
+  list-style: none;
+  column-count: 2;
+  padding: 0px 20px 20px 20px;
+  margin: 0px 20px 20px 20px;
+}
+ul.common-countries {
   list-style: none;
   column-count: 2;
   padding: 0px 20px 20px 20px;
@@ -145,6 +152,7 @@ li a {
 
   .countries-main {
     margin-top: 0;
+    background-color: #f6f6f6;
   }
 
   h3 {
@@ -231,6 +239,7 @@ li a {
 
   .countries-main {
     margin-top: 0;
+    background-color: #f6f6f6;
   }
 
   .country-item-li {
@@ -318,7 +327,7 @@ nav.alphabet-navigation {
 }
 
 ul.alphabet-list li.active {
-  color: #22A6F5;
+  color: #22a6f5;
   text-decoration: underline;
 }
 
@@ -367,7 +376,7 @@ ul.container-side-bar-ul {
   list-style: none;
 }
 
-ol.container-continent-ol{
+ol.container-continent-ol {
   list-style: none;
 }
 
