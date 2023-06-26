@@ -86,6 +86,20 @@ button.button-start {
   align-items: center;
   gap: 30px;
 }
+.countries-table{
+  background-color: #ffffff;
+  /* height: 100vh; Ajusta la altura según sea necesario */
+  margin-top: 40px;
+  display: block;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: flex-start; */
+  align-items: center;
+  gap: 30px;
+
+}
+
+.col1{}
 
 #container_Table{
   background-color: #fff;
@@ -98,9 +112,20 @@ button.button-start {
   overflow: scroll;
 }
 
+.table-tittle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+  font-weight: bold;
+}
+
 .table-row {
   padding: 0.5rem 4rem;
-  display: flex;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 50px;
+
   align-items: center;
   border-bottom: 1px solid #eee;
 }
