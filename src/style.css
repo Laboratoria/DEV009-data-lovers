@@ -48,18 +48,22 @@ header{
     height: auto; /* Altura automática proporcional */
 }
 
-.intro-buttons {
-    display: flex;
-}
-
-.btn-home, .btn-movie {
+nav ul li {
+    display: inline-block;
     color: white;
     margin-left: 10px;
     font-family: var(--font-family-intro);
     font-size: 24px;
     font-weight: normal;
-    color: var(--accent-font-color);
 }
+nav ul li a:visited {
+    color: white; /* Cambia "white" por el color deseado para enlaces visitados */
+  }
+
+nav ul li a {
+    text-decoration: none;
+}
+  
 
 .intro-text, .totoro-intro{
     padding:20px;

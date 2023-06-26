@@ -47,11 +47,45 @@ window.addEventListener('DOMContentLoaded', (event) => {
       filmDirector.textContent = 'Director: '+ film.director;
       containerDiv.appendChild(filmDirector);
 
-      const filmPoster = document.createElement('p');
-      filmPoster.textContent ='Score: '+ film.rt_score;
-      containerDiv.appendChild(filmPoster);
+      const filmScore = document.createElement('p');
+      filmScore.textContent ='Score: '+ film.rt_score;
+      containerDiv.appendChild(filmScore);
   });
 });
+const orderSelect = document.getElementById('orderSelect');
+
+// Agrega el evento change al elemento select
+orderSelect.addEventListener('change', function() {
+  // Obtén el valor seleccionado
+  const selectedOption = orderSelect.value;
+
+  // Realiza las acciones correspondientes según la opción seleccionada
+  if (selectedOption === 'opcion1') {
+    // Acción para "Ordenar de A - Z"
+    // ...
+  } else if (selectedOption === 'opcion2') {
+    // Acción para "Ordenar de Z - A"
+    // ...
+  } else if (selectedOption === 'opcion3') {
+    films.sort(compareByScoreDescending);
+
+    // Limpiar el contenedor antes de agregar los elementos ordenados
+    clearContainer();
+
+    // Recorrer los objetos "films" ordenados y crear los elementos HTML
+    for (let i = 0; i < films.length; i++) {
+      const film = film[i];
+
+      const filmScore = document.createElement('p');
+      filmScore.textContent ='Score: '+ film.rt_score;
+      containerDiv.appendChild(filmScore);
+    }
+  }
+});
+
+
+
+
 /*
 window.addEventListener('DOMContentLoaded', (event) => {
   const dataContainer = document.getElementById('imagenContainer');
