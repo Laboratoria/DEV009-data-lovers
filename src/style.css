@@ -1,0 +1,104 @@
+
+:root{
+    --background-color: #FAF9F6;
+    --welcome-background-color: #0EA0D9;
+    --container-color: #EAF3F5;
+    --accent-font-color: #DFEDF2;
+    --body-font-color: #1E1E1E;
+    --font-family-intro: 'Poppins', sans-serif;
+    --font-family-body: 'Inter', sans-serif;
+}
+
+.presentation{
+    background-color: #0EA0D9;
+    display: flex;
+    align-items: center;
+    padding: 10vh;
+    font-family: var(--font-family-intro);
+    height: 415px;
+    margin-bottom: 60px;
+    }
+
+body{
+    font-family: var(--font-family-body);
+    color: var(--body-font-color);
+    margin: 0px;
+    background-color: var(--background-color);
+} 
+
+.presentation img {
+    margin-right: 10px;
+    width: 600px; /* Ancho deseado */
+    height: auto; /* Altura automática proporcional */
+}
+
+
+header{
+    background-color: #0EA0D9;
+    align-items: center;
+    color:white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    }
+    
+.logo img {
+    margin-left: 10px;
+    width: 160px; /* Ancho deseado */
+    height: auto; /* Altura automática proporcional */
+}
+
+nav ul li {
+    display: inline-block;
+    color: white;
+    margin-left: 10px;
+    font-family: var(--font-family-intro);
+    font-size: 24px;
+    font-weight: normal;
+}
+nav ul li a:visited {
+    color: white; /* Cambia "white" por el color deseado para enlaces visitados */
+  }
+
+nav ul li a {
+    text-decoration: none;
+}
+  
+
+.intro-text, .totoro-intro{
+    padding:20px;
+}
+
+
+.data-peliculas-contenedor{
+    display:grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+    padding: 48px;
+    background-color: var(--container-color);
+    margin-bottom: 40px;
+    margin-right: 40px;
+    margin-left: 120px;
+    border-radius: 18px;
+    border-style: outset;
+    width: 1000px;
+}
+
+.data-title{
+    font-weight: bold;
+}
+
+.data-year{
+    font-weight: bold;
+}
+
+.data-description{
+    width: px;
+}
+
+
+.imagen-reducida {
+    width: 200px; /* Puedes ajustar el tamaño según tus necesidades */
+    height: auto; /* Mantén la proporción de la imagen */
+  }
+  
