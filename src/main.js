@@ -4,6 +4,7 @@ import {
   generateAlphabet,
   filterByContinents,
   filterByLanguages,
+  // filterCountriesByContinent,
   // filterBySubregion,
   // sortByPopulation,
   // sortByArea,
@@ -13,11 +14,16 @@ const buttonLoadCountriesList = document.querySelector(".load-section-button");
 const buttonClearCountriesList = document.querySelector(
   ".clear-section-button"
 );
+// const buttonSortPopulationUp=document.querySelector(".filter-by-population")
+// const containerRow=document.querySelector('.row');
 const section = document.querySelector(".countries-main");
 const countryInput = document.getElementById("country-input");
 const allLetters=document.querySelector(".active");
+// const containerTable=document.querySelector(".container-table");
+// const countriesContainer=document.querySelector('.countries-container');
 const continentList = document.querySelectorAll(".continent-name-li");
 const languageList = document.querySelectorAll(".language-li");
+// const container_Table=document.querySelector("#container_Table")
 
 function generatesCountriesList() {
   section.innerHTML = "";
@@ -42,6 +48,8 @@ function generatesCountriesList() {
 }
 
 function generateSection(id, tittle, clearSection = "yes") {
+  section.style.opacity = 100;
+  // container_Table.innerHTML='';
   if (clearSection === "yes") section.innerHTML = "";
   const htmlSection = `
         <section class="section- ${tittle} ">
@@ -58,12 +66,12 @@ const generateCountriesUl = (data, tittle) => {
     const countryName = country.name.common;
     const flagCountry = country.flags.png;
     const html = `
-        <li class="country-item-li"><a href="#">${countryName}</a><img
-                class="flag-country"
-                src="${flagCountry}"
-                alt="flag country"
-                width="30"
-              />
+        <li class="country-item-li"><img
+        class="flag-country"
+        src="${flagCountry}"
+        alt="flag country"
+        width="30"
+      /><a href="#">${countryName}</a>
           </li>`;
     containerList.insertAdjacentHTML("beforeend", html);
   }
@@ -208,6 +216,9 @@ const handleContinentClick = (actualContinent, actualTittle) => {
 
 /////////////           Test para los filtros           ///////////////
 
+// const countriesOfAmerica=filterCountriesByContinent(countries.countries,"America");
+// console.log(countriesOfAmerica);
+
 // const countriesByG = filterByLetter(countries.countries, "G");
 // console.log(countriesByG);
 
@@ -265,3 +276,58 @@ const handleContinentClick = (actualContinent, actualTittle) => {
 //     containerList.insertAdjacentHTML("beforeend", html);
 //   }
 // }
+
+/////////////////////////////////////////////////////
+
+// const countriesSortedByPopulationUp = sortByPopulation(countries, 1);
+// console.log("Sorted by population up");
+// console.log(countriesSortedByPopulationUp);
+
+// const generateTableForSortedData=(data,filterKind,sortOrder)=>{
+//   // filterKind =Area or Population
+//   // sortOrder= Ascending or descending
+//   section.style.opacity = 0;
+//   // countriesContainer.innerHTML='';
+
+//   const container_Table = document.createElement("div");
+ 
+//   containerRow.appendChild(container_Table);
+
+//   const htmlTittleTable=
+//   `<h3>Countries ${filterKind} sorted in ${sortOrder} order</h3>
+//   <div class="table-row">
+//     <div class="col1 col-tittle">Country     </div>
+//     <div class="col2 col-tittle">${filterKind} </div>
+//     </div>`;
+//   container_Table.insertAdjacentHTML("beforeend", htmlTittleTable);
+//   data.forEach(country=>{
+//     const countryName=country.name.common;
+//     const flagCountry=country.flags.png;
+//     const filterVar=country.population;
+//     const htmlRowTable=`
+//     <div class="table-row">
+//       <div class="col1 col-list">
+//         <ul class="inline-list">
+//           <li><img class="flag-country"
+//           src="${flagCountry}" 
+//           alt="flag country" 
+//           width="30"/>
+//           </li>
+//           <li><a href="#">${countryName}</a></li>
+//         </ul>
+//       </div>
+//       <div class="col2 col2-content">${filterVar} </div>
+//     </div>`
+//     container_Table.insertAdjacentHTML("beforeend", htmlRowTable);
+//   });
+//   // const htmlCloseTable=`</tbody></table>`
+//   // section.insertAdjacentHTML("beforeend",htmlCloseTable)
+// };
+
+// buttonSortPopulationUp.addEventListener('click',()=>{
+//   const filterKind='population';
+//   const sortOrder='Ascending'
+//   const countriesSortedByPopulationUp = sortByPopulation(countries, 1);
+//   console.log(countriesSortedByPopulationUp);
+//   generateTableForSortedData(countriesSortedByPopulationUp,filterKind,sortOrder);
+// });

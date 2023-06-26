@@ -1,4 +1,9 @@
 // La función `generateCountriesList` lee una lista de países y devuelve un array ordenado con los nombres comunes de los países.
+// export const filterCountriesByContinent=(countries, continent)=>{
+//   returncountries.filter(country=>country.continents===continent);
+// }
+
+
 function generateCountriesList(countries) {
   const commonCountriesNames = [];
   countries.forEach((country) => {
@@ -74,6 +79,8 @@ const filterBySubregion = (data, subregion) => {
   return result;
 };
 
+
+
 const filterByLanguages = (data, language) => {
   const countriesLanguage = [];
   data.countries.map((country) => {
@@ -113,7 +120,7 @@ const sortByPopulation = (data, sortOrder) => {
     break;
   }
   }
-
+  // console.log(result);
   return result;
 };
 

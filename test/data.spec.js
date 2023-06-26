@@ -151,61 +151,61 @@ const countries = [
   },
 ];
 
-// const toEqual1=[
-//   {
-//     name: {
-//       common: "Guatemala",
-//       official: "Republic of Guatemala",
-//     },
-//     capital: ["Guatemala City"],
-//     languages: {
-//       spa: "Spanish",
-//     },
-//     borders: ["BLZ", "SLV", "HND", "MEX"],
-//     area: 108889,
-//     population: 16858333,
-//     gini: {
-//       2014: 48.3,
-//     },
-//     continents: ["America"],
-//     flags: {
-//       png: "https://flagcdn.com/w320/gt.png",
-//       svg: "https://flagcdn.com/gt.svg",
-//       alt: "The flag of Guatemala is composed of three equal vertical bands of light blue, white and light blue, with the national coat of arms centered in the white band.",
-//     },
-//   },
-//   {
-//     "name": {
-//       "common": "Anguilla",
-//       "official": "Anguilla"
-//     },
-//     "tld": [
-//       ".ai"
-//     ],
-//     "independent": false,
-//     "capital": [
-//       "The Valley"
-//     ],
-//     "subregion": "Caribbean",
-//     "languages": {
-//       "eng": "English"
-//     },
-//     "area": 91,
-//     "flag": "🇦🇮",
-//     "population": 13452,
-//     "fifa": "AIA",
-//     "timezones": [
-//       "UTC-04:00"
-//     ],
-//     "continents": [
-//       "America"
-//     ],
-//     "flags": {
-//       "png": "https://flagcdn.com/w320/ai.png",
-//       "svg": "https://flagcdn.com/ai.svg"
-//     }
-//   },
-// ];
+const CountriesAmerica=[
+  {
+    name: {
+      common: "Guatemala",
+      official: "Republic of Guatemala",
+    },
+    capital: ["Guatemala City"],
+    languages: {
+      spa: "Spanish",
+    },
+    borders: ["BLZ", "SLV", "HND", "MEX"],
+    area: 108889,
+    population: 16858333,
+    gini: {
+      2014: 48.3,
+    },
+    continents: ["America"],
+    flags: {
+      png: "https://flagcdn.com/w320/gt.png",
+      svg: "https://flagcdn.com/gt.svg",
+      alt: "The flag of Guatemala is composed of three equal vertical bands of light blue, white and light blue, with the national coat of arms centered in the white band.",
+    },
+  },
+  {
+    "name": {
+      "common": "Anguilla",
+      "official": "Anguilla"
+    },
+    "tld": [
+      ".ai"
+    ],
+    "independent": false,
+    "capital": [
+      "The Valley"
+    ],
+    "subregion": "Caribbean",
+    "languages": {
+      "eng": "English"
+    },
+    "area": 91,
+    "flag": "🇦🇮",
+    "population": 13452,
+    "fifa": "AIA",
+    "timezones": [
+      "UTC-04:00"
+    ],
+    "continents": [
+      "America"
+    ],
+    "flags": {
+      "png": "https://flagcdn.com/w320/ai.png",
+      "svg": "https://flagcdn.com/ai.svg"
+    }
+  },
+];
 
 describe("generateCountriesList result should be a function", () => {
   it("is a function", () => {
@@ -239,10 +239,17 @@ describe('FilterByContinents("America")', () => {
     expect(typeof filterByContinents(countries, "America")).toBe("object");
   });
 
-  it ("Should return countries belonging America",()=>{
-    expect(filterByContinents(countries,"America")).toEqual([])
+  it ("Should return empty array",()=>{
+    expect(filterByContinents(countries,"Africa")).toEqual([])
   });
 });
+
+test('filterByContinents should return countries from the specified continent',()=>{
+  const continent='America';
+  const result=filterByContinents(countries,continent);
+
+  expect(result).toEqual(CountriesAmerica);
+}) 
 
 // describe('example', () => {
 //   it('is a function', () => {
