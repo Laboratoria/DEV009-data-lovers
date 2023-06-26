@@ -3,7 +3,7 @@ import data from './data/athletes/athletes.js';
 import athletes from './data/athletes/athletes.js';
 
 //llamar a los datos de Athletes
-const dataArr = Object.values(data.athletes)
+const dataArr = (data.athletes)
 //Barra de busqueda
 const barra = document.getElementById('barra')
 //Boton buscar
@@ -13,7 +13,7 @@ const clear = document.getElementById('clear')
 barra.addEventListener('input', (e) => {
   const searchTerm = e.target.value.toLowerCase();
   const filteredData = dataArr.filter(atleta => atleta.name.toLowerCase().includes(searchTerm)||
-    atleta.team.toLowerCase().includes(searchTerm) ||
+    atleta.team.toLowerCase().includes(searchTerm) || 
     atleta.sport.toLowerCase().includes(searchTerm) ||
     atleta.medal.toLowerCase().includes(searchTerm));
   const createHTML = generateCards(filteredData);
@@ -22,7 +22,7 @@ barra.addEventListener('input', (e) => {
 
 // Limpiar input text
 clear.addEventListener('click', () => {
-  return barra = ""
+  return barra.value = ""
 })
 
 // Extrar los datos
@@ -109,7 +109,6 @@ function fteamGF (genef) {
 }
 document.getElementById('f').addEventListener('click', ()=>
 cardsContainer.innerHTML = fteamGF(dataArr))
-
 
 
 
