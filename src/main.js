@@ -1,4 +1,4 @@
-import { filterTeam, sortData, filterGenM , filterGenF} from './data.js';
+import { filterTeamIta,filterTeamUsa,filterTeamRuss,filterTeamColo,filterTeamFran, sortData, filterGenM , filterGenF,filterGold,filterSilver,filterBronze} from './data.js';
 import data from './data/athletes/athletes.js';
 import athletes from './data/athletes/athletes.js';
 
@@ -83,34 +83,98 @@ document.getElementById("teamZtoA").addEventListener("click", () =>
     cardsContainer.innerHTML = createHTML;
   });
 
-//Filtrar por Team
-function fteam (team) {
-  const funcData = filterTeam(team);
+//FILTRAR TEAM
+//Filtrar por Team/Italy
+function fteam1 (team) {
+  const funcData = filterTeamIta(team);
   const createHTML = generateCards(funcData);
   return createHTML
 }
 document.getElementById('Italy').addEventListener('click', ()=>
-cardsContainer.innerHTML = fteam(dataArr))
+cardsContainer.innerHTML = fteam1(dataArr))
 
+//Filtrar por Team/United States
+function fteam2 (team) {
+  const funcData = filterTeamUsa(team);
+  const createHTML = generateCards(funcData);
+  return createHTML
+}
+document.getElementById('United States').addEventListener('click', ()=>
+cardsContainer.innerHTML = fteam2(dataArr))
+
+//Filtrar por Team/Russia
+function fteam3 (team) {
+  const funcData = filterTeamRuss(team);
+  const createHTML = generateCards(funcData);
+  return createHTML
+}
+document.getElementById('Russia').addEventListener('click', ()=>
+cardsContainer.innerHTML = fteam3(dataArr))
+
+//Filtrar por Team/France
+function fteam4 (team) {
+  const funcData = filterTeamFran(team);
+  const createHTML = generateCards(funcData);
+  return createHTML
+}
+document.getElementById('France').addEventListener('click', ()=>
+cardsContainer.innerHTML = fteam4(dataArr))
+
+//Filtrar por Team/Colombia
+function fteam5 (team) {
+  const funcData = filterTeamColo(team);
+  const createHTML = generateCards(funcData);
+  return createHTML
+}
+document.getElementById('Colombia').addEventListener('click', ()=>
+cardsContainer.innerHTML = fteam5(dataArr))
+
+//FILTRAR GENERO
 //Filtrar por Genero M
-function fteamG (genem) {
+function genM (genem) {
   const funcData = filterGenM(genem);
   const createHTML = generateCards(funcData);
   return createHTML
 }
 document.getElementById('m').addEventListener('click', ()=>
-cardsContainer.innerHTML = fteamG(dataArr))
+cardsContainer.innerHTML = genM(dataArr))
 
 //Filtrar por Genero F
-function fteamGF (genef) {
+function genF (genef) {
   const funcData = filterGenF(genef);
   const createHTML = generateCards(funcData);
   return createHTML
 }
 document.getElementById('f').addEventListener('click', ()=>
-cardsContainer.innerHTML = fteamGF(dataArr))
+cardsContainer.innerHTML = genF (dataArr))
 
+//FILTRAR MEDALLA
+//Filtrar por ORO
+function medoro (medalo) {
+  const funcData = filterGold(medalo);
+  const createHTML = generateCards(funcData);
+  return createHTML
+}
+document.getElementById('oro').addEventListener('click', ()=>
+cardsContainer.innerHTML = medoro(dataArr))
 
+//Filtrar por PLATA
+function medplata (medalp) {
+  const funcData = filterSilver(medalp);
+  const createHTML = generateCards(funcData);
+  return createHTML
+}
+document.getElementById('plata').addEventListener('click', ()=>
+cardsContainer.innerHTML = medplata(dataArr))
+
+//Filtrar por BRONZE
+function medbronze (medalb) {
+  const funcData = filterBronze(medalb);
+  const createHTML = generateCards(funcData);
+  return createHTML
+}
+document.getElementById('bronce').addEventListener('click', ()=>
+cardsContainer.innerHTML = medbronze(dataArr))
 
 
 

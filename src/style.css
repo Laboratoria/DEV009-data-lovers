@@ -13,7 +13,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 420px;
 }
 #logo2016 {
     line-height: 140px;
@@ -58,7 +57,7 @@
     width: 100%;
     max-width: 250px;
     background: #1c1c1c;
-    height: 100vh;
+    height: 1500px;
     position: relative;
 }
 .contenedorFiltros .contenedorFiltros2 nav a{
@@ -69,7 +68,7 @@
     border-left: 5px solid transparent;
 }
 .contenedorFiltros .contenedorFiltros2 nav a:hover{
-    background: #1f1f1f;
+    background: #2d2d2d;
     border-left: 5px solid #dddada
 }
 .contenedorFiltros .contenedorFiltros2 label{
@@ -116,7 +115,22 @@
     display: flex;
     padding-top: 170px;
 }
+#petestad {
+    margin-top: 100px;
+    width: 450px;
+    height: auto;
+}
+
 #teams a{
+    cursor: pointer;
+}
+#sport a{
+    cursor: pointer;
+}
+#gender a{
+    cursor: pointer;
+}
+#medal a{
     cursor: pointer;
 }
 .cartilla {

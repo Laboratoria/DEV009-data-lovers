@@ -1,10 +1,40 @@
+//FILTRO PAIS
 //filtrar team Italy
-export function filterTeam (datos) {
-  const x = datos.filter((obj) => {
+export function filterTeamIta (datos) {
+  const i = datos.filter((obj) => {
   return obj.team === 'Italy';})
-  return x
+  return i
 }
 
+//filtrar team United States
+export function filterTeamUsa (datos) {
+  const u = datos.filter((obj) => {
+  return obj.team === "United States";})
+  return u
+}
+
+//filtrar team Russia
+export function filterTeamRuss (datos) {
+  const r = datos.filter((obj) => {
+  return obj.team === 'Russia';})
+  return r
+}
+
+//filtrar team France
+export function filterTeamFran (datos) {
+  const f = datos.filter((obj) => {
+  return obj.team === 'France';})
+  return f
+}
+
+//filtrar team Colombia
+export function filterTeamColo (datos) {
+  const c = datos.filter((obj) => {
+  return obj.team === 'Colombia';})
+  return c
+}
+
+//FILTRO GENERO
 //filtrar por Genero Masculino
 export function filterGenM (datos) {
   const m = datos.filter((obj) => {
@@ -19,6 +49,29 @@ export function filterGenF (datos) {
   return f
 }
 
+//FILTRO MEDALLA
+//filtrar por Oro
+export function filterGold (datos) {
+  const g = datos.filter((obj) => {
+  return obj.medal === 'Gold';})
+  return g
+}
+
+//filtrar por Plata
+export function filterSilver (datos) {
+  const s = datos.filter((obj) => {
+  return obj.medal === 'Silver';})
+  return s
+}
+
+//filtrar por Bronze
+export function filterBronze (datos) {
+  const b = datos.filter((obj) => {
+  return obj.medal === 'Bronze';})
+  return b
+}
+
+//ORDEN
 export const sortData = {
   //ordena los atletas por edad: Mayor a Menor
   sortbyAge1: (data) => {
@@ -181,7 +234,6 @@ export function bronzeAthletes(medalsArr){
   }
   return bronzeNames;
 };
-
 
 //Top atletas con más medallas
 export function topAthletes(medalCount){
