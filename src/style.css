@@ -193,3 +193,74 @@
     cursor: pointer;
     border-radius: 4px;
 }
+
+#generalStats {
+    display: flex;
+    align-items: center;
+}
+  
+#pet3 {
+    flex: 0 0 auto;
+}
+  
+#statisticsCont {
+    flex: 1 1 auto;
+    display: flex;
+}
+
+.headingStats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardsAth {
+    border: 2px solid #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+#generalStats h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.percentages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.athList {
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    max-height: 300px;
+    overflow: hidden;
+  }
+  
+  .athList li::before {
+    content: "\2605"; /* Código unicode para el símbolo de estrella */
+    margin-right: 5px;
+    color: #FFDC0C;
+  }
+
+.expandButton {
+    background-color: #081778d0;
+    color: rgba(255, 255, 255, 0.982);
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.cardsAth .expandButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
