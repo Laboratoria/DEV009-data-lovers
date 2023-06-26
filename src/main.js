@@ -1,4 +1,4 @@
-import { example } from './data.js';
+import { contAmerica } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/countries/countries.js';
 // import data from './data/rickandmorty/rickandmorty.js';
@@ -27,3 +27,5 @@ continente.innerHTML=data.countries[i].subregion;
 root.appendChild(continente);
 console.log(continente[2]);
 }
+
+console.log(contAmerica(allCountries))
