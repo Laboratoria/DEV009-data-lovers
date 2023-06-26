@@ -1,6 +1,7 @@
 * {
   margin: 0;
 }
+
 /*PRESENTACION*/
 .header{
   background: url(fondo-pag1.jpg);
@@ -33,6 +34,16 @@
   -webkit-text-stroke: 0.5px #000;
 }
 
+/*boton para abajo*/
+.div_flecha{
+  text-align: center;
+}
+
+#botonAbajo{
+  padding: 20px;
+  width: 140px;
+}
+
 /*HOME*/
 main{
   width: 100%;
@@ -41,7 +52,7 @@ main{
 
 #main_h2{
   text-align: center;
-  font-size: 110px;
+  font-size: 90px;
 }
 
 /*Barra de Navegacion*/
@@ -70,5 +81,25 @@ main{
   background: #000;
 }
 
-/*roles de campeones*/
+/*roles de campeones
+
+.titulo_de_home{
+  text-align: center;
+  padding: 10px;
+  font-size: 50px;
+}
+
+.campeones{
+  text-align: center;
+}
+
+.campeon{
+  background-color: #1b444d;
+  display: inline-block;
+  text-align: center;
+  width: 255px;
+  height: 189px;
+  margin: 10px;
+}*/
+
 
