@@ -4,6 +4,14 @@
     <meta charset="utf-8">
     <title>Statistics</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/d73e2e89e3.js" crossorigin="anonymous"></script>
+  </head>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Statistics</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
@@ -22,14 +30,19 @@
     <div id="contenedorImg">
       <img id="imgOficial"  src="https://uci.ac.cr/wp-content/uploads/2016/08/rio2016.jpg">
     </div>
-    <div><h1 class="headingStats">Percentage of Athletes per Medal Type</h1></div>
+    <div class="homeButton">
+      <a href="index.html">
+        <button class="homeBtn"><i class="fa-solid fa-house"></i></button>
+      </a>
+    </div>
+    <div><h1 class="headingStats">Percentage of Athletes per Medal Type</h1></div><br>
     <div id="generalStats">
-      <div><img id="petestad"src='https://images.milenio.com/FB8Lxg4ses9GW96FxUtp1Vrdzak=/375x0/uploads/media/2014/11/23/las-mascotas-de-los-proximos.png'> </div>
+      <div id="pet4"><img src='https://i.pinimg.com/564x/7a/b9/6f/7ab96f0bc75d2181d048d8a46f458ec7.jpg'> </div>
       <div id="statisticsCont">
         <div class = "cardsAth" id="goldMedal">
           <h2>Athletes that won Gold</h2>
           <p class="percentages" id="gold%"></p>
-          <ul class="athList fa-solid fa-star" id="goldNames">
+          <ul class="athList" id="goldNames">
           </ul>
           <button id="goldBtn" class="expandButton">See more</button>
         </div>
@@ -46,6 +59,7 @@
           <button id="bronzeBtn" class="expandButton">See more</button>
         </div>
       </div>
+      <div id = "pet5"><img src="https://i.pinimg.com/564x/70/db/f6/70dbf6bcbcda8bdcfb32e129044ede82.jpg"></div>
     </div>
     <script src="statistics.js" type="module"></script>
   </body>

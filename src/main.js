@@ -1,4 +1,4 @@
-import { filterTeamIta,filterTeamUsa,filterTeamRuss,filterTeamColo,filterTeamFran, sortData, filterGenM , filterGenF,filterGold,filterSilver,filterBronze} from './data.js';
+import { filterTeamIta,filterTeamUsa,filterTeamRuss,filterTeamColo,filterTeamFran, sortData, filterGenM , filterGenF,filterGold,filterSilver,filterBronze, filterGymnastics, filterSwimming, filterBasketball, filterVolleyball, filterFootball} from './data.js';
 import data from './data/athletes/athletes.js';
 import athletes from './data/athletes/athletes.js';
 
@@ -128,6 +128,53 @@ function fteam5 (team) {
 }
 document.getElementById('Colombia').addEventListener('click', ()=>
 cardsContainer.innerHTML = fteam5(dataArr))
+
+//FILTRAR DEPORTE
+//Filtrar Gimnasia
+function gymnastics (sport) {
+  const funcData = filterGymnastics(sport);
+  const createHTML = generateCards(funcData);
+  return createHTML
+}
+document.getElementById('gymnastics').addEventListener('click', () =>
+cardsContainer.innerHTML = gymnastics(dataArr));
+
+//Filtrar Natación
+function swimming (sport) {
+  const funcData = filterSwimming(sport);
+  const createHTML = generateCards(funcData);
+  return createHTML
+}
+document.getElementById('swimming').addEventListener('click', () =>
+cardsContainer.innerHTML = swimming(dataArr));
+
+//Filtrar Basketball
+function basketball (sport) {
+  const funcData = filterBasketball(sport);
+  const createHTML = generateCards(funcData);
+  return createHTML
+}
+document.getElementById('basketball').addEventListener('click', () =>
+cardsContainer.innerHTML = basketball(dataArr));
+
+//Filtrar Volleyball
+function volleyball (sport) {
+  const funcData = filterVolleyball(sport);
+  const createHTML = generateCards(funcData);
+  return createHTML
+}
+document.getElementById('volleyball').addEventListener('click', () =>
+cardsContainer.innerHTML = volleyball(dataArr));
+
+//Filtrar Football
+function football (sport) {
+  const funcData = filterFootball(sport);
+  const createHTML = generateCards(funcData);
+  return createHTML
+}
+document.getElementById('football').addEventListener('click', () =>
+cardsContainer.innerHTML = football(dataArr));
+
 
 //FILTRAR GENERO
 //Filtrar por Genero M

@@ -108,6 +108,7 @@
     top:500px;
     right: 0px;
     margin-right: 100px;
+    flex: 0 0 auto;
 }   
 #pet3 {
     height: 350px;
@@ -169,6 +170,7 @@
     cursor: pointer;
 }
 .sortOptions {
+    position: absolute;
     width: 150px;
     background-color: #f4d4d3; 
     display: none;
@@ -181,8 +183,14 @@
 }
 #boxSortBy {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Centra horizontalmente los botones */
+    margin-top: 20px; /* Ajusta el margen superior según sea necesario */
 }
+
+#boxSortBy .order {
+    margin-right: 200px; /* Añade un espacio entre los botones */      
+}
+    
 #topContainer {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -213,10 +221,6 @@
     align-items: center;
 }
   
-#pet3 {
-    flex: 0 0 auto;
-}
-  
 #statisticsCont {
     flex: 1 1 auto;
     display: flex;
@@ -232,14 +236,14 @@
     border: 2px solid #ccc;
     padding: 10px;
     border-radius: 10px;
-    margin-right: 20px;
+    margin-right: 30px;
 }
 
 #generalStats h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 80px;
+    margin-top: 90px;
 }
 
 .percentages {
@@ -277,4 +281,64 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.top10 {
+    display: flex;
+    justify-content: center; 
+    margin-left: 200px;
+  }
+  
+.top10 button {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    line-height: 4px;
+    align-items: center;
+    background-color: #081778d0;
+    color: #FFDC0C;
+    font-weight: bolder;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+  }
+
+.top10 :hover {
+    cursor: pointer;
+}
+.top10 a {
+    text-decoration: none;
+}
+
+.homeButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.homeButton .homeBtn {
+    border: none;
+    color: #081778d0;
+    background-color:#FFFEFF;
+}
+
+.homeButton .fa-house {
+    font-size: 29px;
+}
+.homeBtn :hover {
+    cursor: pointer;
+}
+#pet4 {
+    height: 350px;
+    width: auto;
+    display: flex;
+    padding-top: 170px;
+    flex: 0 0 auto;
+}
+#pet5 {
+    height: 350px;
+    width: auto;
+    display: flex;
+    padding-top: 170px;
+    flex: 0 0 auto;
 }

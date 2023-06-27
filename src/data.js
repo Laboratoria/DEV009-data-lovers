@@ -34,6 +34,42 @@ export function filterTeamColo (datos) {
   return c
 }
 
+//FILTRO DEPORTE
+//Filtrar por Gimnasia
+export function filterGymnastics (datos) {
+  const g = datos.filter((obj) => {
+    return obj.sport === 'Gymnastics';})
+    return g;
+}
+
+//Filtrar por natación
+export function filterSwimming (datos) {
+  const s = datos.filter((obj) => {
+    return obj.sport === 'Swimming';})
+    return s;
+}
+
+//Filtrar por Basketball
+export function filterBasketball (datos) {
+  const b = datos.filter((obj) => {
+    return obj.sport === 'Basketball';})
+    return b;
+}
+
+//Filtrar por volleyball
+export function filterVolleyball (datos) {
+  const v = datos.filter((obj) => {
+    return obj.sport === 'Volleyball';})
+    return v;
+}
+
+//Filtrar por football
+export function filterFootball (datos) {
+  const f = datos.filter((obj) => {
+    return obj.sport === 'Football';})
+    return f;
+}
+
 //FILTRO GENERO
 //filtrar por Genero Masculino
 export function filterGenM (datos) {
