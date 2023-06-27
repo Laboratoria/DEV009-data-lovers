@@ -21,3 +21,10 @@ describe('anotherExample', () => {
     expect(anotherExample()).toBe('OMG');
   });
 });
+\
+
+/*import {filterTeamIta} from '../src/data.js'
+//falta describe/expect/tobe ==/crear data propia
+it('Debe filtrar por Italia',()=>{
+    expect(filterTeamIta()).tobe(team === 'Italy') //toEqual
+}),*/

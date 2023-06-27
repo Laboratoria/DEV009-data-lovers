@@ -23,7 +23,7 @@ function medCount(){
     return { name, ...medalCount }; //los ... se usan para copiar todas las propiedades de medalCount (gold, silver, bronze)
   });
   return athletes;
-};
+}
 // En esta constante se almacena el resultado de la función para poder trabajar con esto después
 const medalsArr = medCount();
 

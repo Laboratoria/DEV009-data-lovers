@@ -1,4 +1,4 @@
-import { filterTeamIta,filterTeamUsa,filterTeamRuss,filterTeamColo,filterTeamFran, sortData, filterGenM , filterGenF,filterGold,filterSilver,filterBronze, filterGymnastics, filterSwimming, filterBasketball, filterVolleyball, filterFootball} from './data.js';
+import { filterTeam, filterGen,filterSport,filterMedal,sortData,} from './data.js';
 import data from './data/athletes/athletes.js';
 
 //llamar a los datos de Athletes
@@ -40,6 +40,7 @@ const cardsContainer = document.getElementById('cartillaContenedor');
 cardsContainer.innerHTML = generateCards(dataArr);
 
 //Ordenar por
+
 document.getElementById("oldestToYoungest").addEventListener("click", () => 
 {
   const sortResult = sortData.sortbyAge1(dataArr);
@@ -80,163 +81,167 @@ document.getElementById("teamZtoA").addEventListener("click", () =>
   const sortResult = sortData.sortbyCountryZtoA(dataArr);
   const createHTML = generateCards(sortResult);
   cardsContainer.innerHTML = createHTML;
-});
+}),
 
 //FILTRAR TEAM
 //Filtrar por Team/Italy
-function fteam1 (team) {
-  const funcData = filterTeamIta(team);
+function fteam (team,pais) {
+  const funcData = filterTeam(team,pais);
   const createHTML = generateCards(funcData);
   return createHTML
 }
 document.getElementById('Italy').addEventListener('click', ()=>
-  cardsContainer.innerHTML = fteam1(dataArr)
-)
-
-//Filtrar por Team/United States
-function fteam2 (team) {
-  const funcData = filterTeamUsa(team);
-  const createHTML = generateCards(funcData);
-  return createHTML
-}
+  cardsContainer.innerHTML = fteam(dataArr,'Italy')
+);
 document.getElementById('United States').addEventListener('click', ()=>
-  cardsContainer.innerHTML = fteam2(dataArr)
-)
-
-//Filtrar por Team/Russia
-function fteam3 (team) {
-  const funcData = filterTeamRuss(team);
-  const createHTML = generateCards(funcData);
-  return createHTML
-}
+  cardsContainer.innerHTML = fteam(dataArr,'United States')
+);
 document.getElementById('Russia').addEventListener('click', ()=>
-  cardsContainer.innerHTML = fteam3(dataArr)
-)
-
-//Filtrar por Team/France
-function fteam4 (team) {
-  const funcData = filterTeamFran(team);
-  const createHTML = generateCards(funcData);
-  return createHTML
-}
+  cardsContainer.innerHTML = fteam(dataArr,'Russia')
+);
 document.getElementById('France').addEventListener('click', ()=>
-  cardsContainer.innerHTML = fteam4(dataArr)
-)
-
-//Filtrar por Team/Colombia
-function fteam5 (team) {
-  const funcData = filterTeamColo(team);
-  const createHTML = generateCards(funcData);
-  return createHTML
-}
+  cardsContainer.innerHTML = fteam(dataArr,'France')
+);
 document.getElementById('Colombia').addEventListener('click', ()=>
-  cardsContainer.innerHTML = fteam5(dataArr)
-)
+  cardsContainer.innerHTML = fteam(dataArr,'Colombia')
+);
 
 //FILTRAR DEPORTE
-//Filtrar Gimnasia
-function gymnastics (sport) {
-  const funcData = filterGymnastics(sport);
+function filsports (datos, deporte) {
+  const funcData = filterSport(datos, deporte);
   const createHTML = generateCards(funcData);
   return createHTML
 }
 document.getElementById('gymnastics').addEventListener('click', () =>
-  cardsContainer.innerHTML = gymnastics(dataArr)
+  cardsContainer.innerHTML = filsports(dataArr,'Gymnastics')
 );
-
-//Filtrar Natación
-function swimming (sport) {
-  const funcData = filterSwimming(sport);
-  const createHTML = generateCards(funcData);
-  return createHTML
-}
 document.getElementById('swimming').addEventListener('click', () =>
-  cardsContainer.innerHTML = swimming(dataArr)
+  cardsContainer.innerHTML = filsports(dataArr,'Swimming')
 );
-
-//Filtrar Basketball
-function basketball (sport) {
-  const funcData = filterBasketball(sport);
-  const createHTML = generateCards(funcData);
-  return createHTML
-}
 document.getElementById('basketball').addEventListener('click', () =>
-  cardsContainer.innerHTML = basketball(dataArr)
+  cardsContainer.innerHTML = filsports(dataArr,'Basketball')
 );
-
-//Filtrar Volleyball
-function volleyball (sport) {
-  const funcData = filterVolleyball(sport);
-  const createHTML = generateCards(funcData);
-  return createHTML
-}
 document.getElementById('volleyball').addEventListener('click', () =>
-  cardsContainer.innerHTML = volleyball(dataArr)
+  cardsContainer.innerHTML = filsports(dataArr,'Volleyball')
 );
-
-//Filtrar Football
-function football (sport) {
-  const funcData = filterFootball(sport);
-  const createHTML = generateCards(funcData);
-  return createHTML
-}
 document.getElementById('football').addEventListener('click', () =>
-  cardsContainer.innerHTML = football(dataArr)
+cardsContainer.innerHTML = filsports(dataArr,'Football')
 );
-
 
 //FILTRAR GENERO
-//Filtrar por Genero M
-function genM (genem) {
-  const funcData = filterGenM(genem);
+function filgenero (datos,genero) {
+  const funcData = filterGen(datos,genero);
   const createHTML = generateCards(funcData);
   return createHTML
 }
 document.getElementById('m').addEventListener('click', ()=>
-  cardsContainer.innerHTML = genM(dataArr)
-)
-
-//Filtrar por Genero F
-function genF (genef) {
-  const funcData = filterGenF(genef);
-  const createHTML = generateCards(funcData);
-  return createHTML
-}
+cardsContainer.innerHTML = filgenero(dataArr,'M')
+);
 document.getElementById('f').addEventListener('click', ()=>
-  cardsContainer.innerHTML = genF (dataArr)
-)
+cardsContainer.innerHTML = filgenero(dataArr,'F')
+);
 
 //FILTRAR MEDALLA
-//Filtrar por ORO
-function medoro (medalo) {
-  const funcData = filterGold(medalo);
+function filtmedal (dato,medalla) {
+  const funcData = filterMedal(dato,medalla);
   const createHTML = generateCards(funcData);
   return createHTML
 }
 document.getElementById('oro').addEventListener('click', ()=>
-  cardsContainer.innerHTML = medoro(dataArr)
-)
+cardsContainer.innerHTML = filtmedal(dataArr,"Gold"))
 
-//Filtrar por PLATA
-function medplata (medalp) {
-  const funcData = filterSilver(medalp);
-  const createHTML = generateCards(funcData);
-  return createHTML
-}
 document.getElementById('plata').addEventListener('click', ()=>
-  cardsContainer.innerHTML = medplata(dataArr)
-)
+cardsContainer.innerHTML = filtmedal(dataArr,"Silver"))
 
-//Filtrar por BRONZE
-function medbronze (medalb) {
-  const funcData = filterBronze(medalb);
-  const createHTML = generateCards(funcData);
-  return createHTML
-}
 document.getElementById('bronce').addEventListener('click', ()=>
-  cardsContainer.innerHTML = medbronze(dataArr)
-)
+cardsContainer.innerHTML = filtmedal(dataArr,"Bronze"))
 
 
+//FUNCIONES TOP 10
+// Extrar los datos
+function newCards(datos) {
+  const cardsTop = datos.map((atleta) => {
+    const { name, team, gold, bronze, silver} = atleta;
+    return `<div class="cartilla">
+        <p><strong>name:</strong> ${name}</p>
+        <p><strong>team:</strong> ${team}</p>
+        <p><strong>gold:</strong> ${gold}</p>
+        <p><strong>bronze:</strong> ${bronze}</p>
+        <p><strong>silver:</strong> ${silver}</p>
+    </div>`;
+  })  
+  
+  return cardsTop.join('');
+}
+
+//Sumar medallas
+function recorrer(datos) {
+  const duplicados = [];
+  for (let i = 0; i < datos.length; i++) {
+    let atletaActual = datos[i];
+    const name = atletaActual.name;
+    const team = atletaActual.team;
+    const medal = atletaActual.medal;
+
+    let atletaExistente = duplicados.find((atleta) => atleta.name === name);
+  
+    if (atletaExistente) { atletaExistente.contador +=1;
+      if (medal === 'Bronze') {
+        atletaExistente.bronze += 1;
+      } else if (medal === 'Silver') {
+        atletaExistente.silver += 1;
+      } else if (medal === 'Gold') {
+        atletaExistente.gold += 1; 
+      }
+    } else {
+      const nuevoAtleta = {
+        name: name,
+        team: team,
+        gold: medal === 'Gold' ? 1 : 0,
+        silver: medal === 'Silver' ? 1 : 0,
+        bronze: medal === 'Bronze' ? 1 : 0,
+        contador:1,
+      };
+      duplicados.push(nuevoAtleta);
+    }
+  }
+  return duplicados;
+}
+
+//Ordenar de medallas con contador
+function topAthletes (datos) {
+  datos.sort((a,b) => b.contador - a.contador)
+  return datos.slice(0,10)
+}
+
+//mostrar en la div de top10
+const divTop = document.getElementById("topContainer")
+const misCartas = newCards(topAthletes(recorrer(dataArr)))
+divTop.innerHTML = misCartas
 
 
+//MOSTRAR/OCULTAR PAGINAS
+function showPage(pageId) {
+const pages = document.getElementsByClassName('page');
+   for (let i = 0; i < pages.length; i++) {
+    pages[i].classList.remove('active');
+   }
+const page = document.getElementById(pageId);
+  page.classList.add('active');
+}
+
+document.getElementById("botontop").addEventListener("click", function() {
+  showPage('paginaTop');
+});
+document.getElementById("casita").addEventListener("click", function() {
+  showPage('paginaAthletes');
+});
+document.getElementById("Statistics").addEventListener("click", function() {
+  showPage('paginaStatistics');
+});
+document.getElementById("Athletes").addEventListener("click", function() {
+  showPage('paginaAthletes');
+});
+document.getElementById("casita2").addEventListener("click", function() {
+  showPage('paginaAthletes');
+});

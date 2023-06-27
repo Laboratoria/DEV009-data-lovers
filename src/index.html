@@ -8,58 +8,59 @@
   </head>
   <body>
     <header> 
-      <script src="main.js" type="module"></script>
-      <div class="contenedor"> 
-        <div class="iconofiltro">
-          <label for="btnFiltro">☰</label>
-        </div>
+    <div class="contenedor"> 
+      <div class="iconofiltro">
+      <label for="btnFiltro">☰</label>
+      </div>
         <div class="logo">
           <h1> <img id="logo2016" src="https://logodownload.org/wp-content/uploads/2020/03/olimpiada-olympic-games-logo-0.png"> </h1>
         </div>
         <nav class="division">
-          <a href="index.html">Athletes</a>
-         <a href="statistics.html">Statistics</a>
+          <a id="Athletes">Athletes </a>
+          <a id="Statistics">Statistics </a>
         </nav>
       </div>
     </header>
-    <input type="checkbox" id="btnFiltro">
+      <input type="checkbox" id="btnFiltro">
     <div class="contenedorFiltros">
       <div class="contenedorFiltros2">
         <nav>
           <a>Team</a>
-            <ul id="teams">
-              <a id="Italy"> Italy</a>
-              <a id="United States"> United States</a>
-              <a id="Russia"> Russia</a>
-              <a id="France"> France</a>
-              <a id="Colombia"> Colombia</a>
-            </ul>>
+          <ul id="teams">
+            <li><a id="Italy">Italy</a></li>
+            <li><a id="United States">United States</a></li>
+            <li><a id="Russia">Russia</a></li>
+            <li><a id="France">France</a></li>
+            <li><a id="Colombia">Colombia</a></li>
+          </ul>
           <a>Sport</a>
           <ul id="sport">
-            <a id="gymnastics"> Gymnastics </a>
-            <a id="swimming"> Swimming </a>
-            <a id="basketball"> Basketball </a>
-            <a id="volleyball"> Volleyball </a>
-            <a id="football"> Football </a>
-          </ul>>
+            <li><a id="gymnastics">Gymnastics</a></li>
+            <li><a id="swimming">Swimming</a></li>
+            <li><a id="basketball">Basketball</a></li>
+            <li><a id="volleyball">Volleyball</a></li>
+            <li><a id="football">Football</a></li>
+          </ul>
           <a>Gender</a>
           <ul id="gender">
-            <a id=m> Masculine </a>
-            <a id=f> Femenine </a>
-          </ul>>
+            <li><a id="m">Masculine</a></li>
+            <li><a id="f">Feminine</a></li>
+          </ul>
           <a>Medal</a>
           <ul id="medal">
-            <a id="oro"> Gold </a>
-            <a id="plata"> Silver </a>
-            <a id="bronce"> Bronze </a>
-          </ul>>
+            <li><a id="oro">Gold</a></li>
+            <li><a id="plata">Silver</a></li>
+            <li><a id="bronce">Bronze</a></li>
+          </ul>
         </nav>
         <label for="btnFiltro"> ✖️ </label>
-        </div>
+      </div>
     </div>
     <div id="contenedorImg">
       <img id="imgOficial"  src="https://uci.ac.cr/wp-content/uploads/2016/08/rio2016.jpg">
     </div>
+  <!--PAGINA ATHLETES-->
+  <div id="paginaAthletes" class="page active">
     <div id="barraBuscador"> 
       <input id="barra" type="text">
       <button id="clear">Clear</button>
@@ -79,8 +80,8 @@
         </div>   
       </div>
       <div class="top10">
-        <a href="top.html">
-          <button><i class="fa-solid fa-star"></i><br>Top 10</button>
+        <a>
+          <button id="botontop"><i class="fa-solid fa-star"></i><br>Top 10</button>
         </a>
       </div>
       <br>
@@ -89,6 +90,56 @@
       <div id="pet1"><img id="petTom" src="https://img.olympicchannel.com/images/image/private//f_auto/primary/fcw7olxhvuieykn0xyej"> </div>
       <div id="cartillaContenedor"></div>
       <div id="pet2"><img src="https://i.pinimg.com/originals/2f/40/db/2f40db15613dd4e8ae7d2ea7778804f9.png"> </div>
+    </div>
+    <script src="main.js" type="module"></script>
+  </div>  
+   <!--PAGINA TOP10-->
+   <div id="paginaTop" class="page">
+    <div class="homeButton">
+      <a>
+        <button id="casita" class="homeBtn"><i class="fa-solid fa-house"></i></button>
+      </a>
+    </div>
+    <div id="general">
+      <div id="pet3"><img src='https://www.nicepng.com/png/full/557-5573812_mascotas-rio-2016-mascota-de-los-juegos-olimpicos.png'> </div>
+      <div id="topContainer"></div>
+    </div>
+    <script src="main.js" type="module"></script>
+  </div>
+    <!--PAGINA STATISTICS-->
+    <div id="paginaStatistics" class="page">
+      <div class="homeButton">
+        <a>
+          <button id="casita2"  class="homeBtn"><i class="fa-solid fa-house"></i></button>
+        </a>
+      </div>
+      <div><h1 class="headingStats">Percentage of Athletes per Medal Type</h1></div><br>
+      <div id="generalStats">
+        <div id="pet4"><img src='https://i.pinimg.com/564x/7a/b9/6f/7ab96f0bc75d2181d048d8a46f458ec7.jpg'> </div>
+        <div id="statisticsCont">
+          <div class = "cardsAth" id="goldMedal">
+            <h2>Athletes that won Gold</h2>
+            <p class="percentages" id="gold%"></p>
+            <ul class="athList" id="goldNames">
+            </ul>
+            <button id="goldBtn" class="expandButton">See more</button>
+          </div>
+          <div class = "cardsAth" id="silverMedal">
+            <h2>Athletes that won Silver</h2>
+            <p class="percentages" id="silver%"></p>
+            <ul class="athList" id="silverNames"></ul>
+            <button id="silverBtn" class="expandButton">See more</button>
+          </div>
+          <div class = "cardsAth" id="bronzeMedal">
+            <h2>Athletes that won Bronze</h2>
+            <p class="percentages" id="bronze%"></p>
+            <ul class="athList" id="bronzeNames"></ul>
+            <button id="bronzeBtn" class="expandButton">See more</button>
+          </div>
+        </div>
+        <div id = "pet5"><img src="https://i.pinimg.com/564x/70/db/f6/70dbf6bcbcda8bdcfb32e129044ede82.jpg"></div>
+      </div>
+      <script src="main.js" type="module"></script>
     </div>
   </body>
 </html>
