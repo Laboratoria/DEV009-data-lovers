@@ -1,4 +1,4 @@
-import { contAmerica } from './data.js';
+import { contAmerica, contCaribe } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/countries/countries.js';
 // import data from './data/rickandmorty/rickandmorty.js';
@@ -17,18 +17,19 @@ const allCountries = data.countries;
 //root.appendChild(continente);
 for (let i = 0; i< allCountries.length; i++){
    const name = document.createElement ('h2');
-   const flag = document.createElement ('img');
-   name.innerHTML =data.countries[i].name.common;
-   flag.src =data.countries[i].flags.png;
-   root.appendChild(flag);
+   const capital = document.createElement('h2');
+   const continente = document.createElement ('h3');
+   const imgFlags = document.createElement('img');
+   name.innerHTML=data.countries[i].name.common;
+   capital.innerHTML =data.countries[i].capital;
+   continente.innerHTML=data.countries[i].subregion;
+   imgFlags.src = data.countries[i].flags.png;
    root.appendChild(name);
+   root.appendChild(capital);
+   root.appendChild(continente);
+   root.appendChild(imgFlags);
+    
 };
 
-for (let i = 0; i< allCountries.length; i++){
-const continente = document.createElement ('h3');
-continente.innerHTML=data.countries[i].subregion;
-root.appendChild(continente);
-console.log(continente[2]);
-}
 
 console.log(contAmerica(allCountries))
