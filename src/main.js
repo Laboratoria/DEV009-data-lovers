@@ -1,17 +1,16 @@
 //import { films } from './data.js';
-// import data from './data/lol/lol.js';
-//import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
+
 import data from './data/ghibli/ghibli.js'
 console.log(data);
-
-//A que se refiere el parametro event? 
-window.addEventListener('DOMContentLoaded', (event) => {
+ 
   const dataContainer = document.getElementById('dataContainer');
   const films = data.films;
 
+  function createCardCointainer(dataGhibli){
+    //Borra le contenido del div dataConatiner 
+    dataContainer.removeChild(dataContainer.firstChild);
   // Recorre el arreglo de películas y muestra los títulos en el contenedor HTML
-    films.forEach((film) => {
+    dataGhibli.forEach((film) => {
 
       const containerArticle = document.createElement('article');
       containerArticle.classList.add('data-peliculas-contenedor');
@@ -50,8 +49,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
       filmScore.textContent ='Score: '+ film.rt_score;
       containerDiv.appendChild(filmScore);
   });
-});
-/*
+};
+
+createCardCointainer(films);
+
 // Obtén una referencia al elemento select
 const orderSelect = document.getElementById('orderSelect');
 
@@ -59,16 +60,23 @@ const orderSelect = document.getElementById('orderSelect');
 orderSelect.addEventListener('change', function() {
   // Obtén el valor seleccionado
   const selectedOption = orderSelect.value;
+  if(selectedOption === "all"){
+    createCardCointainer(films);
+  } else{
+      // Realiza las acciones correspondientes según la opción seleccionada
+    const dataSort = sortBy(films, selectedOption);
+    createCardCointainer(dataSort);
 
-  // Realiza las acciones correspondientes según la opción seleccionada
-  if (selectedOption === 'opcion1') {
-    // Acción para "Ordenar de A - Z"
-    // ...
-  } else if (selectedOption === 'opcion2') {
+  }
+  
+ })
+
+
+  /*else if (selectedOption === 'opcion2') {
     // Acción para "Ordenar de Z - A"
     // ...
   } else if (selectedOption === 'opcion3') {
-*/
+
     // Acción para "Mas rankeado"
       // Ordenar los elementos por puntuación
       data.films.sort(compareByScore);
@@ -94,4 +102,3 @@ orderSelect.addEventListener('change', function() {
       }
  /*   }
   });*/
-
