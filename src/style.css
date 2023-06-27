@@ -1,3 +1,7 @@
+* {
+    margin: 0;
+    padding: 0;
+}
 
 @font-face {
     font-family: 'pokemon hollow' ;
@@ -6,4 +10,4 @@
 @font-face {
     font-family: 'pokemon solid' ;
     src: url('./fuentes/pokmon/Pokemon\ Solid.ttf');
-}
+
