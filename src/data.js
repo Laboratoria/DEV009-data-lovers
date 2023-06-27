@@ -54,39 +54,19 @@ const filterByLetter = (data, letter) => {
   return result; // return an object with data
 };
 
-
-
 const filterByContinents = (data, continent) => {
-  let result = [];
-  // if (Array.isArray(data.countries)){
-  result = data.filter(country=>country.continents.includes(continent));
-  // data.countries.map(country=>{
-  //   const continentSearch=country.continents;
-  //   if (continentSearch[0] === continent) result.push(country);
-
-  // });
-  // }
-  // data.countries.map((country) => {
-  //   const continentSearch = country.continents;
-  //   if (continentSearch[0] === continent) result.push(country);
-  // });
-  // console.log(result);
-  return result;
+  return data.filter(country=>country.continents.includes(continent));
 };
 
-const filterBySubregion = (data, subregion) => {
-  const result = [];
-  data.countries.map((country) => {
-    if (country.subregion === subregion) result.push(country);
-  });
-  return result;
+const filterBySubregion = (data, subRegion) => {
+  return data.filter(country=>country.subregion===subRegion)
 };
 
 
 
 const filterByLanguages = (data, language) => {
   const countriesLanguage = [];
-  data.countries.map((country) => {
+  data.map((country) => {
     if (Object.prototype.hasOwnProperty.call(country, "languages")) {
       const actualCountry = country.languages;
       if (Object.prototype.hasOwnProperty.call(actualCountry, language)) {
@@ -99,57 +79,43 @@ const filterByLanguages = (data, language) => {
 
 const sortByPopulation = (data, sortOrder) => {
   //sortOrder could be 1 for ascending order  or -1 for descending order
-  const result = [];
+  let result = [];
   switch (sortOrder) {
   case 1: {
-    const resultUp = data.countries.sort(
+    result = data.countries.slice().sort(
       (a, b) => a.population - b.population
     );
-    resultUp.forEach((element) => {
-      result.push(element);
-    });
     break;
   }
   case -1: {
-    const resultDown = data.countries.sort(
+    result= data.countries.slice().sort(
       (a, b) => b.population - a.population
     );
-    resultDown.forEach((element) => {
-      result.push(element);
-    });
     break;
   }
   default: {
     break;
   }
   }
-  // console.log(result);
   return result;
 };
 
 const sortByArea = (data, sortOrder) => {
   //sortOrder could be 1 for ascending order  or -1 for descending order
-  const result = [];
+  let result = [];
   switch (sortOrder) {
   case 1: {
-    const resultUp = data.countries.sort((a, b) => a.area - b.area);
-    resultUp.forEach((element) => {
-      result.push(element);
-    });
+    result = data.countries.slice().sort((a, b) => a.area - b.area);
     break;
   }
   case -1: {
-    const resultDown = data.countries.sort((a, b) => b.area - a.area);
-    resultDown.forEach((element) => {
-      result.push(element);
-    });
+    result = data.countries.slice().sort((a, b) => b.area - a.area);
     break;
   }
   default: {
     break;
   }
   }
-
   return result;
 };
 
