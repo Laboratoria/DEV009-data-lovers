@@ -17,7 +17,10 @@ const allCountries = data.countries;
 //root.appendChild(continente);
 for (let i = 0; i< allCountries.length; i++){
    const name = document.createElement ('h2');
-   name.innerHTML=data.countries[i].name.common;
+   const flag = document.createElement ('img');
+   name.innerHTML =data.countries[i].name.common;
+   flag.src =data.countries[i].flags.png;
+   root.appendChild(flag);
    root.appendChild(name);
 };
 
