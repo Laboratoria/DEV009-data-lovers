@@ -1,6 +1,5 @@
 import { filterTeamIta,filterTeamUsa,filterTeamRuss,filterTeamColo,filterTeamFran, sortData, filterGenM , filterGenF,filterGold,filterSilver,filterBronze, filterGymnastics, filterSwimming, filterBasketball, filterVolleyball, filterFootball} from './data.js';
 import data from './data/athletes/athletes.js';
-import athletes from './data/athletes/athletes.js';
 
 //llamar a los datos de Athletes
 const dataArr = (data.athletes)
@@ -27,12 +26,12 @@ clear.addEventListener('click', () => {
 
 // Extrar los datos
 function generateCards (cards) {
-const cardsHTML = cards.map((object) => {
+  const cardsHTML = cards.map((object) => {
     const propiedadesHTML = Object.entries(object).map(([clave, valor]) => {
-        return `<p><strong>${clave}:</strong> ${valor}</p>`;
+      return `<p><strong>${clave}:</strong> ${valor}</p>`;
     }).join('');
     return `<div class="cartilla">${propiedadesHTML}</div>`;
-});
+  });
   return cardsHTML.join('');
 }
 
@@ -42,46 +41,46 @@ cardsContainer.innerHTML = generateCards(dataArr);
 
 //Ordenar por
 document.getElementById("oldestToYoungest").addEventListener("click", () => 
-  {
-    const sortResult = sortData.sortbyAge1(dataArr);
-    const createHTML = generateCards(sortResult);
-    cardsContainer.innerHTML = createHTML;
-  });
+{
+  const sortResult = sortData.sortbyAge1(dataArr);
+  const createHTML = generateCards(sortResult);
+  cardsContainer.innerHTML = createHTML;
+});
 
 document.getElementById("youngestToOldest").addEventListener("click", () => 
-  {
-    const sortResult = sortData.sortbyAge2(dataArr);
-    const createHTML = generateCards(sortResult);
-    cardsContainer.innerHTML = createHTML;
-  });
+{
+  const sortResult = sortData.sortbyAge2(dataArr);
+  const createHTML = generateCards(sortResult);
+  cardsContainer.innerHTML = createHTML;
+});
 
 document.getElementById("athleteAtoZ").addEventListener("click", () => 
-  {
-    const sortResult = sortData.sortbyNameAtoZ(dataArr);
-    const createHTML = generateCards(sortResult);
-    cardsContainer.innerHTML = createHTML;
-  });
+{
+  const sortResult = sortData.sortbyNameAtoZ(dataArr);
+  const createHTML = generateCards(sortResult);
+  cardsContainer.innerHTML = createHTML;
+});
 
 document.getElementById("athleteZtoA").addEventListener("click", () => 
-  {
-    const sortResult = sortData.sortbyNameZtoA(dataArr);
-    const createHTML = generateCards(sortResult);
-    cardsContainer.innerHTML = createHTML;
-  });
+{
+  const sortResult = sortData.sortbyNameZtoA(dataArr);
+  const createHTML = generateCards(sortResult);
+  cardsContainer.innerHTML = createHTML;
+});
 
 document.getElementById("teamAtoZ").addEventListener("click", () => 
-  {
-    const sortResult = sortData.sortbyCountryAtoZ(dataArr);
-    const createHTML = generateCards(sortResult);
-    cardsContainer.innerHTML = createHTML;
-  });
+{
+  const sortResult = sortData.sortbyCountryAtoZ(dataArr);
+  const createHTML = generateCards(sortResult);
+  cardsContainer.innerHTML = createHTML;
+});
 
 document.getElementById("teamZtoA").addEventListener("click", () =>
-  {
-    const sortResult = sortData.sortbyCountryZtoA(dataArr);
-    const createHTML = generateCards(sortResult);
-    cardsContainer.innerHTML = createHTML;
-  });
+{
+  const sortResult = sortData.sortbyCountryZtoA(dataArr);
+  const createHTML = generateCards(sortResult);
+  cardsContainer.innerHTML = createHTML;
+});
 
 //FILTRAR TEAM
 //Filtrar por Team/Italy
@@ -91,7 +90,8 @@ function fteam1 (team) {
   return createHTML
 }
 document.getElementById('Italy').addEventListener('click', ()=>
-cardsContainer.innerHTML = fteam1(dataArr))
+  cardsContainer.innerHTML = fteam1(dataArr)
+)
 
 //Filtrar por Team/United States
 function fteam2 (team) {
@@ -100,7 +100,8 @@ function fteam2 (team) {
   return createHTML
 }
 document.getElementById('United States').addEventListener('click', ()=>
-cardsContainer.innerHTML = fteam2(dataArr))
+  cardsContainer.innerHTML = fteam2(dataArr)
+)
 
 //Filtrar por Team/Russia
 function fteam3 (team) {
@@ -109,7 +110,8 @@ function fteam3 (team) {
   return createHTML
 }
 document.getElementById('Russia').addEventListener('click', ()=>
-cardsContainer.innerHTML = fteam3(dataArr))
+  cardsContainer.innerHTML = fteam3(dataArr)
+)
 
 //Filtrar por Team/France
 function fteam4 (team) {
@@ -118,7 +120,8 @@ function fteam4 (team) {
   return createHTML
 }
 document.getElementById('France').addEventListener('click', ()=>
-cardsContainer.innerHTML = fteam4(dataArr))
+  cardsContainer.innerHTML = fteam4(dataArr)
+)
 
 //Filtrar por Team/Colombia
 function fteam5 (team) {
@@ -127,7 +130,8 @@ function fteam5 (team) {
   return createHTML
 }
 document.getElementById('Colombia').addEventListener('click', ()=>
-cardsContainer.innerHTML = fteam5(dataArr))
+  cardsContainer.innerHTML = fteam5(dataArr)
+)
 
 //FILTRAR DEPORTE
 //Filtrar Gimnasia
@@ -137,7 +141,8 @@ function gymnastics (sport) {
   return createHTML
 }
 document.getElementById('gymnastics').addEventListener('click', () =>
-cardsContainer.innerHTML = gymnastics(dataArr));
+  cardsContainer.innerHTML = gymnastics(dataArr)
+);
 
 //Filtrar Natación
 function swimming (sport) {
@@ -146,7 +151,8 @@ function swimming (sport) {
   return createHTML
 }
 document.getElementById('swimming').addEventListener('click', () =>
-cardsContainer.innerHTML = swimming(dataArr));
+  cardsContainer.innerHTML = swimming(dataArr)
+);
 
 //Filtrar Basketball
 function basketball (sport) {
@@ -155,7 +161,8 @@ function basketball (sport) {
   return createHTML
 }
 document.getElementById('basketball').addEventListener('click', () =>
-cardsContainer.innerHTML = basketball(dataArr));
+  cardsContainer.innerHTML = basketball(dataArr)
+);
 
 //Filtrar Volleyball
 function volleyball (sport) {
@@ -164,7 +171,8 @@ function volleyball (sport) {
   return createHTML
 }
 document.getElementById('volleyball').addEventListener('click', () =>
-cardsContainer.innerHTML = volleyball(dataArr));
+  cardsContainer.innerHTML = volleyball(dataArr)
+);
 
 //Filtrar Football
 function football (sport) {
@@ -173,7 +181,8 @@ function football (sport) {
   return createHTML
 }
 document.getElementById('football').addEventListener('click', () =>
-cardsContainer.innerHTML = football(dataArr));
+  cardsContainer.innerHTML = football(dataArr)
+);
 
 
 //FILTRAR GENERO
@@ -184,7 +193,8 @@ function genM (genem) {
   return createHTML
 }
 document.getElementById('m').addEventListener('click', ()=>
-cardsContainer.innerHTML = genM(dataArr))
+  cardsContainer.innerHTML = genM(dataArr)
+)
 
 //Filtrar por Genero F
 function genF (genef) {
@@ -193,7 +203,8 @@ function genF (genef) {
   return createHTML
 }
 document.getElementById('f').addEventListener('click', ()=>
-cardsContainer.innerHTML = genF (dataArr))
+  cardsContainer.innerHTML = genF (dataArr)
+)
 
 //FILTRAR MEDALLA
 //Filtrar por ORO
@@ -203,7 +214,8 @@ function medoro (medalo) {
   return createHTML
 }
 document.getElementById('oro').addEventListener('click', ()=>
-cardsContainer.innerHTML = medoro(dataArr))
+  cardsContainer.innerHTML = medoro(dataArr)
+)
 
 //Filtrar por PLATA
 function medplata (medalp) {
@@ -212,7 +224,8 @@ function medplata (medalp) {
   return createHTML
 }
 document.getElementById('plata').addEventListener('click', ()=>
-cardsContainer.innerHTML = medplata(dataArr))
+  cardsContainer.innerHTML = medplata(dataArr)
+)
 
 //Filtrar por BRONZE
 function medbronze (medalb) {
@@ -221,7 +234,8 @@ function medbronze (medalb) {
   return createHTML
 }
 document.getElementById('bronce').addEventListener('click', ()=>
-cardsContainer.innerHTML = medbronze(dataArr))
+  cardsContainer.innerHTML = medbronze(dataArr)
+)
 
 
 

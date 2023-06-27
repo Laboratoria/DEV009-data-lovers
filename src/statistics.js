@@ -6,31 +6,31 @@ const dataArr = Object.values(data.athletes)
 
 //Extraer el conteo de medallas ganadas por jugador, indicando el tipo de medalla 
 function medCount(){
-    const athletes = dataArr.map((athlete) => {
-      const { name, medal } = athlete; //Para que el resultado lo devuelva en forma de objeto
-      const medalCount = {
-        Gold: 0,
-        Silver: 0,
-        Bronze: 0
-      };
-      if (medal === "Gold") {
-        medalCount.Gold = 1;
-      } else if (medal === "Silver") {
-        medalCount.Silver = 1;
-      } else if (medal === "Bronze") {
-        medalCount.Bronze = 1;
-      }
-      return { name, ...medalCount }; //los ... se usan para copiar todas las propiedades de medalCount (gold, silver, bronze)
-    });
-    return athletes;
-  }console.log("meed", medCount());
+  const athletes = dataArr.map((athlete) => {
+    const { name, medal } = athlete; //Para que el resultado lo devuelva en forma de objeto
+    const medalCount = {
+      Gold: 0,
+      Silver: 0,
+      Bronze: 0
+    };
+    if (medal === "Gold") {
+      medalCount.Gold = 1;
+    } else if (medal === "Silver") {
+      medalCount.Silver = 1;
+    } else if (medal === "Bronze") {
+      medalCount.Bronze = 1;
+    }
+    return { name, ...medalCount }; //los ... se usan para copiar todas las propiedades de medalCount (gold, silver, bronze)
+  });
+  return athletes;
+};
 // En esta constante se almacena el resultado de la función para poder trabajar con esto después
 const medalsArr = medCount();
 
 //Se agregan los % correspondientes por cada tipo de medalla
-  document.getElementById("gold%").innerHTML = goldPercentage(medCount()) + " %";
-  document.getElementById("silver%").innerHTML = silverPercentage(medCount()) + " %";
-  document.getElementById("bronze%").innerHTML = bronzePercentage(medCount()) + " %";
+document.getElementById("gold%").innerHTML = goldPercentage(medCount()) + " %";
+document.getElementById("silver%").innerHTML = silverPercentage(medCount()) + " %";
+document.getElementById("bronze%").innerHTML = bronzePercentage(medCount()) + " %";
 
 //Estas constantes almacenan los nombres de los atletas por medalla y el espacio en el HTML donde se va a crear la lista con el contenido
 const goldNames = goldAthletes(medalsArr);
@@ -59,8 +59,7 @@ function athLists () {
     listItem.textContent = name;
     bronzeNamesList.appendChild(listItem);
   });
-
-};
+}
 athLists();
 
 //Activa los botones "see more" para que muestre la lista completa de los atletas
