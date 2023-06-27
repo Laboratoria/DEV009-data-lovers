@@ -11,3 +11,6 @@
     font-family: 'pokemon solid' ;
     src: url('./fuentes/pokmon/Pokemon\ Solid.ttf');
 
+h1{
+    color:aqua;
+}
