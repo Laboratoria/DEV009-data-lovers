@@ -6,6 +6,7 @@ import {
   filterByLanguages,
   // filterBySubregion,
   sortByPopulation,
+  filterBySubregion,
   // sortByArea,
 } from "./data.js";
 
@@ -20,6 +21,7 @@ const countryInput = document.getElementById("country-input");
 const allLetters=document.querySelector(".active");
 const continentList = document.querySelectorAll(".continent-name-li");
 const languageList = document.querySelectorAll(".language-li");
+const subRegionsList=document.querySelectorAll('.subregion-li');
 
 function generatesCountriesList() {
   section.innerHTML = "";
@@ -203,6 +205,21 @@ const handleContinentClick = (actualContinent, actualTittle) => {
   generateSection(actualContinent, actualTittle);
   generateCountriesUl(continentCountriesList, actualContinent);
 };
+
+subRegionsList.forEach(subregion=>{
+  subregion.addEventListener('click',()=>{
+    const actualSubRegion=subregion.getAttribute('tittle');
+    const actualTittle=subregion.getAttribute('tittle');
+    handleSubRegionClick(actualSubRegion,actualTittle);
+  })
+})
+
+const handleSubRegionClick=(actualSubRegion,actualTittle)=>{
+  const subRegionsCountriesList=filterBySubregion(countries.countries,actualSubRegion);
+  console.log(subRegionsCountriesList);
+  generateSection(actualSubRegion,actualTittle);
+  generateCountriesUl(subRegionsCountriesList,actualSubRegion);
+}
 
 const generateTableForSortedData=(data,filterKind,sortOrder)=>{
   // filterKind =Area or Population
