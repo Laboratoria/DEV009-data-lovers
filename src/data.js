@@ -54,15 +54,18 @@ const filterByLetter = (data, letter) => {
   return result; // return an object with data
 };
 
-const filterByContinents = (data, continent) => {
-  const result = [];
-  if (Array.isArray(data.countries)){
-    data.countries.map(country=>{
-      const continentSearch=country.continents;
-      if (continentSearch[0] === continent) result.push(country);
 
-    });
-  }
+
+const filterByContinents = (data, continent) => {
+  let result = [];
+  // if (Array.isArray(data.countries)){
+  result = data.filter(country=>country.continents.includes(continent));
+  // data.countries.map(country=>{
+  //   const continentSearch=country.continents;
+  //   if (continentSearch[0] === continent) result.push(country);
+
+  // });
+  // }
   // data.countries.map((country) => {
   //   const continentSearch = country.continents;
   //   if (continentSearch[0] === continent) result.push(country);

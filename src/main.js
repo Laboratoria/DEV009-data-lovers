@@ -213,7 +213,7 @@ continentList.forEach((continent) => {
 });
 
 const handleContinentClick = (actualContinent, actualTittle) => {
-  const continentCountriesList = filterByContinents(countries, actualContinent);
+  const continentCountriesList = filterByContinents(countries.countries, actualContinent);
   generateSection(actualContinent, actualTittle);
   generateCountriesUl(continentCountriesList, actualContinent);
 };
@@ -221,6 +221,17 @@ const handleContinentClick = (actualContinent, actualTittle) => {
 ///////////////////////////////////////////////////////////////////////
 
 /////////////           Test para los filtros           ///////////////
+
+// const dataCountries=countries.countries;
+
+// const filterCountriesByContinent=(data,continent)=>{
+//   data.countries.filter(country=>country.continents.includes(continent));
+// }
+// const testFilter=countries.countries.filter(country=>{
+//   country.continents==="America"})
+
+// console.log(filterCountriesByContinent(countries,'America')); 
+
 
 // const countriesOfAmerica=filterCountriesByContinent(countries.countries,"America");
 // console.log(countriesOfAmerica);
