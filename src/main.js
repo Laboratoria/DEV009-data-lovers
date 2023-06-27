@@ -8,7 +8,6 @@ console.log(data);
 //A que se refiere el parametro event? 
 window.addEventListener('DOMContentLoaded', (event) => {
   const dataContainer = document.getElementById('dataContainer');
-  const imgContainer = document.getElementById('imagenContainer');
   const films = data.films;
 
   // Recorre el arreglo de películas y muestra los títulos en el contenedor HTML
@@ -52,6 +51,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
       containerDiv.appendChild(filmScore);
   });
 });
+/*
+// Obtén una referencia al elemento select
 const orderSelect = document.getElementById('orderSelect');
 
 // Agrega el evento change al elemento select
@@ -67,43 +68,30 @@ orderSelect.addEventListener('change', function() {
     // Acción para "Ordenar de Z - A"
     // ...
   } else if (selectedOption === 'opcion3') {
-    films.sort(compareByScoreDescending);
+*/
+    // Acción para "Mas rankeado"
+      // Ordenar los elementos por puntuación
+      data.films.sort(compareByScore);
 
-    // Limpiar el contenedor antes de agregar los elementos ordenados
-    clearContainer();
-
-    // Recorrer los objetos "films" ordenados y crear los elementos HTML
-    for (let i = 0; i < films.length; i++) {
-      const film = film[i];
-
-      const filmScore = document.createElement('p');
-      filmScore.textContent ='Score: '+ film.rt_score;
-      containerDiv.appendChild(filmScore);
-    }
-  }
-});
+      // Limpiar el contenedor antes de agregar los elementos ordenados
+      clearContainer();
 
 
+      // Función de comparación para ordenar por puntuación (rt_score)
+      function compareByScore(a, b) {
+        // Orden ascendente (de menor a mayor)
+        //return a.rt_score - b.rt_score;
 
+        // Orden descendente (de mayor a menor)
+        return b.rt_score - a.rt_score;
+      }
 
-/*
-window.addEventListener('DOMContentLoaded', (event) => {
-  const dataContainer = document.getElementById('imagenContainer');
-  const films = data.films;
-  const imageSize = '200px'
-  // Recorre el arreglo de películas y muestra los títulos en el contenedor HTML
-  films.forEach((film) => {
-    // Obtén el contenedor de la imagen
+      // Función para limpiar el contenedor
+      function clearContainer() {
+        while (dataContainer.firstChild) {
+          dataContainer.removeChild(dataContainer.firstChild);
+        }
+      }
+ /*   }
+  });*/
 
-    // Crea un elemento <img>
-    const imagen = document.createElement('img');
-
-    // Establece la URL de la imagen en el atributo src
-    imagen.src = film.poster;
-        // Agrega la clase CSS a la imagen
-    imagen.classList.add('imagen-reducida');
-
-    // Agrega la imagen al contenedor
-    imagenContainer.appendChild(imagen);
-  });
-}); */
