@@ -48,7 +48,7 @@ function generatesCountriesList() {
 function generateSection(id, tittle, clearSection = "yes") {
   if (clearSection === "yes") section.innerHTML = "";
   const htmlSection = `
-        <section class="section- ${tittle} ">
+        <section class="section-${tittle}">
         <h3>${tittle}</h3>
         <ul class="common-countries-name-ul-${id} common-countries" id="common-countries-name-ul-${id}"></ul>`;
   section.insertAdjacentHTML("beforeend", htmlSection);
@@ -208,14 +208,15 @@ const handleContinentClick = (actualContinent, actualTittle) => {
 
 subRegionsList.forEach(subregion=>{
   subregion.addEventListener('click',()=>{
-    const actualSubRegion=subregion.getAttribute('tittle');
+    // const actualId=subregion.getAttribute('id');
+    const actualSubRegion=subregion.getAttribute('id');
     const actualTittle=subregion.getAttribute('tittle');
     handleSubRegionClick(actualSubRegion,actualTittle);
   })
 })
 
 const handleSubRegionClick=(actualSubRegion,actualTittle)=>{
-  const subRegionsCountriesList=filterBySubregion(countries.countries,actualSubRegion);
+  const subRegionsCountriesList=filterBySubregion(countries.countries,actualTittle);
   console.log(subRegionsCountriesList);
   generateSection(actualSubRegion,actualTittle);
   generateCountriesUl(subRegionsCountriesList,actualSubRegion);

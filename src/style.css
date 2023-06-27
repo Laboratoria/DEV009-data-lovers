@@ -149,8 +149,8 @@ button.button-start {
 
 h3 {
   /* display: flex; */
-  margin: 10px 10px 10px 10px;
-  padding: 10px;
+  margin:2px 10px;
+  padding: 0;
   font-family: stoke;
   font-size: x-large;
 }
@@ -188,6 +188,10 @@ li a {
   text-decoration: none; /* Remove default text underline */
   font-size: 16px; /* Increase the font-size */
   color: #000000;
+}
+
+.container-list-aside{
+  padding: 0;
 }
 
 .dropdown-content {
