@@ -1,29 +1,63 @@
 import countries from "./data/countries/countries.js";
 import {
+  // generateCountriesList,
   searchCountries,
   generateAlphabet,
+  // filterByLetter,
   filterByContinents,
-  filterByLanguages,
-  // filterBySubregion,
-  sortByPopulation,
   filterBySubregion,
+  filterByLanguages,
+  sortByPopulation,
   // sortByArea,
+  addPopulationDensity,
+  // sortByPopulationDensity
 } from "./data.js";
 
 const buttonLoadCountriesList = document.querySelector(".load-section-button");
-const buttonClearCountriesList = document.querySelector(
-  ".clear-section-button"
-);
-const buttonSortPopulationUp=document.querySelector(".filter-by-population")
+const buttonClearCountriesList = document.querySelector(".clear-section-button");
+const buttonSortPopulationUp = document.querySelector(".filter-by-population")
 const section = document.querySelector(".countries-main");
-const sectionTable=document.querySelector(".countries-table");
+const sectionTable = document.querySelector(".countries-table");
 const countryInput = document.getElementById("country-input");
-const allLetters=document.querySelector(".active");
+const allLetters = document.querySelector(".active");
 const continentList = document.querySelectorAll(".continent-name-li");
 const languageList = document.querySelectorAll(".language-li");
-const subRegionsList=document.querySelectorAll('.subregion-li');
+const subRegionsList = document.querySelectorAll('.subregion-li');
 
-function generatesCountriesList() {
+// Esta función genera la section con los ul vacíos
+const generateSection = (id, tittle, clearSection = "yes") => {
+  if (clearSection === "yes") section.innerHTML = "";
+  
+  const htmlSection = `
+    <section class="section-${tittle}">
+    <h3>${tittle}</h3>
+    <ul class="common-countries-name-ul-${id} common-countries" id="common-countries-name-ul-${id}"></ul>
+  `;
+  
+  section.insertAdjacentHTML("beforeend", htmlSection);
+};
+
+// Esta función genera los li con los nombres de los países y sus respectivas banderas
+const generateCountriesUl = (data, tittle) => {
+  const containerList = document.querySelector(`.common-countries-name-ul-${tittle}`);
+  
+  for (const country of data) {
+    const countryName = country.name.common;
+    const flagCountry = country.flags.png;
+    const html = `
+      <li class="country-item-li"><img
+        class="flag-country"
+        src="${flagCountry}"
+        alt="flag country"
+        width="30"/>
+        <a href="#">${countryName}</a>
+      </li>`;
+    containerList.insertAdjacentHTML("beforeend", html);
+  }
+};
+
+// Esta función genera la section de los countries con sus respectivas li que contienen los nombres comunes y la imagen de la bandera
+const generatesCountriesList = () => {
   section.innerHTML = "";
 
   for (let i = 65; i <= 90; i++) {
@@ -43,42 +77,19 @@ function generatesCountriesList() {
     // Countries list creation
     generateCountriesUl(sectionCountries, sectionLetter);
   }
-}
-
-function generateSection(id, tittle, clearSection = "yes") {
-  if (clearSection === "yes") section.innerHTML = "";
-  const htmlSection = `
-        <section class="section-${tittle}">
-        <h3>${tittle}</h3>
-        <ul class="common-countries-name-ul-${id} common-countries" id="common-countries-name-ul-${id}"></ul>`;
-  section.insertAdjacentHTML("beforeend", htmlSection);
-}
-
-const generateCountriesUl = (data, tittle) => {
-  const containerList = document.querySelector(
-    `.common-countries-name-ul-${tittle}`
-  );
-  for (const country of data) {
-    const countryName = country.name.common;
-    const flagCountry = country.flags.png;
-    const html = `
-        <li class="country-item-li"><img
-        class="flag-country"
-        src="${flagCountry}"
-        alt="flag country"
-        width="30"
-      /><a href="#">${countryName}</a>
-          </li>`;
-    containerList.insertAdjacentHTML("beforeend", html);
-  }
 };
 
-function clearCountriesList() {
+// La función `clearCountriesList` borra todo el contenido presente en el elemento HTML identificado como section, dejándolo vacío.
+const clearCountriesList = () => {
   section.innerHTML = "";
 }
 
-generatesCountriesList(countries.countries);
+// Al llamarla se genera la lista de los paises.
+generatesCountriesList();
 
+addPopulationDensity(countries.countries);
+
+// caja de texto que controla el evento de entrada en el campo de búsqueda y genera dinámicamente secciones y listas de países basadas en el texto de búsqueda ingresado por el usuario.
 countryInput.addEventListener("input", () => {
   const countryInputText = countryInput.value;
   const countryToSearch =
@@ -96,7 +107,7 @@ countryInput.addEventListener("input", () => {
     generateCountriesUl(countriesFinded, tittleLetter);
   }
   if (countryInputText.length === 0) {
-    generatesCountriesList(countries.countries);
+    generatesCountriesList();
   }
 });
 
@@ -106,11 +117,11 @@ buttonClearCountriesList.addEventListener("click", () => {
 });
 
 buttonLoadCountriesList.addEventListener("click", () => {
-  generatesCountriesList(countries.countries);
+  generatesCountriesList();
 });
 
 allLetters.addEventListener('click',()=>{
-  generatesCountriesList(countries.countries);
+  generatesCountriesList();
 })
 
 // Generar elementos del alfabeto y agregar controladores de eventos
@@ -120,10 +131,11 @@ const alphabetContainer = document.querySelector(".alphabet-list");
 
 // Genera la barra de navegación por letras
 alphabet.forEach((letter) => {
-  const htmlAlphabetList=`<li class="alphabet-item letter" id="${letter}">${letter}</li>`;
+  const htmlAlphabetList = `<li class="alphabet-item letter" id="${letter}">${letter}</li>`;
   alphabetContainer.insertAdjacentHTML("beforeend", htmlAlphabetList);
-})
-const alphabetList=document.querySelectorAll(".letter");
+});
+
+const alphabetList = document.querySelectorAll(".letter");
 
 alphabetList.forEach((letter) => {
   letter.addEventListener("click", () => {
@@ -132,52 +144,13 @@ alphabetList.forEach((letter) => {
     handleLetterClick(actualLetter, actualTittle);
   });
 });
-  
+
 const handleLetterClick = (actualLetter, actualTittle) => {
   const letterCountriesList = searchCountries(countries.countries, actualLetter);
   generateSection(actualLetter, actualTittle);
   generateCountriesUl(letterCountriesList, actualLetter);
 };
   
-//Version de Andrea
-// const li = document.createElement("li");
-// li.textContent = letter;
-// li.classList.add("alphabet-item");
-// li.idList.add("letter");
-// alphabetContainer.appendChild(li);
-//   li.addEventListener("click", () => {
-//     const sectionId = `section-${letter}`;
-//     // console.log(sectionId)
-//     const section = document.getElementById(sectionId);
-//     // console.log(section)
-
-//     // Mostrar sección de países seleccionada
-//     section.classList.remove("hidden");
-
-//     // Ocultar las demás secciones de países
-//     const allSections = document.querySelectorAll(".alphabet-section");
-//     allSections.forEach((section) => {
-//       if (section.id !== sectionId) {
-//         section.classList.add("hidden");
-//       }
-//     });
-//   });
-// });
-
-// // Obtiene la referencia al elemento "ALL"
-// const allCountries = document.querySelector(".alphabet-list li:first-child");
-
-// // Agrega el controlador de eventos al elemento "ALL"
-// allCountries.addEventListener("click", () => {
-//   // Muestra todas las secciones de países ocultas
-//   const hiddenSections = document.querySelectorAll(".alphabet-section.hidden");
-//   hiddenSections.forEach((section) => section.classList.remove("hidden"));
-// });
-
-
-///                     hasta aca de andrea           ///
-//////////////////////////////////////////////////////////////////////////
-
 languageList.forEach((language) => {
   language.addEventListener("click", () => {
     const actualLanguage = language.getAttribute("id");
@@ -217,7 +190,7 @@ subRegionsList.forEach(subregion=>{
 
 const handleSubRegionClick=(actualSubRegion,actualTittle)=>{
   const subRegionsCountriesList=filterBySubregion(countries.countries,actualTittle);
-  console.log(subRegionsCountriesList);
+  // console.log(subRegionsCountriesList);
   generateSection(actualSubRegion,actualTittle);
   generateCountriesUl(subRegionsCountriesList,actualSubRegion);
 }
@@ -268,6 +241,12 @@ buttonSortPopulationUp.addEventListener('click',()=>{
   const countriesSortedByPopulationUp = sortByPopulation(countries, 1);
   generateTableForSortedData(countriesSortedByPopulationUp,filterKind,sortOrder);
 });
+
+// console.log(addPopulationDensity(countries.countries));
+
+
+
+
 
 ///////////////////////////////////////////////////////////////////////
 
@@ -321,4 +300,10 @@ buttonSortPopulationUp.addEventListener('click',()=>{
 
 // console.log("Filter countries Portuguese language");
 // console.log(filterByLanguages(countries, "por"));
+
+// console.log("Filter by population density up");
+// console.log(sortByPopulation(countries, 1));
+
+// console.log("Filter by population density down");
+// console.log(sortByPopulation(countries, -1));
 ////////////////   aque terminan pruebas de filtros   //////////////////

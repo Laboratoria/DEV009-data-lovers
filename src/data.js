@@ -1,10 +1,5 @@
 // La función `generateCountriesList` lee una lista de países y devuelve un array ordenado con los nombres comunes de los países.
-// export const filterCountriesByContinent=(countries, continent)=>{
-//   returncountries.filter(country=>country.continents===continent);
-// }
-
-
-function generateCountriesList(countries) {
+const generateCountriesList = (countries) => {
   const commonCountriesNames = [];
   countries.forEach((country) => {
     commonCountriesNames.push(country.name.common);
@@ -16,7 +11,7 @@ function generateCountriesList(countries) {
 }
 
 // La función `searchCountries` lee una lista de países y un texto de búsqueda, y devuelve un array con los países que coinciden con el texto de búsqueda.
-function searchCountries(countries, inputText) {
+const searchCountries = (countries, inputText) => {
   const result = [];
   countries.forEach((eachCountry) => {
     const countryName = eachCountry.name.common;
@@ -27,23 +22,19 @@ function searchCountries(countries, inputText) {
   });
   return result;
 }
-// La expresión countryName.slice(0, lengthText) === inputText
-// countryName: es una cadena de texto que representa el nombre del país.
-// slice(0, lengthText): toma una subcadena de countryName desde el índice 0 hasta el índice lengthText. Esto significa que se extraen los primeros lengthText caracteres del nombre del país.
-// inputText: es la cadena de texto de entrada, es decir, el texto de búsqueda.
 
 // La función `generateAlphabet` genera las letras del alfabeto.
-function generateAlphabet() {
+const generateAlphabet = () => {
   const alphabet = [];
 
   for (let i = 65; i <= 90; i++) {
     const letter = String.fromCharCode(i);
     alphabet.push(letter);
   }
-
   return alphabet;
 }
 
+// La función `filterByLetter` filtra un conjunto de datos (data) en base a una letra específica (letter).
 const filterByLetter = (data, letter) => {
   const result = [];
   data.map((country) => {
@@ -54,16 +45,17 @@ const filterByLetter = (data, letter) => {
   return result; // return an object with data
 };
 
+// La función `filterByContinents` filtra un conjunto de datos (data) para encontrar los elementos que pertenecen a un continente específico (continent).
 const filterByContinents = (data, continent) => {
   return data.filter(country=>country.continents.includes(continent));
 };
 
+// La función `filterBySubregion` filtra un conjunto de datos (data) para encontrar los elementos que pertenecen a una subregion en específico (subRegion).
 const filterBySubregion = (data, subRegion) => {
   return data.filter(country=>country.subregion===subRegion)
 };
 
-
-
+// La función `filterByLanguages` filtra un conjunto de datos (data) para encontrar los países que tienen un idioma específico (language)
 const filterByLanguages = (data, language) => {
   const countriesLanguage = [];
   data.map((country) => {
@@ -77,6 +69,7 @@ const filterByLanguages = (data, language) => {
   return countriesLanguage;
 };
 
+// La función `sortByPopulation` clasifica un conjunto de datos (data) que contiene países y su población, según el parámetro sortOrder.
 const sortByPopulation = (data, sortOrder) => {
   //sortOrder could be 1 for ascending order  or -1 for descending order
   let result = [];
@@ -100,6 +93,7 @@ const sortByPopulation = (data, sortOrder) => {
   return result;
 };
 
+// La función sortByArea() clasifica un conjunto de datos (data) que contiene países y su área, según el parámetro sortOrder.
 const sortByArea = (data, sortOrder) => {
   //sortOrder could be 1 for ascending order  or -1 for descending order
   let result = [];
@@ -119,6 +113,34 @@ const sortByArea = (data, sortOrder) => {
   return result;
 };
 
+// La función me calcula la densidad poblacion y la adiciona como parametro key al objeto countries
+const addPopulationDensity = (data)=>{
+  data.map((country) => {
+    country.populationDensity = Math.trunc(country.population/country.area);
+  });
+  return data;
+}
+
+const sortByPopulationDensity = (data, sortOrder) => {
+  //sortOrder could be 1 for ascending order  or -1 for descending order
+  let result = [];
+  switch (sortOrder) {
+  case 1: {
+    result = data.countries.slice().sort((a, b) => a.populationDensity - b.populationDensity);
+    break;
+  }
+  case -1: {
+    result = data.countries.slice().sort((a, b) => b.populationDensity - a.populationDensity
+    );
+    break;
+  }
+  default: {
+    break;
+  }
+  }
+  return result;
+};
+
 export {
   generateCountriesList,
   searchCountries,
@@ -129,4 +151,6 @@ export {
   filterByLanguages,
   sortByPopulation,
   sortByArea,
+  addPopulationDensity,
+  sortByPopulationDensity
 };
