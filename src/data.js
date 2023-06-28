@@ -1,8 +1,4 @@
-// estas funciones son de ejemplo
-
-export const example = () => {
-  return 'example';
-};
+import data from './data/pokemon/pokemon.js';
 
 export const anotherExample = () => {
   return 'OMG';
