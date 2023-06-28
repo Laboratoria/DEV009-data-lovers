@@ -100,7 +100,7 @@ button.button-start {
 
 }
 
-.col1{}
+/* .col1{} */
 
 #container_Table{
   background-color: #fff;
@@ -209,9 +209,9 @@ li a {
   display: block;
 }
 
-.subregion-li{
+/* .subregion-li{
 
-}
+} */
 /* table {
   border-collapse: collapse;
 }
@@ -246,6 +246,7 @@ th, td {
     font-size: x-large;
     height: 50px;
     margin: 10px auto;
+    background-color: #ffffff;
     /* padding: 10px; */
   }
 

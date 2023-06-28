@@ -10,7 +10,9 @@ import {
   // sortByPopulation,
   // sortByArea,
   addPopulationDensity,
-  sortByPopulationDensity
+  sortByPopulationDensity,
+  sortByPopulation,
+  sortByArea
 } from "./data.js";
 
 const buttonLoadCountriesList = document.querySelector(".load-section-button");
@@ -23,7 +25,9 @@ const allLetters = document.querySelector(".active");
 const continentList = document.querySelectorAll(".continent-name-li");
 const languageList = document.querySelectorAll(".language-li");
 const subRegionsList = document.querySelectorAll('.subregion-li');
+const sortList = document.querySelectorAll('.sort-li');
 const reverseOrder = document.querySelector('.reverse-order');
+
 
 
 // Esta función genera la section con los ul vacíos
@@ -89,6 +93,7 @@ const clearCountriesList = () => {
 // Al llamarla se genera la lista de los paises.
 generatesCountriesList();
 
+// en la siguiente linea modificada la data, es decir tiene incluido la densidad poblacional
 addPopulationDensity(countries.countries);
 
 // caja de texto que controla el evento de entrada en el campo de búsqueda y genera dinámicamente secciones y listas de países basadas en el texto de búsqueda ingresado por el usuario.
@@ -181,25 +186,59 @@ const handleContinentClick = (actualContinent, actualTittle) => {
   generateCountriesUl(continentCountriesList, actualContinent);
 };
 
-subRegionsList.forEach( (subregion) => {
-  subregion.addEventListener('click',()=>{
+subRegionsList.forEach((subregion) => {
+  subregion.addEventListener('click',() => {
     // const actualId=subregion.getAttribute('id');
-    const actualSubRegion=subregion.getAttribute('id');
-    const actualTittle=subregion.getAttribute('tittle');
+    const actualSubRegion = subregion.getAttribute('id');
+    const actualTittle = subregion.getAttribute('tittle');
     handleSubRegionClick(actualSubRegion,actualTittle);
   })
 })
 
 const handleSubRegionClick = (actualSubRegion,actualTittle) => {
-  const subRegionsCountriesList=filterBySubregion(countries.countries,actualTittle);
+  const subRegionsCountriesList = filterBySubregion(countries.countries,actualTittle);
   // console.log(subRegionsCountriesList);
   generateSection(actualSubRegion,actualTittle);
   generateCountriesUl(subRegionsCountriesList,actualSubRegion);
 }
 
+
+
+sortList.forEach((sortBy) => {
+  sortBy.addEventListener('click',() => {
+    const actualFilter = sortBy.getAttribute('id');
+    const actualTittle = sortBy.getAttribute('tittle');
+    handleFilterClick(actualFilter,actualTittle);
+  })
+});
+
+const handleFilterClick = (actualFilter,actualTittle) => {
+  let countriesSortBy;
+  
+  switch (actualFilter) {
+  case "population": {
+    countriesSortBy = sortByPopulation(countries, 1)
+    break;
+  }
+  case "area": {
+    countriesSortBy = sortByArea(countries, 1)
+    break;
+  }
+  case "populationDensity": {
+    countriesSortBy = sortByPopulationDensity(countries, 1)
+    break;
+  }
+  }
+
+  generateTableForSortedData(countriesSortBy,actualFilter,actualTittle);
+  
+  // generateCountriesUl(filterByCountrieslist,actualFilter);
+}
+
+
 let iconArrow;
 
-const generateTableForSortedData = (data, filterKind) => {
+const generateTableForSortedData = (data, filterKind, filterTitle) => {
   // filterKind =Area or Population
   // sortOrder= Ascending or descending
   section.innerHTML='';
@@ -211,12 +250,12 @@ const generateTableForSortedData = (data, filterKind) => {
   
   const htmlTittleTable=
   `<div class="table-tittle">
-    <h3>Countries sorted by ${filterKind}</h3>
+    <h3>Countries sorted by ${filterTitle}</h3>
     <span class="icon-arrow"><img class="sort-img" src="./images/sort.png" alt="icon-sort"/></span>
   </div>
   <div class="table-row">
     <div class="col-table col1 col-tittle">Country</div>
-    <div class="col-table col2 col-tittle">${filterKind} </div>
+    <div class="col-table col2 col-tittle">${filterTitle}</div>
   </div>`;
   
 
@@ -224,29 +263,12 @@ const generateTableForSortedData = (data, filterKind) => {
   iconArrow = document.querySelector(".sort-img");
   
   data.forEach((country) => {
-    // let filterVar;
-
-    // switch (filterKind) {
-    // case "area": {
-    //   filterVar = country.area;
-    //   break;
-    // }
-    // case "population": {
-    //   filterVar = country.population;
-    //   break;
-    // }
-    // case "populationDensity": {
-    //   filterVar = country.populationDensity;
-    //   break
-    // }
-    // }
     
     const filterVarArea = country.area;
     const filterVarPopulation = country.population;
     const filterVarPopulationDensity = country.populationDensity;
     const countryName = country.name.common;
     const flagCountry = country.flags.png;
-    
     
     let filterVar;
     
@@ -287,27 +309,24 @@ const generateTableForSortedData = (data, filterKind) => {
 
 // buttonSortPopulationUp.addEventListener('click',() => {
 //   const filterKind = 'population';
-//   const sortOrder = 'Ascending'
 //   countriesSortedByPopulationUp = sortByPopulation(countries, 1);
-//   generateTableForSortedData(countriesSortedByPopulationUp,filterKind,sortOrder);
+//   generateTableForSortedData(countriesSortedByPopulationUp,filterKind);
 // });
 
 // let countriesSortedByAreaUp;
 
 // buttonSortPopulationUp.addEventListener('click',() => {
 //   const filterKind = 'area';
-//   const sortOrder = 'Ascending'
 //   countriesSortedByAreaUp = sortByArea(countries, 1);
-//   generateTableForSortedData(countriesSortedByAreaUp,filterKind,sortOrder);
+//   generateTableForSortedData(countriesSortedByAreaUp,filterKind);
 // });
 
 let countriesSortedByPopulationDensityUp;
 
 buttonSortPopulationUp.addEventListener('click',() => {
   const filterKind = 'populationDensity';
-  const sortOrder = 'Ascending'
   countriesSortedByPopulationDensityUp = sortByPopulationDensity(countries, 1);
-  generateTableForSortedData(countriesSortedByPopulationDensityUp,filterKind,sortOrder);
+  generateTableForSortedData(countriesSortedByPopulationDensityUp,filterKind);
 });
 
 let sortOrderType = -1;
