@@ -234,16 +234,6 @@
     flex-wrap: nowrap;
     justify-content: space-around;
 }
-@media (max-width: 768px) {
-#topContainer {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 30px;
-    line-height: 1.3;
-    margin-top: 75px;
-    margin-right: 50px;
-    margin-left: 10px;
-}}
 #topContainer {
     display: grid;
     grid-template-columns: repeat(5,1fr);
@@ -268,24 +258,20 @@
     cursor: pointer;
     border-radius: 4px;
 }
-
 #generalStats {
    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-around;
+   flex-wrap: nowrap;
+   justify-content: space-around;
 }
-  
 #statisticsCont {
     display: flex;
     justify-content: center;
 }
-
 .headingStats {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
 .cardsAth {
     border: 2px solid #ccc;
     padding: 20px;
@@ -354,18 +340,17 @@
 #pet4 {
     height: 350px;
     width: auto;
-    display: flex;
-    padding-top: 170px;
-    flex: 0 0 auto;
-    margin-right: 5%;
+    padding-top: 120px;
     margin-left: 50px;
+}
+#pet4tom{
+    height: 400px;
+    width: auto;
 }
 #pet5 {
     height: 350px;
-    width: auto;
     display: flex;
     padding-top: 170px;
-    flex: 0 0 auto;
 }
 #imgoro {
     height: 250px;
@@ -381,11 +366,21 @@
     height: 220px;
     width: auto;
 }
-
- {
-#pet3 {
-    margin-left: 5px;
-    margin-right: none;
+/*CSS MOVIL*/
+@media (max-width: 768px) {
+#generalStats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
-
+#pet4tom{
+    height: 350px;
+    width: auto;
+}
+.cardsAth {
+    border: 2px solid #ccc;
+    padding-top: 20px;
+    border-radius: 10px;
+    margin-right: 30px;
+}
 }
