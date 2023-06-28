@@ -1,0 +1,44 @@
+
+
+body{
+    max-width: 100%;
+    margin:0;
+    padding:0;
+    background-color: #71c8d6;
+}
+nav{
+    max-width: 700px;
+    margin: auto;
+    background-color: #138287;
+    font-size: 20px;
+    margin-top: 50px;
+}
+.logo{
+    width: 350px;
+    display: block;
+    margin: 0 auto;
+}
+.navegation-bar{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.navegation-bar > li{
+    display: block;
+    padding: 10px 15px;
+    color: #ffffff;
+    text-decoration: none;
+}
+.navegation-bar > li:hover{
+    background-color: red;
+}
+.vertical-menu{
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.navegation-bar li:hover .vertical-menu{
+    display: block;
+}
