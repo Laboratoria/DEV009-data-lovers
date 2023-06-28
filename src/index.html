@@ -16,22 +16,24 @@
         <p>Aquí podrás encontrar las increíbles dos primeras generaciónes del juego Pokémon go.</p>
       </div>  
     </header>
-<!-- boton para byscar por nombre y numero-->
+<!-- boton para buscar por nombre y numero-->
     <label for="button">Buscar por nombre: </label>
     <br><br>
     <input type="text" id="nombre">
-    <button onclick="buscar()">🔎</button>
+    <button class="serchName">🔎</button>
     <br><br>
     <div id="resultado"></div>
-  <footer>By Jarianna & Aivy.</footer>
 <!-- menu desplegable para seleccionae-->
-    <label for="select">Ordenar por:   </label>
-      <select name="select">
-        <option value="value1">A-Z</option>
-        <option value="value2">Z-A</option>
-        <option value="value3">numero mayor</option>
-        <option value="value4">numero inferior</option>
+  <select id="menu">
+        <option value="AZ">A-Z</option>
+        <option value="ZA">Z-A</option>
+        <option value="youngerToLower">numero mayor</option>
+        <option value="lowerToYounger">numero inferior</option>
       </select>
-      <br><br>
+
+
+
+</section>
+
   </body> 
 </html>
