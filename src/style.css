@@ -181,6 +181,7 @@
 #imgOficial {
     height: 150px;
     width: 500px;
+    margin-top: 25px;
 }
 #contenedorImg {
     display: flex;
@@ -233,19 +234,9 @@
     flex-wrap: nowrap;
     justify-content: space-around;
 }
-@media (max-width: 768px) {
 #topContainer {
-    display: grid;
-    grid-template-columns: repeat(3, 1.5px);
-    gap: 30px;
-    line-height: 1.3;
-    margin-top: 75px;
-    margin-right: 50px;
-    margin-left: 10px;
-}}
-#topContainer {
-    display: grid;
-    grid-template-columns: repeat(5, 0.85fr);
+    display: flex;
+    flex-direction: column;
     gap: 30px;
     line-height: 1.3;
     margin-top: 75px;
@@ -269,13 +260,13 @@
 }
 
 #generalStats {
-    display: flex;
-    justify-content: center;
+   display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
 }
   
 #statisticsCont {
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 
