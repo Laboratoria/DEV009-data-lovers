@@ -1,9 +1,14 @@
+
+header{
+    text-align: center;
+    font-family: cursive ;
+    font-weight: bold  ; 
+
 #root{
     display: flex ;
     flex-wrap: wrap;
     justify-content: space-between;
-}
-
+  }
 .card {
     margin: 10px;
     padding: 10px;
