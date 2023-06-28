@@ -132,32 +132,12 @@
     margin-right: 100px;
     flex: 0 0 auto;
 }   
-@media (max-width: 768px) {
-    #pet1 {
-        top: 100px; /* Ajustar la posición vertical */
-    }
-
-    #petTom {
-        width: 100%; /* Utilizar el ancho completo de la pantalla */
-        margin: 20px auto; /* Centrar horizontalmente con margen */
-    }
-
-    #petgreen {
-        width: 150px; /* Ajustar el ancho */
-        margin: 10px auto; /* Centrar horizontalmente con margen */
-    }
-
-    #pet2 {
-        top: 300px; /* Ajustar la posición vertical */
-        right: auto; /* Eliminar el margen derecho */
-        margin: 0 auto; /* Centrar horizontalmente */
-    }
 #pet3 {
     height: 350px;
     width: auto;
     display: flex;
     padding-top: 170px;
-}}
+}
 #petestad {
     margin-top: 100px;
     width: 450px;
