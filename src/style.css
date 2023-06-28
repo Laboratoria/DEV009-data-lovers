@@ -133,10 +133,16 @@
     margin-right: 100px;
 }   
 #pet3 {
-    height: 350px;
+    display:flex;
+    align-items: start;
+    height: 150px;
     width: auto;
-    display: flex;
     padding-top: 170px;
+}
+#mascotasJuntas{
+    margin-top: 50px;
+    width: 350px;
+    height: auto;
 }
 #petestad {
     margin-top: 100px;
@@ -223,7 +229,7 @@
 #boxSortBy .order {
     margin-right: 200px; /* Añade un espacio entre los botones */      
 }
-#general1 {
+#general2 {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-around;
