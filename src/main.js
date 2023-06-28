@@ -1,10 +1,6 @@
-import { pokemon } from './data.js';
-
+import { example } from './data.js';
+// import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
+// import data from './data/rickandmorty/rickandmorty.js';
 
-
-//console.log(example, data);
-
-
-const root = document.getElementById('root');
-root.innerHTML=`<h1>${data.pokemon[0].name}</h1>`;
+console.log(example, data);
