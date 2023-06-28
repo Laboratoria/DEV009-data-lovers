@@ -1,6 +1,40 @@
-import { example } from './data.js';
-// import data from './data/lol/lol.js';
-import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
+// importa una entidad llamada example desde el archivo data.js
+import { Muestra } from './data.js';
+import pokemon from './data/pokemon/pokemon.js';
 
-console.log(example, data);
+//busca y devuelve el primer elemento con el id root.
+const root = document.getElementById("root");
+
+// asigna el arreglo de Pokémon contenido en el objeto data a la constante allPokemon
+const muestraPokemon = Muestra(); 
+
+muestraPokemon.forEach((pokemon) => {
+    const card = document.createElement("div");
+    card.classList.add("card");
+    const imgContainer = document.createElement("div");
+    imgContainer.classList.add("img-container");
+
+    const imgPokemon = document.createElement("img");
+    imgPokemon.src = pokemon.img;
+    imgContainer.appendChild(imgPokemon);
+
+    const infoContainer = document.createElement("div");
+    infoContainer.classList.add("info-container");
+
+    const numPokemon = document.createElement("p");
+    numPokemon.textContent = `N.º ${pokemon.num}`;
+    infoContainer.appendChild(numPokemon);
+
+    const namePokemon = document.createElement("h1");
+    namePokemon.textContent = pokemon.name;
+    infoContainer.appendChild(namePokemon);
+
+    const typePokemon = document.createElement("p");
+    typePokemon.textContent = `Type: ${pokemon.type.join(", ")}`;
+    infoContainer.appendChild(typePokemon);
+
+    card.appendChild(imgContainer);
+    card.appendChild(infoContainer);
+
+    root.appendChild(card);
+});
