@@ -117,8 +117,9 @@
     margin-left: none;
     margin-top: 180px;
     width: 350px;
-    flex: 0 0 auto;
+    position: fixed;
     height: auto;
+    
 }
 #petgreen{
     margin-top: 140px;
@@ -131,7 +132,7 @@
     top:500px;
     right: 0px;
     margin-right: 100px;
-    flex: 0 0 auto;
+    position: fixed;
 }   
 #pet3 {
     height: 350px;
@@ -288,6 +289,7 @@
     font-weight: bolder;
     font-size: 30px;
 }
+
 .top10 {
     display: flex;
     justify-content: center; 
