@@ -1,9 +1,12 @@
 
 header{
-    text-align: center;
+    text-align:center;
+    text-justify: distribute-all-lines;
     font-family: cursive ;
-    font-weight: bold  ; 
-
+    font-weight: bold ;
+    font-size:3vmax; 
+    color:chocolate
+ }
 #root{
     display: flex ;
     flex-wrap: wrap;
