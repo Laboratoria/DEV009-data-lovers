@@ -5,43 +5,77 @@
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+  
   <body>
+
     <header>
-      <img  class="logo" src="./images/pngwing.com.png" alt ="Logo Studio Ghibli">
+      <!--"./" : imagen se encuentra en ruta relativa aunque muestra su ruta actual-->
+      <!--alt : no olvidar colocarle a las imágenes textos alternativos, en caso de que se usen lectores de pantalla-->
+      <img id="logo" src="./imagenes/pngwing.com.png" alt="Logo Studio Ghibli">
     </header>
-    
+
+    <!--<nav> definir una sección de navegación: permiten a los usuarios moverse dentro de un sitio web - su apariencia se define en CSS -->
     <nav>
-      <div class="box-button">
-        <ul class="navegation-bar">
-          <li>Películas</li>
-            <ul class="vertical-menu">
-              <li>Por año</li>
-              <li>Por Director</li>
-              <li>Por Orden alfabético</li>
-            </ul>
-          <li>Personajes</li>
-            <ul class="vertical-menu">
-              <li>Por película</li>
-              <li>Por grupo etario</li>
-              <li>Por Orden alfabético</li>
-            </ul>
-          <li>Curiosidades</li>
-            <ul class="vertical-menu">
-              <li>Especies</li>
-              <li>Vehículos</li>
-              <li>Promedio año películas</li>
-            </ul>
-        </ul>
-      </div>
+      <ul class="menu-horizontal">
+        <li><a href="#">Home</a></li>
+        <li>
+          <!--<a> : etiqueta ancla: para que los usuarios puedan navegar entre diferentes partes del contenido-->
+          <!--href dentro de la etiqueta <a> : para especificar el destino del enlace-->
+          <a href="#">Películas</a>
+          <ul class="menu-vertical">
+            <!--al no agregarle target las opciones se abrirán en la misma pestaña o ventana del navegador, según lo tenga configurado el usuario por defecto-->
+            <li><a ref="#">Por año</a></li>
+            <li><a ref="#">Por director</a></li>
+            <li><a ref="#">Orden alfabético</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Personajes</a>
+          <ul class="menu-vertical">
+          <li><a ref="#">Por película</a></li>
+          <li><a ref="#">Por grupo etario</a></li>
+          <li><a ref="#">Orden alfabético</a></li>
+        </ul>                                  
+        </li>
+        <li><a href="#">Curiosidades</a>
+          <ul class="menu-vertical">
+            <li><a ref="#">Especies</a></li>
+            <li><a ref="#">Vehículos</a></li>
+            <li><a ref="#">Promedios</a></li>
+          </ul>
+        </li>
+          </ul>
+        
+        </li>
+      </ul>
     </nav>
-    <main>
-      <div id="box-movies">
 
+    <footer>
+      <p> Elaborado por Conny y Oli en Laboratoria </p>
+    </footer>
+
+    <!--<div class="menu 1">
+      ---La clase "fa fa-angle-right" representa una flecha hacia la derecha
+      <div class="Películas">Películas <i class="fa fa-angle-right"></i></div>
+      ---"pointerCursor" se usa para cambiar la forma del cursor del ratón a un puntero y "hide" se utiliza para ocultar inicialmente el elemento
+      <div class='menu pointerCursor hide'>
+        <div class='peliculasporaño' id='peliculas peliculasporaño'>Películas por año</div>
+        <div class='peliculaspordirector' id='peliculas peliculaspordirector'>Películas por Director</div>
       </div>
-      <button id="button-more">Ver Más</button>
+    </div>-->
 
-    </main>
-    <div id="root"></div>
+
+    <!-- <div id="root"></div>
+      <div id="box">
+      <h1 id="title">Studio Ghibli</h1>
+      <select id="Películas" onchange="FunctionBuscar()">
+        <option class="button" id="movies">Por año</option>
+        <option class="button" id="characters">Por director</option>
+        <option class="button" id="directors">Orden alfabético</option>
+      </select>
+      <button oneclick="FunctionBuscar()">Buscar</button>
+      </div> -->
+      
     <script src="main.js" type="module"></script>
   </body>
-</html>
+</html>-
