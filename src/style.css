@@ -8,7 +8,6 @@
 .page.active {
     display: block; 
 }
-
 .contenedor {
     display: flex;
     align-items: center;
@@ -22,10 +21,14 @@
     align-items: center;
 }
 #logo2016 {
+    display: flex;
+    justify-content: center;
     line-height: 140px;
     height: 140px;
 }
 .division{
+    display: flex;
+    align-items: center;
     margin-left: auto ;
 }
 .division a{
@@ -36,6 +39,8 @@
     padding: 50px;
 }
 .division a:hover {
+    display: flex;
+    align-items: center;
     background-color: #D3D3D3;
     height: 10px;
 }
@@ -48,6 +53,8 @@
     display: none;
 }
 .contenedorFiltros {
+    display: flex;
+    align-items: start;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -61,6 +68,8 @@
     visibility: visible;
 }
 .contenedorFiltros .contenedorFiltros2 {
+    display: flex;
+    align-items: start;
     width: 100%;
     max-width: 250px;
     background: #1c1c1c;
@@ -236,12 +245,13 @@
 
 #generalStats {
     display: flex;
-    align-items: center;
+    justify-content: center;
 }
   
 #statisticsCont {
-    flex: 1 1 auto;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .headingStats {
