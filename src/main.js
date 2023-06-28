@@ -1,4 +1,4 @@
-//import { films } from './data.js';
+import { sortBy } from './data.js';
 
 import data from './data/ghibli/ghibli.js'
 console.log(data);
@@ -6,9 +6,10 @@ console.log(data);
   const dataContainer = document.getElementById('dataContainer');
   const films = data.films;
 
+  //Se declara la función createCardContainer
   function createCardCointainer(dataGhibli){
     //Borra le contenido del div dataConatiner 
-    dataContainer.removeChild(dataContainer.firstChild);
+    dataContainer.innerHTML= "";
   // Recorre el arreglo de películas y muestra los títulos en el contenedor HTML
     dataGhibli.forEach((film) => {
 
@@ -51,11 +52,11 @@ console.log(data);
   });
 };
 
+//Se manda ejecutar la funcion createCardContainer con los datos guardados dentro de la const films
 createCardCointainer(films);
 
 // Obtén una referencia al elemento select
 const orderSelect = document.getElementById('orderSelect');
-
 // Agrega el evento change al elemento select
 orderSelect.addEventListener('change', function() {
   // Obtén el valor seleccionado
@@ -69,36 +70,5 @@ orderSelect.addEventListener('change', function() {
 
   }
   
- })
+ });
 
-
-  /*else if (selectedOption === 'opcion2') {
-    // Acción para "Ordenar de Z - A"
-    // ...
-  } else if (selectedOption === 'opcion3') {
-
-    // Acción para "Mas rankeado"
-      // Ordenar los elementos por puntuación
-      data.films.sort(compareByScore);
-
-      // Limpiar el contenedor antes de agregar los elementos ordenados
-      clearContainer();
-
-
-      // Función de comparación para ordenar por puntuación (rt_score)
-      function compareByScore(a, b) {
-        // Orden ascendente (de menor a mayor)
-        //return a.rt_score - b.rt_score;
-
-        // Orden descendente (de mayor a menor)
-        return b.rt_score - a.rt_score;
-      }
-
-      // Función para limpiar el contenedor
-      function clearContainer() {
-        while (dataContainer.firstChild) {
-          dataContainer.removeChild(dataContainer.firstChild);
-        }
-      }
- /*   }
-  });*/
