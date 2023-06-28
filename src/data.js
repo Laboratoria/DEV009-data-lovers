@@ -1,5 +1,3 @@
-// estas funciones son de ejemplo
-
 export const sortBy = (data, option) => {
         if(option === 'opcion1' ){
             return data.sort((a, b) => b.rt_score - a.rt_score);

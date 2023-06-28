@@ -7,7 +7,7 @@ console.log(data);
   const films = data.films;
 
   //Se declara la función createCardContainer
-  function createCardCointainer(dataGhibli){
+  function createCardContainer(dataGhibli){
     //Borra le contenido del div dataConatiner 
     dataContainer.innerHTML= "";
   // Recorre el arreglo de películas y muestra los títulos en el contenedor HTML
@@ -53,7 +53,7 @@ console.log(data);
 };
 
 //Se manda ejecutar la funcion createCardContainer con los datos guardados dentro de la const films
-createCardCointainer(films);
+createCardContainer(films);
 
 // Obtén una referencia al elemento select
 const orderSelect = document.getElementById('orderSelect');
@@ -62,11 +62,11 @@ orderSelect.addEventListener('change', function() {
   // Obtén el valor seleccionado
   const selectedOption = orderSelect.value;
   if(selectedOption === "all"){
-    createCardCointainer(films);
+    createCardContainer(films);
   } else{
       // Realiza las acciones correspondientes según la opción seleccionada
     const dataSort = sortBy(films, selectedOption);
-    createCardCointainer(dataSort);
+    createCardContainer(dataSort);
 
   }
   
