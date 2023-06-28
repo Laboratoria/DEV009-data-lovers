@@ -497,3 +497,7 @@ ol.container-languages-ol {
 .subregion-li{
   list-style: none;
 }
+
+.icon-arrow:hover {
+  cursor: pointer;
+}
