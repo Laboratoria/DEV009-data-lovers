@@ -9,10 +9,28 @@ const root = document.getElementById("root");
 const muestraPokemon = Muestra(); 
 
 muestraPokemon.forEach((pokemon) => {
+
+console.log("🚀 ~ file: main.js:12 ~ muestraPokemon.forEach ~ pokemon:", pokemon.type[0])
+    const type = pokemon.type;
+    
+
     const card = document.createElement("div");
     card.classList.add("card");
+    if (type.length>1)
+    {
+        const color1 = getComputedStyle(document.documentElement).getPropertyValue('--pokemon-type-'+type[0]);
+        const color2 = getComputedStyle(document.documentElement).getPropertyValue('--pokemon-type-'+type[1]);
+        card.style.background = "linear-gradient(to right, " + color1 + " 30%, "+ color2 + ")"; 
+    }
+    else
+    {
+        const color = getComputedStyle(document.documentElement).getPropertyValue('--pokemon-type-'+type[0]);
+        card.style.background = color;
+    }
+    
     const imgContainer = document.createElement("div");
     imgContainer.classList.add("img-container");
+
 
     const imgPokemon = document.createElement("img");
     imgPokemon.src = pokemon.img;
