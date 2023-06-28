@@ -1,4 +1,4 @@
-import { filterTeam, filterGen,filterSport,filterMedal,sortData,} from './data.js';
+import {filterTeam,filterGen,filterSport,filterMedal,sortData,estadistica} from './data.js';
 import data from './data/athletes/athletes.js';
 
 //llamar a los datos de Athletes
@@ -39,71 +39,55 @@ function generateCards (cards) {
 const cardsContainer = document.getElementById('cartillaContenedor');
 cardsContainer.innerHTML = generateCards(dataArr);
 
+//FILTRAR TEAM
+//Filtrar por Team/Italy
+function fteam(team, pais) {
+  const funcData = filterTeam(team, pais);
+  const createHTML = generateCards(funcData);
+  return createHTML;
+}
+
 //Ordenar por
-
 document.getElementById("oldestToYoungest").addEventListener("click", () => 
-{
-  const sortResult = sortData.sortbyAge1(dataArr);
-  const createHTML = generateCards(sortResult);
-  cardsContainer.innerHTML = createHTML;
+{ cardsContainer.innerHTML = generateCards(sortData.sortbyAge1(dataArr))
 });
-
 document.getElementById("youngestToOldest").addEventListener("click", () => 
-{
-  const sortResult = sortData.sortbyAge2(dataArr);
-  const createHTML = generateCards(sortResult);
-  cardsContainer.innerHTML = createHTML;
+{ cardsContainer.innerHTML = generateCards(sortData.sortbyAge2(dataArr))
 });
-
 document.getElementById("athleteAtoZ").addEventListener("click", () => 
-{
-  const sortResult = sortData.sortbyNameAtoZ(dataArr);
-  const createHTML = generateCards(sortResult);
-  cardsContainer.innerHTML = createHTML;
+{ cardsContainer.innerHTML = generateCards(sortData.sortbyNameAtoZ(dataArr))
 });
-
 document.getElementById("athleteZtoA").addEventListener("click", () => 
-{
-  const sortResult = sortData.sortbyNameZtoA(dataArr);
-  const createHTML = generateCards(sortResult);
-  cardsContainer.innerHTML = createHTML;
+{ cardsContainer.innerHTML = generateCards(sortData.sortbyNameZtoA(dataArr))
 });
-
 document.getElementById("teamAtoZ").addEventListener("click", () => 
-{
-  const sortResult = sortData.sortbyCountryAtoZ(dataArr);
-  const createHTML = generateCards(sortResult);
-  cardsContainer.innerHTML = createHTML;
+{ cardsContainer.innerHTML = generateCards(sortData.sortbyCountryAtoZ(dataArr))
 });
-
 document.getElementById("teamZtoA").addEventListener("click", () =>
-{
-  const sortResult = sortData.sortbyCountryZtoA(dataArr);
-  const createHTML = generateCards(sortResult);
-  cardsContainer.innerHTML = createHTML;
+{  cardsContainer.innerHTML = generateCards(sortData.sortbyCountryZtoA(dataArr));
 }),
 
 //FILTRAR TEAM
 //Filtrar por Team/Italy
-function fteam (team,pais) {
-  const funcData = filterTeam(team,pais);
+/*function fteam(team, pais) {
+  const funcData = filterTeam(team, pais);
   const createHTML = generateCards(funcData);
-  return createHTML
-}
-document.getElementById('Italy').addEventListener('click', ()=>
-  cardsContainer.innerHTML = fteam(dataArr,'Italy')
+  return createHTML;
+}*/
+document.getElementById('Italy').addEventListener('click', () =>
+  cardsContainer.innerHTML = fteam(dataArr, 'Italy')
 );
-document.getElementById('United States').addEventListener('click', ()=>
-  cardsContainer.innerHTML = fteam(dataArr,'United States')
+document.getElementById('United States').addEventListener('click', () =>
+  cardsContainer.innerHTML = fteam(dataArr, 'United States')
 );
-document.getElementById('Russia').addEventListener('click', ()=>
-  cardsContainer.innerHTML = fteam(dataArr,'Russia')
+document.getElementById('Russia').addEventListener('click', () =>
+  cardsContainer.innerHTML = fteam(dataArr, 'Russia')
 );
-document.getElementById('France').addEventListener('click', ()=>
-  cardsContainer.innerHTML = fteam(dataArr,'France')
+document.getElementById('France').addEventListener('click', () =>
+  cardsContainer.innerHTML = fteam(dataArr, 'France')
 );
-document.getElementById('Colombia').addEventListener('click', ()=>
-  cardsContainer.innerHTML = fteam(dataArr,'Colombia')
+document.getElementById('Colombia').addEventListener('click', () =>
+  cardsContainer.innerHTML = fteam(dataArr, 'Colombia')
 );
 
 //FILTRAR DEPORTE
@@ -245,3 +229,37 @@ document.getElementById("Athletes").addEventListener("click", function() {
 document.getElementById("casita2").addEventListener("click", function() {
   showPage('paginaAthletes');
 });
+
+//ESTADISTICA
+function extraermedal(datos) {
+  const medallas = {
+  gold: 0,
+  silver: 0,
+  bronze:0,
+  }
+  datos.forEach((atleta) => {
+    const medalla = atleta.medal;
+    if (medalla === 'Gold') {
+      medallas.gold++;
+    } else if (medalla === 'Silver') {
+      medallas.silver++;
+    } else if (medalla === 'Bronze') {
+      medallas.bronze++;
+    }
+   } 
+  ); 
+  return medallas;
+}
+
+//Ubicar en contenedor
+const g = document.getElementById('gold%')
+const gtot = estadistica(extraermedal(dataArr))
+g.innerHTML = parseFloat((gtot.goldPorcent).toFixed(2)) + "%"
+
+const s = document.getElementById('silver%')
+const stot = estadistica(extraermedal(dataArr))
+s.innerHTML = parseFloat((gtot.silverPorcent).toFixed(2)) + "%"
+
+const b = document.getElementById('bronze%')
+const btot = estadistica(extraermedal(dataArr))
+b.innerHTML = parseFloat((gtot.bronzePorcent).toFixed(2)) + "%"

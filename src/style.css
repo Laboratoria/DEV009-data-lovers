@@ -28,7 +28,7 @@
 .division{
     margin-left: auto ;
 }
-.division li{
+.division a{
     text-decoration: none;
     color: black;
     cursor: pointer;
@@ -128,15 +128,26 @@
     width: 450px;
     height: auto;
 }
-
+#teams {
+    list-style: none;
+}
 #teams a{
     cursor: pointer;
+}
+#sport {
+    list-style: none;
 }
 #sport a{
     cursor: pointer;
 }
+#gender {
+    list-style: none;
+}
 #gender a{
     cursor: pointer;
+}
+#medal {
+    list-style: none;
 }
 #medal a{
     cursor: pointer;
@@ -241,7 +252,7 @@
 
 .cardsAth {
     border: 2px solid #ccc;
-    padding: 10px;
+    padding: 20px;
     border-radius: 10px;
     margin-right: 30px;
 }
@@ -260,34 +271,6 @@
     font-weight: bolder;
     font-size: 30px;
 }
-
-.athList {
-    list-style-type: none;
-    max-height: 300px;
-    overflow: hidden;
-  }
-  
-.athList li::before {
-    content: "\2605"; /* Código unicode para el símbolo de estrella */
-    margin-right: none;
-    color: #FFDC0C;
-  }
-
-.expandButton {
-    background-color: #081778d0;
-    color: rgba(255, 255, 255, 0.982);
-    padding: 8px;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-.cardsAth .expandButton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .top10 {
     display: flex;
     justify-content: center; 
@@ -337,7 +320,7 @@
     display: flex;
     padding-top: 170px;
     flex: 0 0 auto;
-    margin-right: 100px;
+    margin-right: 5%;
     margin-left: 50px;
 }
 #pet5 {
@@ -346,4 +329,18 @@
     display: flex;
     padding-top: 170px;
     flex: 0 0 auto;
+}
+#imgoro {
+    height: 250px;
+    width: auto;
+}
+#imgplata {
+    padding-top: 19px;
+    height: 220px;
+    width: auto;
+}
+#imgbronce {
+    padding-top: 19px;
+    height: 220px;
+    width: auto;
 }
