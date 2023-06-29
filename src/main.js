@@ -1,3 +1,4 @@
+
 import data from './data/pokemon/pokemon.js';
 import {sortNameDes, sortNameasc} from './data.js';
 
@@ -21,5 +22,6 @@ menu.addEventListener("click",()=>{
 
 //const pElement = document.createElement("p");
 //document.body.appendChild(pElement);
+
 
 

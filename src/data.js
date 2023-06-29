@@ -1,5 +1,6 @@
 
 
+
 //manera ascedente
 export const sortNameasc = (arr) => {
   arr.sort((a, b) => {
@@ -28,4 +29,3 @@ export const sortNameasc = (arr) => {
 
   return arr;
 };
-
