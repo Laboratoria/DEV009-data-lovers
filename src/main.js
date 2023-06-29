@@ -1,5 +1,4 @@
 
-
 import data from './data/pokemon/pokemon.js';
 import sortNameAsc from './data.js'
 

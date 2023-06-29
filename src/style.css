@@ -1,5 +1,8 @@
 body {
     min-height: 100vh;
+    background-color:#022973 ;
+    
+
 }
 img {
     height: 100px;
@@ -10,5 +13,19 @@ img {
 }
 p {
     text-align: center;
-    border: solid;
+    border: solid #FFCB08;
+    background-color: #FFF835 ;
+    height: 20px;
+}   
+label{
+    color:#FFFFFF;
+}
+footer{
+    text-align:center ;
+    color: #FFFFFF;
+    border: solid #CB1D0E;
+    background-color: #CB1D0E;
+    height: 20px;
+    position: relative;
+    margin-top:160%;    
 }
