@@ -1,15 +1,3 @@
-// La función `generateCountriesList` lee una lista de países y devuelve un array ordenado con los nombres comunes de los países.
-const generateCountriesList = (countries) => {
-  const commonCountriesNames = [];
-  countries.forEach((country) => {
-    commonCountriesNames.push(country.name.common);
-  });
-  // Se realiza una copia del array `commonCountriesNames` usando el método `slice` y se ordena alfabéticamente con el método `sort`
-  const sortedCommonCountriesNames = commonCountriesNames.slice().sort();
-  // console.log(sortedCommonCountriesNames)
-  return sortedCommonCountriesNames;
-}
-
 // La función `searchCountries` lee una lista de países y un texto de búsqueda, y devuelve un array con los países que coinciden con el texto de búsqueda.
 const searchCountries = (countries, inputText) => {
   const result = [];
@@ -33,17 +21,6 @@ const generateAlphabet = () => {
   }
   return alphabet;
 }
-
-// La función `filterByLetter` filtra un conjunto de datos (data) en base a una letra específica (letter).
-const filterByLetter = (data, letter) => {
-  const result = [];
-  data.map((country) => {
-    const actualCountry = country.name.common;
-    const startWithLetter = actualCountry.startsWith(letter);
-    if (startWithLetter) result.push(country);
-  });
-  return result; // return an object with data
-};
 
 // La función `filterByContinents` filtra un conjunto de datos (data) para encontrar los elementos que pertenecen a un continente específico (continent).
 const filterByContinents = (data, continent) => {
@@ -142,10 +119,8 @@ const sortByPopulationDensity = (data, sortOrder) => {
 };
 
 export {
-  generateCountriesList,
   searchCountries,
   generateAlphabet,
-  filterByLetter,
   filterByContinents,
   filterBySubregion,
   filterByLanguages,

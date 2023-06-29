@@ -1,6 +1,6 @@
 // import { example, anotherExample } from '../src/data.js';
 import {
-  generateCountriesList,
+  // generateCountriesList,
   searchCountries,
   filterByContinents,
 } from "../src/data.js";
@@ -207,26 +207,26 @@ const CountriesAmerica=[
   },
 ];
 
-describe("generateCountriesList result should be a function", () => {
-  it("is a function", () => {
-    expect(typeof generateCountriesList).toBe("function");
-  });
-});
+// describe("generateCountriesList result should be a function", () => {
+//   it("is a function", () => {
+//     expect(typeof generateCountriesList).toBe("function");
+//   });
+// });
 
-describe("generateCountriesList", () => {
-  it("Should return an array with countries names", () => {
-    expect(generateCountriesList(countries)).toEqual(
-      [
-        "Singapore",
-        "Bosnia and Herzegovina",
-        "Guatemala",
-        "Latvia",
-        "Maldives",
-        'Anguilla',
-      ].sort()
-    );
-  });
-});
+// describe("generateCountriesList", () => {
+//   it("Should return an array with countries names", () => {
+//     expect(generateCountriesList(countries)).toEqual(
+//       [
+//         "Singapore",
+//         "Bosnia and Herzegovina",
+//         "Guatemala",
+//         "Latvia",
+//         "Maldives",
+//         'Anguilla',
+//       ].sort()
+//     );
+//   });
+// });
 
 describe("searchCountries should return an object with a country information", () => {
   it("Should return an object", () => {

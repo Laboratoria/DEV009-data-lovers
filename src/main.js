@@ -1,23 +1,18 @@
 import countries from "./data/countries/countries.js";
 import {
-  // generateCountriesList,
   searchCountries,
   generateAlphabet,
-  // filterByLetter,
   filterByContinents,
   filterBySubregion,
   filterByLanguages,
-  // sortByPopulation,
-  // sortByArea,
-  addPopulationDensity,
-  sortByPopulationDensity,
   sortByPopulation,
-  sortByArea
+  sortByArea,
+  addPopulationDensity,
+  sortByPopulationDensity
 } from "./data.js";
 
 const buttonLoadCountriesList = document.querySelector(".load-section-button");
 const buttonClearCountriesList = document.querySelector(".clear-section-button");
-// const buttonSortPopulationUp = document.querySelector(".filter-by-population")
 const section = document.querySelector(".countries-main");
 const sectionTable = document.querySelector(".countries-table");
 const countryInput = document.getElementById("country-input");
@@ -26,11 +21,6 @@ const continentList = document.querySelectorAll(".continent-name-li");
 const languageList = document.querySelectorAll(".language-li");
 const subRegionsList = document.querySelectorAll('.subregion-li');
 const sortList = document.querySelectorAll('.sort-li');
-
-const iconArrow = document.querySelector(".icon-arrow");
-// const reverseOrder = document.querySelector('.reverse-order');
-
-
 
 // Esta función genera la section con los ul vacíos
 const generateSection = (id, tittle, clearSection = "yes") => {
@@ -129,7 +119,7 @@ buttonLoadCountriesList.addEventListener("click", () => {
   generatesCountriesList();
 });
 
-allLetters.addEventListener('click',()=>{
+allLetters.addEventListener('click',() => {
   generatesCountriesList();
 })
 
@@ -159,7 +149,8 @@ const handleLetterClick = (actualLetter, actualTittle) => {
   generateSection(actualLetter, actualTittle);
   generateCountriesUl(letterCountriesList, actualLetter);
 };
-  
+
+// Genera la lista de idiomas
 languageList.forEach((language) => {
   language.addEventListener("click", () => {
     const actualLanguage = language.getAttribute("id");
@@ -174,6 +165,7 @@ const handleLanguageClick = (actualLanguage, actualTittle) => {
   generateCountriesUl(languageCountriesList, actualLanguage);
 };
 
+// Genera la lista de Continentes
 continentList.forEach((continent) => {
   continent.addEventListener("click", () => {
     const actualContinent = continent.getAttribute("id");
@@ -188,6 +180,7 @@ const handleContinentClick = (actualContinent, actualTittle) => {
   generateCountriesUl(continentCountriesList, actualContinent);
 };
 
+// Genera la lista de SubRegions 
 subRegionsList.forEach((subregion) => {
   subregion.addEventListener('click',() => {
     // const actualId=subregion.getAttribute('id');
@@ -197,8 +190,6 @@ subRegionsList.forEach((subregion) => {
   })
 })
 
-let sortOrderType;
-
 const handleSubRegionClick = (actualSubRegion,actualTittle) => {
   const subRegionsCountriesList = filterBySubregion(countries.countries,actualTittle);
   // console.log(subRegionsCountriesList);
@@ -206,10 +197,13 @@ const handleSubRegionClick = (actualSubRegion,actualTittle) => {
   generateCountriesUl(subRegionsCountriesList,actualSubRegion);
 }
 
+// variables declaradas para ser utilizadas dentro del window.addEventListener("load", () => {})
+let sortOrderType;
 let actualFilter;
 let actualTittle;
+let iconArrow;
 
-
+// Sort by + arrow
 window.addEventListener("load", () => {
   
   sortList.forEach((sortBy) => {
@@ -222,11 +216,11 @@ window.addEventListener("load", () => {
   
   const handleFilterClick = (actualFilter,actualTittle) => {
     let countriesSortBy;
-    sortOrderType=1;  
+    sortOrderType = 1;  
     switch (actualFilter) {
     case "population": {
       countriesSortBy = sortByPopulation(countries, 1)
-        break;
+      break;
     }
     case "area": {
       countriesSortBy = sortByArea(countries, 1)
@@ -237,14 +231,9 @@ window.addEventListener("load", () => {
       break;
     }
     }
-  
     generateTableForSortedData(countriesSortBy,actualFilter,actualTittle);
   }
   
-  let iconArrow;
-  let filterKind;
-  let actualTitle;
-
   const generateTableForSortedData = (data, filterKind, filterTitle) => {
     section.innerHTML='';
 
@@ -252,44 +241,40 @@ window.addEventListener("load", () => {
  
     sectionTable.appendChild(container_Table);
   
-  
     const htmlTittleTable=
-  `<div class="table-tittle">
-    <h3>Countries sorted by ${filterTitle}</h3>
-    <span class="icon-arrow"><img class="sort-img" src="./images/sort.png" alt="icon-sort"/></span>
-  </div>
-  <div class="table-row">
-    <div class="col-table col1 col-tittle">Country</div>
-    <div class="col-table col2 col-tittle">${filterTitle}</div>
-  </div>`;
+    `<div class="table-tittle">
+      <h3>Countries sorted by ${filterTitle}</h3>
+      <span class="icon-arrow"><img class="sort-img" src="./images/sort.png" alt="icon-sort"/></span>
+    </div>
+    <div class="table-row">
+      <div class="col-table col1 col-tittle">Country</div>
+      <div class="col-table col2 col-tittle">${filterTitle}</div>
+    </div>`;
   
-
     container_Table.insertAdjacentHTML("beforeend", htmlTittleTable);
 
     // Se obtiene la referencia del icono de la flecha
     iconArrow = document.querySelector(".icon-arrow");
 
-    let countriesSortedBy
-    
+    let countriesSortedBy;
     
     // Se agrega el evento al icono de la flecha 
-  
     iconArrow.addEventListener('click', () => {
       sortOrderType=sortOrderType*-1
       switch (filterKind) {
-        case "area": {
-          countriesSortedBy = sortByArea(countries, sortOrderType);
-          break;
-        }
-        case "population": {
-          countriesSortedBy = sortByPopulation(countries, sortOrderType);
-          break;
-        }
-        case "populationDensity": {
-          countriesSortedBy = sortByPopulationDensity(countries, sortOrderType);
-          break;
-        }
-        }
+      case "area": {
+        countriesSortedBy = sortByArea(countries, sortOrderType);
+        break;
+      }
+      case "population": {
+        countriesSortedBy = sortByPopulation(countries, sortOrderType);
+        break;
+      }
+      case "populationDensity": {
+        countriesSortedBy = sortByPopulationDensity(countries, sortOrderType);
+        break;
+      }
+      }
       generateTableForSortedData(countriesSortedBy,filterKind,actualTittle);
     });
   
@@ -319,55 +304,23 @@ window.addEventListener("load", () => {
       }
 
       const htmlRowTable =`
-    <div class="table-row">
-      <div class="col-table col1 col-list">
-        <ul class="inline-list">
-          <li><img class="flag-country"
-          src="${flagCountry}" 
-          alt="flag country" 
-          width="30"/>
-          </li>
-          <li><a href="#">${countryName}</a></li>
-        </ul>
-      </div>
-      <div class="col-table col2 col2-content">${filterVar} </div>
-    </div>`
+      <div class="table-row">
+        <div class="col-table col1 col-list">
+          <ul class="inline-list">
+            <li><img class="flag-country"
+            src="${flagCountry}" 
+            alt="flag country" 
+            width="30"/>
+            </li>
+            <li><a href="#">${countryName}</a></li>
+          </ul>
+        </div>
+        <div class="col-table col2 col2-content">${filterVar} </div>
+      </div>`
       container_Table.insertAdjacentHTML("beforeend", htmlRowTable);
     });
   };
 })
-
- 
-
-
-
-
-
-
-
-// let countriesSortedByPopulationUp;
-
-// buttonSortPopulationUp.addEventListener('click',() => {
-//   const filterKind = 'population';
-//   countriesSortedByPopulationUp = sortByPopulation(countries, 1);
-//   generateTableForSortedData(countriesSortedByPopulationUp,filterKind);
-// });
-
-// let countriesSortedByAreaUp;
-
-// buttonSortPopulationUp.addEventListener('click',() => {
-//   const filterKind = 'area';
-//   countriesSortedByAreaUp = sortByArea(countries, 1);
-//   generateTableForSortedData(countriesSortedByAreaUp,filterKind);
-// });
-
-
-
-
-
-
-
-
 
 ///////////////////////////////////////////////////////////////////////
 
