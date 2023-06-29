@@ -1,10 +1,7 @@
-import { pokemon } from './data.js';
+import { filtername} from './data.js';
 
 import data from './data/pokemon/pokemon.js';
 
 
-//console.log(example, data);
+console.log(filtername, data);
 
-
-const root = document.getElementById('root');
-root.innerHTML=`<h1>${data.pokemon[0].name}</h1>`;

@@ -26,6 +26,7 @@ footer{
     border: solid #CB1D0E;
     background-color: #CB1D0E;
     height: 20px;
-    position: relative;
+    bottom: 0;
+    left: 0;
     margin-top:160%;    
 }
