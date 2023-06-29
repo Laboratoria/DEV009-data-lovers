@@ -12,26 +12,40 @@ export function filterTeam(datos, pais) {
 
 //FILTRO DEPORTE
 export function filterSport(datos, deporte) {
-  const g = datos.filter((obj) => {
-    return obj.sport === deporte;
-  })
-  return g;
+  if (Array.isArray(datos)) {
+    const g = datos.filter((obj) => {
+      return obj.sport === deporte;
+    })
+    return g;
+  } else {
+    return "ERROR DATA INVALIDA"
+  }
 }
 
 //FILTRO GENERO
 export function filterGen(datos, genero) {
-  const m = datos.filter((obj) => {
-    return obj.gender === genero;
-  })
-  return m
+  if (Array.isArray(datos)) {
+    const m = datos.filter((obj) => {
+      return obj.gender === genero;
+    })
+    return m
+  }
+  else {
+    return "ERROR DATA INVALIDA"
+  }
 }
 
 //FILTRO MEDALLA
 export function filterMedal(datos, medalla) {
-  const g = datos.filter((obj) => {
-    return obj.medal === medalla;
-  })
-  return g
+  if (Array.isArray(datos)) {
+    const g = datos.filter((obj) => {
+      return obj.medal === medalla;
+    })
+    return g
+  }
+  else {
+    return "ERROR DATA INVALIDA"
+  }
 }
 
 //ORDEN

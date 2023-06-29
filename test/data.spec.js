@@ -98,7 +98,7 @@ describe('filterTeam', () => {
   it("Deberia devolver ERROR DATA INVALIDA cuando se le pasa un dato que no sea un arreglo",()=>{
     const input = 10
     const output = "ERROR DATA INVALIDA"
-    expect(filterTeam(input,"Italy")).toEqual(output)
+    expect(filterTeam(input,"Italy")).toBe(output)
   })
 });
 
@@ -119,6 +119,11 @@ describe('filterSport',()=> {
     expect(filterSport(data, "Swimming")).toEqual([{"name": "emmalyn dunn","sport": "Swimming","team": "France","age": 22, "gender": "F", "medal": "Gold"},
       {"name": "VIRGINIA ANTHONY","sport": "Swimming","team": "Colombia","age": 40, "gender": "F", "medal": "Bronze"},])
   });
+  it('Deberia devolder ERROR DATA INVALIDA cuando se le pase un dato que no sea un arreglo', ()=> {
+    const input = 20
+    const output = "ERROR DATA INVALIDA"
+    expect(filterSport(input,"Football")).toBe(output)
+  })
 });
 
 describe('filterGen',()=> {
@@ -137,6 +142,11 @@ describe('filterGen',()=> {
       {"name": "Ahmed Merritt","sport": "Football","team": "Russia","age": 30, "gender": "M", "medal": "Gold"},
     ]);
   });
+  it('Deberia devolder ERROR DATA INVALIDA cuando se le pase un dato que no sea un arreglo', ()=> {
+    const input = 'A'
+    const output = "ERROR DATA INVALIDA"
+    expect(filterGen(input,"M")).toBe(output)
+  })
 });
 
 describe('filterMedal',()=> {
@@ -152,6 +162,11 @@ describe('filterMedal',()=> {
       {"name": "Patimat Abakarova","gender": "F","sport": "Volleyball","team": "United States","medal": "Bronze","age":15},
       {"name": "VIRGINIA ANTHONY","sport": "Swimming","team": "Colombia","age": 40, "gender": "F", "medal": "Bronze"},])
   });
+  it('Deberia devolder ERROR DATA INVALIDA cuando se le pase un dato que no sea un arreglo', ()=> {
+    const input = 123
+    const output = "ERROR DATA INVALIDA"
+    expect(filterMedal(input,"Bronze")).toBe(output)
+  })
 });
 
 describe('estadistica', () => {
