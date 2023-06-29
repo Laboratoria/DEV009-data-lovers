@@ -1,31 +1,23 @@
+// estas funciones son de ejemplo
 
 
 
-//manera ascedente
-export const sortNameasc = (arr) => {
-  arr.sort((a, b) => {
-    if (a.name < b.name ) {
+const sortNameAsc = (data) =>{
+  const newData = data
+  newData.sort((a, b) => {
+    const nameA = a.name.toUpperCase(); // ignore upper and lowercase
+    const nameB = b.name.toUpperCase(); // ignore upper and lowercase
+    if (nameA < nameB) {
       return -1;
     }
-    if (a.name > b.name) {
+    if (nameA > nameB) {
       return 1;
     }
+  
+    // names must be equal
     return 0;
   });
-
-  return arr;
+  return newData;
 };
- //manera descendente
- export const sortNameDes = (arr) => {
-  arr.sort((a, b) => {
-    if (a.name > b.name ) {
-      return -1;
-    }
-    if (a.name < b.name) {
-      return 1;
-    }
-    return 0;
-  });
 
-  return arr;
-};
+export default sortNameAsc
