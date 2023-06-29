@@ -109,7 +109,7 @@ document.getElementById('volleyball').addEventListener('click', () =>
   cardsContainer.innerHTML = filsports(dataArr,'Volleyball')
 );
 document.getElementById('football').addEventListener('click', () =>
-cardsContainer.innerHTML = filsports(dataArr,'Football')
+  cardsContainer.innerHTML = filsports(dataArr,'Football')
 );
 
 //FILTRAR GENERO
@@ -119,10 +119,10 @@ function filgenero (datos,genero) {
   return createHTML
 }
 document.getElementById('m').addEventListener('click', ()=>
-cardsContainer.innerHTML = filgenero(dataArr,'M')
+  cardsContainer.innerHTML = filgenero(dataArr,'M')
 );
 document.getElementById('f').addEventListener('click', ()=>
-cardsContainer.innerHTML = filgenero(dataArr,'F')
+  cardsContainer.innerHTML = filgenero(dataArr,'F')
 );
 
 //FILTRAR MEDALLA
@@ -132,13 +132,13 @@ function filtmedal (dato,medalla) {
   return createHTML
 }
 document.getElementById('oro').addEventListener('click', ()=>
-cardsContainer.innerHTML = filtmedal(dataArr,"Gold"))
+  cardsContainer.innerHTML = filtmedal(dataArr,"Gold"))
 
 document.getElementById('plata').addEventListener('click', ()=>
-cardsContainer.innerHTML = filtmedal(dataArr,"Silver"))
+  cardsContainer.innerHTML = filtmedal(dataArr,"Silver"))
 
 document.getElementById('bronce').addEventListener('click', ()=>
-cardsContainer.innerHTML = filtmedal(dataArr,"Bronze"))
+  cardsContainer.innerHTML = filtmedal(dataArr,"Bronze"))
 
 
 //FUNCIONES TOP 10
@@ -162,12 +162,12 @@ function newCards(datos) {
 function recorrer(datos) {
   const duplicados = [];
   for (let i = 0; i < datos.length; i++) {
-    let atletaActual = datos[i];
+    const atletaActual = datos[i];
     const name = atletaActual.name;
     const team = atletaActual.team;
     const medal = atletaActual.medal;
 
-    let atletaExistente = duplicados.find((atleta) => atleta.name === name);
+    const atletaExistente = duplicados.find((atleta) => atleta.name === name);
   
     if (atletaExistente) { atletaExistente.contador +=1;
       if (medal === 'Bronze') {
@@ -206,11 +206,11 @@ divTop.innerHTML = misCartas
 
 //MOSTRAR/OCULTAR PAGINAS
 function showPage(pageId) {
-const pages = document.getElementsByClassName('page');
-   for (let i = 0; i < pages.length; i++) {
+  const pages = document.getElementsByClassName('page');
+  for (let i = 0; i < pages.length; i++) {
     pages[i].classList.remove('active');
-   }
-const page = document.getElementById(pageId);
+  }
+  const page = document.getElementById(pageId);
   page.classList.add('active');
 }
 
@@ -233,9 +233,9 @@ document.getElementById("casita2").addEventListener("click", function() {
 //ESTADISTICA
 function extraermedal(datos) {
   const medallas = {
-  gold: 0,
-  silver: 0,
-  bronze:0,
+    gold: 0,
+    silver: 0,
+    bronze:0,
   }
   datos.forEach((atleta) => {
     const medalla = atleta.medal;
@@ -246,7 +246,7 @@ function extraermedal(datos) {
     } else if (medalla === 'Bronze') {
       medallas.bronze++;
     }
-   } 
+  } 
   ); 
   return medallas;
 }
@@ -254,12 +254,12 @@ function extraermedal(datos) {
 //Ubicar en contenedor
 const g = document.getElementById('gold%')
 const gtot = estadistica(extraermedal(dataArr))
-g.innerHTML = parseFloat((gtot.goldPorcent).toFixed(2)) + "%"
+g.innerHTML = (gtot.goldPorcent) + "%"
 
 const s = document.getElementById('silver%')
 const stot = estadistica(extraermedal(dataArr))
-s.innerHTML = parseFloat((gtot.silverPorcent).toFixed(2)) + "%"
+s.innerHTML = (stot.silverPorcent) + "%"
 
 const b = document.getElementById('bronze%')
 const btot = estadistica(extraermedal(dataArr))
-b.innerHTML = parseFloat((gtot.bronzePorcent).toFixed(2)) + "%"
+b.innerHTML = (btot.bronzePorcent) + "%"
