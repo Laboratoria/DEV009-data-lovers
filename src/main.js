@@ -26,6 +26,8 @@ const continentList = document.querySelectorAll(".continent-name-li");
 const languageList = document.querySelectorAll(".language-li");
 const subRegionsList = document.querySelectorAll('.subregion-li');
 const sortList = document.querySelectorAll('.sort-li');
+
+const iconArrow = document.querySelector(".icon-arrow");
 // const reverseOrder = document.querySelector('.reverse-order');
 
 
@@ -195,6 +197,8 @@ subRegionsList.forEach((subregion) => {
   })
 })
 
+let sortOrderType;
+
 const handleSubRegionClick = (actualSubRegion,actualTittle) => {
   const subRegionsCountriesList = filterBySubregion(countries.countries,actualTittle);
   // console.log(subRegionsCountriesList);
@@ -202,24 +206,27 @@ const handleSubRegionClick = (actualSubRegion,actualTittle) => {
   generateCountriesUl(subRegionsCountriesList,actualSubRegion);
 }
 
+let actualFilter;
+let actualTittle;
+
 
 window.addEventListener("load", () => {
   
   sortList.forEach((sortBy) => {
     sortBy.addEventListener('click',() => {
-      const actualFilter = sortBy.getAttribute('id');
-      const actualTittle = sortBy.getAttribute('tittle');
+      actualFilter = sortBy.getAttribute('id');
+      actualTittle = sortBy.getAttribute('tittle');
       handleFilterClick(actualFilter,actualTittle);
     })
   });
   
   const handleFilterClick = (actualFilter,actualTittle) => {
     let countriesSortBy;
-    
+    sortOrderType=1;  
     switch (actualFilter) {
     case "population": {
       countriesSortBy = sortByPopulation(countries, 1)
-      break;
+        break;
     }
     case "area": {
       countriesSortBy = sortByArea(countries, 1)
@@ -235,6 +242,8 @@ window.addEventListener("load", () => {
   }
   
   let iconArrow;
+  let filterKind;
+  let actualTitle;
 
   const generateTableForSortedData = (data, filterKind, filterTitle) => {
     section.innerHTML='';
@@ -260,34 +269,28 @@ window.addEventListener("load", () => {
     // Se obtiene la referencia del icono de la flecha
     iconArrow = document.querySelector(".icon-arrow");
 
-    let countriesSortedByPopulationDensityUp;
-    let countriesSortedByPopulationDown;
-    let countriesSortedByAreaDown;
-    let sortOrderType = -1;
+    let countriesSortedBy
+    
     
     // Se agrega el evento al icono de la flecha 
-    iconArrow.addEventListener('click', () => {
-      const filterKind = 'populationDensity';
-      // const actualTitle = 'Population Density';
-      sortOrderType = sortOrderType * -1
-      countriesSortedByPopulationDensityUp = sortByPopulationDensity(countries, sortOrderType * -1);
-      generateTableForSortedData(countriesSortedByPopulationDensityUp,filterKind);
-    })
-
-    iconArrow.addEventListener('click', () => {
-      const filterKind = 'population';
-      // const actualTitle = 'Population';
-      sortOrderType = sortOrderType * -1
-      countriesSortedByPopulationDown = sortByPopulation(countries, sortOrderType * -1);
-      generateTableForSortedData(countriesSortedByPopulationDown,filterKind);
-    });
   
     iconArrow.addEventListener('click', () => {
-      const filterKind = 'area';
-      // const actualTitle = 'Area';
-      sortOrderType = sortOrderType * -1
-      countriesSortedByAreaDown = sortByArea(countries, sortOrderType * -1);
-      generateTableForSortedData(countriesSortedByAreaDown,filterKind);
+      sortOrderType=sortOrderType*-1
+      switch (filterKind) {
+        case "area": {
+          countriesSortedBy = sortByArea(countries, sortOrderType);
+          break;
+        }
+        case "population": {
+          countriesSortedBy = sortByPopulation(countries, sortOrderType);
+          break;
+        }
+        case "populationDensity": {
+          countriesSortedBy = sortByPopulationDensity(countries, sortOrderType);
+          break;
+        }
+        }
+      generateTableForSortedData(countriesSortedBy,filterKind,actualTittle);
     });
   
     data.forEach((country) => {
@@ -333,6 +336,8 @@ window.addEventListener("load", () => {
     });
   };
 })
+
+ 
 
 
 
