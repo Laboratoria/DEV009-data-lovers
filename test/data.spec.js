@@ -1,4 +1,4 @@
-import { sortData, filterTeam, estadistica } from '../src/data.js';
+import { sortData, filterTeam,filterSport,filterGen,filterMedal, estadistica } from '../src/data.js';
 
 const data = [{"name": "Giovanni Abagnale","gender": "M","sport": "Gymnastics","team": "Italy","medal": "Bronze","age":42},
   {"name": "Patimat Abakarova","gender": "F","sport": "Volleyball","team": "United States","medal": "Bronze","age":15},
@@ -82,6 +82,70 @@ describe('filterTeam', () => {
   it('Pide mostrar el país Italia', () => {
     expect(filterTeam(data, 'Italy')).toEqual([{"name": "Giovanni Abagnale","gender": "M","sport": "Gymnastics","team": "Italy","medal": "Bronze","age":42},
       {"name": "Josue Glover","sport": "Basketball","team": "Italy","age": 19, "gender": "M", "medal": "Silver"}]);
+  });
+  it('Pide mostrar el país United States', () => {
+    expect(filterTeam(data, "United States")).toEqual([{"name": "Patimat Abakarova","gender": "F","sport": "Volleyball","team": "United States","medal": "Bronze","age":15},]);
+  });
+  it('Pide mostrar el país Colombia', () => {
+    expect(filterTeam(data, "Colombia")).toEqual([{"name": "VIRGINIA ANTHONY","sport": "Swimming","team": "Colombia","age": 40, "gender": "F", "medal": "Bronze"},]);
+  });
+  it('Pide mostrar el país Russia', () => {
+    expect(filterTeam(data, "Russia")).toEqual([{"name": "Ahmed Merritt","sport": "Football","team": "Russia","age": 30, "gender": "M", "medal": "Gold"},]);
+  });
+  it('Pide mostrar el país France', () => {
+    expect(filterTeam(data, "France")).toEqual([{"name": "emmalyn dunn","sport": "Swimming","team": "France","age": 22, "gender": "F", "medal": "Gold"},]);
+  });
+});
+
+describe('filterSport',()=> {
+  it("Pide filtrar por el deporte Volleyball",()=>{
+    expect(filterSport(data,"Volleyball")).toEqual([{"name": "Patimat Abakarova","gender": "F","sport": "Volleyball","team": "United States","medal": "Bronze","age":15},])
+  });
+  it("Pide filtrar por el deporte Gymnastics",()=>{
+    expect(filterSport(data,"Gymnastics")).toEqual([{"name": "Giovanni Abagnale","gender": "M","sport": "Gymnastics","team": "Italy","medal": "Bronze","age":42},])
+  });
+  it("Pide filtrar por el deporte Football",()=>{
+    expect(filterSport(data,"Football")).toEqual([{"name": "Ahmed Merritt","sport": "Football","team": "Russia","age": 30, "gender": "M", "medal": "Gold"},])
+  });
+  it("Pide filtrar por el deporte Basketball",()=>{
+    expect(filterSport(data, "Basketball")).toEqual([{"name": "Josue Glover","sport": "Basketball","team": "Italy","age": 19, "gender": "M", "medal": "Silver"},])
+  });
+  it("Pide filtrar por el deporte Swimming",()=>{
+    expect(filterSport(data, "Swimming")).toEqual([{"name": "emmalyn dunn","sport": "Swimming","team": "France","age": 22, "gender": "F", "medal": "Gold"},
+      {"name": "VIRGINIA ANTHONY","sport": "Swimming","team": "Colombia","age": 40, "gender": "F", "medal": "Bronze"},])
+  });
+});
+
+describe('filterGen',()=> {
+  it("Pide filtrar por Genero Femenino",()=>{
+    expect(filterGen(data,"F")).toEqual([
+      {"name": "Patimat Abakarova","gender": "F","sport": "Volleyball","team": "United States","medal": "Bronze","age":15},
+      {"name": "emmalyn dunn","sport": "Swimming","team": "France","age": 22, "gender": "F", "medal": "Gold"},
+      {"name": "VIRGINIA ANTHONY","sport": "Swimming","team": "Colombia","age": 40, "gender": "F", "medal": "Bronze"}
+    ]);
+  });
+
+  it("Pide filtrar por Genero Masculino",()=>{
+    expect(filterGen(data,"M")).toEqual([
+      {"name": "Giovanni Abagnale","gender": "M","sport": "Gymnastics","team": "Italy","medal": "Bronze","age":42},
+      {"name": "Josue Glover","sport": "Basketball","team": "Italy","age": 19, "gender": "M", "medal": "Silver"},
+      {"name": "Ahmed Merritt","sport": "Football","team": "Russia","age": 30, "gender": "M", "medal": "Gold"},
+    ]);
+  });
+});
+
+describe('filterMedal',()=> {
+  it("Pide filtrar por Medalla de Oro",()=>{
+    expect(filterMedal(data,"Gold")).toEqual([{"name": "Ahmed Merritt","sport": "Football","team": "Russia","age": 30, "gender": "M", "medal": "Gold"},
+      {"name": "emmalyn dunn","sport": "Swimming","team": "France","age": 22, "gender": "F", "medal": "Gold"},])
+  });
+  it("Pide filtrar por Medalla de Plata",()=>{
+    expect(filterMedal(data,"Silver")).toEqual([{"name": "Josue Glover","sport": "Basketball","team": "Italy","age": 19, "gender": "M", "medal": "Silver"},])
+  });
+  it("Pide filtrar por Medalla de bronze",()=>{
+    expect(filterMedal(data,"Bronze")).toEqual([{"name": "Giovanni Abagnale","gender": "M","sport": "Gymnastics","team": "Italy","medal": "Bronze","age":42},
+      {"name": "Patimat Abakarova","gender": "F","sport": "Volleyball","team": "United States","medal": "Bronze","age":15},
+      {"name": "VIRGINIA ANTHONY","sport": "Swimming","team": "Colombia","age": 40, "gender": "F", "medal": "Bronze"},])
   });
 });
 
