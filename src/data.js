@@ -1,9 +1,20 @@
 // estas funciones son de ejemplo
 
-export const example = () => {
-  return 'example';
+import { defaults } from "gh-pages";
+
+const sortNameasc = (data) => {
+  data.sort((a, b) => {
+    if (a < b ) {
+      return -1;
+    }
+    if (a > b) {
+      return 1;
+    }
+    return 0;
+  });
+
+  return data;
 };
 
-export const anotherExample = () => {
-  return 'OMG';
-};
+export default sortNameasc
+
