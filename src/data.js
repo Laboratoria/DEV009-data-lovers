@@ -87,7 +87,7 @@ export const sortData = {
     return newdata
   },
   //ordena los datos por país A - Z
-  sortbyCountryAtoZ:(data) => {
+  sortbyCountryAtoZ: (data) => {
     const newdata = data.slice().sort((a, b) => {
       const teamA = a.team.toLowerCase();
       const teamB = b.team.toLowerCase();
@@ -123,16 +123,14 @@ export const sortData = {
 // estadistica
 export function estadistica (medallas) {
   const suma = medallas.gold + medallas.silver + medallas.bronze
-  const gold =  (medallas.gold * 100) / suma
-  const silver = (medallas.silver * 100) / suma
-  const bronze = (medallas.bronze * 100) / suma
+  const gold =  (((medallas.gold * 100) / suma)).toFixed(2)
+  const silver = (((medallas.silver * 100) / suma)).toFixed(2)
+  const bronze = (((medallas.bronze * 100) / suma)).toFixed(2)
 
   const porcentaje = {
-    goldPorcent:gold,
-    silverPorcent:silver,
-    bronzePorcent:bronze,
+    goldPorcent:parseFloat(gold),
+    silverPorcent:parseFloat(silver),
+    bronzePorcent:parseFloat(bronze),
   }
   return porcentaje
 }
-
-
