@@ -1,20 +1,31 @@
-// estas funciones son de ejemplo
 
-import { defaults } from "gh-pages";
 
-const sortNameasc = (data) => {
-  data.sort((a, b) => {
-    if (a < b ) {
+//manera ascedente
+export const sortNameasc = (arr) => {
+  arr.sort((a, b) => {
+    if (a.name < b.name ) {
       return -1;
     }
-    if (a > b) {
+    if (a.name > b.name) {
       return 1;
     }
     return 0;
   });
 
-  return data;
+  return arr;
 };
+ //manera descendente
+ export const sortNameDes = (arr) => {
+  arr.sort((a, b) => {
+    if (a.name > b.name ) {
+      return -1;
+    }
+    if (a.name < b.name) {
+      return 1;
+    }
+    return 0;
+  });
 
-export default sortNameasc
+  return arr;
+};
 
