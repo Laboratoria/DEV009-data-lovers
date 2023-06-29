@@ -11,8 +11,6 @@ import {
   sortByPopulationDensity
 } from "./data.js";
 
-const buttonLoadCountriesList = document.querySelector(".load-section-button");
-const buttonClearCountriesList = document.querySelector(".clear-section-button");
 const section = document.querySelector(".countries-main");
 const sectionTable = document.querySelector(".countries-table");
 const countryInput = document.getElementById("country-input");
@@ -110,15 +108,8 @@ countryInput.addEventListener("input", () => {
   }
 });
 
-buttonClearCountriesList.addEventListener("click", () => {
-  clearCountriesList();
-  countryInput.value = "";
-});
 
-buttonLoadCountriesList.addEventListener("click", () => {
-  generatesCountriesList();
-});
-
+// Hace el llamado a toda la lista de los países
 allLetters.addEventListener('click',() => {
   generatesCountriesList();
 })
