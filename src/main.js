@@ -1,7 +1,7 @@
-import { filtername} from './data.js';
+//import { filtername} from './data.js';
 
 import data from './data/pokemon/pokemon.js';
-import {sortNameDes, sortNameasc} from './data.js';
+import {sortNameDes, sortNameasc, sortNumYouger, sortNumLower} from './data.js';
 
 console.log(data);
 
@@ -16,9 +16,14 @@ menu.addEventListener("click",()=>{
     else if (element === "za"){
         sortNameDes(data.pokemon)
 
+    }
+    else if (element === "numberMayor"){
+        sortNumYouger(data.pokemon)
+    }
+    else if (element === "numberMenor"){
+        sortNumLower(data.pokemon)
     }console.log(data)
+
 })
-
-
-console.log(filtername, data);
-
+//como hacer que el menu no haga click por defecto
+//como mostrar en el dom

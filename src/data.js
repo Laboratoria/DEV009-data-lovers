@@ -1,4 +1,3 @@
-// estas funciones son de ejemplo
 //manera ascedente
 export const sortNameasc = (arr) => {
   arr.sort((a, b) => {
@@ -24,10 +23,30 @@ export const sortNameasc = (arr) => {
     }
     return 0;
   });
-
-//export const anotherExample = () => {
-  //return 'OMG';
-//};
-
- 
-}
+};
+//de mayor a menor
+export const sortNumYouger = (arr) => {
+  arr.sort((a, b) => {
+    if (a.num > b.num ) {
+      return -1;
+    }
+    if (a.num< b.num) {
+      return 1;
+    }
+    return 0;
+  });
+  }
+  //de menor a mayor
+  export const sortNumLower = (arr) => {
+    arr.sort((a, b) => {
+      if (a.num < b.num ) {
+        return -1;
+      }
+      if (a.num > b.num) {
+        return 1;
+      }
+      return 0;
+    });
+  
+    return arr;
+  };
