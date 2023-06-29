@@ -2,11 +2,36 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
+    <title>Pokemon go</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="root"></div>
     <script src="main.js" type="module"></script>
-  </body>
+    <header>
+      <div class="logo">
+        <h1><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png"/></h1>
+      </div>
+      <div>
+        <p>Aquí podrás encontrar las increíbles dos primeras generaciónes del juego Pokémon go.</p>
+      </div>  
+    </header>
+<!-- boton para byscar por nombre y numero-->
+    <label for="button">Buscar por nombre: </label>
+    <br><br>
+    <input type="text" id="nombre">
+    <button onclick="buscar()">🔎</button>
+    <br><br>
+    <div id="resultado"></div>
+<!-- menu desplegable para seleccionae-->
+    <label for="select">Ordenar por:   </label>
+      <select id="menu">
+        <option value="az">A-Z</option>
+        <option value="za">Z-A</option>
+        <option value="numberMayor">numero mayor</option>
+        <option value="numberMenor">numero inferior</option>
+      </select>
+      <br><br>
+  </body> 
+  <footer>By Jarianna & Aivy.</footer>
 </html>
