@@ -1,28 +1,36 @@
 //FILTRO PAIS
-export function filterTeam (datos,pais) {
-  const i = datos.filter((obj) => {
-    return obj.team === pais;})
-  return i
+export function filterTeam(datos, pais) {
+  if (Array.isArray(datos)) {
+    const i = datos.filter((obj) => {
+      return obj.team === pais;
+    })
+    return i
+  } else {
+    return "ERROR DATA INVALIDA"
+  }
 }
 
 //FILTRO DEPORTE
-export function filterSport(datos,deporte) {
+export function filterSport(datos, deporte) {
   const g = datos.filter((obj) => {
-    return obj.sport === deporte;})
+    return obj.sport === deporte;
+  })
   return g;
 }
 
 //FILTRO GENERO
-export function filterGen (datos,genero) {
+export function filterGen(datos, genero) {
   const m = datos.filter((obj) => {
-    return obj.gender === genero;})
+    return obj.gender === genero;
+  })
   return m
 }
 
 //FILTRO MEDALLA
-export function filterMedal (datos,medalla) {
+export function filterMedal(datos, medalla) {
   const g = datos.filter((obj) => {
-    return obj.medal === medalla;})
+    return obj.medal === medalla;
+  })
   return g
 }
 
@@ -30,7 +38,7 @@ export function filterMedal (datos,medalla) {
 export const sortData = {
   //ordena los atletas por edad: Mayor a Menor
   sortbyAge1: (data) => {
-    const newdata =data.slice().sort((a, b) => {
+    const newdata = data.slice().sort((a, b) => {
       if (b.age > a.age) {
         return 1;
       }
@@ -121,16 +129,16 @@ export const sortData = {
 };
 
 // estadistica
-export function estadistica (medallas) {
+export function estadistica(medallas) {
   const suma = medallas.gold + medallas.silver + medallas.bronze
-  const gold =  (((medallas.gold * 100) / suma)).toFixed(2)
+  const gold = (((medallas.gold * 100) / suma)).toFixed(2)
   const silver = (((medallas.silver * 100) / suma)).toFixed(2)
   const bronze = (((medallas.bronze * 100) / suma)).toFixed(2)
 
   const porcentaje = {
-    goldPorcent:parseFloat(gold),
-    silverPorcent:parseFloat(silver),
-    bronzePorcent:parseFloat(bronze),
+    goldPorcent: parseFloat(gold),
+    silverPorcent: parseFloat(silver),
+    bronzePorcent: parseFloat(bronze),
   }
   return porcentaje
 }

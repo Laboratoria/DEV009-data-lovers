@@ -95,6 +95,11 @@ describe('filterTeam', () => {
   it('Pide mostrar el país France', () => {
     expect(filterTeam(data, "France")).toEqual([{"name": "emmalyn dunn","sport": "Swimming","team": "France","age": 22, "gender": "F", "medal": "Gold"},]);
   });
+  it("Deberia devolver ERROR DATA INVALIDA cuando se le pasa un dato que no sea un arreglo",()=>{
+    const input = 10
+    const output = "ERROR DATA INVALIDA"
+    expect(filterTeam(input,"Italy")).toEqual(output)
+  })
 });
 
 describe('filterSport',()=> {

@@ -234,16 +234,6 @@
     flex-wrap: nowrap;
     justify-content: space-around;
 }
-@media (max-width: 768px) {
-#topContainer {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 30px;
-    line-height: 1.3;
-    margin-top: 75px;
-    margin-right: 50px;
-    margin-left: 10px;
-}}
 #topContainer {
     display: grid;
     grid-template-columns: repeat(5,1fr);
@@ -386,3 +376,7 @@
     margin-left: 5px;
     margin-right: none;
 }
+@media (max-width: 768px) {
+    #topContainer {
+    grid-template-columns: repeat(3,1fr);
+    }}
