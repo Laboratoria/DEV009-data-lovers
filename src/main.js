@@ -1,23 +1,27 @@
 
 import data from './data/pokemon/pokemon.js';
-import sortNameAsc from './data.js'
+import {sortNameDes, sortNameasc} from './data.js';
 
 console.log(data);
-const newDataSort = data.pokemon
 
+//añadir un add event listener al menu
+const menu = document.getElementById("menu")
 
-//para obtener los elementos del menu 
-const menu = document.getElementById('menu')
-console.log(menu.options)
-menu.addEventListener("click", ()=>{
-    const id = menu.options[menu.selectedIndex].value;
-    if(id === "AZ"){
-        sortNameAsc(newDataSort)
-        console.log(newDataSort, data)
-    }
+menu.addEventListener("click",()=>{
+    const element = menu.options[menu.selectedIndex].value
+    if (element === "az"){
+        sortNameasc(data.pokemon)
+    } 
+    else if (element === "za"){
+        sortNameDes(data.pokemon)
 
+    }console.log(data)
 })
+   
 
+
+//const pElement = document.createElement("p");
+//document.body.appendChild(pElement);
 
 
 
