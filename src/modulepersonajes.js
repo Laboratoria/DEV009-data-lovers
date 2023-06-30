@@ -1,6 +1,8 @@
 
 import ghibli from "./data/ghibli/ghibli.js";
 
+
+
 const selectMovie = document.querySelectorAll('button');
 const peopleElement = document.querySelector('#people');
 
@@ -52,19 +54,17 @@ function createCharactersList(characters) {
             return "<p>No se encontraron personajes para esta película.</p>";
           }
 
-          let charactersListHTML = '<ul>';
+          let charactersListHTML = '<div class="name-image">';
           characters.forEach(function(character) {
-            charactersListHTML += 
-              '<li>' +
-                '<strong>' + character.name + '</strong> (' + character.gender + ')' +
-                '<ul>' + '<img src=' + character.img + '/>' +
+            charactersListHTML += '<div class="contenedor"' +
+                '<h3><strong>' + character.name + '</strong>' + character.gender + '</h3>' +
+              '<ul>' +'<img src=' + character.img + '/>' +
                   '<li>Age: ' + character.age + '</li>' +
                   '<li>Hair Color: ' + character.hair_color + '</li>' +
                   '<li>Specie: ' + character.specie + '</li>' +
-                '</ul>' +
-              '</li>';
+              '</ul>'+'</div>';
           });
-          charactersListHTML += '</ul>';
+          charactersListHTML += '</div>';
         
           return charactersListHTML;
         }
