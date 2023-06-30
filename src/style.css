@@ -1,18 +1,36 @@
+body{
+  padding: 0%;
+  margin: 0%;
+  background-color:  #547ea7;
+  }
 
 header{
     text-align:center;
     text-justify: distribute-all-lines;
     font-family:'Tilt Prism', cursiva;
-    font-weight: 400;
-    font-size:4vmax; 
+    font-weight:bold;
+    font-size:x-large; 
     color:#19191a;
     letter-spacing: 1px;
  }
 
-section{
+nav{
   background-color:#a77d54;
+  padding-top: 2rem;
+  display: flex;
+
 }
 
+input{
+  text-align:center;
+  margin-bottom: 0.5rem;
+  margin-inline-start: 2,5rem;
+  }
+
+#boton{
+  margin-bottom: 0.5rem;
+  margin-inline-start: 2.5rem;
+}
 #root{
     display: flex ;
     flex-wrap: wrap;
@@ -30,8 +48,5 @@ section{
     text-align:center;
     font-family: sans-serif;
     /*box-shadow: 5px 5px 20px gray;*/
-}
-body{
-  background-color:  #547ea7;
 }
 
