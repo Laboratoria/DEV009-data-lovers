@@ -37,7 +37,9 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto mono', 1em;
-    text-align: justify;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 body {
@@ -108,14 +110,34 @@ input[type="text"] {
     box-shadow: 0 4px 5px #828181;
     margin-block-start: 10px;
     margin-block-end: 10px;
+    align-items: center;
 }
 
 .info-container {
     flex-grow: 1;
-    display:inline-block
+    display:inline-block;
+    justify-content: center;
+    align-items: center;
+}
+
+.numPokemon{
+    margin:10px;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
     
 }
 
+.img-container{
+    background-color:var(--theme-color);
+    border-radius: 60%;
+    align-self: center;
+    opacity: .8;
+    justify-content: center;
+    align-items: center;
+
+}
 main {
     height: auto;
 }
