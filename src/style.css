@@ -95,7 +95,9 @@
     font-size: 18px;
     color:white;
 }   
-
+#fondo{
+    display: none;
+}
 #general {
     display: flex;
     flex-wrap: nowrap;
@@ -103,7 +105,7 @@
 }
 #cartillaContenedor {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 50px;
     line-height: 1.3;
 }
@@ -174,9 +176,10 @@
     cursor: pointer;
 }
 .cartilla {
-    border: 2px solid #ccc;
-    padding: 10px;
+    border: 2px solid #c4d2e3;
+    padding: 15px;
     border-radius: 10px;
+    background-color: rgba(227, 232, 252, 0.269); /*para que el fondo sea un poco transparente*/
 }
 #imgOficial {
     height: 150px;
@@ -324,6 +327,13 @@
 .top10 a {
     text-decoration: none;
 }
+.imagen-atleta {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px; 
+    border-radius: 50%;
+}
 .homeButton {
     display: flex;
     justify-content: center;
@@ -347,7 +357,6 @@
     display: flex;
     padding-top: 170px;
     flex: 0 0 auto;
-    margin-right: 5%;
     margin-left: 50px;
 }
 #pet5 {
@@ -371,12 +380,127 @@
     height: 220px;
     width: auto;
 }
-
 #pet3 {
     margin-left: 5px;
     margin-right: none;
+    margin-top: 80px;
 }
-@media (max-width: 768px) {
+
+@media (max-width: 1290px) {
+    /*Contenedor superior*/
+    .contenedor{
+        height: 105px;
+    }
+    .contenedor .iconofiltro label {
+        font-size: 70px;
+        padding: 20px;
+        cursor: pointer;
+    }
+    #logo2016{
+        height: 250px;
+        width: auto;
+    }
+    .division a{
+        font-size: xx-large;
+        padding: 50px;
+    }
+    .contenedorFiltros .contenedorFiltros2 {
+        max-width: 400px;
+        height: 2500px;
+    }  
+    .contenedorFiltros .contenedorFiltros2 nav a{
+        padding: 40px;
+        font-size: xx-large;
+    }
+    .contenedorFiltros .contenedorFiltros2 label{
+        font-size: 80px;
+    }   
+    #imgOficial{
+        height: 220px;
+        width: auto;
+    }
+    /*Pagina Atletas*/
+    #barra{
+        width: 450px;
+        height: 50px;
+        font-size: x-large;
+    }
+    #clear{
+        height: 70px;
+        font-size: x-large;
+    }
+    .order{
+        width: 120px;
+        font-size: x-large;
+    }
+    .sortOptions a{
+        padding: 10px;
+        font-size: x-large;
+    }
+    .sortOptions {
+        position: absolute;
+        width: 200px;
+    }
+    .top10 button {
+        width: 120px;
+        height: 50px;
+        font-size: large;
+      }
+    #pet1{
+        display: none;
+    }
+    #pet2{
+        display: none;
+    }
+    #cartillaContenedor{
+        font-size: x-large;
+    }
+    /*Pagina Top*/
     #topContainer {
-    grid-template-columns: repeat(3,1fr);
-    }}
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 25px;
+    }
+    #general2 {
+        display: flex;
+        flex-direction: row;
+    }
+    #general2 #pet3 {
+        order: -1;
+        margin-bottom: 10px;
+        position: sticky;
+        top: 0;
+    }
+    /*Pagina Estadisticas*/
+    .headingStats {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: xx-large;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    }
+    .homeButton .fa-house {
+        font-size: 50px;
+    }
+    #pet4{
+        padding-top:10px;
+        height: 470px;
+    }
+    #generalStats {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #statisticsCont{
+        padding-top: 50px;
+        padding-left: 30px;
+    }
+    .cardsAth{
+        border: 2px solid #ccc;
+        padding: 20px;
+        border-radius: 10px;
+    }
+     #pet5{
+        padding-top: 25px;
+        padding-left: 170px;
+    }
+}
