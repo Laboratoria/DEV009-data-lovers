@@ -21,4 +21,3 @@ for (let i = 0; i< allCountries.length; i++){
 
 console.log(contAmerica(allCountries))
 
-
