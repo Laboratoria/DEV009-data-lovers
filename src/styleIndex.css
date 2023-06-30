@@ -5,9 +5,11 @@
 
 video {
     object-fit: cover;
-    position: absolute;
+    position: sticky;
     top: 0;
     left: 0;
+    bottom: 0;
+    right: 0;
     width: 100vw;
     height: 100vh;
     margin: 0;
@@ -16,63 +18,81 @@ video {
   }
 
   .contenido {
-    display: -ms-flexbox;
-    margin: auto ;
-    padding: 2rem;
-    max-width: fit-content;
+    display: block;
+    margin: -40rem 0 0 0 ;
+    padding: 1rem;
+    width: auto;
+    height: auto;
 }
   header {
     background-color: #3ea4cf;
-    border-radius: 6px;
+    border-radius: .5rem;
     text-align: center;
-    box-shadow: .5em .5em .5em rgba(0, 0, 0, 0.462);
+    box-shadow: .5rem .5rem .5rem rgba(0, 0, 0, 0.462);
     display: block;
+    margin: 0 auto;
+    width: 35rem;
   }
   h1{
     color:#F9F8DC;
     padding: 1rem;
     font-family: 'Dancing script', cursive;
-    font-size: 3rem;
+    font-size: 5rem;
     font-weight: 100;
   }
 
   h5 {
     color: #E6D6BF;
-    margin-top: -2.8em;
-    padding: .5em;
+    margin-top: -2.8rem;
+    padding: .5rem;
     font-size: 1.5rem;
     font-family: 'Ysabeau SC', cursive;
     font-weight: 100;
-    text-shadow: .1em .1em .1em rgba(0, 0, 0, 0.5);
+    text-shadow: .1rem .1rem .1rem rgba(0, 0, 0, 0.5);
+  }
+  .botones {
+    display: block;
+    align-content: center;
+    justify-content: center;
   }
 
   button {
+    cursor: pointer;
     margin: 0 auto;
     display: block;
     background-image: url(https://64.media.tumblr.com/dbba40f6fe111de35363bf7d16de69df/4629bd3bfc1ff56c-79/s540x810/ebf9e5abe8d4322dbfd82005fdeff9b1951e9f1b.jpg);
     background-size: cover;
     box-shadow: .2em .2em .3em rgba(0, 0, 0, 0.462);
     border: none;
+    box-sizing: border-box;
     color: #f6f9e0;
     text-shadow: .08em .1em .25em  #434645;
     font-family: 'Ysabeau SC', sans-serif;
     font-weight: thin;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     margin-top: 1rem;
-    padding: .5rem;
-    width: 200px;
+    padding: .3em 1.2em;
+    width: 35rem;
+    height: 5rem;
     border-radius: 3px;
+    outline: none;
+    transition: all 0.15s;
+  }
+  button:hover{
+    filter:invert(.7);
+    box-shadow: 0.5rem .5rem 1rem #8a315e;
   }
 
   footer{
+    width: 600px;
+    height: 8vh;
     font-family: 'Ysabeau SC', sans-serif;
-    font-size: .8em ;
-    text-align: right;
+    font-size: 1.55em ;
+    text-align: center;
     text-shadow: .08rem .1rem .4rem;
     padding: 1rem 1rem .5rem;
-    margin: 15rem 0rem 0rem 5rem;
-    display: flexbox;
-    border-bottom:#1c87b9 solid ;
+    margin: 0 auto;
+    display: block;
   }
 
   

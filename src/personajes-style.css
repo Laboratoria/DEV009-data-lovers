@@ -43,6 +43,12 @@ button {
   border-radius: 3px;
 }
 
+button:active{
+  transform: translate(0,0.3rem);
+  box-shadow: 0.5rem .5rem 1rem #8a315e;
+}
+
+
 /************Desplegable*****/
 /**nombre de la pelicula**/
 h2{
