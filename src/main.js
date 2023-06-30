@@ -14,7 +14,7 @@ for (let i = 0; i< allCountries.length; i++){
    card.innerHTML= ` 
       <img src=${allCountries[i].flags.png}>
       <h2>${allCountries[i].name.common}</h2>
-   `
+     `
    root.appendChild(card);
 };
 
