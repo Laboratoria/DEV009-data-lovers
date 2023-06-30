@@ -14,7 +14,9 @@ export const searchPokemon = (data, inputText) => {
   //BUSCANDO LOS POKEMON CON EL TEXTO INGRESADO
 
   //forEach() es un método disponible en los arrays de JavaScript que permite ejecutar una función para cada elemento del array
+
   //eachPokemon es el parámetro que representa cada elemento del array data. 
+
   data.forEach((eachPokemon) => {
     const namePokemon = eachPokemon.name;
     const lengthText = inputText.length;
@@ -27,4 +29,5 @@ export const searchPokemon = (data, inputText) => {
 
 
 //fin nancy
+
 

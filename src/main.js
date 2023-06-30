@@ -24,7 +24,7 @@ dataPokemon.forEach((pokemon) => {
 
 console.log("🚀 ~ file: main.js:12 ~ muestraPokemon.forEach ~ pokemon:", pokemon.type[0])
     const type = pokemon.type;
-    
+
 
     const card = document.createElement("div");
     card.classList.add("card");
@@ -32,14 +32,14 @@ console.log("🚀 ~ file: main.js:12 ~ muestraPokemon.forEach ~ pokemon:", pokem
     {
         const color1 = getComputedStyle(document.documentElement).getPropertyValue('--pokemon-type-'+type[0]);
         const color2 = getComputedStyle(document.documentElement).getPropertyValue('--pokemon-type-'+type[1]);
-        card.style.background = "linear-gradient(to right, " + color1 + " 30%, "+ color2 + ")"; 
+        card.style.background = "linear-gradient(to right, " + color1 + " 30%, "+ color2 + ")";
     }
     else
     {
         const color = getComputedStyle(document.documentElement).getPropertyValue('--pokemon-type-'+type[0]);
         card.style.background = color;
     }
-    
+
     const imgContainer = document.createElement("div");
     imgContainer.classList.add("img-container");
 
@@ -69,6 +69,7 @@ console.log("🚀 ~ file: main.js:12 ~ muestraPokemon.forEach ~ pokemon:", pokem
     card.appendChild(imgContainer);
     
 
+
     root.appendChild(card);
 
 });
@@ -88,6 +89,7 @@ buscarPokemon.addEventListener('input', () => {
   //esta línea de código obtiene el valor del campo de entrada de texto representado por buscarPokemon, lo convierte a minúsculas utilizando .toLowerCase(), y lo almacena en la constante inputText.
   const inputText = buscarPokemon.value.toLowerCase(); //es un método que se utiliza en las cadenas de texto en JavaScript para convertir todos los caracteres de la cadena a minúsculas.
   
+
 
   const result = searchPokemon(data.pokemon, inputText);
   if (inputText.length > 0 && result.length > 0) {
@@ -111,14 +113,14 @@ buscarPokemon.addEventListener('input', () => {
 /* function mostrarListaPokemon(){
 for (let i = 0; i < allPokemon.length; i++) {
     const pokemon = allPokemon[i];
-  
+
     const divConteiner = document.createElement("div");
     divConteiner.classList.add("pokemon");
-    divConteiner.innerHTML = ` 
+    divConteiner.innerHTML = `
     <p class="pokemonId">${pokemon.num}</p>
     <div class="nombrePokemon">${pokemon.name}</div>
-    <div class = img> 
-        <img src = "${pokemon.img}" alt="${pokemon.name}"> 
+    <div class = img>
+        <img src = "${pokemon.img}" alt="${pokemon.name}">
     </div>
  `;
    root.appendChild(divConteiner);
