@@ -1,4 +1,4 @@
-import { contAmerica, contCaribe } from './data.js';
+import { contAmerica, contCaribe, busqueda } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/countries/countries.js';
 // import data from './data/rickandmorty/rickandmorty.js';
@@ -16,10 +16,21 @@ for (let i = 0; i< allCountries.length; i++){
       <h2>${allCountries[i].name.common}</h2>
      `
    root.appendChild(card);
-};
+   };
+
+/*console.log(contAmerica(allCountries))*/
+
+const input = document.getElementById('Buscar');
+const boton = document.querySelector('#boton');
+
+boton.addEventListener('click',function(){
+   const valor= textArea.value.toLowerCase();
+   const resultado = busqueda(allCountries,valor);
+
+   console.log(resultado)
+});
 
 
-console.log(contAmerica(allCountries))
 
 const textArea= document.getElementById("#Buscar");
 const boton = document.querySelector("#boton");
