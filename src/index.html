@@ -6,18 +6,22 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-   <section name="Seccion principal">
-     <header> 
-     <img src="imagen/mapamundi1.png"
-    alt ="logo" width="110"heigth="110"> GEOGRAFIA DE LOS PAISES</header>
-    <br>
-    <label for="Buscar"></label>
-    <span>Buscar</span>
-    <textarea name="Buscador" id="Buscar" cols="30" rows="2"></textarea>
-     <br>
-     <br>
-   </section>
-    <div id="root"></div>
+    <header> 
+      <div>
+       <img src="imagen/mapamundi1.png"
+       alt ="mapamundi de colores tierra y circular" width="110"heigth="110"> 
+       <h1>GEOGRAFIA DE LOS PAISES</h1>
+      </div>
+      <nav>
+        <label for="Buscar"></label>
+        <button class="btn" id="boton">Buscar</button>
+        <input type="text" name="Buscar" id="Buscar"placeholder=" Ingrese nombre de pais">
+      </nav>
+    </header>
+  
+     
+   
+    <main id="root"></main>
    <script src="main.js" type="module"></script>
   </body>
 </html>
