@@ -1,122 +1,86 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link 
+  <link
     href="https://fonts.googleapis.com/css2?family=Electrolize&family=Montserrat:ital,wght@0,400;1,500;1,700;1,900&family=Roboto+Mono:wght@300;400&display=swap"
     rel="stylesheet">
-    <link rel="shortcut icon" href="./img/icon.png">
-    
-    
-  </head>
-  <body>
-    <header class="topheader">
-      <img src="./img/logopokemon.png" width="250" height="160" alt="logo pokemon">
+  <link rel="shortcut icon" href="./img/icon.png">
+
+
+</head>
+
+<body>
+  <header class="topheader">
 
     <nav class="nav">
-      <ul class="menu">
-        <li><a href="" #="Home"></a></li>
-        <li><a href="" #="CATEGORÍAS"></a>
-          <ul class="submenu">
-            <li><a href="" id="acero"></a>Acero</li>
-            <li><a href="" id="agua"></a>Agua</li>
-            <li><a href="" id=""></a>Bicho</li>
-            <li><a href="" id=""></a>Dragón</li>
-            <li><a href="" id=""></a>Eléctrico</li>
-            <li><a href="" id=""></a>Fantasma</li>
-            <li><a href="" id=""></a>Fuego</li>
-            <li><a href="" id=""></a></li>
-            <li><a href="" id=""></a></li>
-            <li><a href="" id=""></a></li>
-            <li><a href="" id=""></a></li>
-            <li><a href="" id=""></a></li>
-            <li><a href="" id=""></a></li>
-            <li><a href="" id=""></a></li>
-            <li><a href="" id=""></a></li>
-            <li><a href="" id=""></a></li>
-            <li><a href="" id=""></a></li>
-            <li><a href="" id=""></a></li>
-            <li><a href="" id=""></a></li>
-            <li><a href="" id=""></a></li>
-          </ul>
-        </li>
-      </ul>
+      <div class="columna logo">
+        <img src="./img/logopokemon.png" width="250" height="160" alt="logo pokemon">
+      </div>
 
-      <section class="buscador">
-        <input type="text" id="pokemonName" placeholder="Pokemon o Id">
-        <div>
-          <img class="img close" src="./img/search.png" alt="search">
-          <img src="./img/close.png" alt="close">
-        </div>
-      </section>
+      <div class="columna cate" >
+        <ul class="menu">
+          <li><a href="" #="home"></a>HOME</li>
+          <li><a href="" #="categorias">CATEGORÍAS</a>
+
+            <div class="categorias lista">
+              <ul class="menu">
+              <li class="categorias-toggle">Categorías</li>
+            </ul>
+              <ul class="submenu">
+                <li><a href="" id="acero"></a>Acero</li>
+                <li><a href="" id="agua"></a>Agua</li>
+                <li><a href="" id=""></a>Bicho</li>
+                <li><a href="" id=""></a>Dragón</li>
+                <li><a href="" id=""></a>Eléctrico</li>
+                <li><a href="" id=""></a>Fantasma</li>
+                <li><a href="" id=""></a>Fuego</li>
+                <li><a href="" id=""></a>hola</li>
+                <li><a href="" id=""></a></li>
+                <li><a href="" id=""></a></li>
+                <li><a href="" id=""></a></li>
+                <li><a href="" id=""></a></li>
+                <li><a href="" id=""></a></li>
+                <li><a href="" id=""></a></li>
+                <li><a href="" id=""></a></li>
+                <li><a href="" id=""></a></li>
+                <li><a href="" id=""></a></li>
+                <li><a href="" id=""></a></li>
+                <li><a href="" id=""></a></li>
+                <li><a href="" id=""></a></li>
+              </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div id="pokemonName" class="columna buscador">
+        <input type="text" id="buscarPokemon" placeholder="Buscar Pokemon por nombre o num" size="40px" height="10px">
+      </div>
 
     </nav>
-
 
   </header>
 
   <main class="topmain">
-    <img src="./img/logopokemon.png" width="250" height="160" alt="logo pokemon">
 
-    <nav class="nav">
-      <ul class="menu">
-        <li><a href="" #="Home"></a></li>
-        <li><a href="" #="CATEGORÍAS"></a>
-          <ul class="submenu">
-            <li><a href="" id="acero"></a>Acero</li>
-            <li><a href="" id="agua"></a>Agua</li>
-            <li><a href="" id=""></a>Bicho</li>
-            <li><a href="" id=""></a>Dragón</li>
-            <li><a href="" id=""></a>Eléctrico</li>
-            <li><a href="" id=""></a>Fantasma</li>
-            <li><a href="" id=""></a>Fuego</li>
-            <li><a href="" id=""></a></li>
-            <li><a href="" id=""></a></li>
-            <li><a href="" id=""></a></li>
-            <li><a href="" id=""></a></li>
-            <li><a href="" id=""></a></li>
-            <li><a href="" id=""></a></li>
-            <li><a href="" id=""></a></li>
-            <li><a href="" id=""></a></li>
-            <li><a href="" id=""></a></li>
-            <li><a href="" id=""></a></li>
-            <li><a href="" id=""></a></li>
-            <li><a href="" id=""></a></li>
-            <li><a href="" id=""></a></li>
-          </ul>
-        </li>
-      </ul>
+  </main>
 
-      <section class="buscador">
-        <input type="text" id="pokemonName" placeholder="Pokemon o Id">
-        <div>
-          <img class="img close" src="./img/search.png" alt="search">
-          <img src="./img/close.png" alt="close">
-        </div>
-      </section>
+  <div id="root">
+    <div class="pokemon-all"></div>
 
-    </nav>
+  </div>
 
+  <footer class="topfooter">
+    <div> &lt;Paulina Torres&gt; y &lt;Nancy A Mendoza&gt;</div>
+  </footer>
 
-  </header>
-
-  <main class="topmain">
-    </main>
-    <div id="root">
-      <div class="pokemon-all"></div>
-  
-    </div>
-    <footer class="topfooter">
-      <div> &lt;Paulina Torres&gt; y &lt;Nancy A Mendoza&gt;</div>
-    </footer>
-   
-    <script src="main.js" type="module"></script>
-  </body>
+  <script src="main.js" type="module"></script>
+</body>
 
 </html>
