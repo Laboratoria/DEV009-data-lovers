@@ -21,29 +21,12 @@ for (let i = 0; i< allCountries.length; i++){
 /*console.log(contAmerica(allCountries))*/
 
 const input = document.getElementById('Buscar');
-const boton = document.querySelector('#boton');
+const bot = document.querySelector('#boton');
 
-boton.addEventListener('click',function(){
-   const valor= textArea.value.toLowerCase();
+bot.addEventListener('click',function(){
+   const valor= input.value.toLowerCase();
    const resultado = busqueda(allCountries,valor);
 
    console.log(resultado)
 });
 
-
-
-const textArea= document.getElementById("#Buscar");
-const boton = document.querySelector("#boton");
-
-const busqueda = () =>{
- //console.log(textArea.value);
-const valor = textArea.value.toLowerCase();
-for (let countrie of allCountries){
-   let name = countrie.name.common.toLowerCase();
-   if (name.indexOf() !== -1){
-   console.log (name)
-   }
- }
-}
-
-boton.addEventListener('click', busqueda)
