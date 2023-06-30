@@ -139,7 +139,7 @@
     align-items: start;
     height: 150px;
     width: auto;
-    padding-top: 170px;
+    padding-top: 200px;
 }
 #mascotasJuntas{
     margin-top: 50px;
@@ -445,7 +445,7 @@
         width: 120px;
         height: 50px;
         font-size: large;
-      }
+    }
     #pet1{
         display: none;
     }
@@ -454,6 +454,11 @@
     }
     #cartillaContenedor{
         font-size: x-large;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+        margin-left: 17px;
+        margin-right: 17px;
+        line-height: 1,3;
     }
     /*Pagina Top*/
     #topContainer {
