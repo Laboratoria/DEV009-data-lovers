@@ -19,53 +19,35 @@
 <body>
   <header class="topheader">
 
+    <!-- LOGO  -->
     <nav class="nav">
-      <div class="columna logo">
+      <section class="conteiner">
         <img src="./img/logopokemon.png" width="250" height="160" alt="logo pokemon">
-      </div>
 
-      <div class="columna cate" >
-        <ul class="menu">
-          <li><a href="" #="home"></a>HOME</li>
-          <li><a href="" #="categorias">CATEGORÍAS</a>
+        <ul class="menu_links">
+          <li class="menu_item menu_item--show">
+            <a href="" #="home">HOME</a>
+          </li>
 
-            <div class="categorias lista">
-              <ul class="menu">
-              <li class="categorias-toggle">Categorías</li>
+          <li class="menu_item menu_item--show">
+            <a href="" #="home">TYPE</a>
+
+            <ul class="menu_ nesting">
+              <li>
+                <a href="" class="menu_link menu_link--inside">fighting <img src="assets/fighting.svg"
+                    class="menu_fighting"></a>
+                <a href="" class="menu_link menu_link--inside">flying <img src="assets/flying.svg" class="flying"></a>
+              </li>
             </ul>
-              <ul class="submenu">
-                <li><a href="" id="acero"></a>Acero</li>
-                <li><a href="" id="agua"></a>Agua</li>
-                <li><a href="" id=""></a>Bicho</li>
-                <li><a href="" id=""></a>Dragón</li>
-                <li><a href="" id=""></a>Eléctrico</li>
-                <li><a href="" id=""></a>Fantasma</li>
-                <li><a href="" id=""></a>Fuego</li>
-                <li><a href="" id=""></a>hola</li>
-                <li><a href="" id=""></a></li>
-                <li><a href="" id=""></a></li>
-                <li><a href="" id=""></a></li>
-                <li><a href="" id=""></a></li>
-                <li><a href="" id=""></a></li>
-                <li><a href="" id=""></a></li>
-                <li><a href="" id=""></a></li>
-                <li><a href="" id=""></a></li>
-                <li><a href="" id=""></a></li>
-                <li><a href="" id=""></a></li>
-                <li><a href="" id=""></a></li>
-                <li><a href="" id=""></a></li>
-              </ul>
           </li>
         </ul>
-      </div>
 
-      <div id="pokemonName" class="columna buscador">
-        <input type="text" id="buscarPokemon" placeholder="Buscar Pokemon por nombre o num" size="40px" height="10px">
-
-      </div>
-
+        <!-- INPUT BUSCADOR  -->
+        <div id="pokemonName" class="columna buscador">
+          <input type="text" id="buscarPokemon" placeholder="Buscar Pokemon por nombre o num" size="40px" height="10px">
+        </div>
+      </section>
     </nav>
-
   </header>
 
   <main class="topmain">
