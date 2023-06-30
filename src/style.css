@@ -1,11 +1,11 @@
 :root {
     --theme-color: white;
-   --primary-color: #357CED;
+    --primary-color: #357CED;
     --secundary-color: #FE0D0D;
     --text-color: white;
     --text-color-inverse: black;
-    --nav-shadow-color: #357CED;  
-  --nav-background:#357CED;
+    --nav-shadow-color: #357CED;
+    --nav-background: #357CED;
     --pokemon-type-normal: #AAA67F;
     --pokemon-type-fighting: #C12239;
     --pokemon-type-flying: #A891EC;
@@ -33,26 +33,62 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:  'Roboto mono', 1em; text-align: justify;
-  
+    font-family: 'Roboto mono', 1em;
+    text-align: justify;
+}
+
 body {
     font-family: 'Electrolize', sans-serif;
     font-family: 'Montserrat', sans-serif;
     font-family: 'Roboto Mono', monospace;
     padding-top: 100px;
     position: relative;
-    align-items:flex-start;
-    
+    align-items: flex-start;
 }
 
-.topheader{
+.topheader {
     box-shadow: 0 4px 5px var(--nav-background);
-    position:fixed;
+    position: fixed;
     background: var(--nav-background);
     left: 0;
     top: 0;
     width: 100%;
 }
+
+/*  //////////  CODE NANCY //////////*/
+ul,
+li {
+    list-style: none;
+}
+
+
+input[type="text"] {
+    width: 300px;
+    height: 40px;
+    border-radius: 8px;
+}
+
+.logo {
+    float: left;
+}
+
+.buscador,
+.cate {
+    float: right;
+}
+
+.column {
+    margin: 0;
+    padding: 10px 0;
+    width: 40% auto;
+}
+
+.nav {
+    width: 1000px;
+    margin: 20px auto;
+}
+
+/* //////////   FIN  CODE NANCY ////////// */
 
 .card {
     border: 1px solid #ccc;
@@ -61,43 +97,32 @@ body {
     justify-content: center;
     display: inline-block;
     box-sizing: border-box;
+    width: 200px;
+    height: 300px;
     gap: 50px;
     margin-left: 30px;
     border-radius: 5%;
     box-shadow: 0 4px 5px #828181;
     margin-block-start: 10px;
     margin-block-end: 10px;
-
 }
-
-
 
 .info-container {
     flex-grow: 1;
+    display:inline-block
+    
 }
 
-  
-
-main{
+main {
     height: auto;
 }
 
-
-
-
-footer{height: auto;}
-
-.topheader {
-    width: 100%;
-    height: 160px;
-    left: 0;
-    top: 0;
-    background-color: var(--nav-shadow-color);
-
+footer {
+    height: auto;
 }
+
 @media only screen and (max-width: 600px) {
     .topheader {
-      height: 150px;
+        height: 150px;
     }
-  }
-
+}
