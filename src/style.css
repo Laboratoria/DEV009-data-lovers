@@ -7,12 +7,12 @@ header{
     font-size:4vmax; 
     color:#19191a;
     letter-spacing: 1px;
-    
  }
 
 section{
   background-color:#a77d54;
 }
+
 #root{
     display: flex ;
     flex-wrap: wrap;
@@ -34,3 +34,4 @@ section{
 body{
   background-color:  #547ea7;
 }
+
