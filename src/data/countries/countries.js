@@ -5973,7 +5973,7 @@ export default {
       "languages": {
         "nor": "Norwegian"
       },
-      "area": -1,
+      "area": 62,
       "flag": "🇸🇯",
       "population": 2562,
       "timezones": [
