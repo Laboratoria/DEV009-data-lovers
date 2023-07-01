@@ -10,13 +10,34 @@ body {
   background-size: 100%;
   background-position: center;
   background-attachment: fixed;
-  margin: 10px 50px;
+  margin: 2px 2px;
 }
 
-header {
-  display: flex;
-  justify-content: center;
+.toggleButton{
+  border: none;
+  background-color: rgba(245, 245, 245, 0.1);
+  position: absolute;
+  top:10px;
+  left:10px;
+  display: none;
+}
+
+.toggleButton:hover{
+  cursor: pointer;
+}
+
+header{
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: rgba(245, 245, 245, 0.6);
+  position:relative;
   align-items: center;
+  text-align: center;
+  font-size: xx-large;
+  font-weight: bolder;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
 }
 
 .title-heading {
@@ -35,35 +56,86 @@ header {
 }
 
 .search-section {
-  /* background: #f5f5f5; */
   border: none;
-  width: 80%;
+  width: 200px;
   height: 30px;
-  opacity: 60%;
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 50px;
-  align-items: center;
+  position: absolute;
+  top:10px;
+  right: 5px;
 }
 
+ul.alphabet-list {
+  display: flex;
+  list-style: none;
+  background-color: #ffffff;
+  width: 60%;
+  justify-content: space-evenly; /*reparte el espacio equitativamente */
+  padding: 10px;
+}
+
+.side-bar-aside2{
+  width: 300px;
+  height:390px;
+  overflow-y: scroll;
+  display: none; /* Ocultar el aside inicialmente */
+  position: absolute;
+  top: 70px;
+  left: 0px;
+  background-color: #230b0b;
+  color: #eee;
+  padding: 10px;
+  border: 1px solid #ccc;
+
+  }
+
+  .dropdown-content2 {
+    background-color: #000000;
+    color: #eee;
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin-left:60px;
+    padding: 2px 20px 20px 20px;
+    margin-top: -20px;
+    z-index: 1;
+  }
+
+  .dropdown:hover .dropdown-content2 {
+    display: block;
+  }
+
 #country-input {
+  position: absolute;
+  top: 10px;
+  right: 5px;
   background-image: url("./images/search-icon.png"); /* Add a search icon to input */
   background-position: 10px 10px; /*Position the search icon */
   background-size: 25px;
   background-repeat: no-repeat; /* Do not repeat the icon image */
-  width: 95%; /* Full-width */
+  width: 200px; /* Full-width */
   font-size: 16px; /* Increase font-size */
   padding: 12px 20px 12px 40px; /* Add some padding */
   border: 1px solid #ddd; /* Add a grey border */
   margin-bottom: 12px; /* Add some space below the input */
   margin: 5px, auto;
+  border-radius: 5px;
 }
 
+.row {
+  display: flex;
+  grid-template-columns: 4fr 1fr;
+  margin: 10px 100px;
+  gap: 75px;
+  margin-bottom: 60px;
+  align-items: self-start;
+  justify-content: space-between;
+}
+
+
 .countries-main {
-  /* overflow-y: scroll; */
   border-radius: 10px;
   background-color: #ffffff;
-  /* height: 100vh; Ajusta la altura según sea necesario */
   margin-top: 40px;
   display: flex;
   flex-direction: column;
@@ -73,28 +145,21 @@ header {
 }
 .countries-table{
   background-color: #ffffff;
-  /* height: 100vh; Ajusta la altura según sea necesario */
   margin-top: 40px;
   display: block;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: flex-start; */
   align-items: center;
   gap: 30px;
 
 }
 
-/* .col1{} */
-
 #container_Table{
-  background-color: #fff;
+  background-color: rgba(245, 245, 245, 0.8);
 }
 
 .container-table {
   grid-row: 2 / span 3;
-  background-color: #fff;
+  background-color: rgba(245, 245, 245, 0.8);
   border-radius: 1rem;
-  overflow: scroll;
 }
 
 .table-tittle{
@@ -132,7 +197,6 @@ header {
 }
 
 h3 {
-  /* display: flex; */
   margin:2px 10px;
   padding: 0;
   font-family: stoke;
@@ -159,7 +223,7 @@ li:hover {
 li.country-item-li {
   margin: 5px;
   display: block;
-  background-color: #f6f6f6;
+  background-color: rgba(245, 245, 245, 0.8);
   padding: 12px; /* Add some padding */
   text-decoration: none; /* Remove default text underline */
   font-size: 18px; /* Increase the font-size */
@@ -186,6 +250,7 @@ li a {
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   margin-left:60px;
   margin-top: -20px;
+  padding: 2px 5px 5px 5px;
   z-index: 1;
 }
 
@@ -193,39 +258,16 @@ li a {
   display: block;
 }
 
-/* .subregion-li{
-
-} */
-/* table {
-  border-collapse: collapse;
-}
-th, td {
-  padding: 8px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-}
-.inline-list {
-  display: inline;
-  padding-left: 0;
-}
-.inline-list li {
-  display: inline;
-  margin-right: 10px;
-} */
-
-/* .country-item-table{
-  display: inline;
-}
-
-table {
-  border-collapse: collapse;
-}
-th, td {
-  border: 1px solid black;
-  padding: 8px;
-} */
-
 @media screen and (max-width: 600px) {
+  .toggleButton{
+    border: none;
+    background-color: rgba(245, 245, 245, 0.1);
+    position: absolute;
+    top:20px;
+    left:10px;
+    display: block;
+  }
+
   .title-heading {
     font-size: x-large;
     height: 50px;
@@ -234,11 +276,23 @@ th, td {
     /* padding: 10px; */
   }
 
+  ul#common-countries {
+    list-style: none;
+    column-count: 1;
+    padding: 0px 2px 2px 2px;
+    margin: 0px 3px 30px 3px;
+  }
+
   #country-input {
-    width: 70%; /* Full-width */
-    font-size: medium; /* Increase font-size */
-    margin-left: 45px;
-    margin-top: 5px;
+    top: 10px;
+    right: 5px;
+    background-position: 5px 12px; /*Position the search icon */
+    background-size: 15px;
+    width: 110px; /* Full-width */
+    font-size: 12px; /* Increase font-size */
+    padding: 12px 10px 6px 20px; /* Add some padding */
+    margin-bottom: 12px; /* Add some space below the input */
+    margin: 2px, auto;
   }
 
   .countries-main {
@@ -248,18 +302,28 @@ th, td {
 
   h3 {
     margin: 0;
-    padding: 0;
-    font-size: large;
+    padding-left: 10px;
+    font-size: 16px;
   }
 
   .search-section {
-    display: flex;
     border: none;
-    width: 1137px;
-    height: 30px;
-    opacity: 60%;
-    display: block;
-    align-items: center;
+    width: 100px;
+    height: 20px;
+    position: absolute;
+    top:10px;
+    right: 5px;
+  }
+
+  ul.alphabet-list {
+    display: flex;
+    list-style: none;
+    background-color: #ffffff;
+    font-size: 10px;
+    width: 80%;
+    justify-content: space-evenly; /*reparte el espacio equitativamente */
+    /* align-items: center; */
+    padding: 5px;
   }
 
   .alphabet-section {
@@ -268,6 +332,35 @@ th, td {
   }
 
   ul#common-countries {
+    list-style: none;
+    column-count: 1;
+    padding: 0px 2px 2px 2px;
+    margin: 0px 3px 30px 3px;
+  }
+
+  .row {
+    display: flex;
+    grid-template-columns: 4fr 0.5fr;
+    margin: 10px 30px;
+    gap: 75px;
+    margin-bottom: 60px;
+    align-items: self-start;
+    justify-content: space-between;
+  }
+
+  .col1{
+    padding-left: 5px;
+  }
+
+  .col2-content{
+    font-size: 12px;
+  }
+
+  .side-bar-aside{
+    display: none;
+  }
+
+  ul.common-countries{
     list-style: none;
     column-count: 1;
     padding: 0px 2px 2px 2px;
@@ -292,8 +385,37 @@ th, td {
     color: #000000;
   }
 
+  .table-tittle{
+    font-size: 10px;
+  }
+
+  .sort-img{
+    width: 20px;
+  }
+
+  .flag-country{
+    width: 20px;
+  }
+
+  .table-row {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 20px;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+  }
+
+  .table-row {
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 2fr 0.5fr;
+    column-gap: 20px;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+  }
+
   .search-section {
-    /* background: #f5f5f5; */
     border: none;
     width: 70%;
     height: 30px;
@@ -304,18 +426,45 @@ th, td {
 }
 
 @media screen and (min-width: 600px) and (max-width: 1000px) {
-  .title-heading {
-    font-size: larger;
-    height: 50px;
-    margin: 10px auto;
-    /* padding: 10px; */
+
+  .toggleButton{
+    border: none;
+    background-color: rgba(245, 245, 245, 0.1);
+    position: absolute;
+    top:20px;
+    left:10px;
+    display: block;
+  }
+  .tittle-header{
+    font-size: xx-large;
   }
 
+  .side-bar-aside{
+    display: none;
+  }
+
+
   #country-input {
-    width: 70%; /* Full-width */
-    font-size: medium; /* Increase font-size */
-    margin-left: 45px;
-    margin-top: 5px;
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    background-position: 3px 12px; /*Position the search icon */
+    background-size: 15px;
+    width: 150px; /* Full-width */
+    font-size: 15px; /* Increase font-size */
+    padding: 12px 10px 6px 20px; /* Add some padding */
+    margin-bottom: 12px; /* Add some space below the input */
+    margin: 2px, auto;
+  }
+
+  ul.alphabet-list {
+    display: flex;
+    list-style: none;
+    background-color: #ffffff;
+    font-size: 12px;
+    width: 80%;
+    justify-content: space-evenly; /*reparte el espacio equitativamente */
+    padding: 5px;
   }
 
   .countries-main {
@@ -338,19 +487,17 @@ th, td {
     align-items: center;
   }
 
+
   .alphabet-section {
     background-color: #ffffff;
     width: 70%;
   }
 
   h3 {
-    /* display: flex; */
-    /* margin: 10px 10px 10px 10px; */
-    /* padding: 10px; */
     font-family: stoke;
     font-size: large;
   }
-
+ 
   ul#common-countries {
     list-style: none;
     column-count: 2;
@@ -362,7 +509,6 @@ th, td {
     margin: 5px;
     display: block;
     background-color: #f6f6f6;
-    /* padding: 12px; Add some padding */
     text-decoration: none; /* Remove default text underline */
     font-size: 12px; /* Increase the font-size */
     color: black; /* Add a black text color */
@@ -377,7 +523,6 @@ th, td {
   }
 
   .search-section {
-    /* background: #f5f5f5; */
     border: none;
     width: 70%;
     height: 30px;
@@ -387,14 +532,10 @@ th, td {
   }
 }
 
-/* New styles to alphabet */
-.hidden {
-  display: none;
-}
-
 nav.alphabet-navigation {
   display: flex;
   justify-content: center;
+  margin-top: 30px;
 }
 
 ul.alphabet-list li.active {
@@ -402,45 +543,22 @@ ul.alphabet-list li.active {
   text-decoration: underline;
 }
 
-ul.alphabet-list {
-  display: flex;
-  list-style: none;
-  background-color: #ffffff;
-  width: 60%;
-  justify-content: space-evenly; /*reparte el espacio equitativamente */
-  /* align-items: center; */
-  padding: 10px;
-}
-
 .alphabet-item:hover {
   text-decoration: underline;
 }
 
-/* Aside bar */
-
-.row {
-  display: flex;
-  gap: 75px;
-  margin-bottom: 60px;
-  align-items: self-start;
-}
-
 article.countries-container {
-  flex: 0 0 70%;
+  width: 100%;
   margin-bottom: 0;
 }
 
 aside.side-bar-aside {
-  /*  DEFAULT PROPERTIES
-        flex-grow: 0;
-        flex-shrink: 1; reduces width elements 
-        flex-basis: auto;
-        */
   flex: 0 0 auto;
-  background-color: #ffffff;
+  background-color: rgba(245, 245, 245, 0.8);
   padding: 0 40px;
   margin-top: 40px;
   border-radius: 10px;
+  padding: 2px 20px 20px 20px;
 }
 
 ul.container-side-bar-ul {
