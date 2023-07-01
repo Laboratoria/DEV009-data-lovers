@@ -19,27 +19,51 @@ const continentList = document.querySelectorAll(".continent-name-li");
 const languageList = document.querySelectorAll(".language-li");
 const subRegionsList = document.querySelectorAll('.subregion-li');
 const sortList = document.querySelectorAll('.sort-li');
-const sideBarSide2=document.querySelector('.side-bar-aside2');
+const sideBarAside=document.querySelector('.side-bar-aside');
 const containerTable=document.querySelector('.container-table');
+const mobileMenuContainer = document.querySelector('.mobile-menu-container');
 
 
-toggleButton.addEventListener('click',()=>{
-  sideBarSide2.style.display==="none"?sideBarSide2.style.display='block':sideBarSide2.style.display='block';
-})
+let asideOpen = false;
 
-sideBarSide2.addEventListener('mouseout',()=>{
-  sideBarSide2.style.display='none'
+// Función para abrir el aside
+const openAside = () => {
+  sideBarAside.classList.toggle('show');
+  mobileMenuContainer.classList.toggle('show');
+  asideOpen = true;
+};
+
+// Función para cerrar el aside y mostrar la información seleccionada
+const closeAsideAndShowInfo = () => {
+  sideBarAside.classList.remove('show');
+  mobileMenuContainer.classList.remove('show');
+  asideOpen = false;
+};
+
+toggleButton.addEventListener('click', () => {
+  if(asideOpen) {
+    closeAsideAndShowInfo();
+  } else {
+    openAside();
+  }
 });
 
-sideBarSide2.addEventListener('mouseover',()=>{
-  sideBarSide2.style.display='block'
+// Agregar el evento click a los elementos del aside
+continentList.forEach((element) => {
+  element.addEventListener('click', closeAsideAndShowInfo);
 });
 
-sideBarSide2.addEventListener('click',()=>{
-  sideBarSide2.style.display='none';
+languageList.forEach((element) => {
+  element.addEventListener('click', closeAsideAndShowInfo);
 });
 
+subRegionsList.forEach((element) => {
+  element.addEventListener('click', closeAsideAndShowInfo);
+});
 
+sortList.forEach((element) => {
+  element.addEventListener('click', closeAsideAndShowInfo);
+});
 
 // Esta función genera la section con los ul vacíos
 const generateSection = (id, tittle, clearSection = "yes") => {
