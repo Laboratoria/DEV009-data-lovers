@@ -8,7 +8,7 @@
   </head>
   <body>
     <header class="tittle-header">Countries</header>
-    <button class="toggleButton"> <img class="menu-img" src="./images/open-menu (1).png" alt="icon-menu" width="30px"/></button>
+    
           <section class="search-section">
         <input
           type="text"
@@ -22,7 +22,7 @@
           <!-- JAVASCRIPT WILL COMPLETE THE WHOLE ALPHABET LIST -->
         </ul>
       </nav>
-    </div>
+    
 
     <div class="row">
       <article class="countries-container">
@@ -48,111 +48,122 @@
         <div class="container-table"></div>
       </article>
 
-      <aside class="side-bar-aside">
-        <ul class="container-side-bar-ul">
-          <li class="container-continent-li">
-            <h3>Continent</h3>
-            <ol class="container-continent-ol container-list-aside">
-              <li class="continent-name-li" id="Africa" tittle="Africa">
-                Africa
-              </li>
-              <li class="continent-name-li" id="America" tittle="America">
-                America
-              </li>
-              <li class="continent-name-li" id="Asia" tittle="Asia">Asia</li>
-              <li class="continent-name-li" id="Europe" tittle="Europe">
-                Europe
-              </li>
-              <li class="continent-name-li" id="Oceania" tittle="Oceania">
-                Oceania
-              </li>
-            </ol>
-          </li>
-          <li class="container-Languages-li">
-            <h3>Languages</h3>
-            <ol class="container-languages-ol container-list-aside">
-              <li class="language-li" id="zho" tittle="Chinese">Chinese</li>
-              <li class="language-li" id="ara" tittle="Arabic">Arabic</li>
-              <li class="language-li" id="fra" tittle="French">French</li>
-              <li class="language-li" id="ell" tittle="Greek">Greek</li>
-              <li class="language-li" id="nld" tittle="Dutch">Dutch</li>
-              <li class="language-li" id="spa" tittle="Spanish">Spanish</li>
-              <li class="language-li" id="eng" tittle="English">English</li>
-              <li class="language-li" id="ita" tittle="Italian">Italian</li>
-              <li class="language-li" id="por" tittle="Portuguese">
-                Portuguese
-              </li>
-              <li class="language-li" id="hin" tittle="Hindi">Hindi</li>
-            </ol>
-          </li>
+      <div class="overlay"></div>
 
-          <li class="container-subregions-li">
-            <h3>SubRegions</h3>
-            <ol class="container-subregions-ol container-list-aside">
-              <li class="dropdown" >Europe
-                <ul class="dropdown-content">
-                  <li class="subregion-li" id="northern-Europe" tittle="Northern Europe">Northern Europe</li>
-                  <li class="subregion-li" id="southern-Europe" tittle="Southern Europe">Southern Europe</li>
-                  <li class="subregion-li" id="southeast-Europe" tittle="Southeast Europe">Southeast Europe</li>
-                  <li class="subregion-li" id="western-Europe" tittle="Western Europe">Western Europe</li>
-                  <li class="subregion-li" id="eastern-Europe" tittle="Eastern Europe">Eastern Europe</li>
-                  <li class="subregion-li" id="central-Europe" tittle="Central Europe">Central Europe</li>
-                </ul>
-              </li>
-              <li class="dropdown" >Asia
-                <ul class="dropdown-content">
-                  <li class="subregion-li" id="south-Eastern-Asia" tittle="South-Eastern Asia">South-Eastern Asia</li>
-                  <li class="subregion-li" id="southern-Asia" tittle="Southern Asia">Southern Asia</li>
-                  <li class="subregion-li" id="western-Asia" tittle="Western Asia">Western Asia</li>
-                  <li class="subregion-li" id="central-Asia" tittle="Central Asia">Central Asia</li>
-                  <li class="subregion-li" id="eastern-Asia" tittle="Eastern Asia">Eastern Asia</li>
-                </ul>
-              </li>
-              <li class="dropdown" >Africa
-                <ul class="dropdown-content">
-                  <li class="subregion-li" id="northern-Africa" tittle="Northern Africa">Northern Africa</li>
-                  <li class="subregion-li" id="southern-Africa" tittle="Southern Africa">Southern Africa</li>
-                  <li class="subregion-li" id="middle-Africa" tittle="Middle Africa">Middle Africa</li>
-                  <li class="subregion-li" id="western-Africa" tittle="Western Africa">Western Africa</li>
-                  <li class="subregion-li" id="eastern-Africa" tittle="Eastern Africa">Eastern Africa</li>
-                </ul>
-              </li>
-              <li class="dropdown" >America
-                <ul class="dropdown-content">
-                  <li class="subregion-li" id="north-America" tittle="North America">North America</li>
-                  <li class="subregion-li" id="south-America" tittle="South America">South America</li>
-                  <li class="subregion-li" id="central-America" tittle="Central America">Central America</li>
-                </ul>
-              </li>
-              <li class="dropdown" >Others Regions
-                <ul class="dropdown-content">
-                  <li class="subregion-li" id="australia-and-New-Zealand" tittle="Australia and New Zealand">Australia and New Zealand</li>
-                  <li class="subregion-li" id="caribbean" tittle="Caribbean">Caribbean</li>
-                  <li class="subregion-li" id="melanesia" tittle="Melanesia">Melanesia</li>
-                  <li class="subregion-li" id="micronesia" tittle="Micronesia">Micronesia</li>
-                  <li class="subregion-li" id="polynesia" tittle="Polynesia">Polynesia</li>
-                </ul>
-              </li>
-            </ol>
-          </li>
-          <li class="container-sort-li">
-            <h3>Sort by</h3>
-            <ol class="container-sorts-ol container-list-aside">
-              <li class="sort-li" id="population" tittle="Population">Population</li>
-              <li class="sort-li" id="area" tittle="Area">Area</li>
-              <li class="sort-li" id="populationDensity" tittle="Population Density">Population Density</li>
-            </ol>
-          </li>
-
-
-
-        </ul>
-      </aside>
+      <div>
+        <button class="toggleButton"> 
+          <img class="menu-img" src="./images/open-menu (1).png" alt="icon-menu" width="30px"/>
+        </button>
+      
+        <aside class="side-bar-aside">
+          <ul class="container-side-bar-ul">
+            <li class="container-continent-li">
+              <h3>Continent</h3>
+              <ol class="container-continent-ol container-list-aside">
+                <li class="continent-name-li" id="Africa" tittle="Africa">
+                  Africa
+                </li>
+                <li class="continent-name-li" id="America" tittle="America">
+                  America
+                </li>
+                <li class="continent-name-li" id="Asia" tittle="Asia">Asia</li>
+                <li class="continent-name-li" id="Europe" tittle="Europe">
+                  Europe
+                </li>
+                <li class="continent-name-li" id="Oceania" tittle="Oceania">
+                  Oceania
+                </li>
+              </ol>
+            </li>
+            <li class="container-Languages-li">
+              <h3>Languages</h3>
+              <ol class="container-languages-ol container-list-aside">
+                <li class="language-li" id="zho" tittle="Chinese">Chinese</li>
+                <li class="language-li" id="ara" tittle="Arabic">Arabic</li>
+                <li class="language-li" id="fra" tittle="French">French</li>
+                <li class="language-li" id="ell" tittle="Greek">Greek</li>
+                <li class="language-li" id="nld" tittle="Dutch">Dutch</li>
+                <li class="language-li" id="spa" tittle="Spanish">Spanish</li>
+                <li class="language-li" id="eng" tittle="English">English</li>
+                <li class="language-li" id="ita" tittle="Italian">Italian</li>
+                <li class="language-li" id="por" tittle="Portuguese">
+                  Portuguese
+                </li>
+                <li class="language-li" id="hin" tittle="Hindi">Hindi</li>
+              </ol>
+            </li>
+  
+            <li class="container-subregions-li">
+              <h3>SubRegions</h3>
+              <ol class="container-subregions-ol container-list-aside">
+                <li class="dropdown" >Europe
+                  <ul class="dropdown-content">
+                    <li class="subregion-li" id="northern-Europe" tittle="Northern Europe">Northern Europe</li>
+                    <li class="subregion-li" id="southern-Europe" tittle="Southern Europe">Southern Europe</li>
+                    <li class="subregion-li" id="southeast-Europe" tittle="Southeast Europe">Southeast Europe</li>
+                    <li class="subregion-li" id="western-Europe" tittle="Western Europe">Western Europe</li>
+                    <li class="subregion-li" id="eastern-Europe" tittle="Eastern Europe">Eastern Europe</li>
+                    <li class="subregion-li" id="central-Europe" tittle="Central Europe">Central Europe</li>
+                  </ul>
+                </li>
+                <li class="dropdown" >Asia
+                  <ul class="dropdown-content">
+                    <li class="subregion-li" id="south-Eastern-Asia" tittle="South-Eastern Asia">South-Eastern Asia</li>
+                    <li class="subregion-li" id="southern-Asia" tittle="Southern Asia">Southern Asia</li>
+                    <li class="subregion-li" id="western-Asia" tittle="Western Asia">Western Asia</li>
+                    <li class="subregion-li" id="central-Asia" tittle="Central Asia">Central Asia</li>
+                    <li class="subregion-li" id="eastern-Asia" tittle="Eastern Asia">Eastern Asia</li>
+                  </ul>
+                </li>
+                <li class="dropdown" >Africa
+                  <ul class="dropdown-content">
+                    <li class="subregion-li" id="northern-Africa" tittle="Northern Africa">Northern Africa</li>
+                    <li class="subregion-li" id="southern-Africa" tittle="Southern Africa">Southern Africa</li>
+                    <li class="subregion-li" id="middle-Africa" tittle="Middle Africa">Middle Africa</li>
+                    <li class="subregion-li" id="western-Africa" tittle="Western Africa">Western Africa</li>
+                    <li class="subregion-li" id="eastern-Africa" tittle="Eastern Africa">Eastern Africa</li>
+                  </ul>
+                </li>
+                <li class="dropdown" >America
+                  <ul class="dropdown-content">
+                    <li class="subregion-li" id="north-America" tittle="North America">North America</li>
+                    <li class="subregion-li" id="south-America" tittle="South America">South America</li>
+                    <li class="subregion-li" id="central-America" tittle="Central America">Central America</li>
+                  </ul>
+                </li>
+                <li class="dropdown" >Others Regions
+                  <ul class="dropdown-content">
+                    <li class="subregion-li" id="australia-and-New-Zealand" tittle="Australia and New Zealand">Australia and New Zealand</li>
+                    <li class="subregion-li" id="caribbean" tittle="Caribbean">Caribbean</li>
+                    <li class="subregion-li" id="melanesia" tittle="Melanesia">Melanesia</li>
+                    <li class="subregion-li" id="micronesia" tittle="Micronesia">Micronesia</li>
+                    <li class="subregion-li" id="polynesia" tittle="Polynesia">Polynesia</li>
+                  </ul>
+                </li>
+              </ol>
+            </li>
+            <li class="container-sort-li">
+              <h3>Sort by</h3>
+              <ol class="container-sorts-ol container-list-aside">
+                <li class="sort-li" id="population" tittle="Population">Population</li>
+                <li class="sort-li" id="area" tittle="Area">Area</li>
+                <li class="sort-li" id="populationDensity" tittle="Population Density">Population Density</li>
+              </ol>
+            </li>
+  
+  
+  
+          </ul>
+        </aside>
+      </div>
+      
+      
+      
     </div>
 
     <!-- Aside element which is only visible on mobile size -->
 
-    <aside class="side-bar-aside2 side">
+    <!-- <aside class="side-bar-aside2 side">
       <ul class="container-side-bar-ul side">
         <li class="container-continent-li side">
           <h3 class="side-h3">Continent</h3>
@@ -250,7 +261,7 @@
 
 
       </ul>
-    </aside>
+    </aside> -->
     <script src="main.js" type="module"></script>
   </body>
 </html>

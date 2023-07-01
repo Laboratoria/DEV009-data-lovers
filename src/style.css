@@ -258,6 +258,8 @@ li a {
   display: block;
 }
 
+
+
 @media screen and (max-width: 600px) {
   .toggleButton{
     border: none;
@@ -439,8 +441,46 @@ li a {
     font-size: xx-large;
   }
 
-  .side-bar-aside{
+  .mobile-menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  /* .side-bar-aside{
     display: none;
+  } */
+
+  .side-bar-aside {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    height: 100%;
+    background: #000;
+    color: #fff;
+    transition: left 0.3s ease-in-out;
+    z-index: 9999;
+    display: none;
+  }
+
+  .side-bar-aside.show {
+    left: 0;
+    background-color: #353740;
+    width: fit-content;
+    height: fit-content;
+    margin-top: 0;
+  }
+
+  .mobile-menu-container.show {
+    overflow: auto;
+  }
+
+  .show {
+    display: block;
   }
 
 
@@ -520,6 +560,30 @@ li a {
     text-decoration: none; /* Remove default text underline */
     font-size: 12px; /* Increase the font-size */
     color: #000000;
+  }
+
+  li {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  ul.dropdown-content {
+    background-color: #353740;
+    color: #eee;
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin-left:60px;
+    padding: 2px 20px 20px 20px;
+    margin-top: -20px;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.7)
   }
 
   .search-section {
