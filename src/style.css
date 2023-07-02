@@ -471,8 +471,9 @@ li a {
     left: 0;
     background-color: #353740;
     width: fit-content;
-    height: fit-content;
+    height: 560px;
     margin-top: 0;
+    overflow-y: scroll;
   }
 
   .mobile-menu-container.show {

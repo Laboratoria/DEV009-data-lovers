@@ -24,12 +24,12 @@ const generateAlphabet = () => {
 
 // La función `filterByContinents` filtra un conjunto de datos (data) para encontrar los elementos que pertenecen a un continente específico (continent).
 const filterByContinents = (data, continent) => {
-  return data.filter(country=>country.continents.includes(continent));
+  return data.filter(country => country.continents.includes(continent));
 };
 
 // La función `filterBySubregion` filtra un conjunto de datos (data) para encontrar los elementos que pertenecen a una subregion en específico (subRegion).
 const filterBySubregion = (data, subRegion) => {
-  return data.filter(country=>country.subregion===subRegion)
+  return data.filter(country => country.subregion === subRegion)
 };
 
 // La función `filterByLanguages` filtra un conjunto de datos (data) para encontrar los países que tienen un idioma específico (language)
@@ -91,7 +91,7 @@ const sortByArea = (data, sortOrder) => {
 };
 
 // La función me calcula la densidad poblacion y la adiciona como parametro key al objeto countries
-const addPopulationDensity = (data)=>{
+const addPopulationDensity = (data) => {
   data.map((country) => {
     country.populationDensity = Math.trunc(country.population/country.area);
   });
@@ -118,6 +118,20 @@ const sortByPopulationDensity = (data, sortOrder) => {
   return result;
 };
 
+const averagePopulationDensityByContinent = (data,continent) => {
+  const countriesByContinent = filterByContinents(data,continent);
+  return countriesByContinent.reduce((sum,country) => sum + country.populationDensity,0) / countriesByContinent.length; 
+};
+
+const filterPopulationDensityByContinent = (data,continent) => {
+  const  popDensityArray = [];
+  const countries = filterByContinents(data,continent);
+  countries.forEach((country) => {
+    popDensityArray.push(country.populationDensity)
+  });
+  return popDensityArray
+};
+
 export {
   searchCountries,
   generateAlphabet,
@@ -127,5 +141,7 @@ export {
   sortByPopulation,
   sortByArea,
   addPopulationDensity,
-  sortByPopulationDensity
+  sortByPopulationDensity,
+  averagePopulationDensityByContinent,
+  filterPopulationDensityByContinent
 };
