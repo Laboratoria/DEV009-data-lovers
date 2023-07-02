@@ -95,8 +95,25 @@ const generateCountriesUl = (data, tittle) => {
         alt="flag country"
         width="30"/>
         <a href="#">${countryName}</a>
-      </li>`;
+        <div class="country-info-container hidden">
+          <p>Capital: ${country.capital}</p>
+          <p>Independent: ${country.independent}</p>
+          <p>Time Zone: ${country.timezones.join(', ')}</p>
+        </div>
+      </li>
+      `;
     containerList.insertAdjacentHTML("beforeend", html);
+
+    // Obtener todos los elementos <li> recién insertados
+    const countryItems = containerList.querySelectorAll('.country-item-li');
+
+    // Agregar evento de clic a cada elemento <li>
+    countryItems.forEach((countryItem) => {
+      countryItem.addEventListener('click', function () {
+        const infoContainer = this.querySelector('.country-info-container');
+        infoContainer.classList.toggle('hidden');
+      });
+    });
   }
 };
 
@@ -156,7 +173,7 @@ countryInput.addEventListener("input", () => {
   }
 });
 
-allLetters.addEventListener('click',()=>{
+allLetters.addEventListener('click',() => {
   generatesCountriesList();
 })
 
@@ -248,7 +265,7 @@ window.addEventListener("load", () => {
   });
   
   const handleFilterClick = (actualFilter,actualTittle) => {
-    containerTable.innerHTML='';
+    containerTable.innerHTML = '';
     let countriesSortBy;
     sortOrderType=1;  
     switch (actualFilter) {
@@ -295,8 +312,8 @@ window.addEventListener("load", () => {
     // Se agrega el evento al icono de la flecha 
   
     iconArrow.addEventListener('click', () => {
-      containerTable.innerHTML='';
-      sortOrderType=sortOrderType*-1
+      containerTable.innerHTML = '';
+      sortOrderType = sortOrderType * -1
       switch (filterKind) {
       case "area": {
         countriesSortedBy = sortByArea(countries, sortOrderType);
