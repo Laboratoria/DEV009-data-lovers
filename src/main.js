@@ -105,18 +105,27 @@ const generateCountriesUl = (data, tittle) => {
     containerList.insertAdjacentHTML("beforeend", html);
 
     // Obtener todos los elementos <li> recién insertados
-    const countryItems = containerList.querySelectorAll('.country-item-li');
+    // const countryItems = containerList.querySelectorAll('.country-item-li');
 
     // Agregar evento de clic a cada elemento <li>
-    countryItems.forEach((countryItem) => {
-      countryItem.addEventListener('click', function () {
-        const infoContainer = this.querySelector('.country-info-container');
-        if(infoContainer.classList.contains('hidden')) {
-          infoContainer.classList.remove('hidden'); // Mostrar la información 
-        } else {
-          infoContainer.classList.add('hidden'); // Ocultar la información
-        }
-      });
+    // countryItems.forEach((countryItem) => {
+    //   countryItem.addEventListener('click', function () {
+    //     const infoContainer = this.querySelector('.country-info-container');
+    //     if(infoContainer.classList.contains('hidden')) {
+    //       infoContainer.classList.remove('hidden'); // Mostrar la información 
+    //     } else {
+    //       infoContainer.classList.add('hidden'); // Ocultar la información
+    //     }
+    //   });
+    // });
+
+    // Otra opción para arreglar el problema
+    containerList.addEventListener('click', function (event) {
+      const clickedElement = event.target;
+      if (clickedElement.classList.contains('country-item-li')) {
+        const infoContainer = clickedElement.querySelector('.country-info-container');
+        infoContainer.classList.toggle('hidden'); // Mostrar u ocultar la información del país
+      }
     });
   }
 };
