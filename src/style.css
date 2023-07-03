@@ -313,7 +313,7 @@ li a {
   }
 
   .alphabet-item {
-    z-index: 2;
+    z-index: 4;
   }
 
   .row {
@@ -403,6 +403,7 @@ li a {
   }
 
   .side-bar-aside.show {
+    position: relative;
     left: 0;
     background-color: #353740;
     width: fit-content;
@@ -419,10 +420,10 @@ li a {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 400px;
     height: 100%;
     overflow: hidden;
-    z-index: 1;
+    z-index: 3;
   }
 
   .mobile-menu-container.show {

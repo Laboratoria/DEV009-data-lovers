@@ -111,7 +111,7 @@ const generateCountriesUl = (data, tittle) => {
     countryItems.forEach((countryItem) => {
       countryItem.addEventListener('click', function () {
         const infoContainer = this.querySelector('.country-info-container');
-        infoContainer.classList.toggle('hidden');
+        infoContainer.classList.remove('hidden');
       });
     });
   }
@@ -385,6 +385,9 @@ window.addEventListener("load", () => {
 //   countriesSortedByPopulationUp = sortByPopulation(countries, 1);
 //   generateTableForSortedData(countriesSortedByPopulationUp,filterKind);
 // });
+
+// countriesSortedByPopulationUp = sortByPopulation(countries, 1);
+// console.log(countriesSortedByPopulationUp);
 
 // let countriesSortedByAreaUp;
 
