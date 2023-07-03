@@ -111,7 +111,11 @@ const generateCountriesUl = (data, tittle) => {
     countryItems.forEach((countryItem) => {
       countryItem.addEventListener('click', function () {
         const infoContainer = this.querySelector('.country-info-container');
-        infoContainer.classList.remove('hidden');
+        if(infoContainer.classList.contains('hidden')) {
+          infoContainer.classList.remove('hidden'); // Mostrar la información 
+        } else {
+          infoContainer.classList.add('hidden'); // Ocultar la información
+        }
       });
     });
   }
@@ -267,7 +271,7 @@ window.addEventListener("load", () => {
   const handleFilterClick = (actualFilter,actualTittle) => {
     containerTable.innerHTML = '';
     let countriesSortBy;
-    sortOrderType=1;  
+    sortOrderType = 1;  
     switch (actualFilter) {
     case "population": {
       countriesSortBy = sortByPopulation(countries, 1)

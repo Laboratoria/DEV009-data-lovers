@@ -312,9 +312,9 @@ li a {
     width: 70%;
   }
 
-  .alphabet-item {
+  /* .alphabet-item {
     z-index: 4;
-  }
+  } */
 
   .row {
     display: flex;
@@ -406,7 +406,7 @@ li a {
     position: relative;
     left: 0;
     background-color: #353740;
-    width: fit-content;
+    width: 200px;
     height: 560px;
     margin-top: 0;
     overflow-y: scroll;
@@ -414,13 +414,14 @@ li a {
     padding: 20px;
     border: 1px solid #ccc;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    z-index: 1;
   }
 
   .mobile-menu-container {
     position: fixed;
     top: 0;
     left: 0;
-    width: 400px;
+    width: 200px;
     height: 100%;
     overflow: hidden;
     z-index: 3;
@@ -441,7 +442,7 @@ li a {
     position: absolute;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    margin-left:60px;
+    margin-left:30px;
     padding: 2px 20px 20px 20px;
     margin-top: -20px;
     z-index: 1;

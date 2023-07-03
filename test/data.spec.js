@@ -363,7 +363,7 @@ const countriesAmerica = [
   },
 ];
 
-const countriesSortByPopulation = [
+const countriesSortByPopulation = {"countriesSortByPopulation" : [
   {
     "name": {
       "common": "Guatemala",
@@ -633,7 +633,7 @@ const countriesSortByPopulation = [
       "alt": "The flag of Maldives has a red field, at the center of which is a large green rectangle bearing a fly-side facing white crescent."
     }
   },
-];
+]};
 
 const TEST_TEXT_ALPHABET = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 
