@@ -1,14 +1,15 @@
-import { sortBy } from './data.js';
+import { sortBy, filterByDirector } from './data.js';
 
 import data from './data/ghibli/ghibli.js'
 console.log(data);
  
+//Se manda llamar el div en donde se van a crear las tarjetas
 const dataContainer = document.getElementById('dataContainer');
+//Guarda la información del la base de datps
 const films = data.films;
 
-//Se declara la función createCardContainer
-function createCardContainer(dataGhibli){
 
+function createCardContainer(dataGhibli){
   //Borra le contenido del div dataConatiner 
   dataContainer.innerHTML= "";
 
@@ -64,13 +65,28 @@ orderSelect.addEventListener('change', function() {
   // Obtén el valor seleccionado
   const selectedOption = orderSelect.value;
   if(selectedOption === "all"){
+    dataContainer.innerHTML= "";
     createCardContainer(films);
   } else{
     // Realiza las acciones correspondientes según la opción seleccionada
-    const dataSort = sortBy(films, selectedOption);
+    const dataSort = sortBy(films.slice(), selectedOption);
     createCardContainer(dataSort);
 
   }
   
 });
+
+const filterSelect = document.getElementById('directorOptions');
+filterSelect.addEventListener('change', function(){
+  const selectedOptionDirector = filterSelect.value;
+  if(selectedOptionDirector === 'all'){
+    dataContainer.innerHTML= "";
+    createCardContainer(films); 
+  } else {
+    const dataFilter = filterByDirector(films.slice(),selectedOptionDirector);
+    createCardContainer(dataFilter);
+    console.log(dataFilter);
+  }
+})
+
 

@@ -6,10 +6,10 @@ export const sortBy = (data, option) => {
   } else if(option === 'opcion2'){
     return data.sort((a,b) => b.title.localeCompare(a.title));
   }
-  
-  //return result;
 };
 
-//export const anotherExample = () => {
-//  return 'OMG';
-//};
+export const filterByDirector = (data, director) => {
+ return data.filter((item) =>
+  item.director.includes(director)
+ );
+};

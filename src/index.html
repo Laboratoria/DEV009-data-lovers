@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STUDIO GHIBLI MAGICAL WORLD</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,12 +31,13 @@
 
     <div class="presentation">
       <div class="intro-text">
-        <h1>STUDIO GHIBLI</h1>
-        <h1>MAGICAL WORLD</h1>
-        <p>Explora Studio Ghibli y sus cautivadores largometrajes. Descubre datos fascinantes: nombres, años, puntuaciones y directores. Filtra y personaliza tu búsqueda. </p>
-        <p>¡Bienvenide a nuestro sitio web lleno de magia y curiosidades únicas!..</p>
+        <h1>STUDIO GHIBLI<br>MAGICAL WORLD</h1>
+        <div>
+          <p>Explora Studio Ghibli y sus cautivadores largometrajes. Descubre datos fascinantes: nombres, años, puntuaciones y directores. Filtra y personaliza tu búsqueda. </p>
+          <p>¡Bienvenide a nuestro sitio web lleno de magia y curiosidades únicas!..</p>
+        </div>
       </div>
-      <img class="totoro-intro" src="img/logo ghibli.png">
+      <img class="totoro-intro" src="img/imgghibli.png">
     </div>
 
       
@@ -43,42 +45,46 @@
   <main>
     
 
-<!--
-    <div class="left">
-      <h3>FILTROS</h3>
-      <h4>Director</h4>
-      <div id="director">
-        <input type="checkbox" name="opcion1" value="opcion1">
-        <label for="opcion1">Hayao Miyazaki</label><br>
-        <input type="checkbox" name="opcion2" value="opcion2">   
-        <label for="opcion2">Isao Takahata</label><br>
-        <input type="checkbox" name="opcion3" value="opcion3">
-        <label for="opcion3">Yoshifumi Kondo</label><br>
-        <input type="checkbox" name="opcion4" value="opcion4">   
-        <label for="opcion4">Hiroyuki Morita</label><br>
-        <input type="checkbox" name="opcion5" value="opcion5">
-        <label for="opcion5">Goro Miyazaki</label><br>
-        <input type="checkbox" name="opcion6" value="opcion6">   
-        <label for="opcion6">Hiromasa Yonebayashi</label><br>
+    <aside>
+      <div class="director-filter">
+        <h3>FILTROS</h3>
+        <h4>Director</h4>
+          <select name="director-filter-options" id="directorOptions">
+            <option value="all">Todo</option>
+            <option value="hayao">Hayao Miyazaki</option>
+            <option value="isao">Isao Takahata</option>
+            <option value="yoshifumi">Yoshifumi Kondo</option>
+            <option value="hiroyuki">Hiroyuki Morita</option>
+            <option value="goro">Goro Miyazaki</option>
+            <option value="hiromasa">Hiromasa Yonebayashi</option>
+          </select>
       </div>
-    
+    </aside>
+   
+    <div class="year-filter">
       <h4>Year</h4>
-      <div id="year">
-          <input type="checkbox" name="opcion1" value="opcion1">
-          <label for="opcion1">1986</label><br>
-          <input type="checkbox" name="opcion2" value="opcion2">   
-          <label for="opcion2">1988</label><br>
-          <input type="checkbox" name="opcion3" value="opcion3">
-          <label for="opcion3">1989</label><br>
-          <input type="checkbox" name="opcion4" value="opcion4">   
-          <label for="opcion4">1991</label><br>
-          <input type="checkbox" name="opcion5" value="opcion5">
-          <label for="opcion5">1992</label><br>
-          <input type="checkbox" name="opcion6" value="opcion6">   
-          <label for="opcion6">1994</label><br>
-      </div>
-
--->
+        <select>
+          <option value="y86">1986</option>
+          <option value="y88">1988</option>
+          <option value="y89">1989</option>
+          <option value="y91">1991</option>
+          <option value="y92">1992</option>
+          <option value="y94">1994</option>
+          <option value="y95">1995</option>
+          <option value="y97">1997</option>
+          <option value="y99">1999</option>
+          <option value="y01">2001</option>
+          <option value="y02">2002</option>
+          <option value="y04">2004</option>
+          <option value="y06">2006</option>
+          <option value="y08">2008</option>
+          <option value="y10">2010</option>
+          <option value="y11">2011</option>
+          <option value="y13">2013</option>
+          <option value="y14">2014</option>
+        </select>
+    </div>
+    
   <aside>
     <h3>ORDENAR POR</h3>
       <select name="opciones" id="orderSelect">
@@ -88,8 +94,6 @@
         <option value="opcion1">Mas rankeado</option>
       </select>
   </aside>  
-
-
         
   <div id="dataContainer" ></div>
     
