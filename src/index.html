@@ -4,26 +4,124 @@
     <meta charset="utf-8">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/81da191227.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 
-  
   <body>
     <div id="root"></div>
     <script src="main.js" type="module"></script>
-    <header> 
-      <h1>Characters: Rick and Morty</h1>
-      <button id="status" type="button">Status</button>
-      <button id="species" type="button">Species</button>
-      <button id="type" type="button">Type</button>
-      <button id="gender" type="button">Gender</button>
-      <button id="origin" type="button">Origin</button>
-      <button id="location" type="button">Location</button>
-      <button id="episode" type="button">Episode</button>
-      <button id="filtro" type="button">Filter</button>
+    <header>
+      <img src="rickandmorty.png">
     </header>
+    <main>
+      
+      <div id="contenedor">
+
+         <div class="responsive options caja"> 
+          <p class="letras">Status</p>
+          <select class="selection selection1" name="status">
+          <option id="alive">Alive</option>
+          <option id="dead">Dead</option>
+          <option id="unknownStatus">Unknown</option>
+          </select>
+         </div>
+        
+      
+        <div class="responsive options caja">
+         <p class="letras">Species</p>
+          <select class="selection selection2" name="species">
+          <option id="human">Human</option>
+          <option id="alien">Alien</option>
+          <option id="vampire">Vampire</option>
+          <option id="humanoid">Humanoid</option>
+          <option id="disease">Disease</option>
+          <option id="cronenberg">Cronenberg</option>
+          <option id="unknownSpecie">Unknown</option>
+          </select>
+        </div>
+      
+         <div class="responsive options cajagrande">
+          <p class="letras">Type</p>
+          <select class="selection selection3" name="type">
+          <option id="amoebaPerson">Amoeba-Person</option>
+          <option id="game">Game</option>
+          <option id="demon">Demon</option>
+          <option id="coneNippledAlien">Cone-nippled alien</option>
+          <option id="giant">Giant</option>
+          <option id="Zigerion">Zigerion</option>
+          <option id="robotCrocodileHybrid">Robot-Crocodile hybrid</option>
+          <option id="unknownType">Unknown</option>
+          </select>
+        </div>
+      
+        <div class="responsive options caja">
+         <p class="letras">Gender</p>
+         <select class="selection selection4" name="gender">
+          <option id="male">Male</option>
+          <option id="female">Female</option>
+          <option id="unknownGender">Unknown</option>
+         </select>
+        </div>
+        <!--
+        <div>
+        <p>Origin</p>
+        <select name="origin">
+          <option>Anatomy Park</option>
+          <option>Earth</option>
+          <option>Giant's Town</option>
+          <option>Cronenberg Earth</option>
+          <option>Unknown</option>
+         </select>
+        </div> 
+      
+         <div>
+        <p>Location</p>
+        <select name="location">
+          <option>Zigerion's Base</option>
+          <option>Citadel of Ricks</option>
+          <option>Hideout Planet</option>
+          <option>Unknown</option>
+        </select>
+        </div>
+      
+        <div> 
+        <p>Episode</p>
+        <select name="episode">
+          <option>1-10</option>
+          <option>11-20</option>
+          <option>21-30</option>
+          <option>31-40</option>
+          <option>41-51</option>
+        </select>
+        </div> -->
+      
+        <div class=" responsive options caja">
+         <p class="letras">Order</p>
+         <select class="selection selection5" name="order">
+          <option id="AZ">A-Z</option>
+          <option id="ZA">Z-A</option>
+         </select>
+         </div>
+
+        <div class=" responsive optionlight cajagrande">
+         <input id="search" class="optionlight lupita" name="textarea" placeholder="Search by name"></textarea> </input>
+         <p class="fa-solid fa-magnifying-glass optionlight"> </p>
+        </div>
+
+      </div>
+      
+      
+      <ul id="listaPadre"> </ul>
+
+    </main>  
+    
+    <footer class="footer">
+      <p class="fa-brands fa-instagram footer" ></p>
+      <p id="nombres" class="footer">Developed by Dulce Ramirez and Raulymar Delgado</p>
+    </footer>
 
   </body>
 </html>
 
 
-//Este es un comentario para ver si funciona el pull request
