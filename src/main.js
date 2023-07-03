@@ -2,8 +2,8 @@
 //se importa un objeto que llamaremos data desde el archivo './data/ghibli/ghibli.js' - el objeto tiene una exportación default
 import data from './data/ghibli/ghibli.js';
 
-
 //Método map() es una función de los arreglos en JS que ITERA sobre cada elemento del arreglo y crea un nuevo arreglo
+//Obtener la lista de personas ordenadas alfabéticamente
 const people = data.films.flatMap(film => film.people.map(person => ({
   name: person.name,
   image: person.img
@@ -13,11 +13,11 @@ console.log(data, data.films, people);
 
 //export { people }; aún no se sabe cómo usarlo efectivame en data.js
 
-
+//HTML de la lista de personas
 const peopleList = document.getElementById('people-list');
-peopleList.innerHTML = '';
+peopleList.innerHTML = ''; // Limpiar el contenido de la lista de personas
 
-// Recorrer el arreglo ordenado y crear elementos HTML para cada persona
+//Recorrer el arreglo ordenado y crear elementos HTML para cada persona
 people.forEach(person => {
   const personItem = document.createElement('div');
   const personImage = document.createElement('img');
@@ -28,7 +28,6 @@ people.forEach(person => {
 
   personItem.appendChild(personImage);
   personItem.appendChild(personName);
-
   peopleList.appendChild(personItem);
 });
 
