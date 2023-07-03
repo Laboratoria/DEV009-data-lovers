@@ -9,7 +9,6 @@ export const sortBy = (data, option) => {
 };
 
 export const filterByDirector = (data, director) => {
- return data.filter((item) =>
-  item.director.includes(director)
+ return data.filter((item) => item.director === director
  );
 };

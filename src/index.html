@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <html lang="en">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STUDIO GHIBLI MAGICAL WORLD</title>
     <link rel="stylesheet" href="style.css" />
@@ -19,7 +20,7 @@
   <!--La etiqueta header es parte de html semantico, la ponemos en vez del div class="encabezado" justo para definir el header-->
   <header>
       <div class="logo">
-        <img src="img/logo ghibli.png">
+        <img alt="imagen logo studio ghibli" src="img/logo ghibli.png">
       </div>
       <nav>
         <ul>
@@ -37,7 +38,7 @@
           <p>¡Bienvenide a nuestro sitio web lleno de magia y curiosidades únicas!..</p>
         </div>
       </div>
-      <img class="totoro-intro" src="img/imgghibli.png">
+      <img alt="imagen de personajes de studio ghibli en un circulo" class="totoro-intro" src="img/imgghibli.png">
     </div>
 
       
@@ -49,21 +50,21 @@
       <div class="director-filter">
         <h3>FILTROS</h3>
         <h4>Director</h4>
-          <select name="director-filter-options" id="directorOptions">
+          <select title="dropdown filtro por director" name="director-filter-options" id="directorOptions">
             <option value="all">Todo</option>
-            <option value="hayao">Hayao Miyazaki</option>
-            <option value="isao">Isao Takahata</option>
-            <option value="yoshifumi">Yoshifumi Kondo</option>
-            <option value="hiroyuki">Hiroyuki Morita</option>
-            <option value="goro">Goro Miyazaki</option>
-            <option value="hiromasa">Hiromasa Yonebayashi</option>
+            <option value="Hayao Miyazaki">Hayao Miyazaki</option>
+            <option value="Isao Takahata">Isao Takahata</option>
+            <option value="Yoshifumi Kondo">Yoshifumi Kondo</option>
+            <option value="Hiroyuki Morita">Hiroyuki Morita</option>
+            <option value="Goro Miyazaki">Goro Miyazaki</option>
+            <option value="Hiromasa Yonebayashi">Hiromasa Yonebayashi</option>
           </select>
       </div>
     </aside>
    
     <div class="year-filter">
       <h4>Year</h4>
-        <select>
+        <select title="dropdown filtro por año">
           <option value="y86">1986</option>
           <option value="y88">1988</option>
           <option value="y89">1989</option>
@@ -87,7 +88,7 @@
     
   <aside>
     <h3>ORDENAR POR</h3>
-      <select name="opciones" id="orderSelect">
+      <select title="dropdown ordenar por"name="opciones" id="orderSelect">
         <option value="all">Todo</option>
         <option value="opcion3">Ordenar de A -Z</option>
         <option value="opcion2">Ordenar de Z - A</option>
