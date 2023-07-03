@@ -1,40 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
 * {
   margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  padding-top: 70px;
+  background-color: #0C1E42;
 }
 
-/*PRESENTACION*/
+/* header con cambios */
 .header{
-  background: url(fondo-pag1.jpg);
-  width: 100%;
+  background: url(fondo_pagina0.jpg);
+  display: flex;/*se utiliza para convertir un contenedor en un contenedor flexible, lo que permite una disposición flexible y controlada de
+  los elementos secundarios dentro del mismo.*/
+  justify-content: center;
+  align-items: center;
   height: 100vh;
+  width: 100vw;
+  /*vh(viewport height) y vw(viewport width)*/
 }
-
-#header_h1{
+#container_text{
+  height: 90%;
+  width: 80%;
+}
+#container_title{
+  height: 20%;
+  width: 100%;
   text-align: center;
-  font-size: 128px;
+  font-size: 18px;
 }
-.header_p{
+#container_pharse{
+  display: flex;
+  justify-content: space-between;/*crea un espacio uniforme entre las img dentro del contenedor, haciendo que se acomoden*/
+  flex-direction: column;/*hace que se valla uno abajo del otro y es que no caben en la primera fila*/
+  align-items: center;/*sirve para centrar los items*/
+  height: 70%;
+  width: 100%;
+}
+.container_phall{
+  text-align: center;
+}
+.p1{
   text-align: center;
   font-family: 'Knewave', cursive;
-  font-size: 48px;
+  font-size: 20px;
   color: #fff;
   -webkit-text-stroke: 2px #000;
 }
-.header_p1{
+.p2{
   text-align: center;
   font-family: 'Knewave', cursive;
-  font-size: 150px;
+  font-size: 50px;
   color: #fff;
   -webkit-text-stroke: 2px #000;
 }
-.header_p2{
+.p3{
   text-align: center;
-  font-size: 32px;
+  font-size: 15px;
   color: #fff;
   -webkit-text-stroke: 0.5px #000;
 }
 
-/*boton para abajo*/
+/* Botón de flecha */
 .div_flecha{
   text-align: center;
 }
@@ -44,62 +72,206 @@
   width: 140px;
 }
 
-/*HOME*/
-main{
+#section2 {
+  display: none;
+}
+/* Primera barra de navegación */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  
+
+  background-color: #6725F4;
+  height: 60px;
+  position: fixed;
   width: 100%;
-  height: 100vh;
+  top: 0;
+  left: 0;
 }
-
-#main_h2{
+.nav-link {
+  color: white;
+  text-decoration: none;
+}
+.logo {
+  color: #FFF;
   text-align: center;
-  font-size: 90px;
+  font-size: 32px;
+  font-family: 'Irish Grover', cursive;
+  font-weight: bold;
+  padding: 0 20px;
+  line-height: 60px;
+  -webkit-text-stroke: 0.5px #000;
 }
+.nav-menu {
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+  list-style: none;
+  margin: 0;
+  background-color: #613DAC;
+  position: fixed;
+  left: 0;
+  top: 60px;
+  width: 100%;
+  padding: 20px 0;
+  height: calc(100%-60px);
+  overflow-y: auto;
+  left: 100%;
+  transition: left 0.3s;
+}
+.nav-menu-item {
+  font-size: 12px;
+  margin:0 10px;
+  line-height: 70px;
+  text-transform: uppercase;
+  width: max-content;
+}
+.nav-menu-link {
+  padding: 8px 12px;
+  border-radius: 3px;
+}
+.nav-menu-link:hover {
+  background:none;
+  color: black;
+}
+.nav-toggle {
+  color: white;
+  background: none;
+  border: none;
+  font-size: 30px;
+  padding: 0 20px;
+  line-height: 60px;
+  display: block;
+  cursor: pointer;
+}
+.nav-menu_visible {
+  left: 0;
+}
+/* Segunda barra de navegación */
 
-/*Barra de Navegacion*/
-.menú{
-  padding: 0;
-  background: #092328;
-  width: 1000px;
+/*
+.navegador {
+  height: 3em;
+  padding: 0.6em 0.93em;
+  display: flex;
+  text-align: center;
   margin: auto;
 }
-
-.menú li a{
+.barra-menu{
+  padding: 0;
+  background: #3C52A3;
+  width: 350px;
+  height: 20px;
+  margin: auto;
+}
+.barra-menu li a{
   text-decoration: none;
+  border: 3px solid #D9D9D9;;
   color: #fff;
-  padding: 20px;
+  padding: 4px;
   display: block;
-  font-size: 20px;
+  font-size: 10.5px;
   text-align: center;
 }
-
-.menú li{
+.barra-menu li{
   display: inline-block;
-  width: 33%;
+  width: 15.6%;
 }
+.barra-menu li a:hover{
+  background: #531E6A;
+} */
 
-.menú li a:hover{
-  background: #000;
+.navegador {
+  height: 40px;
+  padding: 8px 12.5px;
+  display: flex;
+  justify-content: center; /* Alinear elementos horizontalmente */
+  align-items: center; /* Alinear elementos verticalmente */
+  
 }
-
-/*roles de campeones
-
-.titulo_de_home{
+.barra-menu {
+  padding: 0;
+  background: #3C52A3;
+  width: 100%; /* Ocupar todo el ancho disponible */
+  margin: 0; /* Eliminar margen */
+  display: flex; /* Mostrar los elementos en una línea */
+  justify-content: space-between; /* Distribuir los elementos de manera uniforme */
+  
+}
+.barra-menu li {
+  flex-grow: 1; /* Hacer que los elementos crezcan para ocupar el espacio disponible */
+  
+}
+.barra-menu li a {
+  text-decoration: none;
+  border: 3px solid #D9D9D9;;
+  color: #fff;
+  padding: 4px;
+  display: block;
+  font-size: 10.5px;
   text-align: center;
-  padding: 10px;
-  font-size: 50px;
+}
+.barra-menu li a:hover {
+  background: #531E6A;
 }
 
-.campeones{
+.container {
   text-align: center;
+  overflow: hidden;
 }
 
-.campeon{
-  background-color: #1b444d;
+.champion-container {
+  width: 48%;
+  text-align: center;
   display: inline-block;
-  text-align: center;
-  width: 255px;
-  height: 189px;
-  margin: 10px;
-}*/
+  box-sizing: border-box;
+  padding: 8px;
+}
+
+.champion-image {
+  width: 100%;
+  height: 100%;
+}
+
+.champion-name {
+  background-color: #131120;
+  font-family:'Ysabeau Office', sans-serif;
+  color: white;
+}
+
+
+
+@media (min-width: 640px) {
+  .body {
+    padding: 90px 20px 0;
+  }
+  .header {
+    height: 80px;
+  }
+  .logo {
+    font-size: 30px;
+    padding: 0 40px;
+    line-height: 80px;
+  }
+  .nav-menu {
+    display: flex;
+    margin-right: 40px;
+  }
+  .nav-menu-item {
+    line-height: 80px;
+  }
+  .nav-menu-link {
+    padding: 8px 12px;
+    border-radius: 3px;
+  }
+  .nav-menu-link:hover {
+    background-color: black;
+    transition: 0.5s;
+  }
+  .nav-toggle:focus:not(:focus-visible) {
+    outline: none;
+  }
+}
 
 

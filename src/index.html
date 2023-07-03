@@ -7,35 +7,69 @@
     <title>league of legend</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Knewave&display=swap" rel="stylesheet"/>
+    <script src="https://kit.fontawesome.com/5f673cf7f2.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <!--PRESENTACION-->
+    <!--Pagina Principal-->
+    <section id="section1">
+      <!--PRESENTACION-->
     <header id="header" class="header">
-      <h1 id="header_h1">league of legend</h1>
-      <p class="header_p">ELIGE A TU</p>
-      <p class="header_p1">CAMPEÓN</p>
-      <p class="header_p2">Teniendo en cuenta que hay más de 140 campeones, no <br> tardarás en encontrar tu estilo de juego. Domina a uno o a <br>todos.</p>
-      <div class="div_flecha">
-        <a href="#main_h2"><img src="flecha.png" id="botonAbajo"></a>
+      <div id="container_text">
+        <div id="container_title">
+          <h1 id="header_h1">league of legend</h1>
+        </div>
+        <div id="container_phrase">
+          <div id ="container_ph1"class="container_phall">
+            <p class="p1">ELIGE A TU</p>
+          </div>
+          <div id ="container_ph2"class="container_phall">
+            <p class="p2">CAMPEÓN</p>
+          </div>
+          <div id ="container_ph3" class="container_phall">
+            <p class="p3">Teniendo en cuenta que hay más de 140 campeones, no <br> tardarás en encontrar tu estilo de juego. Domina a uno o a <br>todos.</p>
+          </div>
+        </div>
+        <div class="div_flecha">
+          <a href="#section2"><img src="flecha.png" id="botonAbajo"></a>
+        </div>
       </div>
     </header>
-    <!--HOME-->
-    <main>
-
-      <h2 id="main_h2">league of legend</h2>
-      <nav>
-        <ul class="menú">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#tips">Tips para jugar</a></li>
-          <li><a href="#Estadisticas">Estadisticas</a></li>
+    </section>
+  <!--Página dos-->
+    <section id="section2">
+    <nav class="nav">
+      <a href="#section1" class="logo nav-link" id="botonArriba">League of Legend</a>
+      <button class="nav-toggle nav-menu_visible" aria-label="Abrir menú">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+        <ul class="nav-menu">
+          <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#home">Home</a></li>
+          <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#tips">Tips para jugar</a></li>
+          <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="#estadisticas">Estadisticas</a></li>
         </ul>
-      </nav>
-      <div id="champion-container"></div>
-
-
-
+    </nav>
+    <!--HOME-->
+    <main id="container_main">
+      <div id="container_all">
+        <div class="navegador">
+          <div class="nav_container">
+            <nav>
+              <ul class="barra-menu">
+                <li><a href="#todos">TODOS</a></li>
+                <li><a href="#luchador">LUCHADOR</a></li>
+                <li><a href="#tirador">TIRADOR</a></li>
+                <li><a href="#mago">MAGO</a></li>
+                <li><a href="#asesino">ASESINO</a></li>
+                <li><a href="#tanque">TANQUE</a></li>
+                <li><a href="#apoyo">APOYO</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div id="container_img" class="container clearfix"></div>
+      </div>
     </main>
-  </body>
+   </section>
   <script src="main.js" type="module"></script>
   </body>
 </html>
