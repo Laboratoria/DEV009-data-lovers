@@ -3,7 +3,7 @@
 import data from './data/ghibli/ghibli.js';
 
 //Método map() es una función de los arreglos en JS que ITERA sobre cada elemento del arreglo y crea un nuevo arreglo
-//Obtener la lista de personas ordenadas alfabéticamente
+//______PERSONAJES ORDENADOS ALFABÉTICAMENTE
 const people = data.films.flatMap(film => film.people.map(person => ({
   name: person.name,
   image: person.img
@@ -31,6 +31,61 @@ people.forEach(person => {
   peopleList.appendChild(personItem);
 });
 
+//______PELÍCULAS ORDENADAS ALFABÉTICAMENTE
 
+const films = data.films.flatMap(film => ({
+  title: film.title,
+  poster: film.poster
+}));
+films.sort((a, b) => a.title.localeCompare(b.title));
+console.log(films);
 
+const filmsList = document.getElementById('films-list');
+filmsList.innerHTML = '';
 
+films.forEach(film => {
+  const titleItem = document.createElement('div');
+  const titleImage = document.createElement('img');
+  const titleName = document.createElement('p');
+
+  titleImage.src = film.poster;
+  titleName.textContent = film.title;
+
+  titleItem.appendChild(titleImage);
+  titleItem.appendChild(titleName);
+  filmsList.appendChild(titleItem);
+});
+
+//______CLICK PELÍCULAS ORDENADAS ALFABÉTICAMENTE
+const ordenAlfabeticoFilmsLink = document.getElementById('orden-alfabetico-films');
+
+ordenAlfabeticoFilmsLink.addEventListener('click', function(event) {
+  event.preventDefault(); // Evita que el enlace realice la acción predeterminada
+
+  if (peopleList.style.display !== 'none') {
+    peopleList.style.display = 'none';
+  }
+
+  if (filmsList.style.display === 'none') {
+    filmsList.style.display = 'grid';
+  } else {
+    filmsList.style.display = 'none';
+  }
+});
+
+//______CLICK PERSONAJES ORDENADOS ALFABÉTICAMENTE
+const ordenAlfabeticoPeopleLink = document.getElementById('orden-alfabetico-people');
+
+ordenAlfabeticoPeopleLink.addEventListener('click', function(event) {
+  event.preventDefault(); // Evita que el enlace realice la acción predeterminada
+
+  if (filmsList.style.display !== 'none') {
+    filmsList.style.display = 'none';
+  }
+
+  if (peopleList.style.display === 'none') {
+    peopleList.style.display = 'grid';
+  } else {
+    peopleList.style.display = 'none';
+  }
+});
