@@ -3,8 +3,6 @@ body {
     background-color: #022973;
     display: flex;
     flex-direction: column;
-
-
 }
 
 img {
@@ -70,3 +68,31 @@ footer {
     text-align: center;
     padding: center;
 }
+main#targets{
+    margin: 0;
+}
+#targets {
+    padding: center;
+    display:grid;
+    width: 330px;
+    height: 500px;
+    margin: 300px;
+    grid-template-columns: repeat(3,1fr);
+    gap: 7px;
+   
+}
+.cards{
+    border: solid 2px #000;
+    background:#FFFFFF;
+   
+}
+ 
+article img {
+    width: 300px;
+    height: 300px;
+    border: solid 2px #FFCB08;
+    margin-left: 0;
+    margin-right:0;
+    padding: 10px;;
+    
+} 

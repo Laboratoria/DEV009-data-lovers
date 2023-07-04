@@ -8,7 +8,7 @@ const container = document.getElementById("targets");
 const display = (pokemones)=>{
     pokemones.forEach(element => {
         const target = document.createElement('article')
-        target.classList.add('target1');
+        target.classList.add('cards');
         target.innerHTML += `<img src='${element.img}' alt='imagen de ${element.name}'>
         <h2>${element.name}</h2>
         <h3>${element.num}</h3>
@@ -25,9 +25,10 @@ const display = (pokemones)=>{
 display(dataPokemon);
 
 //añadir un add event listener al menu
-const menu = document.getElementById("menu")
+const menu = document.getElementById("menu");
+const targets = document.querySelector(".cards");
 
-menu.addEventListener("click", () => {
+menu.addEventListener("change", () => {
     const element = menu.options[menu.selectedIndex].value
     if (element === "az") {
         sortNameasc(data.pokemon)
@@ -43,18 +44,9 @@ menu.addEventListener("click", () => {
         sortNumLower(data.pokemon)
     } console.log(data)
 
+    targets.appendChild(element)
 })
+menu(dataPokemon);
 //como hacer que el menu no haga click por defecto
 //como mostrar en el dom
 
-const showMenu = document.createElement('data');
-const shoeData = document.createTextNode('data.pokemon');
-///
-const elementP = document.querySelector('.menu');
-///
-elementP.appendChild(showMenu);
-showMenu.appendChild(shoeData);
-
-
-let elementID = document.getElementByClass('az');
-elementID.innerHTML = 'HTML';
