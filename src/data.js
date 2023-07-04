@@ -32,9 +32,6 @@ export const searchPokemon = (data, inputText) => {
 }; */
 ////
 
-
-
-
-//fin nancy
+//FIN nancy
 
 
