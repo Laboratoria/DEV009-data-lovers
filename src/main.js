@@ -5,6 +5,7 @@ import { sortNameDes, sortNameasc, sortNumYouger, sortNumLower } from './data.js
 const dataPokemon = data.pokemon;
 const container = document.getElementById("targets");
 
+//mostrar en el dom todos los pokemones
 const display = (pokemones)=>{
     pokemones.forEach(element => {
         const target = document.createElement('article')
@@ -17,9 +18,7 @@ const display = (pokemones)=>{
         <h3>${element.size.height}</h3>
         <h3>${element.size.weight}</h3>
         <p>${element.about}</p>`
-
         container.appendChild(target)
-
     });
 }
 display(dataPokemon);
@@ -42,19 +41,9 @@ menu.addEventListener("click", () => {
     else if (element === "numberMenor") {
         sortNumLower(data.pokemon)
     } console.log(data)
-
 })
-//como hacer que el menu no haga click por defecto
-//como mostrar en el dom
 
-const showMenu = document.createElement('data');
-const shoeData = document.createTextNode('data.pokemon');
-///
-const elementP = document.querySelector('.menu');
-///
-elementP.appendChild(showMenu);
-showMenu.appendChild(shoeData);
+//filtro de busqueda por nombre
+const filterSearch= ()=>{
 
-
-let elementID = document.getElementByClass('az');
-elementID.innerHTML = 'HTML';
+}
