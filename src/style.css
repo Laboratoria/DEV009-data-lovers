@@ -27,10 +27,6 @@ p {
     display: inline-block;
 }
 
-.responsive{
-    border: red solid 3px;
-}
-
 .selection1{
     background-color: #82BF45;
     margin-left: 7px;
@@ -58,20 +54,19 @@ p {
 
 .selection{
     background-color: #82BF45;
-    
+    margin-top: 10px;
 }
 
 .letras {
     color:black;
     background-color: #82BF45;
     padding-bottom: 1px;
-    margin-bottom: 1px;
+    margin-bottom: 10px;
     padding-left: 10px;
     margin-left: 10px;
     padding-top: 2px;
     margin-top: 3px;
     margin: 0 auto;
-    
 }
 
 .optionlight {
