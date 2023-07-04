@@ -9,6 +9,16 @@ export const sortBy = (data, option) => {
 };
 
 export const filterByDirector = (data, director) => {
- return data.filter((item) => item.director === director
- );
+  function normalizeString(string) {
+    return string.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  }
+  
+  function compareStrings(a, b) {
+    return normalizeString(a) === normalizeString(b);
+  }
+ return data.filter((item) => compareStrings(item.director, director));
+};
+
+export const filterByYear = (data, year) => {
+  return data.filter((item) => item.release_date === year);
 };

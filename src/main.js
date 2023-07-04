@@ -1,4 +1,4 @@
-import { sortBy, filterByDirector } from './data.js';
+import { sortBy, filterByDirector, filterByYear } from './data.js';
 
 import data from './data/ghibli/ghibli.js'
 console.log(data);
@@ -58,7 +58,52 @@ function createCardContainer(dataGhibli){
 //Se manda ejecutar la funcion createCardContainer con los datos guardados dentro de la const films
 createCardContainer(films);
 
-// Obtén una referencia al elemento select
+function handleSelection() {
+  const selectedOption = orderSelect.value;
+  const selectedOptionDirector = filterSelect.value;
+  const selectedOptionYear = yearFilterSelect.value;
+
+
+  if(selectedOption === "all" && selectedOptionDirector === "all" && selectedOptionYear === "all") {
+    dataContainer.innerHTML = "";
+    createCardContainer(films);
+  } else if (selectedOption === "all" ){
+    const dataFilter = filterByDirector(films.slice(), selectedOptionDirector);
+    const dataFilterYear = filterByYear(dataFilter, selectedOptionYear);
+    createCardContainer(dataFilterYear);
+    console.log(dataFilter);
+  } else if (selectedOptionDirector === "all"){
+    const dataSort = sortBy(films.slice(), selectedOption);
+    const dataFilterYear = filterByYear(dataSort, selectedOptionYear);
+    createCardContainer(dataFilterYear);
+    console.log(dataSort);
+  } else if(selectedOptionYear === "all") {
+    const dataSort = sortBy(films.slice(), selectedOption);
+    const dataFilter = filterByDirector(dataSort, selectedOptionDirector);
+    createCardContainer(dataFilter);
+    console.log(dataFilter)
+  } else {
+    const dataSort = sortBy(films.slice(), selectedOption);
+    const dataFilter = filterByDirector(dataSort, selectedOptionDirector);
+    const dataFilterYear = filterByYear(dataFilter, selectedOptionYear);
+    createCardContainer(dataFilterYear);
+    console.log(dataFilterYear)
+  }
+
+};
+
+const orderSelect = document.getElementById('orderSelect');
+const filterSelect = document.getElementById('filterSelect');
+const yearFilterSelect = document.getElementById('yearFilterSelect');
+
+
+orderSelect.addEventListener('change', handleSelection);
+filterSelect.addEventListener('change', handleSelection);
+yearFilterSelect.addEventListener('change', handleSelection);
+
+
+
+/* Obtén una referencia al elemento select
 const orderSelect = document.getElementById('orderSelect');
 // Agrega el evento change al elemento select
 orderSelect.addEventListener('change', function() {
@@ -87,6 +132,6 @@ filterSelect.addEventListener('change', function(){
     createCardContainer(dataFilter);
     console.log(dataFilter);
   }
-})
+}) */
 
 
