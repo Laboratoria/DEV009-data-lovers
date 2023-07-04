@@ -1,0 +1,72 @@
+body {
+    min-height: 100vh;
+    background-color: #022973;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+img {
+    height: 100px;
+    width: 350px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sections {
+    margin-left: auto;
+    text-align: center;
+    border: solid 2px #000;
+    background-color: #FFCB08;
+    height: 40px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 7px;
+
+}
+
+li {
+    display: inline-block;
+
+}
+
+.Genebest {
+    display: block;
+    padding: 10px 20px;
+}
+
+.Genebest:hover {
+    background-color: #CB1D0E;
+    height: 20px;
+}
+
+main {
+    flex: 1;
+}
+
+.interview {
+    text-align: center;
+    border: solid #ffffff;
+    background-color: #FFFFFF;
+    height: 30px;
+    margin: 0;
+}
+
+label {
+    color: #FFFFFF;
+}
+
+footer {
+    border: solid #CB1D0E;
+    background-color: #CB1D0E;
+    text-align: center;
+    padding: center;
+}
