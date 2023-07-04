@@ -44,9 +44,9 @@ menu.addEventListener("change", () => {
         sortNumLower(data.pokemon)
     } console.log(data)
 
-    targets.appendChild(element)
+
 })
-menu(dataPokemon);
+
 //como hacer que el menu no haga click por defecto
 //como mostrar en el dom
 
