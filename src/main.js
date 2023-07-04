@@ -2,13 +2,33 @@
 
 import data from './data/pokemon/pokemon.js';
 import { sortNameDes, sortNameasc, sortNumYouger, sortNumLower } from './data.js';
+const dataPokemon = data.pokemon;
+const container = document.getElementById("targets");
 
-console.log(data);
+const display = (pokemones)=>{
+    pokemones.forEach(element => {
+        const target = document.createElement('article')
+        target.classList.add('cards');
+        target.innerHTML += `<img src='${element.img}' alt='imagen de ${element.name}'>
+        <h2>${element.name}</h2>
+        <h3>${element.num}</h3>
+        <h3>${element.generation.num}</h3>
+        <h3>${element.type}</h3>
+        <h3>${element.size.height}</h3>
+        <h3>${element.size.weight}</h3>
+        <p>${element.about}</p>`
+
+        container.appendChild(target)
+
+    });
+}
+display(dataPokemon);
 
 //añadir un add event listener al menu
-const menu = document.getElementById("menu")
+const menu = document.getElementById("menu");
+const targets = document.querySelector(".cards");
 
-menu.addEventListener("click", () => {
+menu.addEventListener("change", () => {
     const element = menu.options[menu.selectedIndex].value
     if (element === "az") {
         sortNameasc(data.pokemon)
@@ -24,6 +44,9 @@ menu.addEventListener("click", () => {
         sortNumLower(data.pokemon)
     } console.log(data)
 
+    targets.appendChild(element)
 })
+menu(dataPokemon);
 //como hacer que el menu no haga click por defecto
 //como mostrar en el dom
+
