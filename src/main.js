@@ -2,16 +2,19 @@
 //se importa un objeto que llamaremos data desde el archivo './data/ghibli/ghibli.js' - el objeto tiene una exportación default
 import data from './data/ghibli/ghibli.js';
 
-//Método map() es una función de los arreglos en JS que ITERA sobre cada elemento del arreglo y crea un nuevo arreglo
+import { orderByAlphabetical } from './data.js';
+
+//Método map() y flatMap() son funciones de los arreglos en JS que ITERAN sobre cada elemento del arreglo y crea un nuevo arreglo
+
 //______PERSONAJES ORDENADOS ALFABÉTICAMENTE
 const people = data.films.flatMap(film => film.people.map(person => ({
   name: person.name,
   image: person.img
 })));
-people.sort((a, b) => a.name.localeCompare(b.name));
-console.log(data, data.films, people);
-
-//export { people }; aún no se sabe cómo usarlo efectivame en data.js
+//people.sort((a, b) => a.name.localeCompare(b.name));
+const peopleOrdered = orderByAlphabetical (people);
+console.log("estoy ordenando personas",peopleOrdered);
+console.log("estoy mostrando la data", data, data.films, people);
 
 //HTML de la lista de personas
 const peopleList = document.getElementById('people-list');
@@ -31,14 +34,32 @@ people.forEach(person => {
   peopleList.appendChild(personItem);
 });
 
+//______CLICK PERSONAJES ORDENADOS ALFABÉTICAMENTE
+const ordenAlfabeticoPeopleLink = document.getElementById('orden-alfabetico-people');
+
+ordenAlfabeticoPeopleLink.addEventListener('click', function(event) {
+  event.preventDefault(); // Evita que el enlace realice la acción predeterminada
+
+  if (filmsList.style.display !== 'none') {
+    filmsList.style.display = 'none';
+  }
+
+  if (peopleList.style.display === 'none') {
+    peopleList.style.display = 'grid';
+  } else {
+    peopleList.style.display = 'none';
+  }
+});
+
 //______PELÍCULAS ORDENADAS ALFABÉTICAMENTE
 
 const films = data.films.flatMap(film => ({
   title: film.title,
   poster: film.poster
 }));
+
 films.sort((a, b) => a.title.localeCompare(b.title));
-console.log(films);
+console.log("estoy ordenando películas", films);
 
 const filmsList = document.getElementById('films-list');
 filmsList.innerHTML = '';
@@ -70,22 +91,5 @@ ordenAlfabeticoFilmsLink.addEventListener('click', function(event) {
     filmsList.style.display = 'grid';
   } else {
     filmsList.style.display = 'none';
-  }
-});
-
-//______CLICK PERSONAJES ORDENADOS ALFABÉTICAMENTE
-const ordenAlfabeticoPeopleLink = document.getElementById('orden-alfabetico-people');
-
-ordenAlfabeticoPeopleLink.addEventListener('click', function(event) {
-  event.preventDefault(); // Evita que el enlace realice la acción predeterminada
-
-  if (filmsList.style.display !== 'none') {
-    filmsList.style.display = 'none';
-  }
-
-  if (peopleList.style.display === 'none') {
-    peopleList.style.display = 'grid';
-  } else {
-    peopleList.style.display = 'none';
   }
 });
