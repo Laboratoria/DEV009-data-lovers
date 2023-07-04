@@ -106,4 +106,30 @@ nav ul li a {
     gap: 40px;
     padding: 60px;
 }
-  
+
+.orderSelect {
+    width: 200px;
+    margin: auto;
+    position: absolute;
+    right: 0px;
+
+}
+
+#filters {
+    background-color: var(--container-color);
+    display: flex;
+    flex-direction: column;
+}
+
+#orderBy {
+float: right;
+padding: 25px;
+}
+
+#filters {
+    float:left;
+    padding: 60px;
+    margin: 25px, 25px;
+    margin-left: 25px;
+    border-radius: 18px;
+}
