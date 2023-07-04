@@ -58,43 +58,33 @@ function createCardContainer(dataGhibli){
 //Se manda ejecutar la funcion createCardContainer con los datos guardados dentro de la const films
 createCardContainer(films);
 
+const orderSelect = document.getElementById('orderSelect');
+const filterSelect = document.getElementById('filterSelect');
+const yearFilterSelect = document.getElementById('yearFilterSelect');
+
+
 function handleSelection() {
   const selectedOption = orderSelect.value;
   const selectedOptionDirector = filterSelect.value;
   const selectedOptionYear = yearFilterSelect.value;
 
+  let copyFilmsData = films.slice()
 
-  if(selectedOption === "all" && selectedOptionDirector === "all" && selectedOptionYear === "all") {
-    dataContainer.innerHTML = "";
-    createCardContainer(films);
-  } else if (selectedOption === "all" ){
-    const dataFilter = filterByDirector(films.slice(), selectedOptionDirector);
-    const dataFilterYear = filterByYear(dataFilter, selectedOptionYear);
-    createCardContainer(dataFilterYear);
-    console.log(dataFilter);
-  } else if (selectedOptionDirector === "all"){
-    const dataSort = sortBy(films.slice(), selectedOption);
-    const dataFilterYear = filterByYear(dataSort, selectedOptionYear);
-    createCardContainer(dataFilterYear);
-    console.log(dataSort);
-  } else if(selectedOptionYear === "all") {
-    const dataSort = sortBy(films.slice(), selectedOption);
-    const dataFilter = filterByDirector(dataSort, selectedOptionDirector);
-    createCardContainer(dataFilter);
-    console.log(dataFilter)
-  } else {
-    const dataSort = sortBy(films.slice(), selectedOption);
-    const dataFilter = filterByDirector(dataSort, selectedOptionDirector);
-    const dataFilterYear = filterByYear(dataFilter, selectedOptionYear);
-    createCardContainer(dataFilterYear);
-    console.log(dataFilterYear)
+  if(selectedOptionDirector !== 'all'){
+    copyFilmsData = filterByDirector(copyFilmsData, selectedOptionDirector);
   }
 
-};
+  if(selectedOptionYear !== 'all'){
+    copyFilmsData = filterByYear(copyFilmsData, selectedOptionYear);
+  }
 
-const orderSelect = document.getElementById('orderSelect');
-const filterSelect = document.getElementById('filterSelect');
-const yearFilterSelect = document.getElementById('yearFilterSelect');
+  if(selectedOption !== 'all'){
+    copyFilmsData = sortBy(copyFilmsData, selectedOption);
+  }
+
+  dataContainer.innerHTML = "";
+  createCardContainer(copyFilmsData)
+};
 
 
 orderSelect.addEventListener('change', handleSelection);
