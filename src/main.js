@@ -1,113 +1,86 @@
-import { example } from './data.js';
+import { filter } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/rickandmorty/rickandmorty.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 
 console.log(data.results);
+console.log(data.results.type);
 
-//poner todas las tarjetas por default en el inicio 
 
-//Escuchar los eventos del DOM
-//escuchar el evento de hacer click en la opcion 
+//Escuchar los eventos del DOM - escuchar el evento de hacer click en la opcion 
 
 //Status
-const opcionVivo= document.getElementById("alive")
-opcionVivo.addEventListener("click",crearTarjetas)
-
-const opcionMuerto= document.getElementById("dead")
-opcionMuerto.addEventListener("click",crearTarjetas)
-
-const opcionTipoDesconocido= document.getElementById("unknownStatus")
-opcionTipoDesconocido.addEventListener("click",crearTarjetas)
+const selectStatus= document.getElementById("status")
+selectStatus.addEventListener("change", () => {
+    const optionStatus = selectStatus.value;
+    const filteredStatus = data.results.filter(function(result){
+        return result.status === optionStatus;
+    });
+    console.log(filteredStatus);
+});
 
 //Species
-const opcionHuman= document.getElementById("human")
-opcionHuman.addEventListener("click",crearTarjetas)
+//definir la funcion filtrar 
 
-const opcionAlien= document.getElementById("alien")
-opcionAlien.addEventListener("click",crearTarjetas)
-
-const opcionVampire= document.getElementById("vampire")
-opcionVampire.addEventListener("click",crearTarjetas)
-
-const opcionHumanoid= document.getElementById("humanoid")
-opcionHumanoid.addEventListener("click",crearTarjetas)
-
-const opcionDisease= document.getElementById("disease")
-opcionDisease.addEventListener("click",crearTarjetas)
-
-const opcionCronenberg= document.getElementById("cronenberg")
-opcionCronenberg.addEventListener("click",crearTarjetas)
-
-const opcionunknownSpecie= document.getElementById("unknownSpecie")
-opcionunknownSpecie.addEventListener("click",crearTarjetas)
-
-//Type
-const opcionAmoebaPerson= document.getElementById("amoebaPerson")
-opcionAmoebaPerson.addEventListener("click",crearTarjetas)
-
-const opcionGame= document.getElementById("game")
-opcionGame.addEventListener("click",crearTarjetas)
-
-const opcionDemon= document.getElementById("demon")
-opcionDemon.addEventListener("click",crearTarjetas)
-
-const opcionConeNippledAlien= document.getElementById("coneNippledAlien")
-opcionConeNippledAlien.addEventListener("click",crearTarjetas)
-
-const opcionGiant= document.getElementById("giant")
-opcionGiant.addEventListener("click",crearTarjetas)
-
-const opcionZigerion= document.getElementById("Zigerion")
-opcionZigerion.addEventListener("click",crearTarjetas)
-
-const opcionRobotCrocodileHybrid= document.getElementById("robotCrocodileHybrid")
-opcionRobotCrocodileHybrid.addEventListener("click",crearTarjetas)
-
-const opcionunknownType= document.getElementById("unknownType")
-opcionunknownType.addEventListener("click",crearTarjetas)
+//escuchar el evento del elemento selectSpecies
+const selectSpecies= document.getElementById("species");
+selectSpecies.addEventListener("change", () => {
+    const optionSpecies = selectSpecies.value;
+    const filteredSpecies = data.results.filter(function(result){
+        return result.species === optionSpecies;
+    });
+    console.log(filteredSpecies);
+});
 
 //Gender
-const opcionMale= document.getElementById("male")
-opcionMale.addEventListener("click",crearTarjetas)
-
-const opcionFemale= document.getElementById("female")
-opcionFemale.addEventListener("click",crearTarjetas)
-
-const opcionUnknownGender= document.getElementById("unknownGender")
-opcionUnknownGender.addEventListener("click",crearTarjetas)
+const selectGender= document.getElementById("gender");
+selectGender.addEventListener("change", () => {
+    const optionGender = selectGender.value;
+    const filteredGender = data.results.filter(function(result){
+        return result.gender === optionGender;
+    });
+    console.log(filteredGender);
+});
 
 //Order
-const opcionAZ= document.getElementById("AZ")
-opcionAZ.addEventListener("click",crearTarjetas)
-
-const opcionZA= document.getElementById("ZA")
-opcionZA.addEventListener("click",crearTarjetas)
+/*const selectOrder= document.getElementById("order");
+selectOrder.addEventListener("change", () => {
+    const optionOrder = selectOrder.value;
+    let sorted;
+    if (optionOrder === "AZ"){
+        sorted = data.results.sort((a, b) => a.order.localeCompare(b.order));
+    } else {
+        sorted = data.results.sort((a, b) => b.order.localeCompare(a.order));
+    }
+    console.log(sorted);
+}); */
 
 //Search
 const opcionSearch= document.getElementById("search")
 opcionSearch.addEventListener("click",crearTarjetas)
 
 
-// Crear un arreglo con elementos de la opción seleccionada
-
-
+//crear una funcion que cree los li
 //Crear los nodos 
 const tarjetas = document.getElementById("listaPadre") // seleccionar el elemento padre 
 
 function crearTarjetas(arregloTarjetas){
     for (let i = 0; i < arregloTarjetas.length; i++){
         const creaLi = document.createElement("li"); //creando los nodos 
-        tarjetas.appendChild(li); //agregar el nodo 
+        tarjetas.appendChild(creaLi); //agregar el nodo 
 }
 }
+
+
 
 //Hacer un arreglo con los type 
 
-const statusArray = [];
+/*const statusArray = [];
 
 data.results.forEach(element => {
-    statusArray.push(element.type.value);
+    if (!statusArray.includes(element.species)){
+        statusArray.push(element.species);
+    } 
 });
 
-console.log(statusArray); 
+console.log(statusArray); */
