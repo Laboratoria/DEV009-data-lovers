@@ -32,6 +32,22 @@ bot.addEventListener('click',function(){
    const resultado = busqueda(allCountries,valor);
    
    console.log(resultado);
+   /**************Creacion de cartas por filtro****************/
+for (let i = 0; i< resultado.length; i++){
+   let card = document.createElement ('div');
+   card.className= 'card';
+   card.id = resultado[i].name.common;
+   card.innerHTML= ` 
+      <img src=${resultado[i].flags.png}>
+      <h2>${resultado[i].name.common}</h2>
+     `
+      root.appendChild(card);
+   /**************Seleccion de cartas por filtro****************/
+   card.addEventListener('click', function() {
+      const id = card.id;
+      console.log(country(allCountries,id));
+   });
+}
 });
 
 /*console.log(contAmerica(allCountries))*/
