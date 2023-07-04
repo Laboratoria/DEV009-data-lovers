@@ -5,7 +5,9 @@ import { sortNameDes, sortNameasc, sortNumYouger, sortNumLower } from './data.js
 const dataPokemon = data.pokemon;
 const container = document.getElementById("targets");
 
+//mostrar en el dom todos los pokemones
 const display = (pokemones)=>{
+    container.innerHTML = ""
     pokemones.forEach(element => {
         const target = document.createElement('article')
         target.classList.add('cards');
@@ -17,12 +19,12 @@ const display = (pokemones)=>{
         <h3>${element.size.height}</h3>
         <h3>${element.size.weight}</h3>
         <p>${element.about}</p>`
-
         container.appendChild(target)
-
     });
 }
 display(dataPokemon);
+
+
 
 //añadir un add event listener al menu
 const menu = document.getElementById("menu");
@@ -31,22 +33,26 @@ const targets = document.querySelector(".cards");
 menu.addEventListener("change", () => {
     const element = menu.options[menu.selectedIndex].value
     if (element === "az") {
-        sortNameasc(data.pokemon)
+        display(sortNameasc(dataPokemon))
     }
     else if (element === "za") {
-        sortNameDes(data.pokemon)
+        display(sortNameDes(dataPokemon))
+      
 
     }
     else if (element === "numberMayor") {
-        sortNumYouger(data.pokemon)
+        display(sortNumYouger(dataPokemon))
     }
     else if (element === "numberMenor") {
-        sortNumLower(data.pokemon)
-    } console.log(data)
-
-    targets.appendChild(element)
+        display(sortNumLower(dataPokemon))
+    } console.log(data);
 })
-menu(dataPokemon);
-//como hacer que el menu no haga click por defecto
-//como mostrar en el dom
+
+
+
+
+
+//filtro de buscar por nombre
+//document.getElementById('pokeNames').addEventListener('keyup')
+
 
