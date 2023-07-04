@@ -35,9 +35,9 @@ Los lenguajes utilizados fueron HTML semántico, CSS y JavaScript Vanilla. Se cr
 ## 4. Historias de Usuario
 
 #### Historia de usabilidad 1
-
+[user story 1](src/img/User%20Story%201.png)
 #### Historia de usabilidad 2
-
+[user story 1](src/img/User%20Story%202.png)
 #### Historia de usabilidad 3
 
 #### Historia de usabilidad 4
@@ -46,16 +46,31 @@ Los lenguajes utilizados fueron HTML semántico, CSS y JavaScript Vanilla. Se cr
 
 
 #### Prototipo de baja fidelidad
-
+[user story 1](src/img/prototipo%20en%20papel.png)
 
 #### Prototipos de alta fidelidad
+[prototipo alta 1](src/img/prototipo%20alta%20version%201.png)
 
-Durante el reto deberás hacer _tests_ de usabilidad con distintos usuarios, y
-en base a los resultados, deberás iterar tus diseños. Cuéntanos
-qué problemas de usabilidad detectaste a través de los _tests_ y cómo los
-mejoraste en tu propuesta final.
+Hicimos test de usabilidad recibiendo como feedback los siguiente.
+Usuario 1 : No encontro el boton de ordenar, deberia haber un boton para resetear la busqueda, no deberian ocultarse los filtros, si habia posibilidad de que viera un pop up al darle click a una pelicula o a la imagen o que diera mas informacion(hacker edition),
 
-[Figma](https://www.figma.com/) 
+Uusario: No encontró botón de ordenado, demoró 1 minuto , hacerlo más vistoso o ponerlo del lado de los filtros, botón de reset ,
+
+Se llegó a las siguientes conclusiones
+
+1.Hacer ORDER vistoso o de lado izquierdo.
+2.Boton de limpiar información (filtros y de ordenado).
+3.Considerar hacer una lista desplegable para que solo elijan 1 filtro.
+4.El checkbox para el hacker edition.
+Por lo que el prototipo de alta fidelidad se modifico de la siguiente manera.
+[prototitpo alta 2](src/img/prototipo%20alta%20v2.png)
+
+Se realizo también la versión mobile, considerando una lista desplegable donde se puedan seleccionar los filtros y el orderby.
+[mobile 1](src/img/version%20mobile.png)
+
+[mobile 2](src/img/mobile%20v2.png)
+
+Usamos para el diseño de ambos protipos[Figma](https://www.figma.com/) 
 
 ### Implementación de la Interfaz de Usuario (HTML/CSS/JS)
 
