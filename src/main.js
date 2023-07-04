@@ -22,7 +22,7 @@ const displayPokemon = (dataPokemon) => {
   dataPokemon.forEach((pokemon) => {
 
 
-    console.log("🚀 ~ file: main.js:12 ~ muestraPokemon.forEach ~ pokemon:", pokemon.type[0])
+
     const type = pokemon.type;
 
 
@@ -78,7 +78,7 @@ displayPokemon(randomPokemon);
 ///////////// INICIO NANCY
 //obtener el el text que el usuario escriba en el input
 const buscarPokemon = document.getElementById("buscarPokemon");
-const cardResult = document.createElement("div");
+//const cardResult = document.createElement("div");
 
 
 
