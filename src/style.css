@@ -14,7 +14,6 @@ body {
 header{
     width: 100%;
     background-color: aliceblue;
-    text-align: right;
     padding: 0.5rem;
     margin: 0.5rem;
 }
@@ -45,10 +44,11 @@ h1{
     background: #767775;
     padding: 0.5rem;
     margin: 0.5rem;
+    margin-top: 1000px;
 }
 div {
     width: min-content;
-    
+
 }
 
 
@@ -107,3 +107,7 @@ div {
 .fairy{
     background: linear-gradient(to bottom right,	rgb(176,88,160), 30%, 	rgb(252, 125, 229));
 }
+
+
+
+ 
