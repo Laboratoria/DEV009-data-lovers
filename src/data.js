@@ -51,7 +51,7 @@ export const searchPokemon = (data, inputText) => {
 
 
 
+//FIN nancy
 
-//fin nancy
 
 
