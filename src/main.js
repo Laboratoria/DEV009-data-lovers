@@ -7,9 +7,10 @@ const container = document.getElementById("targets");
 
 //mostrar en el dom todos los pokemones
 const display = (pokemones)=>{
+    container.innerHTML = ""
     pokemones.forEach(element => {
         const target = document.createElement('article')
-        target.classList.add('target1');
+        target.classList.add('cards');
         target.innerHTML += `<img src='${element.img}' alt='imagen de ${element.name}'>
         <h2>${element.name}</h2>
         <h3>${element.num}</h3>
@@ -23,27 +24,35 @@ const display = (pokemones)=>{
 }
 display(dataPokemon);
 
-//añadir un add event listener al menu
-const menu = document.getElementById("menu")
 
-menu.addEventListener("click", () => {
+
+//añadir un add event listener al menu
+const menu = document.getElementById("menu");
+const targets = document.querySelector(".cards");
+
+menu.addEventListener("change", () => {
     const element = menu.options[menu.selectedIndex].value
     if (element === "az") {
-        sortNameasc(data.pokemon)
+        display(sortNameasc(dataPokemon))
     }
     else if (element === "za") {
-        sortNameDes(data.pokemon)
+        display(sortNameDes(dataPokemon))
+      
 
     }
     else if (element === "numberMayor") {
-        sortNumYouger(data.pokemon)
+        display(sortNumYouger(dataPokemon))
     }
     else if (element === "numberMenor") {
-        sortNumLower(data.pokemon)
-    } console.log(data)
+        display(sortNumLower(dataPokemon))
+    } console.log(data);
 })
 
-//filtro de busqueda por nombre
-const filterSearch= ()=>{
 
-}
+
+
+
+//filtro de buscar por nombre
+//document.getElementById('pokeNames').addEventListener('keyup')
+
+
