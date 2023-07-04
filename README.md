@@ -2,624 +2,341 @@
 
 ## Índice
 
-* [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
-* [4. Consideraciones generales](#4-consideraciones-generales)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Hacker edition](#6-hacker-edition)
-* [7. Consideraciones técnicas](#7-consideraciones-técnicas)
-* [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
-* [9. Checklist para solicitar PF](#9-checklist-para-solicitar-pf)
+* [1. Definición del producto](#1-definición-del-producto)
+* [2. Historias de usuario](#2-historias-de-usuario)
+* [3. Prototipos de baja fidelidad](#3-prototipos-de-baja-fidelidad)
+* [4. Prototipos de baja fidelidad](#4-prototipos-de-alta-fidelidad)
+* [5. Resultados de test de usuabilidad](#5-resultados-de-test-de-usuabilidad)
+* [6. Panificación del Proyecto](#6-planificación-del-proyecto)
+* [7. Contribuidoras](#6-contribuidoras)
 
 ***
 
-## 1. Preámbulo
+## 1. Definición del producto
 
-Según [Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read),
-el 90% de la data que existe hoy ha sido creada durante los últimos dos años.
-Cada día generamos 2.5 millones de terabytes de datos, una cifra sin
-precedentes.
+El producto 'Countries' es una aplicación web que proporciona información detallada sobre países de todo el mundo. Permite a los usuarios explorar y buscar países, acceder a datos relevantes como su capital, población, idiomas oficiales, zonas horarias y más. Además, ofrece funcionalidades de filtrado y clasificación para ayudar a los usuarios a encontrar países según sus preferencias. El producto también incluye una interfaz intuitiva y amigable, que permite una navegación fácil y una experiencia agradable para los usuarios. Con 'Countries', los usuarios pueden ampliar su conocimiento sobre diferentes países y acceder rápidamente a información clave para diversos propósitos como viajes, estudios, investigaciones y más.
 
-No obstante, los datos por sí mismos son de poca utilidad. Para que esas
-grandes cantidades de datos se conviertan en **información** fácil de leer para
-los usuarios, necesitamos entender y procesar estos datos. Una manera simple de
-hacerlo es creando _interfaces_ y _visualizaciones_.
+### Características principales
 
-En la siguiente imagen, podrás ver cómo con la data que que se ve en la parte
-izquierda se puede construir una interfaz amigable y entendible por las
-usuarias, al lado derecho.
+* Información detallada de países: Proporciona datos exhaustivos sobre países, incluyendo su nombre, capital, población, idiomas oficiales, zonas horarias, entre otros.
 
-![pokemon-data-to-ui](https://user-images.githubusercontent.com/12631491/218505816-c6d11758-9de4-428f-affb-2a56ea4d68c4.png)
+* Búsqueda de países: Permite a los usuarios buscar países específicos utilizando un cuadro de búsqueda, lo que facilita la localización rápida de información sobre un país en particular.
 
-## 2. Resumen del proyecto
+* Filtrado de países: Ofrece opciones de filtrado para ayudar a los usuarios a encontrar países según diferentes criterios, como continente, subregión y ordenamiento por población.
 
-En este proyecto **construirás una _página web_ para visualizar un
-_conjunto (set) de datos_** que se adecúe a lo que descubras que tu usuario
-necesita.
+* Clasificación de países: Permite ordenar los países en función de la población, ya sea en orden ascendente o descendente, lo que permite obtener una visión general de los países más y menos poblados.
 
-Como entregable final tendrás una página web que permita **visualizar la data,
-filtrarla, ordenarla y hacer algún cálculo agregado**. Con cálculo agregado
-nos referimos a distintos cálculos que puedes hacer con la data para mostrar
-información aún más relevante para los usuarios (promedio, el valor máximo
-o mínimo, etc).
+* Interfaz intuitiva: Cuenta con una interfaz fácil de usar y amigable, que facilita la navegación y la exploración de los datos de los países.
 
-Esta vez te proponemos una serie de datos de diferentes _temáticas_ para que
-explores y decidas con qué temática te interesa trabajar. Hemos elegido
-específicamente estos sets de datos porque creemos que se adecúan bien a esta
-etapa de tu aprendizaje.
+* Diseño responsive: La aplicación está diseñada para adaptarse a diferentes dispositivos y tamaños de pantalla, lo que garantiza una experiencia consistente tanto en computadoras de escritorio como en dispositivos móviles.
 
-Una vez que definas tu área de interés, buscar entender quién es tu usuario
-y qué necesita saber o ver exactamente; luego podrás construir la interfaz que
-le ayude a interactuar y entender mejor esos datos.
+### Público objetivo
 
-Estos son datos que te proponemos:
+El público objetivo de "Countries" puede ser amplio y diverso, ya que el producto brinda información y herramientas útiles para cualquier persona interesada en explorar y conocer más sobre países de todo el mundo. Algunos posibles segmentos de público objetivo podrían incluir:
 
-* [Pokémon](src/data/pokemon/pokemon.json):
-  En este set encontrarás una lista con los 251 Pokémon de la región de Kanto
-  y Johto, junto con sus respectivas estadísticas usadas en el juego
-  [Pokémon GO](http://pokemongolive.com).
-  - [Investigación con jugadores de Pokémon Go](src/data/pokemon/README.md)
+* **Viajeros y entusiastas de los viajes:** Aquellos que disfrutan viajando y desean obtener información detallada sobre diferentes países antes de planificar sus viajes.
 
-* [League of Legends - Challenger leaderboard](src/data/lol/lol.json):
-  Este set de datos muestra la lista de campeones en una liga del
-  juego League of Legends (LoL).
-  - [Investigación con jugadores de LoL](src/data/lol/README.md)
+* **Estudiantes y académicos:** Personas que buscan datos e información confiable sobre países para proyectos académicos, estudios de investigación o aprendizaje general.
 
-* [Rick and Morty](src/data/rickandmorty/rickandmorty.json).
-  Este set nos proporciona la lista de los personajes de la serie Rick and
-  Morty. [API Rick and Morty](https://rickandmortyapi.com).
-  - [Investigación con seguidores de Rick and Morty](src/data/rickandmorty/README.md)
+* **Profesionales y empresarios internacionales:** Individuos involucrados en negocios internacionales que necesitan conocer información relevante sobre países, como datos demográficos, indicadores económicos y culturales.
 
-* [Juegos Olímpicos de Río de Janeiro](src/data/athletes/athletes.json).
-  Este set nos proporciona la lista de los atletas que ganaron medallas en las
-  olímpiadas de Río de Janeiro.
-  - [Investigación con interesados en juegos olímpicos de Río de Janeiro](src/data/athletes/README.md)
+* **Curiosos y entusiastas de la cultura:** Personas interesadas en aprender sobre la diversidad cultural, tradiciones, idiomas y costumbres de diferentes países.
 
-* [Studio Ghibli](src/data/ghibli/ghibli.json).
-  En este set encontrarás una lista de las animaciones y sus personajes del
-  [Studio Ghibli](https://ghiblicollection.com/).
-  - [Investigación con seguidores de las animaciones del Studio Ghibli](src/data/ghibli/README.md)
+* **Expatriados y migrantes:** Individuos que planean o están viviendo en un país extranjero y desean obtener información detallada sobre su destino actual o potencial.
 
-El objetivo principal de este proyecto es que aprendas a diseñar y construir una
-interfaz web donde se pueda visualizar y manipular data, entendiendo lo que el
-usuario necesita.
+En resumen, el público objetivo de "Countries" abarca a cualquier persona que tenga interés en explorar y obtener información precisa y confiable sobre países de todo el mundo, ya sea por motivos personales, académicos, profesionales o de viaje.
 
-## 3. Objetivos de aprendizaje
+### Funcionalidades
 
-Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en tu proyecto. Piensa en eso al decidir tu estrategia de trabajo.
+Los Filtros utilizados en "Countries" incluyen:
 
-### HTML
+1. **Filtro por continente:** Permite a los usuarios seleccionar un continente específico para ver los países correspondientes a esa región geográfica.
 
-- [ ] **Uso de HTML semántico**
+2. **Filtro por lenguaje:** Permite a los usuarios filtrar los países según los idiomas oficiales hablados en cada país. Esto ayuda a los usuarios a encontrar países que compartan un idioma común.
 
-  <details><summary>Links</summary><p>
+3. **Filtro por subregión:** Permite a los usuarios filtrar los países según una subregión específica, lo que ayuda a refinar la búsqueda y explorar países más específicos dentro de una región.
 
-  * [HTML semántico](https://curriculum.laboratoria.la/es/topics/html/02-html5/02-semantic-html)
-  * [Semantics - MDN Web Docs Glossary](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
-</p></details>
+4. **Filtro y ordenamiento por población:** Permite ordenar los países según su población, ya sea de forma ascendente (de menor a mayor) o descendente (de mayor a menor), lo que permite visualizar los países más o menos poblados en función de las necesidades del usuario.
 
-### CSS
+5. **Filtro por área:** Permite a los usuarios filtrar los países según su área geográfica, lo que ayuda a identificar países más grandes o más pequeños en términos de superficie terrestre.
 
-- [ ] **Uso de selectores de CSS**
+6. **Densidad de población:** Junto con la información de población, se muestra la densidad de población de cada país, que es el número de personas por unidad de área. Esto proporciona una perspectiva sobre la concentración de la población en cada país.
 
-  <details><summary>Links</summary><p>
+7. Adicionamente se agrego un **cálculo relacionado con el promedio de la densidad poblacional por continentes**, esto brinda una visión comparativa de la densidad de población promedio en diferentes regiones del mundo.
 
-  * [Intro a CSS](https://curriculum.laboratoria.la/es/topics/css/01-css/01-intro-css)
-  * [CSS Selectors - MDN](https://developer.mozilla.org/es/docs/Web/CSS/CSS_Selectors)
-</p></details>
+### Cómo usar la aplicación
 
-- [ ] **Modelo de caja (box model): borde, margen, padding**
+1. Accede a la aplicación [aquí](https://andreastefbustos.github.io/DEV009-data-lovers/src)
+2. Una vez cargada la página, verás un listado de países en la pantalla principal. Puedes comenzar a explorar esta lista o utilizar las funcionalidades de búsqueda y filtrado para encontrar países específicos.
+3. Búsqueda de países: En la barra de búsqueda, puedes ingresar el nombre común del país, y los resultados se irán mostrando a medida que escribes. Haz clic en el país deseado para ver su información detallada, como capital, si el país es independiente o no, y su zona horaria.
+4. Al lado izquierdo encontrarás un aside con filtros disponibles como: continente, lenguaje, sub-región, población, área y densidad de población.
+5. Al ingresar en población, área o densidad de población podrás ordenarla de manera ascendente o descendente.
+6. Estadísticas y cálculos agregados: En la aplicación, encontrarás estadísticas agregadas, como el promedio de densidad de población por continente. Estos datos te brindarán una visión general de las diferencias demográficas entre los continentes.
+7. En contrarás una lista de letras de la A-Z donde podrás seleccionar alguna de ellas y mostrará los nombres de los países que pertenecen a dicha letra a su vez, encontrarás un `ALL` que al hacer clic mostrará de nuevo toda la lista de los países.
 
-  <details><summary>Links</summary><p>
+### Diseño de la página
 
-  * [Box Model & Display](https://curriculum.laboratoria.la/es/topics/css/01-css/02-boxmodel-and-display)
-  * [The box model - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
-  * [Introduction to the CSS box model - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
-  * [CSS display - MDN](https://developer.mozilla.org/pt-BR/docs/Web/CSS/display)
-  * [display - CSS Tricks](https://css-tricks.com/almanac/properties/d/display/)
-</p></details>
+### Paleta de colores 
 
-- [ ] **Uso de flexbox en CSS**
+Se elegi la siguiente paleta de colores por su:
+* Versatilidad
+* Enfoque en el contenido
+* Elegancia y simplicidad
+* Mejor legibilidad
 
-  <details><summary>Links</summary><p>
+![paleta-de-colores](./img/paleta-de-colores.jpeg)
 
-  * [A Complete Guide to Flexbox - CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-  * [Flexbox Froggy](https://flexboxfroggy.com/#es)
-  * [Flexbox - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
-</p></details>
+### Tipografía utilizada
 
-### Web APIs
+* Encabezados y tílulos : Stoke
+* Texto de la lista de los países: Sans-serif
+* Aside: Georgia
 
-- [ ] **Uso de selectores del DOM**
+### Iconografía
 
-  <details><summary>Links</summary><p>
+Se utilizaron algunos íconos en el proyecto, la cual fueron tomados de la siguiente página:
 
-  * [Manipulación del DOM](https://curriculum.laboratoria.la/es/topics/browser/02-dom/03-1-dom-methods-selection)
-  * [Introducción al DOM - MDN](https://developer.mozilla.org/es/docs/Web/API/Document_Object_Model/Introduction)
-  * [Localizando elementos DOM usando selectores - MDN](https://developer.mozilla.org/es/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
-</p></details>
+* [Icono de menú](https://stock.adobe.com/ca/images/id/551953059?k=menu+icon&clickref=1101lwV2J3GJ&mv=affiliate&mv2=Freepik&as_camptype=&as_channel=affiliate&as_source=partnerize&as_campaign=Flaticon&as_content=api&as_audience=srp&sdid=6WTV6YJ5&asset_id=551953059)
 
-- [ ] **Manejo de eventos del DOM (listeners, propagación, delegación)**
+* [Icono de Sort](https://www.flaticon.com/free-icon/sort_4662255?term=sort&page=1&position=3&origin=search&related_id=4662255)
 
-  <details><summary>Links</summary><p>
+### Tecnologías utilizadas 
 
-  * [Introducción a eventos - MDN](https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/Events)
-  * [EventTarget.addEventListener() - MDN](https://developer.mozilla.org/es/docs/Web/API/EventTarget/addEventListener)
-  * [EventTarget.removeEventListener() - MDN](https://developer.mozilla.org/es/docs/Web/API/EventTarget/removeEventListener)
-  * [El objeto Event](https://developer.mozilla.org/es/docs/Web/API/Event)
-</p></details>
+En este proyecto, se utilizaron las tecnologías fundamentales de desarrollo web: **JavaScript**, **HTML** y **CSS**. Cada una de estas tecnologías desempeña un papel clave en la creación de una página web dinámica, atractiva y funcional.
 
-- [ ] **Manipulación dinámica del DOM**
+**HTML (HyperText Markup Language)** es el lenguaje de marcado estándar utilizado para estructurar el contenido de una página web. Con HTML, se definen los elementos y la organización de la información, como encabezados, párrafos, imágenes, enlaces y otros elementos visuales.
 
-  <details><summary>Links</summary><p>
+**CSS (Cascading Style Sheets)** se encarga de la presentación y el diseño visual de una página web. Con CSS, se pueden definir estilos, como colores, fuentes, márgenes, tamaños y posiciones de los elementos HTML. Esto permite personalizar la apariencia de la página y lograr un diseño coherente y atractivo.
 
-  * [Introducción al DOM](https://developer.mozilla.org/es/docs/Web/API/Document_Object_Model/Introduction)
-  * [Node.appendChild() - MDN](https://developer.mozilla.org/es/docs/Web/API/Node/appendChild)
-  * [Document.createElement() - MDN](https://developer.mozilla.org/es/docs/Web/API/Document/createElement)
-  * [Document.createTextNode()](https://developer.mozilla.org/es/docs/Web/API/Document/createTextNode)
-  * [Element.innerHTML - MDN](https://developer.mozilla.org/es/docs/Web/API/Element/innerHTML)
-  * [Node.textContent - MDN](https://developer.mozilla.org/es/docs/Web/API/Node/textContent)
-</p></details>
+**JavaScript** es un lenguaje de programación de alto nivel que se utiliza para agregar interactividad y funcionalidad a una página web. Con JavaScript, se pueden realizar acciones dinámicas en respuesta a eventos, como hacer que los elementos cambien de estilo, realizar validaciones de formularios, mostrar y ocultar contenido, y comunicarse con servicios web para obtener y mostrar datos actualizados.
 
-### JavaScript
+Al combinar estas tres tecnologías, **JavaScript**, **HTML** y **CSS**, se crea una base sólida para el desarrollo web. **JavaScript** proporciona la capacidad de interactuar con el usuario y realizar acciones dinámicas, HTML estructura el contenido y CSS da estilo y diseño a la página. Juntas, estas tecnologías permiten crear experiencias web atractivas y funcionales para los usuarios.
 
-- [ ] **Diferenciar entre tipos de datos primitivos y no primitivos**
+### Control de versiones
 
-- [ ] **Arrays (arreglos)**
+Se ha utilizado Git como sistema de control de versiones para mantener un registro detallado de los cambios realizados en el proyecto.
 
-  <details><summary>Links</summary><p>
+## 2. Historias de usuario
 
-  * [Arreglos](https://curriculum.laboratoria.la/es/topics/javascript/04-arrays)
-  * [Array - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/)
-  * [Array.prototype.sort() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
-  * [Array.prototype.forEach() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
-  * [Array.prototype.map() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
-  * [Array.prototype.filter() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
-  * [Array.prototype.reduce() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
-</p></details>
+### *Historia de Usuario 1*
 
-- [ ] **Objetos (key, value)**
+Mostrar los nombres comunes de los países más la imagen de la bandera.
 
-  <details><summary>Links</summary><p>
+* **Yo como** estudiante académico ó persona interesada en el tema sobre países.
 
-  * [Objetos en JavaScript](https://curriculum.laboratoria.la/es/topics/javascript/05-objects/01-objects)
-</p></details>
+* **Quiero** ver el listado de los países con sus respectivos nombres comunes y la imagen de las banderas.
 
-- [ ] **Variables (declaración, asignación, ámbito)**
+* **Para** saber si la base de datos tiene incluido el país del cual necesito buscar información.
 
-  <details><summary>Links</summary><p>
+#### Criterios de Aceptación
 
-  * [Valores, tipos de datos y operadores](https://curriculum.laboratoria.la/es/topics/javascript/01-basics/01-values-variables-and-types)
-  * [Variables](https://curriculum.laboratoria.la/es/topics/javascript/01-basics/02-variables)
-</p></details>
+* Al desplegarse la UI el usuario pueda ver una página con los nombres comunes de los países y sus banderas ordenados alfabéticamente y agrupados por letras.
+* Podrá realizar scroll
 
-- [ ] **Uso de condicionales (if-else, switch, operador ternario, lógica booleana)**
+#### Definición de terminado
 
-  <details><summary>Links</summary><p>
+* El código cumple con la guía de estilos acordada.
+* El código está subido al repositorio.
+* El código tiene y pasa las tests necesarios.
+* El código ha sido hecho, al menos en parte, en pair-programming y alguien le hizo code-review.
+* La historia implementada ha sido testeada con al menos 3 usuarios y se han incorporado la mejoras que se identificaron en esos testeos de usabilidad.
 
-  * [Estructuras condicionales y repetitivas](https://curriculum.laboratoria.la/es/topics/javascript/02-flow-control/01-conditionals-and-loops)
-  * [Tomando decisiones en tu código — condicionales - MDN](https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/conditionals)
-</p></details>
+### *Historia de Usuario 2*
 
-- [ ] **Uso de bucles/ciclos (while, for, for..of)**
+Tener una caja de texto (Buscador) donde el usuario ingrese el país que desea ver, escribiendo en minúsculas ó mayúsculas.
 
-  <details><summary>Links</summary><p>
+* **Yo como** estudiante académico ó persona interesada en el tema sobre países.
 
-  * [Bucles (Loops)](https://curriculum.laboratoria.la/es/topics/javascript/02-flow-control/02-loops)
-  * [Bucles e iteración - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Loops_and_iteration)
-</p></details>
+* **Quiero** escribir en un buscar ó caja de texto, un país de mi selección.
 
-- [ ] **Funciones (params, args, return)**
+* **Para** que se me facilité al momento de realizar la búsqueda correspondiente.
+#### Criterios de Aceptación
 
-  <details><summary>Links</summary><p>
+* La página principal deberá tener un input que será una caja de texto, este será el buscador.
+* Al momento de escribir algún nombre este se podrá escribir en minúsculas, mayúsculas ó las dos al mismo tiempo es decir ej. AbCd.
+* La página principal también tendrá 2 botonos, 1. para limpiar el input y la lista de los países generada y 2. que deberá mostrar de nuevo la lista de los países con sus nombres comunes y respectivas banderas nuevamente.
 
-  * [Funciones (control de flujo)](https://curriculum.laboratoria.la/es/topics/javascript/02-flow-control/03-functions)
-  * [Funciones clásicas](https://curriculum.laboratoria.la/es/topics/javascript/03-functions/01-classic)
-  * [Arrow Functions](https://curriculum.laboratoria.la/es/topics/javascript/03-functions/02-arrow)
-  * [Funciones — bloques de código reutilizables - MDN](https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/Functions)
-</p></details>
+#### Definición de terminado
 
-- [ ] **Pruebas unitarias (unit tests)**
+* El código cumple con la guía de estilos acordada.
+* El código está subido al repositorio.
+* El código tiene y pasa las tests necesarios.
+* El código ha sido hecho, al menos en parte, en pair-programming y alguien le hizo code-review.
+* La historia implementada ha sido testeada con al menos 3 usuarios y se han incorporado la mejoras que se identificaron en esos testeos de usabilidad
 
-  <details><summary>Links</summary><p>
+### *Historia de Usuario 3*
 
-  * [Empezando con Jest - Documentación oficial](https://jestjs.io/docs/es-ES/getting-started)
-</p></details>
+#### *Historia de Usuario #3.1*
 
-- [ ] **Módulos de ECMAScript (ES Modules)**
+Incluir un navegador con las letras del alfabeto de la A-Z, para realizar un filtrado por letra.
 
-  <details><summary>Links</summary><p>
+* **Yo como** estudiante académico ó persona interesada en el tema sobre países.
 
-  * [import - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/import)
-  * [export - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/export)
-</p></details>
+* **Quiero** poder visualizar un navegador donde incluya el alfabeto con las letras de la A-Z.
 
-- [ ] **Uso de linter (ESLINT)**
+* **Para** poder realizar mas fácil el proceso de búsqueda.
 
-- [ ] **Uso de identificadores descriptivos (Nomenclatura y Semántica)**
+#### Criterios de Aceptación
 
-- [ ] **Diferenciar entre expresiones (expressions) y sentencias (statements)**
+* La página principal deberá tener un navegador donde aparece la palabra ALL y las letras de la A-Z en mayúscula.
+* Este navegador deberá ir en el centro de la página y tener las propiedades de responsive.
+* Al momento de seleccionar alguna letra, en el listado de países solo debe de verse reflejado los nombre de los países de la letra seleccionada.
+* Al momento de hacer click en ALL deberá de aparecer la lista completa de los países con sus respectivas bandera nuevamente.
 
-### Control de Versiones (Git y GitHub)
+#### Definición de terminado
 
-- [ ] **Git: Instalación y configuración**
+* El código cumple con la guía de estilos acordada.
+* El código está subido al repositorio.
+* El código tiene y pasa las tests necesarios.
+* La historia implementada ha sido testeada con al menos 3 usuarios y se han incorporado la mejoras que se identificaron en esos testeos de usabilidad.
 
-- [ ] **Git: Control de versiones con git (init, clone, add, commit, status, push, pull, remote)**
+#### *Historia de Usuario #3.2.1*
 
-- [ ] **Git: Integración de cambios entre ramas (branch, checkout, fetch, merge, reset, rebase, tag)**
+Implementar un Aside donde se podrán implementar diferentes filtros mostrando información básica, como: continente (calculo agregado de promedio de densidad población por continente), lenguaje, subregión, población, área, densidad poblacional (Desktop y mobile con la version de un menú que se despliegará el mismo aside con dicha información "versión responsive").
 
-- [ ] **GitHub: Creación de cuenta y repos, configuración de llaves SSH**
+* **Yo como** estudiante académico ó persona interesada en el tema sobre países.
 
-- [ ] **GitHub: Despliegue con GitHub Pages**
+* **Quiero** poder visualizar un aside con acceso a filtros por: continente, lenguaje, subregión, población, área, densidad poblacional. 
 
-  <details><summary>Links</summary><p>
+* **Para** poder filtrar toda la data y solo visualizar los países que cumplan alguno de los criterios anteriores.
 
-  * [Sitio oficial de GitHub Pages](https://pages.github.com/)
-</p></details>
+#### Criterios de Aceptación
 
-- [ ] **GitHub: Colaboración en Github (branches | forks | pull requests | code review | tags)**
+* En la página principal se deberá visualizar un aside con su respectiva información: continente, lenguaje, subregión, población, área, densidad poblacional (Desktop aside).
+* Se deberá realizar un proceso de filtrado para cada categoría.
+* Los filtros se visulizaran.
 
-### Centrado en el usuario
+#### Definición de terminado
 
-- [ ] **Diseñar y desarrollar un producto o servicio poniendo a las usuarias en el centro**
+* El código cumple con la guía de estilos acordada.
+* El código está subido al repositorio.
+* El código tiene y pasa las tests necesarios.
+* La historia implementada ha sido testeada con al menos 3 usuarios y se han incorporado la mejoras que se identificaron en esos testeos de usabilidad.
 
-### Diseño de producto
+### *Historia de Usuario 4*
 
-- [ ] **Crear prototipos de alta fidelidad que incluyan interacciones**
+Hacer click en el nombre del país y desplegar información relevante, como: capital, si el país es independiente, y su zona horaria.
 
-- [ ] **Seguir los principios básicos de diseño visual**
+* **Yo como** estudiante académico ó persona interesada en el tema sobre países.
 
-### Investigación
+* **Quiero** poder seleccionar un país y que este se despliegue una ventana con cierta información relevante de dicho país.
 
-- [ ] **Planear y ejecutar testeos de usabilidad de prototipos en distintos niveles de fidelidad**
+* **Para** conocer sobre: capital, país independiente y zona horaria.
 
-  <details><summary>Links</summary><p>
+#### Criterios de Aceptación
 
-  * [Intro a testeos usabilidad](https://coda.io/@bootcamp-laboratoria/contenido-ux/test-de-usabilidad-15)
-  * [Pruebas con Usuarios 1 — ¿Qué, cuándo y para qué testeamos?](https://eugeniacasabona.medium.com/pruebas-con-usuarios-1-qu%C3%A9-cu%C3%A1ndo-y-para-qu%C3%A9-testeamos-7c3a89b4b5e7)
-</p></details>
+* Cuando el usuario hace click en el nombre de un país se debe abrir una vista con toda la información disponible del país seleccionado la cual será: capital, país independiente y zona horaria.
+* Luego al volver hacer click la información debe de esconderse nuevamente.
 
-## 4. Consideraciones generales
+#### Definición de terminado
 
-* Este proyecto se debe resolver en duplas.
-* El rango de tiempo estimado para completar el proyecto es de 3 a 4 Sprints.
-* El proyecto será entregado subiendo tu código a GitHub (commit/push) y la
-  interfaz será desplegada usando [GitHub Pages](https://pages.github.com/).
+* El código cumple con la guía de estilos acordada.
+* El código está subido al repositorio.
+* El código tiene y pasa las tests necesarios.
+* La historia implementada ha sido testeada con al menos 3 usuarios y se han incorporado la mejoras que se identificaron en esos testeos de usabilidad.
 
-## 5. Criterios de aceptación mínimos del proyecto
+## 3. Prototipos de baja fidelidad
 
-Los criterios para considerar que has completado este proyecto son:
+![prototipo-desktop](./img/boceto-baja-fidelidad-countries.png)
 
-### Definición del producto
+## 4. Prototipos de alta fidelidad
 
-Documenta brevemente tu trabajo en el archivo `README.md` de tu repositorio,
-contándonos cómo fue tu proceso de diseño y cómo crees que el producto resuelve
-el problema (o problemas) que tiene tu usuario.
+* DESKTOP
 
-### Historias de usuario
+![prototipo-alta-desktop](./img/prototipo-alta-desktop1.png)
 
-Una vez que entiendas las necesidades de tus usuarios, escribe las [Historias
-de Usuario](https://es.wikipedia.org/wiki/Historias_de_usuario) que representen
-todo lo que el usuario necesita hacer/ver. Las **Historias de Usuario** deben
-ser el resultado de tu proceso de investigación o _research_ de tus usuarios.
+* MOBILE
 
-Asegúrate de incluir la definición de terminado (_definition of done_) y los
-Criterios de Aceptación para cada una.
+![prototipo-alta-mobile](./img/prototipo-alta-mobile.png)
+![prototipo-alta-mobile-menu](./img/prototipo-alta-mobile-menu.png)
 
-En la medida de lo posible, termina una historia de usuario antes de pasar
-a la siguiente (Cumple con Definición de Terminado + Criterios de Aceptación).
+Se obtuvieron algunos feedback 
 
-### Diseño de la Interfaz de Usuario
+* Paulina Torres
+* Diana Morales
+* Mafer Orostegui
 
-#### Prototipo de baja fidelidad
+**Propuesta de Pulina:**
 
-Durante tu trabajo deberás haber hecho e iterado bocetos (_sketches_) de tu
-solución usando papel y lápiz. Te recomendamos tomar fotos de todas las
-iteraciones que hagas, que las subas a tu repositorio y las menciones en tu
-`README.md`.
+*Para desktop:*
 
-#### Prototipo de alta fidelidad
+buscaria otra imagen no queda claro para que es este boton, o quizas indicar "haz click aqui para ver detalle de la poblacion" por ejemplo tipo hover
+a nivel experiencia usuario me gusta queda claro para que es la pagina, si en css redondearia los bordes para que no se vean tan toscos, unificandolos cuadraros como el del titulo "countries"
 
-Lo siguiente es diseñar tu Interfaz de Usuario (UI por sus siglas en inglés -
-_User Interface_). Para eso debes aprender a utilizar alguna herramienta de
-diseño visual. Nosotros te recomendamos [Figma](https://www.figma.com/) que es
-una herramienta que funciona en el navegador y, además, puedes crear una cuenta
-gratis. Sin embargo, eres libre de utilizar otros editores gráficos como
-Illustrator, Photoshop, PowerPoint, Keynote, etc.
+![prototipo-alta-paulina-desktop](./img/feedback-desktop-borde.png)
 
-El diseño debe representar el _ideal_ de tu solución. Digamos que es lo que
-desearías implementar si tuvieras tiempo ilimitado para trabajar. Además, tu
-diseño debe seguir los fundamentos de _visual design_.
+![prototipo-alta-paulina-desktop](./img/feedback-desktop-icon-population.png)
 
-#### Testeos de usabilidad
+*Para mobile:*
 
-Durante el reto deberás hacer _tests_ de usabilidad con distintos usuarios, y
-en base a los resultados, deberás iterar tus diseños. Cuéntanos
-qué problemas de usabilidad detectaste a través de los _tests_ y cómo los
-mejoraste en tu propuesta final.
+intentaria agrandar mas la letra
+me encanta como lograron hacer el responsive de escritorio a mobile, bonito y elegante.
 
-### Implementación de la Interfaz de Usuario (HTML/CSS/JS)
+![prototipo-alta-paulina-mobile](./img/feedback-mobile-menu-aside.png)
 
-Luego de diseñar tu interfaz de usuario deberás trabajar en su implementación.
-**No** es necesario que construyas la interfaz exactamente como la diseñaste.
-Tu tiempo de hacking es escaso, así que deberás priorizar
+![prototipo-alta-paulina-mobile](./img/feedback-movile-letterBig.png)
 
-Como mínimo, tu implementación debe:
+**Propuesta de Mafer:**
 
-1. Mostrar la data en una interfaz: puede ser un card, una tabla, una lista,
-   etc.
-2. Permitir al usuario interactuar para obtener la infomación que necesita.
-3. Ser _responsive_, es decir, debe visualizarse sin problemas desde distintos
-   tamaños de pantallas: móviles, tablets y desktops.
-4. Que la interfaz siga los fundamentos de _visual design_.
+*Para desktop:*
 
-### Pruebas unitarias
+Considero que la estructura está limpia y la jerarquización también. Es tan serio como esperaría que lo fuera una app que me brinde información de este tipo😍 Me encanta!
 
-El _boilerplate_ de este proyecto no incluye Pruebas Unitarias (_tests_), así es
-que  tendrás que escribirlas tú para las funciones encargadas de  _procesar_,
-_filtrar_ y _ordenar_ la data, así como _calcular_ estadísticas.
+![prototipo-alta-mafer-desktop](./img/feedback-desktop.png)
 
-Tus _pruebas unitarias_ deben dar una cobertura del 70% de _statements_
-(_sentencias_), _functions_ (_funciones_), _lines_ (_líneas_), y _branches_
-(_ramas_) del archivo `src/data.js` que contenga tus funciones y está detallado
-en la sección de [Consideraciones técnicas](#srcdatajs).
+*Para mobile:*
 
-## 6. Hacker edition
+Para empezar me encanta lo minimalista y ordenado que luce, es refrescante para mi mente!! En el caso de este search sería estupendo que tuviese más protagonismo; por lo demás todo está perfecto😍
 
-Las secciones llamadas _Hacker Edition_ son **opcionales**. Si **terminaste**
-con todo lo anterior y te queda tiempo, intenta completarlas. Así podrás
-profundizar y/o ejercitar más sobre los objetivos de aprendizaje del proyecto.
+![prototipo-alta-mafer-mobile](./img/feedback-mobile.png)
 
-Features/características extra sugeridas:
+**Propuesta de Diana:**
 
-* En lugar de consumir la data estática brindada en este repositorio, puedes
-  consumir la data de forma dinámica, cargando un archivo JSON por medio de
-  `fetch`. La carpeta `src/data` contiene una versión `.js` y una `.json` de
-  de cada set datos.
-* Agregarle a tu interfaz de usuario implementada visualizaciones gráficas. Para
-  ello te recomendamos explorar librerías de gráficas como
-  [Chart.js](https://www.chartjs.org/)
-  o [Google Charts](https://developers.google.com/chart/).
-* 100% Coverage
+*Para desktop - mobile*
 
-## 7. Consideraciones técnicas
+Me gusto: la organización, La forma en la que esta estructurado, esta muy centrado al tema en si que es sobre Geografía, la forma del botón, o del área donde están ubicados los países por el abc me gusto también, y el fondo le da un toque serio pero lindo. Lo único que en lo personal me gustaría, quizás viéndolo por el lado de visitar Una pagina de geografía de forma informativa, sería dar conceptos, o un área en donde pueda ver como mas descripción a modo educativo(nose si sea tema de siguientes HU, pero sería lo único). De resto esta espectacular.
 
-La lógica del proyecto debe estar implementada completamente en JavaScript
-(ES6), HTML y CSS. En este proyecto NO está permitido usar librerías o
-frameworks, solo [vanilla JavaScript](https://medium.com/laboratoria-how-to/vanillajs-vs-jquery-31e623bbd46e),
-con la excepción de librerías para hacer gráficas (charts); ver
-[_Parte opcional_](#6-hacker-edition) más arriba.
+![prototipo-alta-diana-desktop](./img/feedback.png)
 
-El _boilerplate_ contiene una estructura de archivos como punto de partida así
-como toda la configuración de dependencias:
+* [Figma-Desktop](https://www.figma.com/proto/tgf3DAVycUWTtnuDKdBF11/Desktop?type=design&node-id=1-2&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=1%3A2)
+* [Figma-Mobile](https://www.figma.com/proto/6dInw57EZ80kufTQlwPLwC/Mobile?type=design&node-id=6-322&scaling=scale-down&page-id=0%3A1&starting-point-node-id=2%3A206)
 
-```text
-.
-├── EXTRA.md
-├── README.md
-├── package.json
-├── src
-|  ├── data (según con qué data trabajes)
-|  |  ├── lol
-|  |  |  ├── lol.js
-|  |  |  ├── lol.json
-|  |  |  └── README.md
-|  |  ├── pokemon
-|  |  |  ├── pokemon.js
-|  |  |  ├── pokemon.json
-|  |  |  └── README.md
-|  |  └── rickandmorty
-|  |  |  ├── rickandmorty.js
-|  |  |  ├── rickandmorty.json
-|  |  |  └── README.md
-|  |  └── athletes
-|  |  |  ├── athletes.js
-|  |  |  ├── athletes.json
-|  |  |  └── README.md
-|  |  └── ghibli
-|  |  |  ├── ghibli.js
-|  |  |  ├── ghibli.json
-|  |  |  └── README.md
-|  ├── data.js
-|  ├── index.html
-|  ├── main.js
-|  └── style.css
-└── test
-   └── data.spec.js
+## 5. Resultados de test de usuabilidad
 
-directory: 7 file: 20
-```
+El objetivo principal de los tests de usabilidad fue evaluar la facilidad de uso y la experiencia del usuario en nuestra plataforma de Countries. Durante las pruebas, se le pidió a un grupo de participantes que realizaran diversas tareas específicas, como filtrar los países según diferentes criterios, explorar la información detallada de cada país y utilizar la función de búsqueda para encontrar países específicos.
 
-### `src/index.html`
+Estos tests nos proporcionaron valiosa retroalimentación sobre la usabilidad del sitio web. Observamos cómo los participantes interactuaban con los filtros, cómo encontraban la información que buscaban y qué dificultades o confusiones encontraban en el proceso. Además, nos permitieron identificar áreas de mejora y realizar ajustes necesarios para optimizar la experiencia del usuario.
 
-Como en el proyecto anterior, existe un archivo `index.html`. Como ya sabes,
-acá va la página que se mostrará al usuario. También nos sirve para indicar
-qué scripts se usarán y unir todo lo que hemos hecho.
+Gracias a la utilización de la página real en los tests de usabilidad, obtuvimos una retroalimentación más precisa y relevante. Esto nos permitió tomar decisiones informadas y realizar mejoras concretas en el diseño, la navegación y la funcionalidad del sitio web de Countries.
 
-### `src/main.js`
+El test se realizó por medio de la herramienta Jotform: [Test Countries]([Figma-Mobile](https://www.figma.com/proto/6dInw57EZ80kufTQlwPLwC/Mobile?type=design&node-id=6-322&scaling=scale-down&page-id=0%3A1&starting-point-node-id=2%3A206))
 
-Recomendamos usar `src/main.js` para todo tu código que tenga que ver con
-mostrar los datos en la pantalla. Con esto nos referimos básicamente a la
-interacción con el DOM. Operaciones como creación de nodos, registro de
-manejadores de eventos (_event listeners_ o _event handlers_), ....
+**Las preguntas realizadas fueron:**
 
-Esta no es la única forma de dividir tu código, puedes usar más archivos y
-carpetas, siempre y cuando la estructura sea clara para tus compañeras.
+1. Encuentras intuitivo el uso de los filtros de la página?
+2. Los filtros te permiten encontrar la información que buscas de manera eficiente?
+3. La página muestra claramente los resultados filtrados?
+4. Te resulta fácil cambiar entre diferentes tipos de filtros (ej. subregión, lenguaje, población, area, densidad poblacional y continentes)?
+5. Los resultados de los filtros son consistentes y precisos?
+6. Encuentras que los filtros cubren tus necesidades de búsqueda?
+7. La página proporciona opciones de ordenamiento de resultados después de aplicar los filtros?
+8. Encuentras algún problema técnico o de rendimiento al utilizar los filtros?
+9. De ser la respuesta afirmativa, nos puedes comentar cuales son?
+10. Tienes alguna sugerencia o mejora para hacer que la experiencia de la página sea aún mejor?
 
-En este archivo encontrarás una serie de _imports_ _comentados_. Para _cargar_
-las diferentes fuentes de datos tendrás que _descomentar_ la línea
-correspondiente.
+[Reporte del Test](https://www.jotform.com/report/23181030645704701?st=cnNOdzd3TitXKy9mcnpybTY0c2hRWEJpRDRuV1NGNW1XazR3aWIyUldSL3lYYlpheTZENlBsbWMzSlBlZWxlTXlnbUV5THZVUlZxWnVHT3NSQ1VFN3JGY2p6Ykl0MDQrczhkSkFoY0swRElVdHBKQ0V3SDZTbklNSlZsQlRkby8=)
 
-Por ejemplo, si "descomentamos" la siguiente línea:
+## 6. Panificación del Proyecto
 
-```js
-// import data from './data/lol/lol.js';
-```
+Hemos llevado a cabo la planificación de nuestro proyecto utilizando Trello, una herramienta de gestión de proyectos en línea. Trello ha sido una pieza fundamental en nuestro enfoque ágil y colaborativo, permitiéndonos organizar y supervisar de manera efectiva cada etapa de nuestro proyecto de Countries.
 
-La línea quedaría así:
+En Trello, creamos un tablero principal que representa nuestro flujo de trabajo. Dividimos el tablero en diferentes listas, cada una representando una fase del proyecto, como "Backlog of Product", "Backlong of Sprint", "Bloqueos", "Doing" y "Done". Esto nos permite visualizar de manera clara y ordenada el progreso del proyecto y las tareas pendientes en cada etapa.
 
-```js
-import data from './data/lol/lol.js';
-```
+Dentro de cada lista, creamos tarjetas para cada tarea específica. Estas tarjetas contienen toda la información relevante, como descripción, asignación de miembros del equipo.
 
-Y ahora tendríamos la variable `data` disponible en el script `src/main.js`.
+[Planificación - Trello](https://trello.com/b/pNuUJzcY/dev009-proyecto2-data-lovers)
 
-### `src/data.js`
+## 7. Contribuidoras
 
-El corazón de este proyecto es la manipulación de datos a través de arreglos
-y objetos.
-
-Te recomendamos que este archivo contenga toda la funcionalidad que corresponda
-a obtener, procesar y manipular datos (tus funciones). Por ejemplo:
-
-* `filterData(data, condition)`: esta función `filter` o filtrar recibiría la
-  data, y nos retornaría aquellos datos que sí cumplan con la condición.
-
-* `sortData(data, sortBy, sortOrder)`: esta función `sort` u ordenar
-  recibe tres parámetros.
-  El primer parámetro, `data`, nos entrega los datos.
-  El segundo parámetro, `sortBy`, nos dice con respecto a cuál de los campos de
-  la data se quiere ordenar.
-  El tercer parámetro, `sortOrder`, indica si se quiere ordenar de manera
-  ascendente o descendente.
-
-* `computeStats(data)`: la función `compute` o calcular, nos permitirá hacer
-  cálculos estadísticos básicos para ser mostrados de acuerdo a la data
-  proporcionada.
-
-Estos nombres de funciones y de parámetros son solamente referenciales, lo que
-decidas depende de tu propia implementación.
-
-Estas funciones deben ser [_puras_](https://medium.com/laboratoria-developers/introducci%C3%B3n-a-la-programaci%C3%B3n-funcional-en-javascript-parte-2-funciones-puras-b99e08c2895d)
-e independientes del DOM. Estas funciones serán después usadas desde el archivo
-`src/main.js`, al cargar la página, y cada vez que el usuario interactúe (click,
-filtrado, ordenado, ...).
-
-### `src/data`
-
-En esta carpeta están los datos de las diferentes fuentes. Encontrarás una
-carpeta por cada fuente, y dentro de cada carpeta dos archivos: uno con la
-extensión `.js` y otro `.json`. Ambos archivos contienen la misma data; la
-diferencia es que el `.js` lo usaremos a través de una etiqueta `<script>`,
-mientras que el `.json` está ahí para opcionalmente cargar la data de forma
-asíncrona con [`fetch()`](https://developer.mozilla.org/es/docs/Web/API/Fetch_API)
-(ver sección de [_Parte Opcional_](#6-hacker-edition)).
-
-### `test/data.spec.js`
-
-Tendrás también que completar las pruebas unitarias de las funciones
-implementadas en el archivo `data.js`.
-
-## 8. Pistas, tips y lecturas complementarias
-
-### Primeros pasos
-
-Súmate al canal de Slack
-[#project-data-lovers](https://claseslaboratoria.slack.com/archives/C03MV35EP5M)
-para conversar y pedir ayuda del proyecto.
-
-Antes de empezar a escribir código, debes definir qué deberá hacer el producto
-en base al conocimiento que puedas obtener de tu usuario. Estas preguntas te
-pueden ayudar:
-
-* ¿Quiénes son los principales usuarios de producto?
-* ¿Cuáles son los objetivos de estos usuarios en relación con el producto?
-* ¿Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué?
-* ¿Cuándo utilizan o utilizarían el producto?
-* Toda tu investigación previa debe tener como resultado todas las Historias
-  de Usuario de tu proyecto.
-* No hagas los prototipos de alta fidelidad de todas tus Historias. Comienza
-  solamente por los que se necesiten para tu Sprint 1 (semana 1 de trabajo). Más
-  pistas en la guía de organización para el proyecto.
-
-Cuando ya estés lista para codear, te sugerimos empezar de esta manera:
-
-1. Una de las integrantes del equipo debe realizar un :fork_and_knife:
-   [fork](https://help.github.com/articles/fork-a-repo/) del repo de tu cohort,
-   tus _coaches_ te compartirán un _link_ a un repo y te darán acceso de lectura
-   en ese repo. La otra integrante del equipo deber hacer un fork **del
-   repositorio de su compañera** y
-   [configurar](https://gist.github.com/BCasal/026e4c7f5c71418485c1) un `remote`
-   hacia el mismo.
-2. :arrow_down: [Clona](https://help.github.com/articles/cloning-a-repository/)
-   tu _fork_ a tu computadora (copia local).
-3. 📦 Instala las dependencias del proyecto con el comando `npm install`. Esto
-   asume que has instalado [Node.js](https://nodejs.org/) (que incluye [npm](https://docs.npmjs.com/)).
-4. Si todo ha ido bien, deberías poder ejecutar las :traffic_light:
-   pruebas unitarias (unit tests) con el comando `npm test`.
-5. Para ver la interfaz de tu programa en el navegador, usa el comando
-  `npm start` para arrancar el servidor web y dirígete a
-  `http://localhost:5000` en tu navegador.
-6. A codear se ha dicho! :rocket:
-
-### Contenido de referencia
-
-#### Diseño de experiencia de usuario (User Experience Design)
-
-* Investigación con usuarios / entrevistas
-* Principios de diseño visual
-
-#### Desarrollo Front-end
-
-* Unidad de testing en curso de JavaScript en LMS.
-* Unidad de arreglos en curso de JavaScript en LMS.
-* Unidad de objetos en curso de JavaScript en LMS.
-* Unidad de funciones en curso de JavaScript en LMS.
-* Unidad de DOM en curso de Browser JavaScript en LMS.
-* [Array en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array)
-* [Array.sort en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/sort)
-* [Array.map en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/map)
-* [Array.filter en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/filter)
-* [Array.reduce en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/reduce)
-* [Array.forEach en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/forEach)
-* [Object.keys en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/keys)
-* [Object.entries en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/entries)
-* [Fetch API en MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
-* [json.org](https://json.org/json-es.html)
-* [expressions-vs-statements](https://2ality.com/2012/09/expressions-vs-statements.html)
-* [expresión vs sentencia](https://openclassrooms.com/en/courses/4309531-descubre-las-funciones-en-javascript/5108986-diferencia-entre-expresion-y-sentencia)
-* [datos atómicos vs datos estructurados](https://www.todojs.com/tipos-datos-javascript-es6/)
-* [Modulos: Export](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/export)
-* [Modulos: Import](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/import)
-
-#### Herramientas
-
-* [Git](https://git-scm.com/)
-* [GitHub](https://github.com/)
-* [GitHub Pages](https://pages.github.com/)
-* [Node.js](https://nodejs.org/)
-* [Jest](https://jestjs.io/)
-
-#### Organización del Trabajo
-
-* [Historias de Usuario](https://www.youtube.com/watch?v=ky6wFiF5vMk&t=344s).
-  Ojo que Cris no diferencia _Definición de terminado_ de _Criterios de
-  Aceptación_ y nosotros sí lo haremos. Más detalles en la guía.
-* [Cómo dividir H.U.](https://www.youtube.com/watch?v=Ueq786iZ30I&t=341s)
-* [Guía para Data Lovers](https://docs.google.com/presentation/d/e/2PACX-1vQhx9D36NjpH-Daea-ITPUDUzNL8ZiNAprq_7b5PSUrfutk45tEtaOLz2lmd8f54_5jX1hypDM8f8SM/pub?start=false&loop=false&delayms=60000)
-
-## 9. Checklist para solicitar PF
-
-* [ ] Usa VanillaJS.
-* [ ] Pasa linter (`npm run pretest`)
-* [ ] Pasa tests (`npm test`)
-* [ ] Pruebas unitarias cubren un mínimo del 70% de statements, functions y
-  lines y branches.
-* [ ] Incluye _Definición del producto_ clara e informativa en `README.md`.
-* [ ] Incluye historias de usuario en `README.md`.
-* [ ] Incluye _sketch_ de la solución (prototipo de baja fidelidad) en
-  `README.md`.
-* [ ] Incluye _Diseño de la Interfaz de Usuario_ (prototipo de alta fidelidad)
-  en `README.md`.
-* [ ] Incluye link a Figma Dinámico para el test de usabilidad en `README.md`.
-* [ ] Incluye el listado de problemas que detectaste a través de tests de
-  usabilidad en el `README.md`.
-* [ ] UI: Muestra lista y/o tabla con datos y/o indicadores.
-* [ ] UI: Permite ordenar data por uno o más campos (asc y desc).
-* [ ] UI: Permite filtrar data en base a una condición.
-* [ ] UI: Es _responsive_.
-
-Recuerda que también debes hacer: llenado de sprint check out de cierre de proyecto, una autoevaluación de objetivos de aprendizaje y autoevaluación de life skills desde tu dashboard de estudiante. [Acá el link](https://coda.io/d/_deHfHkTC743/Como-lograras-aprender-DEV_sumg1#_lu6qL) del flujo para que puedas ver el proceso.
-
-Si no has completado todo lo anterior, no consideramos que estás lista para tu sesión de Project Feedback. ([acá](https://coda.io/d/_deHfHkTC743/Project-Feedback_suLH5) te dejamos el link de esta instancia)
+* Alba Giraldo
+* Andrea Stefania Bustos
