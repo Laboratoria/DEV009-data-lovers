@@ -40,12 +40,14 @@ const ordenAlfabeticoPeopleLink = document.getElementById('orden-alfabetico-peop
 ordenAlfabeticoPeopleLink.addEventListener('click', function(event) {
   event.preventDefault(); // Evita que el enlace realice la acción predeterminada
 
-  if (filmsList.style.display !== 'none') {
+  if (filmsList.style.display === 'grid') {
     filmsList.style.display = 'none';
   }
 
   if (peopleList.style.display === 'none') {
     peopleList.style.display = 'grid';
+    filmsDateList.style.display = 'none'; // Oculta filmsDateList
+
   } else {
     peopleList.style.display = 'none';
   }
@@ -83,12 +85,13 @@ const ordenAlfabeticoFilmsLink = document.getElementById('orden-alfabetico-films
 ordenAlfabeticoFilmsLink.addEventListener('click', function(event) {
   event.preventDefault(); // Evita que el enlace realice la acción predeterminada
 
-  if (peopleList.style.display !== 'none') {
+  if (peopleList.style.display === 'grid') {
     peopleList.style.display = 'none';
   }
 
   if (filmsList.style.display === 'none') {
     filmsList.style.display = 'grid';
+    filmsDateList.style.display = 'none'; // Oculta filmsDateList
   } else {
     filmsList.style.display = 'none';
   }
@@ -100,7 +103,7 @@ ordenAlfabeticoFilmsLink.addEventListener('click', function(event) {
 const filmsDate = data.films.flatMap(film => ({
   title: film.title,
   poster: film.poster,  
-  date: film.release_date
+  release_date: film.release_date
 }));
 
 filmsDate.sort((a, b) => a.release_date.localeCompare(b.release_date));
@@ -113,28 +116,31 @@ filmsDate.forEach(film => {
   const dateItem = document.createElement('div');
   const dateImage = document.createElement('img');
   const dateName = document.createElement('p');
+  const dateYear = document.createElement('p');
 
   dateImage.src = film.poster;
-  dateName.textContent = film.release_date;
+  dateName.textContent = film.title;
+  dateYear.textContent = film.release_date;
 
   dateItem.appendChild(dateImage);
   dateItem.appendChild(dateName);
+  dateItem.appendChild(dateYear);
   filmsDateList.appendChild(dateItem);
 });
 
 //______CLICK PELÍCULAS ORDENADAS POR AÑO ('release_date')
-const ordenDateFilmsLink = document.getElementById('orden-alfabetico-films');
+const ordenDateFilmsLink = document.getElementById('orden-date-films');
 
-ordenAlfabeticoFilmsLink.addEventListener('click', function(event) {
+ordenDateFilmsLink.addEventListener('click', function(event) {
   event.preventDefault(); // Evita que el enlace realice la acción predeterminada
 
-  if (peopleList.style.display !== 'none') {
-    peopleList.style.display = 'none';
+  if (filmsList.style.display === 'grid') {
+    filmsList.style.display = 'none';
   }
 
-  if (filmsList.style.display === 'none') {
-    filmsList.style.display = 'grid';
+  if (filmsDateList.style.display === 'none') {
+    filmsDateList.style.display = 'grid';
   } else {
-    filmsList.style.display = 'none';
+    filmsDateList.style.display = 'none';
   }
 });

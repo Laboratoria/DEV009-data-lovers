@@ -120,6 +120,23 @@ footer {
     border-radius: 40px;
     padding: 30px 30px;
   }
+  
+  #films-list-year {
+    display: none;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    grid-gap: 20px; /* Espacio entre los elementos */
+    margin-top: 40px;
+    margin-bottom: 60px;
+    margin-left: 120px;
+    margin-right: 120px;
+    text-align: center;
+    font-weight: bold;
+    background-color: rgb(255, 255, 255, 0.5);
+    cursor: pointer; 
+    border-radius: 40px;
+    padding: 30px 30px;
+  }
+
 
 img {
     width: 150px;
