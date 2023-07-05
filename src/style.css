@@ -37,28 +37,27 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto mono', 1em;
-    text-align: center;
-    justify-content: center;
     align-items: center;
-
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Electrolize', sans-serif;
     font-family: 'Montserrat', sans-serif;
     font-family: 'Roboto Mono', monospace;
-    padding-top: 100px;
+    padding-top: 10px;
     position: relative;
-    align-items: flex-start;
 }
 
 .topheader {
     box-shadow: 0 4px 5px var(--nav-background);
-    position: fixed;
     background: var(--nav-background);
+    position: fixed;
     left: 0;
     top: 0;
     width: 100%;
+    
+
 }
 
 /*  //////////  CODE NANCY //////////*/
@@ -72,14 +71,16 @@ input[type="text"] {
 
 
 
-/* EDICION VIERNES NANCY*/
+/* ////////  MENU  ////////*/
 
-.menu{
-    background-color:var(--pokemon-type-electric);
-    border-radius: 8px;
+.menu {
+    background-color: var(--nav-background);
+    color: #fff;
+    height: 70px;
+
 }
 
-.conteiner{
+.menu__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -89,8 +90,89 @@ input[type="text"] {
     margin: 0 auto;
 }
 
+.menu__links {
+    height: 100%;
+    transition: transform .5s;
+    display: flex;
+    justify-content:space-around;
+    left: 0;
+    top: 0;
 
-/* //////////   FIN  CODE NANCY ////////// */
+}
+.menu__item {
+    list-style: none;
+    position: relative;
+    height: 100%;
+    --clip: polygon(0 0, 100% 0, 100% 0, 0 0);
+    --transform: rotate(-90deg);
+}
+
+.menu__item:hover {
+    --clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    --transform: rotate(0);
+}
+
+.menu__link {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 30px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.menu__link:hover {
+    background-color: var(--pokemon-type-unknown);
+}
+
+
+.menu__arrow {
+    transform: var(--transform);
+    transition: transform .3s;
+    display: block;
+    margin-left: 3px;
+}
+
+.menu__nesting {
+    list-style: none;
+    transition: clip-path .3s;
+    clip-path: var(--clip);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: max-content;
+    transform: translateY(100%);
+    background-color: var(--nav-background);
+}
+
+.menu__link--inside {
+    padding: 30px 100px 30px 20px;
+}
+
+.menu__link--inside:hover {
+    background-color: var(--pokemon-type-electric);
+}
+
+.menu__hamburguer {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    cursor: pointer;
+    display: none;
+}
+
+.menu__img {
+    display: block;
+    width: 36px;
+}
+
+
+
+/* //////////   FIN  MENU   ////////// */
+.columna {
+    position:static;
+}
 
 .card {
     border: 1px solid #ccc;
@@ -99,7 +181,7 @@ input[type="text"] {
     justify-content: center;
     display: inline-block;
     box-sizing: border-box;
-    width: 200px;
+    width: 200 px;
     height: 300px;
     gap: 50px;
     margin-left: 30px;
@@ -112,22 +194,22 @@ input[type="text"] {
 
 .info-container {
     flex-grow: 1;
-    display:inline-block;
+    display: inline-block;
     justify-content: center;
     align-items: center;
 }
 
-.numPokemon{
-    margin:10px;
+.numPokemon {
+    margin: 10px;
     padding: 20px;
     text-align: center;
     justify-content: center;
     align-items: center;
-    
+
 }
 
-.img-container{
-    background-color:var(--theme-color);
+.img-container {
+    background-color: var(--theme-color);
     border-radius: 60%;
     align-self: center;
     opacity: .8;
@@ -135,6 +217,7 @@ input[type="text"] {
     align-items: center;
 
 }
+
 main {
     height: auto;
 }
@@ -143,8 +226,76 @@ footer {
     height: auto;
 }
 
-@media only screen and (max-width: 600px) {
+/* //////  RESPONSIVE  /////*/
+@media only screen and (max-width:600px) {
     .topheader {
-        height: 150px;
+        height: 150 px;
+    }
+
+
+    .menu__hamburguer {
+        display: flex;
+    }
+
+    .menu__item {
+        --clip: 0;
+        overflow: hidden;
+    }
+
+    .menu__item--active {
+        --transform: rotate(0);
+        --background: #5e7094;
+    }
+
+    .menu__item--show {
+        background-color: var(--background);
+    }
+
+
+    .menu__links {
+        position: fixed;
+        max-width: 400px;
+        width: 100%;
+        top: 70px;
+        bottom: 0;
+        right: 0;
+        background-color: #000;
+        overflow-y: auto;
+        display: grid;
+        grid-auto-rows: max-content;
+        transform: translateX(100%);
+    }
+
+    .menu__links--show {
+        transform: unset;
+        width: 100%;
+    }
+
+    .menu__link {
+        padding: 25px 0;
+        padding-left: 30px;
+        height: auto;
+    }
+
+    .menu__arrow {
+        margin-left: auto;
+        margin-right: 20px;
+    }
+
+    .menu__nesting {
+        display: grid;
+        position: unset;
+        width: 100%;
+        transform: translateY(0);
+        height: 0;
+        transition: height .3s;
+    }
+
+    .menu__link--inside {
+        width: 90%;
+        margin-left: auto;
+        border-left: 1px solid #798499;
     }
 }
+
+/* ////////   FIN MENU RESPÖNSIVE /////// */
