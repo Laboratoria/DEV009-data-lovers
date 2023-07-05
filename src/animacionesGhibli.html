@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Indica el tamaño de la pantalla-->
   <title>Data Lovers</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -11,40 +12,46 @@
   <div id="root"></div>
   <script src="main.js" type="module"></script>
 
-  <header>
-    <h1 class="rotate"> FILMS STUDIO GHIBLI</h1>
+  <header class="temaPeli">
+    <h1 class="tituloPrincipal"> Films Studio Ghibli</h1>
   </header>
-  <main>
-    <select>
-      <option value="opcion1">Sort By</option>
-      <option value="opcion2">A-Z</option>
-      <option value="opcion2">Z-A</option>
-      <option value="opcion3">year</option>
-      <option value="opcion4">Score</option>
+  <nav class="navegacion">
+    <select id="ordenaPor" class="selector">
+      <option value="0">Sort By</option>
+      <option value="1">A-Z</option>
+      <option value="2">Z-A</option>
+      <option value="3">Year Recent First</option>
+      <option value="4">Year Old First</option>
+      <option value="5">Score Hightest First</option>
+      <option value="6">Score Lowest First</option>
 
     </select>
-    <select>
-      <option value="opcion1">Producers</option>
-      <option value="opcion2">Isao Takahata</option>
-      <option value="opcion3">Hayao Miyazaki</option>
-      <option value="opcion4">Toru Hara</option>
-      <option value="opcion5">Toshio Suzuki</option>
-      <option value="opcion6">Yoshiaki Nishimura</option>
+    <select id="Producers" class="selector">
+      <option value="Producers">Producers</option>
+      <option value="Isao Takahata">Isao Takahata</option>
+      <option value="Hayao Miyazaki">Hayao Miyazaki</option>
+      <option value="Toru Hara">Toru Hara</option>
+      <option value="Toshio Suzuki">Toshio Suzuki</option>
+      <option value="Yoshiaki Nishimura">Yoshiaki Nishimura</option>
     </select>
 
-    <select>
-      <option value="opcion1">Directors</option>
-      <option value="opcion2">Hayao Miyazaki</option>
-      <option value="opcion3">Isao Takahata</option>
-      <option value="opcion4">Yoshifumi Kondō</option>
-      <option value="opcion5">Hiroyuki Morita</option>
-      <option value="opcion6">Gorō Miyazaki</option>
-      <option value="opcion6">Hiromasa Yonebayashi</option>
+    <select id="Directors" class="selector">
+      <option value="Directors">Directors</option>
+      <option value="Hayao Miyazaki">Hayao Miyazaki</option>
+      <option value="Isao Takahata">Isao Takahata</option>
+      <option value="Yoshifumi Kondō">Yoshifumi Kondō</option>
+      <option value="Hiroyuki Morita">Hiroyuki Morita</option>
+      <option value="Gorō Miyazaki">Gorō Miyazaki</option>
+      <option value="Hiromasa Yonebayashi">Hiromasa Yonebayashi</option>
     </select>
-    <button id="principal"><span>Back to Main Page</span></button>
+    <button id="principal">Back to Main Page</button>
+  </nav>
+  <main style="padding: 1px;;">
+    <section class="cards"> </section>
   </main>
-
-  <section class="cards"> </section>
+  <footer>
+    <p>Creada por: Nancy Nallely Martinez Dominguez y Fabiola Granados</p>
+  </footer>
   <script src="main.js" type="module"></script>
 </body>
 
