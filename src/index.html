@@ -51,22 +51,33 @@
     <!--HOME-->
     <main id="container_main">
       <div id="container_all">
-        <div class="navegador">
-          <div class="nav_container">
-            <nav>
-              <ul class="barra-menu">
-                <li><a href="#todos">TODOS</a></li>
-                <li><a href="#luchador">LUCHADOR</a></li>
-                <li><a href="#tirador">TIRADOR</a></li>
-                <li><a href="#mago">MAGO</a></li>
-                <li><a href="#asesino">ASESINO</a></li>
-                <li><a href="#tanque">TANQUE</a></li>
-                <li><a href="#apoyo">APOYO</a></li>
+        <div class="container_nav_all">
+          <!--SEGUNDA BARRA DE NAVEGACION-->
+          <nav class="nav2">
+            <ul class="ul-horizontal">
+              <li><a>ROLES</a>
+              <ul class="ul-vertical">
+                  <li><a href="#TODOS">TODOS</a></li>
+                  <li><a href="#Z-A">Z - A</a></li>
+                  <li><a href="#LUCHADOR" id="luchador-link">LUCHADOR</a></li>
+                  <li><a href="#TIRADOR">TIRADOR</a></li>
+                  <li><a href="#MAGO">MAGO</a></li>
+                  <li><a href="#ASESINO">ASESINO</a></li>
+                  <li><a href="#TANQUE">TANQUE</a></li>
+                  <li><a href="#APOYO">APOYO</a></li>
               </ul>
-            </nav>
+              </li>
+            </ul>
+          </nav>
+          <div class="buscador">
+            <input type="text" placeholder="Buscar" />
+            <div class="boton">
+            <i class="fas fa-search icon"></i>
+            </div>
           </div>
-        </div>
+    </div>
         <div id="container_img" class="container clearfix"></div>
+        <div class="container_img2"></div>
       </div>
     </main>
    </section>
