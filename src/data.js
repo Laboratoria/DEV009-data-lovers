@@ -11,9 +11,6 @@ export const searchPokemon = (data, inputText) => {
   return resultPokemon;
 }
 
-
-
-
   /// CON FOR 
 /*   const resultPokemon = [];
 
@@ -31,6 +28,13 @@ export const searchPokemon = (data, inputText) => {
   return resultPokemon;
 }; */
 ////
+
+
+export const  sortPokemon = (data, parameter) =>{
+  //let arrarNewPokemon = [];
+  
+
+}
 
 //FIN nancy
 
