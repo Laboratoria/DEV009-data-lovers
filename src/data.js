@@ -1,4 +1,5 @@
 // estas funciones son de ejemplo
+
 export const display = (pokemonData)=>{
   const seccionShowAll = document.getElementById('showAll');
   const cardPokemon = document.createElement('div');
@@ -17,10 +18,10 @@ export const display = (pokemonData)=>{
   seccionShowAll.appendChild(cardPokemon);
 
 };
-/*export const example = () => {
+export const example = () => {
   return 'example';
 };
 
 export const anotherExample = () => {
   return 'OMG';
-};*/
+};

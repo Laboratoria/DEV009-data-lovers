@@ -18,7 +18,7 @@ for(const i of pokemonList){
 
 pokemonList.forEach(function(pokemon){
 
-    display(pokemon);
+  display(pokemon);
 })
 
 
