@@ -6,10 +6,9 @@
 body {
   font-family: sans-serif;
   padding-top: 70px;
-  background-color: #0C1E42;
+  background-color: #2a4883;
 }
-
-/* header con cambios */
+/**********************************CAMBIOS EN EL HEADER***************************************/
 .header{
   background: url(fondo_pagina0.jpg);
   display: flex;/*se utiliza para convertir un contenedor en un contenedor flexible, lo que permite una disposición flexible y controlada de
@@ -61,33 +60,29 @@ body {
   color: #fff;
   -webkit-text-stroke: 0.5px #000;
 }
-
-/* Botón de flecha */
+/**********Botón de flecha********/
 .div_flecha{
   text-align: center;
 }
-
 #botonAbajo{
   padding: 20px;
   width: 140px;
 }
-
 #section2 {
   display: none;
 }
-/* Primera barra de navegación */
+/*****************BARRA DE NAVEGACION FIJA***************************/
 .nav {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  
-
-  background-color: #6725F4;
+  background-color: #3a3a68;
   height: 60px;
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
+  z-index: 1;/* se utiliza para controlar la posición en el eje Z y se pone 1 porque es solo 1 capa*/
 }
 .nav-link {
   color: white;
@@ -109,7 +104,7 @@ body {
   margin-right: 20px;
   list-style: none;
   margin: 0;
-  background-color: #613DAC;
+  background-color: #28283d;
   position: fixed;
   left: 0;
   top: 60px;
@@ -148,79 +143,91 @@ body {
 .nav-menu_visible {
   left: 0;
 }
-/* Segunda barra de navegación */
+/*********************************INICIO DEL MAIN******************************************************************/
 
-/*
-.navegador {
-  height: 3em;
-  padding: 0.6em 0.93em;
+/*************************SEGUNDA BARRA DE NAVEGACION********************************************/
+.container_nav_all {
   display: flex;
-  text-align: center;
-  margin: auto;
+  justify-content: space-between;
 }
-.barra-menu{
-  padding: 0;
-  background: #3C52A3;
-  width: 350px;
+.nav2 {
+  width: 100px;
+  height: 35px;
+  background-color: #383347;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 30px;
+  font-size: 15px;
+  text-align: center;
+}
+.ul-horizontal {
+  list-style: none;
+}
+.ul-horizontal li {
+  color: #fff;
+}
+.ul-horizontal li a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+.ul-vertical {
+  list-style: none;
+  justify-content: flex-start;
+  position: absolute;
+  display: none;
+  color: #000;
+  background-color: #3f3974;
+}
+.ul-horizontal > li:hover .ul-vertical {
+  display: block;
+}
+.ul-vertical li {
+  text-decoration: none;
+}
+.ul-vertical li:hover {
+  background-color: #554C88;
+}
+.ul-vertical li a {
+  display: block;
+  color: #fff;
+  padding: 5px;
+  text-decoration: none;
+}
+.buscador {
+  padding-top: 10px;
+  padding-right: 20px;
+}
+.buscador input {
+  margin-right: 30px;
+  width: 100px;
   height: 20px;
-  margin: auto;
+  padding: 0 20px;
+  font-size: 18px;
+  color: #222;
 }
-.barra-menu li a{
-  text-decoration: none;
-  border: 3px solid #D9D9D9;;
-  color: #fff;
-  padding: 4px;
-  display: block;
-  font-size: 10.5px;
+.boton {
+  margin-top: 72px;
+  margin-right: 20px;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  top: 0;
+  right: 0;
+  position: absolute;
+  background: #000;
   text-align: center;
+  color: white;
+  font-size: 18px;
+  border-radius: 50%;
+  cursor: pointer;
 }
-.barra-menu li{
-  display: inline-block;
-  width: 15.6%;
-}
-.barra-menu li a:hover{
-  background: #531E6A;
-} */
-
-.navegador {
-  height: 40px;
-  padding: 8px 12.5px;
-  display: flex;
-  justify-content: center; /* Alinear elementos horizontalmente */
-  align-items: center; /* Alinear elementos verticalmente */
-  
-}
-.barra-menu {
-  padding: 0;
-  background: #3C52A3;
-  width: 100%; /* Ocupar todo el ancho disponible */
-  margin: 0; /* Eliminar margen */
-  display: flex; /* Mostrar los elementos en una línea */
-  justify-content: space-between; /* Distribuir los elementos de manera uniforme */
-  
-}
-.barra-menu li {
-  flex-grow: 1; /* Hacer que los elementos crezcan para ocupar el espacio disponible */
-  
-}
-.barra-menu li a {
-  text-decoration: none;
-  border: 3px solid #D9D9D9;;
-  color: #fff;
-  padding: 4px;
-  display: block;
-  font-size: 10.5px;
-  text-align: center;
-}
-.barra-menu li a:hover {
-  background: #531E6A;
-}
+/*******************EDICION DEL DIV DE HTML Y DE LO QUE CREAMOS EN JS***************************************/
 
 .container {
   text-align: center;
   overflow: hidden;
 }
-
 .champion-container {
   width: 48%;
   text-align: center;
@@ -228,20 +235,16 @@ body {
   box-sizing: border-box;
   padding: 8px;
 }
-
 .champion-image {
   width: 100%;
   height: 100%;
 }
-
 .champion-name {
   background-color: #131120;
   font-family:'Ysabeau Office', sans-serif;
   color: white;
 }
-
-
-
+/***********++++++++++++**************@MEDIA PARA EL ESCRITORIO***********++++++++++++++******************************/
 @media (min-width: 640px) {
   .body {
     padding: 90px 20px 0;
@@ -250,10 +253,11 @@ body {
     height: 80px;
   }
   .logo {
-    font-size: 30px;
-    padding: 0 40px;
-    line-height: 80px;
+    font-size: 50px;
+    line-height: 60px;
+    margin-left: 40px;
   }
+
   .nav-menu {
     display: flex;
     margin-right: 40px;
@@ -261,17 +265,121 @@ body {
   .nav-menu-item {
     line-height: 80px;
   }
+  .nav-toggle{
+    margin-right: 30px;
+    margin-top: 5px;
+  }
+  .fa-solid{
+    font-size: 43px;
+  }
+
   .nav-menu-link {
     padding: 8px 12px;
     border-radius: 3px;
+    font-size: 15px;
   }
   .nav-menu-link:hover {
-    background-color: black;
+    background-color: #696969;
     transition: 0.5s;
   }
   .nav-toggle:focus:not(:focus-visible) {
     outline: none;
   }
+  /************************SEGUNDA BARRA DE NAVEGACION**********************************/
+  .container_nav_all {
+    background-color: transparent;
+    margin: 20px;
+  }
+  .nav2 {
+    width: 1000px;
+    height: 40px;
+    margin-left: 0px;
+    font-size: 18px;
+    background-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .ul-horizontal {
+    width: 1000px;
+    height: 40px;
+    list-style: block;
+    display: flex;
+  }
+  .ul-horizontal li {
+    color: #fff;
+    display: block;
+  }
+  .ul-horizontal li a {
+    display: none;
+    text-align: center;
+    text-decoration: none;
+  }
+  .ul-vertical {
+    padding: 0;
+    width: 1000px;
+    flex-wrap: wrap;
+    color: #000;
+    background-color: initial;
+    margin-top: -10px; /* Reiniciamos el margen superior */
+  }
+  .ul-vertical li {
+    padding: 8px;
+    width: 120px;
+    height: 47px;
+    display: block;
+    background-color: #262331;
+    border: 1px solid #fff;
+  }
+  .ul-vertical li:hover{
+    border: 3px solid #FFF;
+  }
+  .ul-vertical li a {
+    display: block;
+  }
+  .ul-horizontal > li .ul-vertical {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr); /* Define el número de columnas */
+  }
+  .ul-horizontal > li:hover .ul-vertical {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr); /* Define el número de columnas */
+  }
+  .buscador{
+      padding-top: 0px;
+      padding-right: 50px;
+  }
+  .buscador input{
+      width: 160px;
+      height: 34px;
+      padding: 0 20px;
+      font-size: 18px;
+      color: #222;
+      border: 1px solid #000;
+  }
+  .buscador input:hover{
+    border: 3px solid #000;
+  }
+  .boton{
+      margin-top: 82px;
+      margin-right: 56px;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      top: 0;
+      right: 0;
+      position: absolute;
+      background: #000;
+      text-align: center;
+      color: white;
+      font-size: 18px;
+      border-radius: 50%;
+      cursor: pointer;
+  }
+
+  /*******************EDICION DEL DIV DE HTML Y DE LO QUE CREAMOS EN JS***************************************/
+
+    .champion-container {
+      width: 19.5%;
+    }
+
 }
-
-

@@ -2,8 +2,7 @@ const navToggle = document.querySelector(".nav-toggle");
 const navMenu = document.querySelector(".nav-menu");
 navToggle.addEventListener("click", () => {
   navMenu.classList.toggle("nav-menu_visible");
-})
-
+});
 
 //Comandos para hacer la funcion de desaparecer la página principal y aparecer la pagina dos.
 
@@ -13,7 +12,6 @@ botonAbajo.addEventListener("click", Continuar);
 function Continuar() {
   document.getElementById("section1").style.display = "none";
   document.getElementById("section2").style.display = "block";
-
 }
 
 const botonArriba = document.getElementById("botonArriba");
@@ -22,7 +20,6 @@ botonArriba.addEventListener("click", Subir);
 function Subir() {
   document.getElementById("section2").style.display = "none";
   document.getElementById("section1").style.display = "block";
-
 }
 
 //Comandos para el manejo de base de datos
@@ -58,3 +55,50 @@ for (let championKey in championsData.data) {
   championElement.appendChild(nameElement); //sirve para poner el nombre de los campeones en el div
   championContainer.appendChild(championElement); //aca estamos guardando todo lo de championElement en championContainer y se visualiza en el div
 }
+
+///////////////////FILTRAR LA DATA POR LOS ROLES DE LOS CAMPEONES/////////////////////////////////
+
+document.addEventListener("DOMContentLoaded", function () {
+  const campeonesData = [
+    { nombre: "Campeón 1", imagen: "imagen1.png", rol: "Luchador" },
+    { nombre: "Campeón 2", imagen: "imagen2.png", rol: "Luchador" },
+    { nombre: "Campeón 3", imagen: "imagen3.png", rol: "Otro Rol" },
+    // Resto de los campeones con sus datos
+  ];
+
+  // Función para mostrar los campeones del rol Luchador
+  function mostrarCampeonesLuchador() {
+    const luchadorLink = document.getElementById("luchador-link");
+    luchadorLink.addEventListener("click", function (event) {
+      event.preventDefault(); // Evitamos el comportamiento predeterminado del enlace
+
+      const luchadorCampeones = campeonesData.filter(
+        (campeon) => campeon.rol === "Luchador"
+      );
+
+      const championContainer = document.getElementById("container_img");
+      championContainer.innerHTML = ""; // Limpiamos el contenedor antes de agregar los campeones
+
+      luchadorCampeones.forEach((campeon) => {
+        const championElement = document.createElement("div");
+        championElement.classList.add("champion-container");
+
+        const imgElement = document.createElement("img");
+        imgElement.src = campeon.imagen;
+        imgElement.alt = campeon.nombre;
+        imgElement.classList.add("champion-image");
+
+        const nameElement = document.createElement("p");
+        nameElement.classList.add("champion-name");
+        nameElement.textContent = campeon.nombre;
+
+        championElement.appendChild(imgElement);
+        championElement.appendChild(nameElement);
+        championContainer.appendChild(championElement);
+      });
+    });
+  }
+
+  // Llamamos a la función para mostrar los campeones del rol Luchador
+  mostrarCampeonesLuchador();
+});
