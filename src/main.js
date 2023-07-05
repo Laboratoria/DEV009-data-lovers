@@ -13,11 +13,11 @@ const display = (pokemones) => {
         target.classList.add('cards');
         target.innerHTML += `<img src='${element.img}' alt='imagen de ${element.name}'>
         <h2>${element.name}</h2>
-        <h4>${element.num}</h4>
+        <h4> Número: ${element.num}</h4>
         <h4>${element.generation.num}</h4>
-        <h4>${element.type}</h4>
-        <h4>${element.size.height}</h4>
-        <h4>${element.size.weight}</h4>
+        <h4> Tipo: ${element.type}</h4>
+        <h4> Tamaño: ${element.size.height}</h4>
+        <h4> Peso: ${element.size.weight}</h4>
         <p>${element.about}</p>`
         container.appendChild(target)
     });
