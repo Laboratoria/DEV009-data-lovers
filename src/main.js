@@ -37,7 +37,6 @@ menu.addEventListener("change", () => {
     }
     else if (element === "za") {
         display(sortNameDes(dataPokemon))
-      
 
     }
     else if (element === "numberMayor") {
@@ -53,6 +52,15 @@ menu.addEventListener("change", () => {
 
 
 //filtro de buscar por nombre
-//document.getElementById('pokeNames').addEventListener('keyup')
+ document.getElementById('pokeNames').addEventListener('keyup', ()=>{
+
+    const filterName = document.getElementById('pokeNames').value;
+    const result = dataPokemon.filter(element => (element.name).indexOf(filterName) !== -1);
+    display(result)
+    console.log("pokemones filtrados por nombre " , result)
+    
+      
+})
+
 
 
