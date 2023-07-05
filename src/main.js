@@ -18,7 +18,7 @@ console.log("estoy mostrando la data", data, data.films, people);
 
 //HTML de la lista de personas
 const peopleList = document.getElementById('people-list');
-peopleList.innerHTML = ''; // Limpiar el contenido de la lista de personas
+//peopleList.innerHTML = ''; // Limpiar el contenido de la lista de personas
 
 //Recorrer el arreglo ordenado y crear elementos HTML para cada persona
 people.forEach(person => {
@@ -62,7 +62,7 @@ films.sort((a, b) => a.title.localeCompare(b.title));
 console.log("estoy ordenando películas", films);
 
 const filmsList = document.getElementById('films-list');
-filmsList.innerHTML = '';
+//filmsList.innerHTML = '';
 
 films.forEach(film => {
   const titleItem = document.createElement('div');
@@ -79,6 +79,51 @@ films.forEach(film => {
 
 //______CLICK PELÍCULAS ORDENADAS ALFABÉTICAMENTE
 const ordenAlfabeticoFilmsLink = document.getElementById('orden-alfabetico-films');
+
+ordenAlfabeticoFilmsLink.addEventListener('click', function(event) {
+  event.preventDefault(); // Evita que el enlace realice la acción predeterminada
+
+  if (peopleList.style.display !== 'none') {
+    peopleList.style.display = 'none';
+  }
+
+  if (filmsList.style.display === 'none') {
+    filmsList.style.display = 'grid';
+  } else {
+    filmsList.style.display = 'none';
+  }
+});
+
+
+//______PELÍCULAS ORDENADAS POR AÑO ('release_date')
+
+const filmsDate = data.films.flatMap(film => ({
+  title: film.title,
+  poster: film.poster,  
+  date: film.release_date
+}));
+
+filmsDate.sort((a, b) => a.release_date.localeCompare(b.release_date));
+console.log("estoy ordenando películas por año", filmsDate);
+
+const filmsDateList = document.getElementById('films-list-year');
+//filmsList.innerHTML = '';
+
+filmsDate.forEach(film => {
+  const dateItem = document.createElement('div');
+  const dateImage = document.createElement('img');
+  const dateName = document.createElement('p');
+
+  dateImage.src = film.poster;
+  dateName.textContent = film.release_date;
+
+  dateItem.appendChild(dateImage);
+  dateItem.appendChild(dateName);
+  filmsDateList.appendChild(dateItem);
+});
+
+//______CLICK PELÍCULAS ORDENADAS POR AÑO ('release_date')
+const ordenDateFilmsLink = document.getElementById('orden-alfabetico-films');
 
 ordenAlfabeticoFilmsLink.addEventListener('click', function(event) {
   event.preventDefault(); // Evita que el enlace realice la acción predeterminada
