@@ -12,23 +12,23 @@
     <div class="contenedor">
       <div class="logo">
         <h1><img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png" />
-      </h1>
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png" />
+        </h1>
       </div>
       <nav class="sections">
         <ul>
           <li><a class="Genebest">Generaciones</a></li>
-          <li><a class="Genebest">Mejores 10</a></li> 
+          <li><a class="Genebest">Mejores 10</a></li>
         </ul>
       </nav>
     </div>
     <p class="interview">Aquí podrás encontrar las increíbles dos primeras generaciónes del juego Pokémon go.</p>
     <!-- boton para buscar por nombre y numero-->
-    <label for="button">Buscar por nombre: </label>
-    
-    <input type="search" placeholder="Buscar" id="pokeNames">
-
-    <br><br>
+    <div id="searchs">
+      <label for="button">Buscar por nombre: </label>
+      <input type="search" placeholder="Buscar" id="pokeNames">
+      <br><br>
+    </div>
     <!-- menu desplegable para seleccionae-->
     <label for="select">Ordenar por: </label>
     <select id="menu">
@@ -39,10 +39,11 @@
     </select>
     <div id="result"></div>
   </header>
-
   <main id="targets">
   </main>
-      <footer><p class="by">By Jarianna & Aivy.</p></footer>
+  <footer>
+    <p class="by">By Jarianna & Aivy.</p>
+  </footer>
   <script src="main.js" type="module"></script>
 </body>
 
