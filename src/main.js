@@ -169,10 +169,12 @@ displayPokemon(randomPokemon);
 
 
 ///////////// INICIO NANCY
+
+//////////   B U S C A D O R     P O K E M O N ////////
 //obtener el el text que el usuario escriba en el input
 const buscarPokemon = document.getElementById("buscarPokemon");
-//const cardResult = document.createElement("div");
 
+//const cardResult = document.createElement("div");
 
 
 buscarPokemon.addEventListener('input', () => {
@@ -192,6 +194,33 @@ buscarPokemon.addEventListener('input', () => {
     displayPokemon(data.pokemon);
   }
 });
+
+
+//// S O R T   P O K E M O N ///
+
+const sortPokemon = document.getElementById('sortPoke');
+
+
+
+
+
+
+
+////// M O D A L     P O K E M O N /////////
+/* const cardResult = document.createElement("div");
+cardResult.classList.add('modal')
+
+cardResult.addEventListener('click', ()=>{
+  const divConteiner = document.createElement("div");
+    divConteiner.classList.add("pokemon");
+    divConteiner.innerHTML = `
+    <p class="pokemonId">${pokemon.num}</p>
+    <div class="nombrePokemon">${pokemon.name}</div>
+    <div class = img>
+        <img src = "${pokemon.img}" alt="${pokemon.name}">
+    </div>
+ `
+}); */
 
 /////////////FIN NANCY
 
