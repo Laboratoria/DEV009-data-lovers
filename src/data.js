@@ -23,6 +23,7 @@ export const sortNameDes = (arr) => {
     }
     return 0;
   });
+  return arr;
 };
 //de mayor a menor
 export const sortNumYouger = (arr) => {
@@ -35,6 +36,7 @@ export const sortNumYouger = (arr) => {
     }
     return 0;
   });
+  return arr;
 }
 //de menor a mayor
 export const sortNumLower = (arr) => {
