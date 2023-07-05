@@ -7,7 +7,100 @@ import data from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 // El objeto data contendrá información sobre los Pokémon.
 
-const randomPokemon = data.pokemon.slice().sort(() => 0.5 - Math.random()).slice(0, 7);
+
+const menu = {
+  "menu": [
+  {
+    "title": "Home",
+    "class": "menu__link",
+    "href": "#"
+  },
+  {
+    "title": "All Pokémon",
+    "class": "menu__link",
+    "href": "#"
+  },
+    {
+    "title": "TYPE",
+    "class": "menu__item menu__item--show",
+    "href": "#",
+    "subMenu":["Normal","Roca"]
+  },
+  
+  {
+    "title": "Contact",
+    "class": "menu__link",
+    "href": "#"
+  }
+]
+}
+// MENU
+const body = document.querySelector('body');
+const tagFirst = body.firstChild;
+// nav
+
+const nav = document.createElement('nav');
+nav.classList.add("menu");
+
+const section = document.createElement('section');
+section.classList.add("menu__container");
+
+const logo = document.createElement('img');
+logo.src ="./img/logopokemon.png" ;
+logo.classList.add("logo");
+logo.width = 150; 
+logo.height = 80; 
+logo.alt = "Logo Pokémon Lab Go";
+
+const ul = document.createElement('ul');
+ul.classList.add("menu__links");
+
+menu.menu.forEach((opciones) => {
+  const liTitle = document.createElement('li');
+  liTitle.classList.add(...opciones.class.split(' '));
+
+  const aTitle = document.createElement('a');
+  aTitle.classList.add("menu__link");
+  aTitle.href =  opciones.href;
+  aTitle.innerHTML = opciones.title; 
+
+  if (opciones.subMenu)
+  {
+    const ulSubMenu = document.createElement('ul');
+    ulSubMenu.classList.add("menu__nesting");
+
+    opciones.subMenu.forEach((submenu) => {
+      const liSubMenu = document.createElement('li');
+      liSubMenu.classList.add("menu__inside");
+
+      const aTitleSub = document.createElement('a');
+      aTitleSub.classList.add("menu__link", "menu__link--inside");
+      aTitleSub.href =  submenu;
+      aTitleSub.innerHTML = submenu; 
+      
+      liSubMenu.appendChild(aTitleSub);
+      ulSubMenu.appendChild(liSubMenu);
+      });
+
+      liTitle.appendChild(ulSubMenu);
+  }
+
+  liTitle.appendChild(aTitle);
+  ul.appendChild(liTitle);
+
+});
+
+section.appendChild(ul);
+section.appendChild(logo);
+nav.appendChild(section);
+
+
+body.insertBefore(nav, tagFirst);
+
+//// FIN MENU ////
+
+
+const randomPokemon = data.pokemon.slice().sort(() => 0.5 - Math.random()).slice(0, 6);
 
 
 //busca y devuelve el primer elemento con el id root.
