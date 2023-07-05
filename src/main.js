@@ -40,17 +40,11 @@ const ordenAlfabeticoPeopleLink = document.getElementById('orden-alfabetico-peop
 ordenAlfabeticoPeopleLink.addEventListener('click', function(event) {
   event.preventDefault(); // Evita que el enlace realice la acción predeterminada
 
-  if (filmsList.style.display === 'grid') {
-    filmsList.style.display = 'none';
-  }
-
-  if (peopleList.style.display === 'none') {
+  if (peopleList.style.display === '' || peopleList.style.display === 'none') {
     peopleList.style.display = 'grid';
     filmsDateList.style.display = 'none'; // Oculta filmsDateList
-
-  } else {
-    peopleList.style.display = 'none';
-  }
+    filmsList.style.display = 'none'; // Oculta filmsList
+  } 
 });
 
 //______PELÍCULAS ORDENADAS ALFABÉTICAMENTE
@@ -85,15 +79,10 @@ const ordenAlfabeticoFilmsLink = document.getElementById('orden-alfabetico-films
 ordenAlfabeticoFilmsLink.addEventListener('click', function(event) {
   event.preventDefault(); // Evita que el enlace realice la acción predeterminada
 
-  if (peopleList.style.display === 'grid') {
-    peopleList.style.display = 'none';
-  }
-
-  if (filmsList.style.display === 'none') {
+  if (filmsList.style.display === '' || filmsList.style.display === 'none') {
     filmsList.style.display = 'grid';
     filmsDateList.style.display = 'none'; // Oculta filmsDateList
-  } else {
-    filmsList.style.display = 'none';
+    peopleList.style.display = 'none'; // Oculta peopleList
   }
 });
 
@@ -134,13 +123,10 @@ const ordenDateFilmsLink = document.getElementById('orden-date-films');
 ordenDateFilmsLink.addEventListener('click', function(event) {
   event.preventDefault(); // Evita que el enlace realice la acción predeterminada
 
-  if (filmsList.style.display === 'grid') {
-    filmsList.style.display = 'none';
-  }
-
-  if (filmsDateList.style.display === 'none') {
+  if (filmsDateList.style.display === '' || filmsDateList.style.display === 'none') {
     filmsDateList.style.display = 'grid';
-  } else {
-    filmsDateList.style.display = 'none';
+    filmsList.style.display = 'none'; // Oculta filmsList
+    peopleList.style.display = 'none'; // Oculta peopleList
+
   }
 });
