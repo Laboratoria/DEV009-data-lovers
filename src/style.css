@@ -58,8 +58,14 @@ main {
     margin: 0;
 }
 
+#searchs {
+    margin: 10px;
+
+}
+
 label {
     color: #FFFFFF;
+
 }
 
 footer {
@@ -68,31 +74,60 @@ footer {
     text-align: center;
     padding: center;
 }
-main#targets{
-    margin: 0;
+
+main#targets {
+    margin: auto;
+    padding: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+
 }
+
 #targets {
     padding: center;
-    display:grid;
+    display: grid;
     width: 330px;
     height: 500px;
     margin: 300px;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 7px;
-   
+
 }
-.cards{
+
+.cards {
     border: solid 2px #000;
-    background:#FFFFFF;
-   
+    background: #FFFFFF;
+
 }
- 
+
 article img {
-    width: 300px;
-    height: 300px;
+    width: 150px;
+    height: 150px;
     border: solid 2px #FFCB08;
     margin-left: 0;
-    margin-right:0;
-    padding: 10px;;
-    
-} 
+    margin-right: 0;
+    padding: 10px;
+    ;
+
+}
+
+article.cards {
+    height: 535px;
+    width: 175px;
+    padding: 10px;
+    margin: 10px;
+
+}
+
+h2 {
+    margin: 10px;
+}
+
+h4 {
+    margin: 10px;
+
+}
+
+p {
+    margin: 10px;
+}
