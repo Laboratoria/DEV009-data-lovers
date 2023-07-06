@@ -81,10 +81,9 @@ input{
  opacity: 0;
  pointer-events: none;
 }
-.modal--show{
+.show{
   opacity: 1;
   pointer-events: unset;
-
 }
 .modal_container{
   margin: auto;

@@ -8,21 +8,47 @@ console.log(data.countries[0].area);
 const root =document.getElementById('root');
 const allCountries = data.countries;
 /**************Creacion de cartas****************/
-for (let i = 0; i< allCountries.length; i++){
+const visualCountry =(data)=>{
+   root.innerHTML="";
+for (let i = 0; i< data.length; i++){
    let card = document.createElement ('div');
    card.className= 'card';
-   card.id = allCountries[i].name.common;
+   card.id = data[i].name.common;
    card.innerHTML= ` 
-      <img src=${allCountries[i].flags.png}>
-      <h2>${allCountries[i].name.common}</h2>
-     `
-   root.appendChild(card);
-   /**************Seleccion de cartas****************/
-   card.addEventListener('click', function() {
-      const id = card.id;
-      console.log(country(allCountries,id));
-   });
+      <img src=${data[i].flags.png}>
+      <h2>${data[i].name.common}</h2>
+      <section class="modal">
+       <div class="modal_container">
+        <ul class="modal_lista"></ul>
+          <li name="Nombre_de_pais_ofical" id="informacion">Nombre de pais oficial:${data[i].name.official}</li>
+          <li name="Capital" id="informacion">Capital:${data[i].capital}</li>
+          <li name="Continente" id="informacion">Continente:</li>
+          <li name="Subregion" id="informacion">Subregion:</li>
+        <a href="a" class="modal_close"> Cerrar</a>
+       </div> 
+      </section> 
+       `
+       root.appendChild(card);
+       /**************Seleccion de cartas****************/
+       //const openModal=document.querySelector('.card')
+       const modal = document.querySelector('.modal');
+       const closeModal=document.querySelector('.modal_close')
+
+       card.addEventListener('click', () => {
+          modal.classList.add('.show');
+          console.log("hola");
+
+         /**cuando se llame la carta selecionada nos muestre .show */
+         
+      
+         });
+         
+         /*closeModal.addEventListener('click', ()=>{
+         modal.classList.remove('.show');  */
+      
 }
+}
+   visualCountry(allCountries)
 /**************Busqueda por pais****************/
 const input = document.getElementById('Buscar');
 const bot = document.querySelector('#boton');
@@ -30,53 +56,8 @@ const bot = document.querySelector('#boton');
 bot.addEventListener('click',function(){
    const valor= input.value.toLowerCase();
    const resultado = busqueda(allCountries,valor);
-   
+   visualCountry(resultado);
    console.log(resultado);
-   /**************Creacion de cartas por filtro****************/
-for (let i = 0; i< resultado.length; i++){
-   let card = document.createElement ('div');
-   card.className= 'card';
-   card.id = resultado[i].name.common;
-   card.innerHTML= ` 
-      <img src=${resultado[i].flags.png}>
-      <h2>${resultado[i].name.common}</h2>
-     `
-      root.appendChild(card);
-   /**************Seleccion de cartas por filtro****************/
-   card.addEventListener('click', function() {
-      const id = card.id;
-      console.log(country(allCountries,id));
-   });
-}
 });
 
 /*console.log(contAmerica(allCountries))*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const openModal= document.querySelector('.card');
-const modal=document.querySelector('.modal');
-const closeModal=document.querySelector('.modal_close')
-
-openModal.addEventListener('click', (e)=>{
-   e.preventDefault();
-  modal.classList.add('modal--show');
-});
-closeModal.addEventListener('click', (e)=>{
-   e.preventDefault();
-  modal.classList.remove('modal--show');
-});
