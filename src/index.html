@@ -5,6 +5,9 @@
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://kit.fontawesome.com/81da191227.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 
@@ -21,9 +24,9 @@
          <div class="responsive options caja"> 
           <p class="letras">Status</p>
           <select class="selection selection1" name="status" id="status">
-          <option id="alive">Alive</option>
-          <option id="dead">Dead</option>
-          <option id="unknownStatus">Unknown</option>
+          <option value="Alive">Alive</option>
+          <option value="Dead">Dead</option>
+          <option value="unknown">Unknown</option>
           </select>
          </div>
         
@@ -69,8 +72,10 @@
 
       </div>
       
+      <div id="divLista">
+        <ul id="listaPadre"> </ul>
+      </div>
       
-      <ul id="listaPadre"> </ul>
 
     </main>  
     

@@ -8,13 +8,10 @@ export const anotherExample = () => {
   return 'OMG';
 };
 
-// Crear un arreglo con elementos de la opción seleccionada
-//hacer un arreglo que tenga los que esten Alive 
-
-
-export const filter = (array, option) => {
+export const filteredStatus = (array, option) => {
+  console.log(option);
+  return array.filter(result => result.status === option);
   
-  const filteredAlive = array.filter(value => value.status === option);
-  return filteredAlive;
+};
 
-}
+
