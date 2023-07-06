@@ -170,6 +170,8 @@ peopleFilm.forEach(person => {
 //______CLICK PERSONAJES ORDENADOS POR PELÍCULA ('people' y 'film')
 const ordenPeopleFilmsLink = document.getElementById('orden-people-films');
 
+//const ordenPeopleFilmsName = document.getElementById('name-films');
+
 ordenPeopleFilmsLink.addEventListener('click', function(event) {
   event.preventDefault(); // Evita que el enlace realice la acción predeterminada
 
