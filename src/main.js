@@ -9,7 +9,8 @@ import { orderByAlphabetical } from './data.js';
 //______PERSONAJES ORDENADOS ALFABÉTICAMENTE
 const people = data.films.flatMap(film => film.people.map(person => ({
   name: person.name,
-  image: person.img
+  image: person.img,
+  title: film.title
 })));
 //people.sort((a, b) => a.name.localeCompare(b.name));
 const peopleOrdered = orderByAlphabetical (people);
@@ -40,10 +41,12 @@ const ordenAlfabeticoPeopleLink = document.getElementById('orden-alfabetico-peop
 ordenAlfabeticoPeopleLink.addEventListener('click', function(event) {
   event.preventDefault(); // Evita que el enlace realice la acción predeterminada
 
-  if (peopleList.style.display === '' || peopleList.style.display === 'none') {
-    peopleList.style.display = 'grid';
+  // if para el caso de que no se haya interactuado aún en la página y para el caso en el que haya interactuado érp peoplelist display=none
+  if (peopleList.style.display === '' || peopleList.style.display === 'none') { 
+    peopleList.style.display = 'grid'; // Muestra peopleList
     filmsDateList.style.display = 'none'; // Oculta filmsDateList
     filmsList.style.display = 'none'; // Oculta filmsList
+    peopleFilmList.style.display = 'none';
   } 
 });
 
@@ -83,6 +86,7 @@ ordenAlfabeticoFilmsLink.addEventListener('click', function(event) {
     filmsList.style.display = 'grid';
     filmsDateList.style.display = 'none'; // Oculta filmsDateList
     peopleList.style.display = 'none'; // Oculta peopleList
+    peopleFilmList.style.display = 'none';
   }
 });
 
@@ -125,6 +129,53 @@ ordenDateFilmsLink.addEventListener('click', function(event) {
 
   if (filmsDateList.style.display === '' || filmsDateList.style.display === 'none') {
     filmsDateList.style.display = 'grid';
+    filmsList.style.display = 'none'; // Oculta filmsList
+    peopleList.style.display = 'none'; // Oculta peopleList
+    peopleFilmList.style.display = 'none';
+  }
+});
+
+//______PERSONAJES ORDENADOS POR PELÍCULA ('people' y 'film')
+
+const peopleFilm = data.films.flatMap(film =>
+  film.people.map(person => ({
+    name: person.name,
+    image: person.img,
+    film: film.title
+  }))
+);
+
+peopleFilm.sort((a, b) => a.film.localeCompare(b.film));
+console.log("Estoy clasificando personajes por película", peopleFilm);
+
+const peopleFilmList = document.getElementById('people-list-film');
+
+// Recorrer el arreglo ordenado y crear elementos HTML para cada personaje
+peopleFilm.forEach(person => {
+  const personItem = document.createElement('div');
+  const personImage = document.createElement('img');
+  const personName = document.createElement('p');
+  const personFilm = document.createElement('p');
+
+  personImage.src = person.image;
+  personName.textContent = person.name;
+  personFilm.textContent = person.film;
+
+  personItem.appendChild(personImage);
+  personItem.appendChild(personName);
+  personItem.appendChild(personFilm);
+  peopleFilmList.appendChild(personItem);
+});
+
+//______CLICK PERSONAJES ORDENADOS POR PELÍCULA ('people' y 'film')
+const ordenPeopleFilmsLink = document.getElementById('orden-people-films');
+
+ordenPeopleFilmsLink.addEventListener('click', function(event) {
+  event.preventDefault(); // Evita que el enlace realice la acción predeterminada
+
+  if (peopleFilmList.style.display === '' || peopleFilmList.style.display === 'none') {
+    peopleFilmList.style.display = 'grid';
+    filmsDateList.style.display = 'none';
     filmsList.style.display = 'none'; // Oculta filmsList
     peopleList.style.display = 'none'; // Oculta peopleList
 
