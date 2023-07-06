@@ -56,6 +56,7 @@ const bot = document.querySelector('#boton');
 bot.addEventListener('click',function(){
    const valor= input.value.toLowerCase();
    const resultado = busqueda(allCountries,valor);
+
    visualCountry(resultado);
    console.log(resultado);
 });
