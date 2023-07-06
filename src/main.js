@@ -10,36 +10,36 @@ console.log(data.results.type);
 //Escuchar los eventos del DOM - escuchar el evento de hacer click en la opcion 
 
 //Status
-const selectStatus= document.getElementById("status")
-selectStatus.addEventListener("change", () => {
-    const optionStatus = selectStatus.value;
-    const filteredStatus = data.results.filter(function(result){
-        return result.status === optionStatus;
-    });
-    console.log(filteredStatus);
+const selectStatus = document.getElementById("status")
+selectStatus.addEventListener("change", () => { 
+  const optionStatus = selectStatus.value;
+  const filteredStatus = data.results.filter(function (result) {
+    return result.status === optionStatus;
+  });
+  console.log(filteredStatus);
 });
 
 //Species
 //definir la funcion filtrar 
 
 //escuchar el evento del elemento selectSpecies
-const selectSpecies= document.getElementById("species");
+const selectSpecies = document.getElementById("species");
 selectSpecies.addEventListener("change", () => {
-    const optionSpecies = selectSpecies.value;
-    const filteredSpecies = data.results.filter(function(result){
-        return result.species === optionSpecies;
-    });
-    console.log(filteredSpecies);
+  const optionSpecies = selectSpecies.value;
+  const filteredSpecies = data.results.filter(function (result) {
+    return result.species === optionSpecies;
+  });
+  console.log(filteredSpecies);
 });
 
 //Gender
-const selectGender= document.getElementById("gender");
+const selectGender = document.getElementById("gender");
 selectGender.addEventListener("change", () => {
-    const optionGender = selectGender.value;
-    const filteredGender = data.results.filter(function(result){
-        return result.gender === optionGender;
-    });
-    console.log(filteredGender);
+  const optionGender = selectGender.value;
+  const filteredGender = data.results.filter(function (result) {
+    return result.gender === optionGender;
+  });
+  console.log(filteredGender);
 });
 
 //Order
@@ -56,19 +56,19 @@ selectOrder.addEventListener("change", () => {
 }); */
 
 //Search
-const opcionSearch= document.getElementById("search")
-opcionSearch.addEventListener("click",crearTarjetas)
+const opcionSearch = document.getElementById("search")
+opcionSearch.addEventListener("click", crearTarjetas)
 
 
 //crear una funcion que cree los li
 //Crear los nodos 
 const tarjetas = document.getElementById("listaPadre") // seleccionar el elemento padre 
 
-function crearTarjetas(arregloTarjetas){
-    for (let i = 0; i < arregloTarjetas.length; i++){
-        const creaLi = document.createElement("li"); //creando los nodos 
-        tarjetas.appendChild(creaLi); //agregar el nodo 
-}
+function crearTarjetas(arregloTarjetas) {
+  for (let i = 0; i < arregloTarjetas.length; i++) {
+    const creaLi = document.createElement("li"); //creando los nodos 
+    tarjetas.appendChild(creaLi); //agregar el nodo 
+  }
 }
 
 
