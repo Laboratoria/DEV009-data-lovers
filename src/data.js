@@ -11,7 +11,6 @@ export const anotherExample = () => {
 export const filteredStatus = (array, option) => {
   console.log(option);
   return array.filter(result => result.status === option);
-  
 };
 
 
