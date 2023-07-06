@@ -9,16 +9,22 @@ export const sortBy = (data, option) => {
 };
 
 export const filterByDirector = (data, director) => {
-  function normalizeString(string) {
-    return string.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-  }
-  
-  function compareStrings(a, b) {
-    return normalizeString(a) === normalizeString(b);
-  }
- return data.filter((item) => compareStrings(item.director, director));
-};
+    return data.filter((item)=>item.director === director);
+  };
 
 export const filterByYear = (data, year) => {
   return data.filter((item) => item.release_date === year);
+};
+
+export const getCount=(dataGhibli, selectedOptionDirector, selectedOptionYear) => {
+  return dataGhibli.reduce((count, film) => {
+    if (
+      (selectedOptionDirector === 'all' || film.director === selectedOptionDirector) &&
+      (selectedOptionYear === 'all' || film.release_date === selectedOptionYear)
+    ) {
+      return count + 1;
+    } else {
+      return count;
+    }
+  }, 0);
 };
