@@ -47,6 +47,7 @@ ordenAlfabeticoPeopleLink.addEventListener('click', function(event) {
     filmsDateList.style.display = 'none'; // Oculta filmsDateList
     filmsList.style.display = 'none'; // Oculta filmsList
     peopleFilmList.style.display = 'none';
+    filmsListDirector.style.display = 'none';
   } 
 });
 
@@ -87,6 +88,7 @@ ordenAlfabeticoFilmsLink.addEventListener('click', function(event) {
     filmsDateList.style.display = 'none'; // Oculta filmsDateList
     peopleList.style.display = 'none'; // Oculta peopleList
     peopleFilmList.style.display = 'none';
+    filmsListDirector.style.display = 'none';
   }
 });
 
@@ -132,6 +134,7 @@ ordenDateFilmsLink.addEventListener('click', function(event) {
     filmsList.style.display = 'none'; // Oculta filmsList
     peopleList.style.display = 'none'; // Oculta peopleList
     peopleFilmList.style.display = 'none';
+    filmsListDirector.style.display = 'none';
   }
 });
 
@@ -177,6 +180,51 @@ ordenPeopleFilmsLink.addEventListener('click', function(event) {
 
   if (peopleFilmList.style.display === '' || peopleFilmList.style.display === 'none') {
     peopleFilmList.style.display = 'grid';
+    filmsDateList.style.display = 'none';
+    filmsList.style.display = 'none'; // Oculta filmsList
+    peopleList.style.display = 'none'; // Oculta peopleList
+    filmsListDirector.style.display = 'none';
+
+  }
+});
+
+//______PELÍCULAS ORDENADAS POR DIRECTOR 
+const filmsDirector = data.films.flatMap(film => ({
+  title: film.title,
+  poster: film.poster,  
+  director: film.director
+}));
+const filmsListDirector = document.getElementById('films-list-director')
+
+
+filmsDirector.sort((a, b) => a.director.localeCompare(b.director));
+console.log("estoy ordenando películas por director", filmsDirector);
+
+filmsDirector.forEach(film => {
+  const directorItem = document.createElement('div');
+  const directorImage = document.createElement('img');
+  const directorName = document.createElement('p');
+  const directorDirector = document.createElement('p');
+
+  directorImage.src = film.poster;
+  directorName.textContent = film.title;
+  directorDirector.textContent = film.director;
+
+  directorItem.appendChild(directorImage);
+  directorItem.appendChild(directorName);
+  directorItem.appendChild(directorDirector);
+  filmsListDirector.appendChild(directorItem);
+});
+
+//______CLICK PELÍCULAS ORDENADAS POR DIRECTOR ('director')
+
+const ordenDirectorFilmsLink = document.getElementById('orden-director-films');
+
+ordenDirectorFilmsLink.addEventListener('click', function(event) {
+  event.preventDefault(); // Evita que el enlace realice la acción predeterminada
+
+  if (filmsListDirector.style.display === '' || filmsListDirector.style.display === 'none') {
+    filmsListDirector.style.display = 'grid';
     filmsDateList.style.display = 'none';
     filmsList.style.display = 'none'; // Oculta filmsList
     peopleList.style.display = 'none'; // Oculta peopleList
