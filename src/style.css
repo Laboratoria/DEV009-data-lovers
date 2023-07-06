@@ -10,6 +10,15 @@ header {
     font-family: 'Quicksand', sans-serif;
 }
 
+#root {
+    width: 70%;
+    height: 300px; 
+    background-image: url(rickandmorty.png);
+    background-size: cover;
+    background-position: center;
+
+}
+
 #contenedor {
     font-family: 'Quicksand', sans-serif;
    /* display: flex;*/
@@ -28,10 +37,6 @@ p {
     padding-left: 4px;
     font-family: 'Quicksand', sans-serif;
     display: inline-block;
-}
-
-.responsive{
-    border: red solid 3px;
 }
 
 .selection1{
@@ -61,20 +66,19 @@ p {
 
 .selection{
     background-color: #82BF45;
-    
+    margin-top: 10px;
 }
 
 .letras {
     color:black;
     background-color: #82BF45;
     padding-bottom: 1px;
-    margin-bottom: 1px;
+    margin-bottom: 10px;
     padding-left: 10px;
     margin-left: 10px;
     padding-top: 2px;
     margin-top: 3px;
     margin: 0 auto;
-    
 }
 
 .optionlight {
