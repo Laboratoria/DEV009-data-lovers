@@ -31,7 +31,7 @@ bot.addEventListener('click',function(){
    const valor= input.value.toLowerCase();
    const resultado = busqueda(allCountries,valor);
    
-   console.log(resultado);
+   //console.log(resultado);
    /**************Creacion de cartas por filtro****************/
 for (let i = 0; i< resultado.length; i++){
    let card = document.createElement ('div');
@@ -50,24 +50,16 @@ for (let i = 0; i< resultado.length; i++){
 }
 });
 
+
+
+
+
+
+
+ 
 /*console.log(contAmerica(allCountries))*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*******Pop-up ******/
 const openModal= document.querySelector('.card');
 const modal=document.querySelector('.modal');
 const closeModal=document.querySelector('.modal_close')
