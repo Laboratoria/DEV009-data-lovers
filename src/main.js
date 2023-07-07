@@ -1,13 +1,17 @@
 //import { filtername} from './data.js';
 
 import data from './data/pokemon/pokemon.js';
-import { sortNameDes, sortNameasc, sortNumYouger, sortNumLower } from './data.js';
+import { sortNameDes, sortNameasc, sortNumYouger, sortNumLower, promPokemonEveryType} from './data.js';
 const dataPokemon = data.pokemon;
 const container = document.getElementById("targets");
 
+console.log(promPokemonEveryType(dataPokemon))
 //mostrar en el dom todos los pokemones
+
+
+
 const display = (pokemones) => {
-    container.innerHTML = ""
+  container.innerHTML = ""
     pokemones.forEach(element => {
         const target = document.createElement('article')
         target.classList.add('cards');
@@ -55,5 +59,4 @@ menu.addEventListener("change", () => {
       
 })
 
-
-
+//FILTRO PORCENTAJE POR TIPO 
