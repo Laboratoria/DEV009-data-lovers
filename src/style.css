@@ -1,5 +1,6 @@
 * {
-    background-color: #20222C;
+    background-color: black;
+    font-family: 'Quicksand', sans-serif;
 }
 
 header {
@@ -20,10 +21,12 @@ header {
 }
 
 #contenedor {
-    font-family: 'Quicksand', sans-serif;
-   /* display: flex;*/
+    
+    display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 40px;
+    gap: 30px;
 }
 
 p {
@@ -37,6 +40,7 @@ p {
     padding-left: 4px;
     font-family: 'Quicksand', sans-serif;
     display: inline-block;
+    border-radius: 10px;
 }
 
 .selection1{
@@ -47,11 +51,6 @@ p {
 .selection2{
     background-color: #82BF45;
     margin-left: 0.9px;
-}
-
-.selection3{
-    background-color: #82BF45;
-    margin-left: 18px;
 }
 
 .selection4{
@@ -85,11 +84,19 @@ p {
     background-color: #FFF1A7;
     color: black;
     display: inline-block;
+    border-radius: 10px;
 }
 
 .caja {
     height: 60px;
     width: 100px;
+    margin: 10px;
+    padding-top: 8px;   
+}
+
+.cajaSpecies {
+    height: 60px;
+    width: 130px;
     margin: 10px;
     padding-top: 8px;   
 }
@@ -121,9 +128,61 @@ p {
     margin-left: 12px;
 }
 
-@media only screen and(max-width:800px){
-.responsive{
-        display:block;
-        width: 60%;
+#divLista{
+    color: #FFF1A7;
+    display: flex;
+    flex-wrap: wrap; /* para que las tarjetas se puedan poner en filas*/
+    justify-content: space-between;
+    list-style: none; /*quitar los puntos de los li*/
+}
+
+.card-content{
+    background-color: #FFF1A7;
+    width: calc(90% - 10px); /* ancho de cada tarjeta con espacio de 10px entre tarjetas*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    
+}
+
+.card-content img {
+    order: -1;
+    max-width: 90%;
+    height: auto;
+    border: #1C2140 solid 3px;
+    border-radius: 10px;
+}
+
+.card-content h3 {
+    font-size: 20px;
+    color: black;
+    background-color: transparent;
+}
+
+.card-content p {
+    font-size: 16px;
+    color: black;
+    background-color: transparent;
+}
+
+@media only screen and (max-width:800px) {
+#contenedor {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
+
+#imageRickAndMorty {
+    width: 70%;
+}
+
+.card-content {
+    margin-left: 5%;
+}
+
 }

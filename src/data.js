@@ -1,20 +1,26 @@
-// estas funciones son de ejemplo
 
-export const example = () => {
-  return 'example';
+export const filteredStatus = (array, option) => {
+  return array.filter(result => result.status === option);
 };
 
-export const anotherExample = () => {
-  return 'OMG';
+export const filteredSpecies = (array, option) => {
+  return array.filter(result => result.species === option);
 };
 
-// Crear un arreglo con elementos de la opción seleccionada
-//hacer un arreglo que tenga los que esten Alive 
+export const filteredGender = (array, option) => {
+  return array.filter(result => result.gender === option);
+};
+
+export const filteredSearch = (array, option) => {
+  const searchLowercase = option.toLowerCase(); //convertir el input a minuscula
+  return array.filter(result => {
+    const resultName = result.name.toLowerCase(); // convertir name a minusculas 
+    return resultName.includes(searchLowercase); //buscar cualquier coincidencia en la data, respecto a lo introducido en el input
+    });
+  };
+
+    
 
 
-export const filter = (array, option) => {
-  
-  const filteredAlive = array.filter(value => value.status === option);
-  return filteredAlive;
 
-}
+
