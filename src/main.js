@@ -30,7 +30,7 @@ selectSpecies.addEventListener("change", () => {
 });
 
 //Gender
-const selectGender= document.getElementById("gender");
+const selectGender = document.getElementById("gender");
 selectGender.addEventListener("change", () => {
     const optionGender = selectGender.value;
     const filterGender = filteredGender(data.results, optionGender);
