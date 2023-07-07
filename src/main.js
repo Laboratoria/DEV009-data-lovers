@@ -1,12 +1,21 @@
-import { sortBy, filterByDirector, filterByYear } from './data.js';
+import { sortBy, filterByDirector, filterByYear, getCount} from './data.js';
 
 import data from './data/ghibli/ghibli.js'
-console.log(data);
- 
+const normalizeString = (string) => {
+  return string.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+};
+
+const films = data.films.map((film) => ({
+  ...film,
+  director: normalizeString(film.director),
+  // Normaliza otros valores si es necesario
+}));
+console.log(films);
+
 //Se manda llamar el div en donde se van a crear las tarjetas
 const dataContainer = document.getElementById('dataContainer');
 //Guarda la información del la base de datps
-const films = data.films;
+//const films = data.films;
 
 
 function createCardContainer(dataGhibli){
@@ -63,6 +72,7 @@ const filterSelect = document.getElementById('filterSelect');
 const yearFilterSelect = document.getElementById('yearFilterSelect');
 
 
+
 function handleSelection() {
   const selectedOption = orderSelect.value;
   const selectedOptionDirector = filterSelect.value;
@@ -84,6 +94,9 @@ function handleSelection() {
 
   dataContainer.innerHTML = "";
   createCardContainer(copyFilmsData)
+
+  const count = getCount(copyFilmsData, selectedOptionDirector, selectedOptionYear);
+  console.log('Cantidad de elementos:', count);
 }
 
 

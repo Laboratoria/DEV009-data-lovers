@@ -1,5 +1,4 @@
-import {  anotherExample, sortBy } from '../src/data.js';
-
+import { sortBy,filterByDirector,filterByYear } from '../src/data.js';
 
 describe(sortBy, () => {
   it('is a function', () => {
@@ -56,13 +55,33 @@ describe(sortBy, () => {
     
 });
 
+describe('filterByDirector',() =>{
+  it('Deberia filtrar los datos por director',() => {
+    const data = [
+      {director: 'Hayao Miyazaki'},
+      {director: 'Isao Takahata'},
+      {director: 'Yoshifumi Kondo'},
+      {director: 'Hiroyuki Morita'},
+      {director: 'Goro Miyazaki'},
+      {director: 'Hiromasa Yonebayashi'},
+    ];
 
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toEqual('function');
-  });
+    const filteredData = [
+      {director: 'Hayao Miyazaki'}
+    ];
+    expect (filterByDirector(data,'Hayao Miyazaki')).toEqual(filteredData)
+  })
+});
 
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
+describe('filterByYear', () => {
+  it('deberia filtrar la data por anio', () => {
+    const data = [
+      { release_date: '1988' },
+      { release_date: '1992' },
+      { release_date: '2004' },
+    ];
+
+    const filteredData = filterByYear(data, '1992');
+    expect(filteredData).toEqual([{ release_date: '1992' }]);
   });
 });
