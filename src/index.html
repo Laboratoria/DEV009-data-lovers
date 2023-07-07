@@ -32,6 +32,7 @@
         <div class="div_flecha">
           <a href="#section2"><img src="flecha.png" id="botonAbajo"></a>
         </div>
+
       </div>
     </header>
     </section>
@@ -57,18 +58,29 @@
             <ul class="ul-horizontal">
               <li><a>ROLES</a>
               <ul class="ul-vertical">
-                  <li><a href="#TODOS">TODOS</a></li>
-                  <li><a href="#Z-A">Z - A</a></li>
+                  <li><a href="#TODOS" id="todos-link"class="active">TODOS</a></li>
                   <li><a href="#LUCHADOR" id="luchador-link">LUCHADOR</a></li>
-                  <li><a href="#TIRADOR">TIRADOR</a></li>
-                  <li><a href="#MAGO">MAGO</a></li>
-                  <li><a href="#ASESINO">ASESINO</a></li>
-                  <li><a href="#TANQUE">TANQUE</a></li>
-                  <li><a href="#APOYO">APOYO</a></li>
+                  <li><a href="#TIRADOR" id="tirador-link">TIRADOR</a></li>
+                  <li><a href="#MAGO" id="mago-link">MAGO</a></li>
+                  <li><a href="#ASESINO" id="asesino-link">ASESINO</a></li>
+                  <li><a href="#TANQUE" id="tanque-link">TANQUE</a></li>
+                  <li><a href="#APOYO" id="apoyo-link">APOYO</a></li>
               </ul>
               </li>
             </ul>
           </nav>
+
+          <div class="btn-ordenar">
+            <ul class="ul-horizontal-ordenar">
+              <li class="li-ordenar">ORDENAR 
+            <ul class="ul-vertical-ordenar">
+              <li class="li-az"><a href="#" id="a-z-ordenarlink">A - Z</a></li>
+              <li class="li-za"><a href="#" id="z-a-ordenarlink">Z - A </a></li>
+            </ul>
+              </li>
+            </ul>
+          </div>
+
           <div class="buscador">
             <input type="text" placeholder="Buscar" />
             <div class="boton">
@@ -77,7 +89,6 @@
           </div>
     </div>
         <div id="container_img" class="container clearfix"></div>
-        <div class="container_img2"></div>
       </div>
     </main>
    </section>
