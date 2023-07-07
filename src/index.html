@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
-    <!--meta name="viewport" content="width=device-width, initial-scale=1.0"-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
@@ -16,12 +16,11 @@
 
     <header>
      <h1>PoKéLiSt</h1>
-
     </header>
     <aside>
       <div class="menu">
         <nav>
-          <form action="#showAll">
+          <form action="#mostrarPokemon">
             <label for="menu">Menu</label>
             <select name="mostrar" id="mostrar">
               <option value="">Selecciona una opción</option>
@@ -38,31 +37,29 @@
 
     </aside>
      
-   
 
     <main>
-      <!--<section id="inicio" class="imagenInicio">
-        <div class="imgInicio">
-          <img class="imagen-inicio" src="img/wallpaperflare.com_wallpaper.jpg" alt="Pokémon Fondo">
-        </div> 
-      </section>--> 
-
-      <section id="showAll" class="seccion">
-        <div><h1 class="show-pokemon">Mostrar PoKéMoN</h1></div>
-      
+      <section id="inicio" class="imagenInicio">
+        <picture>
+          <source media = "(max-width: 290px)" srcset = "img/fondo-200px.png"/>
+          <img src="img/fondo-260px.png" alt="Fondo de la pantalla de inicio">
+        </picture>
       </section>
+
+      <div id="mostrarPokemon">
+        <h2 class="show-pokemon">Mostrar PoKéMoN</h2>
+        <section id="showAll" class="mostrar-pokemon">      
+        </section>
+      </div>
+      
     </main>
     
 
     <footer>
-      <small></small>
+      <small>Creado por: Kelly y Andrea </small>
     </footer>
 
     
     <script src="main.js" type="module"></script>
   </body>
-
-
-
-
 </html>
