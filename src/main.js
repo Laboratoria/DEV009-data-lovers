@@ -1,4 +1,4 @@
-import {filteredStatus, filteredSpecies, filteredGender} from './data.js'; //importar funciones de filtrado de data.js
+import {filteredStatus, filteredSpecies, filteredGender, filteredSearch} from './data.js'; //importar funciones de filtrado de data.js
 // import data from './data/lol/lol.js';
 import data from './data/rickandmorty/rickandmorty.js';
 // import data from './data/rickandmorty/rickandmorty.js';
@@ -47,13 +47,16 @@ selectOrder.addEventListener("change", () => {
     } else {
         sorted = data.results.sort((a, b) => b.name.localeCompare(a.name));
     }
-    console.log(sorted);
     crearTarjetas(sorted)
 }); 
 
 //Search
 const opcionSearch= document.getElementById("search")
-opcionSearch.addEventListener("click",crearTarjetas)
+opcionSearch.addEventListener("keyup", () => {
+    const searchInput = optionSearch.value;
+    const searchOutput = filteredSearch(data.results, searchInput);
+    crearTarjetas (searchOutput);
+});
 
 
 //crear una funcion que cree los li
