@@ -20,7 +20,8 @@ const menu = {
     {
       "title": "All Pokémon",
       "class": "menu__link",
-      "href": "#"
+      "href": "#",
+      "action": () => displayPokemon(data.pokemon)
     },
     {
       "title": "TYPE",
@@ -53,7 +54,7 @@ const logo = document.createElement('img');
 logo.src = "./img/logopokemon.png";
 logo.classList.add("logo");
 logo.width = 150;
-logo.height = 80;
+logo.height = 90;
 logo.alt = "Logo Pokémon Lab Go";
 
 const ul = document.createElement('ul');
@@ -88,6 +89,9 @@ menu.menu.forEach((opciones) => {
 
     liTitle.appendChild(ulSubMenu);
   }
+  if (opciones.title === "All Pokémon") {
+    aTitle.addEventListener('click', () => displayPokemon(data.pokemon));
+  }
 
 
   liTitle.appendChild(aTitle);
@@ -98,7 +102,7 @@ menu.menu.forEach((opciones) => {
 const search = document.createElement('input')
 search.setAttribute("type", "text");
 search.classList.add("buscarPokemon");
-search.placeholder = "Search Pokémon for name or num";
+search.placeholder = "Search Pokémon by name or number";
 
 section.appendChild(logo);
 section.appendChild(ul);
@@ -170,6 +174,43 @@ const displayPokemon = (dataPokemon) => {
     card.appendChild(infoContainer);
     card.appendChild(imgContainer);
 
+//Prueba MODAL 
+card.addEventListener('click', () => {
+  const modal = document.createElement("div");
+  modal.id = "modal";
+  modal.classList.add("modal");
+  
+
+  const modalContent = document.createElement("div");
+  modalContent.classList.add("modal-content");
+  modal.style.display = "block";
+
+  // Agrega el contenido deseado dentro de la modal (por ejemplo, información del Pokémon)
+  const pokemonId = document.createElement("p");
+  pokemonId.textContent = `N.º ${pokemon.num}`;
+  modalContent.appendChild(pokemonId);
+
+  const pokemonName = document.createElement("h1");
+  pokemonName.textContent = pokemon.name;
+  modalContent.appendChild(pokemonName);
+
+  const pokemonImg = document.createElement("img");
+  pokemonImg.src = pokemon.img;
+  modalContent.appendChild(pokemonImg);
+
+  const close = document.createElement("span");
+  close.classList.add("close");
+  close.textContent = "×";
+
+  close.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  modalContent.appendChild(close);
+  modal.appendChild(modalContent);
+
+  root.appendChild(modal);
+});
 
 
     root.appendChild(card);
