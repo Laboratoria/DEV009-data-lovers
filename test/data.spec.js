@@ -27,8 +27,10 @@ describe('filterData',() => {
     expect(typeof filterData).toBe('function');
   });
   it('returns `filterData`', () => {
-    expect(filterData([{type:['fire','dark'],rarity: 'normal',},{type:['water','poison'],rarity: 'mythic',},
-      {type: ['grass','firy','bug'],rarity : 'legendary'}],'mythic','rarity')).toBe(Array({rarity: 'mythic', type: ['water', 'poison']}));
+    const received = filterData([{'type':['fire','dark'],'rarity': 'normal',},{'type':['water','poison'],'rarity': 'mythic',},
+      {'type': ['grass','firy','bug'],'rarity' : 'legendary'}],'mythic','rarity');
+    const expected = Array(Object ({rarity: 'mythic', type: ['water', 'poison']}));
+    expect(received).toEqual(expected);
   });
 
 });
