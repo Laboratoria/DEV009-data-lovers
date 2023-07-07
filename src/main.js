@@ -1,4 +1,4 @@
-import {filteredStatus} from './data.js';
+import {filteredStatus, filteredSpecies, filteredGender} from './data.js'; //importar funciones de filtrado de data.js
 // import data from './data/lol/lol.js';
 import data from './data/rickandmorty/rickandmorty.js';
 // import data from './data/rickandmorty/rickandmorty.js';
@@ -7,37 +7,34 @@ console.log(data.results);
 
 
 //Escuchar los eventos del DOM - escuchar el evento de hacer click en la opcion 
-
+/* seleccionar el id del select
+escuchar el evento change
+declarar constante con el valor del select
+declarar una constante que usar la función para filtrar la data y la compara con la opción seleccionada
+llamar función crear tarjetas y darle los datos filtrados 
+*/
 //Status
 const selectStatus= document.getElementById("status")
 selectStatus.addEventListener("change", () => {
     const optionStatus = selectStatus.value;
     const filterStatus = filteredStatus(data.results, optionStatus);
-    console.log(filterStatus);
     crearTarjetas(filterStatus);
 });
 
 //Species
-
 const selectSpecies= document.getElementById("species");
 selectSpecies.addEventListener("change", () => {
     const optionSpecies = selectSpecies.value;
-    const filteredSpecies = data.results.filter(function(result){
-        return result.species === optionSpecies;
-    });
-    console.log(filteredSpecies);
-    crearTarjetas(filteredSpecies);
+    const filterSpecies = filteredSpecies(data.results, optionSpecies);
+    crearTarjetas(filterSpecies);
 });
 
 //Gender
 const selectGender= document.getElementById("gender");
 selectGender.addEventListener("change", () => {
     const optionGender = selectGender.value;
-    const filteredGender = data.results.filter(function(result){
-        return result.gender === optionGender;
-    });
-    console.log(filteredGender);
-    crearTarjetas(filteredGender);
+    const filterGender = filteredGender(data.results, optionGender);
+    crearTarjetas(filterGender);
 });
 
 //Order
@@ -46,11 +43,12 @@ selectOrder.addEventListener("change", () => {
     const optionOrder = selectOrder.value;
     let sorted;
     if (optionOrder === "AZ"){
-        sorted = data.results.sort((a, b) => a.order.localeCompare(b.order));
+        sorted = data.results.sort((a, b) => a.name.localeCompare(b.name));
     } else {
-        sorted = data.results.sort((a, b) => b.order.localeCompare(a.order));
+        sorted = data.results.sort((a, b) => b.name.localeCompare(a.name));
     }
     console.log(sorted);
+    crearTarjetas(sorted)
 }); 
 
 //Search

@@ -15,6 +15,8 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 40px;
+    gap: 30px;
 }
 
 p {
@@ -27,6 +29,7 @@ p {
     padding-bottom: 3px;
     padding-left: 4px;
     display: inline-block;
+    border-radius: 10px;
 }
 
 .selection1{
@@ -37,11 +40,6 @@ p {
 .selection2{
     background-color: #82BF45;
     margin-left: 0.9px;
-}
-
-.selection3{
-    background-color: #82BF45;
-    margin-left: 18px;
 }
 
 .selection4{
@@ -75,11 +73,19 @@ p {
     background-color: #FFF1A7;
     color: black;
     display: inline-block;
+    border-radius: 10px;
 }
 
 .caja {
     height: 60px;
     width: 100px;
+    margin: 10px;
+    padding-top: 8px;   
+}
+
+.cajaSpecies {
+    height: 60px;
+    width: 130px;
     margin: 10px;
     padding-top: 8px;   
 }
@@ -130,6 +136,7 @@ p {
     margin-bottom: 20px;
     padding: 15px;
     border-radius: 10px;
+    
 }
 
 .card-content img {
@@ -142,15 +149,29 @@ p {
 
 .card-content h3 {
     font-size: 20px;
+    color: black;
+    background-color: transparent;
 }
 
 .card-content p {
     font-size: 16px;
+    color: black;
+    background-color: transparent;
 }
 
-@media only screen and(max-width:800px){
-.responsive{
-        display:block;
-        width: 60%;
+@media only screen and (max-width:800px) {
+#contenedor {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
+
+#imageRickAndMorty {
+    width: 70%;
+}
+
+.card-content {
+    margin-left: 5%;
+}
+
 }
