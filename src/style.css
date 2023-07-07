@@ -77,12 +77,11 @@ input{
  right: 0;
  bottom: 0;
  background-color: #111111bd;
- display: flex;
- opacity: 0;
+ display:none;
  pointer-events: none;
 }
 .show{
-  opacity: 1;
+  display: flex;
   pointer-events: unset;
 }
 .modal_container{
