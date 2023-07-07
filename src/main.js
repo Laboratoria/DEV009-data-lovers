@@ -1,30 +1,52 @@
-import { display } from './data.js';
-
-// import data from './data/lol/lol.js';
+import { filterData } from './data.js';
 import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
-const pokemonList = data.pokemon;
-const pokemonFirstG = [];
-const pokemonSecdG = [];
 
-for(const i of pokemonList){
-  if(i.generation.num ==='generation i'){
-    Array.prototype.push.apply(pokemonFirstG,pokemonList[i]);
+const seccionShowAll = document.getElementById('showAll');
+
+const display = (pokemonData)=>{
+  
+  const cardPokemon = document.createElement('div');
+  cardPokemon.classList.add(`pokemon-card`);
+  cardPokemon.classList.add(`${pokemonData.type[0]}`);
+  const namePokemon = document.createElement('p');
+  namePokemon.textContent = pokemonData.name;
+  const numPokemon = document.createElement('p');
+  numPokemon.textContent = pokemonData.num;
+  const imgPokemon = document.createElement('img');
+  imgPokemon.setAttribute('src',pokemonData.img);
+   
+  cardPokemon.appendChild(namePokemon);
+  cardPokemon.appendChild(imgPokemon);
+  cardPokemon.appendChild(numPokemon);
+  seccionShowAll.appendChild(cardPokemon);
+
+};
+/*
+const filterData1 = (data,condition,filterBy) => {
+  let result = [];
+  if (filterBy.length ===1){
+    result = result.concat(data.filter (index => index[filterBy[0]] === condition));
+
   }else{
-    Array.prototype.push.apply(pokemonSecdG,pokemonList[i]);
+    result = result.concat(data.filter (index => index[filterBy[0]][filterBy[1]] === condition));
+
   }
+  return result;
+};
 
-}
+*/
 
-pokemonList.forEach(function(pokemon){
+const pokemonList = data.pokemon;
+/*const pokemonFirstG = filterData(pokemonList,'generation i',['generation','num']);
+const pokemonSecdG = filterData(pokemonList,'generation ii',['generation','num']);
+const pokemonNormal = filterData(pokemonList,"normal",['pokemon-rarity']);
+const pokemonLegendary = filterData(pokemonList,"legendary",['pokemon-rarity']);
+const pokemonMythic = filterData(pokemonList,"mythic",['pokemon-rarity']);
+*/
+const pokemonFuego = filterData(pokemonList,'fire','type');
 
-    display(pokemon);
-})
+pokemonFuego.forEach(function(pokemon){
 
-
-
-
-
-
-
-console.log(pokemonList[0].type,pokemonList[0].generation.num);
+  display(pokemon);
+});
+console.log('pokemon de fuego :',pokemonFuego);

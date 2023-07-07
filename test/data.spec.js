@@ -1,4 +1,4 @@
-import { example, anotherExample } from '../src/data.js';
+import { example, anotherExample,filterData} from '../src/data.js';
 
 
 describe('example', () => {
@@ -20,4 +20,15 @@ describe('anotherExample', () => {
   it('returns `anotherExample`', () => {
     expect(anotherExample()).toBe('OMG');
   });
+});
+
+describe('filterData',() => {
+  it('is a function', () => {
+    expect(typeof filterData).toBe('function');
+  });
+  it('returns `filterData`', () => {
+    expect(filterData([{type:['fire','dark'],rarity: 'normal',},{type:['water','poison'],rarity: 'mythic',},
+      {type: ['grass','firy','bug'],rarity : 'legendary'}],'mythic','rarity')).toBe(Array({rarity: 'mythic', type: ['water', 'poison']}));
+  });
+
 });
