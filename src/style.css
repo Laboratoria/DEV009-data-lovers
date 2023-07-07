@@ -71,6 +71,8 @@ input{
 }
  /***Ventana modal***/
 .modal {
+  width: 100%;
+  height: 100%;
  position:fixed;/**fijar en la página*/
  top:0;
  left:0;
@@ -78,13 +80,9 @@ input{
  bottom: 0;
  background-color: #111111bd;
  display: flex;
- opacity: 0;
- pointer-events: none;
+ 
 }
-.show{
-  opacity: 1;
-  pointer-events: unset;
-}
+
 .modal_container{
   margin: auto;
   width: 90%;

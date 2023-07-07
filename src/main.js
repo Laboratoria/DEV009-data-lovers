@@ -6,59 +6,69 @@ import data from './data/countries/countries.js';
 console.log(data.countries[0].area);
 //console.log(example, data);
 const root =document.getElementById('root');
-const allCountries = data.countries;
+const dataCountries = data.countries;
 /**************Creacion de cartas****************/
-const visualCountry =(data)=>{
+const showCards =(data)=>{
    root.innerHTML="";
 for (let i = 0; i< data.length; i++){
    let card = document.createElement ('div');
    card.className= 'card';
    card.id = data[i].name.common;
    card.innerHTML= ` 
-      <img src=${data[i].flags.png}>
-      <h2>${data[i].name.common}</h2>
-      <section class="modal">
-       <div class="modal_container">
-        <ul class="modal_lista"></ul>
-          <li name="Nombre_de_pais_ofical" id="informacion">Nombre de pais oficial:${data[i].name.official}</li>
-          <li name="Capital" id="informacion">Capital:${data[i].capital}</li>
-          <li name="Continente" id="informacion">Continente:</li>
-          <li name="Subregion" id="informacion">Subregion:</li>
-        <a href="a" class="modal_close"> Cerrar</a>
-       </div> 
-      </section> 
+         <img src=${data[i].flags.png}>
+         <h2>${data[i].name.common}</h2>
        `
        root.appendChild(card);
-       /**************Seleccion de cartas****************/
-       //const openModal=document.querySelector('.card')
-       const modal = document.querySelector('.modal');
-       const closeModal=document.querySelector('.modal_close')
-
-       card.addEventListener('click', () => {
-          modal.classList.add('.show');
-          console.log("hola");
-
-         /**cuando se llame la carta selecionada nos muestre .show */
-         
-      
-         });
-         
-         /*closeModal.addEventListener('click', ()=>{
-         modal.classList.remove('.show');  */
-      
+/**********Seleccion de cartas para Modal********/
+       card.addEventListener('click', (e) => {
+         e.preventDefault();         
+         showModal(data[i])        
+      });  
 }
 }
-   visualCountry(allCountries)
+   showCards(dataCountries)
 /**************Busqueda por pais****************/
 const input = document.getElementById('Buscar');
-const bot = document.querySelector('#boton');
+const searchButton = document.querySelector('#boton');
 
-bot.addEventListener('click',function(){
+searchButton.addEventListener('click',function(){
    const valor= input.value.toLowerCase();
-   const resultado = busqueda(allCountries,valor);
+   const resultado = busqueda(dataCountries,valor);
 
-   visualCountry(resultado);
+   showCards(resultado);
    console.log(resultado);
 });
+/**********Creacion de ventana Modal****************/
+const showModal = (dataCountry) => {
+   let modal = document.createElement("div")
+   modal.innerHTML = `
+   <section class="modal">
+   <div class="modal_container">
+   <ul class="modal_lista"></ul>
+   <a href="a" class="modal_close_button"> Cerrar</a>
+   <img src=${dataCountry.flags.png}>
+   <li name="Nombre_de_pais" id="informacion">${dataCountry.name.common}</li>
+   <li name="Nombre_de_pais_oficial" id="informacion">Nombre de pais oficial:${dataCountry.name.official}</li>
+   <li name="Capital" id="informacion">Capital:${dataCountry.capital}</li>
+   <li name="Continente" id="informacion">Continente:${dataCountry.continents}</li>
+   <li name="Subregion" id="informacion">Subregion:${dataCountry.subregion}</li>
+   <li name="Idioma" id="informacion">Idioma:${dataCountry.languages}</li>
+   <li name="Codigo_fifa" id="informacion">Código FIFA :${dataCountry.fifa}</li>
+   <li name="Paises_limitantes">Paises limitantes:${dataCountry.borders}</li>
+   <li name="Poblacion_total">Población total:${dataCountry.population}</li>
+   <li name="Area_total">Area total:${dataCountry.area}</li>
+   <li name="Top_level_domain">Top Level Domain:${dataCountry.tld}</li>
+   <li name="Pais_independizado">Pais independizado:${dataCountry.independent}</li>
+   </div> 
+   </section> 
+   `
+   root.appendChild(modal)
+   console.log(dataCountry.name.common)
 
-/*console.log(contAmerica(allCountries))*/
+   const closeModalButton = document.querySelector('.modal_close_button');
+   closeModalButton.addEventListener('click', (e) => {
+      e.preventDefault();         
+      modal.remove();       
+   });
+}
+
