@@ -13,7 +13,9 @@ const menu = {
     {
       "title": "Home",
       "class": "menu__link",
+
       "href": "index.html"
+
     },
     {
       "title": "All Pokémon",
