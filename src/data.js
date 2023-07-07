@@ -17,6 +17,7 @@ export const display = (pokemonData)=>{
   seccionShowAll.appendChild(cardPokemon);
 
 };
+
 /*export const example = () => {
   return 'example';
 };
