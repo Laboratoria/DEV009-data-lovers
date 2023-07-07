@@ -5,6 +5,8 @@ import { sortNameDes, sortNameasc, sortNumYouger, sortNumLower, promPokemonEvery
 const dataPokemon = data.pokemon;
 const container = document.getElementById("targets");
 
+
+
 console.log(promPokemonEveryType(dataPokemon))
 //mostrar en el dom todos los pokemones
 
