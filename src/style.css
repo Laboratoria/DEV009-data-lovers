@@ -26,7 +26,7 @@ ul {
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 7px;
 
 }
@@ -44,6 +44,7 @@ li {
 .Genebest:hover {
     background-color: #CB1D0E;
     height: 20px;
+    color:#FFFFFF;
 }
 
 main {
@@ -103,11 +104,11 @@ main#targets {
 article img {
     width: 150px;
     height: 150px;
-    border: solid 2px #FFCB08;
+    border: solid 2px #9ce6b0;
     margin-left: 0;
     margin-right: 0;
     padding: 10px;
-    ;
+    background: #9ce6b0;
 
 }
 
