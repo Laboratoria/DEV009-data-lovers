@@ -37,33 +37,31 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto mono', 1em;
-    align-items: center;
-    scroll-behavior: smooth;
+    text-align: center;
 }
 
 body {
     font-family: 'Electrolize', sans-serif;
     font-family: 'Montserrat', sans-serif;
     font-family: 'Roboto Mono', monospace;
-    padding-top: 10px;
+    padding-top: 60px;
     position: relative;
 }
 
-.topheader {
-    box-shadow: 0 4px 5px var(--nav-background);
-    background: var(--nav-background);
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    
+.header {
 
+    box-shadow: 0 4px 5px var(--nav-background);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background: var(--nav-background);
 }
 
 /*  //////////  CODE NANCY //////////*/
 
-input[type="text"] {
-    width: 300px;
+.buscarPokemon {
+    width: 230px;
     height: 40px;
     border-radius: 8px;
 }
@@ -78,11 +76,15 @@ input[type="text"] {
 /* ////////  MENU  ////////*/
 
 .menu {
-    background-color: var(--nav-background);
-    color: #fff;
-    height: 70px;
 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
 }
+
 
 .menu__container {
     display: flex;
@@ -98,11 +100,12 @@ input[type="text"] {
     height: 100%;
     transition: transform .5s;
     display: flex;
-    justify-content:space-around;
+    justify-content: space-around;
     left: 0;
     top: 0;
 
 }
+
 .menu__item {
     list-style: none;
     position: relative;
@@ -174,56 +177,42 @@ input[type="text"] {
 
 
 /* //////////   FIN  MENU   ////////// */
-.columna {
-    position:static;
+
+
+.divConteinerCards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    margin: 50px 10px;
 }
 
 .card {
     border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 10px;
-    justify-content: center;
-    display: inline-block;
+    padding: 22px;
+    margin: 30px;
     box-sizing: border-box;
-    width: 200 px;
+    width: 200px;
     height: 300px;
-    gap: 50px;
-    margin-left: 30px;
     border-radius: 5%;
     box-shadow: 0 4px 5px #828181;
-    margin-block-start: 10px;
-    margin-block-end: 10px;
-    align-items: center;
 }
 
 .info-container {
-    flex-grow: 1;
-    display: inline-block;
     justify-content: center;
-    align-items: center;
 }
 
 .numPokemon {
-    margin: 10px;
-    padding: 20px;
+    margin: 2px;
+    padding: 2px;
     text-align: center;
-    justify-content: center;
-    align-items: center;
-
 }
 
 .img-container {
     background-color: var(--theme-color);
     border-radius: 60%;
-    align-self: center;
-    opacity: .8;
-    justify-content: center;
-    align-items: center;
-
-}
-
-main {
-    height: auto;
 }
 
 footer {
