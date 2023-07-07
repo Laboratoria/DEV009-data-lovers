@@ -196,10 +196,6 @@ buscarPokemon.addEventListener('input', () => {
 });
 
 
-//// S O R T   P O K E M O N ///
-
-const sortPokemon = document.getElementById('sortPoke');
-
 
 
 

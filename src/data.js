@@ -9,8 +9,10 @@
 export const searchPokemon = (data, inputText) => {
   const resultPokemon = data.filter((eachPokemon) => {
     const namePokemon = eachPokemon.name;
+    const numPokemon = eachPokemon.num;
     const lengthText = inputText.length;
-    return namePokemon.slice(0, lengthText) === inputText;
+    return namePokemon.slice(0, lengthText) === inputText || numPokemon.slice(0, lengthText) === inputText;
+    
   });
   return resultPokemon;
 }
@@ -51,12 +53,6 @@ export const searchPokemon = (data, inputText) => {
 ////
 
 
-
-export const  sortPokemon = (data, parameter) =>{
-  //let arrarNewPokemon = [];
-  
-
-}
 
 
 //FIN nancy
