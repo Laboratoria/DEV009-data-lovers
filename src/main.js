@@ -18,7 +18,8 @@ const menu = {
     {
       "title": "All Pokémon",
       "class": "menu__link",
-      "href": "#"
+      "href": "#",
+      "action": () => displayPokemon(data.pokemon)
     },
     {
       "title": "TYPE",
@@ -115,19 +116,11 @@ const randomPokemon = data.pokemon.slice().sort(() => 0.5 - Math.random()).slice
 //busca y devuelve el primer elemento con el id root.
 const root = document.getElementById("root");
 
-// asigna el arreglo de Pokémon contenido en el objeto data a la constante allPokemon
-
-
-
 const displayPokemon = (dataPokemon) => {
   root.innerHTML = '';
   dataPokemon.forEach((pokemon) => {
 
-
-
     const type = pokemon.type;
-
-
     const card = document.createElement("div");
     card.classList.add("card");
     if (type.length > 1) {
@@ -155,7 +148,7 @@ const displayPokemon = (dataPokemon) => {
 
     numPokemon.textContent = `N.º ${pokemon.num}`;
     infoContainer.appendChild(numPokemon);
-    numPokemon.classList.add("numPokemon");// aqui quedamos para modicar stilo css con Nancy
+    numPokemon.classList.add("numPokemon");
 
     const namePokemon = document.createElement("h1");
     namePokemon.textContent = pokemon.name;
@@ -172,20 +165,67 @@ const displayPokemon = (dataPokemon) => {
 
     root.appendChild(card);
 
+
+    ////// M O D A L     P O K E M O N /////////
+    //abrir modal
+    card.addEventListener('click', () => {
+
+      const modal = document.createElement("div");
+      modal.classList.add("modalPokemon");
+      modal.style.display = 'block';
+      if (type.length > 1) {
+        const color1 = getComputedStyle(document.documentElement).getPropertyValue('--pokemon-type-' + type[0]);
+        const color2 = getComputedStyle(document.documentElement).getPropertyValue('--pokemon-type-' + type[1]);
+        modal.style.background = "linear-gradient(to right, " + color1 + " 30%, " + color2 + ")";
+      }
+      else {
+        const color = getComputedStyle(document.documentElement).getPropertyValue('--pokemon-type-' + type[0]);
+        modal.style.background = color;
+      }
+
+      const modalContent = document.createElement("div");
+      modalContent.classList.add("modal-content");
+
+      const numAname = document.createElement("div");
+      numAname.classList.add("numAname")
+      const pokemonId = document.createElement("p");
+      pokemonId.textContent = `N.º ${pokemon.num}`;
+      numAname.appendChild(pokemonId);
+
+      const pokemonName = document.createElement("h1");
+      pokemonName.textContent = pokemon.name;
+      numAname.appendChild(pokemonName);
+
+      const imgPokemonModal = document.createElement("div");
+      imgPokemonModal.classList.add("imgPokemonModal");
+      const imgPokemonMod = document.createElement("img");
+      imgPokemonMod.src = pokemon.img;
+      imgPokemonModal.appendChild(imgPokemonMod);
+
+      //cerar modal
+      const close = document.createElement("span");
+      close.classList.add("close");
+      close.textContent = "×";
+
+      close.addEventListener('click', () => {
+        modal.style.display = 'none';
+      });
+
+      modalContent.appendChild(numAname);
+      modalContent.appendChild(imgPokemonModal);
+      modal.appendChild(close);
+      modal.appendChild(modalContent);
+      root.appendChild(modal);
+
+    });
   });
+
 }
 displayPokemon(randomPokemon);
 
 
-///////////// INICIO NANCY
 
 //////////   B U S C A D O R     P O K E M O N ////////
-//obtener el el text que el usuario escriba en el input
-
-
-//const cardResult = document.createElement("div");
-
-
 search.addEventListener('input', () => {
 
   //esta línea de código obtiene el valor del campo de entrada de texto representado por buscarPokemon, lo convierte a minúsculas utilizando .toLowerCase(), y lo almacena en la constante inputText.
@@ -205,48 +245,3 @@ search.addEventListener('input', () => {
 
 
 
-
-
-
-
-////// M O D A L     P O K E M O N /////////
-/* const cardResult = document.createElement("div");
-cardResult.classList.add('modal')
-
-cardResult.addEventListener('click', ()=>{
-  const divConteiner = document.createElement("div");
-    divConteiner.classList.add("pokemon");
-    divConteiner.innerHTML = `
-    <p class="pokemonId">${pokemon.num}</p>
-    <div class="nombrePokemon">${pokemon.name}</div>
-    <div class = img>
-        <img src = "${pokemon.img}" alt="${pokemon.name}">
-    </div>
- `
-}); */
-
-/////////////FIN NANCY
-
-
-
-
-
-
-//console.log(example, data);
-/* function mostrarListaPokemon(){
-for (let i = 0; i < allPokemon.length; i++) {
-    const pokemon = allPokemon[i];
-
-    const divConteiner = document.createElement("div");
-    divConteiner.classList.add("pokemon");
-    divConteiner.innerHTML = `
-    <p class="pokemonId">${pokemon.num}</p>
-    <div class="nombrePokemon">${pokemon.name}</div>
-    <div class = img>
-        <img src = "${pokemon.img}" alt="${pokemon.name}">
-    </div>
- `;
-   root.appendChild(divConteiner);
-  }
-}
-mostrarListaPokemon(); */
