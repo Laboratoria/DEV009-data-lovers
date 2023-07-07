@@ -49,6 +49,7 @@ menu.addEventListener("change", () => {
     display(sortNumLower(dataPokemon))
   } 
 });
+
 //filtro de buscar por nombre
 document.getElementById('pokeNames').addEventListener('keyup', () => {
 
@@ -56,6 +57,9 @@ document.getElementById('pokeNames').addEventListener('keyup', () => {
   const result = dataPokemon.filter(element => (element.name).indexOf(filterName) !== -1);
   display(result)
 });
+
+
+
 
 //FILTRO PORCENTAJE POR TIPO 
 document.getElementById('best').addEventListener('click',()=>{
@@ -71,21 +75,4 @@ document.getElementById('best').addEventListener('click',()=>{
         container.innerHTML += p;
       }
       
-//     const table =`<table>
-//     <tr>
-//       <th>type</th>
-//       <th>#</th>
-//     </tr>
-//     <tr>
-//       <td>Alfreds Futterkiste</td>
-//       <td>Maria Anders</td>
-//       <td>Germany</td>
-//     </tr>
-//   
-//   </table>`
-    // const showAverage =  display(promPokemonEveryType(dataPokemon))
-
 });
-
-//test 
-// css pop 
