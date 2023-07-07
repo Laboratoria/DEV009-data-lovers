@@ -5,7 +5,9 @@ import { sortNameDes, sortNameasc, sortNumYouger, sortNumLower, promPokemonEvery
 const dataPokemon = data.pokemon;
 const container = document.getElementById("targets");
 
-console.log(promPokemonEveryType(dataPokemon))
+
+
+//console.log(promPokemonEveryType(dataPokemon))
 //mostrar en el dom todos los pokemones
 
 
@@ -46,13 +48,31 @@ menu.addEventListener("change", () => {
   else if (element === "numberMenor") {
     display(sortNumLower(dataPokemon))
   } 
-})
+});
+
 //filtro de buscar por nombre
 document.getElementById('pokeNames').addEventListener('keyup', () => {
 
   const filterName = document.getElementById('pokeNames').value;
   const result = dataPokemon.filter(element => (element.name).indexOf(filterName) !== -1);
   display(result)
-})
+});
+
+
+
 
 //FILTRO PORCENTAJE POR TIPO 
+document.getElementById('best').addEventListener('click',()=>{
+    document.getElementById('best').value;
+    console.log(
+       
+    );
+    const objtypes=  promPokemonEveryType(dataPokemon) // objeto
+    container.innerHTML = ""
+    for (const property in objtypes) {
+        console.log(`${property}: ${objtypes[property]}`);
+        const p = `<p >${property}: ${objtypes[property]}</p>`
+        container.innerHTML += p;
+      }
+      
+});
