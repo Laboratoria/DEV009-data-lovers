@@ -5,7 +5,7 @@
     --secundary-color: #FE0D0D;
     --text-color: white;
     --text-color-inverse: black;
-    --nav-shadow-color: #224E94;
+    --nav-shadow-color: #357CED;
     --nav-background: #357CED;
     --pokemon-type-normal: #AAA67F;
     --pokemon-type-fighting: #C12239;
@@ -50,7 +50,7 @@ body {
 
 .header {
 
-    box-shadow: 0 4px 5px var(--nav-shadow-color);
+    box-shadow: 0 4px 5px var(--nav-background);
     position: fixed;
     top: 0;
     right: 0;
@@ -194,7 +194,7 @@ body {
     padding: 22px;
     margin: 30px;
     box-sizing: border-box;
-    width: 220px;
+    width: 200px;
     height: 300px;
     border-radius: 5%;
     box-shadow: 0 4px 5px #828181;
@@ -214,34 +214,10 @@ body {
     background-color: var(--theme-color);
     border-radius: 60%;
 }
+
 /* ///// FIN CARD///// */
-/*///// INICIO ESTILO MODAL/////*/
-.modal{
-    display: flex;
-    justify-content: ;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 50px;
-    border: none;
-    cursor: pointer;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 60%;
-    height: 50%;
-    overflow: auto;
-    background-color: rgba(216, 12, 178, 0.423);
-  }
-
-  
-  .modal:hover {
-    background-color: #ea089f;
-  }
 
 
-/*/////// FIN ESTILO MODAL/////*/
 footer {
     height: auto;
 }
@@ -264,7 +240,7 @@ footer {
 
     .menu__item--active {
         --transform: rotate(0);
-        --background: var(--nav-background);
+        --background: #5e7094;
     }
 
     .menu__item--show {
@@ -279,7 +255,7 @@ footer {
         top: 70px;
         bottom: 0;
         right: 0;
-        background-color: var(--nav-background);
+        background-color: #000;
         overflow-y: auto;
         display: grid;
         grid-auto-rows: max-content;
