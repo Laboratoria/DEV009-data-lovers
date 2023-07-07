@@ -79,11 +79,11 @@ input{
  right: 0;
  bottom: 0;
  background-color: #111111bd;
- display: flex;
+ display:flex;
 
-}
+ }
 
-.modal_container{
+ .modal_container{
   margin: auto;
   width: 90%;
   max-width: 600px;
