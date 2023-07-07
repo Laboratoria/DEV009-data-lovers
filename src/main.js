@@ -1,4 +1,4 @@
-import { sortBy, filterByDirector, filterByYear, getCount} from './data.js';
+import { sortBy, filterByDirector, filterByYear, getCount, getPercentage} from './data.js';
 
 import data from './data/ghibli/ghibli.js'
 const normalizeString = (string) => {
@@ -70,6 +70,8 @@ createCardContainer(films);
 const orderSelect = document.getElementById('orderSelect');
 const filterSelect = document.getElementById('filterSelect');
 const yearFilterSelect = document.getElementById('yearFilterSelect');
+const addValue = document.getElementById('addValue');
+const addPercentage = document.getElementById('addPercentage')
 
 
 
@@ -96,13 +98,19 @@ function handleSelection() {
   createCardContainer(copyFilmsData)
 
   const count = getCount(copyFilmsData, selectedOptionDirector, selectedOptionYear);
-  console.log('Cantidad de elementos:', count);
+  addValue.innerHTML = "Results: " + count + ",";
+
+  const resultPercentage = getPercentage (films.length, count);
+
+  addPercentage.innerHTML = "Overall Percentage " + resultPercentage.toFixed(2) + "%";
+
 }
 
 
 orderSelect.addEventListener('change', handleSelection);
 filterSelect.addEventListener('change', handleSelection);
 yearFilterSelect.addEventListener('change', handleSelection);
+
 
 
 

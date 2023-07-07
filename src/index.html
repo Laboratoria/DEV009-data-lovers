@@ -23,8 +23,8 @@
       </div>
       <nav>
         <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Peliculas</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#filters">Movies</a></li>
         </ul>
       </nav>
   </header>
@@ -33,8 +33,8 @@
       <div class="intro-text">
         <h1>STUDIO GHIBLI<br>MAGICAL WORLD</h1>
         <div>
-          <p>Explora Studio Ghibli y sus cautivadores largometrajes. Descubre datos fascinantes: nombres, años, puntuaciones y directores. Filtra y personaliza tu búsqueda. </p>
-          <p>¡Bienvenide a nuestro sitio web lleno de magia y curiosidades únicas!..</p>
+          <p>Explore Studio Ghibli and its captivating feature films. Discover fascinating details such as titles, years, ratings, and directors. Filter and customize your search. </p>
+          <p>Welcome to our website filled with magic and unique curiosities!</p>
         </div>
       </div>
       <img alt="imagen de personajes de studio ghibli en un circulo" class="totoro-intro" src="img/imgghibli.png">
@@ -43,13 +43,13 @@
       
   <!--La etiqueta <div class="content"> se cambia por la etiqueta semantica main en la que se engloba el contenido principal de la pagina -->    
   <main>
+
   <div id="filters">
-    <aside>
       <div class="director-filter">
-        <h3>FILTROS</h3>
+        <h3>FILTER</h3>
         <h4>Director</h4>
           <select title="dropdown filtro por director" name="director-filter-options" id="filterSelect">
-            <option value="all">Todo</option>
+            <option value="all">All</option>
             <option value="Hayao Miyazaki">Hayao Miyazaki</option>
             <option value="Isao Takahata">Isao Takahata</option>
             <option value="Yoshifumi Kondo">Yoshifumi Kondo</option>
@@ -58,12 +58,11 @@
             <option value="Hiromasa Yonebayashi">Hiromasa Yonebayashi</option>
           </select>
       </div>
-    </aside>
-   
+  
     <div class="year-filter">
       <h4>Year</h4>
         <select title="dropdown filtro por año" id="yearFilterSelect">
-          <option value="all">Todo</option>
+          <option value="all">All</option>
           <option value="1986">1986</option>
           <option value="1988">1988</option>
           <option value="1989">1989</option>
@@ -84,19 +83,20 @@
           <option value="2014">2014</option>
         </select>
     </div>  
-  </div>
 
+    <div class="orderBy">
+      <h3>SORT BY</h3>
+        <select title="dropdown ordenar por" name="opciones" id="orderSelect">
+          <option value="all">All</option>
+          <option value="opcion3">A -Z</option>
+          <option value="opcion2">Z - A</option>
+          <option value="opcion1">Score</option>
+        </select>
+      </div> 
+  </div>
     
-  <aside id="orderBy">
-    <h3>ORDENAR POR</h3>
-      <select title="dropdown ordenar por" name="opciones" id="orderSelect">
-        <option value="all">Todo</option>
-        <option value="opcion3">Ordenar de A -Z</option>
-        <option value="opcion2">Ordenar de Z - A</option>
-        <option value="opcion1">Mas rankeado</option>
-      </select>
-  </aside>  
-        
+ 
+  <span id="addValue"></span> <span id="addPercentage"></span>     
   <div id="dataContainer" ></div>
     
  </main>

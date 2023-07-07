@@ -9,8 +9,8 @@ export const sortBy = (data, option) => {
 };
 
 export const filterByDirector = (data, director) => {
-    return data.filter((item)=>item.director === director);
-  };
+  return data.filter((item)=>item.director === director);
+};
 
 export const filterByYear = (data, year) => {
   return data.filter((item) => item.release_date === year);
@@ -27,4 +27,8 @@ export const getCount=(dataGhibli, selectedOptionDirector, selectedOptionYear) =
       return count;
     }
   }, 0);
+};
+
+export const getPercentage = (films, count) => {
+  return (count / films) * 100;
 };
