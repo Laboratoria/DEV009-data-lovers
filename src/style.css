@@ -11,6 +11,7 @@ body {
 /**********************************CAMBIOS EN EL HEADER***************************************/
 .header{
   background: url(fondo_pagina0.jpg);
+  object-fit: cover;
   display: flex;/*se utiliza para convertir un contenedor en un contenedor flexible, lo que permite una disposición flexible y controlada de
   los elementos secundarios dentro del mismo.*/
   justify-content: center;
@@ -149,14 +150,15 @@ body {
 .container_nav_all {
   display: flex;
   justify-content: space-between;
+  background-color: #696969;
 }
 .nav2 {
-  width: 100px;
+  width: 95px;
   height: 35px;
   background-color: #383347;
   display: flex;
   flex-wrap: wrap;
-  margin-left: 30px;
+  margin-left: 15px;
   font-size: 15px;
   text-align: center;
 }
@@ -194,21 +196,82 @@ body {
   padding: 5px;
   text-decoration: none;
 }
+
+/*--------------------ordenar----------------------*/
+.btn-ordenar {
+  display: block;
+  justify-content: space-between;
+  width: 100px;
+  height: 35px;
+  background-color: #383347;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 6px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.ul-horizontal-ordenar {
+  list-style: none;
+}
+
+.ul-horizontal-ordenar li {
+  color: #fff;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding-left: 0
+}
+
+.ul-vertical-ordenar {
+  list-style: none;
+  justify-content: flex-start;
+  position: absolute;
+  display: none;
+  color: #000;
+  background-color: #3f3974;
+}
+
+.ul-horizontal-ordenar > li:hover .ul-vertical-ordenar {
+  display: block;
+}
+
+.ul-vertical-ordenar li {
+  text-decoration: none;
+}
+
+.ul-vertical-ordenar li:hover {
+  background-color: #554C88;
+}
+
+.ul-vertical-ordenar li a {
+  display: block;
+  color: #fff;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.ul-horizontal-ordenar > li {
+  margin-left: 0;
+}
+
+
+/*----------------------Buscador--------------------------------*/
 .buscador {
-  padding-top: 10px;
+  padding-top: 5px;
   padding-right: 20px;
 }
 .buscador input {
-  margin-right: 30px;
-  width: 100px;
-  height: 20px;
+  margin-right: 26px;
+  width: 95px;
+  height: 25px;
   padding: 0 20px;
   font-size: 18px;
   color: #222;
 }
 .boton {
-  margin-top: 72px;
-  margin-right: 20px;
+  margin-top: 70px;
+  margin-right: 22px;
   width: 35px;
   height: 35px;
   line-height: 35px;
@@ -226,13 +289,12 @@ body {
 
 .container {
   text-align: center;
-  overflow: hidden;
+
 }
 .champion-container {
   width: 48%;
   text-align: center;
   display: inline-block;
-  box-sizing: border-box;
   padding: 8px;
 }
 .champion-image {
@@ -243,7 +305,38 @@ body {
   background-color: #131120;
   font-family:'Ysabeau Office', sans-serif;
   color: white;
+  margin-top: -5px;
+  padding: 5px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /***********++++++++++++**************@MEDIA PARA EL ESCRITORIO***********++++++++++++++******************************/
 @media (min-width: 640px) {
   .body {
@@ -252,11 +345,14 @@ body {
   .header {
     height: 80px;
   }
+  
   .logo {
     font-size: 50px;
     line-height: 60px;
     margin-left: 40px;
+    position: relative;
   }
+
 
   .nav-menu {
     display: flex;
@@ -293,7 +389,7 @@ body {
   .nav2 {
     width: 1000px;
     height: 40px;
-    margin-left: 0px;
+    margin-left: 10px;
     font-size: 18px;
     background-color: transparent;
     display: flex;
@@ -323,30 +419,44 @@ body {
     margin-top: -10px; /* Reiniciamos el margen superior */
   }
   .ul-vertical li {
-    padding: 8px;
     width: 120px;
-    height: 47px;
+    height: 40px;
     display: block;
     background-color: #262331;
     border: 1px solid #fff;
+    margin: 6px 2px;
   }
   .ul-vertical li:hover{
     border: 3px solid #FFF;
   }
   .ul-vertical li a {
     display: block;
+    margin: 5px;
   }
   .ul-horizontal > li .ul-vertical {
     display: grid;
-    grid-template-columns: repeat(8, 1fr); /* Define el número de columnas */
+    grid-template-columns: repeat(7, 130px); /* Define el número de columnas */
   }
   .ul-horizontal > li:hover .ul-vertical {
     display: grid;
-    grid-template-columns: repeat(8, 1fr); /* Define el número de columnas */
+    grid-template-columns: repeat(7, 130px); /* Define el número de columnas */
   }
+
+  /*---------------------ORDENAR------------------------------------*/
+.btn-ordenar {
+  margin-left: -95px;
+}
+.ul-horizontal-ordenar{
+  border: 1px solid #fff;
+}
+.ul-horizontal-ordenar:hover{
+  border: 3px solid #FFF;
+}
+
+/*---------------------BUSCADOR-----------------------------------*/
   .buscador{
       padding-top: 0px;
-      padding-right: 50px;
+      padding-right: 30px;
   }
   .buscador input{
       width: 160px;
@@ -361,19 +471,11 @@ body {
   }
   .boton{
       margin-top: 82px;
-      margin-right: 56px;
+      margin-right: 30px;
       width: 50px;
       height: 50px;
       line-height: 50px;
-      top: 0;
-      right: 0;
-      position: absolute;
-      background: #000;
-      text-align: center;
-      color: white;
       font-size: 18px;
-      border-radius: 50%;
-      cursor: pointer;
   }
 
   /*******************EDICION DEL DIV DE HTML Y DE LO QUE CREAMOS EN JS***************************************/
