@@ -64,7 +64,7 @@ main {
 
 }
 
-label {
+.order{
     color: #FFFFFF;
 
 }
@@ -129,6 +129,6 @@ h4 {
 
 }
 
-p {
+.order {
     margin: 10px;
 }
