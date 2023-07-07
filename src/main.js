@@ -87,6 +87,9 @@ menu.menu.forEach((opciones) => {
 
     liTitle.appendChild(ulSubMenu);
   }
+  if (opciones.title === "All Pokémon") {
+    aTitle.addEventListener('click', () => displayPokemon(data.pokemon));
+  }
 
 
   liTitle.appendChild(aTitle);
@@ -161,6 +164,43 @@ const displayPokemon = (dataPokemon) => {
     card.appendChild(infoContainer);
     card.appendChild(imgContainer);
 
+//Prueba MODAL 
+card.addEventListener('click', () => {
+  const modal = document.createElement("div");
+  modal.id = "modal";
+  modal.classList.add("modal");
+  
+
+  const modalContent = document.createElement("div");
+  modalContent.classList.add("modal-content");
+  modal.style.display = "block";
+
+  // Agrega el contenido deseado dentro de la modal (por ejemplo, información del Pokémon)
+  const pokemonId = document.createElement("p");
+  pokemonId.textContent = `N.º ${pokemon.num}`;
+  modalContent.appendChild(pokemonId);
+
+  const pokemonName = document.createElement("h1");
+  pokemonName.textContent = pokemon.name;
+  modalContent.appendChild(pokemonName);
+
+  const pokemonImg = document.createElement("img");
+  pokemonImg.src = pokemon.img;
+  modalContent.appendChild(pokemonImg);
+
+  const close = document.createElement("span");
+  close.classList.add("close");
+  close.textContent = "×";
+
+  close.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  modalContent.appendChild(close);
+  modal.appendChild(modalContent);
+
+  root.appendChild(modal);
+});
 
 
     root.appendChild(card);
