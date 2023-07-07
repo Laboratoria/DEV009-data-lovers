@@ -1,8 +1,8 @@
-import { example, anotherExample } from '../src/data.js';
+import { sortNameasc, sortNameDes, sortNumYouger, sortNumLower } from '../src/data.js';
 
 
-describe('example', () => {
-  it('is a function', () => {
+describe('vamos hacer las pruebas de la funcion obtener orden A-Z', () => {
+  it('la funcion debe retornar un a', () => {
     expect(typeof example).toBe('function');
   });
 
