@@ -84,7 +84,7 @@ function handleSelection() {
 
   dataContainer.innerHTML = "";
   createCardContainer(copyFilmsData)
-};
+}
 
 
 orderSelect.addEventListener('change', handleSelection);
@@ -93,35 +93,6 @@ yearFilterSelect.addEventListener('change', handleSelection);
 
 
 
-/* Obtén una referencia al elemento select
-const orderSelect = document.getElementById('orderSelect');
-// Agrega el evento change al elemento select
-orderSelect.addEventListener('change', function() {
-  // Obtén el valor seleccionado
-  const selectedOption = orderSelect.value;
-  if(selectedOption === "all"){
-    dataContainer.innerHTML= "";
-    createCardContainer(films);
-  } else{
-    // Realiza las acciones correspondientes según la opción seleccionada
-    const dataSort = sortBy(films.slice(), selectedOption);
-    createCardContainer(dataSort);
 
-  }
-  
-});
-
-const filterSelect = document.getElementById('directorOptions');
-filterSelect.addEventListener('change', function(){
-  const selectedOptionDirector = filterSelect.value;
-  if(selectedOptionDirector === 'all'){
-    dataContainer.innerHTML= "";
-    createCardContainer(films); 
-  } else {
-    const dataFilter = filterByDirector(films.slice(),selectedOptionDirector);
-    createCardContainer(dataFilter);
-    console.log(dataFilter);
-  }
-}) */
 
 

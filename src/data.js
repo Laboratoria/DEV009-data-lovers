@@ -16,7 +16,7 @@ export const filterByDirector = (data, director) => {
   function compareStrings(a, b) {
     return normalizeString(a) === normalizeString(b);
   }
- return data.filter((item) => compareStrings(item.director, director));
+  return data.filter((item) => compareStrings(item.director, director));
 };
 
 export const filterByYear = (data, year) => {
