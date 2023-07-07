@@ -66,7 +66,7 @@ body {
     border-radius: 8px;
 }
 
-.menu {
+.menu{
     margin: 0;
     padding: 10px;
 }
@@ -215,49 +215,8 @@ body {
     border-radius: 60%;
 }
 
-.modalPokemon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    padding: 50px;
-    width: 60%;
-    height: 60%;
-    border-radius: 8px;
-    z-index: 1;
-}
+/* ///// FIN CARD///// */
 
-.modal-content {
-    display: flex;
-    flex-direction:row;
-    align-items: center;
-    text-align: center;
-    background-color: #357CED;
-    margin: 20px;
-    padding: 10px;
-}
-
-.modal-content p {
-    display: inline-block;
-    padding: 10px;
-}
-
-.modal-content img {
-    margin-top: 10px;
-}
-
-.close {
-    margin: 10px;
-    padding: 10px;
-    background-color: var(--theme-color);
-    border-radius: 4px;
-}
 
 footer {
     height: auto;
