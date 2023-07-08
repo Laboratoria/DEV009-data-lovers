@@ -319,7 +319,7 @@ display: block;
     padding: 90px 20px 0;
   }
   .header {
-    height: 80px;
+    background: url(fondo-pag1.jpg);
   }
   
   .logo {
