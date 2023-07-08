@@ -1,0 +1,338 @@
+:root {
+
+    --theme-color: white;
+    --primary-color: #357CED;
+    --secundary-color: #FE0D0D;
+    --text-color: white;
+    --text-color-inverse: black;
+    --nav-shadow-color: #357CED;
+    --nav-background: #357CED;
+    --pokemon-type-normal: #AAA67F;
+    --pokemon-type-fighting: #C12239;
+    --pokemon-type-flying: #A891EC;
+    --pokemon-type-ground: #DEC16B;
+    --pokemon-type-poison: #A43E9E;
+    --pokemon-type-rock: #B69E31;
+    --pokemon-type-bug: #A7B723;
+    --pokemon-type-ghost: #70559B;
+    --pokemon-type-steel: #B7B9D0;
+    --pokemon-type-fire: #F57D31;
+    --pokemon-type-water: #6493EB;
+    --pokemon-type-grass: #74CB48;
+    --pokemon-type-electric: #F9CF30;
+    --pokemon-type-psychic: #FB5584;
+    --pokemon-type-ice: #9AD6DF;
+    --pokemon-type-dragon: #7037FF;
+    --pokemon-type-dark: #75574C;
+    --pokemon-type-fairy: #E69EAC;
+    --pokemon-type-unknown: #526677;
+    --pokemon-type-shadow: #4F507B;
+
+
+}
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto mono', 1em;
+    text-align: center;
+}
+
+body {
+    font-family: 'Electrolize', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+    padding-top: 60px;
+    position: relative;
+}
+
+.header {
+
+    box-shadow: 0 4px 5px var(--nav-background);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background: var(--nav-background);
+}
+
+/*  //////////  CODE NANCY //////////*/
+
+.buscarPokemon {
+    width: 230px;
+    height: 40px;
+    border-radius: 8px;
+}
+
+.menu {
+    margin: 0;
+    padding: 10px;
+}
+
+
+
+/* ////////  MENU  ////////*/
+
+.menu {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+
+.menu__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.menu__links {
+    height: 100%;
+    transition: transform .5s;
+    display: flex;
+    justify-content: space-around;
+    left: 0;
+    top: 0;
+
+}
+
+.menu__item {
+    list-style: none;
+    position: relative;
+    height: 100%;
+    --clip: polygon(0 0, 100% 0, 100% 0, 0 0);
+    --transform: rotate(-90deg);
+}
+
+.menu__item:hover {
+    --clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    --transform: rotate(0);
+}
+
+.menu__link {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 30px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.menu__link:hover {
+    background-color: var(--pokemon-type-unknown);
+}
+
+
+.menu__arrow {
+    transform: var(--transform);
+    transition: transform .3s;
+    display: block;
+    margin-left: 3px;
+}
+
+.menu__nesting {
+    list-style: none;
+    transition: clip-path .3s;
+    clip-path: var(--clip);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: max-content;
+    transform: translateY(100%);
+    background-color: var(--nav-background);
+}
+
+.menu__link--inside {
+    padding: 30px 100px 30px 20px;
+}
+
+.menu__link--inside:hover {
+    background-color: var(--pokemon-type-electric);
+}
+
+.menu__hamburguer {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    cursor: pointer;
+    display: none;
+}
+
+.menu__img {
+    display: block;
+    width: 36px;
+}
+
+
+
+/* //////////   FIN  MENU   ////////// */
+
+
+.divConteinerCards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    margin: 50px 10px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    padding: 22px;
+    margin: 30px;
+    box-sizing: border-box;
+    width: 200px;
+    height: 300px;
+    border-radius: 5%;
+    box-shadow: 0 4px 5px #828181;
+}
+
+.info-container {
+    justify-content: center;
+}
+
+.numPokemon {
+    margin: 2px;
+    padding: 2px;
+    text-align: center;
+}
+
+.img-container {
+    background-color: var(--theme-color);
+    border-radius: 60%;
+}
+
+.modalPokemon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    padding: 50px;
+    width: 60%;
+    height: 60%;
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    text-align: center;
+    background-color: #357CED;
+    margin: 20px;
+    padding: 10px;
+}
+
+.modal-content p {
+    display: inline-block;
+    padding: 10px;
+}
+
+.modal-content img {
+    margin-top: 10px;
+}
+
+.close {
+    margin: 10px;
+    padding: 10px;
+    background-color: var(--theme-color);
+    border-radius: 4px;
+}
+
+footer {
+    height: auto;
+}
+
+/* //////  RESPONSIVE  /////*/
+@media only screen and (max-width:600px) {
+    .topheader {
+        height: 150 px;
+    }
+
+
+    .menu__hamburguer {
+        display: flex;
+    }
+
+    .menu__item {
+        --clip: 0;
+        overflow: hidden;
+    }
+
+    .menu__item--active {
+        --transform: rotate(0);
+        --background: #5e7094;
+    }
+
+    .menu__item--show {
+        background-color: var(--background);
+    }
+
+
+    .menu__links {
+        position: fixed;
+        max-width: 400px;
+        width: 100%;
+        top: 70px;
+        bottom: 0;
+        right: 0;
+        background-color: #000;
+        overflow-y: auto;
+        display: grid;
+        grid-auto-rows: max-content;
+        transform: translateX(100%);
+    }
+
+    .menu__links--show {
+        transform: unset;
+        width: 100%;
+    }
+
+    .menu__link {
+        padding: 25px 0;
+        padding-left: 30px;
+        height: auto;
+    }
+
+    .menu__arrow {
+        margin-left: auto;
+        margin-right: 20px;
+    }
+
+    .menu__nesting {
+        display: grid;
+        position: unset;
+        width: 100%;
+        transform: translateY(0);
+        height: 0;
+        transition: height .3s;
+    }
+
+    .menu__link--inside {
+        width: 90%;
+        margin-left: auto;
+        border-left: 1px solid #798499;
+    }
+}
+
+/* ////////   FIN MENU RESPÖNSIVE /////// */
