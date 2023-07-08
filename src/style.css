@@ -5,7 +5,6 @@
 }
 body {
   font-family: sans-serif;
-  padding-top: 70px;
   background-color: #2a4883;
 }
 /**********************************CAMBIOS EN EL HEADER***************************************/
@@ -150,109 +149,86 @@ body {
 .container_nav_all {
   display: flex;
   justify-content: space-between;
-  background-color: #696969;
+  padding-top: 70px;
 }
-.nav2 {
-  width: 95px;
+
+.div-roles {
+  margin-left: 20px;
+  display: block;
+  width: 100px;
   height: 35px;
   background-color: #383347;
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: 15px;
   font-size: 15px;
   text-align: center;
-}
-.ul-horizontal {
-  list-style: none;
-}
-.ul-horizontal li {
+  padding: 10px;
   color: #fff;
+  border: 1px solid #fff;
 }
-.ul-horizontal li a {
-  display: block;
-  text-align: center;
-  text-decoration: none;
+
+.div-roles:hover .ul-roles{
+display: block;
 }
-.ul-vertical {
-  list-style: none;
-  justify-content: flex-start;
-  position: absolute;
-  display: none;
-  color: #000;
-  background-color: #3f3974;
+
+.ul-roles {
+list-style: none;
+position: absolute;
+color: #fff;
+display: none;
+background-color: #3f3974;
+padding: 8px;
+width: 100px;
 }
-.ul-horizontal > li:hover .ul-vertical {
-  display: block;
+
+.ul-roles li:hover{
+background-color: #554C88;
 }
-.ul-vertical li {
-  text-decoration: none;
-}
-.ul-vertical li:hover {
-  background-color: #554C88;
-}
-.ul-vertical li a {
-  display: block;
-  color: #fff;
-  padding: 5px;
-  text-decoration: none;
+
+.ul-roles li a {
+color: #fff;
+height: 25px;
+padding: 7px;
+text-decoration: none;
+display: block;
 }
 
 /*--------------------ordenar----------------------*/
 .btn-ordenar {
+    display: block;
+    width: 100px;
+    height: 35px;
+    background-color: #383347;
+    font-size: 15px;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #fff;
+    padding-left: 5px;
+    color: #fff;
+}
+
+.btn-ordenar:hover .ul-ordenar{
   display: block;
-  justify-content: space-between;
-  width: 100px;
-  height: 35px;
-  background-color: #383347;
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: 6px;
-  font-size: 12px;
-  text-align: center;
 }
 
-.ul-horizontal-ordenar {
+.ul-ordenar {
   list-style: none;
-}
-
-.ul-horizontal-ordenar li {
-  color: #fff;
-  display: block;
-  text-align: center;
-  text-decoration: none;
-  padding-left: 0
-}
-
-.ul-vertical-ordenar {
-  list-style: none;
-  justify-content: flex-start;
   position: absolute;
+  color: #fff;
   display: none;
-  color: #000;
   background-color: #3f3974;
+  padding: 8px;
+  width: 100px;
 }
 
-.ul-horizontal-ordenar > li:hover .ul-vertical-ordenar {
-  display: block;
-}
-
-.ul-vertical-ordenar li {
-  text-decoration: none;
-}
-
-.ul-vertical-ordenar li:hover {
+.ul-ordenar li:hover{
   background-color: #554C88;
 }
 
-.ul-vertical-ordenar li a {
-  display: block;
+.ul-ordenar li a {
   color: #fff;
-  padding: 5px;
+  height: 25px;
+  padding: 7px;
   text-decoration: none;
-}
-
-.ul-horizontal-ordenar > li {
-  margin-left: 0;
+  display: block;
 }
 
 
@@ -352,41 +328,16 @@ body {
     margin-left: 40px;
     position: relative;
   }
-
-
-  .nav-menu {
-    display: flex;
-    margin-right: 40px;
-  }
-  .nav-menu-item {
-    line-height: 80px;
-  }
-  .nav-toggle{
-    margin-right: 30px;
-    margin-top: 5px;
-  }
-  .fa-solid{
-    font-size: 43px;
-  }
-
-  .nav-menu-link {
-    padding: 8px 12px;
-    border-radius: 3px;
-    font-size: 15px;
-  }
-  .nav-menu-link:hover {
-    background-color: #696969;
-    transition: 0.5s;
-  }
-  .nav-toggle:focus:not(:focus-visible) {
-    outline: none;
-  }
   /************************SEGUNDA BARRA DE NAVEGACION**********************************/
-  .container_nav_all {
+  .div-roles {
     background-color: transparent;
+    color: transparent;
     margin: 20px;
+    border: transparent;
+    margin-top: -28px;
+
   }
-  .nav2 {
+  .nav2-roles {
     width: 1000px;
     height: 40px;
     margin-left: 10px;
@@ -395,22 +346,7 @@ body {
     display: flex;
     flex-wrap: wrap;
   }
-  .ul-horizontal {
-    width: 1000px;
-    height: 40px;
-    list-style: block;
-    display: flex;
-  }
-  .ul-horizontal li {
-    color: #fff;
-    display: block;
-  }
-  .ul-horizontal li a {
-    display: none;
-    text-align: center;
-    text-decoration: none;
-  }
-  .ul-vertical {
+  .ul-roles {
     padding: 0;
     width: 1000px;
     flex-wrap: wrap;
@@ -418,7 +354,7 @@ body {
     background-color: initial;
     margin-top: -10px; /* Reiniciamos el margen superior */
   }
-  .ul-vertical li {
+  .ul-roles li {
     width: 120px;
     height: 40px;
     display: block;
@@ -426,36 +362,37 @@ body {
     border: 1px solid #fff;
     margin: 6px 2px;
   }
-  .ul-vertical li:hover{
+  .ul-roles li:hover{
     border: 3px solid #FFF;
   }
-  .ul-vertical li a {
+  .ul-roles li a {
     display: block;
     margin: 5px;
   }
-  .ul-horizontal > li .ul-vertical {
+  .div-roles .ul-roles {
     display: grid;
     grid-template-columns: repeat(7, 130px); /* Define el número de columnas */
   }
-  .ul-horizontal > li:hover .ul-vertical {
+  .div-roles:hover .ul-roles {
     display: grid;
     grid-template-columns: repeat(7, 130px); /* Define el número de columnas */
   }
 
+
+
   /*---------------------ORDENAR------------------------------------*/
 .btn-ordenar {
   margin-left: -95px;
-}
-.ul-horizontal-ordenar{
+  margin-top: -2.5px;
   border: 1px solid #fff;
+  color: #fff;
 }
-.ul-horizontal-ordenar:hover{
+.btn-ordenar:hover{
   border: 3px solid #FFF;
 }
 
 /*---------------------BUSCADOR-----------------------------------*/
   .buscador{
-      padding-top: 0px;
       padding-right: 30px;
   }
   .buscador input{
@@ -465,12 +402,13 @@ body {
       font-size: 18px;
       color: #222;
       border: 1px solid #000;
+      margin-top: -7px;
   }
   .buscador input:hover{
     border: 3px solid #000;
   }
   .boton{
-      margin-top: 82px;
+      margin-top: 60px;
       margin-right: 30px;
       width: 50px;
       height: 50px;

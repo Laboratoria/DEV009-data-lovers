@@ -31,16 +31,6 @@ function todos() {
   Object.values(championsData.data).forEach((champion) => {
     const { img: championImageURL, name: championName } = champion;
 
-    champion.sort((a, b) => {
-      if (a.name > b.name) {
-        return 1;
-      }
-      if (a.name < b.name) {
-        return -1;
-      }
-    });
-    console.log(champion);
-
     const championElement = document.createElement("div");
     championElement.classList.add("champion-container");
     const imgElement = document.createElement("img");
