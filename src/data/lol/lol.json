@@ -2898,7 +2898,7 @@
         "crit": 0,
         "critperlevel": 0,
         "attackdamage": 54,
-        "attackdamageperlevel": 1.7,
+       "attackdamageperlevel": 1.7,
         "attackspeedoffset": 0,
         "attackspeedperlevel": 2.5
       }

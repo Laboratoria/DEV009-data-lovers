@@ -13,12 +13,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg",
       blurb:
-        "Aatrox is a legendary warrior, one of only five that remain of an ancient race known as the Darkin. He wields his massive blade with grace and poise, slicing through legions in a style that is hypnotic to behold. With each foe felled, Aatrox's ...",
+        "Aatrox y sus hermanos, otrora respetados defensores de Shurima contra el Vacío, acabarían convirtiéndose en una amenaza aún mayor para Runaterra y solo conocieron la derrota ante el uso astuto de hechizos mortales. No obstante, tras siglos de reclusión, Aatrox fue el primero en recuperar su libertad y se dedicó a corromper y transformar a cualquier necio que intentase empuñar el arma mágica que contenía su esencia. Ahora, envuelto en carne y huesos que no le pertenecen y que ha transformado en una horrenda aproximación de su antiguo aspecto, recorre Runaterra en busca de la apocalíptica venganza que tanto anhela.",
       info: {
         attack: 8,
         defense: 4,
         magic: 3,
-        difficulty: 4
+        difficulty: 4,
       },
       image: {
         full: "Aatrox.png",
@@ -27,7 +27,7 @@ export default {
         x: 0,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Tank"],
       partype: "BloodWell",
@@ -51,8 +51,8 @@ export default {
         attackdamage: 60.376,
         attackdamageperlevel: 3.2,
         attackspeedoffset: -0.04,
-        attackspeedperlevel: 3
-      }
+        attackspeedperlevel: 3,
+      },
     },
     Ahri: {
       version: "6.24.1",
@@ -64,12 +64,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ahri_0.jpg",
       blurb:
-        "Unlike other foxes that roamed the woods of southern Ionia, Ahri had always felt a strange connection to the magical world around her; a connection that was somehow incomplete. Deep inside, she felt the skin she had been born into was an ill fit for ...",
+        "Ahri es una raposa vastaya conectada de forma innata a la magia del reino de los espíritus. Es capaz de manipular las emociones de su presa antes de consumir su esencia, proceso que le transmite los recuerdos de cada alma que consume. Otrora una poderosa pero incontrolable depredadora, Ahri ahora viaja por el mundo en busca de vestigios de sus antepasados mientras intenta reemplazar los recuerdos robados por otros propios.",
       info: {
         attack: 3,
         defense: 4,
         magic: 8,
-        difficulty: 5
+        difficulty: 5,
       },
       image: {
         full: "Ahri.png",
@@ -78,7 +78,7 @@ export default {
         x: 48,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage", "Assassin"],
       partype: "MP",
@@ -102,8 +102,8 @@ export default {
         attackdamage: 53.04,
         attackdamageperlevel: 3,
         attackspeedoffset: -0.065,
-        attackspeedperlevel: 2
-      }
+        attackspeedperlevel: 2,
+      },
     },
     Akali: {
       version: "6.24.1",
@@ -115,12 +115,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Akali_0.jpg",
       blurb:
-        "There exists an ancient order originating in the Ionian Isles dedicated to the preservation of balance. Order, chaos, light, darkness -- all things must exist in perfect harmony for such is the way of the universe. This order is known as the Kinkou ...",
+        "Tras abandonar la orden de los Kinkou y su título de Puño de la Sombra, Akali actúa ahora en solitario y está lista para convertirse en el arma mortal que necesita su gente. Aunque no renuncia a las enseñanzas de Shen, su maestro, ha jurado defender Jonia de sus enemigos, asesinándolos uno a uno. Los ataques de Akali son silenciosos, pero su mensaje se escucha con toda claridad: temed a la asesina sin maestro.",
       info: {
         attack: 5,
         defense: 3,
         magic: 8,
-        difficulty: 7
+        difficulty: 7,
       },
       image: {
         full: "Akali.png",
@@ -129,7 +129,7 @@ export default {
         x: 96,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Assassin"],
       partype: "Energy",
@@ -153,8 +153,8 @@ export default {
         attackdamage: 58.376,
         attackdamageperlevel: 3.2,
         attackspeedoffset: -0.1,
-        attackspeedperlevel: 3.1
-      }
+        attackspeedperlevel: 3.1,
+      },
     },
     Alistar: {
       version: "6.24.1",
@@ -166,12 +166,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Alistar_0.jpg",
       blurb:
-        "As the mightiest warrior to ever emerge from the Minotaur tribes of the Great Barrier, Alistar defended his tribe from Valoran's many dangers; that is, until the coming of the Noxian army. Alistar was lured from his village by the machinations of ...",
+        "Alistar, un poderoso guerrero con una reputación temible, busca venganza por la muerte de su clan a manos del imperio noxiano. Aunque fue esclavizado y forzado a vivir como gladiador, fue su voluntad inquebrantable lo que le impidió convertirse en una verdadera bestia. Ahora, libre de las cadenas de sus antiguos amos, lucha en nombre de los oprimidos y los desfavorecidos, y empuña su furia como un arma, igual de peligrosa que sus cuernos, puños y pezuñas.",
       info: {
         attack: 6,
         defense: 9,
         magic: 5,
-        difficulty: 7
+        difficulty: 7,
       },
       image: {
         full: "Alistar.png",
@@ -180,7 +180,7 @@ export default {
         x: 144,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Tank", "Support"],
       partype: "MP",
@@ -204,8 +204,8 @@ export default {
         attackdamage: 61.1116,
         attackdamageperlevel: 3.62,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.125
-      }
+        attackspeedperlevel: 2.125,
+      },
     },
     Amumu: {
       version: "6.24.1",
@@ -217,12 +217,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Amumu_0.jpg",
       blurb:
-        "''Solitude can be lonelier than death.''<br><br>A lonely and melancholy soul from ancient Shurima, Amumu roams the world in search of a friend. Cursed by an ancient spell, he is doomed to remain alone forever, as his touch is death and his affection ...",
+        "Cuenta la leyenda que Amumu es un alma solitaria y melancólica de la vieja Shurima que vaga por el mundo en busca de un amigo. Condenado por una maldición ancestral, su destino es permanecer solo para siempre, pues su tacto es muerte y su cariño, la perdición. Aquellos que afirman haberlo visto lo describen como un cadáver viviente, menudo y cubierto de vendajes. Amumu ha suscitado mitos, canciones y folclore transmitidos de generación en generación, hasta tal punto que ya es imposible separar la realidad de la ficción.",
       info: {
         attack: 2,
         defense: 6,
         magic: 8,
-        difficulty: 3
+        difficulty: 3,
       },
       image: {
         full: "Amumu.png",
@@ -231,7 +231,7 @@ export default {
         x: 192,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Tank", "Mage"],
       partype: "MP",
@@ -255,8 +255,8 @@ export default {
         attackdamage: 53.384,
         attackdamageperlevel: 3.8,
         attackspeedoffset: -0.02,
-        attackspeedperlevel: 2.18
-      }
+        attackspeedperlevel: 2.18,
+      },
     },
     Anivia: {
       version: "6.24.1",
@@ -268,12 +268,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Anivia_0.jpg",
       blurb:
-        "Anivia is a being of the coldest winter, a mystical embodiment of ice magic, and an ancient protector of the Freljord. She commands all the power and fury of the land itself, calling the snow and bitter wind to defend her home from those who would ...",
+        "Anivia es un espíritu alado benevolente que soporta ciclos interminables de vida, muerte y nacimiento para proteger Freljord. Semidiosa nacida del hielo implacable y los vientos crueles, canaliza estos poderes elementales para anular a cualquiera que se atreva a perturbar su hogar. Anivia guía y protege a las tribus del severo norte, donde la veneran como un símbolo de esperanza y un presagio de grandes cambios. Ella lo da todo en la lucha sabiendo que, a través de su sacrificio, su memoria perdurará y renacerá en un nuevo mañana.",
       info: {
         attack: 1,
         defense: 4,
         magic: 10,
-        difficulty: 10
+        difficulty: 10,
       },
       image: {
         full: "Anivia.png",
@@ -282,7 +282,7 @@ export default {
         x: 240,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage", "Support"],
       partype: "MP",
@@ -306,8 +306,8 @@ export default {
         attackdamage: 51.376,
         attackdamageperlevel: 3.2,
         attackspeedoffset: 0,
-        attackspeedperlevel: 1.68
-      }
+        attackspeedperlevel: 1.68,
+      },
     },
     Annie: {
       version: "6.24.1",
@@ -319,12 +319,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Annie_0.jpg",
       blurb:
-        "There have always been those within Noxus who did not agree with the evils perpetrated by the Noxian High Command. The High Command had just put down a coup attempt from the self-proclaimed Crown Prince Raschallion, and a crackdown on any form of ...",
+        "Peligrosa pero encantadoramente precoz, Annie es una pequeña maga con un inmenso poder piromántico. Incluso en los parajes montañosos al norte de Noxus es una hechicera sin precedentes. Su afinidad natural con el fuego se manifestó a temprana edad en arrebatos emocionales e impredecibles, aunque finalmente aprendió a controlar esos trucos traviesos. Uno de sus favoritos es invocar a su adorado osito de peluche Tibbers; una bestia protectora envuelta en llamas. Atrapada en la perpetua inocencia de la niñez, Annie vaga por bosques oscuros, siempre buscando a alguien con quien jugar.",
       info: {
         attack: 2,
         defense: 3,
         magic: 10,
-        difficulty: 6
+        difficulty: 6,
       },
       image: {
         full: "Annie.png",
@@ -333,7 +333,7 @@ export default {
         x: 288,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage"],
       partype: "MP",
@@ -357,8 +357,8 @@ export default {
         attackdamage: 50.41,
         attackdamageperlevel: 2.625,
         attackspeedoffset: 0.08,
-        attackspeedperlevel: 1.36
-      }
+        attackspeedperlevel: 1.36,
+      },
     },
     Ashe: {
       version: "6.24.1",
@@ -370,12 +370,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ashe_0.jpg",
       blurb:
-        "With each arrow she fires from her ancient ice-enchanted bow, Ashe proves she is a master archer. She chooses each target carefully, waits for the right moment, and then strikes with power and precision. It is with this same vision and focus that she ...",
+        "Ashe, comandante hija del hielo de la tribu de Avarosa, lidera las hordas más numerosas del norte. Impasible, inteligente e idealista, aunque incómoda en su papel de líder, utiliza los poderes mágicos ancestrales de su linaje para empuñar un arco de Hielo Puro. Su gente cree que Ashe es la heroína mitológica Avarosa reencarnada, y ella espera unificar Freljord una vez más al recuperar sus antiguas tierras tribales.",
       info: {
         attack: 7,
         defense: 3,
         magic: 2,
-        difficulty: 4
+        difficulty: 4,
       },
       image: {
         full: "Ashe.png",
@@ -384,7 +384,7 @@ export default {
         x: 336,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Marksman", "Support"],
       partype: "MP",
@@ -408,8 +408,8 @@ export default {
         attackdamage: 56.508,
         attackdamageperlevel: 2.26,
         attackspeedoffset: -0.05,
-        attackspeedperlevel: 3.33
-      }
+        attackspeedperlevel: 3.33,
+      },
     },
     AurelionSol: {
       version: "6.24.1",
@@ -421,12 +421,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/AurelionSol_0.jpg",
       blurb:
-        "Aurelion Sol once graced the vast emptiness of the cosmos with celestial wonders of his own devising. Now, he is forced to wield his awesome power at the behest of a space-faring empire that tricked him into servitude. Desiring a return to his ...",
+        "Aurelion Sol solía agraciar al vasto vacío del cosmos con las maravillas celestiales que él mismo ideaba. Ahora, se ve forzado a hacer uso de su increíble poder para satisfacer los deseos de un imperio espacial que lo ha engañado para convertirlo en su esclavo. Aurelion Sol desea regresar a su vida como forjador de estrellas, por lo que no dudará en hacer uso del mismísimo firmamento para recuperar su libertad.",
       info: {
         attack: 2,
         defense: 3,
         magic: 8,
-        difficulty: 7
+        difficulty: 7,
       },
       image: {
         full: "AurelionSol.png",
@@ -435,7 +435,7 @@ export default {
         x: 384,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage", "Fighter"],
       partype: "MP",
@@ -459,8 +459,8 @@ export default {
         attackdamage: 57,
         attackdamageperlevel: 3.2,
         attackspeedoffset: 0,
-        attackspeedperlevel: 1.36
-      }
+        attackspeedperlevel: 1.36,
+      },
     },
     Azir: {
       version: "6.24.1",
@@ -472,12 +472,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Azir_0.jpg",
       blurb:
-        "''Shurima was once the glory of Runeterra. I will make it so again.''<br><br>Azir was a mortal emperor of Shurima in a far distant age, a proud man who stood at the cusp of immortality. His hubris saw him betrayed and murdered at the moment of his ...",
+        "Azir, emperador de Shurima en un pasado remoto, fue un hombre orgulloso que estuvo a punto de alcanzar la inmortalidad. Dominado por la arrogancia, fue traicionado y asesinado en la hora de su mayor triunfo, pero ahora, milenios después, ha renacido como un ser Ascendido de inmenso poder. Su enterrada ciudad ha resurgido en medio de las arenas y Azir está decidido a restaurar la antigua gloria de Shurima.",
       info: {
         attack: 6,
         defense: 3,
         magic: 8,
-        difficulty: 9
+        difficulty: 9,
       },
       image: {
         full: "Azir.png",
@@ -486,7 +486,7 @@ export default {
         x: 432,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage", "Marksman"],
       partype: "MP",
@@ -510,8 +510,8 @@ export default {
         attackdamage: 52,
         attackdamageperlevel: 2.8,
         attackspeedoffset: -0.02,
-        attackspeedperlevel: 1.5
-      }
+        attackspeedperlevel: 1.5,
+      },
     },
     Bard: {
       version: "6.24.1",
@@ -523,12 +523,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Bard_0.jpg",
       blurb:
-        "Bard travels through realms beyond the imagination of mortal beings. Some of Valoran's greatest scholars have spent their lives trying to understand the mysteries he embodies. This enigmatic spirit has been given many names throughout the history of ...",
+        "Bardo, un viajero de más allá de las estrellas, es un agente de la serendipia que lucha para mantener un equilibrio en el que la vida pueda soportar la indiferencia del caos. Muchos habitantes de Runaterra cantan canciones que hablan de su naturaleza extraordinaria, pero todos están de acuerdo en que el vagabundo cósmico se siente atraído por los artefactos de gran poder mágico. Rodeado por un jubiloso coro de meeps, espíritus serviciales, es imposible creer que sus acciones son malévolas, ya que Bardo siempre sirve al bien mayor... a su manera.",
       info: {
         attack: 4,
         defense: 4,
         magic: 5,
-        difficulty: 9
+        difficulty: 9,
       },
       image: {
         full: "Bard.png",
@@ -537,7 +537,7 @@ export default {
         x: 0,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Support", "Mage"],
       partype: "MP",
@@ -561,8 +561,8 @@ export default {
         attackdamage: 52,
         attackdamageperlevel: 3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2
-      }
+        attackspeedperlevel: 2,
+      },
     },
     Blitzcrank: {
       version: "6.24.1",
@@ -574,12 +574,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Blitzcrank_0.jpg",
       blurb:
-        "Zaun is a place where both magic and science have gone awry, and the unchecked nature of experimentation has taken its toll. However, Zaun's lenient restrictions allow their researchers and inventors the leeway to push the bounds of science at an ...",
+        "Blitzcrank es un autómata enorme, casi indestructible, creado originalmente para el tratamiento de residuos tóxicos. Sin embargo, este propósito original le parecía demasiado restrictivo, así que se automodificó para servir mejor a los débiles del sumidero. Blitzcrank no duda en emplear su fuerza y su resistencia para proteger a los demás, con su práctico puño de metal o con un estallido de energía para someter a cualquiera que cause problemas.",
       info: {
         attack: 4,
         defense: 8,
         magic: 5,
-        difficulty: 4
+        difficulty: 4,
       },
       image: {
         full: "Blitzcrank.png",
@@ -588,7 +588,7 @@ export default {
         x: 48,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Tank", "Fighter"],
       partype: "MP",
@@ -612,8 +612,8 @@ export default {
         attackdamage: 61.54,
         attackdamageperlevel: 3.5,
         attackspeedoffset: 0,
-        attackspeedperlevel: 1.13
-      }
+        attackspeedperlevel: 1.13,
+      },
     },
     Brand: {
       version: "6.24.1",
@@ -625,12 +625,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Brand_0.jpg",
       blurb:
-        "In a faraway place known as Lokfar there was a seafaring marauder called Kegan Rodhe. As was his people's way, Kegan sailed far and wide with his fellows, stealing treasures from those unlucky enough to catch their attention. To some, he was a ...",
+        "Brand, antiguo miembro de la tribu Kegan Rodhe del helado Freljord, es una lección sobre la tentación de un poder mayor. En busca de una de las legendarias Runas Geogénicas, Kegan traicionó a sus compañeros y se quedó con la runa. El hombre desapareció al instante. Su alma se consumió y su cuerpo pasó a ser un recipiente de llamas vivas. Ahora, Brand recorre Valoran en busca de otras Runas Geogénicas, jurando vengarse por las calamidades que posiblemente jamás habría podido sufrir en una docena de vidas mortales.",
       info: {
         attack: 2,
         defense: 2,
         magic: 9,
-        difficulty: 4
+        difficulty: 4,
       },
       image: {
         full: "Brand.png",
@@ -639,7 +639,7 @@ export default {
         x: 96,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage"],
       partype: "MP",
@@ -663,8 +663,8 @@ export default {
         attackdamage: 57.04,
         attackdamageperlevel: 3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 1.36
-      }
+        attackspeedperlevel: 1.36,
+      },
     },
     Braum: {
       version: "6.24.1",
@@ -676,12 +676,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Braum_0.jpg",
       blurb:
-        "''Would you like a bedtime story?''<br><br>''Grandma, I'm too old for that.''<br><br>''You're never too old to be told a story.''<br><br>The girl reluctantly crawls into bed and waits, knowing she won't win this battle. A bitter wind howls outside, ...",
+        "Bendecido con bíceps enormes y un corazón aún más grande, Braum es un héroe muy apreciado en Freljord. Todas las tabernas al norte del Fuerte Helado brindan por su fuerza legendaria. Se dice que taló un bosque de robles en una sola noche y convirtió una montaña entera en escombros. Cargando una puerta acorazada encantada a sus espaldas como escudo, Braum recorre el gélido norte luciendo una sonrisa bigotuda tan grande como sus músculos: un verdadero amigo para todos los necesitados.",
       info: {
         attack: 3,
         defense: 9,
         magic: 4,
-        difficulty: 3
+        difficulty: 3,
       },
       image: {
         full: "Braum.png",
@@ -690,7 +690,7 @@ export default {
         x: 144,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Support", "Tank"],
       partype: "MP",
@@ -714,8 +714,8 @@ export default {
         attackdamage: 55.376,
         attackdamageperlevel: 3.2,
         attackspeedoffset: -0.03,
-        attackspeedperlevel: 3.5
-      }
+        attackspeedperlevel: 3.5,
+      },
     },
     Caitlyn: {
       version: "6.24.1",
@@ -732,7 +732,7 @@ export default {
         attack: 8,
         defense: 2,
         magic: 2,
-        difficulty: 6
+        difficulty: 6,
       },
       image: {
         full: "Caitlyn.png",
@@ -741,7 +741,7 @@ export default {
         x: 192,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Marksman"],
       partype: "MP",
@@ -765,8 +765,8 @@ export default {
         attackdamage: 53.66,
         attackdamageperlevel: 2.18,
         attackspeedoffset: 0.1,
-        attackspeedperlevel: 4
-      }
+        attackspeedperlevel: 4,
+      },
     },
     Camille: {
       version: "6.24.1",
@@ -783,7 +783,7 @@ export default {
         attack: 8,
         defense: 6,
         magic: 3,
-        difficulty: 4
+        difficulty: 4,
       },
       image: {
         full: "Camille.png",
@@ -792,7 +792,7 @@ export default {
         x: 144,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Tank"],
       partype: "MP",
@@ -816,8 +816,8 @@ export default {
         attackdamage: 62,
         attackdamageperlevel: 3.5,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.5
-      }
+        attackspeedperlevel: 2.5,
+      },
     },
     Cassiopeia: {
       version: "6.24.1",
@@ -834,7 +834,7 @@ export default {
         attack: 2,
         defense: 3,
         magic: 9,
-        difficulty: 10
+        difficulty: 10,
       },
       image: {
         full: "Cassiopeia.png",
@@ -843,7 +843,7 @@ export default {
         x: 240,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage"],
       partype: "MP",
@@ -867,8 +867,8 @@ export default {
         attackdamage: 53,
         attackdamageperlevel: 3,
         attackspeedoffset: -0.034,
-        attackspeedperlevel: 1.5
-      }
+        attackspeedperlevel: 1.5,
+      },
     },
     Chogath: {
       version: "6.24.1",
@@ -885,7 +885,7 @@ export default {
         attack: 3,
         defense: 7,
         magic: 7,
-        difficulty: 5
+        difficulty: 5,
       },
       image: {
         full: "Chogath.png",
@@ -894,7 +894,7 @@ export default {
         x: 288,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Tank", "Mage"],
       partype: "MP",
@@ -918,8 +918,8 @@ export default {
         attackdamage: 61.156,
         attackdamageperlevel: 4.2,
         attackspeedoffset: 0,
-        attackspeedperlevel: 1.44
-      }
+        attackspeedperlevel: 1.44,
+      },
     },
     Corki: {
       version: "6.24.1",
@@ -936,7 +936,7 @@ export default {
         attack: 8,
         defense: 3,
         magic: 6,
-        difficulty: 6
+        difficulty: 6,
       },
       image: {
         full: "Corki.png",
@@ -945,7 +945,7 @@ export default {
         x: 336,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Marksman"],
       partype: "MP",
@@ -969,8 +969,8 @@ export default {
         attackdamage: 56,
         attackdamageperlevel: 3.5,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.3
-      }
+        attackspeedperlevel: 2.3,
+      },
     },
     Darius: {
       version: "6.24.1",
@@ -987,7 +987,7 @@ export default {
         attack: 9,
         defense: 5,
         magic: 1,
-        difficulty: 2
+        difficulty: 2,
       },
       image: {
         full: "Darius.png",
@@ -996,7 +996,7 @@ export default {
         x: 384,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Tank"],
       partype: "MP",
@@ -1020,8 +1020,8 @@ export default {
         attackdamage: 56,
         attackdamageperlevel: 5,
         attackspeedoffset: 0,
-        attackspeedperlevel: 1
-      }
+        attackspeedperlevel: 1,
+      },
     },
     Diana: {
       version: "6.24.1",
@@ -1038,7 +1038,7 @@ export default {
         attack: 7,
         defense: 6,
         magic: 8,
-        difficulty: 4
+        difficulty: 4,
       },
       image: {
         full: "Diana.png",
@@ -1047,7 +1047,7 @@ export default {
         x: 432,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Mage"],
       partype: "MP",
@@ -1071,8 +1071,8 @@ export default {
         attackdamage: 53.04,
         attackdamageperlevel: 3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.25
-      }
+        attackspeedperlevel: 2.25,
+      },
     },
     Draven: {
       version: "6.24.1",
@@ -1089,7 +1089,7 @@ export default {
         attack: 9,
         defense: 3,
         magic: 1,
-        difficulty: 8
+        difficulty: 8,
       },
       image: {
         full: "Draven.png",
@@ -1098,7 +1098,7 @@ export default {
         x: 0,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Marksman"],
       partype: "MP",
@@ -1122,8 +1122,8 @@ export default {
         attackdamage: 55.8,
         attackdamageperlevel: 2.91,
         attackspeedoffset: -0.08,
-        attackspeedperlevel: 2.7
-      }
+        attackspeedperlevel: 2.7,
+      },
     },
     DrMundo: {
       version: "6.24.1",
@@ -1140,7 +1140,7 @@ export default {
         attack: 5,
         defense: 7,
         magic: 6,
-        difficulty: 5
+        difficulty: 5,
       },
       image: {
         full: "DrMundo.png",
@@ -1149,7 +1149,7 @@ export default {
         x: 48,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Tank"],
       partype: "None",
@@ -1173,8 +1173,8 @@ export default {
         attackdamage: 61.27,
         attackdamageperlevel: 3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.8
-      }
+        attackspeedperlevel: 2.8,
+      },
     },
     Ekko: {
       version: "6.24.1",
@@ -1191,7 +1191,7 @@ export default {
         attack: 5,
         defense: 3,
         magic: 7,
-        difficulty: 8
+        difficulty: 8,
       },
       image: {
         full: "Ekko.png",
@@ -1200,7 +1200,7 @@ export default {
         x: 96,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Assassin", "Fighter"],
       partype: "MP",
@@ -1224,8 +1224,8 @@ export default {
         attackdamage: 55,
         attackdamageperlevel: 3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 3.3
-      }
+        attackspeedperlevel: 3.3,
+      },
     },
     Elise: {
       version: "6.24.1",
@@ -1242,7 +1242,7 @@ export default {
         attack: 6,
         defense: 5,
         magic: 7,
-        difficulty: 9
+        difficulty: 9,
       },
       image: {
         full: "Elise.png",
@@ -1251,7 +1251,7 @@ export default {
         x: 144,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage", "Fighter"],
       partype: "MP",
@@ -1275,8 +1275,8 @@ export default {
         attackdamage: 50.54,
         attackdamageperlevel: 3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 1.75
-      }
+        attackspeedperlevel: 1.75,
+      },
     },
     Evelynn: {
       version: "6.24.1",
@@ -1293,7 +1293,7 @@ export default {
         attack: 4,
         defense: 2,
         magic: 7,
-        difficulty: 10
+        difficulty: 10,
       },
       image: {
         full: "Evelynn.png",
@@ -1302,7 +1302,7 @@ export default {
         x: 192,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Assassin", "Mage"],
       partype: "MP",
@@ -1326,8 +1326,8 @@ export default {
         attackdamage: 53.88,
         attackdamageperlevel: 3.5,
         attackspeedoffset: 0,
-        attackspeedperlevel: 3.6
-      }
+        attackspeedperlevel: 3.6,
+      },
     },
     Ezreal: {
       version: "6.24.1",
@@ -1344,7 +1344,7 @@ export default {
         attack: 7,
         defense: 2,
         magic: 6,
-        difficulty: 7
+        difficulty: 7,
       },
       image: {
         full: "Ezreal.png",
@@ -1353,7 +1353,7 @@ export default {
         x: 240,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Marksman", "Mage"],
       partype: "MP",
@@ -1377,8 +1377,8 @@ export default {
         attackdamage: 55.66,
         attackdamageperlevel: 2.41,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.8
-      }
+        attackspeedperlevel: 2.8,
+      },
     },
     FiddleSticks: {
       version: "6.24.1",
@@ -1395,7 +1395,7 @@ export default {
         attack: 2,
         defense: 3,
         magic: 9,
-        difficulty: 9
+        difficulty: 9,
       },
       image: {
         full: "FiddleSticks.png",
@@ -1404,7 +1404,7 @@ export default {
         x: 288,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage", "Support"],
       partype: "MP",
@@ -1428,8 +1428,8 @@ export default {
         attackdamage: 48.36,
         attackdamageperlevel: 2.625,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.11
-      }
+        attackspeedperlevel: 2.11,
+      },
     },
     Fiora: {
       version: "6.24.1",
@@ -1446,7 +1446,7 @@ export default {
         attack: 10,
         defense: 4,
         magic: 2,
-        difficulty: 3
+        difficulty: 3,
       },
       image: {
         full: "Fiora.png",
@@ -1455,7 +1455,7 @@ export default {
         x: 336,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Assassin"],
       partype: "MP",
@@ -1479,8 +1479,8 @@ export default {
         attackdamage: 60,
         attackdamageperlevel: 3.3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 3.2
-      }
+        attackspeedperlevel: 3.2,
+      },
     },
     Fizz: {
       version: "6.24.1",
@@ -1497,7 +1497,7 @@ export default {
         attack: 6,
         defense: 4,
         magic: 7,
-        difficulty: 6
+        difficulty: 6,
       },
       image: {
         full: "Fizz.png",
@@ -1506,7 +1506,7 @@ export default {
         x: 384,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Assassin", "Fighter"],
       partype: "MP",
@@ -1530,8 +1530,8 @@ export default {
         attackdamage: 58.04,
         attackdamageperlevel: 3,
         attackspeedoffset: -0.05,
-        attackspeedperlevel: 3.1
-      }
+        attackspeedperlevel: 3.1,
+      },
     },
     Galio: {
       version: "6.24.1",
@@ -1548,7 +1548,7 @@ export default {
         attack: 3,
         defense: 7,
         magic: 6,
-        difficulty: 3
+        difficulty: 3,
       },
       image: {
         full: "Galio.png",
@@ -1557,7 +1557,7 @@ export default {
         x: 432,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Tank", "Mage"],
       partype: "MP",
@@ -1581,8 +1581,8 @@ export default {
         attackdamage: 61.97,
         attackdamageperlevel: 3.375,
         attackspeedoffset: -0.02,
-        attackspeedperlevel: 1.2
-      }
+        attackspeedperlevel: 1.2,
+      },
     },
     Gangplank: {
       version: "6.24.1",
@@ -1599,7 +1599,7 @@ export default {
         attack: 7,
         defense: 6,
         magic: 4,
-        difficulty: 9
+        difficulty: 9,
       },
       image: {
         full: "Gangplank.png",
@@ -1608,7 +1608,7 @@ export default {
         x: 0,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter"],
       partype: "MP",
@@ -1632,8 +1632,8 @@ export default {
         attackdamage: 56,
         attackdamageperlevel: 3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 3.2
-      }
+        attackspeedperlevel: 3.2,
+      },
     },
     Garen: {
       version: "6.24.1",
@@ -1650,7 +1650,7 @@ export default {
         attack: 7,
         defense: 7,
         magic: 1,
-        difficulty: 5
+        difficulty: 5,
       },
       image: {
         full: "Garen.png",
@@ -1659,7 +1659,7 @@ export default {
         x: 48,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Tank"],
       partype: "None",
@@ -1683,8 +1683,8 @@ export default {
         attackdamage: 57.88,
         attackdamageperlevel: 4.5,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.9
-      }
+        attackspeedperlevel: 2.9,
+      },
     },
     Gnar: {
       version: "6.24.1",
@@ -1701,7 +1701,7 @@ export default {
         attack: 6,
         defense: 5,
         magic: 5,
-        difficulty: 8
+        difficulty: 8,
       },
       image: {
         full: "Gnar.png",
@@ -1710,7 +1710,7 @@ export default {
         x: 96,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Tank"],
       partype: "Gnarfury",
@@ -1734,8 +1734,8 @@ export default {
         attackdamage: 51,
         attackdamageperlevel: 3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 6
-      }
+        attackspeedperlevel: 6,
+      },
     },
     Gragas: {
       version: "6.24.1",
@@ -1752,7 +1752,7 @@ export default {
         attack: 4,
         defense: 7,
         magic: 6,
-        difficulty: 5
+        difficulty: 5,
       },
       image: {
         full: "Gragas.png",
@@ -1761,7 +1761,7 @@ export default {
         x: 144,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Mage"],
       partype: "MP",
@@ -1785,8 +1785,8 @@ export default {
         attackdamage: 61.38,
         attackdamageperlevel: 3.5,
         attackspeedoffset: -0.04,
-        attackspeedperlevel: 2.05
-      }
+        attackspeedperlevel: 2.05,
+      },
     },
     Graves: {
       version: "6.24.1",
@@ -1803,7 +1803,7 @@ export default {
         attack: 8,
         defense: 5,
         magic: 3,
-        difficulty: 3
+        difficulty: 3,
       },
       image: {
         full: "Graves.png",
@@ -1812,7 +1812,7 @@ export default {
         x: 192,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Marksman"],
       partype: "MP",
@@ -1836,8 +1836,8 @@ export default {
         attackdamage: 60.83,
         attackdamageperlevel: 2.41,
         attackspeedoffset: 0.3,
-        attackspeedperlevel: 2.6
-      }
+        attackspeedperlevel: 2.6,
+      },
     },
     Hecarim: {
       version: "6.24.1",
@@ -1855,7 +1855,7 @@ export default {
         attack: 8,
         defense: 6,
         magic: 4,
-        difficulty: 6
+        difficulty: 6,
       },
       image: {
         full: "Hecarim.png",
@@ -1864,7 +1864,7 @@ export default {
         x: 240,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Tank"],
       partype: "MP",
@@ -1888,8 +1888,8 @@ export default {
         attackdamage: 58,
         attackdamageperlevel: 3.2,
         attackspeedoffset: -0.0672,
-        attackspeedperlevel: 2.5
-      }
+        attackspeedperlevel: 2.5,
+      },
     },
     Heimerdinger: {
       version: "6.24.1",
@@ -1906,7 +1906,7 @@ export default {
         attack: 2,
         defense: 6,
         magic: 8,
-        difficulty: 8
+        difficulty: 8,
       },
       image: {
         full: "Heimerdinger.png",
@@ -1915,7 +1915,7 @@ export default {
         x: 288,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage", "Support"],
       partype: "MP",
@@ -1939,8 +1939,8 @@ export default {
         attackdamage: 55.536,
         attackdamageperlevel: 2.7,
         attackspeedoffset: 0,
-        attackspeedperlevel: 1.36
-      }
+        attackspeedperlevel: 1.36,
+      },
     },
     Illaoi: {
       version: "6.24.1",
@@ -1957,7 +1957,7 @@ export default {
         attack: 8,
         defense: 6,
         magic: 3,
-        difficulty: 4
+        difficulty: 4,
       },
       image: {
         full: "Illaoi.png",
@@ -1966,7 +1966,7 @@ export default {
         x: 336,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Tank"],
       partype: "MP",
@@ -1990,8 +1990,8 @@ export default {
         attackdamage: 60,
         attackdamageperlevel: 5,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.5
-      }
+        attackspeedperlevel: 2.5,
+      },
     },
     Irelia: {
       version: "6.24.1",
@@ -2008,7 +2008,7 @@ export default {
         attack: 7,
         defense: 4,
         magic: 5,
-        difficulty: 5
+        difficulty: 5,
       },
       image: {
         full: "Irelia.png",
@@ -2017,7 +2017,7 @@ export default {
         x: 384,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Assassin"],
       partype: "MP",
@@ -2041,8 +2041,8 @@ export default {
         attackdamage: 61.544,
         attackdamageperlevel: 3.3,
         attackspeedoffset: -0.06,
-        attackspeedperlevel: 3.2
-      }
+        attackspeedperlevel: 3.2,
+      },
     },
     Ivern: {
       version: "6.24.1",
@@ -2059,7 +2059,7 @@ export default {
         attack: 3,
         defense: 5,
         magic: 7,
-        difficulty: 7
+        difficulty: 7,
       },
       image: {
         full: "Ivern.png",
@@ -2068,7 +2068,7 @@ export default {
         x: 96,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Support", "Mage"],
       partype: "MP",
@@ -2092,8 +2092,8 @@ export default {
         attackdamage: 50,
         attackdamageperlevel: 3,
         attackspeedoffset: -0.03,
-        attackspeedperlevel: 3.4
-      }
+        attackspeedperlevel: 3.4,
+      },
     },
     Janna: {
       version: "6.24.1",
@@ -2110,7 +2110,7 @@ export default {
         attack: 3,
         defense: 5,
         magic: 7,
-        difficulty: 7
+        difficulty: 7,
       },
       image: {
         full: "Janna.png",
@@ -2119,7 +2119,7 @@ export default {
         x: 432,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Support", "Mage"],
       partype: "MP",
@@ -2143,8 +2143,8 @@ export default {
         attackdamage: 51.956,
         attackdamageperlevel: 2.95,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.61
-      }
+        attackspeedperlevel: 2.61,
+      },
     },
     JarvanIV: {
       version: "6.24.1",
@@ -2161,7 +2161,7 @@ export default {
         attack: 6,
         defense: 8,
         magic: 3,
-        difficulty: 5
+        difficulty: 5,
       },
       image: {
         full: "JarvanIV.png",
@@ -2170,7 +2170,7 @@ export default {
         x: 0,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Tank", "Fighter"],
       partype: "MP",
@@ -2194,8 +2194,8 @@ export default {
         attackdamage: 55.712,
         attackdamageperlevel: 3.4,
         attackspeedoffset: -0.05,
-        attackspeedperlevel: 2.5
-      }
+        attackspeedperlevel: 2.5,
+      },
     },
     Jax: {
       version: "6.24.1",
@@ -2212,7 +2212,7 @@ export default {
         attack: 7,
         defense: 5,
         magic: 7,
-        difficulty: 5
+        difficulty: 5,
       },
       image: {
         full: "Jax.png",
@@ -2221,7 +2221,7 @@ export default {
         x: 48,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Assassin"],
       partype: "MP",
@@ -2245,8 +2245,8 @@ export default {
         attackdamage: 61.97,
         attackdamageperlevel: 3.375,
         attackspeedoffset: -0.02,
-        attackspeedperlevel: 3.4
-      }
+        attackspeedperlevel: 3.4,
+      },
     },
     Jayce: {
       version: "6.24.1",
@@ -2263,7 +2263,7 @@ export default {
         attack: 8,
         defense: 4,
         magic: 3,
-        difficulty: 7
+        difficulty: 7,
       },
       image: {
         full: "Jayce.png",
@@ -2272,7 +2272,7 @@ export default {
         x: 96,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Marksman"],
       partype: "MP",
@@ -2296,8 +2296,8 @@ export default {
         attackdamage: 50.38,
         attackdamageperlevel: 3.5,
         attackspeedoffset: -0.05,
-        attackspeedperlevel: 3
-      }
+        attackspeedperlevel: 3,
+      },
     },
     Jhin: {
       version: "6.24.1",
@@ -2314,7 +2314,7 @@ export default {
         attack: 10,
         defense: 2,
         magic: 6,
-        difficulty: 6
+        difficulty: 6,
       },
       image: {
         full: "Jhin.png",
@@ -2323,7 +2323,7 @@ export default {
         x: 144,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Marksman", "Assassin"],
       partype: "MP",
@@ -2347,8 +2347,8 @@ export default {
         attackdamage: 53,
         attackdamageperlevel: 4,
         attackspeedoffset: 0,
-        attackspeedperlevel: 0
-      }
+        attackspeedperlevel: 0,
+      },
     },
     Jinx: {
       version: "6.24.1",
@@ -2365,7 +2365,7 @@ export default {
         attack: 9,
         defense: 2,
         magic: 4,
-        difficulty: 6
+        difficulty: 6,
       },
       image: {
         full: "Jinx.png",
@@ -2374,7 +2374,7 @@ export default {
         x: 192,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Marksman"],
       partype: "MP",
@@ -2398,8 +2398,8 @@ export default {
         attackdamage: 58.46,
         attackdamageperlevel: 2.41,
         attackspeedoffset: 0,
-        attackspeedperlevel: 1
-      }
+        attackspeedperlevel: 1,
+      },
     },
     Kalista: {
       version: "6.24.1",
@@ -2416,7 +2416,7 @@ export default {
         attack: 8,
         defense: 2,
         magic: 4,
-        difficulty: 7
+        difficulty: 7,
       },
       image: {
         full: "Kalista.png",
@@ -2425,7 +2425,7 @@ export default {
         x: 240,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Marksman"],
       partype: "MP",
@@ -2449,8 +2449,8 @@ export default {
         attackdamage: 63,
         attackdamageperlevel: 2.9,
         attackspeedoffset: -0.03,
-        attackspeedperlevel: 2.5
-      }
+        attackspeedperlevel: 2.5,
+      },
     },
     Karma: {
       version: "6.24.1",
@@ -2467,7 +2467,7 @@ export default {
         attack: 1,
         defense: 7,
         magic: 8,
-        difficulty: 5
+        difficulty: 5,
       },
       image: {
         full: "Karma.png",
@@ -2476,7 +2476,7 @@ export default {
         x: 288,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage", "Support"],
       partype: "MP",
@@ -2500,8 +2500,8 @@ export default {
         attackdamage: 53.544,
         attackdamageperlevel: 3.3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.3
-      }
+        attackspeedperlevel: 2.3,
+      },
     },
     Karthus: {
       version: "6.24.1",
@@ -2518,7 +2518,7 @@ export default {
         attack: 2,
         defense: 2,
         magic: 10,
-        difficulty: 7
+        difficulty: 7,
       },
       image: {
         full: "Karthus.png",
@@ -2527,7 +2527,7 @@ export default {
         x: 336,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage"],
       partype: "MP",
@@ -2551,8 +2551,8 @@ export default {
         attackdamage: 45.66,
         attackdamageperlevel: 3.25,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.11
-      }
+        attackspeedperlevel: 2.11,
+      },
     },
     Kassadin: {
       version: "6.24.1",
@@ -2569,7 +2569,7 @@ export default {
         attack: 3,
         defense: 5,
         magic: 8,
-        difficulty: 8
+        difficulty: 8,
       },
       image: {
         full: "Kassadin.png",
@@ -2578,7 +2578,7 @@ export default {
         x: 384,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Assassin", "Mage"],
       partype: "MP",
@@ -2602,8 +2602,8 @@ export default {
         attackdamage: 58.852,
         attackdamageperlevel: 3.9,
         attackspeedoffset: -0.023,
-        attackspeedperlevel: 3.7
-      }
+        attackspeedperlevel: 3.7,
+      },
     },
     Katarina: {
       version: "6.24.1",
@@ -2620,7 +2620,7 @@ export default {
         attack: 4,
         defense: 3,
         magic: 9,
-        difficulty: 8
+        difficulty: 8,
       },
       image: {
         full: "Katarina.png",
@@ -2629,7 +2629,7 @@ export default {
         x: 432,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Assassin", "Mage"],
       partype: "None",
@@ -2653,8 +2653,8 @@ export default {
         attackdamage: 58,
         attackdamageperlevel: 3.2,
         attackspeedoffset: -0.05,
-        attackspeedperlevel: 2.74
-      }
+        attackspeedperlevel: 2.74,
+      },
     },
     Kayle: {
       version: "6.24.1",
@@ -2671,7 +2671,7 @@ export default {
         attack: 6,
         defense: 6,
         magic: 7,
-        difficulty: 7
+        difficulty: 7,
       },
       image: {
         full: "Kayle.png",
@@ -2680,7 +2680,7 @@ export default {
         x: 0,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Support"],
       partype: "MP",
@@ -2704,8 +2704,8 @@ export default {
         attackdamage: 51,
         attackdamageperlevel: 2.8,
         attackspeedoffset: -0.02,
-        attackspeedperlevel: 2.2
-      }
+        attackspeedperlevel: 2.2,
+      },
     },
     Kennen: {
       version: "6.24.1",
@@ -2722,7 +2722,7 @@ export default {
         attack: 6,
         defense: 4,
         magic: 7,
-        difficulty: 4
+        difficulty: 4,
       },
       image: {
         full: "Kennen.png",
@@ -2731,7 +2731,7 @@ export default {
         x: 48,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage", "Marksman"],
       partype: "Energy",
@@ -2755,8 +2755,8 @@ export default {
         attackdamage: 50.544,
         attackdamageperlevel: 3.3,
         attackspeedoffset: -0.0947,
-        attackspeedperlevel: 3.4
-      }
+        attackspeedperlevel: 3.4,
+      },
     },
     Khazix: {
       version: "6.24.1",
@@ -2773,7 +2773,7 @@ export default {
         attack: 9,
         defense: 4,
         magic: 3,
-        difficulty: 6
+        difficulty: 6,
       },
       image: {
         full: "Khazix.png",
@@ -2782,7 +2782,7 @@ export default {
         x: 96,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Assassin", "Fighter"],
       partype: "MP",
@@ -2806,8 +2806,8 @@ export default {
         attackdamage: 55.21,
         attackdamageperlevel: 3.1,
         attackspeedoffset: -0.065,
-        attackspeedperlevel: 2.7
-      }
+        attackspeedperlevel: 2.7,
+      },
     },
     Kindred: {
       version: "6.24.1",
@@ -2824,7 +2824,7 @@ export default {
         attack: 8,
         defense: 2,
         magic: 2,
-        difficulty: 4
+        difficulty: 4,
       },
       image: {
         full: "Kindred.png",
@@ -2833,7 +2833,7 @@ export default {
         x: 144,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Marksman"],
       partype: "MP",
@@ -2857,8 +2857,8 @@ export default {
         attackdamage: 54,
         attackdamageperlevel: 1.7,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.5
-      }
+        attackspeedperlevel: 2.5,
+      },
     },
     Kled: {
       version: "6.24.1",
@@ -2875,7 +2875,7 @@ export default {
         attack: 8,
         defense: 2,
         magic: 2,
-        difficulty: 7
+        difficulty: 7,
       },
       image: {
         full: "Kled.png",
@@ -2884,7 +2884,7 @@ export default {
         x: 48,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Tank"],
       partype: "Gnarfury",
@@ -2908,8 +2908,8 @@ export default {
         attackdamage: 55,
         attackdamageperlevel: 3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 3.5
-      }
+        attackspeedperlevel: 3.5,
+      },
     },
     KogMaw: {
       version: "6.24.1",
@@ -2926,7 +2926,7 @@ export default {
         attack: 8,
         defense: 2,
         magic: 5,
-        difficulty: 6
+        difficulty: 6,
       },
       image: {
         full: "KogMaw.png",
@@ -2935,7 +2935,7 @@ export default {
         x: 192,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Marksman", "Mage"],
       partype: "MP",
@@ -2959,8 +2959,8 @@ export default {
         attackdamage: 57.46,
         attackdamageperlevel: 2.41,
         attackspeedoffset: -0.06,
-        attackspeedperlevel: 2.65
-      }
+        attackspeedperlevel: 2.65,
+      },
     },
     Leblanc: {
       version: "6.24.1",
@@ -2977,7 +2977,7 @@ export default {
         attack: 1,
         defense: 4,
         magic: 10,
-        difficulty: 9
+        difficulty: 9,
       },
       image: {
         full: "Leblanc.png",
@@ -2986,7 +2986,7 @@ export default {
         x: 240,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Assassin", "Mage"],
       partype: "MP",
@@ -3010,8 +3010,8 @@ export default {
         attackdamage: 54.88,
         attackdamageperlevel: 3.5,
         attackspeedoffset: 0,
-        attackspeedperlevel: 1.4
-      }
+        attackspeedperlevel: 1.4,
+      },
     },
     LeeSin: {
       version: "6.24.1",
@@ -3028,7 +3028,7 @@ export default {
         attack: 8,
         defense: 5,
         magic: 3,
-        difficulty: 6
+        difficulty: 6,
       },
       image: {
         full: "LeeSin.png",
@@ -3037,7 +3037,7 @@ export default {
         x: 288,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Assassin"],
       partype: "Energy",
@@ -3061,8 +3061,8 @@ export default {
         attackdamage: 61.176,
         attackdamageperlevel: 3.2,
         attackspeedoffset: -0.04,
-        attackspeedperlevel: 3
-      }
+        attackspeedperlevel: 3,
+      },
     },
     Leona: {
       version: "6.24.1",
@@ -3079,7 +3079,7 @@ export default {
         attack: 4,
         defense: 8,
         magic: 3,
-        difficulty: 4
+        difficulty: 4,
       },
       image: {
         full: "Leona.png",
@@ -3088,7 +3088,7 @@ export default {
         x: 336,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Tank", "Support"],
       partype: "MP",
@@ -3112,8 +3112,8 @@ export default {
         attackdamage: 60.04,
         attackdamageperlevel: 3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.9
-      }
+        attackspeedperlevel: 2.9,
+      },
     },
     Lissandra: {
       version: "6.24.1",
@@ -3130,7 +3130,7 @@ export default {
         attack: 2,
         defense: 5,
         magic: 8,
-        difficulty: 6
+        difficulty: 6,
       },
       image: {
         full: "Lissandra.png",
@@ -3139,7 +3139,7 @@ export default {
         x: 384,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage"],
       partype: "MP",
@@ -3163,8 +3163,8 @@ export default {
         attackdamage: 50.536,
         attackdamageperlevel: 2.7,
         attackspeedoffset: 0,
-        attackspeedperlevel: 1.36
-      }
+        attackspeedperlevel: 1.36,
+      },
     },
     Lucian: {
       version: "6.24.1",
@@ -3181,7 +3181,7 @@ export default {
         attack: 8,
         defense: 5,
         magic: 3,
-        difficulty: 6
+        difficulty: 6,
       },
       image: {
         full: "Lucian.png",
@@ -3190,7 +3190,7 @@ export default {
         x: 432,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Marksman"],
       partype: "MP",
@@ -3214,8 +3214,8 @@ export default {
         attackdamage: 57.46,
         attackdamageperlevel: 2.41,
         attackspeedoffset: -0.02,
-        attackspeedperlevel: 3.3
-      }
+        attackspeedperlevel: 3.3,
+      },
     },
     Lulu: {
       version: "6.24.1",
@@ -3232,7 +3232,7 @@ export default {
         attack: 4,
         defense: 5,
         magic: 7,
-        difficulty: 5
+        difficulty: 5,
       },
       image: {
         full: "Lulu.png",
@@ -3241,7 +3241,7 @@ export default {
         x: 0,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Support", "Mage"],
       partype: "MP",
@@ -3265,8 +3265,8 @@ export default {
         attackdamage: 46.368,
         attackdamageperlevel: 2.6,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.25
-      }
+        attackspeedperlevel: 2.25,
+      },
     },
     Lux: {
       version: "6.24.1",
@@ -3283,7 +3283,7 @@ export default {
         attack: 2,
         defense: 4,
         magic: 9,
-        difficulty: 5
+        difficulty: 5,
       },
       image: {
         full: "Lux.png",
@@ -3292,7 +3292,7 @@ export default {
         x: 48,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage", "Support"],
       partype: "MP",
@@ -3316,8 +3316,8 @@ export default {
         attackdamage: 53.544,
         attackdamageperlevel: 3.3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 1.36
-      }
+        attackspeedperlevel: 1.36,
+      },
     },
     Malphite: {
       version: "6.24.1",
@@ -3334,7 +3334,7 @@ export default {
         attack: 5,
         defense: 9,
         magic: 7,
-        difficulty: 2
+        difficulty: 2,
       },
       image: {
         full: "Malphite.png",
@@ -3343,7 +3343,7 @@ export default {
         x: 96,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Tank", "Fighter"],
       partype: "MP",
@@ -3367,8 +3367,8 @@ export default {
         attackdamage: 61.97,
         attackdamageperlevel: 3.375,
         attackspeedoffset: -0.02,
-        attackspeedperlevel: 3.4
-      }
+        attackspeedperlevel: 3.4,
+      },
     },
     Malzahar: {
       version: "6.24.1",
@@ -3385,7 +3385,7 @@ export default {
         attack: 2,
         defense: 2,
         magic: 9,
-        difficulty: 6
+        difficulty: 6,
       },
       image: {
         full: "Malzahar.png",
@@ -3394,7 +3394,7 @@ export default {
         x: 144,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage", "Assassin"],
       partype: "MP",
@@ -3418,8 +3418,8 @@ export default {
         attackdamage: 55,
         attackdamageperlevel: 3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 1.5
-      }
+        attackspeedperlevel: 1.5,
+      },
     },
     Maokai: {
       version: "6.24.1",
@@ -3436,7 +3436,7 @@ export default {
         attack: 3,
         defense: 8,
         magic: 6,
-        difficulty: 3
+        difficulty: 3,
       },
       image: {
         full: "Maokai.png",
@@ -3445,7 +3445,7 @@ export default {
         x: 192,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Tank", "Mage"],
       partype: "MP",
@@ -3469,8 +3469,8 @@ export default {
         attackdamage: 63.544,
         attackdamageperlevel: 3.3,
         attackspeedoffset: -0.1,
-        attackspeedperlevel: 2.125
-      }
+        attackspeedperlevel: 2.125,
+      },
     },
     MasterYi: {
       version: "6.24.1",
@@ -3487,7 +3487,7 @@ export default {
         attack: 10,
         defense: 4,
         magic: 2,
-        difficulty: 4
+        difficulty: 4,
       },
       image: {
         full: "MasterYi.png",
@@ -3496,7 +3496,7 @@ export default {
         x: 240,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Assassin", "Fighter"],
       partype: "MP",
@@ -3520,8 +3520,8 @@ export default {
         attackdamage: 60.04,
         attackdamageperlevel: 3,
         attackspeedoffset: -0.08,
-        attackspeedperlevel: 2
-      }
+        attackspeedperlevel: 2,
+      },
     },
     MissFortune: {
       version: "6.24.1",
@@ -3538,7 +3538,7 @@ export default {
         attack: 8,
         defense: 2,
         magic: 5,
-        difficulty: 1
+        difficulty: 1,
       },
       image: {
         full: "MissFortune.png",
@@ -3547,7 +3547,7 @@ export default {
         x: 288,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Marksman"],
       partype: "MP",
@@ -3571,8 +3571,8 @@ export default {
         attackdamage: 46,
         attackdamageperlevel: 1,
         attackspeedoffset: -0.04734,
-        attackspeedperlevel: 3
-      }
+        attackspeedperlevel: 3,
+      },
     },
     MonkeyKing: {
       version: "6.24.1",
@@ -3589,7 +3589,7 @@ export default {
         attack: 8,
         defense: 5,
         magic: 2,
-        difficulty: 3
+        difficulty: 3,
       },
       image: {
         full: "MonkeyKing.png",
@@ -3598,7 +3598,7 @@ export default {
         x: 336,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Tank"],
       partype: "MP",
@@ -3622,8 +3622,8 @@ export default {
         attackdamage: 59.876,
         attackdamageperlevel: 3.2,
         attackspeedoffset: -0.05,
-        attackspeedperlevel: 3
-      }
+        attackspeedperlevel: 3,
+      },
     },
     Mordekaiser: {
       version: "6.24.1",
@@ -3640,7 +3640,7 @@ export default {
         attack: 4,
         defense: 6,
         magic: 7,
-        difficulty: 4
+        difficulty: 4,
       },
       image: {
         full: "Mordekaiser.png",
@@ -3649,7 +3649,7 @@ export default {
         x: 384,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter"],
       partype: "None",
@@ -3673,8 +3673,8 @@ export default {
         attackdamage: 61,
         attackdamageperlevel: 5,
         attackspeedoffset: 0.04,
-        attackspeedperlevel: 2.2
-      }
+        attackspeedperlevel: 2.2,
+      },
     },
     Morgana: {
       version: "6.24.1",
@@ -3691,7 +3691,7 @@ export default {
         attack: 1,
         defense: 6,
         magic: 8,
-        difficulty: 1
+        difficulty: 1,
       },
       image: {
         full: "Morgana.png",
@@ -3700,7 +3700,7 @@ export default {
         x: 432,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage", "Support"],
       partype: "MP",
@@ -3724,8 +3724,8 @@ export default {
         attackdamage: 55.46,
         attackdamageperlevel: 3.5,
         attackspeedoffset: 0,
-        attackspeedperlevel: 1.53
-      }
+        attackspeedperlevel: 1.53,
+      },
     },
     Nami: {
       version: "6.24.1",
@@ -3742,7 +3742,7 @@ export default {
         attack: 4,
         defense: 3,
         magic: 7,
-        difficulty: 5
+        difficulty: 5,
       },
       image: {
         full: "Nami.png",
@@ -3751,7 +3751,7 @@ export default {
         x: 0,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Support", "Mage"],
       partype: "MP",
@@ -3775,8 +3775,8 @@ export default {
         attackdamage: 51.208,
         attackdamageperlevel: 3.1,
         attackspeedoffset: -0.03,
-        attackspeedperlevel: 2.61
-      }
+        attackspeedperlevel: 2.61,
+      },
     },
     Nasus: {
       version: "6.24.1",
@@ -3793,7 +3793,7 @@ export default {
         attack: 7,
         defense: 5,
         magic: 6,
-        difficulty: 6
+        difficulty: 6,
       },
       image: {
         full: "Nasus.png",
@@ -3802,7 +3802,7 @@ export default {
         x: 48,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Tank"],
       partype: "MP",
@@ -3826,8 +3826,8 @@ export default {
         attackdamage: 59.18,
         attackdamageperlevel: 3.5,
         attackspeedoffset: -0.02,
-        attackspeedperlevel: 3.48
-      }
+        attackspeedperlevel: 3.48,
+      },
     },
     Nautilus: {
       version: "6.24.1",
@@ -3844,7 +3844,7 @@ export default {
         attack: 4,
         defense: 6,
         magic: 6,
-        difficulty: 6
+        difficulty: 6,
       },
       image: {
         full: "Nautilus.png",
@@ -3853,7 +3853,7 @@ export default {
         x: 96,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Tank", "Fighter"],
       partype: "MP",
@@ -3877,8 +3877,8 @@ export default {
         attackdamage: 57.544,
         attackdamageperlevel: 3.3,
         attackspeedoffset: 0.02,
-        attackspeedperlevel: 1
-      }
+        attackspeedperlevel: 1,
+      },
     },
     Nidalee: {
       version: "6.24.1",
@@ -3895,7 +3895,7 @@ export default {
         attack: 5,
         defense: 4,
         magic: 7,
-        difficulty: 8
+        difficulty: 8,
       },
       image: {
         full: "Nidalee.png",
@@ -3904,7 +3904,7 @@ export default {
         x: 144,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Assassin", "Fighter"],
       partype: "MP",
@@ -3928,8 +3928,8 @@ export default {
         attackdamage: 53,
         attackdamageperlevel: 3.5,
         attackspeedoffset: -0.02,
-        attackspeedperlevel: 3.22
-      }
+        attackspeedperlevel: 3.22,
+      },
     },
     Nocturne: {
       version: "6.24.1",
@@ -3946,7 +3946,7 @@ export default {
         attack: 9,
         defense: 5,
         magic: 2,
-        difficulty: 4
+        difficulty: 4,
       },
       image: {
         full: "Nocturne.png",
@@ -3955,7 +3955,7 @@ export default {
         x: 192,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Assassin", "Fighter"],
       partype: "MP",
@@ -3979,8 +3979,8 @@ export default {
         attackdamage: 59.208,
         attackdamageperlevel: 3.1,
         attackspeedoffset: -0.065,
-        attackspeedperlevel: 2.7
-      }
+        attackspeedperlevel: 2.7,
+      },
     },
     Nunu: {
       version: "6.24.1",
@@ -3997,7 +3997,7 @@ export default {
         attack: 4,
         defense: 6,
         magic: 7,
-        difficulty: 4
+        difficulty: 4,
       },
       image: {
         full: "Nunu.png",
@@ -4006,7 +4006,7 @@ export default {
         x: 240,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Support", "Fighter"],
       partype: "MP",
@@ -4030,8 +4030,8 @@ export default {
         attackdamage: 59,
         attackdamageperlevel: 4,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.25
-      }
+        attackspeedperlevel: 2.25,
+      },
     },
     Olaf: {
       version: "6.24.1",
@@ -4048,7 +4048,7 @@ export default {
         attack: 9,
         defense: 5,
         magic: 3,
-        difficulty: 3
+        difficulty: 3,
       },
       image: {
         full: "Olaf.png",
@@ -4057,7 +4057,7 @@ export default {
         x: 288,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Tank"],
       partype: "MP",
@@ -4081,8 +4081,8 @@ export default {
         attackdamage: 59.98,
         attackdamageperlevel: 3.5,
         attackspeedoffset: -0.1,
-        attackspeedperlevel: 2.7
-      }
+        attackspeedperlevel: 2.7,
+      },
     },
     Orianna: {
       version: "6.24.1",
@@ -4099,7 +4099,7 @@ export default {
         attack: 4,
         defense: 3,
         magic: 9,
-        difficulty: 7
+        difficulty: 7,
       },
       image: {
         full: "Orianna.png",
@@ -4108,7 +4108,7 @@ export default {
         x: 336,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage", "Support"],
       partype: "MP",
@@ -4132,8 +4132,8 @@ export default {
         attackdamage: 40.368,
         attackdamageperlevel: 2.6,
         attackspeedoffset: -0.05,
-        attackspeedperlevel: 3.5
-      }
+        attackspeedperlevel: 3.5,
+      },
     },
     Pantheon: {
       version: "6.24.1",
@@ -4150,7 +4150,7 @@ export default {
         attack: 9,
         defense: 4,
         magic: 3,
-        difficulty: 4
+        difficulty: 4,
       },
       image: {
         full: "Pantheon.png",
@@ -4159,7 +4159,7 @@ export default {
         x: 384,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Assassin"],
       partype: "MP",
@@ -4183,8 +4183,8 @@ export default {
         attackdamage: 55.572,
         attackdamageperlevel: 2.9,
         attackspeedoffset: -0.03,
-        attackspeedperlevel: 2.95
-      }
+        attackspeedperlevel: 2.95,
+      },
     },
     Poppy: {
       version: "6.24.1",
@@ -4201,7 +4201,7 @@ export default {
         attack: 6,
         defense: 7,
         magic: 2,
-        difficulty: 6
+        difficulty: 6,
       },
       image: {
         full: "Poppy.png",
@@ -4210,7 +4210,7 @@ export default {
         x: 432,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Tank", "Fighter"],
       partype: "MP",
@@ -4234,8 +4234,8 @@ export default {
         attackdamage: 56,
         attackdamageperlevel: 4,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.5
-      }
+        attackspeedperlevel: 2.5,
+      },
     },
     Quinn: {
       version: "6.24.1",
@@ -4252,7 +4252,7 @@ export default {
         attack: 9,
         defense: 4,
         magic: 2,
-        difficulty: 5
+        difficulty: 5,
       },
       image: {
         full: "Quinn.png",
@@ -4261,7 +4261,7 @@ export default {
         x: 0,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Marksman", "Fighter"],
       partype: "MP",
@@ -4285,8 +4285,8 @@ export default {
         attackdamage: 54.46,
         attackdamageperlevel: 2.41,
         attackspeedoffset: -0.065,
-        attackspeedperlevel: 3.1
-      }
+        attackspeedperlevel: 3.1,
+      },
     },
     Rammus: {
       version: "6.24.1",
@@ -4303,7 +4303,7 @@ export default {
         attack: 4,
         defense: 10,
         magic: 5,
-        difficulty: 5
+        difficulty: 5,
       },
       image: {
         full: "Rammus.png",
@@ -4312,7 +4312,7 @@ export default {
         x: 48,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Tank", "Fighter"],
       partype: "MP",
@@ -4336,8 +4336,8 @@ export default {
         attackdamage: 55.88,
         attackdamageperlevel: 3.5,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.215
-      }
+        attackspeedperlevel: 2.215,
+      },
     },
     RekSai: {
       version: "6.24.1",
@@ -4354,7 +4354,7 @@ export default {
         attack: 8,
         defense: 5,
         magic: 2,
-        difficulty: 3
+        difficulty: 3,
       },
       image: {
         full: "RekSai.png",
@@ -4363,7 +4363,7 @@ export default {
         x: 96,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter"],
       partype: "Battlefury",
@@ -4387,8 +4387,8 @@ export default {
         attackdamage: 55.628,
         attackdamageperlevel: 3.35,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2
-      }
+        attackspeedperlevel: 2,
+      },
     },
     Renekton: {
       version: "6.24.1",
@@ -4405,7 +4405,7 @@ export default {
         attack: 8,
         defense: 5,
         magic: 2,
-        difficulty: 3
+        difficulty: 3,
       },
       image: {
         full: "Renekton.png",
@@ -4414,7 +4414,7 @@ export default {
         x: 144,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Tank"],
       partype: "Rage",
@@ -4438,8 +4438,8 @@ export default {
         attackdamage: 58.328,
         attackdamageperlevel: 3.1,
         attackspeedoffset: -0.06,
-        attackspeedperlevel: 2.65
-      }
+        attackspeedperlevel: 2.65,
+      },
     },
     Rengar: {
       version: "6.24.1",
@@ -4456,7 +4456,7 @@ export default {
         attack: 7,
         defense: 4,
         magic: 2,
-        difficulty: 8
+        difficulty: 8,
       },
       image: {
         full: "Rengar.png",
@@ -4465,7 +4465,7 @@ export default {
         x: 192,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Assassin", "Fighter"],
       partype: "Ferocity",
@@ -4489,8 +4489,8 @@ export default {
         attackdamage: 60,
         attackdamageperlevel: 1.5,
         attackspeedoffset: 0,
-        attackspeedperlevel: 3.5
-      }
+        attackspeedperlevel: 3.5,
+      },
     },
     Riven: {
       version: "6.24.1",
@@ -4507,7 +4507,7 @@ export default {
         attack: 8,
         defense: 5,
         magic: 1,
-        difficulty: 8
+        difficulty: 8,
       },
       image: {
         full: "Riven.png",
@@ -4516,7 +4516,7 @@ export default {
         x: 240,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Assassin"],
       partype: "None",
@@ -4540,8 +4540,8 @@ export default {
         attackdamage: 56.04,
         attackdamageperlevel: 3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 3.5
-      }
+        attackspeedperlevel: 3.5,
+      },
     },
     Rumble: {
       version: "6.24.1",
@@ -4558,7 +4558,7 @@ export default {
         attack: 3,
         defense: 6,
         magic: 8,
-        difficulty: 10
+        difficulty: 10,
       },
       image: {
         full: "Rumble.png",
@@ -4567,7 +4567,7 @@ export default {
         x: 288,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Mage"],
       partype: "Heat",
@@ -4591,8 +4591,8 @@ export default {
         attackdamage: 61.036,
         attackdamageperlevel: 3.2,
         attackspeedoffset: -0.03,
-        attackspeedperlevel: 1.85
-      }
+        attackspeedperlevel: 1.85,
+      },
     },
     Ryze: {
       version: "6.24.1",
@@ -4609,7 +4609,7 @@ export default {
         attack: 2,
         defense: 2,
         magic: 10,
-        difficulty: 7
+        difficulty: 7,
       },
       image: {
         full: "Ryze.png",
@@ -4618,7 +4618,7 @@ export default {
         x: 336,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage", "Fighter"],
       partype: "MP",
@@ -4642,8 +4642,8 @@ export default {
         attackdamage: 55.04,
         attackdamageperlevel: 3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.112
-      }
+        attackspeedperlevel: 2.112,
+      },
     },
     Sejuani: {
       version: "6.24.1",
@@ -4660,7 +4660,7 @@ export default {
         attack: 5,
         defense: 7,
         magic: 6,
-        difficulty: 4
+        difficulty: 4,
       },
       image: {
         full: "Sejuani.png",
@@ -4669,7 +4669,7 @@ export default {
         x: 384,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Tank", "Fighter"],
       partype: "MP",
@@ -4693,8 +4693,8 @@ export default {
         attackdamage: 57.544,
         attackdamageperlevel: 3.3,
         attackspeedoffset: -0.0672,
-        attackspeedperlevel: 1.44
-      }
+        attackspeedperlevel: 1.44,
+      },
     },
     Shaco: {
       version: "6.24.1",
@@ -4711,7 +4711,7 @@ export default {
         attack: 8,
         defense: 4,
         magic: 6,
-        difficulty: 9
+        difficulty: 9,
       },
       image: {
         full: "Shaco.png",
@@ -4720,7 +4720,7 @@ export default {
         x: 432,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Assassin"],
       partype: "MP",
@@ -4744,8 +4744,8 @@ export default {
         attackdamage: 57.58,
         attackdamageperlevel: 3.5,
         attackspeedoffset: -0.1,
-        attackspeedperlevel: 3
-      }
+        attackspeedperlevel: 3,
+      },
     },
     Shen: {
       version: "6.24.1",
@@ -4762,7 +4762,7 @@ export default {
         attack: 3,
         defense: 9,
         magic: 3,
-        difficulty: 4
+        difficulty: 4,
       },
       image: {
         full: "Shen.png",
@@ -4771,7 +4771,7 @@ export default {
         x: 0,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Tank", "Melee"],
       partype: "Energy",
@@ -4795,8 +4795,8 @@ export default {
         attackdamage: 60,
         attackdamageperlevel: 3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2
-      }
+        attackspeedperlevel: 2,
+      },
     },
     Shyvana: {
       version: "6.24.1",
@@ -4813,7 +4813,7 @@ export default {
         attack: 8,
         defense: 6,
         magic: 3,
-        difficulty: 4
+        difficulty: 4,
       },
       image: {
         full: "Shyvana.png",
@@ -4822,7 +4822,7 @@ export default {
         x: 48,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Tank"],
       partype: "Dragonfury",
@@ -4846,8 +4846,8 @@ export default {
         attackdamage: 60.712,
         attackdamageperlevel: 3.4,
         attackspeedoffset: -0.05,
-        attackspeedperlevel: 2.5
-      }
+        attackspeedperlevel: 2.5,
+      },
     },
     Singed: {
       version: "6.24.1",
@@ -4864,7 +4864,7 @@ export default {
         attack: 4,
         defense: 8,
         magic: 7,
-        difficulty: 5
+        difficulty: 5,
       },
       image: {
         full: "Singed.png",
@@ -4873,7 +4873,7 @@ export default {
         x: 96,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Tank", "Fighter"],
       partype: "MP",
@@ -4897,8 +4897,8 @@ export default {
         attackdamage: 62.32,
         attackdamageperlevel: 3.375,
         attackspeedoffset: 0.02,
-        attackspeedperlevel: 1.81
-      }
+        attackspeedperlevel: 1.81,
+      },
     },
     Sion: {
       version: "6.24.1",
@@ -4915,7 +4915,7 @@ export default {
         attack: 5,
         defense: 9,
         magic: 3,
-        difficulty: 5
+        difficulty: 5,
       },
       image: {
         full: "Sion.png",
@@ -4924,7 +4924,7 @@ export default {
         x: 144,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Tank", "Fighter"],
       partype: "MP",
@@ -4948,8 +4948,8 @@ export default {
         attackdamage: 59.72,
         attackdamageperlevel: 4,
         attackspeedoffset: -0.08,
-        attackspeedperlevel: 1.3
-      }
+        attackspeedperlevel: 1.3,
+      },
     },
     Sivir: {
       version: "6.24.1",
@@ -4966,7 +4966,7 @@ export default {
         attack: 9,
         defense: 3,
         magic: 1,
-        difficulty: 4
+        difficulty: 4,
       },
       image: {
         full: "Sivir.png",
@@ -4975,7 +4975,7 @@ export default {
         x: 192,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Marksman"],
       partype: "MP",
@@ -4999,8 +4999,8 @@ export default {
         attackdamage: 57.46,
         attackdamageperlevel: 2.41,
         attackspeedoffset: 0,
-        attackspeedperlevel: 1.6
-      }
+        attackspeedperlevel: 1.6,
+      },
     },
     Skarner: {
       version: "6.24.1",
@@ -5017,7 +5017,7 @@ export default {
         attack: 7,
         defense: 6,
         magic: 5,
-        difficulty: 5
+        difficulty: 5,
       },
       image: {
         full: "Skarner.png",
@@ -5026,7 +5026,7 @@ export default {
         x: 240,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Tank"],
       partype: "MP",
@@ -5050,8 +5050,8 @@ export default {
         attackdamage: 57.156,
         attackdamageperlevel: 4.5,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.1
-      }
+        attackspeedperlevel: 2.1,
+      },
     },
     Sona: {
       version: "6.24.1",
@@ -5068,7 +5068,7 @@ export default {
         attack: 5,
         defense: 2,
         magic: 8,
-        difficulty: 4
+        difficulty: 4,
       },
       image: {
         full: "Sona.png",
@@ -5077,7 +5077,7 @@ export default {
         x: 288,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Support", "Mage"],
       partype: "MP",
@@ -5101,8 +5101,8 @@ export default {
         attackdamage: 50.04,
         attackdamageperlevel: 3,
         attackspeedoffset: -0.03,
-        attackspeedperlevel: 2.3
-      }
+        attackspeedperlevel: 2.3,
+      },
     },
     Soraka: {
       version: "6.24.1",
@@ -5119,7 +5119,7 @@ export default {
         attack: 2,
         defense: 5,
         magic: 7,
-        difficulty: 3
+        difficulty: 3,
       },
       image: {
         full: "Soraka.png",
@@ -5128,7 +5128,7 @@ export default {
         x: 336,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Support", "Mage"],
       partype: "MP",
@@ -5152,8 +5152,8 @@ export default {
         attackdamage: 50.04,
         attackdamageperlevel: 3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.14
-      }
+        attackspeedperlevel: 2.14,
+      },
     },
     Swain: {
       version: "6.24.1",
@@ -5170,7 +5170,7 @@ export default {
         attack: 2,
         defense: 6,
         magic: 9,
-        difficulty: 8
+        difficulty: 8,
       },
       image: {
         full: "Swain.png",
@@ -5179,7 +5179,7 @@ export default {
         x: 384,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage", "Fighter"],
       partype: "MP",
@@ -5203,8 +5203,8 @@ export default {
         attackdamage: 52.04,
         attackdamageperlevel: 3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.11
-      }
+        attackspeedperlevel: 2.11,
+      },
     },
     Syndra: {
       version: "6.24.1",
@@ -5221,7 +5221,7 @@ export default {
         attack: 2,
         defense: 3,
         magic: 9,
-        difficulty: 8
+        difficulty: 8,
       },
       image: {
         full: "Syndra.png",
@@ -5230,7 +5230,7 @@ export default {
         x: 432,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage", "Support"],
       partype: "MP",
@@ -5254,8 +5254,8 @@ export default {
         attackdamage: 53.872,
         attackdamageperlevel: 2.9,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2
-      }
+        attackspeedperlevel: 2,
+      },
     },
     TahmKench: {
       version: "6.24.1",
@@ -5272,7 +5272,7 @@ export default {
         attack: 3,
         defense: 9,
         magic: 6,
-        difficulty: 5
+        difficulty: 5,
       },
       image: {
         full: "TahmKench.png",
@@ -5281,7 +5281,7 @@ export default {
         x: 0,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Support", "Tank"],
       partype: "MP",
@@ -5305,8 +5305,8 @@ export default {
         attackdamage: 56,
         attackdamageperlevel: 3.2,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.5
-      }
+        attackspeedperlevel: 2.5,
+      },
     },
     Taliyah: {
       version: "6.24.1",
@@ -5323,7 +5323,7 @@ export default {
         attack: 1,
         defense: 7,
         magic: 8,
-        difficulty: 5
+        difficulty: 5,
       },
       image: {
         full: "Taliyah.png",
@@ -5332,7 +5332,7 @@ export default {
         x: 48,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage", "Support"],
       partype: "MP",
@@ -5356,8 +5356,8 @@ export default {
         attackdamage: 56,
         attackdamageperlevel: 3.3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 1.36
-      }
+        attackspeedperlevel: 1.36,
+      },
     },
     Talon: {
       version: "6.24.1",
@@ -5374,7 +5374,7 @@ export default {
         attack: 9,
         defense: 3,
         magic: 1,
-        difficulty: 7
+        difficulty: 7,
       },
       image: {
         full: "Talon.png",
@@ -5383,7 +5383,7 @@ export default {
         x: 96,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Assassin", "Fighter"],
       partype: "MP",
@@ -5407,8 +5407,8 @@ export default {
         attackdamage: 60,
         attackdamageperlevel: 3.1,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.9
-      }
+        attackspeedperlevel: 2.9,
+      },
     },
     Taric: {
       version: "6.24.1",
@@ -5425,7 +5425,7 @@ export default {
         attack: 4,
         defense: 8,
         magic: 5,
-        difficulty: 3
+        difficulty: 3,
       },
       image: {
         full: "Taric.png",
@@ -5434,7 +5434,7 @@ export default {
         x: 144,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Support", "Fighter"],
       partype: "MP",
@@ -5458,8 +5458,8 @@ export default {
         attackdamage: 55,
         attackdamageperlevel: 3.5,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2
-      }
+        attackspeedperlevel: 2,
+      },
     },
     Teemo: {
       version: "6.24.1",
@@ -5476,7 +5476,7 @@ export default {
         attack: 5,
         defense: 3,
         magic: 7,
-        difficulty: 6
+        difficulty: 6,
       },
       image: {
         full: "Teemo.png",
@@ -5485,7 +5485,7 @@ export default {
         x: 192,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Marksman", "Assassin"],
       partype: "MP",
@@ -5509,8 +5509,8 @@ export default {
         attackdamage: 49.54,
         attackdamageperlevel: 3,
         attackspeedoffset: -0.0947,
-        attackspeedperlevel: 3.38
-      }
+        attackspeedperlevel: 3.38,
+      },
     },
     Thresh: {
       version: "6.24.1",
@@ -5527,7 +5527,7 @@ export default {
         attack: 5,
         defense: 6,
         magic: 6,
-        difficulty: 7
+        difficulty: 7,
       },
       image: {
         full: "Thresh.png",
@@ -5536,7 +5536,7 @@ export default {
         x: 240,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Support", "Fighter"],
       partype: "MP",
@@ -5560,8 +5560,8 @@ export default {
         attackdamage: 47.696,
         attackdamageperlevel: 2.2,
         attackspeedoffset: 0,
-        attackspeedperlevel: 3.5
-      }
+        attackspeedperlevel: 3.5,
+      },
     },
     Tristana: {
       version: "6.24.1",
@@ -5578,7 +5578,7 @@ export default {
         attack: 9,
         defense: 3,
         magic: 5,
-        difficulty: 4
+        difficulty: 4,
       },
       image: {
         full: "Tristana.png",
@@ -5587,7 +5587,7 @@ export default {
         x: 288,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Marksman", "Assassin"],
       partype: "MP",
@@ -5611,8 +5611,8 @@ export default {
         attackdamage: 56.96,
         attackdamageperlevel: 2.41,
         attackspeedoffset: -0.04734,
-        attackspeedperlevel: 1.5
-      }
+        attackspeedperlevel: 1.5,
+      },
     },
     Trundle: {
       version: "6.24.1",
@@ -5629,7 +5629,7 @@ export default {
         attack: 7,
         defense: 6,
         magic: 2,
-        difficulty: 5
+        difficulty: 5,
       },
       image: {
         full: "Trundle.png",
@@ -5638,7 +5638,7 @@ export default {
         x: 336,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Tank"],
       partype: "MP",
@@ -5662,8 +5662,8 @@ export default {
         attackdamage: 60.04,
         attackdamageperlevel: 3,
         attackspeedoffset: -0.0672,
-        attackspeedperlevel: 2.9
-      }
+        attackspeedperlevel: 2.9,
+      },
     },
     Tryndamere: {
       version: "6.24.1",
@@ -5680,7 +5680,7 @@ export default {
         attack: 10,
         defense: 5,
         magic: 2,
-        difficulty: 5
+        difficulty: 5,
       },
       image: {
         full: "Tryndamere.png",
@@ -5689,7 +5689,7 @@ export default {
         x: 384,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Assassin"],
       partype: "Battlefury",
@@ -5713,8 +5713,8 @@ export default {
         attackdamage: 61.376,
         attackdamageperlevel: 3.2,
         attackspeedoffset: -0.0672,
-        attackspeedperlevel: 2.9
-      }
+        attackspeedperlevel: 2.9,
+      },
     },
     TwistedFate: {
       version: "6.24.1",
@@ -5731,7 +5731,7 @@ export default {
         attack: 6,
         defense: 2,
         magic: 6,
-        difficulty: 9
+        difficulty: 9,
       },
       image: {
         full: "TwistedFate.png",
@@ -5740,7 +5740,7 @@ export default {
         x: 432,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage"],
       partype: "MP",
@@ -5764,8 +5764,8 @@ export default {
         attackdamage: 49.954,
         attackdamageperlevel: 3.3,
         attackspeedoffset: -0.04,
-        attackspeedperlevel: 3.22
-      }
+        attackspeedperlevel: 3.22,
+      },
     },
     Twitch: {
       version: "6.24.1",
@@ -5782,7 +5782,7 @@ export default {
         attack: 9,
         defense: 2,
         magic: 3,
-        difficulty: 6
+        difficulty: 6,
       },
       image: {
         full: "Twitch.png",
@@ -5791,7 +5791,7 @@ export default {
         x: 0,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Marksman", "Assassin"],
       partype: "MP",
@@ -5815,8 +5815,8 @@ export default {
         attackdamage: 55.46,
         attackdamageperlevel: 2.41,
         attackspeedoffset: -0.08,
-        attackspeedperlevel: 3.38
-      }
+        attackspeedperlevel: 3.38,
+      },
     },
     Udyr: {
       version: "6.24.1",
@@ -5833,7 +5833,7 @@ export default {
         attack: 8,
         defense: 7,
         magic: 4,
-        difficulty: 7
+        difficulty: 7,
       },
       image: {
         full: "Udyr.png",
@@ -5842,7 +5842,7 @@ export default {
         x: 48,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Tank"],
       partype: "MP",
@@ -5866,8 +5866,8 @@ export default {
         attackdamage: 58.286,
         attackdamageperlevel: 3.2,
         attackspeedoffset: -0.05,
-        attackspeedperlevel: 2.67
-      }
+        attackspeedperlevel: 2.67,
+      },
     },
     Urgot: {
       version: "6.24.1",
@@ -5884,7 +5884,7 @@ export default {
         attack: 8,
         defense: 5,
         magic: 3,
-        difficulty: 8
+        difficulty: 8,
       },
       image: {
         full: "Urgot.png",
@@ -5893,7 +5893,7 @@ export default {
         x: 96,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Marksman", "Fighter"],
       partype: "MP",
@@ -5917,8 +5917,8 @@ export default {
         attackdamage: 54.05,
         attackdamageperlevel: 3.6,
         attackspeedoffset: -0.03,
-        attackspeedperlevel: 2.9
-      }
+        attackspeedperlevel: 2.9,
+      },
     },
     Varus: {
       version: "6.24.1",
@@ -5935,7 +5935,7 @@ export default {
         attack: 7,
         defense: 3,
         magic: 4,
-        difficulty: 2
+        difficulty: 2,
       },
       image: {
         full: "Varus.png",
@@ -5944,7 +5944,7 @@ export default {
         x: 144,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Marksman", "Mage"],
       partype: "MP",
@@ -5968,8 +5968,8 @@ export default {
         attackdamage: 54.66,
         attackdamageperlevel: 2.41,
         attackspeedoffset: -0.05,
-        attackspeedperlevel: 3
-      }
+        attackspeedperlevel: 3,
+      },
     },
     Vayne: {
       version: "6.24.1",
@@ -5986,7 +5986,7 @@ export default {
         attack: 10,
         defense: 1,
         magic: 1,
-        difficulty: 8
+        difficulty: 8,
       },
       image: {
         full: "Vayne.png",
@@ -5995,7 +5995,7 @@ export default {
         x: 192,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Marksman", "Assassin"],
       partype: "MP",
@@ -6019,8 +6019,8 @@ export default {
         attackdamage: 55.88,
         attackdamageperlevel: 1.66,
         attackspeedoffset: -0.05,
-        attackspeedperlevel: 4
-      }
+        attackspeedperlevel: 4,
+      },
     },
     Veigar: {
       version: "6.24.1",
@@ -6037,7 +6037,7 @@ export default {
         attack: 2,
         defense: 2,
         magic: 10,
-        difficulty: 7
+        difficulty: 7,
       },
       image: {
         full: "Veigar.png",
@@ -6046,7 +6046,7 @@ export default {
         x: 240,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage"],
       partype: "MP",
@@ -6070,8 +6070,8 @@ export default {
         attackdamage: 50.71,
         attackdamageperlevel: 2.625,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.24
-      }
+        attackspeedperlevel: 2.24,
+      },
     },
     Velkoz: {
       version: "6.24.1",
@@ -6088,7 +6088,7 @@ export default {
         attack: 2,
         defense: 2,
         magic: 10,
-        difficulty: 8
+        difficulty: 8,
       },
       image: {
         full: "Velkoz.png",
@@ -6097,7 +6097,7 @@ export default {
         x: 288,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage"],
       partype: "MP",
@@ -6121,8 +6121,8 @@ export default {
         attackdamage: 54.9379,
         attackdamageperlevel: 3.14159,
         attackspeedoffset: 0,
-        attackspeedperlevel: 1.36
-      }
+        attackspeedperlevel: 1.36,
+      },
     },
     Vi: {
       version: "6.24.1",
@@ -6139,7 +6139,7 @@ export default {
         attack: 8,
         defense: 5,
         magic: 3,
-        difficulty: 4
+        difficulty: 4,
       },
       image: {
         full: "Vi.png",
@@ -6148,7 +6148,7 @@ export default {
         x: 336,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Assassin"],
       partype: "MP",
@@ -6172,8 +6172,8 @@ export default {
         attackdamage: 55.88,
         attackdamageperlevel: 3.5,
         attackspeedoffset: -0.03,
-        attackspeedperlevel: 2.5
-      }
+        attackspeedperlevel: 2.5,
+      },
     },
     Viktor: {
       version: "6.24.1",
@@ -6190,7 +6190,7 @@ export default {
         attack: 2,
         defense: 4,
         magic: 10,
-        difficulty: 9
+        difficulty: 9,
       },
       image: {
         full: "Viktor.png",
@@ -6199,7 +6199,7 @@ export default {
         x: 384,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage"],
       partype: "MP",
@@ -6223,8 +6223,8 @@ export default {
         attackdamage: 52.04,
         attackdamageperlevel: 3,
         attackspeedoffset: -0.05,
-        attackspeedperlevel: 2.11
-      }
+        attackspeedperlevel: 2.11,
+      },
     },
     Vladimir: {
       version: "6.24.1",
@@ -6241,7 +6241,7 @@ export default {
         attack: 2,
         defense: 6,
         magic: 8,
-        difficulty: 7
+        difficulty: 7,
       },
       image: {
         full: "Vladimir.png",
@@ -6250,7 +6250,7 @@ export default {
         x: 432,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage", "Tank"],
       partype: "Gnarfury",
@@ -6274,8 +6274,8 @@ export default {
         attackdamage: 52,
         attackdamageperlevel: 3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2
-      }
+        attackspeedperlevel: 2,
+      },
     },
     Volibear: {
       version: "6.24.1",
@@ -6292,7 +6292,7 @@ export default {
         attack: 7,
         defense: 7,
         magic: 4,
-        difficulty: 3
+        difficulty: 3,
       },
       image: {
         full: "Volibear.png",
@@ -6301,7 +6301,7 @@ export default {
         x: 0,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Tank"],
       partype: "MP",
@@ -6325,8 +6325,8 @@ export default {
         attackdamage: 59.544,
         attackdamageperlevel: 3.3,
         attackspeedoffset: -0.05,
-        attackspeedperlevel: 2.67
-      }
+        attackspeedperlevel: 2.67,
+      },
     },
     Warwick: {
       version: "6.24.1",
@@ -6343,7 +6343,7 @@ export default {
         attack: 7,
         defense: 4,
         magic: 4,
-        difficulty: 3
+        difficulty: 3,
       },
       image: {
         full: "Warwick.png",
@@ -6352,7 +6352,7 @@ export default {
         x: 48,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Tank"],
       partype: "MP",
@@ -6376,8 +6376,8 @@ export default {
         attackdamage: 62.43,
         attackdamageperlevel: 3.375,
         attackspeedoffset: -0.08,
-        attackspeedperlevel: 2.88
-      }
+        attackspeedperlevel: 2.88,
+      },
     },
     Xerath: {
       version: "6.24.1",
@@ -6394,7 +6394,7 @@ export default {
         attack: 1,
         defense: 3,
         magic: 10,
-        difficulty: 8
+        difficulty: 8,
       },
       image: {
         full: "Xerath.png",
@@ -6403,7 +6403,7 @@ export default {
         x: 96,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage", "Assassin"],
       partype: "MP",
@@ -6427,8 +6427,8 @@ export default {
         attackdamage: 54.7,
         attackdamageperlevel: 3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 1.36
-      }
+        attackspeedperlevel: 1.36,
+      },
     },
     XinZhao: {
       version: "6.24.1",
@@ -6445,7 +6445,7 @@ export default {
         attack: 8,
         defense: 6,
         magic: 3,
-        difficulty: 2
+        difficulty: 2,
       },
       image: {
         full: "XinZhao.png",
@@ -6454,7 +6454,7 @@ export default {
         x: 144,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Assassin"],
       partype: "MP",
@@ -6478,8 +6478,8 @@ export default {
         attackdamage: 57.544,
         attackdamageperlevel: 3.3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.6
-      }
+        attackspeedperlevel: 2.6,
+      },
     },
     Yasuo: {
       version: "6.24.1",
@@ -6496,7 +6496,7 @@ export default {
         attack: 8,
         defense: 4,
         magic: 4,
-        difficulty: 10
+        difficulty: 10,
       },
       image: {
         full: "Yasuo.png",
@@ -6505,7 +6505,7 @@ export default {
         x: 192,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Assassin"],
       partype: "Wind",
@@ -6529,8 +6529,8 @@ export default {
         attackdamage: 55.376,
         attackdamageperlevel: 3.2,
         attackspeedoffset: -0.067,
-        attackspeedperlevel: 2.5
-      }
+        attackspeedperlevel: 2.5,
+      },
     },
     Yorick: {
       version: "6.24.1",
@@ -6547,7 +6547,7 @@ export default {
         attack: 6,
         defense: 6,
         magic: 4,
-        difficulty: 6
+        difficulty: 6,
       },
       image: {
         full: "Yorick.png",
@@ -6556,7 +6556,7 @@ export default {
         x: 240,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Tank"],
       partype: "MP",
@@ -6580,8 +6580,8 @@ export default {
         attackdamage: 57,
         attackdamageperlevel: 5,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2
-      }
+        attackspeedperlevel: 2,
+      },
     },
     Zac: {
       version: "6.24.1",
@@ -6598,7 +6598,7 @@ export default {
         attack: 3,
         defense: 7,
         magic: 7,
-        difficulty: 8
+        difficulty: 8,
       },
       image: {
         full: "Zac.png",
@@ -6607,7 +6607,7 @@ export default {
         x: 288,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Tank", "Fighter"],
       partype: "None",
@@ -6631,8 +6631,8 @@ export default {
         attackdamage: 59.67,
         attackdamageperlevel: 3.375,
         attackspeedoffset: -0.02,
-        attackspeedperlevel: 1.6
-      }
+        attackspeedperlevel: 1.6,
+      },
     },
     Zed: {
       version: "6.24.1",
@@ -6649,7 +6649,7 @@ export default {
         attack: 9,
         defense: 2,
         magic: 1,
-        difficulty: 7
+        difficulty: 7,
       },
       image: {
         full: "Zed.png",
@@ -6658,7 +6658,7 @@ export default {
         x: 336,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Assassin", "Fighter"],
       partype: "Energy",
@@ -6682,8 +6682,8 @@ export default {
         attackdamage: 54.712,
         attackdamageperlevel: 3.4,
         attackspeedoffset: -0.03,
-        attackspeedperlevel: 2.1
-      }
+        attackspeedperlevel: 2.1,
+      },
     },
     Ziggs: {
       version: "6.24.1",
@@ -6700,7 +6700,7 @@ export default {
         attack: 2,
         defense: 4,
         magic: 9,
-        difficulty: 4
+        difficulty: 4,
       },
       image: {
         full: "Ziggs.png",
@@ -6709,7 +6709,7 @@ export default {
         x: 384,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage"],
       partype: "MP",
@@ -6733,8 +6733,8 @@ export default {
         attackdamage: 54.208,
         attackdamageperlevel: 3.1,
         attackspeedoffset: -0.04734,
-        attackspeedperlevel: 2
-      }
+        attackspeedperlevel: 2,
+      },
     },
     Zilean: {
       version: "6.24.1",
@@ -6751,7 +6751,7 @@ export default {
         attack: 2,
         defense: 5,
         magic: 8,
-        difficulty: 6
+        difficulty: 6,
       },
       image: {
         full: "Zilean.png",
@@ -6760,7 +6760,7 @@ export default {
         x: 432,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Support", "Mage"],
       partype: "MP",
@@ -6784,8 +6784,8 @@ export default {
         attackdamage: 51.64,
         attackdamageperlevel: 3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.13
-      }
+        attackspeedperlevel: 2.13,
+      },
     },
     Zyra: {
       version: "6.24.1",
@@ -6802,7 +6802,7 @@ export default {
         attack: 4,
         defense: 3,
         magic: 8,
-        difficulty: 7
+        difficulty: 7,
       },
       image: {
         full: "Zyra.png",
@@ -6811,7 +6811,7 @@ export default {
         x: 0,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage", "Support"],
       partype: "MP",
@@ -6835,8 +6835,8 @@ export default {
         attackdamage: 53.376,
         attackdamageperlevel: 3.2,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.11
-      }
-    }
-  }
+        attackspeedperlevel: 2.11,
+      },
+    },
+  },
 };
