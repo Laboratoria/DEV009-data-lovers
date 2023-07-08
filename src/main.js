@@ -26,6 +26,17 @@ import championsData from "./data/lol/lol.js";
 
 let champions = Object.values(championsData.data);
 
+
+const tanqueLink = document.getElementById("tanque-link");
+tanqueLink.addEventListener("click", function (event) {
+  event.preventDefault();
+  champions = Object.values(championsData.data).filter((champion) =>
+    champion.tags.includes("Tank")
+  );
+  championContainer.innerHTML = "";
+  todos();
+});
+
 document.addEventListener("DOMContentLoaded", () => {
   todos();
 });
@@ -70,15 +81,7 @@ asesinoLink.addEventListener("click", function (event) {
   todos();
 });
 
-const tanqueLink = document.getElementById("tanque-link");
-tanqueLink.addEventListener("click", function (event) {
-  event.preventDefault();
-  champions = Object.values(championsData.data).filter((champion) =>
-    champion.tags.includes("Tank")
-  );
-  championContainer.innerHTML = "";
-  todos();
-});
+
 
 const apoyoLink = document.getElementById("apoyo-link");
 apoyoLink.addEventListener("click", function (event) {
@@ -98,8 +101,33 @@ todosLink.addEventListener("click", (event) => {
   todos();
 });
 
-const championContainer = document.getElementById("container_img");
+//Función Ordenar A - Z
+const ordenarAZLink = document.getElementById("a-z-ordenarlink");
+ordenarAZLink.addEventListener("click", ordenarAZChampions);
+function ordenarAZChampions() {
+  champions = champions.sort((a, b) => {
+    if (a.name > b.name) return 1;
+    if (a.name < b.name) return -1;
+    return 0;
+  });
+  championContainer.innerHTML = "";
+  todos();
+}
 
+//Función Ordenar Z - A
+const ordenarZALink = document.getElementById("z-a-ordenarlink");
+ordenarZALink.addEventListener("click", ordenarZAChampions);
+function ordenarZAChampions() {
+  champions = champions.sort((a, b) => {
+    if (a.name > b.name) return -1;
+    if (a.name < b.name) return 1;
+    return 0;
+  });
+  championContainer.innerHTML = "";
+  todos();
+}
+
+const championContainer = document.getElementById("container_img");
 function todos() {
   championContainer.innerHTML = "";
   for (let championKey in champions) {
