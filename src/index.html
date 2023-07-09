@@ -7,16 +7,52 @@
   </head>
   <body>
     <header> 
-      <div class="logoTitulo">
-       <img src="imagen/mapamundi1.png"
-       alt ="mapamundi de colores tierra y circular" width="110"heigth="110"> 
-       <h1>GEOGRAFIA DE LOS PAISES</h1>
+     <div class="header_superior"></div>
+       <div class="logoTitulo">
+          <img src="imagen/mapamundi1.png"
+          alt ="mapamundi de colores tierra y circular" width="110"heigth="110"> 
+          <h1>GEOGRAFIA DE LOS PAISES</h1>
+       </div>
       </div>
-      <nav>
-        <label for="Buscar"></label>
-        <button class="btn" id="boton">Buscar</button>
-        <input type="text" name="Buscar" id="Buscar"placeholder=" Ingrese nombre de pais">
-      </nav>
+      
+      <div class="container_menu">
+        <div class="menu">
+          <nav>
+            <ul>
+              <li><a href="#">INICIO </a></li>
+              <li><a href="#">CONTINENTES</a>
+                <ul>
+                  <li><a href="#">AMERICA</a>
+                    <ul>
+                      <li><a href="#">CARIBE</a></li>
+                      <li><a href="#">AMERICA CENTAL</a></li>
+                      <li><a href="#">NORTEAMERICA</a></li>
+                      <li><a href="#">SURAMERICA</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">AFRICA</a></li>
+                  <li><a href="#">ASIA</a></li>
+                  <li><a href="#">EUROPA</a></li>
+                  <li><a href="#">ANTARTICA</a></li>
+                  <li><a href="#">OCEANIA</a></li>
+                </ul>  
+              </li>
+              <li><a href="#">ORDENAR</a>
+                <ul>
+                  <li><a href="#">a-z</a></li>
+                  <li><a href="#">z-a</a></li>
+                </ul>
+              </li>
+              <li><a href="#">ESTADISTICAS</a></li>
+              <div class="buscador">
+                 <label for="Buscar"></label>
+                 <button class="btn" id="boton">Buscar</button>
+                 <input type="text" name="Buscar" id="Buscar"placeholder=" Ingrese nombre de pais">
+              </div>
+            </ul>  
+          </nav>
+       </div>   
+     </div>        
     </header>
     
     <div id="root"></div>
