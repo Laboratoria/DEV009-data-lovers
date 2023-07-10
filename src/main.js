@@ -5,17 +5,19 @@ import { sortNameDes, sortNameasc, sortNumYouger, sortNumLower, promPokemonEvery
 const dataPokemon = data.pokemon;
 const container = document.getElementById("targets");
 
-console.log(promPokemonEveryType(dataPokemon))
+
+
+//console.log(promPokemonEveryType(dataPokemon))
 //mostrar en el dom todos los pokemones
 
 
 
 const display = (pokemones) => {
   container.innerHTML = ""
-    pokemones.forEach(element => {
-        const target = document.createElement('article')
-        target.classList.add('cards');
-        target.innerHTML += `<img src='${element.img}' alt='imagen de ${element.name}'>
+  pokemones.forEach(element => {
+    const target = document.createElement('article')
+    target.classList.add('cards');
+    target.innerHTML += `<img src='${element.img}' alt='imagen de ${element.name}'>
         <h2>${element.name}</h2>
         <h4> Número: ${element.num}</h4>
         <h4>${element.generation.num}</h4>
@@ -46,13 +48,34 @@ menu.addEventListener("change", () => {
   else if (element === "numberMenor") {
     display(sortNumLower(dataPokemon))
   } 
-})
+});
+
 //filtro de buscar por nombre
 document.getElementById('pokeNames').addEventListener('keyup', () => {
 
   const filterName = document.getElementById('pokeNames').value;
   const result = dataPokemon.filter(element => (element.name).indexOf(filterName) !== -1);
   display(result)
-})
+});
+
+
+
 
 //FILTRO PORCENTAJE POR TIPO 
+document.getElementById('best').addEventListener('click',()=>{
+    document.getElementById('best').value;
+    document.getElementById('best').value;
+    console.log(
+       
+    );
+  document.getElementById('best').value;
+    console.log(
+       
+    );
+  const objtypes=  promPokemonEveryType(dataPokemon) // objeto
+  container.innerHTML = ""
+  for (const property in objtypes) {
+    const p = `<p >${property}: ${objtypes[property]}</p>`
+    container.innerHTML += p;
+  }
+});

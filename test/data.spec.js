@@ -1,4 +1,44 @@
-import { sortNameasc, sortNameDes, sortNumYouger, sortNumLower } from '../src/data.js';
+import { sortNameasc, sortNameDes, sortNumYouger, sortNumLower, promPokemonEveryType} from '../src/data.js';
+
+const firstPokemon = {
+  "num": "002",
+  "name": "ivysaur",
+  "generation": {
+    "num": "generation i",
+    "name": "kanto"
+  },
+    "type":[ 
+      "grass",
+      "poison"
+    ]
+  };
+
+  const secondPokemon = {
+    "num": "007",
+    "name": "squirtle",
+    "generation": {
+      "num": "generation i",
+      "name": "kanto"
+    },
+    "type": [
+      "water"
+    ]
+  };
+
+  const thridPokemon = {
+    "num": "024",
+    "name": "arbok",
+    "generation": {
+      "num": "generation i",
+      "name": "kanto"
+    },
+    "type": [
+      "poison"
+    ]
+    };
+
+
+
 
 
 describe('vamos hacer las pruebas de la funcion obtener orden A-Z', () => {
@@ -12,8 +52,8 @@ describe('vamos hacer las pruebas de la funcion obtener orden A-Z', () => {
 });
 
 
-describe('anotherExample', () => {
-  it('is a function', () => {
+describe('sortNameasc', () => {
+  it('deberia retornar los nombres de los pokemones arreglados', () => {
     expect(typeof anotherExample).toBe('function');
   });
 
