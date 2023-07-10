@@ -1,24 +1,42 @@
-// //Función Ordenar A - Z
-// export const ordenarAZLink = document.getElementById("a-z-ordenarlink");
-// ordenarAZLink.addEventListener("click", ordenarAZChampions);
-// export function ordenarAZChampions() {
-//   champions = champions.sort((a, b) => {
-//     if (a.name > b.name) return 1;
-//     if (a.name < b.name) return -1;
-//     return 0;
-//   });
-//   championContainer.innerHTML = "";
-//   todos();
-// }
-// //Función Ordenar Z - A
-// export const ordenarZALink = document.getElementById("z-a-ordenarlink");
-// ordenarZALink.addEventListener("click", ordenarZAChampions);
-// export function ordenarZAChampions() {
-//   champions = champions.sort((a, b) => {
-//     if (a.name > b.name) return -1;
-//     if (a.name < b.name) return 1;
-//     return 0;
-//   });
-//   championContainer.innerHTML = "";
-//   todos();
-// }
+export const filtroLuchador = function (data) {
+  return data.filter((champion) => champion.tags.includes("Fighter"));
+};
+
+export const filtroTirador = function (data) {
+  return data.filter((champion) => champion.tags.includes("Marksman"));
+};
+
+export const filtroMago = function (data) {
+  return data.filter((champion) => champion.tags.includes("Mage"));
+};
+
+export const filtroAsesino = function (data) {
+  return data.filter((champion) => champion.tags.includes("Assassin"));
+};
+
+export const filtroTanque = function (data) {
+  return data.filter((champion) => champion.tags.includes("Tank"));
+};
+
+export const filtroApoyo = function (data) {
+  return data.filter((champion) => champion.tags.includes("Support"));
+};
+
+
+
+
+export const OrdenarAZ = function (data) {
+  return data = data.sort((a, b) => {
+      if (a.name > b.name) return 1;
+      if (a.name < b.name) return -1;
+      return 0;
+    });
+};
+
+export const OrdenarZA = function (data) {
+  return data = data.sort((a, b) => {
+      if (a.name > b.name) return -1;
+      if (a.name < b.name) return 1;
+      return 0;
+    });
+};

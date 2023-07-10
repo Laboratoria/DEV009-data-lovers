@@ -1,4 +1,4 @@
-import { example, anotherExample } from '../src/data.js';
+import { filtroLuchador, filtroTirador, filtroMago, filtroAsesino, filtroTanque, filtroApoyo, OrdenarAZ, OrdenarZA } from '../src/data.js';
 
 
 describe('example', () => {

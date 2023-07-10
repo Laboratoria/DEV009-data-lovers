@@ -1,3 +1,5 @@
+import { filtroLuchador, filtroTirador, filtroMago, filtroAsesino, filtroTanque, filtroApoyo, OrdenarAZ, OrdenarZA } from './data.js';
+
 const navToggle = document.querySelector(".nav-toggle");
 const navMenu = document.querySelector(".nav-menu");
 navToggle.addEventListener("click", () => {
@@ -22,18 +24,11 @@ function Subir() {
   document.getElementById("section1").style.display = "block";
 }
 
-import championsData from "./data/lol/lol.js";
+import Data from "./data/lol/lol.js";
 
-let champions = Object.values(championsData.data); //Object.values() es una funcion q se utiliza para extraer los valores de championDat.data
-const tanqueLink = document.getElementById("tanque-link");
-tanqueLink.addEventListener("click", function (event) {
-  event.preventDefault();
-  champions = Object.values(championsData.data).filter((champion) =>
-    champion.tags.includes("Tank")
-  );
-  championContainer.innerHTML = "";
-  todos();
-});
+let champions = Object.values(Data.data); //Object.values() es una funcion q se utiliza para extraer los valores de championDat.data
+let championFilter = Object.values(Data.data)
+
 document.addEventListener("DOMContentLoaded", () => {
   todos();
 });
@@ -41,11 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const luchadorLink = document.getElementById("luchador-link");
 luchadorLink.addEventListener("click", function (event) {
   event.preventDefault();
-  champions = Object.values(championsData.data).filter(
-    (
-      champion //Object.values() es una funcion q se utiliza para extraer los valores de championDat.data
-    ) => champion.tags.includes("Fighter")
-  );
+  champions = filtroLuchador(championFilter);
   championContainer.innerHTML = "";
   todos();
 });
@@ -53,11 +44,7 @@ luchadorLink.addEventListener("click", function (event) {
 const tiradorLink = document.getElementById("tirador-link");
 tiradorLink.addEventListener("click", function (event) {
   event.preventDefault();
-  champions = Object.values(championsData.data).filter(
-    (
-      champion //Object.values() es una funcion q se utiliza para extraer los valores de championDat.data
-    ) => champion.tags.includes("Marksman")
-  );
+  champions = filtroTirador(championFilter);
   championContainer.innerHTML = "";
   todos();
 });
@@ -65,11 +52,7 @@ tiradorLink.addEventListener("click", function (event) {
 const magoLink = document.getElementById("mago-link");
 magoLink.addEventListener("click", function (event) {
   event.preventDefault();
-  champions = Object.values(championsData.data).filter(
-    (
-      champion //Object.values() es una funcion q se utiliza para extraer los valores de championDat.data
-    ) => champion.tags.includes("Mage")
-  );
+  champions = filtroMago(championFilter);
   championContainer.innerHTML = "";
   todos();
 });
@@ -77,11 +60,15 @@ magoLink.addEventListener("click", function (event) {
 const asesinoLink = document.getElementById("asesino-link");
 asesinoLink.addEventListener("click", function (event) {
   event.preventDefault();
-  champions = Object.values(championsData.data).filter(
-    (
-      champion //Object.values() es una funcion q se utiliza para extraer los valores de championDat.data
-    ) => champion.tags.includes("Assassin")
-  );
+  champions = filtroAsesino(championFilter);
+  championContainer.innerHTML = "";
+  todos();
+});
+
+const tanqueLink = document.getElementById("tanque-link");
+tanqueLink.addEventListener("click", function (event) {
+  event.preventDefault();
+  champions = filtroTanque(championFilter);
   championContainer.innerHTML = "";
   todos();
 });
@@ -89,11 +76,7 @@ asesinoLink.addEventListener("click", function (event) {
 const apoyoLink = document.getElementById("apoyo-link");
 apoyoLink.addEventListener("click", function (event) {
   event.preventDefault();
-  champions = Object.values(championsData.data).filter(
-    (
-      champion //Object.values() es una funcion q se utiliza para extraer los valores de championDat.data
-    ) => champion.tags.includes("Support")
-  );
+  champions = filtroApoyo(championFilter);
   championContainer.innerHTML = "";
   todos();
 });
@@ -101,36 +84,28 @@ apoyoLink.addEventListener("click", function (event) {
 const todosLink = document.getElementById("todos-link");
 todosLink.addEventListener("click", (event) => {
   event.preventDefault();
-  champions = Object.values(championsData.data); //Object.values() es una funcion q se utiliza para extraer los valores de championDat.data
+  champions = Object.values(Data.data); //Object.values() es una funcion q se utiliza para extraer los valores de championDat.data
   championContainer.innerHTML = "";
   todos();
 });
 
-//Función Ordenar A - Z
+// Ordenar A - Z
 const ordenarAZLink = document.getElementById("a-z-ordenarlink");
-ordenarAZLink.addEventListener("click", ordenarAZChampions);
-function ordenarAZChampions() {
-  champions = champions.sort((a, b) => {
-    if (a.name > b.name) return 1;
-    if (a.name < b.name) return -1;
-    return 0;
-  });
+ordenarAZLink.addEventListener("click", function (event) {
+  event.preventDefault();
+  champions = OrdenarAZ(champions);
   championContainer.innerHTML = "";
   todos();
-}
+});
 
-//Función Ordenar Z - A
+// Ordenar Z - A
 const ordenarZALink = document.getElementById("z-a-ordenarlink");
-ordenarZALink.addEventListener("click", ordenarZAChampions);
-function ordenarZAChampions() {
-  champions = champions.sort((a, b) => {
-    if (a.name > b.name) return -1;
-    if (a.name < b.name) return 1;
-    return 0;
-  });
+ordenarZALink.addEventListener("click", function (event) {
+  event.preventDefault();
+  champions = OrdenarZA(champions);
   championContainer.innerHTML = "";
   todos();
-}
+});
 
 const championContainer = document.getElementById("container_img");
 function todos() {
