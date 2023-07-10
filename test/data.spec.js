@@ -1,4 +1,4 @@
-import { sortBy,filterByDirector,filterByYear } from '../src/data.js';
+import { sortBy,filterByDirector,filterByYear,getCount,getPercentage } from '../src/data.js';
 
 describe(sortBy, () => {
   it('is a function', () => {
@@ -81,7 +81,32 @@ describe('filterByYear', () => {
       { release_date: '2004' },
     ];
 
-    const filteredData = filterByYear(data, '1992');
-    expect(filteredData).toEqual([{ release_date: '1992' }]);
+    const filteredData = [
+      { release_date: '1988' }
+    ];
+    expect(filterByYear(data,'1988')).toEqual(filteredData)
   });
 });
+
+describe('getCount',() =>{
+  it('deberia contar la cantidad de peliculas por director',() => {
+    const data=[
+      { director: 'Hayao Miyazaki', release_date: '2001' },
+      { director: 'Isao Takahata', release_date: '1988' },
+      { director: 'Hayao Miyazaki', release_date: '1997' },
+    ];
+
+    const expectedCount=1;
+    const result=getCount(data,'Hayao Miyazaki','2001');
+    expect(result).toEqual(expectedCount);
+  });
+});
+
+describe('getPercentage',()=>{
+  it('deberia expresar en porcentaje la cantidad de peliculas por director',()=>{
+    const films =20;
+    const count=5;
+    const result=getPercentage(films,count);
+    expect(result).toEqual(25)
+  })
+})
