@@ -19,6 +19,7 @@ console.log("estoy mostrando la data", data, data.films, people);
 
 //HTML de la lista de personas
 const peopleList = document.getElementById('people-list');
+//const contenedorList = document.getElementById('contenedor');
 //peopleList.innerHTML = ''; // Limpiar el contenido de la lista de personas
 
 //Recorrer el arreglo ordenado y crear elementos HTML para cada persona
@@ -173,7 +174,7 @@ peopleFilm.forEach(person => {
 //______CLICK PERSONAJES ORDENADOS POR PELÍCULA ('people' y 'film')
 const ordenPeopleFilmsLink = document.getElementById('orden-people-films');
 
-//const ordenPeopleFilmsName = document.getElementById('name-films');
+const ordenPeopleFilmsName = document.getElementById('name-films');
 
 ordenPeopleFilmsLink.addEventListener('click', function(event) {
   event.preventDefault(); // Evita que el enlace realice la acción predeterminada
@@ -183,12 +184,12 @@ ordenPeopleFilmsLink.addEventListener('click', function(event) {
     filmsDateList.style.display = 'none';
     filmsList.style.display = 'none'; // Oculta filmsList
     peopleList.style.display = 'none'; // Oculta peopleList
-    filmsListDirector.style.display = 'none';
+    ordenPeopleFilmsName.style.display = 'none';
 
   }
 });
 
-//______PELÍCULAS ORDENADAS POR DIRECTOR 
+//______PELÍCULAS ORDENADAS POR DIRECTOR ('director')
 const filmsDirector = data.films.flatMap(film => ({
   title: film.title,
   poster: film.poster,  
@@ -231,3 +232,39 @@ ordenDirectorFilmsLink.addEventListener('click', function(event) {
 
   }
 });
+
+/*//______PERSONAJES ORDENADOS POR GRUPO ETARIO ('age')
+const agePeople = data.films.flatMap(film =>
+  film.people.map(person => ({
+  name: person.name,
+  image: person.img,
+  title: film.title,
+  age: film.age
+}))
+);
+const peopleListAge = document.getElementById('people-list-age')
+
+
+agePeople.sort((a, b) => {
+  if (a.age && b.age) {
+    return a.age.localeCompare(b.age);
+  }
+  return 0;
+});
+  console.log("estoy ordenando personajes por edad", agePeople);
+
+agePeople.forEach(person => {
+  const personItem = document.createElement('div');
+  const personImage = document.createElement('img');
+  const personName = document.createElement('p');
+  const personAge = document.createElement('p');
+
+  personImage.src = person.image;
+  personName.textContent = person.name;
+  personAge.textContent = person.age;
+
+  personItem.appendChild(personImage);
+  personItem.appendChild(personName);
+  personItem.appendChild(personAge);
+  peopleListAge.appendChild(personItem);
+});*/

@@ -16,11 +16,13 @@
 
 nav{
     max-width: 900px;
-    margin: auto;
     background-color: #333;
     font-size: 20px;
     margin-top: 50px;
     border-radius: 20px;
+    padding: 5px 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 body{
@@ -89,89 +91,96 @@ footer {
     
   }
 
-  #people-list {
-    display: none;
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
-    grid-gap: 20px; /* Espacio entre los elementos */
+  #people-list, #films-list, #films-list-year, #people-list-film, #films-list-director {
+    background-color: rgba(255, 255, 255, 0.5);
     margin-top: 40px;
     margin-bottom: 60px;
     margin-left: 120px;
     margin-right: 120px;
-    text-align: center;
-    font-weight: bold;
-    background-color: rgb(255, 255, 255, 0.5);
+    display:none;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 30px;
     cursor: pointer; 
     border-radius: 40px;
-    padding: 30px 30px;
+    text-align: center;
+    font-weight: bold;
+    justify-content: space-between;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 
-  #films-list {
-    display: none;
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
-    grid-gap: 20px; /* Espacio entre los elementos */
-    margin-top: 40px;
-    margin-bottom: 60px;
-    margin-left: 120px;
-    margin-right: 120px;
-    text-align: center;
-    font-weight: bold;
-    background-color: rgb(255, 255, 255, 0.5);
-    cursor: pointer; 
-    border-radius: 40px;
-    padding: 30px 30px;
-  }
-  
-  #films-list-year {
-    display: none;
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
-    grid-gap: 20px; /* Espacio entre los elementos */
-    margin-top: 40px;
-    margin-bottom: 60px;
-    margin-left: 120px;
-    margin-right: 120px;
-    text-align: center;
-    font-weight: bold;
-    background-color: rgb(255, 255, 255, 0.5);
-    cursor: pointer; 
-    border-radius: 40px;
-    padding: 30px 30px;
-  }
 
-  #people-list-film {
-    display: none;
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
-    grid-gap: 20px; /* Espacio entre los elementos */
+  /*#contenedor {
+    background-color: rgba(255, 255, 255, 0.5);
     margin-top: 40px;
     margin-bottom: 60px;
     margin-left: 120px;
     margin-right: 120px;
-    text-align: center;
-    font-weight: bold;
-    background-color: rgb(255, 255, 255, 0.5);
+    display:flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 30px;
     cursor: pointer; 
     border-radius: 40px;
-    padding: 30px 30px;  
-  }
-
-  #films-list-director {
-    display: none;
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
-    grid-gap: 20px; /* Espacio entre los elementos */
-    margin-top: 40px;
-    margin-bottom: 60px;
-    margin-left: 120px;
-    margin-right: 120px;
     text-align: center;
     font-weight: bold;
-    background-color: rgb(255, 255, 255, 0.5);
-    cursor: pointer; 
-    border-radius: 40px;
-    padding: 30px 30px;
-  }
+    justify-content: space-between;
 
+  }*/
 
 img {
     width: 150px;
-    height: 150px;
+    height:fit-content;
     
   }
+  
+/* Estilos para dispositivos con un ancho máximo de 768 píxeles */
+  @media screen and (max-width: 930px) {
+
+    #logo {
+      width: 250px;
+
+    }
+
+    nav {
+      max-width: 600px;
+      font-size: 14px;
+      padding: 2px 0;
+      margin-left: auto;
+      margin-right: auto;
+      word-spacing: -2px;
+
+    }
+
+    #people-list, #films-list, #films-list-year, #people-list-film, #films-list-director {
+      background-color: rgba(255, 255, 255, 0.5);
+      margin-top: 40px;
+      margin-bottom: 60px;
+      margin-left: 60px;
+      margin-right: 60px;
+      display:none;
+      flex-wrap: wrap;
+      gap: 15px;
+      padding: 30px;
+      cursor: pointer; 
+      border-radius: 40px;
+      text-align: center;
+      font-weight: bold;
+      justify-content:center;
+      grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+      font-size: 70%;
+    }
+
+    img {
+      width: 90px;
+      height:fit-content;
+      
+    }
+  
+  }
+
+
+/* Estilos para dispositivos con un ancho máximo de 1199 píxeles y un ancho máximo de 769 píxeles 
+  @media (max-width: 1199px) and (max-width: 769px) {
+
+  }*/
