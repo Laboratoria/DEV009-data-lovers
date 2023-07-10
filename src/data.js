@@ -1,40 +1,37 @@
-// estas funciones son de ejemplo
-export const example = () => {
-  return 'example';
-};
-
-export const anotherExample = () => {
-  return 'OMG';
-};
-
 export const filterData = (data,condition,filterBy) => {
   
-  const result = data.filter (index => index[filterBy].includes(condition) );
-
+  const result = data.filter (index => index[filterBy].includes(condition));
   return result;
 };
 
-
-/*
 export const sortData = (data, sortBy, sortOrder) => {
+  const dataCopy = data.map(x => x);
 
-  switch(sortOrder,sortBy){
-  case 'A-Z':
-    result = data.sort();
-    break;
-  case 'Z-A':
-    result = data.sort();
-    result.reverse();
-    break;
+  switch(sortOrder){
+ 
   case 'ascendente':
-    result = data.sort((a,b) => a-b);
+    dataCopy.sort((a,b) => {
+      if (a[sortBy] > b[sortBy]){
+        return 1;
+      }
+      if (a[sortBy] < b[sortBy]){
+        return -1;
+      }
+      return 0;
+    });
     break;
-  case 'desendente':
-    result = data.sort((a,b) => a-b);
-    result.reverse();
+  case 'descendente':
+    dataCopy.sort((a,b) => {
+      if (a[sortBy] > b[sortBy]){
+        return -1;
+      }
+      if (a[sortBy] < b[sortBy]){
+        return 1;
+      }
+      return 0;
+    });
     break;
   }
 
-  return result;
+  return dataCopy;
 };
-*/
