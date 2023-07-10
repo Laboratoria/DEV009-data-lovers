@@ -56,7 +56,7 @@ document.getElementById('best').addEventListener('click',()=>{
   const objtypes=  promPokemonEveryType(dataPokemon) // objeto
   container.innerHTML = ""
   for (const property in objtypes) {
-    const p = `<p >${property}: ${objtypes[property]}</p>`
+    const p = `<p id="porcent" >${property}: ${objtypes[property]}</p>`
     container.innerHTML += p;
   }
 });
