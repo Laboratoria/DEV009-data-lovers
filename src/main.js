@@ -20,7 +20,12 @@ selectStatus.addEventListener("change", () => {
     const filterStatus = filteredStatus(data.results, optionStatus);
     crearTarjetas(filterStatus);
     const porcentajeStatus = porcentajeCalculo(filterStatus);
-    crearTarjetaPorcentaje(porcentajeStatus);
+    if (optionStatus === "All"){
+        crearTarjetaAll()
+    } else {
+        crearTarjetaPorcentaje(porcentajeStatus);
+    }
+    
 });
 
 //Species
@@ -30,7 +35,12 @@ selectSpecies.addEventListener("change", () => {
     const filterSpecies = filteredSpecies(data.results, optionSpecies);
     crearTarjetas(filterSpecies);
     const porcentajeSpecies = porcentajeCalculo(filterSpecies);
-    crearTarjetaPorcentaje(porcentajeSpecies);
+    if (optionSpecies === "All"){
+        crearTarjetaAll()
+    } else{
+        crearTarjetaPorcentaje(porcentajeSpecies);
+    }
+    
 });
 
 //Gender
@@ -40,7 +50,12 @@ selectGender.addEventListener("change", () => {
     const filterGender = filteredGender(data.results, optionGender);
     crearTarjetas(filterGender);
     const porcentajeGender = porcentajeCalculo(filterGender);
-    crearTarjetaPorcentaje(porcentajeGender);
+    if (optionGender === "All"){
+        crearTarjetaAll()
+    } else{
+        crearTarjetaPorcentaje(porcentajeGender);
+    }
+    
 });
 
 //Order
@@ -133,4 +148,9 @@ function crearTarjetaPorcentaje(porcentaje){
 function crearTarjetaEnBlanco(){
      const selectPorcentajeEnBlanco = document.getElementById("pPorcentaje");
      selectPorcentajeEnBlanco.innerHTML = " ";
+}
+
+function crearTarjetaAll(){
+    const selectPorcentajeAll = document.getElementById("pPorcentaje");
+    selectPorcentajeAll.innerHTML = "Se muestran todos los datos";
 }
