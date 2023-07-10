@@ -1,7 +1,7 @@
 //import { filtername} from './data.js';
 
 import data from './data/pokemon/pokemon.js';
-import { sortNameasc, sortNumYouger, promPokemonEveryType} from './data.js';
+import { sortNameasc, sortNumYouger, promPokemonEveryType, restultName} from './data.js';
 const dataPokemon = data.pokemon;
 const container = document.getElementById("targets");
 
@@ -22,6 +22,7 @@ const display = (pokemones) => {
         <h4> Peso: ${element.size.weight}</h4>
         <p>${element.about}</p>`
     container.appendChild(target)
+    
   });
 }
 display(dataPokemon);
@@ -43,10 +44,9 @@ menu.addEventListener("change", () => {
 
 //filtro de buscar por nombre
 document.getElementById('pokeNames').addEventListener('keyup', () => {
-
   const filterName = document.getElementById('pokeNames').value;
-  const result = dataPokemon.filter(element => (element.name).indexOf(filterName) !== -1);
-  display(result)
+  const results =  restultName(dataPokemon, filterName )
+  display(results)
 });
 
 //FILTRO PORCENTAJE POR TIPO 
@@ -58,5 +58,6 @@ document.getElementById('best').addEventListener('click',()=>{
   for (const property in objtypes) {
     const p = `<p id="porcent" >${property}: ${objtypes[property]} % </p>`
     container.innerHTML += p;
+    
   }
 });

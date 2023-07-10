@@ -42,6 +42,13 @@ export function concatType (data){
   return result 
 }
 
+
+//filtro por nombre
+export function restultName (arr, filterName){
+  const results = arr.filter(element => (element.name).indexOf(filterName) !== -1);
+  return results
+}
+
 // 1.2 ) quitar los tipos repetidos , con eso tendriamos solo los tipos unicos que existen en todos los pokemones 
 
 export function deleteDuplicate (arrDuplicates){
