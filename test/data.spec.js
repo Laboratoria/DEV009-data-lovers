@@ -41,7 +41,4 @@ describe('sortNameasc', () => {
     expect(sortNameasc(Pokemons, "az")).toEqual([{"name": "arbok", "num": "024", "type": ["poison"]}, {"name": "ivysaur", "num": "002", "type": ["grass", "poison"]}, {"name": "squirtle", "num": "007", "type": ["water"]}]);
   });
 
-  it('returns `anotherExample`', () => {
-    expect(typeof sortNameasc).toBe('function');
-  });
-});
+ 

@@ -21,8 +21,7 @@ img {
     height: 40px;
 }
 
-ul {
-    list-style-type: none;
+ul { 
     margin: 0;
     padding: 0;
     display: grid;
@@ -30,12 +29,6 @@ ul {
     gap: 7px;
 
 }
-
-li {
-    display: inline-block;
-
-}
-
 .Genebest {
     display: block;
     padding: 10px 20px;
@@ -61,12 +54,15 @@ main {
 
 #searchs {
     margin: 10px;
-
 }
 
 p.order{
     color: #FFFFFF;
     margin: 10px;
+}
+
+input#pokeNames {
+display:grid;
 }
 
 #orderfor{
@@ -124,18 +120,10 @@ article.cards {
 
 }
 
-h2 {
+h2,h4 {
     margin: 10px;
 }
 
-h4 {
-    margin: 10px;
-}
-
-input.pokeNames{
-
-
-}
 p#porcent {
-    margin: solid 2px #fff;
+    border: solid 2px #fff;
 }
