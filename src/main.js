@@ -3,7 +3,9 @@ const navMenu = document.querySelector(".nav-menu");
 navToggle.addEventListener("click", () => {
   navMenu.classList.toggle("nav-menu_visible");
 });
+
 // Comandos para hacer la función de desaparecer la página principal y aparecer la página dos.
+
 const botonAbajo = document.getElementById("botonAbajo");
 botonAbajo.addEventListener("click", Continuar);
 
@@ -19,11 +21,11 @@ function Subir() {
   document.getElementById("section2").style.display = "none";
   document.getElementById("section1").style.display = "block";
 }
+
 import championsData from "./data/lol/lol.js";
+import { example } from "./data.js";
 
-// Puedes utilizar las funciones y elementos importados aquí
-
-let champions = Object.values(championsData.data); //Object.values() es una funcion q se utiliza para extraer los valores de championDat.data
+let champions = Object.values(championsData.data);
 document.addEventListener("DOMContentLoaded", () => {
   todos();
 });
@@ -79,10 +81,8 @@ asesinoLink.addEventListener("click", function (event) {
 const tanqueLink = document.getElementById("tanque-link");
 tanqueLink.addEventListener("click", function (event) {
   event.preventDefault();
-  champions = Object.values(championsData.data).filter(
-    (
-      champion //Object.values() es una funcion q se utiliza para extraer los valores de championDat.data
-    ) => champion.tags.includes("Tank")
+  champions = Object.values(championsData.data).filter((champion) =>
+    champion.tags.includes("Tank")
   );
   championContainer.innerHTML = "";
   todos();
@@ -108,27 +108,6 @@ todosLink.addEventListener("click", (event) => {
   todos();
 });
 
-const championContainer = document.getElementById("container_img");
-function todos() {
-  championContainer.innerHTML = "";
-  for (const championKey in champions) {
-    const champion = champions[championKey];
-    const championImageURL = champion.img;
-    const championElement = document.createElement("div");
-    championElement.classList.add("champion-container");
-    const imgElement = document.createElement("img");
-    imgElement.src = championImageURL;
-    imgElement.alt = championKey;
-    imgElement.classList.add("champion-image");
-    const nameElement = document.createElement("p");
-    nameElement.classList.add("champion-name");
-    nameElement.textContent = champion.name;
-    championElement.appendChild(imgElement);
-    championElement.appendChild(nameElement);
-    championContainer.appendChild(championElement);
-  }
-}
-
 //Función Ordenar A - Z
 const ordenarAZLink = document.getElementById("a-z-ordenarlink");
 ordenarAZLink.addEventListener("click", ordenarAZChampions);
@@ -141,6 +120,7 @@ function ordenarAZChampions() {
   championContainer.innerHTML = "";
   todos();
 }
+
 //Función Ordenar Z - A
 const ordenarZALink = document.getElementById("z-a-ordenarlink");
 ordenarZALink.addEventListener("click", ordenarZAChampions);
@@ -152,4 +132,28 @@ function ordenarZAChampions() {
   });
   championContainer.innerHTML = "";
   todos();
+}
+
+const championContainer = document.getElementById("container_img");
+function todos() {
+  championContainer.innerHTML = "";
+  for (const championKey in champions) {
+    const champion = champions[championKey];
+    const championImageURL = champion.img;
+    const championElement = document.createElement("div");
+    championElement.classList.add("champion-container");
+
+    const imgElement = document.createElement("img");
+    imgElement.src = championImageURL;
+    imgElement.alt = championKey;
+    imgElement.classList.add("champion-image");
+
+    const nameElement = document.createElement("p");
+    nameElement.classList.add("champion-name");
+    nameElement.textContent = champion.name;
+
+    championElement.appendChild(imgElement);
+    championElement.appendChild(nameElement);
+    championContainer.appendChild(championElement);
+  }
 }
