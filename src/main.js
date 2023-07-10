@@ -1,16 +1,12 @@
 //import { filtername} from './data.js';
 
 import data from './data/pokemon/pokemon.js';
-import { sortNameDes, sortNameasc, sortNumYouger, sortNumLower, promPokemonEveryType} from './data.js';
+import { sortNameasc, sortNumYouger, promPokemonEveryType} from './data.js';
 const dataPokemon = data.pokemon;
 const container = document.getElementById("targets");
 
-
-
 //console.log(promPokemonEveryType(dataPokemon))
 //mostrar en el dom todos los pokemones
-
-
 
 const display = (pokemones) => {
   container.innerHTML = ""
@@ -36,18 +32,13 @@ const menu = document.getElementById("menu");
 
 menu.addEventListener("change", () => {
   const element = menu.options[menu.selectedIndex].value
-  if (element === "az") {
-    display(sortNameasc(dataPokemon))
+  if (element === "az" || element === "za") {
+    display(sortNameasc(dataPokemon,element))
   }
-  else if (element === "za") {
-    display(sortNameDes(dataPokemon))
+  else if (element === "numberMayor" || element === "numberMenor") {
+    display(sortNumYouger(dataPokemon,element))
   }
-  else if (element === "numberMayor") {
-    display(sortNumYouger(dataPokemon))
-  }
-  else if (element === "numberMenor") {
-    display(sortNumLower(dataPokemon))
-  } 
+
 });
 
 //filtro de buscar por nombre
@@ -58,20 +49,10 @@ document.getElementById('pokeNames').addEventListener('keyup', () => {
   display(result)
 });
 
-
-
-
 //FILTRO PORCENTAJE POR TIPO 
 document.getElementById('best').addEventListener('click',()=>{
-    document.getElementById('best').value;
-    document.getElementById('best').value;
-    console.log(
-       
-    );
   document.getElementById('best').value;
-    console.log(
-       
-    );
+ 
   const objtypes=  promPokemonEveryType(dataPokemon) // objeto
   container.innerHTML = ""
   for (const property in objtypes) {

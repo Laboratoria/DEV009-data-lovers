@@ -1,57 +1,31 @@
 //manera ascedente
-export const sortNameasc = (arr) => {
+export const sortNameasc = (arr,option) => {
   arr.sort((a, b) => {
-    if (a.name < b.name) {
+    if (a.name < b.name && option === "az") {
       return -1;
-    }
-    if (a.name > b.name) {
+    } 
+    if (a.name > b.name && option === "za") {
       return 1;
     }
     return 0;
   });
-
-  return arr;
-};
-//manera descendente
-export const sortNameDes = (arr) => {
-  arr.sort((a, b) => {
-    if (a.name > b.name) {
-      return -1;
-    }
-    if (a.name < b.name) {
-      return 1;
-    }
-    return 0;
-  });
+  console.log(arr)
   return arr;
 };
 //de mayor a menor
-export const sortNumYouger = (arr) => {
+export const sortNumYouger = (arr,option) => {
   arr.sort((a, b) => {
-    if (a.num > b.num) {
+    if (a.num > b.num && option === "numberMayor" ) {
       return -1;
     }
-    if (a.num < b.num) {
+    if (a.num < b.num && option === "numberMenor") {
       return 1;
     }
     return 0;
   });
+  console.log(arr)
   return arr;
 }
-//de menor a mayor
-export const sortNumLower = (arr) => {
-  arr.sort((a, b) => {
-    if (a.num < b.num) {
-      return -1;
-    }
-    if (a.num > b.num) {
-      return 1;
-    }
-    return 0;
-  });
-
-  return arr;
-};
 
 /* -----> calculo agregado de tipos, average= promedio <------- */
 
@@ -71,7 +45,7 @@ export function concatType (data){
 // 1.2 ) quitar los tipos repetidos , con eso tendriamos solo los tipos unicos que existen en todos los pokemones 
 
 export function deleteDuplicate (arrDuplicates){
-  return new Set([...arrDuplicates])
+  return new([...arrDuplicates])
 }
 
 
