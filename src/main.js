@@ -1,16 +1,12 @@
 //import { filtername} from './data.js';
 
 import data from './data/pokemon/pokemon.js';
-import { sortNameDes, sortNameasc, sortNumYouger, sortNumLower, promPokemonEveryType} from './data.js';
+import { sortNameasc, sortNumYouger, promPokemonEveryType, restultName} from './data.js';
 const dataPokemon = data.pokemon;
 const container = document.getElementById("targets");
 
-
-
 //console.log(promPokemonEveryType(dataPokemon))
 //mostrar en el dom todos los pokemones
-
-
 
 const display = (pokemones) => {
   container.innerHTML = ""
@@ -37,41 +33,31 @@ const menu = document.getElementById("menu");
 
 menu.addEventListener("change", () => {
   const element = menu.options[menu.selectedIndex].value
-  if (element === "az") {
-    display(sortNameasc(dataPokemon))
+  if (element === "az" || element === "za") {
+    display(sortNameasc(dataPokemon,element))
   }
-  else if (element === "za") {
-    display(sortNameDes(dataPokemon))
+  else if (element === "numberMayor" || element === "numberMenor") {
+    display(sortNumYouger(dataPokemon,element))
   }
-  else if (element === "numberMayor") {
-    display(sortNumYouger(dataPokemon))
-  }
-  else if (element === "numberMenor") {
-    display(sortNumLower(dataPokemon))
-  } 
+
 });
 
 //filtro de buscar por nombre
 document.getElementById('pokeNames').addEventListener('keyup', () => {
-
   const filterName = document.getElementById('pokeNames').value;
-  const result = dataPokemon.filter(element => (element.name).indexOf(filterName) !== -1);
-  display(result)
+  const results =  restultName(dataPokemon, filterName )
+  display(results)
 });
-
-
-
 
 //FILTRO PORCENTAJE POR TIPO 
 document.getElementById('best').addEventListener('click',()=>{
-    document.getElementById('best').value;
-    document.getElementById('best').value;
   document.getElementById('best').value;
-  
+ 
   const objtypes=  promPokemonEveryType(dataPokemon) // objeto
   container.innerHTML = ""
   for (const property in objtypes) {
-    const p = `<p>${property}: ${objtypes[property]}</p>`
+    const p = `<p id="porcent" >${property}: ${objtypes[property]}</p>`
     container.innerHTML += p;
+    
   }
 });
