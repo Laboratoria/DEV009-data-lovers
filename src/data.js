@@ -88,7 +88,7 @@ export function promPokemonEveryType (data){
 
     data.forEach(pokemon =>{
       if( (pokemon.type).includes(typePokemon) ){
-        count = count + 1;
+            count = count + 1;
       }
     })
     result[typePokemon] =   ((count * 100) / pokemonTypesDuplicates.length ).toFixed(2)

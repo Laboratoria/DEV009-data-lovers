@@ -26,6 +26,7 @@ const display = (pokemones) => {
         <h4> Peso: ${element.size.weight}</h4>
         <p>${element.about}</p>`
     container.appendChild(target)
+    
   });
 }
 display(dataPokemon);
@@ -65,17 +66,12 @@ document.getElementById('pokeNames').addEventListener('keyup', () => {
 document.getElementById('best').addEventListener('click',()=>{
     document.getElementById('best').value;
     document.getElementById('best').value;
-    console.log(
-       
-    );
   document.getElementById('best').value;
-    console.log(
-       
-    );
+  
   const objtypes=  promPokemonEveryType(dataPokemon) // objeto
   container.innerHTML = ""
   for (const property in objtypes) {
-    const p = `<p >${property}: ${objtypes[property]}</p>`
+    const p = `<p>${property}: ${objtypes[property]}</p>`
     container.innerHTML += p;
   }
 });

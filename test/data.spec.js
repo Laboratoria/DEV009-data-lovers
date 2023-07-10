@@ -35,7 +35,7 @@ const firstPokemon = {
     "type": [
       "poison"
     ]
-    };
+    }
 
 
 
@@ -53,8 +53,8 @@ describe('vamos hacer las pruebas de la funcion obtener orden A-Z', () => {
 
 
 describe('sortNameasc', () => {
-  it('deberia retornar los nombres de los pokemones arreglados', () => {
-    expect(typeof anotherExample).toBe('function');
+  it('deberia retornar a', () => {
+    expect(typeof anotherExample).toEqual('function');
   });
 
   it('returns `anotherExample`', () => {
