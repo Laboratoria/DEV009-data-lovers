@@ -148,7 +148,7 @@ display:none;
 
 
 /*mobile*/
-@media (max-width:320px)  {
+@media (max-width:390px)  {
     .menu-icon {
         width: 40px;
         height: 40px;
@@ -165,5 +165,30 @@ display:none;
     .menu-icon img {
         width: 18px;
     }
+
+    .filters {
+        display: none;
+    }
+
+    .data-peliculas-contenedor {
+        display:grid;
+        grid-template-columns: auto ;
+        grid-gap: 20px;
+        padding: 20px;
+        background-color: var(--container-color);
+        border-radius: 18px;
+        border-style: outset;
+        max-width: 850px;
+        width: 100%;
+    }
+
+    .presentation img {
+        margin-right: 10px;
+        max-width: 100%; /* Ancho deseado */
+        height: auto; /* Altura automática proporcional */
+        flex-direction: column;
+    }
+
+
     
 }
