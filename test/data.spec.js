@@ -1,63 +1,47 @@
-import { sortNameasc, sortNameDes, sortNumYouger, sortNumLower, promPokemonEveryType} from '../src/data.js';
+import { sortNameasc /*sortNameDes, sortNumYouger, sortNumLower, promPokemonEveryType*/ } from '../src/data.js';
 
-const firstPokemon = {
+const Pokemons = [{
   "num": "002",
   "name": "ivysaur",
-  "generation": {
-    "num": "generation i",
-    "name": "kanto"
-  },
-    "type":[ 
-      "grass",
-      "poison"
-    ]
-  };
-
-  const secondPokemon = {
-    "num": "007",
-    "name": "squirtle",
-    "generation": {
-      "num": "generation i",
-      "name": "kanto"
-    },
-    "type": [
-      "water"
-    ]
-  };
-
-  const thridPokemon = {
-    "num": "024",
-    "name": "arbok",
-    "generation": {
-      "num": "generation i",
-      "name": "kanto"
-    },
-    "type": [
-      "poison"
-    ]
-    };
+  "type": [
+    "grass",
+    "poison"
+  ]
+},
+{
+  "num": "007",
+  "name": "squirtle",
+  "type": [
+    "water"
+  ]
+},
+{
+  "num": "024",
+  "name": "arbok",
+  "type": [
+    "poison"
+  ]
+}
+];
 
 
+//describe('vamos hacer las pruebas de la funcion obtener orden A-Z.', () => {
+//it('la funcion debe retornar un a', () => {
+// expect(typeof example).toEqual('function');
+//});
 
-
-
-describe('vamos hacer las pruebas de la funcion obtener orden A-Z', () => {
-  it('la funcion debe retornar un a', () => {
-    expect(typeof example).toBe('function');
-  });
-
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });
-});
+//it('returns `example`', () => {
+//expect(example()).toBe('example');
+//});
+//});
 
 
 describe('sortNameasc', () => {
-  it('deberia retornar los nombres de los pokemones arreglados', () => {
-    expect(typeof anotherExample).toBe('function');
+  it('deberia retornar los nombres de los pokemones ordenados de A-Z ' , () => {
+    expect(sortNameasc(Pokemons, "az")).toEqual([{"name": "arbok", "num": "024", "type": ["poison"]}, {"name": "ivysaur", "num": "002", "type": ["grass", "poison"]}, {"name": "squirtle", "num": "007", "type": ["water"]}]);
   });
 
   it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
+    expect(typeof sortNameasc).toBe('function');
   });
 });
