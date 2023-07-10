@@ -23,9 +23,17 @@ function Subir() {
 }
 
 import championsData from "./data/lol/lol.js";
-import { example } from "./data.js";
 
-let champions = Object.values(championsData.data);
+let champions = Object.values(championsData.data); //Object.values() es una funcion q se utiliza para extraer los valores de championDat.data
+const tanqueLink = document.getElementById("tanque-link");
+tanqueLink.addEventListener("click", function (event) {
+  event.preventDefault();
+  champions = Object.values(championsData.data).filter((champion) =>
+    champion.tags.includes("Tank")
+  );
+  championContainer.innerHTML = "";
+  todos();
+});
 document.addEventListener("DOMContentLoaded", () => {
   todos();
 });
@@ -73,16 +81,6 @@ asesinoLink.addEventListener("click", function (event) {
     (
       champion //Object.values() es una funcion q se utiliza para extraer los valores de championDat.data
     ) => champion.tags.includes("Assassin")
-  );
-  championContainer.innerHTML = "";
-  todos();
-});
-
-const tanqueLink = document.getElementById("tanque-link");
-tanqueLink.addEventListener("click", function (event) {
-  event.preventDefault();
-  champions = Object.values(championsData.data).filter((champion) =>
-    champion.tags.includes("Tank")
   );
   championContainer.innerHTML = "";
   todos();
@@ -137,7 +135,7 @@ function ordenarZAChampions() {
 const championContainer = document.getElementById("container_img");
 function todos() {
   championContainer.innerHTML = "";
-  for (const championKey in champions) {
+  for (let championKey in champions) {
     const champion = champions[championKey];
     const championImageURL = champion.img;
     const championElement = document.createElement("div");
