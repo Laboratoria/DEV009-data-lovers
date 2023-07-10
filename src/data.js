@@ -61,17 +61,17 @@ export const sortNumLower = (arr) => {
 //1.1 ) unir todos los tipos de todos los pokemones 
 
 export function concatType (data){
-  let result = []
-data.forEach(element => {
-  result.push(...element.type)
-});
-return result 
+  const result = []
+  data.forEach(element => {
+    result.push(...element.type)
+  });
+  return result 
 }
 
 // 1.2 ) quitar los tipos repetidos , con eso tendriamos solo los tipos unicos que existen en todos los pokemones 
 
 export function deleteDuplicate (arrDuplicates){
- return new Set ([...arrDuplicates])
+  return new Set([...arrDuplicates])
 }
 
 
@@ -81,14 +81,14 @@ export function promPokemonEveryType (data){
 
   const onlyUniqueTypes = deleteDuplicate(pokemonTypesDuplicates)
 
-  let result = {}
+  const result = {}
 
   onlyUniqueTypes.forEach(typePokemon =>{
-     let count = 0;
+    let count = 0;
 
     data.forEach(pokemon =>{
       if( (pokemon.type).includes(typePokemon) ){
-            count = count + 1;
+        count = count + 1;
       }
     })
     result[typePokemon] =   ((count * 100) / pokemonTypesDuplicates.length ).toFixed(2)
