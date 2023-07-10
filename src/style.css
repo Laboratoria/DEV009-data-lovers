@@ -64,9 +64,14 @@ main {
 
 }
 
-.order{
+p.order{
     color: #FFFFFF;
+    margin: 10px;
+}
 
+#orderfor{
+    margin: 0 0 10px 20px;
+    color: #ffffff;
 }
 
 footer {
@@ -108,8 +113,7 @@ article img {
     margin-left: 0;
     margin-right: 0;
     padding: 10px;
-    background: #9ce6b0;
-
+    background-image: radial-gradient(circle at 50.28% 51.61%, #f27cff 0, #a261ff 25%, #4c42d4 50%, #002495 75%, #00065e 100%);
 }
 
 article.cards {
@@ -129,6 +133,3 @@ h4 {
 
 }
 
-.order {
-    margin: 10px;
-}
