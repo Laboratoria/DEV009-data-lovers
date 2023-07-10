@@ -33,21 +33,21 @@ Los lenguajes utilizados fueron HTML semántico, CSS y JavaScript Vanilla. Se cr
 ## 4. Historias de Usuario
 
 #### Historia de usabilidad 1
-[user story 1](src/img/UserStory1.jpg)
+![user story 1](src/img/UserStory1.jpg)
 #### Historia de usabilidad 2
-[user story 2](src/img/UserStory2.jpg)
+![user story 2](src/img/UserStory2.jpg)
 #### Historia de usabilidad 3
-[user story 3](src/img/UserStory3.jpg)
+![user story 3](src/img/UserStory3.jpg)
 #### Historia de usabilidad 4
-[user story 4](src/img/UserStory4.jpg)
+![user story 4](src/img/UserStory4.jpg)
 ## 5. Prototipos
 Trabajamos en la elaboración de un prototipo a papel , luego uno de alta fidelidad el cual fue evaluado por nuestras compañeras de las cuañes recibimos feedback para posteriormente y después d eaplicar las sugerencias , volver a solicitarles ayuda en el test de usabilidad.
 
 #### Prototipo de baja fidelidad
-[user story 1](src/img/prototipopapel.jpg)
+![user story 1](src/img/prototipopapel.jpg)
 
 #### Prototipos de alta fidelidad
-[prototipo alta 1](src/img/prototipoaltaversion1.jpg)
+![prototipo alta 1](src/img/prototipoaltaversion1.jpg)
 
 Hicimos test de usabilidad recibiendo como feedback los siguiente.
 Usuario 1 : No encontro el boton de ordenar, deberia haber un boton para resetear la busqueda, no deberian ocultarse los filtros, si habia posibilidad de que viera un pop up al darle click a una pelicula o a la imagen o que diera mas informacion(hacker edition),
@@ -61,12 +61,12 @@ Se llegó a las siguientes conclusiones
 3.Considerar hacer una lista desplegable para que solo elijan 1 filtro.
 4.El checkbox para el hacker edition si había tiempo.
 Por lo que el prototipo de alta fidelidad se modifico de la siguiente manera.
-[prototitpo alta 2](src/img/prototipoaltav2.jpg)
+![prototitpo alta 2](src/img/prototipoaltav2.jpg)
 
 Se realizo también la versión mobile, considerando una lista desplegable donde se puedan seleccionar los filtros y el orderby.
-[mobile 1](src/img/versionmobile.jpg)
+![mobile 1](src/img/versionmobile.jpg)
 
-[mobile 2](src/img/mobilev2.png)
+![mobile 2](src/img/mobilev2.png)
 
 Usamos para el diseño de ambos protipos[Figma](https://www.figma.com/) 
 
@@ -81,5 +81,5 @@ Las _pruebas unitarias_ tienen una cobertura del 70% de _statements_
 (_ramas_) del archivo `src/data.js` que contiene nuestras funciones.
 
 ## 6. Resultado
-[result 1](src/img/Result1.jpg)
-[result 2](src/img/Result2.jpg)
+![result 1](src/img/Result1.jpg)
+![result 2](src/img/Result2.jpg)
