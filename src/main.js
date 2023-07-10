@@ -58,6 +58,7 @@ document.getElementById('best').addEventListener('click',()=>{
   for (const property in objtypes) {
     const p = `<p id="porcent" >${property}: ${objtypes[property]}</p>`
     container.innerHTML += p;
-    
+
   }
 });
+//hola aivy
