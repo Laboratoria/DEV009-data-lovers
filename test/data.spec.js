@@ -1,7 +1,29 @@
-import { example, anotherExample } from '../src/data.js';
+import { busqueda } from '../src/data.js';
 
 
-describe('example', () => {
+describe('busqueda', () => {
+  it('is a function', () => {
+    expect(typeof busqueda).toBe('function');
+  });
+})
+/* it('returns `Paises`', () => {
+    const searchCountry = country.name.common
+    expect(Colombia(searchCountry)).toBe(1);
+  });
+*/
+
+ 
+
+
+
+
+
+/*it('returns `example`', () => {
+    expect(example()).toBe('example');
+  });
+});*/
+
+/*describe('example', () => {
   it('is a function', () => {
     expect(typeof example).toBe('function');
   });
@@ -20,4 +42,4 @@ describe('anotherExample', () => {
   it('returns `anotherExample`', () => {
     expect(anotherExample()).toBe('OMG');
   });
-});
+});*/
