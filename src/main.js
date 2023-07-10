@@ -111,6 +111,9 @@ orderSelect.addEventListener('change', handleSelection);
 filterSelect.addEventListener('change', handleSelection);
 yearFilterSelect.addEventListener('change', handleSelection);
 
+//Responsive
+const menuIcon = document.querySelector('.menu-icon');
+
 
 
 
