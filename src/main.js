@@ -1,4 +1,4 @@
-import {filteredStatus, filteredSpecies, filteredGender, filteredSearch} from './data.js'; //importar funciones de filtrado de data.js
+import {filteredStatus, filteredSpecies, filteredGender, filteredSearch, filteredOrder, porcentajeCalculo } from './data.js'; //importar funciones de filtrado de data.js
 // import data from './data/lol/lol.js';
 import data from './data/rickandmorty/rickandmorty.js';
 // import data from './data/rickandmorty/rickandmorty.js';
@@ -19,6 +19,8 @@ selectStatus.addEventListener("change", () => {
     const optionStatus = selectStatus.value;
     const filterStatus = filteredStatus(data.results, optionStatus);
     crearTarjetas(filterStatus);
+    const porcentajeStatus = porcentajeCalculo(filterStatus);
+    crearTarjetaPorcentaje(porcentajeStatus);
 });
 
 //Species
@@ -27,6 +29,8 @@ selectSpecies.addEventListener("change", () => {
     const optionSpecies = selectSpecies.value;
     const filterSpecies = filteredSpecies(data.results, optionSpecies);
     crearTarjetas(filterSpecies);
+    const porcentajeSpecies = porcentajeCalculo(filterSpecies);
+    crearTarjetaPorcentaje(porcentajeSpecies);
 });
 
 //Gender
@@ -35,27 +39,31 @@ selectGender.addEventListener("change", () => {
     const optionGender = selectGender.value;
     const filterGender = filteredGender(data.results, optionGender);
     crearTarjetas(filterGender);
+    const porcentajeGender = porcentajeCalculo(filterGender);
+    crearTarjetaPorcentaje(porcentajeGender);
 });
 
 //Order
 const selectOrder= document.getElementById("order");
 selectOrder.addEventListener("change", () => {
     const optionOrder = selectOrder.value;
-    let sorted;
-    if (optionOrder === "AZ"){
-        sorted = data.results.sort((a, b) => a.name.localeCompare(b.name));
+    if (optionOrder === "All"){
+        crearTarjetas(data.results);
     } else {
-        sorted = data.results.sort((a, b) => b.name.localeCompare(a.name));
+        const filterOrder = filteredOrder(data.results, optionOrder);
+        crearTarjetas(filterOrder);
     }
-    crearTarjetas(sorted)
+    crearTarjetaEnBlanco();
+  
 }); 
 
 //Search
-const opcionSearch= document.getElementById("search")
-opcionSearch.addEventListener("keyup", () => {
+const optionSearch= document.getElementById("search")
+optionSearch.addEventListener("keyup", () => {
     const searchInput = optionSearch.value;
     const searchOutput = filteredSearch(data.results, searchInput);
     crearTarjetas (searchOutput);
+    crearTarjetaEnBlanco();
 });
 
 
@@ -78,25 +86,25 @@ function crearTarjetas(arregloTarjetas){
 
         //agregar nombre - crear elementos y establecer contenido
         const nameElement = document.createElement("h3");
-        nameElement.textContent = tarjeta.name;
+        nameElement.textContent = "Name: " + tarjeta.name ;
         //agregar status
         const statusElement = document.createElement("p");
-        statusElement.textContent = tarjeta.status;
+        statusElement.textContent = "Status: " + tarjeta.status;
         //agregar species
         const statusSpecies = document.createElement("p");
-        statusSpecies.textContent = tarjeta.species;
+        statusSpecies.textContent = "Species: " + tarjeta.species;
         //agregar type 
         const statusType = document.createElement("p");
-        statusType.textContent = tarjeta.type;
+        statusType.textContent = "Type: " + tarjeta.type;
         //agregar gender 
         const statusGender = document.createElement("p");
-        statusGender.textContent = tarjeta.gender;
+        statusGender.textContent = "Gender: " + tarjeta.gender;
         //agregar origin.name 
         const statusOriginName = document.createElement("p");
-        statusOriginName.textContent = tarjeta.origin.name;
+        statusOriginName.textContent = "Origin: " + tarjeta.origin.name;
         //agregar location.name 
         const statusLocationName = document.createElement("p");
-        statusLocationName.textContent = tarjeta.location.name;
+        statusLocationName.textContent = "Location: " + tarjeta.location.name;
         //agregar imagen 
         const statusImagen = document.createElement("img");
         statusImagen.src = tarjeta.image;
@@ -116,4 +124,13 @@ function crearTarjetas(arregloTarjetas){
         creaLi.appendChild(cardContent);    
         tarjetas.appendChild(creaLi); //agregar el nodo Li al div padre (ul)
 };
+}
+function crearTarjetaPorcentaje(porcentaje){
+     const selectPorcentaje = document.getElementById("pPorcentaje");
+     selectPorcentaje.innerHTML = "Esta categoria contiene: " + porcentaje + "% de los personajes totales";
+};
+
+function crearTarjetaEnBlanco(){
+     const selectPorcentajeEnBlanco = document.getElementById("pPorcentaje");
+     selectPorcentajeEnBlanco.innerHTML = " ";
 }
