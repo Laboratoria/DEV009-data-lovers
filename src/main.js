@@ -1,6 +1,6 @@
-import { filterData } from './data.js';
+import { filterData,sortData} from './data.js';
 import data from './data/pokemon/pokemon.js';
-
+const pokemonList = data.pokemon;
 const seccionShowAll = document.getElementById('showAll');
 
 const display = (pokemonData)=>{
@@ -21,22 +21,6 @@ const display = (pokemonData)=>{
   seccionShowAll.appendChild(cardPokemon);
 
 };
-/*
-const filterData1 = (data,condition,filterBy) => {
-  let result = [];
-  if (filterBy.length ===1){
-    result = result.concat(data.filter (index => index[filterBy[0]] === condition));
-
-  }else{
-    result = result.concat(data.filter (index => index[filterBy[0]][filterBy[1]] === condition));
-
-  }
-  return result;
-};
-
-*/
-
-const pokemonList = data.pokemon;
 /*const pokemonFirstG = filterData(pokemonList,'generation i',['generation','num']);
 const pokemonSecdG = filterData(pokemonList,'generation ii',['generation','num']);
 const pokemonNormal = filterData(pokemonList,"normal",['pokemon-rarity']);
@@ -44,9 +28,12 @@ const pokemonLegendary = filterData(pokemonList,"legendary",['pokemon-rarity']);
 const pokemonMythic = filterData(pokemonList,"mythic",['pokemon-rarity']);
 */
 const pokemonFuego = filterData(pokemonList,'fire','type');
+const pokemonMythic = filterData(pokemonList,'mythic','pokemon-rarity');
+const ordenarascendente = sortData(pokemonFuego,'pokemon-rarity','ascendente');
 
-pokemonFuego.forEach(function(pokemon){
+ordenarascendente.forEach(function(pokemon){
 
   display(pokemon);
 });
-console.log('pokemon de fuego :',pokemonFuego);
+console.log('pokemon mythic :',pokemonMythic);
+
