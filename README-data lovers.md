@@ -54,7 +54,7 @@ Usuario 1 : No encontro el boton de ordenar, deberia haber un boton para resetea
 
 Uusario 2: No encontró botón de ordenado, demoró 1 minuto , hacerlo más vistoso o ponerlo del lado de los filtros, botón de reset ,
 
-Se llegó a las siguientes conclusiones
+Se llegó a las siguientes conclusiones:
 
 1.Hacer ORDER vistoso o de lado izquierdo.
 2.Boton de limpiar información (filtros y de ordenado).
