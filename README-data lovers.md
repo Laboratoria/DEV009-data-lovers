@@ -13,7 +13,7 @@
 
 ## 1. Preámbulo
 
-El objetivo del proyecto fue crear una pagina web para visualizar un conjunto de datos segun la necesidad del usuario. En esta pagina se puede visualizar, filtrar, ordenar y la data de las peliculas de Studio Ghibli asi como visualizar un calculo agregado para mostrar información aun mas relevante para los usuarios.
+El objetivo del proyecto fue crear una pagina web para visualizar un conjunto de datos segun la necesidad del usuario. En esta pagina se puede visualizar, filtrar, ordenar y tener información de conteo y porcentaje sobre la data de las peliculas de Studio Ghibli para mostrar información aun mas relevante para los usuarios.
 
 ## 2. Resumen del proyecto
 
