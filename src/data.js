@@ -1,10 +1,10 @@
 //manera ascedente
 export const sortNameasc = (arr,option) => {
   arr.sort((a, b) => {
-    if (a.name < b.name && option === "az") {
+    if (a.name < b.name || option === "za") {
       return -1;
     } 
-    if (a.name > b.name && option === "za") {
+    if (a.name > b.name || option === "az") {
       return 1;
     }
     return 0;
@@ -15,10 +15,10 @@ export const sortNameasc = (arr,option) => {
 //de mayor a menor
 export const sortNumYouger = (arr,option) => {
   arr.sort((a, b) => {
-    if (a.num > b.num && option === "numberMayor" ) {
+    if (a.num > b.num || option === "numberMenor" ) {
       return -1;
     }
-    if (a.num < b.num && option === "numberMenor") {
+    if (a.num < b.num || option === "numberMayor") {
       return 1;
     }
     return 0;
@@ -45,9 +45,8 @@ export function concatType (data){
 // 1.2 ) quitar los tipos repetidos , con eso tendriamos solo los tipos unicos que existen en todos los pokemones 
 
 export function deleteDuplicate (arrDuplicates){
-  return new([...arrDuplicates])
+  return new Set([...arrDuplicates])
 }
-
 
 // 2)contar cuantos pokemones hay por cada tipo de pokemon y calcular su promedio 
 export function promPokemonEveryType (data){
