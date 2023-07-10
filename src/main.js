@@ -113,7 +113,11 @@ yearFilterSelect.addEventListener('change', handleSelection);
 
 //Responsive
 const menuIcon = document.querySelector('.menu-icon');
+const filters = document.querySelector('.filters');
 
+menuIcon.addEventListener('click', () => {
+  filters.classList.toggle('open');
+});
 
 
 
