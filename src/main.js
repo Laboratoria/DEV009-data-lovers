@@ -10,7 +10,7 @@ const films = data.films.map((film) => ({
   director: normalizeString(film.director),
   // Normaliza otros valores si es necesario
 }));
-console.log(films);
+//console.log(films);
 
 //Se manda llamar el div en donde se van a crear las tarjetas
 const dataContainer = document.getElementById('dataContainer');
