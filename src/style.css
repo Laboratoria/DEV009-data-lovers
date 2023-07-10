@@ -5,7 +5,7 @@
 }
 body {
   font-family: sans-serif;
-  background-color: #2a4883;
+  background-image: linear-gradient(to right, #243949 0%, #40627e 100%);
 }
 /**********************************CAMBIOS EN EL HEADER***************************************/
 .header{
@@ -31,7 +31,6 @@ body {
 }
 #container_pharse{
   display: flex;
-  justify-content: space-between;/*crea un espacio uniforme entre las img dentro del contenedor, haciendo que se acomoden*/
   flex-direction: column;/*hace que se valla uno abajo del otro y es que no caben en la primera fila*/
   align-items: center;/*sirve para centrar los items*/
   height: 70%;
@@ -76,7 +75,7 @@ body {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  background-color: #3a3a68;
+  background-image: linear-gradient(-225deg, #343c50 0%, #4f617e 50%, #35484d 100%);
   height: 60px;
   position: fixed;
   width: 100%;
@@ -99,9 +98,6 @@ body {
   -webkit-text-stroke: 0.5px #000;
 }
 .nav-menu {
-  flex-direction: column;
-  align-items: center;
-  margin-right: 20px;
   list-style: none;
   margin: 0;
   background-color: #28283d;
@@ -110,25 +106,25 @@ body {
   top: 60px;
   width: 100%;
   padding: 20px 0;
-  height: calc(100%-60px);
-  overflow-y: auto;
   left: 100%;
   transition: left 0.3s;
+  text-align: center;
+  
 }
 .nav-menu-item {
-  font-size: 12px;
+  font-size: 15px;
   margin:0 10px;
   line-height: 70px;
   text-transform: uppercase;
-  width: max-content;
 }
 .nav-menu-link {
   padding: 8px 12px;
   border-radius: 3px;
 }
 .nav-menu-link:hover {
-  background:none;
+  background:#715fb3;
   color: black;
+
 }
 .nav-toggle {
   color: white;
@@ -157,7 +153,7 @@ body {
   display: block;
   width: 100px;
   height: 35px;
-  background-color: #383347;
+  background-image: linear-gradient(-225deg, #323b53 0%, #2c4266 50%, #35484d 100%);
   font-size: 15px;
   text-align: center;
   padding: 10px;
@@ -180,7 +176,7 @@ width: 100px;
 }
 
 .ul-roles li:hover{
-background-color: #554C88;
+  background-image: linear-gradient(-225deg, #2b3144 0%, #283750 50%, #273538 100%);
 }
 
 .ul-roles li a {
@@ -196,7 +192,7 @@ display: block;
     display: block;
     width: 100px;
     height: 35px;
-    background-color: #383347;
+    background-image: linear-gradient(-225deg, #323b53 0%, #2c4266 50%, #35484d 100%);
     font-size: 15px;
     text-align: center;
     padding: 10px;
@@ -220,7 +216,7 @@ display: block;
 }
 
 .ul-ordenar li:hover{
-  background-color: #554C88;
+  background-image: linear-gradient(-225deg, #2b3144 0%, #283750 50%, #273538 100%);
 }
 
 .ul-ordenar li a {
@@ -318,10 +314,57 @@ display: block;
   .body {
     padding: 90px 20px 0;
   }
-  .header {
-    background: url(fondo-pag1.jpg);
-  }
-  
+
+/**********************************CAMBIOS EN EL HEADER***************************************/
+.header{
+  background: url(fondo-pag1.jpg);
+}
+#container_title{
+  font-size: 40px;
+}
+#container_pharse{
+  display: flex;
+  flex-direction: column;/*hace que se valla uno abajo del otro y es que no caben en la primera fila*/
+  align-items: center;/*sirve para centrar los items*/
+  height: 70%;
+  width: 100%;
+}
+.container_phall{
+  text-align: center;
+}
+.p1{
+  text-align: center;
+  font-family: 'Knewave', cursive;
+  font-size: 40px;
+  color: #fff;
+  -webkit-text-stroke: 2px #000;
+}
+.p2{
+  text-align: center;
+  font-family: 'Knewave', cursive;
+  font-size: 80px;
+  color: #fff;
+  -webkit-text-stroke: 2px #000;
+}
+.p3{
+  text-align: center;
+  font-size: 22px;
+  color: #fff;
+  -webkit-text-stroke: 0.5px #000;
+}
+/**********Botón de flecha********/
+.div_flecha{
+  text-align: center;
+}
+#botonAbajo{
+  margin-top: 30px;
+  padding: 20px;
+  width: 160px;
+}
+#section2 {
+  display: none;
+}
+/**/
   .logo {
     font-size: 50px;
     line-height: 60px;
@@ -330,7 +373,6 @@ display: block;
   }
   /************************SEGUNDA BARRA DE NAVEGACION**********************************/
   .div-roles {
-    background-color: transparent;
     color: transparent;
     margin: 20px;
     border: transparent;
@@ -351,14 +393,14 @@ display: block;
     width: 1000px;
     flex-wrap: wrap;
     color: #000;
-    background-color: initial;
+    background-color: transparent;
     margin-top: -10px; /* Reiniciamos el margen superior */
   }
   .ul-roles li {
     width: 120px;
     height: 40px;
     display: block;
-    background-color: #262331;
+    background-image: linear-gradient(-225deg, #323b53 0%, #2c4266 50%, #35484d 100%);
     border: 1px solid #fff;
     margin: 6px 2px;
   }
@@ -381,15 +423,20 @@ display: block;
 
 
   /*---------------------ORDENAR------------------------------------*/
-.btn-ordenar {
-  margin-left: -95px;
-  margin-top: -2.5px;
-  border: 1px solid #fff;
-  color: #fff;
-}
-.btn-ordenar:hover{
-  border: 3px solid #FFF;
-}
+
+  .btn-ordenar {
+    margin-left: -95px;
+    margin-top: -2.5px;
+    border: 1px solid #fff;
+    color: #fff; 
+ }
+  .btn-ordenar:hover{
+    border: 3px solid #FFF;
+ }
+  .ul-roles li:hover{
+    background-color: #554C88;
+  }
+
 
 /*---------------------BUSCADOR-----------------------------------*/
   .buscador{
