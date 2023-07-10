@@ -56,13 +56,9 @@ main {
     margin: 10px;
 }
 
-p.order{
+label.order{
     color: #FFFFFF;
     margin: 10px;
-}
-
-input#pokeNames {
-display:grid;
 }
 
 #orderfor{
