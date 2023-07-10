@@ -24,9 +24,7 @@ function Subir() {
 
 import championsData from "./data/lol/lol.js";
 
-let champions = Object.values(championsData.data);
-
-
+let champions = Object.values(championsData.data); //Object.values() es una funcion q se utiliza para extraer los valores de championDat.data
 const tanqueLink = document.getElementById("tanque-link");
 tanqueLink.addEventListener("click", function (event) {
   event.preventDefault();
@@ -36,7 +34,6 @@ tanqueLink.addEventListener("click", function (event) {
   championContainer.innerHTML = "";
   todos();
 });
-
 document.addEventListener("DOMContentLoaded", () => {
   todos();
 });
@@ -44,8 +41,10 @@ document.addEventListener("DOMContentLoaded", () => {
 const luchadorLink = document.getElementById("luchador-link");
 luchadorLink.addEventListener("click", function (event) {
   event.preventDefault();
-  champions = Object.values(championsData.data).filter((champion) =>
-    champion.tags.includes("Fighter")
+  champions = Object.values(championsData.data).filter(
+    (
+      champion //Object.values() es una funcion q se utiliza para extraer los valores de championDat.data
+    ) => champion.tags.includes("Fighter")
   );
   championContainer.innerHTML = "";
   todos();
@@ -54,8 +53,10 @@ luchadorLink.addEventListener("click", function (event) {
 const tiradorLink = document.getElementById("tirador-link");
 tiradorLink.addEventListener("click", function (event) {
   event.preventDefault();
-  champions = Object.values(championsData.data).filter((champion) =>
-    champion.tags.includes("Marksman")
+  champions = Object.values(championsData.data).filter(
+    (
+      champion //Object.values() es una funcion q se utiliza para extraer los valores de championDat.data
+    ) => champion.tags.includes("Marksman")
   );
   championContainer.innerHTML = "";
   todos();
@@ -64,8 +65,10 @@ tiradorLink.addEventListener("click", function (event) {
 const magoLink = document.getElementById("mago-link");
 magoLink.addEventListener("click", function (event) {
   event.preventDefault();
-  champions = Object.values(championsData.data).filter((champion) =>
-    champion.tags.includes("Mage")
+  champions = Object.values(championsData.data).filter(
+    (
+      champion //Object.values() es una funcion q se utiliza para extraer los valores de championDat.data
+    ) => champion.tags.includes("Mage")
   );
   championContainer.innerHTML = "";
   todos();
@@ -74,20 +77,22 @@ magoLink.addEventListener("click", function (event) {
 const asesinoLink = document.getElementById("asesino-link");
 asesinoLink.addEventListener("click", function (event) {
   event.preventDefault();
-  champions = Object.values(championsData.data).filter((champion) =>
-    champion.tags.includes("Assassin")
+  champions = Object.values(championsData.data).filter(
+    (
+      champion //Object.values() es una funcion q se utiliza para extraer los valores de championDat.data
+    ) => champion.tags.includes("Assassin")
   );
   championContainer.innerHTML = "";
   todos();
 });
 
-
-
 const apoyoLink = document.getElementById("apoyo-link");
 apoyoLink.addEventListener("click", function (event) {
   event.preventDefault();
-  champions = Object.values(championsData.data).filter((champion) =>
-    champion.tags.includes("Support")
+  champions = Object.values(championsData.data).filter(
+    (
+      champion //Object.values() es una funcion q se utiliza para extraer los valores de championDat.data
+    ) => champion.tags.includes("Support")
   );
   championContainer.innerHTML = "";
   todos();
@@ -96,7 +101,7 @@ apoyoLink.addEventListener("click", function (event) {
 const todosLink = document.getElementById("todos-link");
 todosLink.addEventListener("click", (event) => {
   event.preventDefault();
-  champions = Object.values(championsData.data);
+  champions = Object.values(championsData.data); //Object.values() es una funcion q se utiliza para extraer los valores de championDat.data
   championContainer.innerHTML = "";
   todos();
 });
@@ -150,5 +155,3 @@ function todos() {
     championContainer.appendChild(championElement);
   }
 }
-
-
