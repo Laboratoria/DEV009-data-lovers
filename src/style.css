@@ -35,14 +35,6 @@ nav ul {
     display: flex;
 }
 
-nav ul li {
-    display: inline-block;
-    color: var(--accent-font-color);
-    margin-left: 20px;
-    font-family: var(--font-family-intro);
-    font-size: 24px;
-    font-weight: normal;
-}
 nav ul li a:visited {
     color: white; /* Cambia "white" por el color deseado para enlaces visitados */
 }
@@ -50,6 +42,9 @@ nav ul li a:visited {
 nav ul li a {
     text-decoration: none;
     color: var(--accent-font-color);
+    font-family: var(--font-family-intro);
+    font-size: 24px;
+    font-weight: normal;
 }
 
 .presentation {
@@ -117,7 +112,7 @@ nav ul li a {
   }
 
 
-#filters {
+#side {
     background-color: var(--container-color);
     display: flex;
     flex-direction: column;  
@@ -145,3 +140,30 @@ margin-top: 20px;
     margin-left: 25px;
     border-radius: 18px;
 }*/
+
+.menu-icon {
+display:none;
+}
+
+
+
+/*mobile*/
+@media (max-width:320px)  {
+    .menu-icon {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        display: grid;
+        place-items: center;
+    }
+
+    .menu-icon:hover {
+        background-color: lightgray;
+    
+    }
+    
+    .menu-icon img {
+        width: 18px;
+    }
+    
+}

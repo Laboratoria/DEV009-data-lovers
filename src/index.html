@@ -23,8 +23,7 @@
       </div>
       <nav>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#filters">Movies</a></li>
+          <li><a href="#side">Movies</a></li>
         </ul>
       </nav>
   </header>
@@ -43,8 +42,13 @@
       
   <!--La etiqueta <div class="content"> se cambia por la etiqueta semantica main en la que se engloba el contenido principal de la pagina -->    
   <main>
+  
+  
+   <div id="side">
+      <div class="menu-icon">
+        <img src="img/bars-solid.svg" alt="icono de menu">
+      </div>
 
-  <div id="filters">
       <div class="director-filter">
         <h3>FILTER</h3>
         <h4>Director</h4>
@@ -82,24 +86,29 @@
           <option value="2013">2013</option>
           <option value="2014">2014</option>
         </select>
-    </div>  
-
+    </div>    
+      
     <div class="orderBy">
       <h3>SORT BY</h3>
-        <select title="dropdown ordenar por" name="opciones" id="orderSelect">
-          <option value="all">All</option>
-          <option value="opcion3">A -Z</option>
-          <option value="opcion2">Z - A</option>
-          <option value="opcion1">Score</option>
-        </select>
-      </div> 
-  </div>
-    
+      <select title="dropdown ordenar por" name="opciones" id="orderSelect">
+        <option value="all">All</option>
+        <option value="opcion3">A -Z</option>
+        <option value="opcion2">Z - A</option>
+        <option value="opcion1">Score</option>
+      </select>
+    </div> 
+   </div>
+
+      
+        
+     
+
+
  
-  <span id="addValue"></span> <span id="addPercentage"></span>     
-  <div id="dataContainer" ></div>
+   <span id="addValue"></span> <span id="addPercentage"></span>     
+    <div id="dataContainer" ></div>
     
- </main>
+  </main>
   
    <script src="main.js" type="module"></script>
   </body>
