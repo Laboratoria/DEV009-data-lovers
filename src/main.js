@@ -3,6 +3,8 @@ import { filterData,sortData} from './data.js';
 import data from './data/pokemon/pokemon.js';
 const pokemonList = data.pokemon;
 const seccionShowAll = document.getElementById('showAll');
+const menuOption = document.getElementById('mostrar');
+let selectedOption;
 
 const display = (pokemonData)=>{
   
@@ -25,13 +27,53 @@ const display = (pokemonData)=>{
 /*
 const pokemonSecdG = filterData(pokemonList,'generation ii',['generation','num']);
 */
-const pokemonFuego = filterData(pokemonList,'fire','type');
-const pokemonMythic = filterData(pokemonList,'mythic','pokemon-rarity');
-const ordenarascendente = sortData(pokemonFuego,'pokemon-rarity','ascendente');
 
-ordenarascendente.forEach(function(pokemon){
+menuOption.addEventListener('change',
+  function(){
+    selectedOption = this.options[menuOption.selectedIndex].value;
+    location.href = '#mostrarPokemon';
+    
+    while (seccionShowAll.hasChildNodes()){
+      seccionShowAll.removeChild(seccionShowAll.firstChild);
+    }
+    
+    switch(selectedOption){
+ 
+    case 'todos':
+      pokemonList.forEach(function(pokemon){
+        display(pokemon);
+      });
+      break;
+          
+    case 'mythic':
+       
+      filterData(pokemonList,'mythic','pokemon-rarity').forEach(function(pokemon){
+        display(pokemon);
+      });
+      
+      break;
+         
+    
+    case 'legendary':
+      const legendary = filterData(pokemonList,'legendary','pokemon-rarity')
+       
+      legendary.forEach(function(pokemon){
+        display(pokemon);
+      });
 
-  display(pokemon);
-});
-console.log('pokemon mythic :',pokemonMythic);
+      
+      break;
+
+    case 'normal':  
+      const normal = filterData(pokemonList,'normal','pokemon-rarity');
+      normal.forEach(function(pokemon){
+        display(pokemon);
+      });
+      break;
+        
+    }
+    
+  }
+);
+console.log('pokemon mythic :',seccionShowAll);
 
