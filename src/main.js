@@ -1,7 +1,7 @@
 //import { filtername} from './data.js';
 
 import data from './data/pokemon/pokemon.js';
-import { sortNameasc, sortNumYouger, promPokemonEveryType, restultName} from './data.js';
+import { sortNameasc, sortNumYouger, promPokemonEveryType, restultName } from './data.js';
 const dataPokemon = data.pokemon;
 const container = document.getElementById("targets");
 
@@ -20,9 +20,9 @@ const display = (pokemones) => {
         <h4> Tipo: ${element.type}</h4>
         <h4> Tamaño: ${element.size.height}</h4>
         <h4> Peso: ${element.size.weight}</h4>
-        <p>${element.about}</p>`
+        <p id="about" >${element.about}</p>`
     container.appendChild(target)
-    
+
   });
 }
 display(dataPokemon);
@@ -34,10 +34,10 @@ const menu = document.getElementById("menu");
 menu.addEventListener("change", () => {
   const element = menu.options[menu.selectedIndex].value
   if (element === "az" || element === "za") {
-    display(sortNameasc(dataPokemon,element))
+    display(sortNameasc(dataPokemon, element))
   }
   else if (element === "numberMayor" || element === "numberMenor") {
-    display(sortNumYouger(dataPokemon,element))
+    display(sortNumYouger(dataPokemon, element))
   }
 
 });
@@ -45,20 +45,18 @@ menu.addEventListener("change", () => {
 //filtro de buscar por nombre
 document.getElementById('pokeNames').addEventListener('keyup', () => {
   const filterName = document.getElementById('pokeNames').value;
-  const results =  restultName(dataPokemon, filterName )
+  const results = restultName(dataPokemon, filterName)
   display(results)
 });
 
 //FILTRO PORCENTAJE POR TIPO 
-document.getElementById('best').addEventListener('click',()=>{
+document.getElementById('best').addEventListener('click', () => {
   document.getElementById('best').value;
- 
-  const objtypes=  promPokemonEveryType(dataPokemon) // objeto
+
+  const objtypes = promPokemonEveryType(dataPokemon) // objeto
   container.innerHTML = ""
   for (const property in objtypes) {
     const p = `<p id="porcent" >${property}: ${objtypes[property]} % </p>`
     container.innerHTML += p;
-
   }
 });
-//hola aivy

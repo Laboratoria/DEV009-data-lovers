@@ -27,18 +27,20 @@
     <!-- boton para buscar por nombre y numero-->
     <div id="searchs">
       <label class="order">Buscar por nombre:</label>
-      <input type="search" placeholder="Buscar" id="pokeNames">
+      <input type="search" placeholder="Buscar 🔎" id="pokeNames">
       <br><br>
     </div>
     <!-- menu desplegable para seleccionae-->
-    <label id="orderfor">Ordenar por: </label>
-    <select id="menu">
-      <option>Ordenar por</option>
-      <option value="az">A-Z</option>
-      <option value="za">Z-A</option>
-      <option value="numberMayor">numero mayor</option>
-      <option value="numberMenor">numero inferior</option>
-    </select>
+    <div id="contOrder">
+      <label id="orderfor">Ordenar por:</label>
+      <select id="menu">
+        <option> Ordenar...🗃️ </option>
+        <option value="az">A-Z</option>
+        <option value="za">Z-A</option>
+        <option value="numberMayor">numero mayor</option>
+        <option value="numberMenor">numero inferior</option>
+      </select>
+    </div>
     <div id="result"></div>
   </header>
   <main id="targets">
