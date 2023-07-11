@@ -1,7 +1,7 @@
-* {
-    padding: 2px;
-    margin: 2px;
-    border: 2px;
+*{
+    margin: 0;
+    padding: 1px;
+    box-sizing: border-box;
 }
 body {
     width: -webkit-fill-available;
@@ -12,8 +12,16 @@ body {
 header{
     background-color: aliceblue;
     text-align: center;
+    width: 100%;
     position: fixed;
+    margin bottom: 500px;
 }
+
+aside{
+    z-index: 20;
+    width: 320px;
+}
+
 h1{
     color: #ffcb05;
     -webkit-text-stroke: 0.15rem #2a75bb;
@@ -41,17 +49,20 @@ section{
     width: 90vw;
 }
 .menu{
-    margin-top: 48px;
+    margin-top: 100px;
     position: fixed;
 }
 img{
     width: fit-content;
 }
 .imagenInicio{
-    height: 75vh;
+    width: 100%;
+    height: 90vh;
     background-color: black;
     align-content: center;
-
+}
+label{
+    color: white;
 }
 @media screen and (min-width: 800px){
     .secion{
