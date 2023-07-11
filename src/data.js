@@ -27,6 +27,15 @@ export const sortNumYouger = (arr, option) => {
   return arr;
 }
 
+//filtro por nombre
+export function resultName (arr, filterName){
+  const results = arr.filter(element => {
+    return (element.name).indexOf(filterName) !== -1
+  });
+  return results
+}
+
+
 /* -----> calculo agregado de tipos, average= promedio <------- */
 
 // 1 ) Primero saber los diferentes tipos de pokemon 
