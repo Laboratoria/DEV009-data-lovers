@@ -1,4 +1,4 @@
-import { sortNameasc, sortNumYouger /*sortNameDes, sortNumYouger, sortNumLower, promPokemonEveryType*/ } from '../src/data.js';
+import { sortNameasc, sortNumYouger, resultName /*sortNameDes, sortNumYouger, sortNumLower, promPokemonEveryType*/ } from '../src/data.js';
 
 const Pokemons = [{
   "num": "002",
@@ -74,3 +74,10 @@ describe('sortNameasc', () => {
   });
 });
 
+
+describe('resultName', () => {
+  it('deberia retornar los nombres de los pokemones los nombres de los pokemones' , () => {
+   const filtroIvy = resultName(Pokemons, "iv")
+   expect(filtroIvy).toEqual([ { num: '002', name: 'ivysaur', type: [ 'grass', 'poison' ] }]);
+  });
+});

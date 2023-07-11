@@ -27,6 +27,15 @@ export const sortNumYouger = (arr,option) => {
   return arr;
 }
 
+//filtro por nombre
+export function resultName (arr, filterName){
+  const results = arr.filter(element => {
+    return (element.name).indexOf(filterName) !== -1
+  });
+  return results
+}
+
+
 /* -----> calculo agregado de tipos, average= promedio <------- */
 
 // 1 ) Primero saber los diferentes tipos de pokemon 
@@ -40,13 +49,6 @@ export function concatType (data){
     result.push(...element.type)
   });
   return result 
-}
-
-
-//filtro por nombre
-export function restultName (arr, filterName){
-  const results = arr.filter(element => (element.name).indexOf(filterName) !== -1);
-  return results
 }
 
 // 1.2 ) quitar los tipos repetidos , con eso tendriamos solo los tipos unicos que existen en todos los pokemones 
