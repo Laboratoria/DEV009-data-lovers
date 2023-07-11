@@ -20,16 +20,26 @@
     <aside>
       <div class="menu">
         <nav>
-          <form action="#mostrarPokemon">
-            <label for="menu">Menu</label>
+          <form>
+            <label for="menu">Mostrar</label>
             <select name="mostrar" id="mostrar">
               <option value="">Selecciona una opción</option>
-              <option value="1">Mortrarlos todos</option>
-              <option value="2">Mostrar primera generación</option>
-              <option value="3">Mostrar segunda generación</option>
+              <option value="todos">Todos los Pokémon</option>
+              <option value="legendary">Pokémon legendarios</option>
+              <option value="mythic">Pokémon míticos</option>
+              <option value="normal" >Pokémon normales</option>
+              
             </select>
-            <input type="submit" value="Aceptar" />
-  
+
+            <label for="menu">Ordenar</label>
+            <select name="mostrar" id="mostrar">
+              <option value="">Selecciona una opción</option>
+              <option value="name-ascendente">Por nombre de A - Z</option>
+              <option value="name-descendente">Por nombre Z - A</option>
+              <option value="type-as">Por tipo de A - Z</option>
+              <option value="type-des">Por tipo de Z - A</option>
+            </select>
+              
           </form>
          
         </nav>
