@@ -9,5 +9,15 @@ function orderByAlphabetical (array) {
   return arrayOrdered;
 }
 
-export {orderByAlphabetical}
+function prom(array) {
+  let suma = 0;
+  for (let i = 0; i < array.length; i++) {
+    const score = parseInt(array[i].score, 10);
+    suma = suma + score;
+  }
+  return suma / array.length;
+}
+
+
+export {orderByAlphabetical, prom}
 
