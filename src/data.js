@@ -11,11 +11,10 @@ export const searchPokemon = (data, inputText) => {
     const numPokemon = eachPokemon.num;
     const lengthText = inputText.length;
     return namePokemon.slice(0, lengthText) === inputText || numPokemon.slice(0, lengthText) === inputText;
-    
-  });
-  return resultPokemon;
-}
 
+
+  });
+}
 
 
 // FUNCION MOSTRAR MODAL AL DAR CLICK SOBRE LA CARD
