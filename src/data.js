@@ -53,8 +53,10 @@ export function concatType(data) {
 
 
 //filtro por nombre
-export function restultName(arr, filterName) {
-  const results = arr.filter(element => (element.name).indexOf(filterName) !== -1);
+export function resultName(arr, filterName) {
+  const results = arr.filter(element => {
+    return(element.name).indexOf(filterName) !== -1
+  });
   console.log(results)
   return results
   

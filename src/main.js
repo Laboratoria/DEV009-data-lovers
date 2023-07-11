@@ -28,9 +28,6 @@ const display = (pokemones) => {
 }
 display(dataPokemon);
 
-
-
-
 //añadir un add event listener al menu
 const menu = document.getElementById("menu");
 //const targets = document.querySelector(".cards");
@@ -46,21 +43,12 @@ menu.addEventListener("change", () => {
 
 });
 
-
-
-
-
-
 //filtro de buscar por nombre
 document.getElementById('pokeNames').addEventListener('keyup', () => {
   const filterName = document.getElementById('pokeNames').value;
   const results =  resultName(dataPokemon, filterName )
   display(results)
 });
-
-
-
-
 
 //FILTRO promedio agg
 document.getElementById('best').addEventListener('click',()=>{
