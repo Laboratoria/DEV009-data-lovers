@@ -1,7 +1,20 @@
-import { example, anotherExample } from '../src/data.js';
+//import { example, anotherExample } from '../src/data.js';
+
+import { test, expect } from '@playwright/test';
+
+test.beforeEach(async ({page}) => {
+  await page.goto(' http://localhost:3000');
+});
 
 
-describe('example', () => {
+describe('Testing filtros películas', () => {
+  it('debería mostrar las películas por año', () => {
+    expect(typeof 'nombreFunción').toBe('function');
+  });
+});
+
+
+/*/describe('example', () => {
   it('is a function', () => {
     expect(typeof example).toBe('function');
   });
@@ -20,4 +33,4 @@ describe('anotherExample', () => {
   it('returns `anotherExample`', () => {
     expect(anotherExample()).toBe('OMG');
   });
-});
+});*/

@@ -1,12 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+  
   <body>
-    <div id="root"></div>
+
+    <header>
+      <!--"./" : imagen se encuentra en ruta relativa aunque muestra su ruta actual-->
+      <!--alt : no olvidar colocarle a las imágenes textos alternativos, en caso de que se usen lectores de pantalla-->
+      <img id="logo" src="./imagenes/pngwing.com.png" alt="Logo Studio Ghibli">
+    </header>
+
+    <!--<nav> definir una sección de navegación: permiten a los usuarios moverse dentro de un sitio web - su apariencia se define en CSS -->
+    <nav>
+      <ul class="menu-horizontal">
+        <li><a href="#">Home</a></li>
+        <li>
+          <!--<a> : etiqueta ancla: para que los usuarios puedan navegar entre diferentes partes del contenido-->
+          <!--href dentro de la etiqueta <a> : para especificar el destino del enlace-->
+          <a href="#">Películas</a>
+          <ul class="menu-vertical">
+            <!--al no agregarle target las opciones se abrirán en la misma pestaña o ventana del navegador, según lo tenga configurado el usuario por defecto-->
+            <li><a href="#" id="orden-date-films">Por año</a></li>
+            <li><a href="#" id="orden-director-films">Por director</a></li>
+            <li><a href="#" id="orden-alfabetico-films">Orden alfabético</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Personajes</a>
+          <ul class="menu-vertical">
+          <li><a href="#" id="orden-people-films">Por película</a></li>
+          <li><a href="#" id="orden-people-age">Por grupo etario</a></li>
+          <li><a href="#" id="orden-alfabetico-people">Orden alfabético</a></li>
+        </ul>                                  
+        </li>
+        <li><a href="#">Curiosidades</a>
+          <ul class="menu-vertical">
+            <li><a href="#" id="people-specie-prom">Especies</a></li>
+            <li><a href="#" id="vehicles-prom">Vehículos</a></li>
+            <li><a href="#" id="prom-prom">Promedios</a></li>
+          </ul>
+        </li>
+          </ul>
+        
+        </li>
+      </ul>
+    </nav>
+
+    <div class="image-grid" id="contenedor">
+      <div id="films-list-year"></div>
+      <div id="films-list-director"></div>
+      <div id="films-list"></div>
+      <div id="people-list-film"></div>
+      <div id="people-list-age"></div>
+      <div id="people-list"></div>
+      <div id="vehicles"></div>
+      <div id="people-specie"></div>
+      <div id="prom"></div>
+    </div>
+    
+    
+
+    <footer>
+      <p> Elaborado por Conny y Oli en Laboratoria </p>
+    </footer>
+      
     <script src="main.js" type="module"></script>
+
   </body>
 </html>
+
