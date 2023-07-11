@@ -1,4 +1,13 @@
-import { filtroLuchador, filtroTirador, filtroMago, filtroAsesino, filtroTanque, filtroApoyo, OrdenarAZ, OrdenarZA } from './data.js';
+import {
+  filtroLuchador,
+  filtroTirador,
+  filtroMago,
+  filtroAsesino,
+  filtroTanque,
+  filtroApoyo,
+  OrdenarAZ,
+  OrdenarZA,
+} from "./data.js";
 
 const navToggle = document.querySelector(".nav-toggle");
 const navMenu = document.querySelector(".nav-menu");
@@ -27,7 +36,7 @@ function Subir() {
 import Data from "./data/lol/lol.js";
 
 let champions = Object.values(Data.data); //Object.values() es una funcion q se utiliza para extraer los valores de championDat.data
-let championFilter = Object.values(Data.data)
+const championFilter = Object.values(Data.data);
 
 document.addEventListener("DOMContentLoaded", () => {
   todos();
@@ -110,7 +119,7 @@ ordenarZALink.addEventListener("click", function (event) {
 const championContainer = document.getElementById("container_img");
 function todos() {
   championContainer.innerHTML = "";
-  for (let championKey in champions) {
+  for (const championKey in champions) {
     const champion = champions[championKey];
     const championImageURL = champion.img;
     const championElement = document.createElement("div");
