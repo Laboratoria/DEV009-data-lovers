@@ -45,6 +45,7 @@ nav ul li a {
     font-family: var(--font-family-intro);
     font-size: 24px;
     font-weight: normal;
+    padding: 10px;
 }
 
 .presentation {
@@ -70,7 +71,7 @@ nav ul li a {
     display: flex;
 }
         
-.intro-text, .iamgen-intro {
+.intro-text, .imagen-intro {
     padding:20px;
 }
 
@@ -112,6 +113,7 @@ nav ul li a {
 .imagen-reducida {
     width: 200px; /* Puedes ajustar el tamaño según tus necesidades */
     height: auto; /* Mantén la proporción de la imagen */
+    border-radius: 18px;
   }
 
 .filters{
@@ -140,8 +142,8 @@ display:none;
 
 
 
-/*mobile (iphone pro 12*/
-@media (max-width:768px)  {
+/*mobile (iphone pro 12)*/
+@media (max-width:820px)  {
     .menu-icon {
         width: 40px;
         height: 40px;
@@ -200,7 +202,7 @@ display:none;
 }
 
 /*Tablet (ipad Air)*/
-@media (max-width:390px)  {
+@media (max-width:820px)  {
     .menu-icon {
         width: 40px;
         height: 40px;
@@ -242,6 +244,7 @@ display:none;
     .presentation {
         flex-direction: column;
         margin-bottom: 0px;
+        column-gap: 30px;
     }
 
     #side {
@@ -255,5 +258,12 @@ display:none;
         margin-top: 20px;
     }
 
-    
+    .contenedor-imagen-intro {
+        flex-direction: column;
+        max-width: 95%;
+    }
+
+    .intro-text {
+        font-size: 18px;
+    }
 }

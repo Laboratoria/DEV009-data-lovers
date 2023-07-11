@@ -45,7 +45,7 @@ function createCardContainer(dataGhibli){
     containerDiv.appendChild(filmTitle);
 
     const filmReleasedate = document.createElement('p');
-    filmReleasedate.textContent = 'Año: '+ film.release_date;
+    filmReleasedate.textContent = film.release_date;
     filmReleasedate.classList.add('data-year')
     containerDiv.appendChild(filmReleasedate);
 
