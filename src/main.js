@@ -50,15 +50,18 @@ ordenAlfabeticoPeopleLink.addEventListener('click', function(event) {
     peopleFilmList.style.display = 'none';
     filmsListDirector.style.display = 'none';
     peopleListAge.style.display = 'none';
+    filmsListSpecie.style.display = 'none';
   } 
 });
 
 //______PELÍCULAS ORDENADAS ALFABÉTICAMENTE
 
-const films = data.films.flatMap(film => ({
+/*const films = data.films.flatMap(film => ({
   title: film.title,
   poster: film.poster
-}));
+}));*/
+
+const films = data.films.filter(film => film.title);
 
 films.sort((a, b) => a.title.localeCompare(b.title));
 console.log("estoy ordenando películas", films);
@@ -92,6 +95,7 @@ ordenAlfabeticoFilmsLink.addEventListener('click', function(event) {
     peopleFilmList.style.display = 'none';
     filmsListDirector.style.display = 'none';
     peopleListAge.style.display = 'none';
+    filmsListSpecie.style.display = 'none';
   }
 });
 
@@ -139,6 +143,7 @@ ordenDateFilmsLink.addEventListener('click', function(event) {
     peopleFilmList.style.display = 'none';
     filmsListDirector.style.display = 'none';
     peopleListAge.style.display = 'none';
+    filmsListSpecie.style.display = 'none';
   }
 });
 
@@ -189,6 +194,7 @@ ordenPeopleFilmsLink.addEventListener('click', function(event) {
     peopleList.style.display = 'none'; // Oculta peopleList
     filmsListDirector.style.display = 'none';
     peopleListAge.style.display = 'none';
+    filmsListSpecie.style.display = 'none';
 
   }
 });
@@ -236,6 +242,7 @@ ordenDirectorFilmsLink.addEventListener('click', function(event) {
     peopleList.style.display = 'none'; // Oculta peopleList
     peopleFilmList.style.display = 'none';
     peopleListAge.style.display = 'none';
+    filmsListSpecie.style.display = 'none';
 
   }
 });
@@ -292,9 +299,61 @@ ordenPeopleAgeLink.addEventListener('click', function(event) {
     peopleList.style.display = 'none'; // Oculta peopleList
     filmsListDirector.style.display = 'none';
     peopleFilmList.style.display = 'none';
+    filmsListSpecie.style.display = 'none';
 
   }
 });
+
+//______PERSONAJES POR ESPECIE
+
+const peopleSpecie = data.films.flatMap(film =>
+    film.people.map(people => ({
+    name: people.name,
+    image: people.img,
+    specie: people.specie
+  }))
+);
+
+const filmsListSpecie = document.getElementById("people-specie")
+
+peopleSpecie.sort((a, b) => a.specie.localeCompare(b.specie));
+console.log("Estoy ordenando por especie", peopleSpecie);
+
+peopleSpecie.forEach(specie => {
+  const specieItem = document.createElement('div');
+  const specieImage = document.createElement('img');
+  const specieName = document.createElement('p');
+  const specieSpecie = document.createElement('p');
+
+  specieImage.src = specie.image;
+  specieName.textContent = specie.name;
+  specieSpecie.textContent = specie.specie;
+
+  specieItem.appendChild(specieImage);
+  specieItem.appendChild(specieName);
+  specieItem.appendChild(specieSpecie);
+  filmsListSpecie.appendChild(specieItem);
+});
+
+//______CLICK PERSONAJES POR ESPECIE ('specie')
+
+const ordenSpecieFilmsLink = document.getElementById('people-specie-prom');
+
+ordenSpecieFilmsLink.addEventListener('click', function(event) {
+  event.preventDefault(); // Evita que el enlace realice la acción predeterminada
+
+  if (filmsListSpecie.style.display === '' || filmsListSpecie.style.display === 'none') {
+    filmsListSpecie.style.display = 'grid';
+    filmsDateList.style.display = 'none';
+    filmsList.style.display = 'none'; // Oculta filmsList
+    peopleList.style.display = 'none'; // Oculta peopleList
+    filmsListDirector.style.display = 'none'; // Oculta peliculas por director
+    peopleListAge.style.display = 'none';
+    peopleFilmList.style.display = 'none';
+
+  }
+});
+
 
 // SCORE PROMEDIO EN ROTTEN TOMATOES ('rt_score')
 
@@ -305,3 +364,15 @@ const rtScore = data.films.flatMap(films => ({
 prom(rtScore);
 
 console.log("Estoy mostrando el promedio en rotten tomatoes", prom(rtScore));
+
+
+
+//______VEHÍCULOS
+/*const vehiclesS = data.films.flatMap(film =>
+  film.vehicles.map(vehicles => ({
+    name: vehicles.name,
+    film: data.films,
+    vehicles: films.vehicles,
+    image: vehicles.img,
+    description: vehicles.description
+  })));*/

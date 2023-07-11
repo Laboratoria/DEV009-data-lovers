@@ -93,7 +93,7 @@ footer {
     
   }
 
-  #people-list, #films-list, #films-list-year, #people-list-film, #films-list-director, #people-list-age {
+  #people-list, #films-list, #films-list-year, #people-list-film, #films-list-director, #people-list-age, #people-specie {
     background-color: rgba(255, 255, 255, 0.5);
     margin-top: 40px;
     margin-bottom: 60px;
@@ -154,7 +154,7 @@ img {
 
     }
 
-    #people-list, #films-list, #films-list-year, #people-list-film, #films-list-director, #people-list-age {
+    #people-list, #films-list, #films-list-year, #people-list-film, #films-list-director, #people-list-age, #people-specie {
       background-color: rgba(255, 255, 255, 0.5);
       margin-top: 40px;
       margin-bottom: 60px;
@@ -178,7 +178,7 @@ img {
       height:fit-content;
       
     }
-  
+    
   }
 
 
