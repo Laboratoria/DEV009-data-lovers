@@ -65,7 +65,8 @@ menuOption.addEventListener('change',
       break;
 
     case 'normal':  
-      filterData(pokemonList,'normal','pokemon-rarity').forEach(function(pokemon){
+      const normal = filterData(pokemonList,'normal','pokemon-rarity');
+      normal.forEach(function(pokemon){
         display(pokemon);
       });
       break;
