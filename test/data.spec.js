@@ -34,6 +34,7 @@ describe(sortBy, () => {
       {title: 'C'},
     ];
 
+
     expect(sortBy(data, 'opcion3')).toEqual(expectedArrTitle);
   });
 

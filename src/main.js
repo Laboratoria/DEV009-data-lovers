@@ -114,9 +114,16 @@ yearFilterSelect.addEventListener('change', handleSelection);
 //Responsive
 const menuIcon = document.querySelector('.menu-icon');
 const filters = document.querySelector('.filters');
+let isFiltersVisible = false;
 
 menuIcon.addEventListener('click', () => {
-  filters.classList.toggle('open');
+  if (isFiltersVisible) {
+    filters.style.display = 'none';
+    isFiltersVisible = false;
+  } else {
+    filters.style.display = 'block';
+    isFiltersVisible = true;
+  }
 });
 
 

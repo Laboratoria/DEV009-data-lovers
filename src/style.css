@@ -64,8 +64,13 @@ nav ul li a {
     max-width: 100%; /* Ancho deseado */
     height: auto; /* Altura automática proporcional */
 }
+
+.contenedor-imagen-intro{
+    width: 100%;
+    display: flex;
+}
         
-.intro-text, .totoro-intro {
+.intro-text, .iamgen-intro {
     padding:20px;
 }
 
@@ -95,7 +100,6 @@ nav ul li a {
 }
 
 
-
 .data-title {
     font-weight: bold;
 }
@@ -105,14 +109,12 @@ nav ul li a {
 }
 
 
-
 .imagen-reducida {
     width: 200px; /* Puedes ajustar el tamaño según tus necesidades */
     height: auto; /* Mantén la proporción de la imagen */
   }
 
-
-#side {
+.filters{
     background-color: var(--container-color);
     display: flex;
     flex-direction: column;  
@@ -123,9 +125,8 @@ nav ul li a {
     width: 200px;
 }
 
-
 .orderBy {
-float: right;
+float: left;
 margin-top: 20px;
 }
 
@@ -133,28 +134,22 @@ margin-top: 20px;
     padding: 20px;
 }
 
-/*aside {
-    position: fixed;
-    padding: 20px;
-    margin: 25px, 25px;
-    margin-left: 25px;
-    border-radius: 18px;
-}*/
-
 .menu-icon {
 display:none;
 }
 
 
 
-/*mobile*/
-@media (max-width:390px)  {
+/*mobile (iphone pro 12*/
+@media (max-width:768px)  {
     .menu-icon {
         width: 40px;
         height: 40px;
         cursor: pointer;
         display: grid;
         place-items: center;
+        padding: 10px;
+        margin: 30px 0px 0px 30px;
     }
 
     .menu-icon:hover {
@@ -164,6 +159,7 @@ display:none;
     
     .menu-icon img {
         width: 18px;
+
     }
 
     .filters {
@@ -180,15 +176,84 @@ display:none;
         border-style: outset;
         max-width: 850px;
         width: 100%;
+        margin-top: 18px;
     }
 
-    .presentation img {
-        margin-right: 10px;
-        max-width: 100%; /* Ancho deseado */
-        height: auto; /* Altura automática proporcional */
+
+    .presentation {
+        flex-direction: column;
+        margin-bottom: 0px;
+    }
+
+    #side {
+        display: flex;
         flex-direction: column;
     }
 
+    .resultadoCalculoAgregado {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    
+}
+
+/*Tablet (ipad Air)*/
+@media (max-width:390px)  {
+    .menu-icon {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        display: grid;
+        place-items: center;
+        padding: 10px;
+        margin: 30px 0px 0px 30px;
+    }
+
+    .menu-icon:hover {
+        background-color: lightgray;
+    
+    }
+    
+    .menu-icon img {
+        width: 18px;
+
+    }
+
+    .filters {
+        display: none;
+    }
+
+    .data-peliculas-contenedor {
+        display:grid;
+        grid-template-columns: auto ;
+        grid-gap: 20px;
+        padding: 20px;
+        background-color: var(--container-color);
+        border-radius: 18px;
+        border-style: outset;
+        max-width: 850px;
+        width: 100%;
+        margin-top: 18px;
+    }
+
+
+    .presentation {
+        flex-direction: column;
+        margin-bottom: 0px;
+    }
+
+    #side {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .resultadoCalculoAgregado {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
 
     
 }
