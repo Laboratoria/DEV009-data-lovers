@@ -25,8 +25,6 @@ ul {
     margin: 0;
     padding: 0;
     display: grid;
-   
-
 }
 .Genebest {
     display: block;
@@ -76,7 +74,7 @@ footer {
 main#targets {
     margin: auto;
     padding: auto;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr ;
     justify-content: center;
 
 }
@@ -120,6 +118,11 @@ article.cards {
 h2,h4,#about {
     margin: 10px;
 }
+h2{
+    border: 3px solid #4c42d4;
+    border-radius: 3px;
+    text-align: center;
+}
 
 h2{
     border: 3px solid #4c42d4;
@@ -135,5 +138,13 @@ p#porcent {
     padding: 10px;
     width: 110px;
     border-radius: 5px;
-
 }
+
+@media (max-height:950px) {
+    main#targets {
+    margin: auto;
+    padding: auto;
+    grid-template-columns: repeat(1,1fr);
+    justify-content: center;
+    background-color: #CB1D0E;
+}}
