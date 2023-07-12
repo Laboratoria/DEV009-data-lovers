@@ -1,9 +1,9 @@
 //manera ascedente
-export const sortNameasc = (arr, option) => {
+export const sortNameasc = (arr,option) => {
   arr.sort((a, b) => {
     if (a.name < b.name || option === "za") {
       return -1;
-    }
+    } 
     if (a.name > b.name || option === "az") {
       return 1;
     }
@@ -13,9 +13,9 @@ export const sortNameasc = (arr, option) => {
   return arr;
 };
 //de mayor a menor
-export const sortNumYouger = (arr, option) => {
+export const sortNumYouger = (arr,option) => {
   arr.sort((a, b) => {
-    if (a.num > b.num || option === "numberMenor") {
+    if (a.num > b.num || option === "numberMenor" ) {
       return -1;
     }
     if (a.num < b.num || option === "numberMayor") {
@@ -27,11 +27,11 @@ export const sortNumYouger = (arr, option) => {
   return arr;
 }
 
+
 //filtro por nombre
-export function resultName (arr, filterName){
-  const results = arr.filter(element => {
-    return (element.name).indexOf(filterName) !== -1
-  });
+export function resultName(arr, filterName) {
+  const results = arr.filter(element => (element.name).indexOf(filterName) !== -1);
+  console.log(results)
   return results
 }
 
@@ -43,52 +43,42 @@ export function resultName (arr, filterName){
 
 //1.1 ) unir todos los tipos de todos los pokemones 
 
-export function concatType(data) {
+export function concatType (data){
   const result = []
   data.forEach(element => {
     result.push(...element.type)
   });
-  return result
-}
-
-
-//filtro por nombre
-export function restultName(arr, filterName) {
-  const results = arr.filter(element => (element.name).indexOf(filterName) !== -1);
-  console.log(results)
-  return results
-  
+  return result 
 }
 
 // 1.2 ) quitar los tipos repetidos , con eso tendriamos solo los tipos unicos que existen en todos los pokemones 
 
-export function deleteDuplicate(arrDuplicates) {
-  // eslint-disable-next-line
+export function deleteDuplicate (arrDuplicates){
   return new Set([...arrDuplicates])
 }
 
 // 2)contar cuantos pokemones hay por cada tipo de pokemon y calcular su promedio 
-export function promPokemonEveryType(data) {
+export function promPokemonEveryType (data){
   const pokemonTypesDuplicates = concatType(data)
 
   const onlyUniqueTypes = deleteDuplicate(pokemonTypesDuplicates)
 
   const result = {}
 
-  onlyUniqueTypes.forEach(typePokemon => {
+  onlyUniqueTypes.forEach(typePokemon =>{
     let count = 0;
 
-    data.forEach(pokemon => {
-      if ((pokemon.type).includes(typePokemon)) {
+    data.forEach(pokemon =>{
+      if( (pokemon.type).includes(typePokemon) ){
         count = count + 1;
       }
     })
-    result[typePokemon] = ((count * 100) / pokemonTypesDuplicates.length).toFixed(2)
+    result[typePokemon] =   ((count * 100) / pokemonTypesDuplicates.length ).toFixed(2)
 
     count = 0
   })
-
-  return result
+  
+  return result 
 }
 
 
