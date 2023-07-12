@@ -44,21 +44,23 @@ menu.addEventListener("change", () => {
 
 
 //filtro de buscar por nombre
-document.getElementById('best').addEventListener('keyUp',()=>{
-    const results = resultName(dataPokemon, filterName)
-    display(results)
-  });
+//filtro de buscar por nombre
+document.getElementById('pokeNames').addEventListener('keyup', () => {
+  const filterName = document.getElementById('pokeNames').value;
+  const results =  resultName(dataPokemon, filterName )
+  display(results)
+});
 
 
 
 //FILTRO PORCENTAJE POR TIPO 
 document.getElementById('best').addEventListener('click', () => {
-    document.getElementById('best').value;
+  document.getElementById('best').value;
   
-    const objtypes = promPokemonEveryType(dataPokemon) // objeto
-    container.innerHTML = ""
-    for (const property in objtypes) {
-      const p = `<p id="porcent" >${property}: ${objtypes[property]} % </p>`
-      container.innerHTML += p;
-    }
-  });
+  const objtypes = promPokemonEveryType(dataPokemon) // objeto
+  container.innerHTML = ""
+  for (const property in objtypes) {
+    const p = `<p id="porcent" >${property}: ${objtypes[property]} % </p>`
+    container.innerHTML += p;
+  }
+});

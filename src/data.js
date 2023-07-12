@@ -9,7 +9,6 @@ export const sortNameasc = (arr,option) => {
     }
     return 0;
   });
-  console.log(arr)
   return arr;
 };
 //de mayor a menor
@@ -23,15 +22,15 @@ export const sortNumYouger = (arr,option) => {
     }
     return 0;
   });
-  console.log(arr)
   return arr;
 }
 
 
 //filtro por nombre
-export function resultName(arr, filterName) {
-  const results = arr.filter(element => (element.name).indexOf(filterName) !== -1);
-  console.log(results)
+export function resultName (arr, filterName){
+  const results = arr.filter(element => {
+    return (element.name).indexOf(filterName) !== -1
+  });
   return results
 }
 
@@ -54,6 +53,7 @@ export function concatType (data){
 // 1.2 ) quitar los tipos repetidos , con eso tendriamos solo los tipos unicos que existen en todos los pokemones 
 
 export function deleteDuplicate (arrDuplicates){
+  // eslint-disable-next-line
   return new Set([...arrDuplicates])
 }
 
@@ -62,9 +62,7 @@ export function promPokemonEveryType (data){
   const pokemonTypesDuplicates = concatType(data)
 
   const onlyUniqueTypes = deleteDuplicate(pokemonTypesDuplicates)
-
   const result = {}
-
   onlyUniqueTypes.forEach(typePokemon =>{
     let count = 0;
 

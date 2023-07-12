@@ -60,10 +60,9 @@ describe('sortNameasc', () => {
   });
 });
 
-
 describe('resultName', () => {
   it('deberia retornar los nombres de los pokemones los nombres de los pokemones' , () => {
-   const filtroIvy = resultName(Pokemons, "iv")
-   expect(filtroIvy).toEqual([ { num: '002', name: 'ivysaur', type: [ 'grass', 'poison' ] }]);
+    const filtroIvy = resultName(Pokemons, "iv")
+    expect(filtroIvy).toEqual([ { num: '002', name: 'ivysaur', type: [ 'grass', 'poison' ] }]);
   });
 });
