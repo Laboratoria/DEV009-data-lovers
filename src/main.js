@@ -1,9 +1,8 @@
-import { busqueda,contAmerica } from './data.js';
-// import data from './data/lol/lol.js';
-import data from './data/countries/countries.js';
-// import data from './data/rickandmorty/rickandmorty.js';
 
-//console.log(example, data);
+import { contAmerica,contAsia,contAfrica,contEurope,contOceania,contAntarctica,busqueda,} from './data.js';
+import countries from './data/countries/countries.js';
+import data from './data/countries/countries.js';
+
 const root =document.getElementById('root');
 const dataCountries = data.countries;
 /**************Creacion de cartas****************/
@@ -44,6 +43,28 @@ searchButton.addEventListener('click',function(){
 });
 /**********Creacion de ventana Modal****************/
 const showModal = (dataCountry) => {
+
+   let modal = document.createElement("div")
+   modal.innerHTML = `
+   <section class="modal">
+   <div class="modal_container">
+   <ul class="modal_lista"></ul>
+   <a href="a" class="modal_close_button"> Cerrar</a>
+   <h2>${dataCountry.name.common}</h2>
+   <img src=${dataCountry.flags.png}>
+   <li name="Nombre_de_pais_oficial" id="informacion">Nombre de pais oficial:${dataCountry.name.official}</li>
+   <li name="Capital" id="informacion">Capital:${dataCountry.capital}</li>
+   <li name="Continente" id="informacion">Continente:${dataCountry.continents}</li>
+   <li name="Subregion" id="informacion">Subregion:${dataCountry.subregion}</li>
+   <li name="Idioma" id="informacion">Idioma:${dataCountry.languages.value}</li>
+   <li name="Poblacion_total"id="informacion">Población total:${dataCountry.population}</li>
+   <li name="Area_total"id="informacion">Area total:${dataCountry.area}</li>   
+   </div> 
+   </section> 
+   `
+   root.appendChild(modal)
+   console.log(dataCountry.name.common)
+
   const modal = document.createElement("div")
   modal.innerHTML = `
   <section class="modal">
@@ -68,26 +89,41 @@ const showModal = (dataCountry) => {
   `
   root.appendChild(modal)
 
+
   const closeModalButton = document.querySelector('.modal_close_button');
   closeModalButton.addEventListener('click', (e) => {
     e.preventDefault();         
     modal.remove();       
   });
 }
-
-/**********Seleccion de Menus y submenus****************/
-const menuItems = document.querySelectorAll('.menu');
+/****Filtrado por continetes****/
+const menuItems = document.querySelectorAll('.menu__item');
 menuItems.forEach(function(item){
   item.addEventListener('click', function(event){
-    if (item.classList.contains('.submenu')){
+    if (item.classList.contains('.submenus')){
       event.stopPropagation();
     }
-    //console.log('Haz click en', item.textContent);
-    //const menuElegido = item.textContent
-    if (item.textContent=== "AMERICA"){
-      showCards(contAmerica(dataCountries));
-    }
+     
+   if (item.textContent==="America"){
+      showCards(contAmerica (dataCountries));
+   }
+    else if(item.textContent==="Asia"){
+      showCards(contAsia (dataCountries));
+   }
+    else if(item.textContent==="Europa"){
+      showCards(contEurope (dataCountries));
+   }
+   else if(item.textContent==="Africa"){
+      showCards(contAfrica (dataCountries));
+   }
+    else if(item.textContent==="Oceania"){
+      showCards(contOceania (dataCountries));
+   }
+    else if (item.textContent==="Antartica"){
+      showCards(contAntarctica (dataCountries));
+   }
+      
+    console.log('Haz click en', item.textContent);
   });
 });
-
-console.log(contAmerica(dataCountries))
+;
