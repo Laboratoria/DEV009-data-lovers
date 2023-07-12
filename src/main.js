@@ -1,12 +1,8 @@
 
 import { contAmerica,contAsia,contAfrica,contEurope,contOceania,contAntarctica,busqueda,} from './data.js';
 import countries from './data/countries/countries.js';
-
-// import data from './data/lol/lol.js';
 import data from './data/countries/countries.js';
-// import data from './data/rickandmorty/rickandmorty.js';
 
-//console.log(example, data);
 const root =document.getElementById('root');
 const dataCountries = data.countries;
 /**************Creacion de cartas****************/
@@ -37,7 +33,13 @@ searchButton.addEventListener('click',function(){
   const valor= input.value.toLowerCase();
   const resultado = busqueda(dataCountries,valor);
 
-  showCards(resultado);
+  if (resultado === 0 || valor.length === 0){
+    alert('Pais no encontrado')
+  } else{
+    showCards(resultado);
+  }
+
+
 });
 /**********Creacion de ventana Modal****************/
 const showModal = (dataCountry) => {
@@ -95,7 +97,6 @@ const showModal = (dataCountry) => {
   });
 }
 /****Filtrado por continetes****/
-
 const menuItems = document.querySelectorAll('.menu__item');
 menuItems.forEach(function(item){
   item.addEventListener('click', function(event){

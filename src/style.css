@@ -16,6 +16,7 @@ header{
   background-color:  #547ea7;
 }
 
+
 /*HEADER SUPERIOR*/
 
 .logoTitulo {
@@ -224,6 +225,7 @@ nav>ul>li>ul>li:hover ul{
 .modal h2{
   text-align: center;
 }
+
 #informacion{
   font-family: sans-serif;
   font-weight: bold;

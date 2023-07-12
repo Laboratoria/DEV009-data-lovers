@@ -30,7 +30,6 @@ export const country = (countries, id) => {
 export const continents = (countries) => {
   return countries.filter((item) => item.continents[0] === menuItems);
 };
-export const anotherExample = () => {
-  return 'OMG';
-};
+
+
 
