@@ -18,9 +18,21 @@ export const searchPokemon = (data, inputText) => {
 
 
 
-// FUNCION MOSTRAR MODAL AL DAR CLICK SOBRE LA CARD
-/* export const modalPokemon = (event){
-  const modal =  event.target.getAttribute('nombre');
-}; */
+// FUNCION ORDENAR DATA POR NOMBRE
+
+/*  export const orderData = ( a, b) => {
+  if(a.pokemon.name < b.pokemon.name){
+    return -1;
+  }
+  if(a.pokemon.name > b.pokemon.name){
+    return 1;
+  }
+  return 0;
+}  */
+
+
+export function hola() {
+  console.log("hola");
+}
 
 
