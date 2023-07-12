@@ -21,7 +21,7 @@ const display = (pokemones) => {
         <h4> Tipo: ${element.type}</h4>
         <h4> Tamaño: ${element.size.height}</h4>
         <h4> Peso: ${element.size.weight}</h4>
-        <p id="about" >${element.about}</p>`
+        <p id="about">${element.about}</p>`
     container.appendChild(target)
 
   });
