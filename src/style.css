@@ -16,17 +16,10 @@ header{
   background-color:  #547ea7;
 }
 
-/*HEADER SUPERIOR*/
-
-.header_superior{
-  max-width: 0100px;
-  margin: auto;
-  display: flex;
-  padding: 10px;
-}
+/*LOGO TITULO*/
 
 .logoTitulo {
-  display: flex;
+  display:flex;
   align-items: center;
   font-weight:bold;
   font-size:larger; 
@@ -217,6 +210,13 @@ nav>ul>li>ul>li:hover ul{
   gap: 2em;
   place-items:initial;
   grid-auto-columns: 100%;
+}
+
+.modal img{
+height: 50px;
+display: block;
+margin: 0 auto;
+
 }
 
 #informacion{

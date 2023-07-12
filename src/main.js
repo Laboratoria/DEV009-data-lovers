@@ -1,4 +1,4 @@
-import { busqueda} from './data.js';
+import { busqueda,contAmerica } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/countries/countries.js';
 // import data from './data/rickandmorty/rickandmorty.js';
@@ -34,7 +34,13 @@ searchButton.addEventListener('click',function(){
   const valor= input.value.toLowerCase();
   const resultado = busqueda(dataCountries,valor);
 
-  showCards(resultado);
+  if (resultado === 0 || valor.length === 0){
+    alert('Pais no encontrado')
+  } else{
+    showCards(resultado);
+  }
+
+
 });
 /**********Creacion de ventana Modal****************/
 const showModal = (dataCountry) => {
@@ -69,3 +75,19 @@ const showModal = (dataCountry) => {
   });
 }
 
+/**********Seleccion de Menus y submenus****************/
+const menuItems = document.querySelectorAll('.menu');
+menuItems.forEach(function(item){
+  item.addEventListener('click', function(event){
+    if (item.classList.contains('.submenu')){
+      event.stopPropagation();
+    }
+    //console.log('Haz click en', item.textContent);
+    //const menuElegido = item.textContent
+    if (item.textContent=== "AMERICA"){
+      showCards(contAmerica(dataCountries));
+    }
+  });
+});
+
+console.log(contAmerica(dataCountries))

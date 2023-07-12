@@ -15,7 +15,6 @@ export const country = (countries, id) => {
 export const contCaribe = (countries) => {
   return countries.filter((item) => item.continents[0] === 'caribe');
 };
-export const anotherExample = () => {
-  return 'OMG';
-};
+
+
 
