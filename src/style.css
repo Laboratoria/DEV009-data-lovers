@@ -49,7 +49,9 @@ body {
 }
 
 .header {
-
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     box-shadow: 0 4px 5px var(--nav-background);
     position: fixed;
     top: 0;
@@ -58,7 +60,7 @@ body {
     background: var(--nav-background);
 }
 
-/*  //////////  CODE NANCY //////////*/
+/*  //////////  buscador //////////*/
 
 .buscarPokemon {
     width: 230px;
@@ -76,7 +78,6 @@ body {
 /* ////////  MENU  ////////*/
 
 .menu {
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -174,8 +175,6 @@ body {
     width: 36px;
 }
 
-
-
 /* //////////   FIN  MENU   ////////// */
 
 
@@ -215,19 +214,85 @@ body {
     border-radius: 60%;
 }
 
-/* ///// FIN CARD///// */
 
+/*   modal   */
+.modalPokemon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    padding: 10px;
+    width: 50%;
+    height: 60%;
+    border-radius: 8px;
+    z-index: 1;
+}
+
+
+
+/**/
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin: auto;
+    padding: 10px;
+    width: auto;
+    height: auto;
+}
+
+
+.PokemonName {
+    color: var(--pokemon-type-steel);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+
+
+/**/
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 7px;
+    padding: 7px;
+    background-color: var(--theme-color);
+    border-radius: 4px;
+}
+
+
+/*   modal   */
 
 footer {
     height: auto;
 }
 
 /* //////  RESPONSIVE  /////*/
+/*reposnisve del modal*/
+@media screen and (min-width: 0px) and (max-width: 600px) {
+    .datosPoke {
+        font-size: 12px;
+    }
+}
+
+/*fin reposnisve del modal*/
+
+
 @media only screen and (max-width:600px) {
     .topheader {
-        height: 150 px;
+        height: 100px;
     }
-
 
     .menu__hamburguer {
         display: flex;
