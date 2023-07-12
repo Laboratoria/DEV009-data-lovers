@@ -49,6 +49,10 @@ Trabajamos en la elaboración de un prototipo a papel , luego uno de alta fideli
 #### Prototipos de alta fidelidad
 ![prototipo alta 1](src/img/prototipoaltaversion1.jpg)
 
+![prototipo dinamico](https://www.figma.com/file/Za2IZjJeFvbyY29Qm8RnY7/DL---Prototipo-alta-2?type=design&mode=design&t=SW1ZTLeklR9Bb0Pm-0)
+
+#### Listado de problemas de usabilidad detectados 
+
 Hicimos test de usabilidad recibiendo como feedback los siguiente.
 Usuario 1 : No encontro el boton de ordenar, deberia haber un boton para resetear la busqueda, no deberian ocultarse los filtros, si habia posibilidad de que viera un pop up al darle click a una pelicula o a la imagen o que diera mas informacion(hacker edition),
 
@@ -66,7 +70,7 @@ Por lo que el prototipo de alta fidelidad se modifico de la siguiente manera.
 Se realizo también la versión mobile, considerando una lista desplegable donde se puedan seleccionar los filtros y el orderby.
 ![mobile 1](src/img/versionmobile.jpg)
 
-![mobile 2](src/img/mobilev2.png)
+![mobile 2](src/img/mobilev2.jpg)
 
 Usamos para el diseño de ambos protipos[Figma](https://www.figma.com/) 
 
