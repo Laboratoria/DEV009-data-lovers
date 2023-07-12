@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("section2").style.display = "none";
   document.getElementById("section3").style.display = "none";
   document.getElementById("section4").style.display = "none";
+  document.getElementById("section5").style.display = "none";
 
   // Comandos para hacer la función de desaparecer la página principal y aparecer la página dos
   const botonAbajo = document.getElementById("botonAbajo");
@@ -29,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("section2").style.display = "block";
     document.getElementById("section3").style.display = "block";
     document.getElementById("section4").style.display = "none";
+    document.getElementById("section5").style.display = "none";
   }
 
   const botonArriba = document.getElementById("botonArriba");
@@ -39,6 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("section2").style.display = "none";
     document.getElementById("section1").style.display = "block";
     document.getElementById("section4").style.display = "none";
+    document.getElementById("section5").style.display = "none";
   }
 
   const botonHome = document.getElementById("homeLink");
@@ -49,6 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("section2").style.display = "block";
     document.getElementById("section3").style.display = "block";
     document.getElementById("section4").style.display = "none";
+    document.getElementById("section5").style.display = "none";
   }
 
   const botonTips = document.getElementById("tipsLink");
@@ -59,6 +63,18 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("section2").style.display = "block";
     document.getElementById("section3").style.display = "none";
     document.getElementById("section4").style.display = "block";
+    document.getElementById("section5").style.display = "none";
+  }
+
+  const botonEstadisticas = document.getElementById("estadisticasLink");
+  botonEstadisticas.addEventListener("click", estadisticasPasar);
+
+  function estadisticasPasar() {
+    document.getElementById("section1").style.display = "none";
+    document.getElementById("section2").style.display = "block";
+    document.getElementById("section3").style.display = "none";
+    document.getElementById("section4").style.display = "none";
+    document.getElementById("section5").style.display = "block";
   }
 });
 
