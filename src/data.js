@@ -23,6 +23,7 @@ export const sortNum = (arr, option) => {
 }
 
 
+
 //filtro por nombre
 export function resultName(arr, filterName) {
   const results = arr.filter(element => {
@@ -30,7 +31,6 @@ export function resultName(arr, filterName) {
   });
   return results
 }
-
 
 /* -----> calculo agregado de tipos, average= promedio <------- */
 
