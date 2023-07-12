@@ -214,6 +214,7 @@ body {
     border-radius: 60%;
 }
 
+
 /*   modal   */
 .modalPokemon {
     display: flex;
@@ -234,10 +235,7 @@ body {
 }
 
 
-.az, .za{
-    margin-top: 40px;
-    padding-top: 40px; 
-}
+
 /**/
 .modal-content {
     display: flex;
