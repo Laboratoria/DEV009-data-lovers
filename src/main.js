@@ -102,11 +102,13 @@ ordenAlfabeticoFilmsLink.addEventListener('click', function(event) {
 
 //______PELÍCULAS ORDENADAS POR AÑO ('release_date')
 
-const filmsDate = data.films.flatMap(film => ({
+/*const filmsDate = data.films.flatMap(film => ({
   title: film.title,
   poster: film.poster,  
   release_date: film.release_date
-}));
+}));*/
+
+const filmsDate = data.films.filter(film => film.release_date);
 
 filmsDate.sort((a, b) => a.release_date.localeCompare(b.release_date));
 console.log("estoy ordenando películas por año", filmsDate);
@@ -154,8 +156,12 @@ const peopleFilm = data.films.flatMap(film =>
     name: people.name,
     image: people.img,
     film: film.title
-  }))
-);
+  })));
+
+/*const peopleFilm = [];
+data.films.forEach(film => {
+  film.people.filter(people => people.name).forEach(({ name }) => peopleFilm.push({ name, film: film.title }));
+});*/
 
 peopleFilm.sort((a, b) => a.film.localeCompare(b.film));
 console.log("Estoy clasificando personajes por película", peopleFilm);
@@ -200,13 +206,15 @@ ordenPeopleFilmsLink.addEventListener('click', function(event) {
 });
 
 //______PELÍCULAS ORDENADAS POR DIRECTOR ('director')
-const filmsDirector = data.films.flatMap(film => ({
+/*const filmsDirector = data.films.flatMap(film => ({
   title: film.title,
   poster: film.poster,  
   director: film.director
-}));
-const filmsListDirector = document.getElementById('films-list-director')
+}));*/
 
+const filmsDirector = data.films.filter(film => film.director);
+
+const filmsListDirector = document.getElementById('films-list-director')
 
 filmsDirector.sort((a, b) => a.director.localeCompare(b.director));
 console.log("estoy ordenando películas por director", filmsDirector);
@@ -248,15 +256,20 @@ ordenDirectorFilmsLink.addEventListener('click', function(event) {
 });
 
 //______PERSONAJES ORDENADOS POR GRUPO ETARIO ('age')
-const agePeople = data.films.flatMap(film =>
+/*const agePeople = data.films.flatMap(film =>
   film.people.map(people => ({
   name: people.name,
   image: people.img,
   age: parseInt(people.age, 10)
 })).filter(person => Number(person.age))
-);
-const peopleListAge = document.getElementById('people-list-age')
+);*/
 
+const agePeople = [];
+data.films.forEach(film => {
+  film.people.filter(people => Number(people.age)).forEach(people => agePeople.push(people));
+});
+
+const peopleListAge = document.getElementById('people-list-age')
 
 agePeople.sort((a, b) => {
   if (a.age && b.age) {
@@ -267,7 +280,8 @@ agePeople.sort((a, b) => {
   }
   return 0;
 });
-  console.log("estoy ordenando personajes por edad", agePeople);
+  
+console.log("estoy ordenando personajes por edad", agePeople);
 
 agePeople.forEach(people => {
   const peopleItem = document.createElement('div');
@@ -275,7 +289,7 @@ agePeople.forEach(people => {
   const peopleName = document.createElement('p');
   const peopleAge = document.createElement('p');
 
-  peopleImage.src = people.image;
+  peopleImage.src = people.img;
   peopleName.textContent = people.name;
   peopleAge.textContent = people.age;
 
