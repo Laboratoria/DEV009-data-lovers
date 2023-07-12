@@ -1,5 +1,9 @@
 // importa una entidad llamada example desde el archivo data.js
-import { searchPokemon} from './data.js';
+
+import { searchPokemon, hola } from './data.js';
+import pokemon from './data/pokemon/pokemon.js';
+
+
 
 
 //importa un objeto llamado data desde el archivo pokemon.js ubicado en el directorio ./data/pokemon/
@@ -27,6 +31,7 @@ const menu = {
       "title": "All Pokémon",
       "class": "menu__link",
       "href": "#"
+
     },
     {
       "title": "TYPE",
@@ -121,9 +126,13 @@ search.setAttribute("type", "text");
 search.classList.add("buscarPokemon");
 search.placeholder = "Search Pokémon for name or num";
 
-section.appendChild(logo);
-section.appendChild(ul);
-section.appendChild(search);
+
+
+/////////////////////////////   
+const orderaz = document.querySelector(".az");
+const orderza = document.querySelector(".za");
+
+section.append(logo, ul, search, orderaz, orderza);
 nav.appendChild(section);
 header.appendChild(nav)
 
@@ -186,11 +195,23 @@ const displayPokemon = (dataPokemon, filter) => {
     typePokemon.textContent = `Type: ${pokemon.type.join(", ")}`;
     infoContainer.appendChild(typePokemon);
 
-    card.appendChild(infoContainer);
-    card.appendChild(imgContainer);
 
+    card.append(infoContainer, imgContainer);
     root.appendChild(card);
 
+
+     /// ordenad data
+    orderaz.addEventListener('click',() =>{
+      hola();
+    });
+
+    orderza.addEventListener('click', ()=>{
+      hola();
+    });
+
+
+    
+    
 
     ////// M O D A L     P O K E M O N /////////
     //abrir modal
@@ -212,15 +233,16 @@ const displayPokemon = (dataPokemon, filter) => {
       const modalContent = document.createElement("div");
       modalContent.classList.add("modal-content");
 
-      const numAname = document.createElement("div");
-      numAname.classList.add("numAname")
-      const pokemonId = document.createElement("p");
+      //////////////////////////////
+      const pokemonId = document.createElement("div");
+      pokemonId.classList.add("IdPokemon");
       pokemonId.textContent = `N.º ${pokemon.num}`;
-      numAname.appendChild(pokemonId);
+      modalContent.appendChild(pokemonId);
 
-      const pokemonName = document.createElement("h1");
-      pokemonName.textContent = pokemon.name;
-      numAname.appendChild(pokemonName);
+      const pokemonName = document.createElement("div");
+      pokemonName.classList.add("PokemonName");
+      pokemonName.textContent = pokemon.name.toUpperCase();
+      modalContent.appendChild(pokemonName);
 
       const imgPokemonModal = document.createElement("div");
       imgPokemonModal.classList.add("imgPokemonModal");
@@ -228,20 +250,68 @@ const displayPokemon = (dataPokemon, filter) => {
       imgPokemonMod.src = pokemon.img;
       imgPokemonModal.appendChild(imgPokemonMod);
 
+      const datosPoke = document.createElement("div");
+      datosPoke.classList.add("datosPoke");
+
+      const typeModal = document.createElement("div");
+      typeModal.classList.add("typeModal");
+      typeModal.innerHTML = `Type: ${pokemon.type} <br>`;
+      datosPoke.appendChild(typeModal);
+
+      const resistantModal = document.createElement("div");
+      resistantModal.innerHTML = `Resistant: ${pokemon.resistant.join(", ")}`;
+      datosPoke.appendChild(resistantModal);
+
+      const quickMoveModal = document.createElement("div");
+      const quickMove = pokemon["quick-move"];
+      let quickData = [];
+      for (let i = 0; i < quickMove.length; i++) {
+        quickData.push(quickMove[i].name);
+      }
+      quickMoveModal.textContent = `Quick Move: ${quickData.join(", ")}`;
+      datosPoke.appendChild(quickMoveModal);
+
+      const weaknessesModal = document.createElement("div");
+      weaknessesModal.textContent = `Weaknesses: ${pokemon.weaknesses.join(", ")}`;
+      datosPoke.appendChild(weaknessesModal);
+
+      const attack = document.createElement("div");
+      var specialAttackData = pokemon["special-attack"];
+      console.log(specialAttackData);
+      var attackName = [];
+      for (var i = 0; i < specialAttackData.length; i++) {
+        console.log(specialAttackData[i].name);
+        attackName.push(specialAttackData[i].name);
+      };
+      attack.textContent = `Special Attack: ${attackName.join(", ")}`;
+      datosPoke.appendChild(attack);
+
+      //mostrar huevos
+      const imgEgg = document.createElement("img");
+      imgEgg.src = "./assets/egg.svg";
+      imgEgg.alt = "Egss";
+
+      const eggs = document.createElement("p");
+      eggs.innerHTML = pokemon.egg;
+      eggs.insertBefore(imgEgg, eggs.firstChild);
+      datosPoke.appendChild(eggs);
+
+
+
       //cerar modal
       const close = document.createElement("span");
       close.classList.add("close");
-      close.textContent = "×";
+      close.textContent = "X";
 
       close.addEventListener('click', () => {
         modal.style.display = 'none';
       });
 
-      modalContent.appendChild(numAname);
-      modalContent.appendChild(imgPokemonModal);
       modal.appendChild(close);
+      modalContent.append(pokemonId, pokemonName, imgPokemonModal, datosPoke);
       modal.appendChild(modalContent);
       root.appendChild(modal);
+
 
     });
   });
