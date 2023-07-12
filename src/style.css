@@ -282,6 +282,80 @@ display: block;
 }
 
 
+/*------------------------------------------EDICION DE LA PAGINA DE TIPS------------------------------------------------------*/
+.conteiner-tall-section4{
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 70px;
+  background-image: linear-gradient(to right, #243949 0%, #40627e 100%);
+}
+.titulo_tips{
+  font-family: 'Knewave';
+  font-size: 25px;
+}
+.tip-1{
+  display: flex;
+  margin: 0 auto;
+  width: 94vw;
+  height: 20vh;
+  justify-content: center;
+  align-items: center;
+  }
+.tip-2{
+  display: flex;
+  margin:0 auto;
+  width: 94vw;
+  height: 20vh;
+  justify-content: center;
+  align-items: center;
+}
+.tip-3{
+  display: flex;
+  margin: 0 auto;
+  width: 94vw;
+  height: 24vh;
+  justify-content: center;
+  align-items: center;
+}
+.tip-4{
+  display: flex;
+  margin: 0 auto;
+  width: 94vw;
+  height: 12vh;
+  justify-content: center;
+  align-items: center;
+}
+.tip-5{
+  display: flex;
+  margin: 0 auto;
+  width: 94vw;
+  height: 20vh;
+  justify-content: center;
+  align-items: center;
+}
+.tip-6{
+  display: flex;
+  margin: 0 auto;
+  width: 94vw;
+  height: 22vh;
+  justify-content: center;
+  align-items: center;
+}
+.tip-7{
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 94vw;
+  height: 28vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.p-tips{
+  font-size: 15px;
+  text-align: justify;
+}
+
 
 
 

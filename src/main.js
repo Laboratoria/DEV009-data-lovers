@@ -14,24 +14,53 @@ const navMenu = document.querySelector(".nav-menu");
 navToggle.addEventListener("click", () => {
   navMenu.classList.toggle("nav-menu_visible");
 });
-
-// Comandos para hacer la función de desaparecer la página principal y aparecer la página dos.
-
-const botonAbajo = document.getElementById("botonAbajo");
-botonAbajo.addEventListener("click", Continuar);
-
-function Continuar() {
-  document.getElementById("section1").style.display = "none";
-  document.getElementById("section2").style.display = "block";
-}
-
-const botonArriba = document.getElementById("botonArriba");
-botonArriba.addEventListener("click", Subir);
-
-function Subir() {
+document.addEventListener("DOMContentLoaded", function () {
+  // Ocultar section2 al cargar la página
   document.getElementById("section2").style.display = "none";
-  document.getElementById("section1").style.display = "block";
-}
+  document.getElementById("section3").style.display = "none";
+  document.getElementById("section4").style.display = "none";
+
+  // Comandos para hacer la función de desaparecer la página principal y aparecer la página dos
+  const botonAbajo = document.getElementById("botonAbajo");
+  botonAbajo.addEventListener("click", Continuar);
+
+  function Continuar() {
+    document.getElementById("section1").style.display = "none";
+    document.getElementById("section2").style.display = "block";
+    document.getElementById("section3").style.display = "block";
+    document.getElementById("section4").style.display = "none";
+  }
+
+  const botonArriba = document.getElementById("botonArriba");
+  botonArriba.addEventListener("click", Subir);
+
+  function Subir() {
+    document.getElementById("section3").style.display = "none";
+    document.getElementById("section2").style.display = "none";
+    document.getElementById("section1").style.display = "block";
+    document.getElementById("section4").style.display = "none";
+  }
+
+  const botonHome = document.getElementById("homeLink");
+  botonHome.addEventListener("click", homePasar);
+
+  function homePasar() {
+    document.getElementById("section1").style.display = "none";
+    document.getElementById("section2").style.display = "block";
+    document.getElementById("section3").style.display = "block";
+    document.getElementById("section4").style.display = "none";
+  }
+
+  const botonTips = document.getElementById("tipsLink");
+  botonTips.addEventListener("click", tipsPasar);
+
+  function tipsPasar() {
+    document.getElementById("section1").style.display = "none";
+    document.getElementById("section2").style.display = "block";
+    document.getElementById("section3").style.display = "none";
+    document.getElementById("section4").style.display = "block";
+  }
+});
 
 import Data from "./data/lol/lol.js";
 
