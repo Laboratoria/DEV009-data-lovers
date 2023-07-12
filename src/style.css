@@ -53,6 +53,7 @@ main {
     margin: 10px;
 }
 
+
 label.order{
     color: #FFFFFF;
     margin: 10px;
@@ -123,6 +124,12 @@ h2{
     text-align: center;
 }
 
+h2{
+    border: 3px solid #4c42d4;
+    border-radius: 3px;
+    text-align: center;
+}
+
 p#porcent {
     border: 3px solid #FFCB08;
     background: #FFCB08;
@@ -131,8 +138,6 @@ p#porcent {
     padding: 10px;
     width: 110px;
     border-radius: 5px;
-   
-    
 }
 
 @media (max-height:950px) {
