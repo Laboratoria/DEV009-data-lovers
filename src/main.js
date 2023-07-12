@@ -50,19 +50,43 @@ menuOption.addEventListener('change',
       pokemonList.forEach(function(pokemon){
         display(pokemon);
       });
+      menuOrdenar.addEventListener('change', ()=>{
+        const ordenar = menuOrdenar.options[menuOrdenar.selectedIndex].value;
+        cleanShowAll();
+        const ordenados = sortData(pokemonList,'name',ordenar);
+        ordenados.forEach(function(pokemon){
+          display(pokemon);
+        });
+      
+        
+      });
+
       break;
           
     case 'mythic':
+
+      const mythic = filterData(pokemonList,'mythic','pokemon-rarity')
        
-      filterData(pokemonList,'mythic','pokemon-rarity').forEach(function(pokemon){
+      mythic.forEach(function(pokemon){
         display(pokemon);
+      });
+
+      menuOrdenar.addEventListener('change', ()=>{
+        const ordenar = menuOrdenar.options[menuOrdenar.selectedIndex].value;
+        cleanShowAll();
+        const ordenados = sortData(mythic,'name',ordenar);
+        ordenados.forEach(function(pokemon){
+          display(pokemon);
+        });
+      
+        
       });
       
       break;
          
     
     case 'legendary':
-      const legendary = filterData(pokemonList,'legendary','pokemon-rarity')
+      const legendary = filterData(pokemonList,'legendary','pokemon-rarity');
       legendary.forEach(function(pokemon){
         display(pokemon);
       });
@@ -77,14 +101,22 @@ menuOption.addEventListener('change',
         
       });
       
-
-      
       break;
 
     case 'normal':  
       const normal = filterData(pokemonList,'normal','pokemon-rarity');
       normal.forEach(function(pokemon){
         display(pokemon);
+      });
+      menuOrdenar.addEventListener('change', ()=>{
+        const ordenar = menuOrdenar.options[menuOrdenar.selectedIndex].value;
+        cleanShowAll();
+        const ordenados = sortData(normal,'name',ordenar);
+        ordenados.forEach(function(pokemon){
+          display(pokemon);
+        });
+      
+        
       });
       break;
         
