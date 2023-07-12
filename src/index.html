@@ -1,12 +1,174 @@
+
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>league of legend</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Knewave&display=swap" rel="stylesheet"/>
+    <script src="https://kit.fontawesome.com/5f673cf7f2.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
+    <!--Pagina Principal-->
+    <section id="section1">
+      <!--PRESENTACION-->
+    <header id="header" class="header">
+      <div id="container_text">
+        <div id="container_title">
+          <h1 id="header_h1">league of legend</h1>
+        </div>
+        <div id="container_phrase">
+          <div id ="container_ph1" class="container_phall">
+            <p class="p1">ELIGE A TU</p>
+          </div>
+          <div id ="container_ph2" class="container_phall">
+            <p class="p2">CAMPEÓN</p>
+          </div>
+          <div id ="container_ph3" class="container_phall">
+            <p class="p3">Teniendo en cuenta que hay más de 140 campeones, no <br> tardarás en encontrar tu estilo de juego. Domina a uno o a <br>todos.</p>
+          </div>
+        </div>
+        <div class="div_flecha">
+          <a href="#section2"><img src="flecha.png" id="botonAbajo"></a>
+        </div>
+        <!-- <video autoplay>
+          <source src="videodefondo.mp4" type="video/mp4">
+        </video>
+        <div class="capa"></div>-->
+      </div> 
+    </header>
+    </section>
+  <!--Página dos-->
+    <section id="section2">
+    <nav class="nav">
+      <a href="#section1" class="logo nav-link" id="botonArriba">League of Legend</a>
+      <button class="nav-toggle nav-menu_visible" aria-label="Abrir menú">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+        <ul class="nav-menu">
+          <li class="nav-menu-item"><a class="nav-menu-link nav-link" id="homeLink"  href="#home">Home</a></li>
+          <li class="nav-menu-item"><a class="nav-menu-link nav-link" id="tipsLink" href="#tips">Tips para jugar</a></li>
+          <li class="nav-menu-item"><a class="nav-menu-link nav-link" id="estadisticasLink" href="#estadisticas">Estadisticas</a></li>
+        </ul>
+    </nav>
+    </section>
+  
+    <!--HOME-->
+    <section id="section3">
+    <main id="container_main">
+      <div id="container_all">
+          <!--SEGUNDA BARRA DE NAVEGACION-->
+        <div class="container_nav_all">
+
+          <nav class="nav2-roles">
+            <div class="div-roles">ROLES
+              <ul class="ul-roles">
+                <li> <a href="#TODOS" id="todos-link" class="active">TODOS</a> </li>
+                <li> <a href="#LUCHADOR" id="luchador-link">LUCHADOR</a> </li>
+                <li> <a href="#TIRADOR" id="tirador-link">TIRADOR</a> </li>
+                <li> <a href="#MAGO" id="mago-link">MAGO</a> </li>
+                <li> <a href="#ASESINO" id="asesino-link">ASESINO</a> </li>
+                <li> <a href="#TANQUE" id="tanque-link">TANQUE</a> </li>
+                <li> <a href="#APOYO" id="apoyo-link">APOYO</a> </li>
+              </ul>
+            </div>
+          </nav>
+
+          <div class="btn-ordenar">ORDENAR
+            <ul class="ul-ordenar">
+              <li class="li-az"><a href="#" id="a-z-ordenarlink">A - Z</a></li>
+              <li class="li-za"><a href="#" id="z-a-ordenarlink">Z - A </a></li>
+            </ul>
+          </div>
+
+          <div class="buscador">
+            <input type="text" placeholder="Buscar" />
+            <div class="boton">
+            <i class="fas fa-search icon"></i>
+            </div>
+          </div>
+    </div>
+        <div id="container_img" class="container clearfix"></div>
+      </div>
+    </main>
+    </section>
+<!--TIPS PARA JUGAR-->
+  <section id="section4">
+    <div class="container-tall-section4">
+    
+      <div class="titulo_tips">
+       <h1>Tips para jugar</h1>
+      </div>
+  
+      <div class="tip-1">
+        <p class="p-tips"> <b><span class="span-tips"> 1.-Comunícate con tu equipo:</span> La comunicación efectiva es clave para el trabajo en equipo y la toma de decisiones estratégicas. Utiliza el chat y los pings para coordinarte con tus compañeros de equipo.</b></p>
+        <img class="img-1" src="https://64.media.tumblr.com/0760efe0779bce8262972b5f1c3ed01f/tumblr_pauwhdU0Pf1uaqtxco1_540.gif" width="20%">
+      </div>
+  
+      <div class="tip-2">
+        <img class="img-2" src="https://nlml.github.io/images/lolmm/anim.gif" width="20%">
+        <p class="p-tips"> <b><span class="span-tips">2.-Controla el mapa:</span>  Presta atención al minimapa y comunica cualquier información relevante a tu equipo. Esto incluye avistamientos de enemigos, objetivos neutrales, wards enemigos y más. Tener un buen control del mapa te dará una ventaja estratégica.</b></p>
+      </div>
+  
+      <div class="tip-3">
+        <p class="p-tips"> <b><span class="span-tips"> 3.-Aprende los roles y posiciones:</span> Es importante entender los diferentes roles y posiciones en League of Legends, como el carril superior, la jungla, el carril central, el tirador y el soporte. Aprende qué se espera de cada posición y cómo puedes desempeñar tu papel de manera efectiva.</b></p>
+        <img class="img-3" src="https://static.gamehag.com/upload/PmnncZEB5UKQWxjPVGz1w7ZRgqkP62.jpg" width="20%">
+      </div>
+  
+      <div class="tip-4">
+        <img class="img-4" src="https://st1.uvnimg.com/dims4/default/95b4f12/2147483647/thumbnail/480x270/quality/75/format/jpg/?url=https%3A%2F%2Fuvn-brightspot.s3.amazonaws.com%2Fassets%2Fvixes%2Fr%2Friven-bronze-iloveimg-compressed.gif" width="20%">
+        <p class="p-tips"> <b><span class="span-tips"> 4.-Controla las oleadas de minions:</span> Presta atención a la posición de las oleadas de minions y utiliza esto a tu favor para ganar ventaja en la línea y presionar torres.</b></p>
+      </div>
+  
+      <div class="tip-5">
+        <p class="p-tips"> <b><span class="span-tips">5.- Haz uso de los objetivos neutrales:</span> Los dragones, el Barón Nashor y los Heraldos son objetivos importantes que pueden proporcionar beneficios significativos a tu equipo. No descuides su control.</b></p>
+        <img class="img-5" src="https://media.tenor.com/Qn-gC0iyhFkAAAAC/monster-buff.gif" width="20%">
+      </div>
+  
+      <div class="tip-6">
+        <img class="img-6" src="https://esports.as.com/2022/01/28/league-of-legends/Caitlyn-Xin-Zhao-Twisted-Fate_1542155788_906759_1440x600.png" width="20%">
+        <p class="p-tips"> <b><span class="span-tips">6.-Domina un pequeño conjunto de campeones:</span> En lugar de intentar aprender todos los campeones del juego, es mejor enfocarse en dominar un pequeño grupo de ellos. Elige algunos campeones que se adaptan a tu estilo de juego y practican con ellos para mejorar tus habilidades.</b></p>
+      </div>
+  
+      <div class="tip-7">
+        <p class="p-tips"> <b><span class="span-tips">7.- No te desanimes por las derrotas:</span> Todos tienen malas partidas y pierden ocasionalmente. En lugar de frustrarte, aprovecha cada partida como una oportunidad para aprender y mejorar. Analiza tus errores y busca formas de evitarlos en el futuro. La mentalidad positiva y la perseverancia son clave para progresar en el juego.</b></p>
+        <img class="img-7" src="https://media.tenor.com/MusbmvXoZXYAAAAd/lol-defeat-game.gif" width="20%">
+      </div>
+  
+    </div>
+  </section>
+
+  <!--ESTADISTICAS-->
+  <section id="section5">
+
+    <div class="container-tall-section5">
+
+      <div class="titulo-estadisticas">
+        <h1>Estadísticas</h1>
+      </div>
+
+      <div class="container-estadisticas">
+
+        <div class="div-estadistica-izquierda">
+          <div class="title-izquierda">¿Que rol de League of Legends tiene más campeones?</div>
+          <p class="info-estadistica-izquierda"></p>
+          </div>
+        </div>
+
+        <div class="div-estadistica-derecha">
+          <div class="title-derecha">Ranking de jugadores ordenados de menor a mayor dificultad</div>
+          <img src="Caitlyn_estadisticas.png">
+          </div>
+        </div>
+      
+      </div>
+
+    </div>
+  </section>
+
+
+  <script src="main.js" type="module"></script>
   </body>
 </html>
