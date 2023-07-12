@@ -1,4 +1,5 @@
-import { contAmerica, contCaribe, busqueda,country } from './data.js';
+import { contAmerica,contAsia,contAfrica,contEurope,contOceania,contAntarctica,busqueda,} from './data.js';
+import countries from './data/countries/countries.js';
 // import data from './data/lol/lol.js';
 import data from './data/countries/countries.js';
 // import data from './data/rickandmorty/rickandmorty.js';
@@ -46,19 +47,15 @@ const showModal = (dataCountry) => {
    <div class="modal_container">
    <ul class="modal_lista"></ul>
    <a href="a" class="modal_close_button"> Cerrar</a>
+   <h2>${dataCountry.name.common}</h2>
    <img src=${dataCountry.flags.png}>
-   <li name="Nombre_de_pais" id="informacion">${dataCountry.name.common}</li>
    <li name="Nombre_de_pais_oficial" id="informacion">Nombre de pais oficial:${dataCountry.name.official}</li>
    <li name="Capital" id="informacion">Capital:${dataCountry.capital}</li>
    <li name="Continente" id="informacion">Continente:${dataCountry.continents}</li>
    <li name="Subregion" id="informacion">Subregion:${dataCountry.subregion}</li>
-   <li name="Idioma" id="informacion">Idioma:${dataCountry.languages}</li>
-   <li name="Codigo_fifa" id="informacion">Código FIFA :${dataCountry.fifa}</li>
-   <li name="Paises_limitantes">Paises limitantes:${dataCountry.borders}</li>
-   <li name="Poblacion_total">Población total:${dataCountry.population}</li>
-   <li name="Area_total">Area total:${dataCountry.area}</li>
-   <li name="Top_level_domain">Top Level Domain:${dataCountry.tld}</li>
-   <li name="Pais_independizado">Pais independizado:${dataCountry.independent}</li>
+   <li name="Idioma" id="informacion">Idioma:${dataCountry.languages.value}</li>
+   <li name="Poblacion_total"id="informacion">Población total:${dataCountry.population}</li>
+   <li name="Area_total"id="informacion">Area total:${dataCountry.area}</li>   
    </div> 
    </section> 
    `
@@ -71,4 +68,35 @@ const showModal = (dataCountry) => {
       modal.remove();       
    });
 }
+/****Filtrado por continetes****/
 
+const menuItems = document.querySelectorAll('.menu__item');
+menuItems.forEach(function(item){
+  item.addEventListener('click', function(event){
+    if (item.classList.contains('.submenus')){
+      event.stopPropagation();
+    }
+     
+   if (item.textContent==="America"){
+      showCards(contAmerica (dataCountries));
+   }
+    else if(item.textContent==="Asia"){
+      showCards(contAsia (dataCountries));
+   }
+    else if(item.textContent==="Europa"){
+      showCards(contEurope (dataCountries));
+   }
+   else if(item.textContent==="Africa"){
+      showCards(contAfrica (dataCountries));
+   }
+    else if(item.textContent==="Oceania"){
+      showCards(contOceania (dataCountries));
+   }
+    else if (item.textContent==="Antartica"){
+      showCards(contAntarctica (dataCountries));
+   }
+      
+    console.log('Haz click en', item.textContent);
+  });
+});
+;

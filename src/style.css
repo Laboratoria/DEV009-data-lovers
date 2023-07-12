@@ -10,7 +10,7 @@
 
 header{
   width: 100%;
-  position: fixed;
+  position: fixed;/* se mantiene por encima de todo y pegado*/
   top: 0px;
   left: 0px;
   background-color:  #547ea7;
@@ -18,74 +18,71 @@ header{
 
 /*HEADER SUPERIOR*/
 
-.header_superior{
-  max-width: 0100px;
-  margin: auto;
-  display: flex;
-  padding: 10px;
-}
-
 .logoTitulo {
   display: flex;
+  justify-content: center;
   align-items: center;
   font-weight:bold;
   font-size:larger; 
   color:#19191a;
-  letter-spacing: 1px;
-}
+  letter-spacing: 5px;
+  margin: 15px;
+  }
 
 
 /* BARRA MENU*/
 .container_menu{
   width: 100%;
-  height: 40px;
+  height: 50px;
   background-color:#a77d54;
-  padding: 0px 20px;
+  padding: 0px 40px;
+  display: flex;
+  
 }
-.menu{
-  max-width: 1200px;
-  margin: auto;
+.navegacion{
+  max-width: 1000px;
+  margin: 5px;
   height: 100%;
+  align-content: center;
 }
-nav{
-  height: 100%;
- }
 .buscador input {
  width: 200px;
  padding: 8px;
- 
- }
- .buscador button{
+}
+.buscador button{
  width: 70px;
  padding: 8px;
- 
- }
-nav>ul{
+ margin: auto;
+}
+
+.navegacion > ul{
   height: 100%;
   display: flex;
+  list-style: none;
 }
-nav>ul>li{
+.menu > li{
   height: 100%;
   list-style: none;
-  position: relative;
-  }
-nav>ul>li>a{
+  position: relative;/* para que los l1 se relacionen con el padre*/
+}
+.menu > li > a{
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center; /*posicion central de acuerdo al width y hight*/
-  padding: 14px;
+  padding: 30px;
   color:#ffff;
   font-size: 14px;
   transition: all 300ms ease;
 }
-nav>ul>li>a:hover{
+
+.menu >li>a:hover{
   transform: escale(1.1);/*hace que crezca un poco al cuadro que se selecciona al pasar mouse*/
   background: #966b47;
   box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
 }
 /*SUBMENU*/
-nav>ul>li>ul{
+.submenu{
   width: 200px;
   display: flex;
   flex-direction: column;
@@ -99,13 +96,12 @@ nav>ul>li>ul{
   box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
   z-index: 10;
   transition: all 300ms ease;
-  list-style: none;
- 
-  }
-nav>ul>li:hover ul{
+  list-style: none
+}
+.menu >li:hover ul{
  visibility: visible;
  opacity: 1;
- top: 40px;
+ top: 50px;
 }
 nav>ul>li>ul:before{
   content:'';
@@ -119,13 +115,12 @@ nav>ul>li>ul:before{
   left:20px;
 }
 nav>ul>li>ul>li>a{
-  display: block;
+  display:flex;
   color:#19191a;
   padding: 6px;
   padding-left: 14 px;
   margin-top: 10px;
   font-size: 14px;
-  text-transform: uppercase;
   transition: all 300ms ease;
 }
 nav>ul>li>ul>li>a:hover{
@@ -135,7 +130,7 @@ nav>ul>li>ul>li>a:hover{
   padding-left: 30px;
   font-size: 14px;
   box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
-  }
+}
 /*SUBMENU2*/
 nav>ul>li>ul>li>ul>a{
   width: 200px;
@@ -150,7 +145,7 @@ nav>ul>li>ul>li>ul>a{
   list-style: none;
   box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
  
-  }
+}
 nav>ul>li>ul>li:hover ul{
  visibility: hidden;
  opacity: 1;
@@ -194,8 +189,8 @@ nav>ul>li>ul>li:hover ul{
 }
 /***Ventana modal***/
 .modal {
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height:100%;
  position:fixed;/**fijar en la página*/
  top:0;
  left:0;
@@ -206,21 +201,31 @@ nav>ul>li>ul>li:hover ul{
 }
 
 .modal_container{
-  margin: auto;
-  width: 90%;
-  max-width: 600px;
+  margin:auto;
+  width: 80%;
+  max-width: 500px;
   max-height: 100%;
-  background-color: beige;
-  border-radius:  10px; 
-  padding: 3em 2.5em;
+  background-color: whitesmoke;
+  border-radius:  15px; 
+  padding: 3rem ;
   display: grid;
   gap: 2em;
   place-items:initial;
-  grid-auto-columns: 100%;
+  list-style: none
+  /*grid-auto-columns:100%;*/
+  
 }
-
+.modal img{
+  width: 150px;
+  height: auto;
+ display: block;
+ margin: 0 auto;
+}
+.modal h2{
+  text-align: center;
+}
 #informacion{
-  font-family: 'Courier New', Courier;
+  font-family: sans-serif;
   font-weight: bold;
   color: #0a2948;
 ;
