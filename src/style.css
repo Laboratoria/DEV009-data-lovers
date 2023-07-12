@@ -140,11 +140,3 @@ p#porcent {
     border-radius: 5px;
 }
 
-@media (max-height:950px) {
-    main#targets {
-    margin: auto;
-    padding: auto;
-    grid-template-columns: repeat(1,1fr);
-    justify-content: center;
-    background-color: #CB1D0E;
-}}
