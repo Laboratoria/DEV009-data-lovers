@@ -23,6 +23,7 @@ export const sortNum = (arr, option) => {
 }
 
 
+
 //filtro por nombre
 export function resultName(arr, filterName) {
   const results = arr.filter(element => {
@@ -30,7 +31,6 @@ export function resultName(arr, filterName) {
   });
   return results
 }
-
 
 /* -----> calculo agregado de tipos, average= promedio <------- */
 
@@ -47,16 +47,6 @@ export function concatType(data) {
     })
   });
   return result
-}
-
-
-//filtro por nombre
-export function resultName(arr, filterName) {
-  const results = arr.filter(element => {
-    return(element.name).indexOf(filterName) !== -1
-  });
-  return results
-  
 }
 
 // 1.2 ) quitar los tipos repetidos , con eso tendriamos solo los tipos unicos que existen en todos los pokemones 
