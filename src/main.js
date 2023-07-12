@@ -35,7 +35,7 @@ const menu = {
       "subMenu": subMenu
     },
     {
-      "title": "Ranking",
+      "title": "Community",
       "class": "menu__link",
       "href": "#"
     }
@@ -270,7 +270,6 @@ search.addEventListener('input', () => {
 });
 
 ///////// Section RANKING de aparicion  /////
-
 const sectionRanking = document.createElement('section');
 sectionRanking.classList.add('sectionRanking');
 
@@ -280,11 +279,70 @@ picture.src = "./img/ladyRanking.png";
 picture.width = 460;
 picture.height = 600;
 
-
-const ranking =document.createElement('div');
+const ranking = document.createElement('div');
 ranking.classList.add('ranking');
 
-sectionRanking.appendChild(ranking);
+const table = document.createElement('table');
+//primera fila 
+const thead = document.createElement('thead');
+const headerRow = document.createElement('tr');
+
+const positionHeader = document.createElement('th');
+positionHeader.textContent = '# Position';
+
+const pokemonHeader = document.createElement('th');
+pokemonHeader.textContent = 'Pokémon';
+
+const spawnChanceHeader = document.createElement('th');
+spawnChanceHeader.textContent = 'Spawn Chance';
+
+headerRow.appendChild(positionHeader);
+headerRow.appendChild(pokemonHeader);
+headerRow.appendChild(spawnChanceHeader);
+thead.appendChild(headerRow);
+
+const tbody = document.createElement('tbody');
+const sortedPokemon = data.pokemon.sort((a, b) => parseFloat(b['spawn-chance']) - parseFloat(a['spawn-chance']));
+const topPokemon = sortedPokemon.slice(0, 10);
+
+topPokemon.forEach((pokemon, index) => {
+  const rank = index + 1;
+
+  const row = document.createElement('tr');
+
+  const position = document.createElement('td');
+  position.textContent = `#${rank}`;
+
+  const pokemonImg = document.createElement('img');
+  pokemonImg.src = pokemon.img;
+  pokemonImg.width = 50;
+  pokemonImg.height = 50;
+
+  const pokemonName = document.createElement('td');
+  pokemonName.textContent = pokemon.name;
+
+  const spawnChance = document.createElement('td');
+  spawnChance.textContent = pokemon['spawn-chance'];
+
+  row.appendChild(position);
+  row.appendChild(pokemonImg);
+  row.appendChild(pokemonName);
+  row.appendChild(spawnChance);
+
+  tbody.appendChild(row);
+});
+
+table.appendChild(thead);
+table.appendChild(tbody);
+
+ranking.appendChild(table);
+
 sectionRanking.appendChild(picture);
+sectionRanking.appendChild(ranking);
+
 
 root.appendChild(sectionRanking);
+
+
+
+

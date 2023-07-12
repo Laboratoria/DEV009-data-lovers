@@ -17,6 +17,7 @@ export const searchPokemon = (data, inputText) => {
 }
 
 
+
 // FUNCION MOSTRAR MODAL AL DAR CLICK SOBRE LA CARD
 /* export const modalPokemon = (event){
   const modal =  event.target.getAttribute('nombre');
