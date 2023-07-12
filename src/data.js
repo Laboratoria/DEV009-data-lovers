@@ -32,6 +32,7 @@ export const searchPokemon = (data, inputText) => {
 
 
 export function hola() {
+  
   console.log("hola");
 }
 
