@@ -27,6 +27,12 @@ const display = (pokemonData)=>{
   seccionShowAll.appendChild(cardPokemon);
 
 };
+const cleanShowAll = () =>{
+  while (seccionShowAll.hasChildNodes()){
+    seccionShowAll.removeChild(seccionShowAll.firstChild);
+  }
+
+};
 /*
 const pokemonSecdG = filterData(pokemonList,'generation ii',['generation','num']);
 */
@@ -36,9 +42,7 @@ menuOption.addEventListener('change',
     selectedOption = this.options[menuOption.selectedIndex].value;
     location.href = '#mostrarPokemon';
     
-    while (seccionShowAll.hasChildNodes()){
-      seccionShowAll.removeChild(seccionShowAll.firstChild);
-    }
+    cleanShowAll();
     
     switch(selectedOption){
  
@@ -59,21 +63,19 @@ menuOption.addEventListener('change',
     
     case 'legendary':
       const legendary = filterData(pokemonList,'legendary','pokemon-rarity')
-            legendary.forEach(function(pokemon){
+      legendary.forEach(function(pokemon){
         display(pokemon);
       });
       menuOrdenar.addEventListener('change', ()=>{
-        const ordenar = this.options[menuOrdenar.selectedIndex].value;
-        if (ordenar ==='name-ascendente'){
-          sortData(legendary,'name','ascendente').forEach(function(pokemon){
-            display(pokemon);
-          });
+        const ordenar = menuOrdenar.options[menuOrdenar.selectedIndex].value;
+        cleanShowAll();
+        const ordenados = sortData(legendary,'name',ordenar);
+        ordenados.forEach(function(pokemon){
+          display(pokemon);
+        });
       
-        } else {
-          sortData(legendary,'name','descendente').forEach(function(pokemon){
-            display(pokemon);
-          });
-        }})
+        
+      });
       
 
       
@@ -90,16 +92,6 @@ menuOption.addEventListener('change',
     
   }
 );
-const orderDraf = (datos)=>{
-  menuOrdenar.addEventListener('change', ()=>{
-  const ordenar = this.options[menuOrdenar.selectedIndex].value;
-  if (ordenar ==='name-ascendente'){
-    return sortData(datos,'name','ascendente');
 
-  } else {
-    return sortData(datos,'name','descendente');
-  }
-});
-};
 console.log('pokemon mythic :',seccionShowAll);
 
