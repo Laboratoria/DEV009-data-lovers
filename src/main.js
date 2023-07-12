@@ -2,14 +2,9 @@
 //se importa un objeto que llamaremos data desde el archivo './data/ghibli/ghibli.js' - el objeto tiene una exportación default
 import data from './data/ghibli/ghibli.js';
 
-import { prom } from './data.js';
+import { prom, countSpecies, countVehicles } from './data.js';
 
 //______PERSONAJES ORDENADOS ALFABÉTICAMENTE
-/*const people = data.films.flatMap(film => film.people.map(people => ({
-  name: people.name,
-  image: people.img,
-  title: film.title
-})));*/
 
 const people = [];
 data.films.forEach(film => {
@@ -59,11 +54,6 @@ ordenAlfabeticoPeopleLink.addEventListener('click', function(event) {
 
 //______PELÍCULAS ORDENADAS ALFABÉTICAMENTE
 
-/*const films = data.films.flatMap(film => ({
-  title: film.title,
-  poster: film.poster
-}));*/
-
 const films = data.films.filter(film => film.title);
 
 films.sort((a, b) => a.title.localeCompare(b.title));
@@ -105,12 +95,6 @@ ordenAlfabeticoFilmsLink.addEventListener('click', function(event) {
 
 //______PELÍCULAS ORDENADAS POR AÑO ('release_date')
 
-/*const filmsDate = data.films.flatMap(film => ({
-  title: film.title,
-  poster: film.poster,  
-  release_date: film.release_date
-}));*/
-
 const filmsDate = data.films.filter(film => film.release_date);
 
 filmsDate.sort((a, b) => a.release_date.localeCompare(b.release_date));
@@ -136,6 +120,7 @@ filmsDate.forEach(film => {
 });
 
 //______CLICK PELÍCULAS ORDENADAS POR AÑO ('release_date')
+
 const ordenDateFilmsLink = document.getElementById('orden-date-films');
 
 ordenDateFilmsLink.addEventListener('click', function(event) {
@@ -153,13 +138,6 @@ ordenDateFilmsLink.addEventListener('click', function(event) {
 });
 
 //______PERSONAJES ORDENADOS POR PELÍCULA ('people' y 'film')
-
-/*const peopleFilm = data.films.flatMap(film =>
-  film.people.map(people => ({
-    name: people.name,
-    image: people.img,
-    film: film.title
-  })));*/
 
 const peopleFilm = [];
 data.films.forEach(film => {
@@ -189,9 +167,8 @@ peopleFilm.forEach(people => {
 });
 
 //______CLICK PERSONAJES ORDENADOS POR PELÍCULA ('people' y 'film')
-const ordenPeopleFilmsLink = document.getElementById('orden-people-films');
 
-//const ordenPeopleFilmsName = document.getElementById('name-films');
+const ordenPeopleFilmsLink = document.getElementById('orden-people-films');
 
 ordenPeopleFilmsLink.addEventListener('click', function(event) {
   event.preventDefault(); // Evita que el enlace realice la acción predeterminada
@@ -209,11 +186,6 @@ ordenPeopleFilmsLink.addEventListener('click', function(event) {
 });
 
 //______PELÍCULAS ORDENADAS POR DIRECTOR ('director')
-/*const filmsDirector = data.films.flatMap(film => ({
-  title: film.title,
-  poster: film.poster,  
-  director: film.director
-}));*/
 
 const filmsDirector = data.films.filter(film => film.director);
 
@@ -259,13 +231,6 @@ ordenDirectorFilmsLink.addEventListener('click', function(event) {
 });
 
 //______PERSONAJES ORDENADOS POR GRUPO ETARIO ('age')
-/*const agePeople = data.films.flatMap(film =>
-  film.people.map(people => ({
-  name: people.name,
-  image: people.img,
-  age: parseInt(people.age, 10)
-})).filter(person => Number(person.age))
-);*/
 
 const agePeople = [];
 data.films.forEach(film => {
@@ -323,14 +288,6 @@ ordenPeopleAgeLink.addEventListener('click', function(event) {
 
 //______PERSONAJES POR ESPECIE
 
-/*const peopleSpecie = data.films.flatMap(film =>
-    film.people.map(people => ({
-    name: people.name,
-    image: people.img,
-    specie: people.specie
-  }))
-);*/
-
 const peopleSpecie = [];
 data.films.forEach(film => {
   film.people.filter(people => people.name).forEach(({ name, img, specie }) => peopleSpecie.push({ name, specie, img }));
@@ -376,8 +333,17 @@ ordenSpecieFilmsLink.addEventListener('click', function(event) {
   }
 });
 
+//______________TOTAL DE ESPECIES
 
-// SCORE PROMEDIO EN ROTTEN TOMATOES ('rt_score')
+const speciesCount = countSpecies();
+console.log("Estoy mostrando el total de especies", speciesCount);
+
+//______________TOTAL DE VEHÍCULOS
+
+const vehiclesCount = countVehicles();
+console.log("Estoy mostrando el total de vehículos", vehiclesCount);
+
+//______________SCORE PROMEDIO EN ROTTEN TOMATOES ('rt_score')
 
 const rtScore = data.films.flatMap(films => ({
   score: films.rt_score
@@ -386,15 +352,3 @@ const rtScore = data.films.flatMap(films => ({
 prom(rtScore);
 
 console.log("Estoy mostrando el promedio en rotten tomatoes", prom(rtScore));
-
-
-
-//______VEHÍCULOS
-/*const vehiclesS = data.films.flatMap(film =>
-  film.vehicles.map(vehicles => ({
-    name: vehicles.name,
-    film: data.films,
-    vehicles: films.vehicles,
-    image: vehicles.img,
-    description: vehicles.description
-  })));*/
