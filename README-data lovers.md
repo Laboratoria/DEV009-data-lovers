@@ -49,7 +49,7 @@ Trabajamos en la elaboración de un prototipo a papel , luego uno de alta fideli
 #### Prototipos de alta fidelidad
 ![prototipo alta 1](src/img/prototipoaltaversion1.jpg)
 
-![prototipo dinamico](https://www.figma.com/file/Za2IZjJeFvbyY29Qm8RnY7/DL---Prototipo-alta-2?type=design&mode=design&t=SW1ZTLeklR9Bb0Pm-0)
+ Prototipo dinámico: [prototipo dinamico](https://www.figma.com/file/Za2IZjJeFvbyY29Qm8RnY7/DL---Prototipo-alta-2?type=design&mode=design&t=SW1ZTLeklR9Bb0Pm-0)
 
 #### Listado de problemas de usabilidad detectados 
 
@@ -72,7 +72,7 @@ Se realizo también la versión mobile, considerando una lista desplegable donde
 
 ![mobile 2](src/img/mobilev2.jpg)
 
-Usamos para el diseño de ambos protipos[Figma](https://www.figma.com/) 
+Usamos para el diseño de ambos protipos [Figma](https://www.figma.com/) 
 
 
 ### Pruebas unitarias
