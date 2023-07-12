@@ -2,19 +2,22 @@
 //se importa un objeto que llamaremos data desde el archivo './data/ghibli/ghibli.js' - el objeto tiene una exportación default
 import data from './data/ghibli/ghibli.js';
 
-import { orderByAlphabetical, prom } from './data.js';
-
-//Método map() y flatMap() son funciones de los arreglos en JS que ITERAN sobre cada elemento del arreglo y crea un nuevo arreglo
+import { prom } from './data.js';
 
 //______PERSONAJES ORDENADOS ALFABÉTICAMENTE
-const people = data.films.flatMap(film => film.people.map(people => ({
+/*const people = data.films.flatMap(film => film.people.map(people => ({
   name: people.name,
   image: people.img,
   title: film.title
-})));
-//people.sort((a, b) => a.name.localeCompare(b.name));
-const peopleOrdered = orderByAlphabetical (people);
-console.log("estoy ordenando personas",peopleOrdered);
+})));*/
+
+const people = [];
+data.films.forEach(film => {
+  film.people.filter(people => people.name).forEach(({ name, img }) => people.push({ name, film: film.title, img }));
+});
+
+people.sort((a, b) => a.name.localeCompare(b.name));
+console.log("estoy ordenando personas",people);
 console.log("estoy mostrando la data", data, data.films, people);
 
 //HTML de la lista de personas
@@ -28,7 +31,7 @@ people.forEach(people => {
   const peopleImage = document.createElement('img');
   const peopleName = document.createElement('p');
 
-  peopleImage.src = people.image;
+  peopleImage.src = people.img;
   peopleName.textContent = people.name;
 
   peopleItem.appendChild(peopleImage);
@@ -151,17 +154,17 @@ ordenDateFilmsLink.addEventListener('click', function(event) {
 
 //______PERSONAJES ORDENADOS POR PELÍCULA ('people' y 'film')
 
-const peopleFilm = data.films.flatMap(film =>
+/*const peopleFilm = data.films.flatMap(film =>
   film.people.map(people => ({
     name: people.name,
     image: people.img,
     film: film.title
-  })));
+  })));*/
 
-/*const peopleFilm = [];
+const peopleFilm = [];
 data.films.forEach(film => {
-  film.people.filter(people => people.name).forEach(({ name }) => peopleFilm.push({ name, film: film.title }));
-});*/
+  film.people.filter(people => people.name).forEach(({ name, img }) => peopleFilm.push({ name, film: film.title, img }));
+});
 
 peopleFilm.sort((a, b) => a.film.localeCompare(b.film));
 console.log("Estoy clasificando personajes por película", peopleFilm);
@@ -175,7 +178,7 @@ peopleFilm.forEach(people => {
   const peopleName = document.createElement('p');
   const peopleFilm = document.createElement('p');
 
-  peopleImage.src = people.image;
+  peopleImage.src = people.img;
   peopleName.textContent = people.name;
   peopleFilm.textContent = people.film;
 
@@ -320,13 +323,18 @@ ordenPeopleAgeLink.addEventListener('click', function(event) {
 
 //______PERSONAJES POR ESPECIE
 
-const peopleSpecie = data.films.flatMap(film =>
+/*const peopleSpecie = data.films.flatMap(film =>
     film.people.map(people => ({
     name: people.name,
     image: people.img,
     specie: people.specie
   }))
-);
+);*/
+
+const peopleSpecie = [];
+data.films.forEach(film => {
+  film.people.filter(people => people.name).forEach(({ name, img, specie }) => peopleSpecie.push({ name, specie, img }));
+});
 
 const filmsListSpecie = document.getElementById("people-specie")
 
@@ -339,7 +347,7 @@ peopleSpecie.forEach(specie => {
   const specieName = document.createElement('p');
   const specieSpecie = document.createElement('p');
 
-  specieImage.src = specie.image;
+  specieImage.src = specie.img;
   specieName.textContent = specie.name;
   specieSpecie.textContent = specie.specie;
 
