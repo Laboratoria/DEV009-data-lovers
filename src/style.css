@@ -169,8 +169,8 @@ display: block;
 list-style: none;
 position: absolute;
 color: #fff;
-display: none;
 background-color: #3f3974;
+display: none;
 padding: 8px;
 width: 100px;
 }
@@ -283,7 +283,7 @@ display: block;
 
 
 /*------------------------------------------EDICION DE LA PAGINA DE TIPS------------------------------------------------------*/
-.conteiner-tall-section4{
+.container-tall-section4{
   margin: 0 auto;
   text-align: center;
   padding-top: 70px;
@@ -292,13 +292,13 @@ display: block;
 .titulo_tips{
   font-family: 'Knewave';
   font-size: 25px;
+  -webkit-text-stroke: 0.05px #fff;
 }
 .tip-1{
   display: flex;
   margin: 0 auto;
   width: 94vw;
   height: 20vh;
-  justify-content: center;
   align-items: center;
   }
 .tip-2{
@@ -306,7 +306,6 @@ display: block;
   margin:0 auto;
   width: 94vw;
   height: 20vh;
-  justify-content: center;
   align-items: center;
 }
 .tip-3{
@@ -314,7 +313,6 @@ display: block;
   margin: 0 auto;
   width: 94vw;
   height: 24vh;
-  justify-content: center;
   align-items: center;
 }
 .tip-4{
@@ -322,7 +320,6 @@ display: block;
   margin: 0 auto;
   width: 94vw;
   height: 12vh;
-  justify-content: center;
   align-items: center;
 }
 .tip-5{
@@ -330,7 +327,6 @@ display: block;
   margin: 0 auto;
   width: 94vw;
   height: 20vh;
-  justify-content: center;
   align-items: center;
 }
 .tip-6{
@@ -338,7 +334,6 @@ display: block;
   margin: 0 auto;
   width: 94vw;
   height: 22vh;
-  justify-content: center;
   align-items: center;
 }
 .tip-7{
@@ -347,16 +342,33 @@ display: block;
   margin-right: auto;
   width: 94vw;
   height: 28vh;
-  justify-content: center;
   align-items: center;
 }
 
 .p-tips{
   font-size: 15px;
   text-align: justify;
+  -webkit-text-stroke: 0.3px #97783d; 
+}
+.span-tips{
+  font-size: 15px;
+  -webkit-text-stroke: 0.4px #97783d; 
 }
 
 
+/*---------------------------EDICION DE LA PAGINA DE ESTADISTICAS---------------------------------------*/
+.container-tall-section5{
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 70px;
+  background-image: linear-gradient(to right, #243949 0%, #40627e 100%);
+}
+
+.titulo-estadisticas{
+  font-family: 'Knewave';
+  font-size: 25px;
+  -webkit-text-stroke: 0.05px #fff;
+}
 
 
 
@@ -451,7 +463,7 @@ display: block;
     margin: 20px;
     border: transparent;
     margin-top: -28px;
-
+    background: transparent;
   }
   .nav2-roles {
     width: 1000px;
@@ -542,5 +554,78 @@ display: block;
     .champion-container {
       width: 19.5%;
     }
+
+  /*------------------------------------------EDICION DE LA PAGINA DE TIPS------------------------------------------------------*/
+.conteiner-tall-section4{
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 70px;
+  background-image: linear-gradient(to right, #243949 0%, #40627e 100%);
+}
+.titulo_tips{
+  font-family: 'Knewave';
+  font-size: 40px;
+}
+.tip-1{
+  display: flex;
+  margin: 0 auto;
+  width: 94vw;
+  height: 30vh;
+  align-items: center;
+  }
+.tip-2{
+  display: flex;
+  margin:0 auto;
+  width: 94vw;
+  height: 30vh;
+  align-items: center;
+}
+.tip-3{
+  display: flex;
+  margin: 0 auto;
+  width: 94vw;
+  height: 32vh;
+  align-items: center;
+}
+.tip-4{
+  display: flex;
+  margin: 0 auto;
+  width: 94vw;
+  height: 20vh;
+  align-items: center;
+}
+.tip-5{
+  display: flex;
+  margin: 0 auto;
+  width: 94vw;
+  height: 30vh;
+  align-items: center;
+}
+.tip-6{
+  display: flex;
+  margin: 0 auto;
+  width: 94vw;
+  height: 32vh;
+  align-items: center;
+}
+.tip-7{
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 94vw;
+  height: 32vh;
+  align-items: center;
+}
+
+.p-tips{
+  font-size: 25px;
+  text-align: justify;
+  -webkit-text-stroke: 0.4px #97783d;
+}
+
+.span-tips{
+  font-size: 30px;
+  -webkit-text-stroke: 0.8px #97783d; 
+}
 
 }
