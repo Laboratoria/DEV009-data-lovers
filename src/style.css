@@ -68,7 +68,7 @@ body {
     border-radius: 8px;
 }
 
-.menu {
+.menu{
     margin: 0;
     padding: 10px;
 }
@@ -214,6 +214,7 @@ body {
     border-radius: 60%;
 }
 
+
 /*   modal   */
 .modalPokemon {
     display: flex;
@@ -234,10 +235,7 @@ body {
 }
 
 
-.az, .za{
-    margin-top: 40px;
-    padding-top: 40px; 
-}
+
 /**/
 .modal-content {
     display: flex;
@@ -272,6 +270,7 @@ body {
     background-color: var(--theme-color);
     border-radius: 4px;
 }
+
 
 /*   modal   */
 
