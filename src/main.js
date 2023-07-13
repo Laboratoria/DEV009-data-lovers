@@ -2,16 +2,13 @@
 //se importa un objeto que llamaremos data desde el archivo './data/ghibli/ghibli.js' - el objeto tiene una exportación default
 import data from './data/ghibli/ghibli.js';
 
-import { prom, countSpecies, countVehicles } from './data.js';
+import { prom, countSpecies, countVehicles, alphabeticalOrderPeople, alphabeticalOrderFilms } from './data.js';
 
 //______PERSONAJES ORDENADOS ALFABÉTICAMENTE
 
 const people = [];
-data.films.forEach(film => {
-  film.people.filter(people => people.name).forEach(({ name, img }) => people.push({ name, film: film.title, img }));
-});
 
-people.sort((a, b) => a.name.localeCompare(b.name));
+alphabeticalOrderPeople(people);
 console.log("estoy ordenando personas",people);
 console.log("estoy mostrando la data", data, data.films, people);
 
@@ -54,9 +51,9 @@ ordenAlfabeticoPeopleLink.addEventListener('click', function(event) {
 
 //______PELÍCULAS ORDENADAS ALFABÉTICAMENTE
 
-const films = data.films.filter(film => film.title);
+const films = data.films;
 
-films.sort((a, b) => a.title.localeCompare(b.title));
+alphabeticalOrderFilms(films);
 console.log("estoy ordenando películas", films);
 
 const filmsList = document.getElementById('films-list');
@@ -95,7 +92,9 @@ ordenAlfabeticoFilmsLink.addEventListener('click', function(event) {
 
 //______PELÍCULAS ORDENADAS POR AÑO ('release_date')
 
-const filmsDate = data.films.filter(film => film.release_date);
+const filmsDate = data.films ;
+
+data.films.filter(film => film.release_date);
 
 filmsDate.sort((a, b) => a.release_date.localeCompare(b.release_date));
 console.log("estoy ordenando películas por año", filmsDate);
@@ -189,10 +188,10 @@ ordenPeopleFilmsLink.addEventListener('click', function(event) {
 
 const filmsDirector = data.films.filter(film => film.director);
 
-const filmsListDirector = document.getElementById('films-list-director')
-
 filmsDirector.sort((a, b) => a.director.localeCompare(b.director));
 console.log("estoy ordenando películas por director", filmsDirector);
+
+const filmsListDirector = document.getElementById('films-list-director')
 
 filmsDirector.forEach(film => {
   const directorItem = document.createElement('div');

@@ -6,6 +6,7 @@
 
 import data from './data/ghibli/ghibli.js';
 
+//______________SCORE PROMEDIO EN ROTTEN TOMATOES ('rt_score')
 function prom(array) {
   let suma = 0;
   for (let i = 0; i < array.length; i++) {
@@ -15,6 +16,7 @@ function prom(array) {
   return suma / array.length;
 }
 
+//______________TOTAL DE ESPECIES
 function countSpecies() {
   const uniqueSpecies = new Set();
   data.films.forEach(film => {
@@ -26,6 +28,7 @@ function countSpecies() {
   return uniqueSpecies.size;
 };
 
+//______________TOTAL DE VEHÍCULOS
 function countVehicles() {
   const uniqueVehicles = new Set();
   data.films.forEach(film => {
@@ -37,5 +40,23 @@ function countVehicles() {
   return uniqueVehicles.size;
 };
 
-export {prom, countSpecies, countVehicles}
+//______PERSONAJES ORDENADOS ALFABÉTICAMENTE
+function alphabeticalOrderPeople(people) {  
+
+  data.films.forEach(film => {
+    film.people.filter(people => people.name).forEach(({ name, img }) => {
+      people.push({ name, film: film.title, img });
+    });
+  });
+  people.sort((a, b) => a.name.localeCompare(b.name));
+};
+
+//______PELÍCULAS ORDENADAS ALFABÉTICAMENTE
+function alphabeticalOrderFilms(films) {
+  films.sort((a, b) => a.title.localeCompare(b.title));
+}
+
+
+
+export {prom, countSpecies, countVehicles, alphabeticalOrderPeople, alphabeticalOrderFilms }
 
