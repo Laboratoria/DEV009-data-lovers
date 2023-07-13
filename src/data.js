@@ -26,10 +26,6 @@ export const busqueda = (countries,valor) => {
 export const country = (countries, id) => {
   return countries.find(country => country.name.common === id);
 };
-/*************Filtro por subregion***************/
-export const continents = (countries) => {
-  return countries.filter((item) => item.continents[0] === menuItems);
-};
 
 
 
