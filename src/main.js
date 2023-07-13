@@ -100,9 +100,9 @@ function handleSelection() {
   const count = getCount(copyFilmsData, selectedOptionDirector, selectedOptionYear);
   addValue.innerHTML = "Results: " + count + ",";
 
-  const resultPercentage = getPercentage (films.length, count);
+  const resultPercentage = getPercentage (films, count);
 
-  addPercentage.innerHTML = "Overall Percentage " + resultPercentage.toFixed(2) + "%";
+  addPercentage.innerHTML = "Overall Percentage " + resultPercentage + " %";
 
 }
 

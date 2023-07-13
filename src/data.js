@@ -5,7 +5,7 @@ export const sortBy = (data, option) => {
     return data.sort((a,b) => a.title.localeCompare(b.title));
   } else if(option === 'opcion2'){
     return data.sort((a,b) => b.title.localeCompare(a.title));
-  }
+  } 
 };
 
 export const filterByDirector = (data, director) => {
@@ -30,5 +30,6 @@ export const getCount=(dataGhibli, selectedOptionDirector, selectedOptionYear) =
 };
 
 export const getPercentage = (films, count) => {
-  return (count / films) * 100;
+  console.log(films, count)
+  return ((count / films.length) * 100).toFixed(2);
 };
