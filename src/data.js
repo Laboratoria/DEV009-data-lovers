@@ -14,25 +14,20 @@ export const searchPokemon = (data, inputText) => {
 
 
   });
+  return resultPokemon
 }
-
-
 
 // FUNCION ORDENAR DATA POR NOMBRE
 
-/*  export const orderData = ( a, b) => {
-  if(a.pokemon.name < b.pokemon.name){
+export const sortBy = (a, b) => {
+  if (a.name < b.name) {
     return -1;
   }
-  if(a.pokemon.name > b.pokemon.name){
+  if (a.name > b.name) {
     return 1;
   }
   return 0;
-}  */
+};
 
-
-export function hola() {
-  console.log("hola");
-}
 
 

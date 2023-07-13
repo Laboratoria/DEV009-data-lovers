@@ -1,7 +1,7 @@
 // importa una entidad llamada example desde el archivo data.js
 
-import { searchPokemon, hola } from './data.js';
-import pokemon from './data/pokemon/pokemon.js';
+import { searchPokemon, sortBy } from './data.js';
+
 
 
 
@@ -77,12 +77,12 @@ menu.menu.forEach((opciones) => {
   aTitle.classList.add("menu__link");
   aTitle.href = opciones.href;
   aTitle.innerHTML = opciones.title;
- 
+
 
 
   if (opciones.subMenu) {
     const ulSubMenu = document.createElement('ul');
-    ulSubMenu.classList.add("menu__nesting",'menu__nesting--columns');
+    ulSubMenu.classList.add("menu__nesting", 'menu__nesting--columns');
 
     opciones.subMenu.forEach((submenu) => {
       const liSubMenu = document.createElement('li');
@@ -93,17 +93,17 @@ menu.menu.forEach((opciones) => {
       aTitleSub.href = submenu.href;
 
       const spanSpace = document.createElement('span');
-        spanSpace.innerHTML = '&nbsp;';
+      spanSpace.innerHTML = '&nbsp;';
 
-        const spanName = document.createElement('span');
-        spanName.textContent = submenu.type;
-        aTitleSub.appendChild(spanSpace);
-        aTitleSub.appendChild(spanName);
+      const spanName = document.createElement('span');
+      spanName.textContent = submenu.type;
+      aTitleSub.appendChild(spanSpace);
+      aTitleSub.appendChild(spanName);
 
-        const img = document.createElement('img');
-        img.src = submenu.img;
-        aTitleSub.insertBefore(img, aTitleSub.firstChild);
-        aTitleSub.addEventListener('click', () => displayPokemon(data.pokemon, submenu.type));
+      const img = document.createElement('img');
+      img.src = submenu.img;
+      aTitleSub.insertBefore(img, aTitleSub.firstChild);
+      aTitleSub.addEventListener('click', () => displayPokemon(data.pokemon, submenu.type));
 
       liSubMenu.appendChild(aTitleSub);
       ulSubMenu.appendChild(liSubMenu);
@@ -147,14 +147,27 @@ const randomPokemon = data.pokemon.slice().sort(() => 0.5 - Math.random()).slice
 //busca y devuelve el primer elemento con el id root.
 const root = document.getElementById("root");
 
-const displayPokemon = (dataPokemon, filter) => {
+let tipePokemon = "";
+
+const displayPokemon = (dataPokemon, filter, orden=null) => {
   
   root.innerHTML = '';
-  if(filter)
-  {
-    dataPokemon =  dataPokemon.filter(pokemon => pokemon.type && pokemon.type.includes(filter));
+  tipePokemon = '';
+  if (filter) {
+    dataPokemon = dataPokemon.filter(pokemon => pokemon.type && pokemon.type.includes(filter));
+    tipePokemon = filter;
   }
-  
+
+  switch(orden)
+  {
+    case "az":
+      dataPokemon = dataPokemon.sort(sortBy);
+      break;
+    case "za":
+      dataPokemon = dataPokemon.sort((a, b) => sortBy(b, a));
+      break;
+  }
+
   dataPokemon.forEach((pokemon) => {
 
     const type = pokemon.type;
@@ -198,20 +211,6 @@ const displayPokemon = (dataPokemon, filter) => {
 
     card.append(infoContainer, imgContainer);
     root.appendChild(card);
-
-
-     /// ordenad data
-    orderaz.addEventListener('click',() =>{
-      hola();
-    });
-
-    orderza.addEventListener('click', ()=>{
-      hola();
-    });
-
-
-    
-    
 
     ////// M O D A L     P O K E M O N /////////
     //abrir modal
@@ -317,7 +316,17 @@ const displayPokemon = (dataPokemon, filter) => {
   });
 
 }
+
 displayPokemon(randomPokemon);
+
+/// ordenad data
+orderaz.addEventListener('click', () => {
+  displayPokemon(data.pokemon,tipePokemon,"az");
+});
+
+orderza.addEventListener('click', () => {
+  displayPokemon(data.pokemon,tipePokemon,"za");
+});
 
 
 
@@ -327,7 +336,7 @@ search.addEventListener('input', () => {
   //esta línea de código obtiene el valor del campo de entrada de texto representado por buscarPokemon, lo convierte a minúsculas utilizando .toLowerCase(), y lo almacena en la constante inputText.
   const inputText = search.value.toLowerCase(); //es un método que se utiliza en las cadenas de texto en JavaScript para convertir todos los caracteres de la cadena a minúsculas.
 
-  
+
   const result = searchPokemon(data.pokemon, inputText);
   if (inputText.length > 0 && result.length > 0) {
     displayPokemon(result);
