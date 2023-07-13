@@ -12,6 +12,8 @@ export const busqueda = (countries,valor) => {
 export const country = (countries, id) => {
   return countries.find(country => country.name.common === id);
 };
+
+
 /*************Ordenar de la A-Z***************/
 export const orderAZ = (countries) => {
   return countries.sort((a, b) =>{
@@ -32,6 +34,7 @@ export const orderZA = (countries) => {
     return 0;
   });
 };
+
 
 
 

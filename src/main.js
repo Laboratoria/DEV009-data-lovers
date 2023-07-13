@@ -1,4 +1,3 @@
-
 import { allContinents,busqueda,orderAZ,orderZA} from './data.js';
 import data from './data/countries/countries.js';
 
@@ -59,8 +58,9 @@ const showModal = (dataCountry) => {
   </div> 
   </section> 
   `
-  root.appendChild(modal)
 
+  root.appendChild(modal)
+  /*console.log(dataCountry.name.common)*/
 
   const closeModalButton = document.querySelector('.modal_close_button');
   closeModalButton.addEventListener('click', (e) => {
@@ -76,7 +76,8 @@ menuItems.forEach(function(item){
     if (item.classList.contains('.submenus','.menu__item')){
       event.stopPropagation();
     }
-       
+      
+      
     showCards(allContinents (dataCountries,item.textContent));
     const america = allContinents(dataCountries,item.textContent)
     console.log (america)
@@ -89,6 +90,7 @@ menuItems.forEach(function(item){
     else if (item.textContent==="z-a"){
       showCards(orderZA (dataCountries));
     } 
+
   });
 });
 
