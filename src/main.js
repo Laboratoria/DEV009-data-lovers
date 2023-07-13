@@ -5,6 +5,7 @@ const pokemonList = data.pokemon;
 const seccionShowAll = document.getElementById('showAll');
 const menuOption = document.getElementById('mostrar');
 const menuOrdenar = document.getElementById('ordenar');
+const menuGeneration = document.getElementById('generation');
 
 
 let selectedOption;
@@ -33,97 +34,246 @@ const cleanShowAll = () =>{
   }
 
 };
-/*
-const pokemonSecdG = filterData(pokemonList,'generation ii',['generation','num']);
-*/
 
-menuOption.addEventListener('change',
-  function(){
-    selectedOption = this.options[menuOption.selectedIndex].value;
-    location.href = '#mostrarPokemon';
+menuGeneration.addEventListener('change', () => {
+  const choice = menuGeneration.options[menuGeneration.selectedIndex].value;
+  location.href = '#mostrarPokemon';
+  cleanShowAll();
+  if (choice === "todos"){
+    pokemonList.forEach(function(pokemon){
+      display(pokemon);
+    });
+
+    menuOption.addEventListener('change',
+      function(){
+        selectedOption =menuOption.options[menuOption.selectedIndex].value;
+        location.href = '#mostrarPokemon';
     
-    cleanShowAll();
-    
-    switch(selectedOption){
- 
-    case 'todos':
-      pokemonList.forEach(function(pokemon){
-        display(pokemon);
-      });
-      menuOrdenar.addEventListener('change', ()=>{
-        const ordenar = menuOrdenar.options[menuOrdenar.selectedIndex].value;
         cleanShowAll();
-        const ordenados = sortData(pokemonList,'name',ordenar);
-        ordenados.forEach(function(pokemon){
-          display(pokemon);
-        });
-      
-        
-      });
+    
+        switch(selectedOption){
+           
+        case 'mythic':
 
-      break;
-          
-    case 'mythic':
-
-      const mythic = filterData(pokemonList,'mythic','pokemon-rarity')
+          const mythic = filterData(pokemonList,'mythic','pokemon-rarity')
        
-      mythic.forEach(function(pokemon){
-        display(pokemon);
-      });
+          mythic.forEach(function(pokemon){
+            display(pokemon);
+          });
 
-      menuOrdenar.addEventListener('change', ()=>{
-        const ordenar = menuOrdenar.options[menuOrdenar.selectedIndex].value;
-        cleanShowAll();
-        const ordenados = sortData(mythic,'name',ordenar);
-        ordenados.forEach(function(pokemon){
-          display(pokemon);
-        });
+          menuOrdenar.addEventListener('change', ()=>{
+            const ordenar = menuOrdenar.options[menuOrdenar.selectedIndex].value;
+            cleanShowAll();
+            const ordenados = sortData(mythic,'name',ordenar);
+            ordenados.forEach(function(pokemon){
+              display(pokemon);
+            });
       
         
-      });
+          });
       
-      break;
+          break;
          
     
-    case 'legendary':
-      const legendary = filterData(pokemonList,'legendary','pokemon-rarity');
-      legendary.forEach(function(pokemon){
-        display(pokemon);
-      });
-      menuOrdenar.addEventListener('change', ()=>{
-        const ordenar = menuOrdenar.options[menuOrdenar.selectedIndex].value;
-        cleanShowAll();
-        const ordenados = sortData(legendary,'name',ordenar);
-        ordenados.forEach(function(pokemon){
-          display(pokemon);
-        });
+        case 'legendary':
+          const legendary = filterData(pokemonList,'legendary','pokemon-rarity');
+          legendary.forEach(function(pokemon){
+            display(pokemon);
+          });
+          menuOrdenar.addEventListener('change', ()=>{
+            const ordenar = menuOrdenar.options[menuOrdenar.selectedIndex].value;
+            cleanShowAll();
+            const ordenados = sortData(legendary,'name',ordenar);
+            ordenados.forEach(function(pokemon){
+              display(pokemon);
+            });
       
         
-      });
+          });
       
-      break;
+          break;
 
-    case 'normal':  
-      const normal = filterData(pokemonList,'normal','pokemon-rarity');
-      normal.forEach(function(pokemon){
-        display(pokemon);
-      });
-      menuOrdenar.addEventListener('change', ()=>{
-        const ordenar = menuOrdenar.options[menuOrdenar.selectedIndex].value;
-        cleanShowAll();
-        const ordenados = sortData(normal,'name',ordenar);
-        ordenados.forEach(function(pokemon){
-          display(pokemon);
-        });
+        case 'normal':  
+          const normal = filterData(pokemonList,'normal','pokemon-rarity');
+          normal.forEach(function(pokemon){
+            display(pokemon);
+          });
+          menuOrdenar.addEventListener('change', ()=>{
+            const ordenar = menuOrdenar.options[menuOrdenar.selectedIndex].value;
+            cleanShowAll();
+            const ordenados = sortData(normal,'name',ordenar);
+            ordenados.forEach(function(pokemon){
+              display(pokemon);
+            });
       
         
-      });
-      break;
+          });
+          break;
         
-    }
+        }
     
+      }
+    );
+
+
+  }else if(choice === "generation i"){
+
+    const generationi = pokemonList.filter(i => i.generation.num === "generation i");
+    generationi.forEach(function(pokemon){
+      display(pokemon);
+    });
+    menuOption.addEventListener('change',
+      function(){
+        selectedOption =menuOption.options[menuOption.selectedIndex].value;
+        location.href = '#mostrarPokemon';
+    
+        cleanShowAll();
+    
+        switch(selectedOption){
+           
+        case 'mythic':
+
+          const mythic = filterData(generationi,'mythic','pokemon-rarity')
+       
+          mythic.forEach(function(pokemon){
+            display(pokemon);
+          });
+
+          menuOrdenar.addEventListener('change', ()=>{
+            const ordenar = menuOrdenar.options[menuOrdenar.selectedIndex].value;
+            cleanShowAll();
+            const ordenados = sortData(mythic,'name',ordenar);
+            ordenados.forEach(function(pokemon){
+              display(pokemon);
+            });
+      
+        
+          });
+      
+          break;
+         
+    
+        case 'legendary':
+          const legendary = filterData(generationi,'legendary','pokemon-rarity');
+          legendary.forEach(function(pokemon){
+            display(pokemon);
+          });
+          menuOrdenar.addEventListener('change', ()=>{
+            const ordenar = menuOrdenar.options[menuOrdenar.selectedIndex].value;
+            cleanShowAll();
+            const ordenados = sortData(legendary,'name',ordenar);
+            ordenados.forEach(function(pokemon){
+              display(pokemon);
+            });
+      
+        
+          });
+      
+          break;
+
+        case 'normal':  
+          const normal = filterData(generationi,'normal','pokemon-rarity');
+          normal.forEach(function(pokemon){
+            display(pokemon);
+          });
+          menuOrdenar.addEventListener('change', ()=>{
+            const ordenar = menuOrdenar.options[menuOrdenar.selectedIndex].value;
+            cleanShowAll();
+            const ordenados = sortData(normal,'name',ordenar);
+            ordenados.forEach(function(pokemon){
+              display(pokemon);
+            });
+      
+        
+          });
+          break;
+        
+        }
+    
+      }
+    );
+
+  }else{
+    const generationii = pokemonList.filter(i => i.generation.num === "generation ii");
+    generationii.forEach(function(pokemon){
+      display(pokemon);
+    });
+    menuOption.addEventListener('change',
+      function(){
+        selectedOption =menuOption.options[menuOption.selectedIndex].value;
+        location.href = '#mostrarPokemon';
+    
+        cleanShowAll();
+    
+        switch(selectedOption){
+           
+        case 'mythic':
+
+          const mythic = filterData(generationii,'mythic','pokemon-rarity')
+       
+          mythic.forEach(function(pokemon){
+            display(pokemon);
+          });
+
+          menuOrdenar.addEventListener('change', ()=>{
+            const ordenar = menuOrdenar.options[menuOrdenar.selectedIndex].value;
+            cleanShowAll();
+            const ordenados = sortData(mythic,'name',ordenar);
+            ordenados.forEach(function(pokemon){
+              display(pokemon);
+            });
+      
+        
+          });
+      
+          break;
+         
+    
+        case 'legendary':
+          const legendary = filterData(generationii,'legendary','pokemon-rarity');
+          legendary.forEach(function(pokemon){
+            display(pokemon);
+          });
+          menuOrdenar.addEventListener('change', ()=>{
+            const ordenar = menuOrdenar.options[menuOrdenar.selectedIndex].value;
+            cleanShowAll();
+            const ordenados = sortData(legendary,'name',ordenar);
+            ordenados.forEach(function(pokemon){
+              display(pokemon);
+            });
+      
+        
+          });
+      
+          break;
+
+        case 'normal':  
+          const normal = filterData(generationii,'normal','pokemon-rarity');
+          normal.forEach(function(pokemon){
+            display(pokemon);
+          });
+          menuOrdenar.addEventListener('change', ()=>{
+            const ordenar = menuOrdenar.options[menuOrdenar.selectedIndex].value;
+            cleanShowAll();
+            const ordenados = sortData(normal,'name',ordenar);
+            ordenados.forEach(function(pokemon){
+              display(pokemon);
+            });
+      
+        
+          });
+          break;
+        
+        }
+    
+      }
+    );
+
+  
   }
+}
+
 );
 
-console.log('pokemon mythic :',seccionShowAll);
+
 
