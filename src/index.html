@@ -9,14 +9,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="icons8-morty-16.png" type="image/x-icon">
   </head>
 
   <body>
     <div id="root"></div>
     <script src="main.js" type="module"></script>
     <header>
-    <!--<img src="rickandmorty.png">--> 
-      
+      <img id="imageRickAndMorty" src="rickandmorty.png">
     </header>
     <main>
       
@@ -25,66 +25,77 @@
          <div class="responsive options caja"> 
           <p class="letras">Status</p>
           <select class="selection selection1" name="status" id="status">
-          <option id="alive">Alive</option>
-          <option id="dead">Dead</option>
-          <option id="unknownStatus">Unknown</option>
+          <option value="All">All</option>
+          <option value="Alive">Alive</option>
+          <option value="Dead">Dead</option>
+          <option value="unknown">Unknown</option>
           </select>
          </div>
         
       
-        <div class="responsive options caja">
+        <div class="responsive options cajaSpecies">
          <p class="letras">Species</p>
           <select class="selection selection2" name="species" id="species">
-          <option id="alien">Alien</option>
-          <option id="animal">Animal</option>
-          <option id="cronenberg">Cronenberg</option>
-          <option id="human">Human</option>
-          <option id="humanoid">Humanoid</option>
-          <option id="mytholog">Mytholog</option>
-          <option id="parasite">Parasite</option>
-          <option id="poopybutthole">Poopybutthole</option>
-          <option id="robot">Robot</option>
-          <option id="vampire">Vampire</option>
-          <option id="unknownSpecie">Unknown</option>
+          <option value="All">All</option>
+          <option value="Alien">Alien</option>
+          <option value="Animal">Animal</option>
+          <option value="Cronenberg">Cronenberg</option>
+          <option value="Human">Human</option>
+          <option value="Humanoid">Humanoid</option>
+          <option value="Mytholog">Mytholog</option>
+          <option value="Parasite">Parasite</option>
+          <option value="Poopybutthole">Poopybutthole</option>
+          <option value="Robot">Robot</option>
+          <option value="Vampire">Vampire</option>
+          <option value="unknown">Unknown</option>
           </select>
         </div>
       
         <div class="responsive options caja">
          <p class="letras">Gender</p>
          <select class="selection selection4" name="gender" id="gender">
-          <option id="male">Male</option>
-          <option id="female">Female</option>
-          <option id="unknownGender">Unknown</option>
+          <option value="All">All</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="unknown">Unknown</option>
          </select>
         </div>
        
         <div class=" responsive options caja">
          <p class="letras">Order</p>
          <select class="selection selection5" name="order" id="order">
-          <option id="AZ">AZ</option>
-          <option id="ZA">Z-A</option>
+          <option value="All">All</option>
+          <option value="AZ">A-Z</option>
+          <option value="ZA">Z-A</option>
          </select>
          </div>
 
         <div class="responsive optionlight cajagrande">
-         <input id="search" class="optionlight lupita" name="textarea" placeholder="Search by name"></textarea> </input>
+         <input id="search" class="optionlight lupita" name="textarea" placeholder="Search by name"> 
          <p class="fa-solid fa-magnifying-glass optionlight"> </p>
         </div>
 
       </div>
+
+      <div id="divPorcentaje">
+        <p id="pPorcentaje" class="pPorcen"> </p>
+      </div>
       
+
+      <div id="divLista">
+        <ul id="listaPadre"> </ul>
+      </div>
       
-      <ul id="listaPadre"> </ul>
 
     </main>  
     
     <footer class="footer">
       <p class="fa-brands fa-instagram footer" ></p>
       <p id="nombres" class="footer">Developed by Dulce Ramirez and Raulymar Delgado</p>
+      <!-- <a target="_blank" href="https://icons8.com/icon/hAPVXSp7TpSM/morty-smith">morty</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>-->
     </footer>
 
-    </header>
-    <!--Esto es un comentario-->  
+
   </body>
 </html>
 
