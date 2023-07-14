@@ -3,8 +3,6 @@ import {filteredStatus, filteredSpecies, filteredGender, filteredSearch, filtere
 import data from './data/rickandmorty/rickandmorty.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 
-
-
 //Escuchar los eventos del DOM - escuchar el evento de hacer click en la opcion 
 /* seleccionar el id del select
 escuchar el evento change
@@ -24,7 +22,6 @@ selectStatus.addEventListener("change", () => {
   } else {
     crearTarjetaPorcentaje(porcentajeStatus);
   }
-    
 });
 
 //Species

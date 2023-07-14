@@ -58,7 +58,6 @@ export const porcentajeCalculo = (array) => {
 };
 
 
-    
 
 
 
