@@ -147,38 +147,33 @@ body {
   justify-content: space-between;
   padding-top: 70px;
 }
-
 .div-roles {
   margin-left: 20px;
   display: block;
   width: 100px;
   height: 35px;
-  background-image: linear-gradient(-225deg, #323b53 0%, #2c4266 50%, #35484d 100%);
+  background-image: linear-gradient(-225deg, #323B53 0%, #2C4266 50%, #35484D 100%);
   font-size: 15px;
   text-align: center;
   padding: 10px;
   color: #fff;
   border: 1px solid #fff;
 }
-
 .div-roles:hover .ul-roles{
 display: block;
 }
-
 .ul-roles {
 list-style: none;
 position: absolute;
 color: #fff;
-background-color: #3f3974;
+background-color: #3F3974;
 display: none;
 padding: 8px;
 width: 100px;
 }
-
 .ul-roles li:hover{
-  background-image: linear-gradient(-225deg, #2b3144 0%, #283750 50%, #273538 100%);
+  background-image: linear-gradient(-225deg, #2B3144 0%, #283750 50%, #273538 100%);
 }
-
 .ul-roles li a {
 color: #fff;
 height: 25px;
@@ -186,13 +181,12 @@ padding: 7px;
 text-decoration: none;
 display: block;
 }
-
 /*--------------------ordenar----------------------*/
 .btn-ordenar {
     display: block;
     width: 100px;
     height: 35px;
-    background-image: linear-gradient(-225deg, #323b53 0%, #2c4266 50%, #35484d 100%);
+    background-image: linear-gradient(-225deg, #323B53 0%, #2C4266 50%, #35484D 100%);
     font-size: 15px;
     text-align: center;
     padding: 10px;
@@ -200,25 +194,21 @@ display: block;
     padding-left: 5px;
     color: #fff;
 }
-
 .btn-ordenar:hover .ul-ordenar{
   display: block;
 }
-
 .ul-ordenar {
   list-style: none;
   position: absolute;
   color: #fff;
   display: none;
-  background-color: #3f3974;
+  background-color: #3F3974;
   padding: 8px;
   width: 100px;
 }
-
 .ul-ordenar li:hover{
-  background-image: linear-gradient(-225deg, #2b3144 0%, #283750 50%, #273538 100%);
+  background-image: linear-gradient(-225deg, #2B3144 0%, #283750 50%, #273538 100%);
 }
-
 .ul-ordenar li a {
   color: #fff;
   height: 25px;
@@ -226,8 +216,6 @@ display: block;
   text-decoration: none;
   display: block;
 }
-
-
 /*----------------------Buscador--------------------------------*/
 .buscador {
   padding-top: 5px;
@@ -258,10 +246,8 @@ display: block;
   cursor: pointer;
 }
 /*******************EDICION DEL DIV DE HTML Y DE LO QUE CREAMOS EN JS***************************************/
-
 .container {
   text-align: center;
-
 }
 .champion-container {
   width: 48%;
@@ -280,14 +266,12 @@ display: block;
   margin-top: -5px;
   padding: 5px;
 }
-
-
 /*------------------------------------------EDICION DE LA PAGINA DE TIPS------------------------------------------------------*/
 .container-tall-section4{
   margin: 0 auto;
   text-align: center;
   padding-top: 70px;
-  background-image: linear-gradient(to right, #243949 0%, #40627e 100%);
+  background-image: linear-gradient(to right, #243949 0%, #40627E 100%);
 }
 .titulo_tips{
   font-family: 'Knewave';
@@ -344,31 +328,81 @@ display: block;
   height: 28vh;
   align-items: center;
 }
-
 .p-tips{
   font-size: 15px;
   text-align: justify;
-  -webkit-text-stroke: 0.3px #97783d; 
+  -webkit-text-stroke: 0.3px #97783D;
 }
 .span-tips{
   font-size: 15px;
-  -webkit-text-stroke: 0.4px #97783d; 
+  -webkit-text-stroke: 0.4px #97783D;
 }
-
-
 /*---------------------------EDICION DE LA PAGINA DE ESTADISTICAS---------------------------------------*/
 .container-tall-section5{
   margin: 0 auto;
   text-align: center;
-  padding-top: 70px;
-  background-image: linear-gradient(to right, #243949 0%, #40627e 100%);
-}
+  padding-top: 65px;
+  background-image: linear-gradient(to right, #243949 0%, #40627E 100%);
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
 
+}
 .titulo-estadisticas{
   font-family: 'Knewave';
-  font-size: 25px;
+  font-size: 28px;
   -webkit-text-stroke: 0.05px #fff;
 }
+
+.container-estadisticas{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.div-estadistica-izquierda{
+  background-color: #b3b0b0;
+  width: 335px;
+  height: 400px;
+  margin: 20px;
+  border-radius: 15px;
+}
+
+.div-estadistica-derecha{
+  background-color: #b3b0b0;
+  width: 335px;
+  height: 400px;
+  margin: 20px;
+  border-radius: 15px;
+  display: flex; 
+  flex-direction: column;
+}
+
+.img-estadisticas{
+  margin-top: 20px;
+  width: 160px;
+  height: 254px;
+}
+
+.title-izquierda{
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+.title-derecha{
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+/* Torta */
+.info-estadistica-izquierda {
+  display: flex;
+  margin-top: 13px;
+  justify-content: center;
+}
+
+
+
 
 
 
@@ -400,7 +434,6 @@ display: block;
   .body {
     padding: 90px 20px 0;
   }
-
 /**********************************CAMBIOS EN EL HEADER***************************************/
 .header{
   background: url(fondo-pag1.jpg);
@@ -486,7 +519,7 @@ display: block;
     width: 120px;
     height: 40px;
     display: block;
-    background-image: linear-gradient(-225deg, #323b53 0%, #2c4266 50%, #35484d 100%);
+    background-image: linear-gradient(-225deg, #323B53 0%, #2C4266 50%, #35484D 100%);
     border: 1px solid #fff;
     margin: 6px 2px;
   }
@@ -505,16 +538,12 @@ display: block;
     display: grid;
     grid-template-columns: repeat(7, 130px); /* Define el número de columnas */
   }
-
-
-
   /*---------------------ORDENAR------------------------------------*/
-
   .btn-ordenar {
     margin-left: -95px;
     margin-top: -2.5px;
     border: 1px solid #fff;
-    color: #fff; 
+    color: #fff;
  }
   .btn-ordenar:hover{
     border: 3px solid #FFF;
@@ -522,8 +551,6 @@ display: block;
   .ul-roles li:hover{
     background-color: #554C88;
   }
-
-
 /*---------------------BUSCADOR-----------------------------------*/
   .buscador{
       padding-right: 30px;
@@ -548,19 +575,16 @@ display: block;
       line-height: 50px;
       font-size: 18px;
   }
-
   /*******************EDICION DEL DIV DE HTML Y DE LO QUE CREAMOS EN JS***************************************/
-
     .champion-container {
       width: 19.5%;
     }
-
   /*------------------------------------------EDICION DE LA PAGINA DE TIPS------------------------------------------------------*/
 .conteiner-tall-section4{
   margin: 0 auto;
   text-align: center;
   padding-top: 70px;
-  background-image: linear-gradient(to right, #243949 0%, #40627e 100%);
+  background-image: linear-gradient(to right, #243949 0%, #40627E 100%);
 }
 .titulo_tips{
   font-family: 'Knewave';
@@ -616,16 +640,79 @@ display: block;
   height: 32vh;
   align-items: center;
 }
-
 .p-tips{
   font-size: 25px;
   text-align: justify;
-  -webkit-text-stroke: 0.4px #97783d;
+  -webkit-text-stroke: 0.4px #97783D;
 }
-
 .span-tips{
   font-size: 30px;
-  -webkit-text-stroke: 0.8px #97783d; 
+  -webkit-text-stroke: 0.8px #97783D;
 }
+
+
+
+/*---------------------------EDICION DE LA PAGINA DE ESTADISTICAS---------------------------------------*/
+.container-tall-section5{
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 70px;
+  background-image: linear-gradient(to right, #243949 0%, #40627E 100%);
+  flex-direction: column;
+
+}
+.titulo-estadisticas{
+  font-family: 'Knewave';
+  font-size: 28px;
+  -webkit-text-stroke: 0.05px #fff;
+}
+
+.container-estadisticas{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.div-estadistica-izquierda{
+  background-color: #b3b0b0;
+  width: 500px;
+  height: 490px;
+  margin: 20px;
+  border-radius: 15px;
+}
+
+.div-estadistica-derecha{
+  background-color: #b3b0b0;
+  width: 500px;
+  height: 490px;
+  margin: 20px;
+  border-radius: 15px;
+  display: flex; 
+  flex-direction: column;
+}
+
+.img-estadisticas{
+  width: 250px;
+  height: 394px;
+  
+}
+
+.title-izquierda{
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+.title-derecha{
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+/* Torta */
+.info-estadistica-izquierda {
+  display: flex;
+  margin-top: 40px;
+  justify-content: center;
+}
+
 
 }
