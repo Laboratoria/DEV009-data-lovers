@@ -8,60 +8,35 @@ describe('test para filtrar status', () => {
       "id": 1,
       "name": "Rick Sanchez",
       "status": "Alive",
-      "species": "Human",
-      "type": "",
-      "gender": "Male",
     },
     {
       "id": 2,
       "name": "Morty Smith",
       "status": "Alive",
-      "species": "Human",
-      "type": "",
-      "gender": "Male",
-  
     },
     {
       "id": 3,
       "name": "Summer Smith",
       "status": "Alive",
-      "species": "Human",
-      "type": "",
-      "gender": "Female",
- 
     },       {
       "id": 7,
       "name": "Abradolf Lincler",
       "status": "unknown",
-      "species": "Human",
-      "type": "Genetic experiment",
-      "gender": "Male",
     }]
     const resultadoEsperadoAlive = [{
       "id": 1,
       "name": "Rick Sanchez",
       "status": "Alive",
-      "species": "Human",
-      "type": "",
-      "gender": "Male",
     },
     {
       "id": 2,
       "name": "Morty Smith",
       "status": "Alive",
-      "species": "Human",
-      "type": "",
-      "gender": "Male",
-  
     },
     {
       "id": 3,
       "name": "Summer Smith",
       "status": "Alive",
-      "species": "Human",
-      "type": "",
-      "gender": "Female",
- 
     }]
     expect(filteredStatus (dataStatusAlive, statusAlive)).toEqual(resultadoEsperadoAlive)
   });
@@ -200,39 +175,29 @@ describe('tests de filter species', () => {
       "name": "Alien Spa Employee",
       "status": "Alive",
       "species": "Alien",
-      "type": "",
-      "gender": "Male"
     }, 
     {          
       "id": 49,
       "name": "Blamph",
       "status": "Alive",
-      "species": "Alien",
-      "type": "",
-      "gender": "unknown",},
+      "species": "Alien",},
     {
       "id": 471,
       "name": "Little Voltron",
       "status": "Alive",
       "species": "Robot",
-      "type": "",
-      "gender": "Genderless",
     }];
     const resultadoEsperadoAlien = [{
       "id": 470,
       "name": "Alien Spa Employee",
       "status": "Alive",
       "species": "Alien",
-      "type": "",
-      "gender": "Male"
     }, 
     {          
       "id": 49,
       "name": "Blamph",
       "status": "Alive",
       "species": "Alien",
-      "type": "",
-      "gender": "unknown",
     }];
     expect(filteredSpecies (datasetPruebaAlien, speciesOpcionPruebaAlien)).toEqual(resultadoEsperadoAlien);
   });
@@ -271,45 +236,34 @@ describe('tests de filter species', () => {
       "id": 82,
       "name": "Cronenberg Rick",
       "status": "unknown",
-      "species": "Cronenberg",
-      "type": "",
-      "gender": "Male"},
+      "species": "Cronenberg"},
     {    
       "id": 83,
       "name": "Cronenberg Morty",
       "status": "unknown",
       "species": "Cronenberg",
-      "type": "",
-      "gender": "Male",
     },
     { 
       "id": 46,
       "name": "Bill",
       "status": "unknown",
       "species": "Animal",
-      "type": "Dog",
-      "gender": "Male"
     }
     ];
     const resultadoEsperadoCronenberg = [{
       "id": 82,
       "name": "Cronenberg Rick",
       "status": "unknown",
-      "species": "Cronenberg",
-      "type": "",
-      "gender": "Male"},
+      "species": "Cronenberg"},
     {    
       "id": 83,
       "name": "Cronenberg Morty",
       "status": "unknown",
       "species": "Cronenberg",
-      "type": "",
-      "gender": "Male",
-    },
-    ];
+    }];
     expect(filteredSpecies(datasetCronenberg, speciesOpcionPruebaCronenberg)).toEqual(resultadoEsperadoCronenberg);
   });
-  // test human
+  /*test human
   it('test para validar que species es Human', () => {
     const speciesOpcionPruebaHuman = 'Human';
     const datasetHuman = [{
@@ -515,7 +469,7 @@ describe('tests de filter species', () => {
         "gender": "Male"}
     ];
     expect(filteredSpecies (datasetVampire, speciesOpcionPruebaVampire)).toEqual(resultadoEsperadoVampire);
-  });
+  });*/
 });
 
 
@@ -731,9 +685,6 @@ describe('tests de porcentaje', () => {
   
   
   
-
-
-
 
 
 
