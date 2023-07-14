@@ -155,10 +155,10 @@ const displayPokemon = (dataPokemon, filter, orden = null) => {
 
   switch (orden) {
   case "az":
-    dataPokemon = dataPokemon.sort(funcionesPokemon.sortBy);
+    dataPokemon = dataPokemon.sort(funcionesPokemon.orderPokemonByName);
     break;
   case "za":
-    dataPokemon = dataPokemon.sort((a, b) => funcionesPokemon.sortBy(b, a));
+    dataPokemon = dataPokemon.sort((a, b) => funcionesPokemon.orderPokemonByName(b, a));
     break;
   }
 
@@ -286,8 +286,6 @@ const displayPokemon = (dataPokemon, filter, orden = null) => {
       eggs.innerHTML = pokemon.egg;
       eggs.insertBefore(imgEgg, eggs.firstChild);
       datosPoke.appendChild(eggs);
-
-
 
       //cerar modal
       const close = document.createElement("span");
