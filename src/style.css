@@ -1,0 +1,129 @@
+* {
+    background-color: #20222C;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#root {
+    width: 70%;
+    height: 300px; 
+    background-image: url(rickandmorty.png);
+    background-size: cover;
+    background-position: center;
+
+}
+
+#contenedor {
+    font-family: 'Quicksand', sans-serif;
+   /* display: flex;*/
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    text-align: center;
+}
+
+.options {
+    background-color: #82BF45;
+    margin-bottom: 3px;
+    padding-bottom: 3px;
+    padding-left: 4px;
+    font-family: 'Quicksand', sans-serif;
+    display: inline-block;
+}
+
+.selection1{
+    background-color: #82BF45;
+    margin-left: 7px;
+}
+
+.selection2{
+    background-color: #82BF45;
+    margin-left: 0.9px;
+}
+
+.selection3{
+    background-color: #82BF45;
+    margin-left: 18px;
+}
+
+.selection4{
+    background-color: #82BF45;
+    margin-left: 7px;
+}
+
+.selection5{
+    background-color: #82BF45;
+    margin-left: 25px;
+}
+
+.selection{
+    background-color: #82BF45;
+    margin-top: 10px;
+}
+
+.letras {
+    color:black;
+    background-color: #82BF45;
+    padding-bottom: 1px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    margin-left: 10px;
+    padding-top: 2px;
+    margin-top: 3px;
+    margin: 0 auto;
+}
+
+.optionlight {
+    background-color: #FFF1A7;
+    color: black;
+    display: inline-block;
+}
+
+.caja {
+    height: 60px;
+    width: 100px;
+    margin: 10px;
+    padding-top: 8px;   
+}
+
+.cajagrande {
+    height: 50px;
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.footer {
+    color: black;
+    background-color: #82BF45;
+    text-align: center;
+}
+
+.fa-instagram {
+    display: inline-block;
+}
+
+#nombres {
+    display: inline-block;
+
+}
+
+.lupita{
+    margin-right: 7px;
+    margin-left: 12px;
+}
+
+@media only screen and(max-width:800px){
+.responsive{
+        display:block;
+        width: 60%;
+    }
+}
