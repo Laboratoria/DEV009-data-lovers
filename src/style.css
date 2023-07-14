@@ -17,7 +17,7 @@ img {
 input {
     width: 600px;
     height: 45px;
-    border: 1px solid #808080;
+    border: 3px solid #c81a1a;
     border-radius: 14px;
     text-align: center;
     align-items: center;
@@ -92,18 +92,18 @@ main#targets {
     width: 330px;
     height: 500px;
     margin: 300px;
-    grid-template-columns: repeat(3, 1fr);
     gap: 7px;
+
 }
 
 .content-filters {
     display: flex;
     width: 100%;
-    background-color: red;
+    background-color: #CB1D0E;
 }
 
 .cards {
-    border: solid 2px gray;
+    border: solid 2px #ea0404;
     background: #FFFFFF;
     border-radius: 10px;
 
@@ -150,17 +150,20 @@ h2 {
 p#porcent {
     border: 3px solid #FFCB08;
     background: #FFCB08;
-    display: flex;
+    display: grid;
     align-items: center;
     padding: 10px;
     width: 115px;
     border-radius: 5px;
+    grid-template-columns: repeat(6,1fr);
+    
 }
 
 select#menu {
-    border-radius: 5px;
+    border-radius: 8px;
     width: 170px;
     text-align: center;
+    border: 3px solid #FFA500;
 }
 
 @media (max-width: 768px) {
@@ -197,6 +200,13 @@ select#menu {
     background-color: #CB1D0E;
     color: #FFFFFF;
 
+}
+#searchs,
+#contOrder {
+    margin: 18px 25px 18px 18px;
+    display: flex;
+    justify-content:center;
+    
 }
 }
 @media (min-width: 769px) and (max-width: 1024px){

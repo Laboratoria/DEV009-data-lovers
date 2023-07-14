@@ -4,12 +4,12 @@ export const sortName = (arr, option) => {
       return a.name.localeCompare(b.name);
     }
     if (option === "za") {
-      return b.name.localeCompare(a.name);
+      return b.name.localeCompare(a.name); 
     }
   });
   return arr;
 };
-
+// local comapare hace la misma funcion que <>, solo que local comapre corre mejor con el testt.
 export const sortNum = (arr, option) => {
   arr.sort((a, b) => {
     if (option === "numberMenor") {
