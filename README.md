@@ -123,6 +123,6 @@ Desafíos:
  - Concluimos que es mejor ir creando las funciones y los test a la par, ya que así aseguramos que las funciones cumplan con el objetivo desde el inicio. 
 
 Por último la página logro ser responsive para mobile,tablet y desktop. 
-|![visual_tablet](image.png)|![Visual_phone](image-1.png)|
- 
+
+![vista-mobile-table](image-8.png)
  
