@@ -1,5 +1,5 @@
 
-import  funcionesPokemon  from './data.js';
+import funcionesPokemon from './data.js';
 
 //importa un objeto llamado data desde el archivo pokemon.js ubicado en el directorio ./data/pokemon/
 // El objeto data contendrá información sobre los Pokémon.
@@ -7,7 +7,7 @@ import data from './data/pokemon/pokemon.js';
 
 
 
-const tiposUnicos = data.pokemon.filter(pokemon => pokemon.type).flatMap(pokemon => pokemon.type).filter((type, index, self) => self.indexOf(type)=== index);
+const tiposUnicos = data.pokemon.filter(pokemon => pokemon.type).flatMap(pokemon => pokemon.type).filter((type, index, self) => self.indexOf(type) === index);
 
 const subMenu = tiposUnicos.map(tipo => ({
   type: tipo,
@@ -97,14 +97,14 @@ menu.menu.forEach((opciones) => {
       aTitleSub.insertBefore(img, aTitleSub.firstChild);
 
       //--------------- evento que al dar click en type pokemon llamara a la funcion displayPokemonByType
-      aTitleSub.addEventListener('click', () =>{
+      aTitleSub.addEventListener('click', () => {
         const selectedType = submenu.type;
         const filteredPokemon = funcionesPokemon.displayPokemonByType(data.pokemon, selectedType);
         displayPokemon(filteredPokemon)
       });
 
       liSubMenu.appendChild(aTitleSub);
-      ulSubMenu .appendChild(liSubMenu)
+      ulSubMenu.appendChild(liSubMenu)
     });
 
     liTitle.appendChild(ulSubMenu);
@@ -142,25 +142,25 @@ const randomPokemon = data.pokemon.slice().sort(() => 0.5 - Math.random()).slice
 //busca y devuelve el primer elemento con el id root.
 const root = document.getElementById("root");
 
-let tipePokemon = "";
 
-const displayPokemon = (dataPokemon, filter, orden = null) => {
 
+const displayPokemon = (dataPokemon, filter) => {
+  //let tipePokemon = "";
   root.innerHTML = '';
-  tipePokemon = '';
+  //tipePokemon = '';
   if (filter) {
     dataPokemon = dataPokemon.filter(pokemon => pokemon.type && pokemon.type.includes(filter));
-    tipePokemon = filter;
+  // tipePokemon = filter;
   }
 
-  switch (orden) {
-  case "az":
-    dataPokemon = dataPokemon.sort(funcionesPokemon.orderPokemonByName);
-    break;
-  case "za":
-    dataPokemon = dataPokemon.sort((a, b) => funcionesPokemon.orderPokemonByName(b, a));
-    break;
-  }
+  /*   switch (orden) {
+    case "az":
+      dataPokemon = dataPokemon.sort(funcionesPokemon);
+      break;
+    case "za":
+      dataPokemon = dataPokemon.sort((a, b) => funcionesPokemon.sortBy(b, a));
+      break;
+    } */
 
   dataPokemon.forEach((pokemon) => {
 
@@ -287,6 +287,8 @@ const displayPokemon = (dataPokemon, filter, orden = null) => {
       eggs.insertBefore(imgEgg, eggs.firstChild);
       datosPoke.appendChild(eggs);
 
+
+
       //cerar modal
       const close = document.createElement("span");
       close.classList.add("close");
@@ -309,15 +311,15 @@ const displayPokemon = (dataPokemon, filter, orden = null) => {
 
 displayPokemon(randomPokemon);
 
-/// ordenad data
+/// ordena data
 orderaz.addEventListener('click', () => {
-  displayPokemon(data.pokemon, tipePokemon, "az");
+  const pokemonOrdenadosAz = funcionesPokemon.orderPokemonAz(data.pokemon);
+  displayPokemon(pokemonOrdenadosAz);
 });
-
 orderza.addEventListener('click', () => {
-  displayPokemon(data.pokemon, tipePokemon, "za");
+  const pokemonOrdenadosZa = funcionesPokemon.orderPokemonZa(data.pokemon);
+  displayPokemon(pokemonOrdenadosZa);
 });
-
 
 
 //////////   B U S C A D O R     P O K E M O N ////////

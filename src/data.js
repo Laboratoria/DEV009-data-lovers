@@ -19,15 +19,19 @@ const funcionesPokemon = {
 
   // FUNCION ORDENAR DATA POR NOMBRE
 
-  orderPokemonByName: (a, b) => { //a y b se van a comparar para ordenar
-    if (a.name < b.name) {
-      return -1;
-    }
-    if (a.name > b.name) {
-      return 1;
-    }
-  }
+  orderPokemonAz: (arrayPokemon) =>{
+    const pokemonOrdenadosAz = arrayPokemon.sort((a, b) => {
+      return a.name.localeCompare(b.name);
+    });
+    return pokemonOrdenadosAz;
+  },
 
+  orderPokemonZa: (arrayPokemon) =>{
+    const pokemonOrdenadosZa = arrayPokemon.sort((a, b) => {
+      return b.name.localeCompare(a.name);
+    });
+    return pokemonOrdenadosZa;
+  },
 };
 
 export default funcionesPokemon;
