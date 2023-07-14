@@ -66,29 +66,37 @@ const showModal = (dataCountry) => {
     modal.remove();       
   });
 }
-/****Filtrado por continetes****/
+/****Filtrado por continentes****/
 const menuItems = document.querySelectorAll('.menu__item');
 menuItems.forEach(function(item){
   item.addEventListener('click', function(event){
         
     if (item.classList.contains('.submenus','.menu__item')){
       event.stopPropagation();
-    }    
-    showCards(allContinents (dataCountries,item.textContent));
 
-    /****Ordenar de la A-Z y Z-A****/ 
-    if (item.textContent==="a-z"){
-      showCards(orderAZ (dataCountries));
-     
-    }  
-    else if (item.textContent==="z-a"){
+    }   
+        showCards(allContinents(dataCountries, item.textContent)); 
+
+
+//const a= allContinents(dataCountries, item.textContent,item.textContent)
+console.log(a)
+    /*
+    if (item.textContent === "a-z"){
+
+  }  
+    else if (item.textContent ==="z-a"){
       showCards(orderZA (dataCountries));
-    } 
+
+    } */
     
-
-
   });
 });
+/*
+const menuOrder = document.getElementById('menuOrderAZ');
+menuOrder.addEventListener("click" , function () {
+  showCards(orderAZ(dataCountries));
+});*/
+
 
 /***Funcionalidad al boton Inicio */
 const inicio =document.getElementById('Inicio');

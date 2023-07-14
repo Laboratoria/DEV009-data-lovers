@@ -1,7 +1,13 @@
 
 /*************Filtro por continente***************/
-export const allContinents= (countries, continent) => {
-  return countries.filter((item) => item.continents[0] === continent);
+export const allContinents= (countries, continent, order) => {
+  const filterContinents= countries.filter((item) => item.continents[0] === continent);
+  if (order ==='a-z'){
+    filterContinents.sort((a, b)=>a.name.common.localCompare(b.name.common));
+  } else if (order ==='z-a'){
+    filterContinents.sort((a, b)=>b.name.common.localCompare(a.name.common));
+  }
+  return filterContinents
 };
 
 /*************Busqueda por pais*****************/
