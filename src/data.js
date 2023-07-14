@@ -31,12 +31,12 @@ export const filteredGender = (array, option) => {
 
 export const filteredOrder = (array, option) => {
   let sorted;
-if (option === "AZ"){
-  sorted = array.sort((a, b) => a.name.localeCompare(b.name));
-} else {
+  if (option === "AZ"){
+    sorted = array.sort((a, b) => a.name.localeCompare(b.name));
+  } else {
     sorted = array.sort((a, b) => b.name.localeCompare(a.name));
-}
-return sorted;
+  }
+  return sorted;
 }
 
 
@@ -45,8 +45,8 @@ export const filteredSearch = (array, option) => {
   return array.filter(result => {
     const resultName = result.name.toLowerCase(); // convertir name a minusculas 
     return resultName.includes(searchLowercase); //buscar cualquier coincidencia en la data, respecto a lo introducido en el input
-    });
-  };
+  });
+};
 
 
 export const porcentajeCalculo = (array) => {
@@ -56,7 +56,6 @@ export const porcentajeCalculo = (array) => {
 };
 
 
-    
 
 
 

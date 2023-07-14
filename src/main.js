@@ -3,9 +3,6 @@ import {filteredStatus, filteredSpecies, filteredGender, filteredSearch, filtere
 import data from './data/rickandmorty/rickandmorty.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 
-console.log(data.results);
-
-
 //Escuchar los eventos del DOM - escuchar el evento de hacer click en la opcion 
 /* seleccionar el id del select
 escuchar el evento change
@@ -16,30 +13,29 @@ llamar función crear tarjetas y darle los datos filtrados
 //Status
 const selectStatus= document.getElementById("status")
 selectStatus.addEventListener("change", () => {
-    const optionStatus = selectStatus.value;
-    const filterStatus = filteredStatus(data.results, optionStatus);
-    crearTarjetas(filterStatus);
-    const porcentajeStatus = porcentajeCalculo(filterStatus);
-    if (optionStatus === "All"){
-        crearTarjetaAll()
-    } else {
-        crearTarjetaPorcentaje(porcentajeStatus);
-    }
-    
+  const optionStatus = selectStatus.value;
+  const filterStatus = filteredStatus(data.results, optionStatus);
+  crearTarjetas(filterStatus);
+  const porcentajeStatus = porcentajeCalculo(filterStatus);
+  if (optionStatus === "All"){
+    crearTarjetaAll()
+  } else {
+    crearTarjetaPorcentaje(porcentajeStatus);
+  }
 });
 
 //Species
 const selectSpecies= document.getElementById("species");
 selectSpecies.addEventListener("change", () => {
-    const optionSpecies = selectSpecies.value;
-    const filterSpecies = filteredSpecies(data.results, optionSpecies);
-    crearTarjetas(filterSpecies);
-    const porcentajeSpecies = porcentajeCalculo(filterSpecies);
-    if (optionSpecies === "All"){
-        crearTarjetaAll()
-    } else{
-        crearTarjetaPorcentaje(porcentajeSpecies);
-    }
+  const optionSpecies = selectSpecies.value;
+  const filterSpecies = filteredSpecies(data.results, optionSpecies);
+  crearTarjetas(filterSpecies);
+  const porcentajeSpecies = porcentajeCalculo(filterSpecies);
+  if (optionSpecies === "All"){
+    crearTarjetaAll()
+  } else{
+    crearTarjetaPorcentaje(porcentajeSpecies);
+  }
     
 });
 
