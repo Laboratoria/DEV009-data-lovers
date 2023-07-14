@@ -8,11 +8,6 @@ export const allContinents= (countries, continent) => {
 export const busqueda = (countries,valor) => {
   return countries.filter((item) => item.name.common.toLowerCase().startsWith(valor));
 };
-/*************Seleccion por carta***************/
-export const country = (countries, id) => {
-  return countries.find(country => country.name.common === id);
-};
-
 
 /*************Ordenar de la A-Z***************/
 export const orderAZ = (countries) => {

@@ -1,4 +1,4 @@
-import { busqueda, orderAZ,orderZA } from '../src/data.js';
+import { busqueda, orderAZ,orderZA,allContinents } from '../src/data.js';
 const dataTestCountries = [{
   "name": {
     "common": "Colombia"
@@ -325,9 +325,135 @@ describe('orderZA', () => {
   });
 });
 
+describe('Test para filtrar por allContinents', () => {
+  it('is a function', () => {
+    expect(typeof allContinents).toBe('function');
+  });
+
+  it('Filtrar por continente Americano', () => {
+    const menuItem= "America"
+    const resultTestSearch = [{
+      "name": {
+        "common": "Colombia"
+      },
+      "capital": [
+        "Bogotá"
+      ],
+      "subregion": "South America",
+      "languages": {
+        "spa": "Spanish"
+      },
+      "area": 1141748,
+      "population": 50882884,
+      "continents": [
+        "America"
+      ],
+    }]
+    expect(allContinents(dataTestCountries,menuItem)).toEqual(resultTestSearch);
+  });
+  it('Filtrar por continente Europeo', () => {
+    const menuItem2= "Europe"
+    const resultTestSearch = [{
+      "name": {
+        "common": "Germany",
+      },
+      "capital": [
+        "Berlin"
+      ],
+      "subregion": "Western Europe",
+      "languages": {
+        "deu": "German"
+      },
+      "area": 357114,
+      "population": 83240525,
+      "continents": [
+        "Europe"
+      ],
+    }]
+    expect(allContinents(dataTestCountries,menuItem2)).toEqual(resultTestSearch);
+  });
+  it('Filtrar por continente Asiatico', () => {
+    const menuItem3= "Asia"
+    const resultTestSearch =[{
+      "name": {
+        "common": "Uzbekistan"
+      },
+      "capital": [
+        "Tashkent"
+      ],
+      "subregion": "Central Asia",
+      "languages": {
+        "rus": "Russian",
+        "uzb": "Uzbek"
+      },
+      "area": 447400,
+      "population": 34232050,
+      "fifa": "UZB",
+      "continents": [
+        "Asia"
+      ],
+    }]
+    expect(allContinents(dataTestCountries,menuItem3)).toEqual(resultTestSearch);
+  });
+  it('Filtrar por continente Africano', () => {
+    const menuItem4= "Africa"
+    const resultTestSearch=[{
+      "name": {
+        "common": "Algeria"
+      },
+      "capital": [
+        "Algiers"
+      ],
+      "subregion": "Northern Africa",
+      "languages": {
+        "ara": "Arabic"
+      },
+      "area": 2381741,
+      "population": 44700000,
+      "continents": [
+        "Africa"
+      ],
+    }];
+    expect(allContinents(dataTestCountries,menuItem4)).toEqual(resultTestSearch);
+  });
+  it('Filtrar por continente Antartico', () => {
+    const menuItem5= "Antarctica"
+    const resultTestSearch=[{
+      "name": {
+        "common": "Antarctica"
+      },
+      "area": 14000000,
+      "population": 1000,
+      "continents": [
+        "Antarctica"
+      ]
+    }];
+    expect(allContinents(dataTestCountries,menuItem5)).toEqual(resultTestSearch);
+  });
+  it('Filtrar por continente Oceanico', () => {
+    const menuItem5= "Oceania"
+    const resultTestSearch=[{
+      "name": {
+        "common": "Micronesia"
+      },
+      "capital": [
+        "Palikir"
+      ],
+      "subregion": "Micronesia",
+      "languages": {
+        "eng": "English"
+      },
+      "area": 702,
+      "population": 115021,
+      "continents": [
+        "Oceania"
+      ]
+    }];
+    expect(allContinents(dataTestCountries,menuItem5)).toEqual(resultTestSearch);
+  });
+});
 
 
- 
 
 
 
@@ -349,10 +475,6 @@ describe('orderZA', () => {
 });
 
 
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
 
   it('returns `anotherExample`', () => {
     expect(anotherExample()).toBe('OMG');

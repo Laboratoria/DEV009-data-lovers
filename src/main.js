@@ -58,9 +58,7 @@ const showModal = (dataCountry) => {
   </div> 
   </section> 
   `
-
   root.appendChild(modal)
-  /*console.log(dataCountry.name.common)*/
 
   const closeModalButton = document.querySelector('.modal_close_button');
   closeModalButton.addEventListener('click', (e) => {
@@ -75,22 +73,34 @@ menuItems.forEach(function(item){
         
     if (item.classList.contains('.submenus','.menu__item')){
       event.stopPropagation();
-    }
-      
-      
+    }    
     showCards(allContinents (dataCountries,item.textContent));
-    const america = allContinents(dataCountries,item.textContent)
-    console.log (america)
-   /****Ordenar de la A-Z y Z-A****/ 
-    if (america==="a-z"){
-      //showCards(orderAZ (dataCountries));
-      showCards(orderAZ (dataCountries));
 
+    /****Ordenar de la A-Z y Z-A****/ 
+    if (item.textContent==="a-z"){
+      showCards(orderAZ (dataCountries));
+     
     }  
     else if (item.textContent==="z-a"){
       showCards(orderZA (dataCountries));
     } 
+    
+
 
   });
 });
 
+/***Funcionalidad al boton Inicio */
+const inicio =document.getElementById('Inicio');
+inicio.addEventListener("click",function(){
+  showCards(dataCountries);
+} );
+
+/**Calculo agregado */
+/*function computerStart (data){
+const sumaTotalAreas = dataCountries.reduce((total,country)=> total +(country.area ||0), 0);
+
+ console.log(sumaTotalAreas);*/
+
+/*const sumaTotalAreas = computerStart(dataCountries);
+console.log(dataCountries.area);*/
