@@ -5,7 +5,7 @@
     --secundary-color: #FE0D0D;
     --text-color: white;
     --text-color-inverse: black;
-    --nav-shadow-color: #357CED;
+    --nav-shadow-color: #285FB6;
     --nav-background: #357CED;
     --pokemon-type-normal: #AAA67F;
     --pokemon-type-fighting: #C12239;
@@ -49,10 +49,12 @@ body {
 }
 
 .header {
+
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     box-shadow: 0 4px 5px var(--nav-background);
+
     position: fixed;
     top: 0;
     right: 0;
@@ -68,7 +70,7 @@ body {
     border-radius: 8px;
 }
 
-.menu{
+.menu {
     margin: 0;
     padding: 10px;
 }
@@ -153,6 +155,12 @@ body {
     background-color: var(--nav-background);
 }
 
+.menu__nesting--columns {
+    columns: 3;
+    column-gap: 5px;
+    align-items: center;
+}
+
 .menu__link--inside {
     padding: 30px 100px 30px 20px;
 }
@@ -175,8 +183,10 @@ body {
     width: 36px;
 }
 
+
 /* //////////   FIN  MENU   ////////// */
 
+/* /////     INICIO CARDS   /////*/
 
 .divConteinerCards {
     display: flex;
@@ -193,7 +203,7 @@ body {
     padding: 22px;
     margin: 30px;
     box-sizing: border-box;
-    width: 200px;
+    width: 220px;
     height: 300px;
     border-radius: 5%;
     box-shadow: 0 4px 5px #828181;
@@ -213,6 +223,10 @@ body {
     background-color: var(--theme-color);
     border-radius: 60%;
 }
+
+
+/*//////FIN  CARD /////*/
+/*///// INICIO MODAL ////*/
 
 
 /*   modal   */
@@ -273,6 +287,42 @@ body {
 
 /*   modal   */
 
+/* ////// Fin Modal //// */
+/*/////// INIcio section ranking//// */
+
+.sectionRanking {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    text-align:center;
+    width: 100%;
+}
+
+.picture {
+    left: 40px;
+
+}
+
+
+.ranking {
+    background-color: var(--pokemon-type-electric);
+    border-radius: 8px;
+    box-shadow: 0 4px 5px #828181;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: large;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 8px;
+}
+
+/*////// fin section ranking //////*/
 footer {
     height: auto;
 }
