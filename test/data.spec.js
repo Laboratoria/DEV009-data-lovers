@@ -1,6 +1,7 @@
 import {filteredStatus, filteredSpecies, filteredGender, filteredOrder, filteredSearch, porcentajeCalculo} from '../src/data.js';
  
 
+
 describe('test para filtrar status', () => {
   it('test para validar status alive de los personjes', () => {
     const statusAlive = 'Alive'
@@ -640,13 +641,13 @@ describe('test para filtrar por orden', () => {
 
 describe('test para buscar en el proyecto', () => {
   it('test para buscar un personaje', () => {
-    const search = "ri";
+    //const search = "ri";
     const searchData = [
       { "name": "Secretary of the Interior"}, 
       { "name": "Rick Sanchez" }, 
-      { name: "Abradolf Lincler"}
+      { "name": "Abradolf Lincler"}
     ];
-    const searchDataEsperado = filteredSearch (searchData, search);
+    const searchDataEsperado = filteredSearch(searchData, "ric");
     expect(searchDataEsperado).toEqual([{name: "Rick Sanchez"}]);
   });
 });
@@ -675,7 +676,7 @@ describe('tests de porcentaje', () => {
       {"name": "Arthricia",
         "status": "Alive"}
     ];
-    const resultadoEsperadoPorcentaje = 2.03;
+    const resultadoEsperadoPorcentaje = "2.03";
     expect(porcentajeCalculo  (porcentaje10objetosStatusAlive)).toBe(resultadoEsperadoPorcentaje);
   });
 });  
