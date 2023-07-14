@@ -7,6 +7,7 @@ import {
   filtroApoyo,
   OrdenarAZ,
   OrdenarZA,
+  calcularRoles,
 } from "../src/data.js";
 
 // Cree una pequeña data aleatoria que servira para probar los test
@@ -187,5 +188,16 @@ describe("ordenarZA ordena todos los campeones en orden de la Z a la A", () => {
     expect(dataOrdenadaZA[3].name).toEqual("Ashe");
     expect(dataOrdenadaZA[4].name).toEqual("Ahri");
     expect(dataOrdenadaZA[5].name).toEqual("Aatrox");
+  });
+});
+
+// Prueba Calcular por rol (luchador)
+describe("calcularRoles retorna la cantidad de campeones por rol", () => {
+  it("Debería retornar una función", () => {
+    expect(typeof calcularRoles).toBe("function");
+  });
+  it("Debería retornar para Fighter (Luchador): la cantidad 3", () => {
+    const cantidadLuchador = calcularRoles(lol);
+    expect(cantidadLuchador[0].tags).toEqual("3");
   });
 });
