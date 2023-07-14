@@ -6,11 +6,10 @@ import { prom, countSpecies, countVehicles, alphabeticalOrderPeople, alphabetica
 
 //______PERSONAJES ORDENADOS ALFABÉTICAMENTE
 
-const people = [];
+const people = alphabeticalOrderPeople(data.films);
 
-alphabeticalOrderPeople(people);
 console.log("estoy ordenando personas",people);
-console.log("estoy mostrando la data", data, data.films, people);
+console.log("estoy mostrando la data", data);
 
 //HTML de la lista de personas
 const peopleList = document.getElementById('people-list');
@@ -334,12 +333,12 @@ ordenSpecieFilmsLink.addEventListener('click', function(event) {
 
 //______________TOTAL DE ESPECIES
 
-const speciesCount = countSpecies();
+const speciesCount = countSpecies(data.films);
 console.log("Estoy mostrando el total de especies", speciesCount);
 
 //______________TOTAL DE VEHÍCULOS
 
-const vehiclesCount = countVehicles();
+const vehiclesCount = countVehicles(data.films);
 console.log("Estoy mostrando el total de vehículos", vehiclesCount);
 
 //______________SCORE PROMEDIO EN ROTTEN TOMATOES ('rt_score')
