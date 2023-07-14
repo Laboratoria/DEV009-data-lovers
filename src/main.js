@@ -1,5 +1,5 @@
 /* eslint-disable no-case-declarations */
-import { filterData,sortData} from './data.js';
+import { filterData,sortData,epsCal,promEps} from './data.js';
 import data from './data/pokemon/pokemon.js';
 const pokemonList = data.pokemon;
 const seccionShowAll = document.getElementById('showAll');
@@ -263,17 +263,13 @@ menuGeneration.addEventListener('change', () => {
         
           });
           break;
-        
         }
-    
       }
     );
-
-  
   }
 }
-
 );
 
+console.log('promEps =',promEps(pokemonList[0]['quick-move']));
 
 

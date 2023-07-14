@@ -35,3 +35,16 @@ export const sortData = (data, sortBy, sortOrder) => {
 
   return dataCopy;
 };
+//Función para calcular EPS de un solo movimiento
+export const epsCal = (rapido) => {
+  const energy = Number(rapido.energy);
+  const time = Number(rapido["move-duration-seg"]);
+  return (energy/time).toFixed(1);
+}
+//Función para calcular el promedio de EPS de todos los ataques
+export const promEps = (quickMove)=>{
+  let epsArray =quickMove.map(i => epsCal(i));//se guarda los eps de los ataques
+  let sum=epsArray.reduce((previous, current) => parseFloat(current) + parseFloat(previous),0);//Se calcula la suma de los ataques
+  return (Number(sum)/quickMove.length).toFixed(1);//Regresa la suma de moviemientos entre la cantidad de ataques
+  
+}
