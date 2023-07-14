@@ -1,6 +1,7 @@
 /*el código en data.js proporciona las funciones de filtro necesarias para el main.js, permitiendo que se apliquen diferentes 
 filtros a los campeones y se actualice la lista mostrada en la interfaz.*/
 
+
 export const filtroLuchador = function (data) {
   // La función toma un parámetro llamado data.
   return data.filter((champion) => champion.tags.includes("Fighter"));

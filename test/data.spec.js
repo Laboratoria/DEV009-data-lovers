@@ -198,6 +198,33 @@ describe("calcularRoles retorna la cantidad de campeones por rol", () => {
   });
   it("Debería retornar para Fighter (Luchador): la cantidad 3", () => {
     const cantidadLuchador = calcularRoles(lol);
-    expect(cantidadLuchador[0].tags).toEqual("3");
+    expect(cantidadLuchador["Fighter"]).toEqual(3);
+  });
+
+  it("Debería retornar para Marksman (tirador): la cantidad 1", () => {
+    const cantidadTirador = calcularRoles(lol);
+    expect(cantidadTirador["Marksman"]).toEqual(1);
+  });
+
+  it("Debería retornar para Mage (mago): la cantidad 2", () => {
+    const cantidadMago = calcularRoles(lol);
+    expect(cantidadMago["Mage"]).toEqual(2);
+  });
+
+  it("Debería retornar para Assassin (asesino): la cantidad 2", () => {
+    const cantidadAsesino = calcularRoles(lol);
+    expect(cantidadAsesino["Assassin"]).toEqual(2);
+  });
+
+  it("Debería retornar para Tank (tanque): la cantidad 2", () => {
+    const cantidadTanque = calcularRoles(lol);
+    expect(cantidadTanque["Tank"]).toEqual(2);
+  });
+
+  it("Debería retornar para Support (soporte): la cantidad 2", () => {
+    const cantidadSoporte = calcularRoles(lol);
+    expect(cantidadSoporte["Support"]).toEqual(2);
   });
 });
+
+

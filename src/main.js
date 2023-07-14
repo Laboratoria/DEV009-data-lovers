@@ -10,6 +10,7 @@ import {
   calcularRoles,
 } from "./data.js";
 
+import Chart from "chart.js";
 const navToggle = document.querySelector(".nav-toggle");
 const navMenu = document.querySelector(".nav-menu");
 navToggle.addEventListener("click", () => {
@@ -310,3 +311,6 @@ new Chart(chartContext, {
     maintainAspectRatio: false,
   },
 });
+
+
+
