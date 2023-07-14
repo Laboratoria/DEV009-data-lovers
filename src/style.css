@@ -12,13 +12,18 @@ header {
 }
 
 #contenedor {
-    
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 40px;
     gap: 30px;
 }
+
+option {
+background-color: #b2dd87;
+font-weight: 500;
+}
+
 
 p {
     text-align: center;
@@ -30,6 +35,7 @@ p {
     padding-bottom: 3px;
     padding-left: 4px;
     font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
     display: inline-block;
     border-radius: 10px;
 }
@@ -72,7 +78,7 @@ p {
 }
 
 .optionlight {
-    background-color: #FFF1A7;
+    background-color: #82BF45;
     color: black;
     display: inline-block;
     border-radius: 10px;
@@ -117,6 +123,7 @@ p {
 .lupita{
     margin-right: 7px;
     margin-left: 12px;
+    font-weight: 500;
 }
 
 #divLista{
