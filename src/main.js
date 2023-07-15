@@ -1,4 +1,4 @@
-import { allContinents,busqueda,orderAZ,orderZA} from './data.js';
+import { GetCountriesByContinent, busqueda, orderAZ, orderZA} from './data.js';
 import data from './data/countries/countries.js';
 
 const root =document.getElementById('root');
@@ -66,43 +66,38 @@ const showModal = (dataCountry) => {
     modal.remove();       
   });
 }
+
 /****Filtrado por continentes****/
-const menuItems = document.querySelectorAll('.menu__item');
-menuItems.forEach(function(item){
-  item.addEventListener('click', function(event){
-        
-    if (item.classList.contains('.submenus','.menu__item')){
-      event.stopPropagation();
+let countriesContinent = [];
+const selectContinent = document.getElementById('continent-select');
 
-    }   
-        showCards(allContinents(dataCountries, item.textContent)); 
-
-
-//const a= allContinents(dataCountries, item.textContent,item.textContent)
-console.log(a)
-    /*
-    if (item.textContent === "a-z"){
-
-  }  
-    else if (item.textContent ==="z-a"){
-      showCards(orderZA (dataCountries));
-
-    } */
-    
-  });
+selectContinent.addEventListener('change', function() {
+  const selectedContinent = selectContinent.value;
+  countriesContinent = GetCountriesByContinent(dataCountries, selectedContinent);
+  showCards(countriesContinent); 
+  const selectOrder = document.getElementById('order-select');
+  selectOrder.selectedIndex = 0;
 });
-/*
-const menuOrder = document.getElementById('menuOrderAZ');
-menuOrder.addEventListener("click" , function () {
-  showCards(orderAZ(dataCountries));
-});*/
+
+
+const selectOrder = document.getElementById('order-select');
+
+selectOrder.addEventListener('change', function() {
+  const selectedOrder = selectOrder.value;
+  if(selectedOrder === 'a-z'){
+    showCards(orderAZ(countriesContinent)); 
+  }
+  else{
+    showCards(orderZA(countriesContinent));
+  }
+});
 
 
 /***Funcionalidad al boton Inicio */
 const inicio =document.getElementById('Inicio');
 inicio.addEventListener("click",function(){
   showCards(dataCountries);
-} );
+});
 
 /**Calculo agregado */
 /*function computerStart (data){
