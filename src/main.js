@@ -79,7 +79,6 @@ selectContinent.addEventListener('change', function() {
   selectOrder.selectedIndex = 0;
 });
 
-
 const selectOrder = document.getElementById('order-select');
 
 selectOrder.addEventListener('change', function() {
@@ -92,7 +91,6 @@ selectOrder.addEventListener('change', function() {
   }
 });
 
-  
 /***Funcionalidad al boton Inicio */
 const inicio =document.getElementById('Inicio');
 inicio.addEventListener("click",function(){
@@ -102,6 +100,7 @@ inicio.addEventListener("click",function(){
 /**Calculo agregado */
 /*function computerStart (data)*/
 /*const contAmerica = GetCountriesByContinent (dataCountries,"America");
+
 const contEurope = GetCountriesByContinent (dataCountries,"Europe");
 const contAsia = GetCountriesByContinent (dataCountries,"Asia");
 const contOceania = GetCountriesByContinent (dataCountries,"Oceania");
