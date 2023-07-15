@@ -92,8 +92,6 @@ selectOrder.addEventListener('change', function() {
   }
 });
 
-  });
-});
 /***Funcionalidad al boton Inicio */
 const inicio =document.getElementById('Inicio');
 inicio.addEventListener("click",function(){
@@ -101,13 +99,13 @@ inicio.addEventListener("click",function(){
 });
 
 /**Calculo agregado */
-/*function computerStart (data)*/
- const contAmerica = allContinents (dataCountries,"America");
- const contEurope = allContinents (dataCountries,"Europe");
- const contAsia = allContinents (dataCountries,"Asia");
- const contOceania = allContinents (dataCountries,"Oceania");
- const contAfrica = allContinents (dataCountries,"Africa");
- const contAntarctica = allContinents (dataCountries,"Antarctica");
+/*function computerStart (data)*//*
+const contAmerica = GetCountriesByContinent (dataCountries,"America");
+const contEurope = GetCountriesByContinent (dataCountries,"Europe");
+const contAsia = GetCountriesByContinent (dataCountries,"Asia");
+const contOceania = GetCountriesByContinent (dataCountries,"Oceania");
+const contAfrica = GetCountriesByContinent (dataCountries,"Africa");
+const contAntarctica = GetCountriesByContinent (dataCountries,"Antarctica");
 
 const TotalAreasContinent = dataCountries.reduce((total,country)=> total +(country.area ||0), 0);
 const TotalAreaAmerica = contAmerica .reduce((total,country)=> total +(country.area ||0), 0);
