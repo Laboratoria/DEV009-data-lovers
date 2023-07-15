@@ -92,7 +92,8 @@ selectOrder.addEventListener('change', function() {
   }
 });
 
-
+  });
+});
 /***Funcionalidad al boton Inicio */
 const inicio =document.getElementById('Inicio');
 inicio.addEventListener("click",function(){
@@ -100,10 +101,23 @@ inicio.addEventListener("click",function(){
 });
 
 /**Calculo agregado */
-/*function computerStart (data){
-const sumaTotalAreas = dataCountries.reduce((total,country)=> total +(country.area ||0), 0);
+/*function computerStart (data)*/
+ const contAmerica = allContinents (dataCountries,"America");
+ const contEurope = allContinents (dataCountries,"Europe");
+ const contAsia = allContinents (dataCountries,"Asia");
+ const contOceania = allContinents (dataCountries,"Oceania");
+ const contAfrica = allContinents (dataCountries,"Africa");
+ const contAntarctica = allContinents (dataCountries,"Antarctica");
 
- console.log(sumaTotalAreas);*/
+const TotalAreasContinent = dataCountries.reduce((total,country)=> total +(country.area ||0), 0);
+const TotalAreaAmerica = contAmerica .reduce((total,country)=> total +(country.area ||0), 0);
+const TotalAreaEurope = contEurope .reduce((total,country)=> total +(country.area ||0), 0);
+const TotalAreaAsia= contAsia .reduce((total,country)=> total +(country.area ||0), 0);
+const TotalAreaOceania = contOceania .reduce((total,country)=> total +(country.area ||0), 0);
+const TotalAreaAfrica = contAfrica .reduce((total,country)=> total +(country.area ||0), 0);
+const TotalAreaAntarctica = contAntarctica .reduce((total,country)=> total +(country.area ||0), 0);
+
+console.log(TotalAreasContinent);
 
 /*const sumaTotalAreas = computerStart(dataCountries);
 console.log(dataCountries.area);*/
