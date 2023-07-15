@@ -1,33 +1,45 @@
+const funcionesPokemon = {
 
-//export se utiliza para exportar esta función y hacerla accesible desde otros archivos o módulos.
-//data es un parámetro que representa los datos en los que se realizará la búsqueda
-//inputText es el texto de entrada que se utilizará para buscar en los datos.
+  //FUNCION SEARCH POKEMON POR NUM Y NOMBRE
+  searchPokemon: (data, inputText) => {
+    const resultPokemon = data.filter((eachPokemon) => {
+      const namePokemon = eachPokemon.name;
+      const numPokemon = eachPokemon.num;
+      const lengthText = inputText.length;
+      return namePokemon.slice(0, lengthText) === inputText || numPokemon.slice(0, lengthText) === inputText;
+    });
+    return resultPokemon
+  },
 
+  //SELECION DE TIPO POKEMON
+  displayPokemonByType: (data, filter) => {
+    return data.filter(pokemon => pokemon.type && pokemon.type.includes(filter));
+  },
 
-//FUNCION SEARCH POKEMON POR NUM Y NOMBRE 
-export const searchPokemon = (data, inputText) => {
-  const resultPokemon = data.filter((eachPokemon) => {
-    const namePokemon = eachPokemon.name;
-    const numPokemon = eachPokemon.num;
-    const lengthText = inputText.length;
-    return namePokemon.slice(0, lengthText) === inputText || numPokemon.slice(0, lengthText) === inputText;
+  // FUNCION ORDENAR DATA POR NOMBRE
 
+  orderPokemonAz: (arrayPokemon) => {
+    const pokemonOrdenadosAz = arrayPokemon.sort((a, b) => {
+      return a.name.localeCompare(b.name);
+    });
+    return pokemonOrdenadosAz;
+  },
 
-  });
-  return resultPokemon
-}
+  orderPokemonZa: (arrayPokemon) => {
+    const pokemonOrdenadosZa = arrayPokemon.sort((a, b) => {
+      return b.name.localeCompare(a.name);
+    });
+    return pokemonOrdenadosZa;
+  },
 
-// FUNCION ORDENAR DATA POR NOMBRE
-
-export const sortBy = (a, b) => {
-  if (a.name < b.name) {
-    return -1;
+  //FUNCION PARA OBTENER RANKING TOP TEN DE APARICION
+  getTopPokemon: (data) => {
+    const sortedPokemon = data.sort((a, b) => parseFloat(b['spawn-chance']) - parseFloat(a['spawn-chance']));
+    const topPokemon = sortedPokemon.slice(0, 10);
+    return topPokemon;
+    
   }
-  if (a.name > b.name) {
-    return 1;
-  }
-  return 0;
 };
 
 
-
+export default funcionesPokemon;
