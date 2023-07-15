@@ -18,31 +18,24 @@
        <nav class="navegacion">
          <ul class="menu">
            <li ><a id="Inicio" class="menu__item">INICIO </a></li>
-           <li><a class="menu__item">CONTINENTES</a>
-             <ul class="submenu">
-               <li><a class="menu__item submenus">America</a>
-               <!-- <ul class=" submenu2">
-                   <li><a href="#">CARIBE</a></li>
-                   <li><a href="#">AMERICA CENTAL</a></li>
-                   <li><a href="#">NORTEAMERICA</a></li>
-                   <li><a href="#">SURAMERICA</a></li>
-                  </ul> << --> 
-               </li>
-               <li><a class="menu__item submenus">Africa</a></li>
-               <li><a class="menu__item submenus">Asia</a></li>
-               <li><a class="menu__item submenus">Europe</a></li>
-               <li><a class="menu__item submenus">Antarctica</a></li>
-               <li><a class="menu__item submenus">Oceania</a></li>
-             </ul>  
-           </li>
-           <li><a class="menu__item" >ORDENAR</a>
-              <ul class="submenu">
+           <select id="continent-select" name="continent-select">
+             <option value="Todos">Selecciona continente</option>
+             <option value="Africa">Africa
+              <option value="sur">Sura</option>
 
-               <li class = prueba><a id="menuOrderAZ"class="menu__item submenus">a-z</a></li>
-               <li><a id="menuOrderZA" class="menu__item submenus">z-a</a></li>
+             </option>
 
-               </ul>
-              </li>
+             <option value="America">America</option>
+             <option value="Asia">Asia</option>
+             <option value="Europe">Europe</option>
+             <option value="Antarctica">Antarctica</option>
+             <option value="Oceania">Oceania</option>
+           </select>
+           <select id="order-select" name="order-select">
+            <option value="a-z">A-Z</option>
+            <option value="z-a">Z-A</option>
+          </select>           
+          
            <li><a class="menu__item">ESTADISTICAS </a></li>
            <div class="buscador">
               <label for="Buscar"></label>

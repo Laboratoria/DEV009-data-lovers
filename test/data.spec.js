@@ -1,4 +1,4 @@
-import { busqueda, orderAZ,orderZA,allContinents } from '../src/data.js';
+import { busqueda, orderAZ,orderZA,GetCountriesByContinent } from '../src/data.js';
 const dataTestCountries = [{
   "name": {
     "common": "Colombia"
@@ -327,7 +327,7 @@ describe('orderZA', () => {
 
 describe('Test para filtrar por allContinents', () => {
   it('is a function', () => {
-    expect(typeof allContinents).toBe('function');
+    expect(typeof GetCountriesByContinent).toBe('function');
   });
 
   it('Filtrar por continente Americano', () => {
@@ -349,7 +349,7 @@ describe('Test para filtrar por allContinents', () => {
         "America"
       ],
     }]
-    expect(allContinents(dataTestCountries,menuItem)).toEqual(resultTestSearch);
+    expect(GetCountriesByContinent(dataTestCountries,menuItem)).toEqual(resultTestSearch);
   });
   it('Filtrar por continente Europeo', () => {
     const menuItem2= "Europe"
@@ -370,7 +370,7 @@ describe('Test para filtrar por allContinents', () => {
         "Europe"
       ],
     }]
-    expect(allContinents(dataTestCountries,menuItem2)).toEqual(resultTestSearch);
+    expect(GetCountriesByContinent(dataTestCountries,menuItem2)).toEqual(resultTestSearch);
   });
   it('Filtrar por continente Asiatico', () => {
     const menuItem3= "Asia"
@@ -393,7 +393,7 @@ describe('Test para filtrar por allContinents', () => {
         "Asia"
       ],
     }]
-    expect(allContinents(dataTestCountries,menuItem3)).toEqual(resultTestSearch);
+    expect(GetCountriesByContinent(dataTestCountries,menuItem3)).toEqual(resultTestSearch);
   });
   it('Filtrar por continente Africano', () => {
     const menuItem4= "Africa"
@@ -414,7 +414,7 @@ describe('Test para filtrar por allContinents', () => {
         "Africa"
       ],
     }];
-    expect(allContinents(dataTestCountries,menuItem4)).toEqual(resultTestSearch);
+    expect(GetCountriesByContinent(dataTestCountries,menuItem4)).toEqual(resultTestSearch);
   });
   it('Filtrar por continente Antartico', () => {
     const menuItem5= "Antarctica"
@@ -428,7 +428,7 @@ describe('Test para filtrar por allContinents', () => {
         "Antarctica"
       ]
     }];
-    expect(allContinents(dataTestCountries,menuItem5)).toEqual(resultTestSearch);
+    expect(GetCountriesByContinent(dataTestCountries,menuItem5)).toEqual(resultTestSearch);
   });
   it('Filtrar por continente Oceanico', () => {
     const menuItem5= "Oceania"
@@ -449,7 +449,7 @@ describe('Test para filtrar por allContinents', () => {
         "Oceania"
       ]
     }];
-    expect(allContinents(dataTestCountries,menuItem5)).toEqual(resultTestSearch);
+    expect(GetCountriesByContinent(dataTestCountries,menuItem5)).toEqual(resultTestSearch);
   });
 });
 

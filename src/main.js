@@ -1,4 +1,4 @@
-import { allContinents,busqueda,orderAZ,orderZA} from './data.js';
+import { GetCountriesByContinent, busqueda, orderAZ, orderZA} from './data.js';
 import data from './data/countries/countries.js';
 
 const root =document.getElementById('root');
@@ -66,26 +66,31 @@ const showModal = (dataCountry) => {
     modal.remove();       
   });
 }
-/****Filtrado por continetes****/
-const menuItems = document.querySelectorAll('.menu__item');
-menuItems.forEach(function(item){
-  item.addEventListener('click', function(event){
-        
-    if (item.classList.contains('.submenus','.menu__item')){
-      event.stopPropagation();
-    }    
-    showCards(allContinents (dataCountries,item.textContent));
 
-    /****Ordenar de la A-Z y Z-A****/ 
-    if (item.textContent==="a-z"){
-      showCards(orderAZ (dataCountries));
-     
-    }  
-    else if (item.textContent==="z-a"){
-      showCards(orderZA (dataCountries));
-    } 
-    
+/****Filtrado por continentes****/
+let countriesContinent = [];
+const selectContinent = document.getElementById('continent-select');
 
+selectContinent.addEventListener('change', function() {
+  const selectedContinent = selectContinent.value;
+  countriesContinent = GetCountriesByContinent(dataCountries, selectedContinent);
+  showCards(countriesContinent); 
+  const selectOrder = document.getElementById('order-select');
+  selectOrder.selectedIndex = 0;
+});
+
+
+const selectOrder = document.getElementById('order-select');
+
+selectOrder.addEventListener('change', function() {
+  const selectedOrder = selectOrder.value;
+  if(selectedOrder === 'a-z'){
+    showCards(orderAZ(countriesContinent)); 
+  }
+  else{
+    showCards(orderZA(countriesContinent));
+  }
+});
 
   });
 });
@@ -93,7 +98,7 @@ menuItems.forEach(function(item){
 const inicio =document.getElementById('Inicio');
 inicio.addEventListener("click",function(){
   showCards(dataCountries);
-} );
+});
 
 /**Calculo agregado */
 /*function computerStart (data)*/
