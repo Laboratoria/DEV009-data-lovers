@@ -29,13 +29,7 @@ body {
   text-align: center;
   font-size: 18px;
 }
-#container_pharse{
-  display: flex;
-  flex-direction: column;/*hace que se valla uno abajo del otro y es que no caben en la primera fila*/
-  align-items: center;/*sirve para centrar los items*/
-  height: 70%;
-  width: 100%;
-}
+
 .container_phall{
   text-align: center;
 }
@@ -255,6 +249,7 @@ display: block;
   display: inline-block;
   padding: 8px;
 }
+
 .champion-image {
   width: 100%;
   height: 100%;
@@ -363,11 +358,11 @@ display: block;
 .div-estadistica-izquierda{
   background-color: #b3b0b0;
   width: 335px;
-  height: 400px;
+  height: 500px;
   margin: 20px;
   border-radius: 15px;
 }
-
+/* 
 .div-estadistica-derecha{
   background-color: #b3b0b0;
   width: 335px;
@@ -379,20 +374,20 @@ display: block;
 }
 
 .img-estadisticas{
-  margin-top: 20px;
+  margin-top: 10px;
   width: 160px;
   height: 254px;
-}
+} */
 
 .title-izquierda{
   font-size: 20px;
   padding-top: 10px;
 }
 
-.title-derecha{
+/* .title-derecha{
   font-size: 20px;
   padding-top: 10px;
-}
+} */
 
 /* Torta */
 .info-estadistica-izquierda {
@@ -409,12 +404,395 @@ display: block;
 
 
 
+/*informacion q se muestra al darle click a los campeones*/
+
+#section6 {
+  display: none;
+  position: relative;
+  background: url(fondo.jpg);
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+#close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1;
+  background-color: #fff;
+  padding: 5px 10px;
+  border-radius: 50%;
+}
+
+#info-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+#splashImage {
+  width: 70vw;
+  height: 75vh;
+  margin-top: 8px;
+}
+
+#championTitle {
+  color: #fff;
+  width: 70%;
+  height: 10%;
+  text-align: center;
+  margin: auto;
+  -webkit-text-stroke: 2px #5e5c5c;
+  font-family: 'Knewave', cursive;
+  font-size: 40px;
+}
+
+#championBlurb {
+  color: #fff;
+  width: 80%;
+  height: 20%;
+  margin: auto;
+}
 
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+.error-message {
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***********++++++++++++**************@MEDIA PARA TABLET***********++++++++++++++******************************/
+
+@media (min-width:640px){  
+  .body {
+    padding: 90px 20px 0;
+    
+}
+/**********************************CAMBIOS EN EL HEADER***************************************/
+.header{
+  background: url(pagina2.jfif);
+}
+#container_title{
+  font-size: 50px;
+}
+#container_pharse{
+  display: flex;
+  flex-direction: column;/*hace que se valla uno abajo del otro y es que no caben en la primera fila*/
+  align-items: center;/*sirve para centrar los items*/
+  height: 70%;
+  width: 100%;
+}
+.container_phall{
+  text-align: center;
+}
+.p1{
+  text-align: center;
+  font-family: 'Knewave', cursive;
+  font-size: 50px;
+  color: #fff;
+  -webkit-text-stroke: 2px #000;
+}
+.p2{
+  text-align: center;
+  font-family: 'Knewave', cursive;
+  font-size: 90px;
+  color: #fff;
+  -webkit-text-stroke: 2px #000;
+}
+.p3{
+  text-align: center;
+  font-size: 30px;
+  color: #fff;
+  -webkit-text-stroke: 0.5px #000;
+}
+/**********Botón de flecha********/
+.div_flecha{
+  text-align: center;
+}
+#botonAbajo{
+  margin-top: 40px;
+  padding: 20px;
+  width: 200px;
+}
+#section2 {
+  display: none;
+}
+/**/
+  .logo {
+    font-size: 50px;
+    line-height: 60px;
+    margin-left: 40px;
+    position: relative;
+  }
+
+  /*++++++++++++++++++++++++SEGUNDA BARRA DE NAVEGACION++++++++++++++++++++++*/
+
+  .div-roles {
+    margin-left: 50px;
+    display: block;
+    width: 130px;
+    height: 45px;
+    background-image: linear-gradient(-225deg, #323B53 0%, #2C4266 50%, #35484D 100%);
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+  .div-roles:hover .ul-roles{
+  display: block;
+  }
+  .ul-roles {
+  list-style: none;
+  position: absolute;
+  color: #fff;
+  background-color: #3F3974;
+  display: none;
+  padding: 8px;
+  width: 150px;
+  }
+  .ul-roles li:hover{
+    background-image: linear-gradient(-225deg, #2B3144 0%, #283750 50%, #273538 100%);
+  }
+  .ul-roles li a {
+  color: #fff;
+  height: 35px;
+  padding: 7px;
+  text-decoration: none;
+  display: block;
+  }
+
+  /*---------------------ORDENAR------------------------------------*/
+  .btn-ordenar {
+    width: 130px;
+    height: 45px;
+    font-size: 20px;
+    margin-left: -10px;
+    margin-top: 1.5px;
+    border: 1px solid #fff;
+    color: #fff;
+ }
+  .btn-ordenar:hover{
+    border: 3px solid #FFF;
+ }
+  .ul-roles li:hover{
+    background-color: #554C88;
+  }
+
+  .ul-ordenar li a{
+    height: 35px;
+  }
+/*---------------------BUSCADOR-----------------------------------*/
+  .buscador{
+      padding-right: 30px;
+  }
+  .buscador input{
+      width: 160px;
+      height: 34px;
+      padding: 0 20px;
+      font-size: 18px;
+      color: #222;
+      border: 1px solid #000;
+      margin-top: 1px;
+  }
+  .buscador input:hover{
+    border: 3px solid #000;
+  }
+  .boton{
+      margin-top: 68px;
+      margin-right: 30px;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      font-size: 18px;
+  }
+  /*******************EDICION DEL DIV DE HTML Y DE LO QUE CREAMOS EN JS***************************************/
+    .champion-container {
+      width: 24%;
+    }
+  /*------------------------------------------EDICION DE LA PAGINA DE TIPS------------------------------------------------------*/
+.conteiner-tall-section4{
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 70px;
+  background-image: linear-gradient(to right, #243949 0%, #40627E 100%);
+}
+.titulo_tips{
+  font-family: 'Knewave';
+  font-size: 35px;
+}
+.tip-1{
+  display: flex;
+  margin: 10px;
+  width: 94vw;
+  height: 30vh;
+  align-items: center;
+  }
+.tip-2{
+  display: flex;
+  margin:13px;
+  width: 94vw;
+  height: 30vh;
+  align-items: center;
+}
+.tip-3{
+  display: flex;
+  margin: 13px;
+  width: 94vw;
+  height: 32vh;
+  align-items: center;
+}
+.tip-4{
+  display: flex;
+  margin: 13px;
+  width: 94vw;
+  height: 20vh;
+  align-items: center;
+}
+.tip-5{
+  display: flex;
+  margin: 13px;
+  width: 94vw;
+  height: 30vh;
+  align-items: center;
+}
+.tip-6{
+  display: flex;
+  margin: 13px;
+  width: 94vw;
+  height: 32vh;
+  align-items: center;
+}
+.tip-7{
+  display: flex;
+  margin: 13px;
+  width: 94vw;
+  height: 32vh;
+  align-items: center;
+}
+.p-tips{
+  font-size: 25px;
+  text-align: justify;
+  -webkit-text-stroke: 0.4px #97783D;
+}
+.span-tips{
+  font-size: 30px;
+  -webkit-text-stroke: 0.8px #97783D;
+}
+
+
+
+/*---------------------------EDICION DE LA PAGINA DE ESTADISTICAS---------------------------------------*/
+.container-tall-section5{
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 70px;
+  background-image: linear-gradient(to right, #243949 0%, #40627E 100%);
+  flex-direction: column;
+
+}
+.titulo-estadisticas{
+  font-family: 'Knewave';
+  font-size: 28px;
+  -webkit-text-stroke: 0.05px #fff;
+}
+
+.container-estadisticas{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.div-estadistica-izquierda{
+  background-color: #b3b0b0;
+  width: 500px;
+  height: 520px;
+  margin: 20px;
+  border-radius: 15px;
+}
+
+/* .div-estadistica-derecha{
+  background-color: #b3b0b0;
+  width: 500px;
+  height: 490px;
+  margin: 20px;
+  border-radius: 15px;
+  display: flex; 
+  flex-direction: column;
+}
+
+.img-estadisticas{
+  width: 250px;
+  height: 394px;
+  
+} */
+
+.title-izquierda{
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+/* .title-derecha{
+  font-size: 20px;
+  padding-top: 10px;
+} */
+
+/* Torta */
+.info-estadistica-izquierda {
+  display: flex;
+  margin-top: 40px;
+  justify-content: center;
+}
+}
 
 
 
@@ -430,10 +808,10 @@ display: block;
 
 
 /***********++++++++++++**************@MEDIA PARA EL ESCRITORIO***********++++++++++++++******************************/
-@media (min-width: 640px) {
-  .body {
+@media (min-width: 1280px) {
+.body {
     padding: 90px 20px 0;
-  }
+}
 /**********************************CAMBIOS EN EL HEADER***************************************/
 .header{
   background: url(fondo-pag1.jpg);
@@ -527,6 +905,7 @@ display: block;
     border: 3px solid #FFF;
   }
   .ul-roles li a {
+    font-size: 15px;
     display: block;
     margin: 5px;
   }
@@ -544,13 +923,17 @@ display: block;
     margin-top: -2.5px;
     border: 1px solid #fff;
     color: #fff;
+    font-size: 15px;
+    width: 120px;
+    height: 40px;
  }
   .btn-ordenar:hover{
     border: 3px solid #FFF;
  }
-  .ul-roles li:hover{
+  .ul-ordenar li:hover{
     background-color: #554C88;
   }
+
 /*---------------------BUSCADOR-----------------------------------*/
   .buscador{
       padding-right: 30px;
@@ -676,12 +1059,12 @@ display: block;
 .div-estadistica-izquierda{
   background-color: #b3b0b0;
   width: 500px;
-  height: 490px;
+  height: 520px;
   margin: 20px;
   border-radius: 15px;
 }
 
-.div-estadistica-derecha{
+/* .div-estadistica-derecha{
   background-color: #b3b0b0;
   width: 500px;
   height: 490px;
@@ -695,17 +1078,17 @@ display: block;
   width: 250px;
   height: 394px;
   
-}
+} */
 
 .title-izquierda{
   font-size: 20px;
   padding-top: 10px;
 }
 
-.title-derecha{
+/* .title-derecha{
   font-size: 20px;
   padding-top: 10px;
-}
+} */
 
 /* Torta */
 .info-estadistica-izquierda {
@@ -714,5 +1097,23 @@ display: block;
   justify-content: center;
 }
 
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -73,7 +73,6 @@ const lol = [
     },
   },
 ];
-
 // Prueba filtrado por rol (luchador)
 describe("filtroLuchador retorna los campeones con el tags Fighter (rol luchador)", () => {
   it("Debería retornar una función", () => {
@@ -88,7 +87,6 @@ describe("filtroLuchador retorna los campeones con el tags Fighter (rol luchador
     expect(dataLuchador[1].name).toEqual("Vi");
   });
 });
-
 // Prueba filtrado por rol (Tirador)
 describe("filtroTirador retorna los campeones con el tags Marksman (rol tirador)", () => {
   it("Debería retornar una función", () => {
@@ -99,7 +97,6 @@ describe("filtroTirador retorna los campeones con el tags Marksman (rol tirador)
     expect(dataTirador[0].name).toEqual("Ashe");
   });
 });
-
 // Prueba filtrado por rol (Mago)
 describe("filtroMago retorna los campeones con el tags Mage (rol Mago)", () => {
   it("Debería retornar una función", () => {
@@ -114,7 +111,6 @@ describe("filtroMago retorna los campeones con el tags Mage (rol Mago)", () => {
     expect(dataMago[1].name).toEqual("Lux");
   });
 });
-
 // Prueba filtrado por rol (Asesino)
 describe("filtroAsesino retorna los campeones con el tags Assassin (rol Asesino)", () => {
   it("Debería retornar una función", () => {
@@ -129,7 +125,6 @@ describe("filtroAsesino retorna los campeones con el tags Assassin (rol Asesino)
     expect(dataAsesino[1].name).toEqual("Vi");
   });
 });
-
 // Prueba filtrado por rol (Tanque)
 describe("filtroTanque retorna los campeones con el tags Tank (rol Tanque)", () => {
   it("Debería retornar una función", () => {
@@ -144,7 +139,6 @@ describe("filtroTanque retorna los campeones con el tags Tank (rol Tanque)", () 
     expect(dataTanque[1].name).toEqual("Gnar");
   });
 });
-
 // Prueba filtrado por rol (Apoyo)
 describe("filtroApoyo retorna los campeones con el tags Support (rol Apoyo)", () => {
   it("Debería retornar una función", () => {
@@ -159,7 +153,6 @@ describe("filtroApoyo retorna los campeones con el tags Support (rol Apoyo)", ()
     expect(dataApoyo[1].name).toEqual("Lux");
   });
 });
-
 // Test filtrado en orden alfabetico
 describe("ordenarAZ ordena todos los campeones en orden de la A a la Z", () => {
   it("Debería retornar una función", () => {
@@ -175,7 +168,6 @@ describe("ordenarAZ ordena todos los campeones en orden de la A a la Z", () => {
     expect(dataOrdenadaAZ[5].name).toEqual("Vi");
   });
 });
-
 describe("ordenarZA ordena todos los campeones en orden de la Z a la A", () => {
   it("Debería retornar una función", () => {
     expect(typeof OrdenarZA).toBe("function");
@@ -190,7 +182,6 @@ describe("ordenarZA ordena todos los campeones en orden de la Z a la A", () => {
     expect(dataOrdenadaZA[5].name).toEqual("Aatrox");
   });
 });
-
 // Prueba Calcular por rol (luchador)
 describe("calcularRoles retorna la cantidad de campeones por rol", () => {
   it("Debería retornar una función", () => {
@@ -200,31 +191,24 @@ describe("calcularRoles retorna la cantidad de campeones por rol", () => {
     const cantidadLuchador = calcularRoles(lol);
     expect(cantidadLuchador["Fighter"]).toEqual(3);
   });
-
-  it("Debería retornar para Marksman (tirador): la cantidad 1", () => {
+  it("Debería retornar para Marksman (Tirador): la cantidad 1", () => {
     const cantidadTirador = calcularRoles(lol);
     expect(cantidadTirador["Marksman"]).toEqual(1);
   });
-
-  it("Debería retornar para Mage (mago): la cantidad 2", () => {
+  it("Debería retornar para Mage (Mago): la cantidad 2", () => {
     const cantidadMago = calcularRoles(lol);
     expect(cantidadMago["Mage"]).toEqual(2);
   });
-
-  it("Debería retornar para Assassin (asesino): la cantidad 2", () => {
+  it("Debería retornar para Assassin (Asesino): la cantidad 2", () => {
     const cantidadAsesino = calcularRoles(lol);
     expect(cantidadAsesino["Assassin"]).toEqual(2);
   });
-
-  it("Debería retornar para Tank (tanque): la cantidad 2", () => {
+  it("Debería retornar para Tank(Tanque): la cantidad 2", () => {
     const cantidadTanque = calcularRoles(lol);
     expect(cantidadTanque["Tank"]).toEqual(2);
   });
-
-  it("Debería retornar para Support (soporte): la cantidad 2", () => {
-    const cantidadSoporte = calcularRoles(lol);
-    expect(cantidadSoporte["Support"]).toEqual(2);
+  it("Debería retornar para Support(Apoyo): la cantidad 2", () => {
+    const cantidadApoyo = calcularRoles(lol);
+    expect(cantidadApoyo["Support"]).toEqual(2);
   });
 });
-
-
