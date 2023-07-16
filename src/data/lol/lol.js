@@ -64,7 +64,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ahri_0.jpg",
       blurb:
-        "Ahri es una raposa vastaya conectada de forma innata a la magia del reino de los espíritus. Es capaz de manipular las emociones de su presa antes de consumir su esencia, proceso que le transmite los recuerdos de cada alma que consume. Otrora una poderosa pero incontrolable depredadora, Ahri ahora viaja por el mundo en busca de vestigios de sus antepasados mientras intenta reemplazar los recuerdos robados por otros propios.",
+        "Ahri es una vastaya de aspecto vulpino conectada de forma innata a la magia del reino de los espíritus; puede manipular las emociones de sus presas y consumir su esencia, por lo que recibe fragmentos de su memoria y conocimiento de cada alma que consume. Ahri antes era una depredadora poderosa y descarriada, pero ahora viaja por el mundo en busca de vestigios de sus antepasados, mientras intenta sustituir los recuerdos que robó de sus víctimas por otros creados por ella misma.",
       info: {
         attack: 3,
         defense: 4,

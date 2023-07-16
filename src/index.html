@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -85,13 +84,18 @@
           </div>
 
           <div class="buscador">
-            <input type="text" placeholder="Buscar" />
+            <input type="text" id="searchInput" placeholder="Buscar" />
             <div class="boton">
-            <i class="fas fa-search icon"></i>
+              <i class="fas fa-search icon"></i>
             </div>
           </div>
+          
     </div>
+
         <div id="container_img" class="container clearfix"></div>
+        <div id="modal-container"></div>
+
+
       </div>
     </main>
     </section>
@@ -159,17 +163,28 @@
         
         
 
-        <div class="div-estadistica-derecha">
+        <!-- <div class="div-estadistica-derecha">
           <div class="title-derecha"><b>Ranking de 5 jugadores ordenados por su dificultad</b></div>
           <br>
           <img class="img-estadisticas" src="Caitlyn_estadisticas.png">
-        </div>
+        </div> -->
       
       </div>
 
     </div>
   </section>
 
+
+  <section id="section6">
+    <div id="close-button"><b>x</b></div>
+    <div id="info-container">
+      <img id="splashImage" src="" alt="Splash del campeón">
+    <h2 id="championTitle"></h2>
+    <p id="championBlurb"></p>
+  </div>
+  </section>
+  
+  
 
   <script src="main.js" type="module"></script>
   </body>
