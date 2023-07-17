@@ -31,9 +31,14 @@ const funcionesPokemon = {
     });
     return pokemonOrdenadosZa;
   },
+
+
   //FUNCION PARA OBTENER RANKING TOP TEN DE APARICION
-  rankinTopTen: (arrayPokemon) => {
-    const rankinTopTen = arrayPokemon.pokemon.sort((a, b) => parseFloat(b['spawn-chance']) - parseFloat(a['spawn-chance']));
+  getTopPokemon: (data) => {
+    const sortedPokemon = data.sort((a, b) => parseFloat(b['spawn-chance']) - parseFloat(a['spawn-chance']));
+    const topPokemon = sortedPokemon.slice(0, 10);
+    return topPokemon;
+    
   }
 
 };
