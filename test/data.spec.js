@@ -112,6 +112,11 @@ describe('tests de filter species', () => {
 
 
 describe('tests de filter gender', () => {
+  it('debe devolver un error si la data es undefined', () => {
+    const gender = 'Male';
+    const input = undefined;
+    expect(() =>filteredGender (input, gender)).toThrow('La data es incorrecta')
+  });
   it('test para validar gender Male de los personajes', () => {
     const genderMale = 'Male'
     // const dataGenderMale =  'Male'
