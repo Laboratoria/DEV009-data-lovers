@@ -32,6 +32,7 @@ const funcionesPokemon = {
     return pokemonOrdenadosZa;
   },
 
+
   //FUNCION PARA OBTENER RANKING TOP TEN DE APARICION
   getTopPokemon: (data) => {
     const sortedPokemon = data.sort((a, b) => parseFloat(b['spawn-chance']) - parseFloat(a['spawn-chance']));
@@ -39,6 +40,7 @@ const funcionesPokemon = {
     return topPokemon;
     
   }
+
 };
 
 
