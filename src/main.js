@@ -1,4 +1,3 @@
-
 import funcionesPokemon from './data.js';
 
 //importa un objeto llamado data desde el archivo pokemon.js ubicado en el directorio ./data/pokemon/
@@ -36,9 +35,9 @@ const menu = {
       "subMenu": subMenu
     },
     {
-      "title": "Community",
+      "title": "Top Spawn Chance",
       "class": "menu__link",
-      "href": "#"
+      "href":"#ranking-section"
     }
   ]
 }
@@ -342,11 +341,12 @@ search.addEventListener('input', () => {
 
 ///////// Section RANKING de aparicion  /////
 const sectionRanking = document.createElement('section');
+sectionRanking.setAttribute("id", "ranking-section");
 sectionRanking.classList.add('sectionRanking');
 
 const picture = document.createElement('img');
 picture.classList.add('picture');
-picture.src = "./img/ladyRanking.png";
+picture.src = './img/ladyRanking.png';
 picture.width = 460;
 picture.height = 600;
 
@@ -373,8 +373,8 @@ headerRow.appendChild(spawnChanceHeader);
 thead.appendChild(headerRow);
 
 const tbody = document.createElement('tbody');
-const sortedPokemon = data.pokemon.sort((a, b) => parseFloat(b['spawn-chance']) - parseFloat(a['spawn-chance']));
-const topPokemon = sortedPokemon.slice(0, 10);
+
+const topPokemon = funcionesPokemon.getTopPokemon(data.pokemon);
 
 topPokemon.forEach((pokemon, index) => {
   const rank = index + 1;

@@ -40,19 +40,14 @@
     text-align: center;
 }
 
-body {
-    font-family: 'Electrolize', sans-serif;
-    font-family: 'Montserrat', sans-serif;
-    font-family: 'Roboto Mono', monospace;
-    padding-top: 60px;
-    position: relative;
-}
+
 
 .header {
 
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    padding: 2rem;
     box-shadow: 0 4px 5px var(--nav-background);
 
     position: fixed;
@@ -74,7 +69,13 @@ body {
     margin: 0;
     padding: 10px;
 }
-
+body{
+    font-family: 'Electrolize', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+    padding-top: 60px;
+    position: relative;
+}
 
 
 /* ////////  MENU  ////////*/
@@ -93,10 +94,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
     height: 100%;
     margin: 0 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
 }
 
 .menu__links {
@@ -327,85 +331,3 @@ footer {
     height: auto;
 }
 
-/* //////  RESPONSIVE  /////*/
-/*reposnisve del modal*/
-@media screen and (min-width: 0px) and (max-width: 600px) {
-    .datosPoke {
-        font-size: 12px;
-    }
-}
-
-/*fin reposnisve del modal*/
-
-
-@media only screen and (max-width:600px) {
-    .topheader {
-        height: 100px;
-    }
-
-    .menu__hamburguer {
-        display: flex;
-    }
-
-    .menu__item {
-        --clip: 0;
-        overflow: hidden;
-    }
-
-    .menu__item--active {
-        --transform: rotate(0);
-        --background: #5e7094;
-    }
-
-    .menu__item--show {
-        background-color: var(--background);
-    }
-
-
-    .menu__links {
-        position: fixed;
-        max-width: 400px;
-        width: 100%;
-        top: 70px;
-        bottom: 0;
-        right: 0;
-        background-color: #000;
-        overflow-y: auto;
-        display: grid;
-        grid-auto-rows: max-content;
-        transform: translateX(100%);
-    }
-
-    .menu__links--show {
-        transform: unset;
-        width: 100%;
-    }
-
-    .menu__link {
-        padding: 25px 0;
-        padding-left: 30px;
-        height: auto;
-    }
-
-    .menu__arrow {
-        margin-left: auto;
-        margin-right: 20px;
-    }
-
-    .menu__nesting {
-        display: grid;
-        position: unset;
-        width: 100%;
-        transform: translateY(0);
-        height: 0;
-        transition: height .3s;
-    }
-
-    .menu__link--inside {
-        width: 90%;
-        margin-left: auto;
-        border-left: 1px solid #798499;
-    }
-}
-
-/* ////////   FIN MENU RESPÖNSIVE /////// */

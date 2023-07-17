@@ -1,4 +1,3 @@
-
 const funcionesPokemon = {
 
   //FUNCION SEARCH POKEMON POR NUM Y NOMBRE
@@ -19,19 +18,25 @@ const funcionesPokemon = {
 
   // FUNCION ORDENAR DATA POR NOMBRE
 
-  orderPokemonAz: (arrayPokemon) =>{
+  orderPokemonAz: (arrayPokemon) => {
     const pokemonOrdenadosAz = arrayPokemon.sort((a, b) => {
       return a.name.localeCompare(b.name);
     });
     return pokemonOrdenadosAz;
   },
 
-  orderPokemonZa: (arrayPokemon) =>{
+  orderPokemonZa: (arrayPokemon) => {
     const pokemonOrdenadosZa = arrayPokemon.sort((a, b) => {
       return b.name.localeCompare(a.name);
     });
     return pokemonOrdenadosZa;
   },
+  //FUNCION PARA OBTENER RANKING TOP TEN DE APARICION
+  rankinTopTen: (arrayPokemon) => {
+    const rankinTopTen = arrayPokemon.pokemon.sort((a, b) => parseFloat(b['spawn-chance']) - parseFloat(a['spawn-chance']));
+  }
+
 };
+
 
 export default funcionesPokemon;
