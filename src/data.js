@@ -20,6 +20,9 @@ export const filteredSpecies = (array, option) => {
 };
 
 export const filteredGender = (array, option) => {
+  if (array === undefined) {
+    throw new Error ('La data es incorrecta');
+  }
   let outputGender; 
   if (option === "All"){
     outputGender = array;
