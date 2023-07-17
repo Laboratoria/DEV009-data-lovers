@@ -35,16 +35,17 @@ export const sortData = (data, sortBy, sortOrder) => {
 
   return dataCopy;
 };
-//Función para calcular EPS de un solo movimiento
-export const epsCal = (rapido) => {
-  const energy = Number(rapido.energy);
-  const time = Number(rapido["move-duration-seg"]);
-  return (energy/time).toFixed(1);
+//Función para calcular el cambio del valor de una propiedad un objeto en una unidad de tiempo 
+//(La usamos para calcular el EPS y DPS de los ataques de pokemon)
+export const change = (obj,val,time) => {
+  const valNum = Number(obj[val]);
+  const timeNum = Number(obj[time]);
+  return (valNum/timeNum).toFixed(1);
 }
-//Función para calcular el promedio de EPS de todos los ataques
-export const promEps = (quickMove)=>{
-  let epsArray =quickMove.map(i => epsCal(i));//se guarda los eps de los ataques
-  let sum=epsArray.reduce((previous, current) => parseFloat(current) + parseFloat(previous),0);//Se calcula la suma de los ataques
-  return (Number(sum)/quickMove.length).toFixed(1);//Regresa la suma de moviemientos entre la cantidad de ataques
+//Función para calcular el promedio de un arreglo de numeros
+export const mean = (arrayOfNumbers)=>{ 
+  const sum=arrayOfNumbers.reduce((previous, current) => parseFloat(current) + parseFloat(previous),0);//Se calcula la suma de los numeros del arreglo
+  return (sum/arrayOfNumbers.length).toFixed(1);//Regresa la suma de los valores entre el numero de valores.
   
 }
+

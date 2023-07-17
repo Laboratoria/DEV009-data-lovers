@@ -1,14 +1,11 @@
 /* eslint-disable no-case-declarations */
-import { filterData,sortData,epsCal,promEps} from './data.js';
+import { filterData,sortData,mean,change} from './data.js';
 import data from './data/pokemon/pokemon.js';
 const pokemonList = data.pokemon;
 const seccionShowAll = document.getElementById('showAll');
 const menuOption = document.getElementById('mostrar');
 const menuOrdenar = document.getElementById('ordenar');
 const menuGeneration = document.getElementById('generation');
-
-
-let selectedOption;
 
 const display = (pokemonData)=>{
   
@@ -46,7 +43,7 @@ menuGeneration.addEventListener('change', () => {
 
     menuOption.addEventListener('change',
       function(){
-        selectedOption =menuOption.options[menuOption.selectedIndex].value;
+        const selectedOption =menuOption.options[menuOption.selectedIndex].value;
         location.href = '#mostrarPokemon';
     
         cleanShowAll();
@@ -124,7 +121,7 @@ menuGeneration.addEventListener('change', () => {
     });
     menuOption.addEventListener('change',
       function(){
-        selectedOption =menuOption.options[menuOption.selectedIndex].value;
+        const selectedOption =menuOption.options[menuOption.selectedIndex].value;
         location.href = '#mostrarPokemon';
     
         cleanShowAll();
@@ -200,7 +197,7 @@ menuGeneration.addEventListener('change', () => {
     });
     menuOption.addEventListener('change',
       function(){
-        selectedOption =menuOption.options[menuOption.selectedIndex].value;
+        const selectedOption =menuOption.options[menuOption.selectedIndex].value;
         location.href = '#mostrarPokemon';
     
         cleanShowAll();
@@ -270,6 +267,42 @@ menuGeneration.addEventListener('change', () => {
 }
 );
 
-console.log('promEps =',promEps(pokemonList[0]['quick-move']));
+
+const vecEps = [];
+const vecDps = [];
+
+const pokemonCopy = pokemonList.map(x => x);
 
 
+
+
+pokemonList.map(function(pokemon){
+
+  vecEps.push(pokemon['quick-move'].map(attack =>change(attack,"energy","move-duration-seg")));
+  vecDps.push(pokemon['quick-move'].map(attack =>change(attack,"base-damage","move-duration-seg")));
+
+}) 
+
+const vecMeansEps = vecEps.map(function(energies){
+  return parseFloat(mean(energies));
+})
+const vecMeansDps = vecDps .map(function(damage){
+  return parseFloat(mean(damage));
+})
+let i=0;
+for (const pokemon of pokemonCopy){
+  pokemon.eps = vecMeansEps[i];
+  pokemon.dps = vecMeansDps[i];
+  i++;
+}
+
+const orderByEps2 = sortData(pokemonCopy.filter(i => i.generation.num === "generation ii"),'eps','descendente');
+const orderByDps2 = sortData(pokemonCopy.filter(i => i.generation.num === "generation ii"),'dps','descendente');
+
+
+console.log('top 10 eps segunda generacion',orderByEps2.splice(0,10),'top 10 dps segunda generacion',orderByDps2.splice(0,10));
+
+const orderByEps1 = sortData(pokemonCopy.filter(i => i.generation.num === "generation i"),'eps','descendente');
+const orderByDps1 = sortData(pokemonCopy.filter(i => i.generation.num === "generation i"),'dps','descendente');
+
+console.log('top 10 eps generacion 1',orderByEps1.splice(0,10),'top 10 dps generacion 1',orderByDps1.splice(0,10));
