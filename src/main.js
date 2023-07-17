@@ -35,9 +35,9 @@ const menu = {
       "subMenu": subMenu
     },
     {
-      "title": "Community",
+      "title": "Top Spawn Chance",
       "class": "menu__link",
-      "href": "#"
+      "href":"#ranking-section"
     }
   ]
 }
@@ -341,6 +341,7 @@ search.addEventListener('input', () => {
 
 ///////// Section RANKING de aparicion  /////
 const sectionRanking = document.createElement('section');
+sectionRanking.setAttribute("id", "ranking-section");
 sectionRanking.classList.add('sectionRanking');
 
 const picture = document.createElement('img');
