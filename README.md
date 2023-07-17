@@ -18,19 +18,19 @@ A continuación se muestra la imagen final del sitio:
 
 **Bienvenida**
 
-![captura de la Página de Bienvenida](destop1.png)
+![captura de la Página de Bienvenida](src/destop1.png)
 
 **Página Home**
 
-![captura de la Página Home](destop2.png)
+![captura de la Página Home](src/destop2.png)
 
 **Página Tips para Jugar**
 
-![captura de la Página Tips para Jugar](destop3.png)
+![captura de la Página Tips para Jugar](src/destop3.png)
 
 **Página Estadísticas**
 
-![gráfica de la Página Estadísticas](destop4.png)
+![gráfica de la Página Estadísticas](src/destop4.png)
 
 ## 2. PROCESO DE DISEÑO Y DESARROLLO
 
@@ -68,17 +68,17 @@ Antes de jugar los jugadores pueden utilizar la página para investigar y aprend
 
 **Foto de Prototipo Inicial de Home, Tips para jugar y Estadísticas**
 
-![foto de Prototipo de Baja Fidelidad Página Home](prototipobf1.png)
-![foto de Prototipo de Baja Fidelidad Página Tips para Jugar](prototipobf2.png)
-![foto de Prototipo de Baja Fidelidad Página Estadísticas](prototipobf3.png)
+![foto de Prototipo de Baja Fidelidad Página Home](src/prototipobf1.png)
+![foto de Prototipo de Baja Fidelidad Página Tips para Jugar](src/prototipobf2.png)
+![foto de Prototipo de Baja Fidelidad Página Estadísticas](src/prototipobf3.png)
 
 ### 4.2. Prototipo de Alta Fidelidad
 
 ![gráfica de la pagina2](https://elcomercio.pe/resizer/Qg2q3p2xigsAoB8vwmCcl877T-M=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/UEENUT6R7JF35LGIH3WF5TF7JU.jpg)
 
-![foto de Prototipo de Alta Fidelidad Página Home](prototipoaf1.png)
-![foto de Prototipo de Alta Fidelidad Página Tips para Jugar](prototipoaf2.png)
-![foto de Prototipo de Alta Fidelidad Página Estadísticas](prototipoaf3.png)
+![foto de Prototipo de Alta Fidelidad Página Home](src/prototipoaf1.png)
+![foto de Prototipo de Alta Fidelidad Página Tips para Jugar](src/prototipoaf2.png)
+![foto de Prototipo de Alta Fidelidad Página Estadísticas](src/prototipoaf3.png)
 
 ### 4.4. Historias de Usuario
 
