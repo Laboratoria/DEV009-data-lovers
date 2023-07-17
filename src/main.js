@@ -1,17 +1,12 @@
-// importa una entidad llamada example desde el archivo data.js
-
-import { searchPokemon, hola } from './data.js';
-import pokemon from './data/pokemon/pokemon.js';
-
-
-
+import funcionesPokemon from './data.js';
 
 //importa un objeto llamado data desde el archivo pokemon.js ubicado en el directorio ./data/pokemon/
-import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
 // El objeto data contendrá información sobre los Pokémon.
+import data from './data/pokemon/pokemon.js';
 
-const tiposUnicos = [...new Set(data.pokemon.filter(pokemon => pokemon.type).flatMap(pokemon => pokemon.type))];
+
+
+const tiposUnicos = data.pokemon.filter(pokemon => pokemon.type).flatMap(pokemon => pokemon.type).filter((type, index, self) => self.indexOf(type) === index);
 
 const subMenu = tiposUnicos.map(tipo => ({
   type: tipo,
@@ -23,7 +18,7 @@ const subMenu = tiposUnicos.map(tipo => ({
 const menu = {
   "menu": [
     {
-      "title": "Home",
+      "title": "HOME",
       "class": "menu__link",
       "href": "index.html"
     },
@@ -40,9 +35,9 @@ const menu = {
       "subMenu": subMenu
     },
     {
-      "title": "Community",
+      "title": "Top Spawn Chance",
       "class": "menu__link",
-      "href": "#"
+      "href":"#ranking-section"
     }
   ]
 }
@@ -52,17 +47,15 @@ const tagFirst = body.firstChild;
 
 const header = document.createElement('header');
 header.classList.add("header");
-
 const nav = document.createElement('nav');
 nav.classList.add("menu");
-
 const section = document.createElement('section');
 section.classList.add("menu__container");
 
 const logo = document.createElement('img');
 logo.src = "./img/logopokemon.png";
 logo.classList.add("logo");
-logo.width = 150;
+logo.width = 180;
 logo.height = 80;
 logo.alt = "Logo Pokémon Lab Go";
 
@@ -77,12 +70,11 @@ menu.menu.forEach((opciones) => {
   aTitle.classList.add("menu__link");
   aTitle.href = opciones.href;
   aTitle.innerHTML = opciones.title;
- 
 
 
   if (opciones.subMenu) {
     const ulSubMenu = document.createElement('ul');
-    ulSubMenu.classList.add("menu__nesting",'menu__nesting--columns');
+    ulSubMenu.classList.add("menu__nesting", 'menu__nesting--columns');
 
     opciones.subMenu.forEach((submenu) => {
       const liSubMenu = document.createElement('li');
@@ -93,20 +85,25 @@ menu.menu.forEach((opciones) => {
       aTitleSub.href = submenu.href;
 
       const spanSpace = document.createElement('span');
-        spanSpace.innerHTML = '&nbsp;';
+      spanSpace.innerHTML = '&nbsp;';
 
-        const spanName = document.createElement('span');
-        spanName.textContent = submenu.type;
-        aTitleSub.appendChild(spanSpace);
-        aTitleSub.appendChild(spanName);
+      const spanName = document.createElement('span');
+      spanName.textContent = submenu.type;
+      aTitleSub.append(spanSpace, spanName);
 
-        const img = document.createElement('img');
-        img.src = submenu.img;
-        aTitleSub.insertBefore(img, aTitleSub.firstChild);
-        aTitleSub.addEventListener('click', () => displayPokemon(data.pokemon, submenu.type));
+      const img = document.createElement('img');
+      img.src = submenu.img;
+      aTitleSub.insertBefore(img, aTitleSub.firstChild);
+
+      //--------------- evento que al dar click en type pokemon llamara a la funcion displayPokemonByType
+      aTitleSub.addEventListener('click', () => {
+        const selectedType = submenu.type;
+        const filteredPokemon = funcionesPokemon.displayPokemonByType(data.pokemon, selectedType);
+        displayPokemon(filteredPokemon)
+      });
 
       liSubMenu.appendChild(aTitleSub);
-      ulSubMenu.appendChild(liSubMenu);
+      ulSubMenu.appendChild(liSubMenu)
     });
 
     liTitle.appendChild(ulSubMenu);
@@ -114,7 +111,6 @@ menu.menu.forEach((opciones) => {
   if (opciones.title === "All Pokémon") {
     aTitle.addEventListener('click', () => displayPokemon(data.pokemon, null));
   }
-
 
   liTitle.appendChild(aTitle);
   ul.appendChild(liTitle);
@@ -127,8 +123,6 @@ search.classList.add("buscarPokemon");
 search.placeholder = "Search Pokémon for name or num";
 
 
-
-/////////////////////////////   
 const orderaz = document.querySelector(".az");
 const orderza = document.querySelector(".za");
 
@@ -147,14 +141,26 @@ const randomPokemon = data.pokemon.slice().sort(() => 0.5 - Math.random()).slice
 //busca y devuelve el primer elemento con el id root.
 const root = document.getElementById("root");
 
+
+
 const displayPokemon = (dataPokemon, filter) => {
-  
+  //let tipePokemon = "";
   root.innerHTML = '';
-  if(filter)
-  {
-    dataPokemon =  dataPokemon.filter(pokemon => pokemon.type && pokemon.type.includes(filter));
+  //tipePokemon = '';
+  if (filter) {
+    dataPokemon = dataPokemon.filter(pokemon => pokemon.type && pokemon.type.includes(filter));
+  // tipePokemon = filter;
   }
-  
+
+  /*   switch (orden) {
+    case "az":
+      dataPokemon = dataPokemon.sort(funcionesPokemon);
+      break;
+    case "za":
+      dataPokemon = dataPokemon.sort((a, b) => funcionesPokemon.sortBy(b, a));
+      break;
+    } */
+
   dataPokemon.forEach((pokemon) => {
 
     const type = pokemon.type;
@@ -198,20 +204,6 @@ const displayPokemon = (dataPokemon, filter) => {
 
     card.append(infoContainer, imgContainer);
     root.appendChild(card);
-
-
-     /// ordenad data
-    orderaz.addEventListener('click',() =>{
-      hola();
-    });
-
-    orderza.addEventListener('click', ()=>{
-      hola();
-    });
-
-
-    
-    
 
     ////// M O D A L     P O K E M O N /////////
     //abrir modal
@@ -264,7 +256,7 @@ const displayPokemon = (dataPokemon, filter) => {
 
       const quickMoveModal = document.createElement("div");
       const quickMove = pokemon["quick-move"];
-      let quickData = [];
+      const quickData = [];
       for (let i = 0; i < quickMove.length; i++) {
         quickData.push(quickMove[i].name);
       }
@@ -276,15 +268,13 @@ const displayPokemon = (dataPokemon, filter) => {
       datosPoke.appendChild(weaknessesModal);
 
       const attack = document.createElement("div");
-      var specialAttackData = pokemon["special-attack"];
-      console.log(specialAttackData);
-      var attackName = [];
-      for (var i = 0; i < specialAttackData.length; i++) {
-        console.log(specialAttackData[i].name);
-        attackName.push(specialAttackData[i].name);
-      };
+      const specialAttackData = pokemon["special-attack"];
+      const attackName = [];
+      for (let i = 0; i < specialAttackData.length; i++) {
+        attackName.push(specialAttackData[i].name)
+      }
       attack.textContent = `Special Attack: ${attackName.join(", ")}`;
-      datosPoke.appendChild(attack);
+      datosPoke.appendChild(attack)
 
       //mostrar huevos
       const imgEgg = document.createElement("img");
@@ -317,8 +307,18 @@ const displayPokemon = (dataPokemon, filter) => {
   });
 
 }
+
 displayPokemon(randomPokemon);
 
+/// ordena data
+orderaz.addEventListener('click', () => {
+  const pokemonOrdenadosAz = funcionesPokemon.orderPokemonAz(data.pokemon);
+  displayPokemon(pokemonOrdenadosAz);
+});
+orderza.addEventListener('click', () => {
+  const pokemonOrdenadosZa = funcionesPokemon.orderPokemonZa(data.pokemon);
+  displayPokemon(pokemonOrdenadosZa);
+});
 
 
 //////////   B U S C A D O R     P O K E M O N ////////
@@ -327,8 +327,8 @@ search.addEventListener('input', () => {
   //esta línea de código obtiene el valor del campo de entrada de texto representado por buscarPokemon, lo convierte a minúsculas utilizando .toLowerCase(), y lo almacena en la constante inputText.
   const inputText = search.value.toLowerCase(); //es un método que se utiliza en las cadenas de texto en JavaScript para convertir todos los caracteres de la cadena a minúsculas.
 
-  
-  const result = searchPokemon(data.pokemon, inputText);
+
+  const result = funcionesPokemon.searchPokemon(data.pokemon, inputText);
   if (inputText.length > 0 && result.length > 0) {
     displayPokemon(result);
   } else if (inputText.length > 0 && result.length === 0) {
@@ -341,11 +341,12 @@ search.addEventListener('input', () => {
 
 ///////// Section RANKING de aparicion  /////
 const sectionRanking = document.createElement('section');
+sectionRanking.setAttribute("id", "ranking-section");
 sectionRanking.classList.add('sectionRanking');
 
 const picture = document.createElement('img');
 picture.classList.add('picture');
-picture.src = "./img/ladyRanking.png";
+picture.src = './img/ladyRanking.png';
 picture.width = 460;
 picture.height = 600;
 
@@ -353,7 +354,7 @@ const ranking = document.createElement('div');
 ranking.classList.add('ranking');
 
 const table = document.createElement('table');
-//primera fila 
+//primera fila
 const thead = document.createElement('thead');
 const headerRow = document.createElement('tr');
 
@@ -372,8 +373,8 @@ headerRow.appendChild(spawnChanceHeader);
 thead.appendChild(headerRow);
 
 const tbody = document.createElement('tbody');
-const sortedPokemon = data.pokemon.sort((a, b) => parseFloat(b['spawn-chance']) - parseFloat(a['spawn-chance']));
-const topPokemon = sortedPokemon.slice(0, 10);
+
+const topPokemon = funcionesPokemon.getTopPokemon(data.pokemon);
 
 topPokemon.forEach((pokemon, index) => {
   const rank = index + 1;
@@ -412,7 +413,3 @@ sectionRanking.appendChild(ranking);
 
 
 root.appendChild(sectionRanking);
-
-
-
-

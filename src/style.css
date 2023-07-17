@@ -370,7 +370,7 @@ footer {
         top: 70px;
         bottom: 0;
         right: 0;
-        background-color: #000;
+        background-color: var(--nav-background);
         overflow-y: auto;
         display: grid;
         grid-auto-rows: max-content;
@@ -405,7 +405,7 @@ footer {
     .menu__link--inside {
         width: 90%;
         margin-left: auto;
-        border-left: 1px solid #798499;
+        border-left: 1px solid var(--pokemon-type-electric);
     }
 }
 
