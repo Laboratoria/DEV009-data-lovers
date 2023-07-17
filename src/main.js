@@ -1,4 +1,4 @@
-import { GetCountriesByContinent, busqueda, orderAZ, orderZA} from './data.js';
+import { GetCountriesByContinent, busqueda, orderAZ, orderZA,GetCountriesBySubregion} from './data.js';
 import data from './data/countries/countries.js';
 
 const root =document.getElementById('root');
@@ -75,6 +75,36 @@ selectContinent.addEventListener('change', function() {
   const selectedContinent = selectContinent.value;
   countriesContinent = GetCountriesByContinent(dataCountries, selectedContinent);
   showCards(countriesContinent); 
+  
+  /****Checkbox por subregion****/
+  const filterSubregion = countriesContinent.map(country => country.subregion);
+  const subregionByContinent = filterSubregion.filter((subregion,index) => filterSubregion.indexOf(subregion) === index);
+  const subregionCheckboxes = document.getElementById('subregion-checkboxes');
+  subregionCheckboxes.innerHTML = '';
+
+  subregionByContinent.forEach(subregion => {
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.name = 'subregion-checkbox';
+    checkbox.value = subregion;
+    const label = document.createElement('label');
+    label.appendChild(checkbox);
+    label.appendChild(document.createTextNode(subregion));
+    subregionCheckboxes.appendChild(label);
+    subregionCheckboxes.appendChild(document.createElement('br'));
+    /****Seleccion de un solo checkbox por subregion****/
+    checkbox.addEventListener('change',function(){
+      const checkboxes = subregionCheckboxes.querySelectorAll('input[type="checkbox"]');
+      checkboxes.forEach(cb => {
+        if (cb !== checkbox) {
+          cb.checked = false;
+        }
+      });
+  
+      const selectedSubregion = GetCountriesBySubregion(dataCountries,subregion)
+      showCards(selectedSubregion);
+    });
+  });
   const selectOrder = document.getElementById('order-select');
   selectOrder.selectedIndex = 0;
 });

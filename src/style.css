@@ -38,9 +38,9 @@ header{
   flex-direction: row;
   flex-wrap:nowrap;
   justify-content:space-around;
-  align-items: center;
-   
+  align-items: center;   
 }
+
 #Inicio, #boton, #Estadisticas{
   height: 35px;
   background-color: #e3c1a0;
@@ -84,10 +84,10 @@ header{
 }
 
 #root{
-  margin-top: 180px;
+  margin-top: 200px;
   display: flex ;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content:space-around;
   padding: 1rem;
   background-image: url('../imagen/fondo.jpg');
 }
@@ -144,16 +144,20 @@ header{
 .modal img{
   width: 200px;
   height: auto;
- display: block;
- margin: 0 auto;
+  display: block;
+  margin: 0 auto;
 }
 .modal h2{
   text-align: center;
 }
 
-/*#informacion{
-  font-family: sans-serif;
-  font-weight: bold;
-  color: #0a2948;
-;
-}*/
+#subregion-checkboxes {
+  display: flex ;
+  justify-content: space-between;
+  background-color: #e3c1a0;
+  }
+
+#a.modal_close_button{
+  display: flex
+  align-items;
+}

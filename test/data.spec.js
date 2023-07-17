@@ -1,4 +1,4 @@
-import { busqueda, orderAZ,orderZA,GetCountriesByContinent } from '../src/data.js';
+import { busqueda, orderAZ,orderZA,GetCountriesByContinent} from '../src/data.js';
 const dataTestCountries = [{
   "name": {
     "common": "Colombia"

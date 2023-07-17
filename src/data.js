@@ -31,6 +31,11 @@ export const orderZA = (countries) => {
   });
 };
 
-
+/*************Filtro por subregion***************/
+export const GetCountriesBySubregion= (countries, subregion) => {
+  const filterSubregion= countries.filter((item) => item.subregion === subregion);
+  orderAZ(filterSubregion)
+  return filterSubregion
+};
 
 
