@@ -52,6 +52,28 @@ describe('test para filtrar status', () => {
       }]
     expect(filteredStatus(arrayTestData, statusDead)).toEqual(resultadoEsperadoDead)
   });
+  it('test para validar que se ha seleccionado All', () => {
+    const statusAll = 'All';
+    const resultadoStatusEsperadoAll = [   {
+      "name": "Summer Smith",
+      "status": "Alive",
+      "species": "Human",
+      "gender": "Female",
+    },
+    {         
+      "name": "Amish Cyborg",
+      "status": "Dead",
+      "species": "Alien",
+      "gender": "Male",
+    },
+    {
+      "name": "Bepisian",
+      "status": "Alive",
+      "species": "Alien",
+      "gender": "unknown",
+    }];
+    expect(filteredStatus(arrayTestData, statusAll)).toEqual(resultadoStatusEsperadoAll);
+  });
 });
 
 
@@ -147,6 +169,28 @@ describe('tests de filter gender', () => {
       "gender": "unknown",
     }];
     expect(filteredGender (arrayTestData, genderUnknown)).toEqual(resultadoEsperadoUnknown);
+  });
+  it('test para validar que se ha seleccionado All', () => {
+    const genderAll = 'All';
+    const resultadoGenderEsperadoAll = [   {
+      "name": "Summer Smith",
+      "status": "Alive",
+      "species": "Human",
+      "gender": "Female",
+    },
+    {         
+      "name": "Amish Cyborg",
+      "status": "Dead",
+      "species": "Alien",
+      "gender": "Male",
+    },
+    {
+      "name": "Bepisian",
+      "status": "Alive",
+      "species": "Alien",
+      "gender": "unknown",
+    }];
+    expect(filteredGender(arrayTestData, genderAll)).toEqual(resultadoGenderEsperadoAll);
   });
 });
   
