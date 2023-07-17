@@ -20,6 +20,9 @@ export const filteredSpecies = (array, option) => {
 };
 
 export const filteredGender = (array, option) => {
+  if (array === undefined) {
+    throw new Error ('La data es incorrecta');
+  }
   let outputGender; 
   if (option === "All"){
     outputGender = array;
@@ -42,10 +45,8 @@ export const filteredOrder = (array, option) => {
 
 export const filteredSearch = (array, option) => {
   const searchLowercase = option.toLowerCase(); //convertir el input a minuscula
-  console.log(searchLowercase)
   return array.filter(result => {
     const resultName = result.name.toLowerCase(); // convertir name a minusculas 
-    console.log(resultName.includes(searchLowercase))
     return resultName.includes(searchLowercase); //buscar cualquier coincidencia en la data, respecto a lo introducido en el input
   });
 };
