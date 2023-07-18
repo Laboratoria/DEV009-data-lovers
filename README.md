@@ -82,7 +82,7 @@ Comenzamos investigando sobre que función aplicar para hacer el calculo agregad
 
 ![captura del cuarto quinto en Trello](src/trello5.png)
 
-## 3. INVESTIGACIÓN UX
+## 3. INVESTIGACIÓN UX 🔎📚
 
 ### 3.1. ¿Quiénes son los principales usuarios del producto?​
 
@@ -107,7 +107,7 @@ Se espera visualizar los roles que hay, que rol tiene cada campeón y una peque�
 Principalmente antes de jugar, ya que los aprendices o principiantes pueden utilizar la página para investigar y aprender sobre los nuevos campeones que desean probar antes de jugar con ellos  y también pueden usarlo durante el juego para poder mejorar o para que conozcan más de otros personajes con los que no hayan jugado.​
 
 
-## 4. DISEÑO UI
+## 4. DISEÑO UI 📐🖌
 
 ### 4.1. Prototipo de Baja Fidelidad
 
@@ -141,7 +141,7 @@ Según el testeo nos dimos cuenta que:
 - En la sección Tips para jugar, en lugar de imagenes podiamos agregar algunos gifs para que sea más representativo y llamativo.
 - En la sección Estadísticas en el gráfico de pie era necesario distinguir los roles de campeón por color para hacerlo más entendible
 
-### 4.4. Historias de Usuario
+### 4.4. Historias de Usuario 🎲
 
 **Historia Uno ♞​**
 
