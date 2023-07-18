@@ -1,6 +1,4 @@
-# DATA LOVERS  💚💻  - Pagina Web del Juego Legue of the Legends  🎮
-
-Link Proyecto: [Ir a la Página Web](https://andreasoncco.github.io/DEV009-data-lovers/)
+# DATA LOVERS  💚💻  - Pagina Web del Juego Legue of the Leguends  🎮
 
 ## Índice
 
@@ -278,6 +276,16 @@ Según el testeo nos dimos cuenta que:
     - Incluir un `<a>` para crear el botón de retorno a la página Home.
 
 ## 5. HERRAMIENTAS DE ELABORACIÓN Y PROGRAMAS
+
+Según el testeo nos dimos cuenta que:
+
+- Podríamos mover los filtros arriba de las películas.
+- Simplificar el cómo se muestran las peliculas (ej: de a 3 películas por línea).
+- Hay que agregar un "boton de volver" a la página de la película.
+- Los personajes podríamos mostrarlos también en pequeñas tarjetitas.
+- Se podría mostrar las locaciones y vehículos en una misma sección.
+
+## 5. HERRAMIENTAS DE ELABORACIÓN
 
 - JAVASCRIPT para darle funcionalidad a la página
 - HTML producir la estructura de la interfaz
