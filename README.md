@@ -1,4 +1,4 @@
-# DATA LOVERS  💚💻  - Pagina Web del Juego Legue of the Leguends  🎮
+# DATA LOVERS  💚💻  - página Web del Juego Legue of the Legends  🎮
 
 Link Proyecto: [Ir a la Página Web](https://andreasoncco.github.io/DEV009-data-lovers/)
 
@@ -213,7 +213,7 @@ Según el testeo nos dimos cuenta que:
 
 **Historia Cuatro 👀​**
 
-- Como: nuevo jugador de LoL que visitará la pagina​
+- Como: nuevo jugador de LoL que visitará la página​
 
 - Quiero: ver algunos tips de como jugar o que me recomiendan hacer ​
 
@@ -223,7 +223,7 @@ Según el testeo nos dimos cuenta que:
 
     - Crear un menu de hamburguesa en el cual al hacer click, generé la opción "tips para jugar"​
 
-    - Mostrar la pagina donde se presenten tips para jugar​
+    - Mostrar la página donde se presenten tips para jugar​
 
     - Incluir al lado de cada tips una imagen o un gif​
 
