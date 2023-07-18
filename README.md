@@ -38,7 +38,7 @@ A continuación se muestra la imagen final del sitio:
 
 Para realizar el proyecto nos organizamos utizando las herramientas de Trello para planificar nuestro tiempo y dividir las actividades en tareas más pequeñas haciendo uso de la metodología SCRUM de trabajo ágil. Cabe mencionar que también se uso Figma para hacer el diseño y los prototipos dinámicos que pasaran a detallarse más adelante en la seción de Diseño UI.
 
-El desarrollo total de la página tomo cinco sprints y al cabo de cada uno fuimos tomando en cuenta feedback recibido para hacer mejoras, a continuación pasaré a detallar cada Sprint teniendo en consideración las herramientas usadas
+El desarrollo total de la página tomo cinco sprints y al cabo de cada uno fuimos tomando en cuenta el feedback recibido para hacer mejoras, a continuación pasaré a detallar cada Sprint teniendo en consideración las herramientas usadas
 
 ### 2.1. Primer Sprint
 
@@ -86,25 +86,25 @@ Comenzamos investigando sobre que función aplicar para hacer el calculo agregad
 
 ### 3.1. ¿Quiénes son los principales usuarios del producto?​
 
-Los usuarios que son los fanáticos del juego que están interesados en obtener información detallada sobre los campeones y las personas interesadas en videojuegos. Según la edad, mayormente niños y jóvenes.​
+Los usuarios que son nuevos juegadores de Legue of Legends o las personas interesadas en el juego, que quieren conocer información resumida y simple sobre los campeones y roles para iniciarse en este popular juego de estrategia. Según la edad, nuestros usurios suelen ser jóvenes de un rango muy amplio de edades.​
 
 ### 3.2. ¿Cuáles son los objetivos de estos usuarios en relación con el producto?​
 
 Los objetivos de estos usuarios en relación con nuestra página de información de campeones de League of Legends pueden incluir :​
 
-- Saber cuál es el rol de cada campeón y cuantos roles hay.​
-
 - Conocer los nombres de cada campeón y ver su imagen para identificarlos
 
 - Descubir cuantos campeones existen por cada rol como luchador, mago, asesino, tanque, apoyo y tirador.
 
+- Aprender tips para comenzar a jugar Legue of Legends
+
 ### 3.3. ¿Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué?​
 
-Se espera visualizar los roles que hay, que rol tiene cada campeón y la información detallada de cada campeón para poder tener mayor información de los campeones que quieran usar, saber en qué momento se puede usar cada campeón y también como debemos equiparlos referente a su rol que cumplen.​
+Se espera visualizar los roles que hay, que rol tiene cada campeón y una pequeña descripción sobre cada campeón para poder tener mayor información de los campeones que quieran usar, también saber en qué momento se puede usar cada campeón y  como debemos equiparlos referente a su rol que cumplen.​
 
-### 3.4. ¿Cuándo utilizarían o utilizarían el producto?​
+### 3.4. ¿Cuándo utilizarán o utilizarían el producto?​
 
-Antes de jugar los jugadores pueden utilizar la página para investigar y aprender sobre un nuevo campeón que desean probar antes de jugar con él  y también pueden usarlo durante el juego para poder mejorar o para que conozcan más de otros jugadores con los que no hayan jugado.​
+Principalmente antes de jugar, ya que los aprendices o principiantes pueden utilizar la página para investigar y aprender sobre los nuevos campeones que desean probar antes de jugar con ellos  y también pueden usarlo durante el juego para poder mejorar o para que conozcan más de otros personajes con los que no hayan jugado.​
 
 
 ## 4. DISEÑO UI
@@ -120,6 +120,8 @@ Se hizo un bosquejo con papel y lápiz para crear un diseño inicial de la pági
 ![foto de Prototipo de Baja Fidelidad Página Estadísticas](src/prototipobf3.png)
 
 ### 4.2. Prototipo de Alta Fidelidad
+
+**Prototipo para tamaño Mobile**
 
 [Ir al prototipo interactivo de Figma](https://www.figma.com/proto/krEDURnZWSOr9hH0AOPQNG/Mobile-Lol?type=design&node-id=13-3&t=ayBDE23OER2F0p6a-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=13%3A3&mode=design)
 
@@ -279,11 +281,11 @@ Según el testeo nos dimos cuenta que:
 
     - Incluir un `<a>` para crear el botón de retorno a la página Home.
 
-## 5. HERRAMIENTAS DE ELABORACIÓN
+## 5. HERRAMIENTAS DE ELABORACIÓN 👩‍🔧👩‍🎨
 
 - JAVASCRIPT para darle funcionalidad a la página
 - HTML producir la estructura de la interfaz
 - CSS para implementar el diseño
-- Chart.js para implementar el gráfico de pie
+- Librería Chart.js para implementar el gráfico de pie
 - FIGMA para planear el diseño
 - TRELLO para planificar el tiempo y dividir las tareas
