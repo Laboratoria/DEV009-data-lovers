@@ -35,9 +35,17 @@ export const filteredGender = (array, option) => {
 export const filteredOrder = (array, option) => {
   let sorted;
   if (option === "AZ"){
-    sorted = array.sort((a, b) => a.name.localeCompare(b.name));
+    sorted = array.sort((a, b) => {
+      if(a.name !== undefined && b.name !== undefined){
+        return  a.name.localeCompare(b.name)
+      }
+    });
   } else {
-    sorted = array.sort((a, b) => b.name.localeCompare(a.name));
+    sorted = array.sort((a, b) => {
+      if(a.name !== undefined && b.name !== undefined){
+        return b.name.localeCompare(a.name)
+      }
+    });
   }
   return sorted;
 }
@@ -46,8 +54,11 @@ export const filteredOrder = (array, option) => {
 export const filteredSearch = (array, option) => {
   const searchLowercase = option.toLowerCase(); //convertir el input a minuscula
   return array.filter(result => {
-    const resultName = result.name.toLowerCase(); // convertir name a minusculas 
-    return resultName.includes(searchLowercase); //buscar cualquier coincidencia en la data, respecto a lo introducido en el input
+    if (result.name !== undefined){
+      const resultName = result.name.toLowerCase(); // convertir name a minusculas 
+      return resultName.includes(searchLowercase); //buscar cualquier coincidencia en la data, respecto a lo introducido en el input
+    }
+    
   });
 };
 
