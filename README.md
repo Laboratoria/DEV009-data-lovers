@@ -4,21 +4,21 @@ Link Proyecto: [Ir a la Página Web](https://andreasoncco.github.io/DEV009-data-
 
 ## Índice
 
-* [1. Definición del Proyecto](#1-definición-del-proyecto-👩‍💻)
-* [2. Proceso de Diseño y Desarrollo](#2-proceso-de-diseño-y-desarrollo-📋⌚️)
-* [3. Investigación UX](#3-investigación-ux-🔎📚)
-* [4. Diseño UI](#4-diseño-ui-📐🖌)
-* [5. Herramientas de Elaboración](#5-herramientas-de-elaboración-👩‍🔧👩‍🎨)
+* [1. Definición del Proyecto](#1-definición-del-proyecto)
+* [2. Proceso de Diseño y Desarrollo](#2-proceso-de-diseño-y-desarrollo)
+* [3. Investigación UX](#3-investigación-ux)
+* [4. Diseño UI](#4-diseño-ui)
+* [5. Herramientas de Elaboración](#5-herramientas-de-elaboración)
 
 ***
 
-## 1. DEFINICIÓN DEL PROYECTO 👩‍💻
+## 1. DEFINICIÓN DEL PROYECTO
 
 Nuestra página web es sobre el popular juego en línea Legue of Legends, destinado a los nuevos jugadores o personas interesadas en obtener información resumida del juego para formar sus equipos y conocer que personajes les conviene elegir según el perfil de cada quien. En el sitio web podrás encontrarte con tres segmentos principales: la página Home, la página Tips para Jugar y la página Estadísticas. Asimismo, el sitio web es Responsive Design ya que se ajusta a distintos tamaños puendo acceder desde mobile, tablet o desktop.
 
 A continuación se muestra la imagen final del sitio:
 
-**Bienvenida**
+**Bienvenida** 👩‍💻
 
 ![captura de la Página de Bienvenida](src/destop1.png)
 
@@ -34,13 +34,13 @@ A continuación se muestra la imagen final del sitio:
 
 ![gráfica de la Página Estadísticas](src/destop4.png)
 
-## 2. PROCESO DE DISEÑO Y DESARROLLO 📋⌚️
+## 2. PROCESO DE DISEÑO Y DESARROLLO
 
 Para realizar el proyecto nos organizamos utizando las herramientas de Trello para planificar nuestro tiempo y dividir las actividades en tareas más pequeñas haciendo uso de la metodología SCRUM de trabajo ágil. Cabe mencionar que también se uso Figma para hacer el diseño y los prototipos dinámicos que pasaran a detallarse más adelante en la seción de Diseño UI.
 
 El desarrollo total de la página tomo cinco sprints y al cabo de cada uno fuimos tomando en cuenta el feedback recibido para hacer mejoras, a continuación pasaré a detallar cada Sprint teniendo en consideración las herramientas usadas
 
-### 2.1. Primer Sprint
+### 2.1. Primer Sprint 📋⌚️
 
 Empezamos eligiendo como temática el popular juego en línea Legue of Legends y buscamos mayor información sobre este, también realizamos la investigación de usuario, en la que nos encontramos que nuestros usuarios deberian ser los nuevos jugadores o personas interesadas que no conozcan el juego ya que nuestra página es informativa y la mayor parte de personas que jugaban el juego ya sabian bastante de la data con la que trabajamos y no les interesaba visitar la página. De esta forma, nos dimos cuenta que las personas interesadas en la página eran aquellas que no conocian el juego y tenian curiosidad por conocer las estrategias, tips para jugar y alguna descripción detallada de cada campeón para poder escoger con que personaje iniciar según sus preferencias individuales. 
 
@@ -82,11 +82,11 @@ Comenzamos investigando sobre que función aplicar para hacer el calculo agregad
 
 ![captura del cuarto quinto en Trello](src/trello5.png)
 
-## 3. INVESTIGACIÓN UX 🔎📚
+## 3. INVESTIGACIÓN UX
 
-### 3.1. ¿Quiénes son los principales usuarios del producto?​
+### 3.1. ¿Quiénes son los principales usuarios del producto?​ 🔎📚
 
-Los usuarios que son nuevos juegadores de Legue of Legends o las personas interesadas en el juego, que quieren conocer información resumida y simple sobre los campeones y roles para iniciarse en este popular juego de estrategia. Según la edad, nuestros usurios suelen ser jóvenes de un rango muy amplio de edades.​
+Los usuarios son los nuevos jugadores de Legue of Legends o las personas interesadas en el juego, que quieren conocer información resumida y simple sobre los campeones y roles para iniciarse en este popular juego de estrategia. Según la edad, nuestros usurios suelen ser jóvenes de un rango muy amplio de edades.​
 
 ### 3.2. ¿Cuáles son los objetivos de estos usuarios en relación con el producto?​
 
@@ -107,9 +107,9 @@ Se espera visualizar los roles que hay, que rol tiene cada campeón y una peque�
 Principalmente antes de jugar, ya que los aprendices o principiantes pueden utilizar la página para investigar y aprender sobre los nuevos campeones que desean probar antes de jugar con ellos  y también pueden usarlo durante el juego para poder mejorar o para que conozcan más de otros personajes con los que no hayan jugado.​
 
 
-## 4. DISEÑO UI 📐🖌
+## 4. DISEÑO UI 
 
-### 4.1. Prototipo de Baja Fidelidad
+### 4.1. Prototipo de Baja Fidelidad 📐🖌
 
 Se hizo un bosquejo con papel y lápiz para crear un diseño inicial de la página
 
@@ -121,7 +121,9 @@ Se hizo un bosquejo con papel y lápiz para crear un diseño inicial de la pági
 
 ### 4.2. Prototipo de Alta Fidelidad
 
-[Ir al prototipo interactivo de Figma](https://www.figma.com/proto/krEDURnZWSOr9hH0AOPQNG/Mobile-Lol?type=design&node-id=13-3&t=ayBDE23OER2F0p6a-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=13%3A3&mode=design)
+[Ir al prototipo interactivo de Figma para Mobile](https://www.figma.com/proto/krEDURnZWSOr9hH0AOPQNG/Mobile-Lol?type=design&node-id=13-3&t=ayBDE23OER2F0p6a-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=13%3A3&mode=design)
+
+[Ir al prototipo interactivo de Figma para Desktop](https://www.figma.com/proto/5GiMiEuEMvMHcaMsmkMQPp/Untitled?type=design&node-id=2-4779&t=zK7MGerkX7QCFkzZ-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=15%3A1000&mode=design)
 
 **Prototipo para tamaño Mobile**
 
@@ -281,7 +283,8 @@ Según el testeo nos dimos cuenta que:
 
     - Incluir un `<a>` para crear el botón de retorno a la página Home.
 
-## 5. HERRAMIENTAS DE ELABORACIÓN 👩‍🔧👩‍🎨
+## 5. HERRAMIENTAS DE ELABORACIÓN
+👩‍🔧👩‍🎨
 
 - JAVASCRIPT para darle funcionalidad a la página
 - HTML producir la estructura de la interfaz
