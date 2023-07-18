@@ -12,7 +12,7 @@ Link Proyecto: [Ir a la Página Web](https://andreasoncco.github.io/DEV009-data-
 
 ***
 
-## 1. DEFINICIÓN DEL PROYECTO
+## 1. DEFINICIÓN DEL PROYECTO 👩‍💻
 
 Nuestra página web es sobre el popular juego en línea Legue of Legends, destinado a los nuevos jugadores o personas interesadas en obtener información resumida del juego para formar sus equipos y conocer que personajes les conviene elegir según el perfil de cada quien. En el sitio web podrás encontrarte con tres segmentos principales: la página Home, la página Tips para Jugar y la página Estadísticas. Asimismo, el sitio web es Responsive Design ya que se ajusta a distintos tamaños puendo acceder desde mobile, tablet o desktop.
 
@@ -34,7 +34,7 @@ A continuación se muestra la imagen final del sitio:
 
 ![gráfica de la Página Estadísticas](src/destop4.png)
 
-## 2. PROCESO DE DISEÑO Y DESARROLLO
+## 2. PROCESO DE DISEÑO Y DESARROLLO 📋⌚️
 
 Para realizar el proyecto nos organizamos utizando las herramientas de Trello para planificar nuestro tiempo y dividir las actividades en tareas más pequeñas haciendo uso de la metodología SCRUM de trabajo ágil. Cabe mencionar que también se uso Figma para hacer el diseño y los prototipos dinámicos que pasaran a detallarse más adelante en la seción de Diseño UI.
 
@@ -121,16 +121,16 @@ Se hizo un bosquejo con papel y lápiz para crear un diseño inicial de la pági
 
 ### 4.2. Prototipo de Alta Fidelidad
 
-**Prototipo para tamaño Mobile**
-
 [Ir al prototipo interactivo de Figma](https://www.figma.com/proto/krEDURnZWSOr9hH0AOPQNG/Mobile-Lol?type=design&node-id=13-3&t=ayBDE23OER2F0p6a-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=13%3A3&mode=design)
+
+**Prototipo para tamaño Mobile**
 
 ![foto de Prototipo de Alta Fidelidad Página Bienvenida](src/prototipoafi1.png)
 ![foto de Prototipo de Alta Fidelidad Página Home](src/prototipoafi2.png)
 ![foto de Prototipo de Alta Fidelidad Página Tips para Jugar](src/prototipoafi3.png)
 ![foto de Prototipo de Alta Fidelidad Página Estadísticas](src/prototipoafi4.png)
 
-### 4.3. Testeo de Usabilidad
+### 4.3. Testeo de Usabilidad 💡
 
 Según el testeo nos dimos cuenta que:
 
