@@ -4,11 +4,11 @@ Link Proyecto: [Ir a la Página Web](https://andreasoncco.github.io/DEV009-data-
 
 ## Índice
 
-* [1. Definición del Proyecto](#1-definición-del-proyecto)
-* [2. Proceso de Diseño y Desarrollo](#2-proceso-de-diseño-y-desarrollo)
-* [3. Investigación UX](#3-investigación-ux)
-* [4. Diseño UI](#4-diseño-ui)
-* [5. Herramientas de Elaboración](#5-herramientas-de-elaboración)
+* [1. Definición del Proyecto](#1-definición-del-proyecto-👩‍💻)
+* [2. Proceso de Diseño y Desarrollo](#2-proceso-de-diseño-y-desarrollo-📋⌚️)
+* [3. Investigación UX](#3-investigación-ux-🔎📚)
+* [4. Diseño UI](#4-diseño-ui-📐🖌)
+* [5. Herramientas de Elaboración](#5-herramientas-de-elaboración-👩‍🔧👩‍🎨)
 
 ***
 
@@ -113,7 +113,7 @@ Principalmente antes de jugar, ya que los aprendices o principiantes pueden util
 
 Se hizo un bosquejo con papel y lápiz para crear un diseño inicial de la página
 
-**Foto de Prototipo Inicial de Home, Tips para jugar y Estadísticas**
+**Foto del Prototipo Inicial de Home, Tips para jugar y Estadísticas**
 
 ![foto de Prototipo de Baja Fidelidad Página Home](src/prototipobf1.png)
 ![foto de Prototipo de Baja Fidelidad Página Tips para Jugar](src/prototipobf2.png)
