@@ -1,156 +1,109 @@
-body{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /*crear 12 columnas de 1fr c/u*/
-    grid-template-rows: repeat(12, 1fr); /*crear 10 filas de 1fr c/u*/
-   
+/*dispositivo movil*/
+@media only screen and (max-width:480px) {
 
-}
-@media screen and  (max-width: 480px) {
-  .header{
-    grid-column: 1/4;
-    grid-template-rows: 1;
-  }
-  .nav{
-    grid-column: 1/14;
-    grid-template-rows: 1;
-  }
-  .divConteinerCards{
+    .item {
+        border: 1px solid red;
+    }
 
-  }
-  .footer{
-  
-  }
+    .divConteinerCards {
+        margin-top: 200px;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
 
-}
 
-@media screen and (min-width:480px) and (max-width:768px){
-    .header{
-       grid-column: 1/-1;
-      }
-      .nav{
-       grid-column: 1/span 6;
-       grid-row: 2/span 3;
-      }
-      .divConteinerCards{
-       grid-column: 7/ span 6;
-       grid-row: 5/ span 2;       
-      }
-      .footer{
-       grid-column: 1/-1;
-      }
-}
+.header {
+    padding: 0;
+    margin: 0;
+    width: auto;
+    top: 0;
+    left: 0;
+    flex-direction: row;
+    align-items: center;
 
-@media screen and (min-width:768px){
-    .header{
-       grid-column: 1/-1;
-      }
-      .nav{
-       grid-column: 1/4;
-       grid-row: 2/6;
-      }
-      .divConteinerCards{
-       grid-column: 4/10;
-       grid-row: 2/6;       
-      }
-      .footer{
-       grid-column: 1/-1;
-      }
 }
 
 
+.menu__container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.menu__link{
+    padding: 0 10px;
+    font-size: 12px;
+}
+
+.logo {
+    width: 80px;
+    height: 60px;
+}
+
+.menu__links {
+    font-size: 9px;
+    padding: 5px;
+}
+
+.menu__link--inside {
+    padding: 10px 20px 10px 20px;
+}
+
+.menu__nesting--columns {
+    columns: 2;
+    column-gap: 2px;
+    align-items: center;
+}
+.az, .za{
+    display: flex;
+    width: 20px;
+    height: 20px;}
+
+/*RANKIN SECTION*/
+
+.sectionRanking{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+.ranking table {
+    font-size: 12px;
+}
+
+.ranking th,
+.ranking td {
+    padding: 5px;
+}
 
 
+.picture{
+    width: 260px;
+    height: 300px;
+}
 
+.card {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 10px;
+    display: inline-block;
+}
 
+}
 
+/*tablet*/
+@media only screen and (max-width:480px) {
+    <style>
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*fin reposnisve del modal*/
-
-
-/* @media only screen and (max-width:600px) {
-    .header {
-        height: 100px;
-    }
-
-    .menu__hamburguer {
-        display: flex;
-    }
-
-    .menu__item {
-        --clip: 0;
-        overflow: hidden;
-    }
-
-    .menu__item--active {
-        --transform: rotate(0);
-        --background: #5e7094;
-    }
-
-    .menu__item--show {
-        background-color: var(--background);
-    }
-
-
-    .menu__links {
-        position: fixed;
-        max-width: 400px;
-        width: 100%;
-        top: 70px;
-        bottom: 0;
-        right: 0;
-        background-color: #000;
-        overflow-y: auto;
-        display: grid;
-        grid-auto-rows: max-content;
-        transform: translateX(100%);
-    }
-
-    .menu__links--show {
-        transform: unset;
-        width: 100%;
-    }
-
-    .menu__link {
-        padding: 25px 0;
-        padding-left: 30px;
-        height: auto;
-    }
-
-    .menu__arrow {
-        margin-left: auto;
-        margin-right: 20px;
-    }
-
-    .menu__nesting {
-        display: grid;
-        position: unset;
-        width: 100%;
-        transform: translateY(0);
-        height: 0;
-        transition: height .3s;
-    }
-
-    .menu__link--inside {
-        width: 90%;
-        margin-left: auto;
-        border-left: 1px solid #798499;
-    } 
-}*/
-
-/* ////////   FIN MENU RESPÖNSIVE /////// */

@@ -46,7 +46,7 @@ const body = document.querySelector('body');
 const tagFirst = body.firstChild;
 
 const header = document.createElement('header');
-header.classList.add("header");
+header.classList.add("header", "item");
 const nav = document.createElement('nav');
 nav.classList.add("menu");
 const section = document.createElement('section');
@@ -58,6 +58,8 @@ logo.classList.add("logo");
 logo.width = 180;
 logo.height = 80;
 logo.alt = "Logo Pokémon Lab Go";
+
+
 
 const ul = document.createElement('ul');
 ul.classList.add("menu__links");
