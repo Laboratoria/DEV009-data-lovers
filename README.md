@@ -1,5 +1,7 @@
 # DATA LOVERS  💚💻  - Pagina Web del Juego Legue of the Leguends  🎮
 
+Link Proyecto: [Ir a la Página Web](https://andreasoncco.github.io/DEV009-data-lovers/src/)
+
 ## Índice
 
 * [1. Definición del Proyecto](#1-definición-del-proyecto)
@@ -74,7 +76,7 @@ Este fue el Sprint de mayor avance puesto que ya contabamos con ideas más clara
 
 ### 2.5. Quinto Sprint
 
-Comenzamos investigando sobre que función aplicar para hacer el calculo agregado de los campeones por rol, logramos ejecutar el calculo creando un objeto vacio rol, iterando roles y aplicando el condicional if para que de existir ese rol se sume uno e ir acumulando la cantidad de campeones en cada rol. Luego exploramos la librería de gráficas Chart.js para mostrar la información de cantidad según rol en un pie o tarta de colores para identificarlo mejor y hacerlo llamativo visualmente. Asimismo, actualizamos el figma e hicimos el Readme, termiando el proyecto.
+Comenzamos investigando sobre que función aplicar para hacer el calculo agregado de los campeones por rol, logramos ejecutar el calculo creando un objeto vacio rol, iterando roles y aplicando el condicional if para que de existir ese rol se sume uno e ir acumulando la cantidad de campeones en cada rol. Luego exploramos la librería de gráficas Chart.js para mostrar la información de cantidad según rol en un pie o tarta de colores para identificarlo mejor y hacerlo llamativo visualmente. Asimismo, actualizamos el figma e hicimos el Readme, terminando el proyecto.
 
 **Captura del quinto sprint en Trello**
 
@@ -92,13 +94,13 @@ Los objetivos de estos usuarios en relación con nuestra página de información
 
 - Saber cuál es el rol de cada campeón y cuantos roles hay.​
 
-- Conocer los distintos niveles de ataque, defensa, velocidad o poder de cada campeón.​
+- Conocer los nombres de cada campeón y ver su imagen para identificarlos
 
-- Conocer los distintos tipos de habilidades inherentes o adquiridas de cada campeón.​
+- Descubir cuantos campeones existen por cada rol como luchador, mago, asesino, tanque, apoyo y tirador.
 
 ### 3.3. ¿Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué?​
 
-Se espera visualizar los roles que hay, que rol tiene cada campeón y la información detallada de cada campeón para poder tener mayor información de los campeones que quieran usar, saber en qué momento se puede usar cada campeón y también como debemos equiparlos referente a su rol que cumple.​
+Se espera visualizar los roles que hay, que rol tiene cada campeón y la información detallada de cada campeón para poder tener mayor información de los campeones que quieran usar, saber en qué momento se puede usar cada campeón y también como debemos equiparlos referente a su rol que cumplen.​
 
 ### 3.4. ¿Cuándo utilizarían o utilizarían el producto?​
 
@@ -108,6 +110,8 @@ Antes de jugar los jugadores pueden utilizar la página para investigar y aprend
 ## 4. DISEÑO UI
 
 ### 4.1. Prototipo de Baja Fidelidad
+
+Se hizo un bosquejo con papel y lápiz para crear un diseño inicial de la página
 
 **Foto de Prototipo Inicial de Home, Tips para jugar y Estadísticas**
 
@@ -183,7 +187,7 @@ Según el testeo nos dimos cuenta que:
 
     - Presentar la data filtrada en el `index.html`.
 
-**Historia tres 🗃​**
+**Historia Tres 🗃​**
 
 - Como: jugador de lol​
 
@@ -205,7 +209,7 @@ Según el testeo nos dimos cuenta que:
 
     - Presentar la data ordenada en el `index.html`​
 
-**Historia cuarta 👀​**
+**Historia Cuatro 👀​**
 
 - Como: nuevo jugador de LoL que visitará la pagina​
 
@@ -229,7 +233,7 @@ Según el testeo nos dimos cuenta que:
 
     - Poner un `<p>` por cada tip e incluir un `<img>` en la misma línea.
 
-**Historia quinta 🧮​**
+**Historia Cinco 🧮​**
 
 - Como: jugador de LoL​
 
@@ -251,7 +255,7 @@ Según el testeo nos dimos cuenta que:
 
     - Mostrar el gráfico de torta en el `index.html`.​
 
-**Historia sexta 🧩​**
+**Historia Seis 🧩​**
 
 - Como: persona que quiere comenzar a jugar lol​
 
@@ -274,16 +278,6 @@ Según el testeo nos dimos cuenta que:
     - Crear un `<section>` y presentar la data de la descripción en `index.html`​
 
     - Incluir un `<a>` para crear el botón de retorno a la página Home.
-
-## 5. HERRAMIENTAS DE ELABORACIÓN Y PROGRAMAS
-
-Según el testeo nos dimos cuenta que:
-
-- Podríamos mover los filtros arriba de las películas.
-- Simplificar el cómo se muestran las peliculas (ej: de a 3 películas por línea).
-- Hay que agregar un "boton de volver" a la página de la película.
-- Los personajes podríamos mostrarlos también en pequeñas tarjetitas.
-- Se podría mostrar las locaciones y vehículos en una misma sección.
 
 ## 5. HERRAMIENTAS DE ELABORACIÓN
 
