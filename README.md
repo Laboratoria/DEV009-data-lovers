@@ -22,7 +22,7 @@ El objetivo de este proyecto es adquirir conocimientos en la manipulación de da
 
 Nuestro proyecto se llama **Pokemon Lab Go**, durante el proceso de diseño de la interfaz, deberemos tener en cuenta las necesidades y expectativas de nuestros usuarios. Comprender quiénes son nuestros usuarios y qué información desean visualizar y explorar. Con base en esta comprensión, crearemos una interfaz amigable y fácil de usar que satisfaga las necesidades de nuestros usuarios.
 
-Al finalizar este proyecto, habremos adquirido habilidades en la manipulación de datos, el diseño de interfaces de usuario, el trabajo colaborativo en equipo y el desarrollo web utilizando HTML, CSS y JavaScript. Estaremos preparados para enfrentar desafíos técnicos y brindar soluciones efectivas a problemas de visualización de datos con el uso de _Una single page application (SPA)_, es un tipo de aplicación web que carga una única página inicial desde el servidor y luego actualiza dinámicamente su contenido, mediante las interacciones del usuario, sin necesidad de cargar páginas adicionales del servidor.
+Al finalizar este proyecto, habremos adquirido habilidades en la manipulación de datos, el diseño de interfaces de usuario, el trabajo colaborativo en equipo y el desarrollo web utilizando _HTML, CSS_ y _JavaScript_. Estaremos preparados para enfrentar desafíos técnicos y brindar soluciones efectivas a problemas de visualización de datos con el uso de _Una single page application (SPA)_, es un tipo de aplicación web que carga una única página inicial desde el servidor y luego actualiza dinámicamente su contenido, mediante las interacciones del usuario, sin necesidad de cargar páginas adicionales del servidor.
 
 Para esto se nos proporciono los siguientes datos:
 
@@ -35,8 +35,8 @@ Para esto se nos proporciono los siguientes datos:
 
 * Este proyecto se desarrollo en duplas
 * El rango de tiempo estimado para completar el proyecto fue de 3 a 4 Sprints.
-* El proyecto fue entregado subiendo nuestro código a GitHub (commit/push) y la interfaz fue desplegada usando GitHub Pages.
-* El proyecto debe estar implementada completamente en JavaScript (ES6), HTML y CSS. (sin uso de librerias)
+* El proyecto fue entregado subiendo nuestro código a **GitHub** _(commit/push)_ y la interfaz fue desplegada usando **GitHub Pages**.
+* El proyecto debe estar implementada completamente en _JavaScript (ES6), HTML y CSS_. (Sin hacer uso de librerias).
 
 ## 4. Tecnologías utilizadas
 
@@ -106,7 +106,7 @@ Tras las primeras iteraciones realizamos el prototipo de alta fidelidad en la cu
 
 #### Testeos de usabilidad
 
-Durante los testos de usabilidad se nos da el feedback de modificar las _“CATEGORIAS”_ y los sub-menus desglosarlos en el _nav_, y que solo _tipos_ tenga la posibilidad de desplegar, ya que formaba mucho "ruido visual".
+Durante los testos de usabilidad se nos da el feedback de modificar las **_“CATEGORIAS”_** y los _sub-menus_ desglosarlos en el _nav_, y que solo **_tipos_** tenga la posibilidad de desplegar, ya que formaba mucho _ruido visual_.
 
 Y tras las modificaciones correspondientes quedo así:
 
@@ -153,22 +153,22 @@ El proyecto está organizado de la siguiente manera:
    └── data.spec.js
 ```
 
-### `src/assets`: Contiene las imágenes correspondientes a cada tipo de Pokémon.
+### `src/assets`: Contiene las imágenes correspondientes a los icon de cada tipo de Pokémon.
 
 ### `src/data`: En este set se encuentra una lista con los 251 Pokémon de la región de Kanto y Johto, junto con sus respectivas estadísticas usadas en el juego.
 
-### `src/assets`: Contiene las imágenes utilizadas tanto en la página, como las utilizadas en este Readme.
+### `src/img`: Contiene las imágenes utilizadas tanto en la página, como las utilizadas en este Readme.
 
-### `src/data.js`: Contiene un objeto llamado "funcionesPokemon" que contiene varias funciones relacionadas con la manipulación y filtrado de datos de Pokémon. La cual se exporta al final del código utilizando export default, lo que permite que estas funciones estén disponibles para su uso en otros archivos que importen este módulo.
+### `src/data.js`: Contiene un objeto llamado _"funcionesPokemon"_ que contiene varias funciones relacionadas con la manipulación y filtrado de datos de Pokémon. La cual se exporta al final del código utilizando export default, lo que permite que estas funciones estén disponibles para su uso en otros archivos que importen este módulo.
 ### `src/index.html`: Proporciona la estructura, los estilos, los recursos y la funcionalidad necesarios para construir una página web completa y efectiva.
 
-### `src/main.js`: Se importa las funciones de 'data.js' y crea una página web interactiva que muestra información de los Pokémon, en "cards" que permiten que se abra una modal y proporciona opciones de búsqueda y ordenamiento, y muestra un ranking basado en la probabilidad de aparición de los Pokémon.
+### `src/main.js`: Se importa las funciones de _'data.js'_ y crea una página web interactiva que muestra información de los Pokémon, en _"cards"_ que permiten que se abra una modal y proporciona opciones de búsqueda y ordenamiento, y muestra un ranking basado en la probabilidad de aparición de los Pokémon.
 
 ### `src/style.css`: Este archivo contiene los estilos CSS del sitio web, aplicados para darle una apariencia visual atractiva.
 
-### `src/query.css`: Aquí se aplican todos los @media query, para que el diseño de la página sea responsivo y amigable para los usuarios en una diversa gama de dispositivos.
+### `src/query.css`: Aquí se aplican todos los _@media query_, para que el diseño de la página sea responsivo y amigable para los usuarios en una diversa gama de dispositivos.
 
-### `test/data.spect.js`: Este es un archivo de pruebas (test) escrito en Jest para garantizar que las funciones del módulo funcionesPokemon se comporten correctamente y produzcan los resultados deseados`
+### `test/data.spect.js`: Este es un archivo de pruebas (test) escrito en Jest para garantizar que las funciones del módulo _"funcionesPokemon"_ se comporten correctamente y produzcan los resultados deseados`
 
 ## 7. Pruebas unitarias
 
@@ -181,14 +181,14 @@ Estos test contribuyen al mantenimiento y la calidad del código, permiten detec
 Esta es la interfaz final de la aplicación web en la vista de escritorio.
 
 ### Versión tableta 
-Esta es la interfaz final de la aplicación web en la vista de tableta equivalente a 720 px.
+Esta es la interfaz final de la aplicación web en la vista de tableta equivalente a _720 px_.
 
 ### Versión móvil
-Esta es la interfaz final de la aplicación web en la vista de movil equivalente a 480 px. 
+Esta es la interfaz final de la aplicación web en la vista de movil equivalente a _480 px_. 
 
 ## 9. Desarrolladoras
 
-* [Nancy A. Mendoza (MX)](https://github.com/nancyale24/)
+* [Nancy A. Mendoza _(MX)_](https://github.com/nancyale24/)
 
-* [Paulina Torres (CL)](https://github.com/Paulytorres/)
+* [Paulina Torres A. _(CL)_](https://github.com/Paulytorres/)
 
