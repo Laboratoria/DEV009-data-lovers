@@ -113,6 +113,20 @@ Y tras las modificaciones correspondientes quedo así:
 <img src="./src/img/papf.png" alt="Prototipo de alta post feedback" style="max-width: 400px;" />
 <img src="./src/img/papf2.png" alt="Prototipo de alta post feedback" style="max-width: 400px;" />
 
+Para interactuar con los últimas cambios realizados en **Figma** de nuestro prototipo de alta fidelidad [haz click aqui](https://www.figma.com/proto/pidKRNIkKzxTi7C86XmXJc/Prototipo-alta-DL?type=design&node-id=1-5&t=hoRF5R4XbQ2Csy5X-0&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A5)
+
+<img src="./src/img/1.png" alt="Prototipo de alta pag inicial" style="max-width: 400px;" />
+<img src="./src/img/2.png" alt="Prototipo de alta menu°/tipo" style="max-width: 400px;" />
+<img src="./src/img/3.png" alt="Prototipo de alta tipos" style="max-width: 400px;" />
+<img src="./src/img/4.png" alt="Prototipo de alta modal" style="max-width: 400px;" />
+
+Para realizar la búsqueda por nombre de nuestro prototipo en **Figma**
+
+<img src="./src/img/5.png" alt="Prototipo de alta buscador " style="max-width: 400px;" />
+<img src="./src/img/6.png" alt="Prototipo de alta buscador por nombre Pikachu" style="max-width: 400px;" />
+<img src="./src/img/7.png" alt="Prototipo de alta modal pikachu" style="max-width: 400px;" />
+
+
 ## 6. Estructura de archivos
 
 El proyecto está organizado de la siguiente manera:
