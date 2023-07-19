@@ -268,7 +268,6 @@ const displayPokemon = (dataPokemon, filter) => {
       attack.textContent = `Special Attack: ${attackName.join(", ")}`;
       datosPoke.appendChild(attack)
 
-      //mostrar huevos
       const imgEgg = document.createElement("img");
       imgEgg.src = "./assets/egg.svg";
       imgEgg.alt = "Egss";
@@ -293,8 +292,6 @@ const displayPokemon = (dataPokemon, filter) => {
       modalContent.append(pokemonId, pokemonName, imgPokemonModal, datosPoke);
       modal.appendChild(modalContent);
       root.appendChild(modal);
-
-
     });
   });
 
