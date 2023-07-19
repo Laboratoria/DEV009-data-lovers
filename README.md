@@ -155,7 +155,7 @@ El proyecto está organizado de la siguiente manera:
 
 ### `src/assets`: Contiene las imágenes correspondientes a los icon de cada tipo de Pokémon.
 
-### `src/data`: En este set se encuentra una lista con los 251 Pokémon de la región de Kanto y Johto, junto con sus respectivas estadísticas usadas en el juego.
+### `src/data/pokemon`: En este set se encuentra una lista con los 251 Pokémon de la región de Kanto y Johto, junto con sus respectivas estadísticas usadas en el juego.
 
 ### `src/img`: Contiene las imágenes utilizadas tanto en la página, como las utilizadas en este Readme.
 
