@@ -37,7 +37,7 @@ const menu = {
     {
       "title": "Top Spawn Chance",
       "class": "menu__link",
-      "href":"#ranking-section"
+      "href": "#ranking-section"
     }
   ]
 }
@@ -146,22 +146,12 @@ const root = document.getElementById("root");
 
 
 const displayPokemon = (dataPokemon, filter) => {
-  //let tipePokemon = "";
   root.innerHTML = '';
-  //tipePokemon = '';
   if (filter) {
     dataPokemon = dataPokemon.filter(pokemon => pokemon.type && pokemon.type.includes(filter));
-  // tipePokemon = filter;
   }
 
-  /*   switch (orden) {
-    case "az":
-      dataPokemon = dataPokemon.sort(funcionesPokemon);
-      break;
-    case "za":
-      dataPokemon = dataPokemon.sort((a, b) => funcionesPokemon.sortBy(b, a));
-      break;
-    } */
+
 
   dataPokemon.forEach((pokemon) => {
 
