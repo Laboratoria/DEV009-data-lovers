@@ -1,4 +1,4 @@
-# Data Lovers
+# Data Lovers: Pokémon Lab Go
 
 ## Índice
 
@@ -20,7 +20,7 @@ El objetivo de este proyecto es adquirir conocimientos en la manipulación de da
 
 ## 2. Definición del proyecto
 
-Nuestro proyecto se llama **Pokemon Lab Go**, durante el proceso de diseño de la interfaz, deberemos tener en cuenta las necesidades y expectativas de nuestros usuarios. Comprender quiénes son nuestros usuarios y qué información desean visualizar y explorar. Con base en esta comprensión, crearemos una interfaz amigable y fácil de usar que satisfaga las necesidades de nuestros usuarios.
+Nuestro proyecto se llama **Pokémon Lab Go**, durante el proceso de diseño de la interfaz, deberemos tener en cuenta las necesidades y expectativas de nuestros usuarios. Comprender quiénes son nuestros usuarios y qué información desean visualizar y explorar. Con base en esta comprensión, crearemos una interfaz amigable y fácil de usar que satisfaga las necesidades de nuestros usuarios.
 
 Al finalizar este proyecto, habremos adquirido habilidades en la manipulación de datos, el diseño de interfaces de usuario, el trabajo colaborativo en equipo y el desarrollo web utilizando _HTML, CSS_ y _JavaScript_. Estaremos preparados para enfrentar desafíos técnicos y brindar soluciones efectivas a problemas de visualización de datos con el uso de _Una single page application (SPA)_, es un tipo de aplicación web que carga una única página inicial desde el servidor y luego actualiza dinámicamente su contenido, mediante las interacciones del usuario, sin necesidad de cargar páginas adicionales del servidor.
 
@@ -48,7 +48,7 @@ Para esto se nos proporciono los siguientes datos:
 
 **JavaScript**: Es un lenguaje de programación que se utiliza para agregar interactividad y funcionalidad a las páginas web, permitiendo crear efectos dinámicos, manipular datos y responder a las acciones del usuario.
 
-**CSS**: Es un lenguaje de estilo utilizado para definir la presentación y apariencia visual de una página web, permitiendo controlar el diseño, el formato y los estilos de los elementos en el HTML. Y con su caracteristica de _@media queries_ podemos adapatar el diseño y estilo en función del tipo de dispositivo que el usuario estime para visualizar la página. 
+**CSS**: Es un lenguaje de estilo utilizado para definir la presentación y apariencia visual de una página web, permitiendo controlar el diseño, el formato y los estilos de los elementos en el _HTML_. Y con su caracteristica de _@media queries_ podemos adapatar el diseño y estilo en función del tipo de dispositivo que el usuario estime para visualizar la página. 
 
 **Git**: Es un sistema de control de versiones que facilita el seguimiento de los cambios en el código fuente, permitiendo gestionar y controlar las distintas versiones del proyecto, facilitando el trabajo colaborativo y la gestión de ramas y fusiones.
 
@@ -64,7 +64,7 @@ Para establecer un flujo de trabajo eficiente, comenzamos organizando nuestro es
 
 ### Perfil del usuario
 
-Nuestro producto **"Pokemon Lab Go"** está dirigido a niños, jóvenes y adultos con intereses relacionados con [_"Pokémon"_](https://es.wikipedia.org/wiki/Pok%C3%A9mon) y sus derivados como [_"Pokémon Go"_](https://pokemongolive.com/?hl=es), [_"Pokémon Go Plus+"_](https://www.pokemongoplusplus.com/es-ES/), [_"Pokémon sleep"_](https://www.pokemonsleep.net/es-ES/).
+Nuestro producto **"Pokémon Lab Go"** está dirigido a niños, jóvenes y adultos con intereses relacionados con [_"Pokémon"_](https://es.wikipedia.org/wiki/Pok%C3%A9mon) y sus derivados como [_"Pokémon Go"_](https://pokemongolive.com/?hl=es), [_"Pokémon Go Plus+"_](https://www.pokemongoplusplus.com/es-ES/), [_"Pokémon sleep"_](https://www.pokemonsleep.net/es-ES/).
 
 Para ello, tenemos a disposicion información relevante para formar nuestras historias de usuario.
 
@@ -81,7 +81,7 @@ Para ello, tenemos a disposicion información relevante para formar nuestras his
 ### Diseño de la Interfaz de Usuario
 #### Prototipo de baja fidelidad
 
-En cuanto al diseño de la página, lo primero después de definir el tema a trabajar fue desarrollar un prototipo de baja fidelidad. Para ello realizamos inicialmente bocetos en papel que llevamos posteriormente a Figma.
+En cuanto al diseño de la página, lo primero después de definir el tema a trabajar fue desarrollar un prototipo de baja fidelidad. Para ello realizamos inicialmente bocetos en papel que llevamos posteriormente a _Figma_.
 
 ##### _Boceto en papel_:
 <img src="./src/img/boceto.png" alt="Boceto de la página" style="max-width: 300px;" />
@@ -93,7 +93,7 @@ En cuanto al diseño de la página, lo primero después de definir el tema a tra
 
 #### Prototipo de alta fidelidad
 
-Tras las primeras iteraciones realizamos el prototipo de alta fidelidad en la cual definimos una paleta de colores inicial, priorizado que fuesen iconicas de "Pokémon".
+Tras las primeras iteraciones realizamos el prototipo de alta fidelidad en la cual definimos una paleta de colores inicial, priorizado que fuesen iconicas de _"Pokémon"_.
 
 <img src="./src/img/paleta.png" alt="Paleta de colores" style="max-width: 400px;" />
 
@@ -168,7 +168,7 @@ El proyecto está organizado de la siguiente manera:
 
 ### `src/query.css`: Aquí se aplican todos los _@media query_, para que el diseño de la página sea responsivo y amigable para los usuarios en una diversa gama de dispositivos.
 
-### `test/data.spect.js`: Este es un archivo de pruebas (test) escrito en Jest para garantizar que las funciones del módulo _"funcionesPokemon"_ se comporten correctamente y produzcan los resultados deseados`
+### `test/data.spect.js`: Este es un archivo de pruebas (test) escrito en _Jest_ para garantizar que las funciones del módulo _"funcionesPokemon"_ se comporten correctamente y produzcan los resultados deseados`
 
 ## 7. Pruebas unitarias
 
@@ -180,11 +180,24 @@ Estos test contribuyen al mantenimiento y la calidad del código, permiten detec
 ### Versión escritorio 
 Esta es la interfaz final de la aplicación web en la vista de escritorio.
 
+<img src="./src/img/a.png" alt="pag inicial" style="max-width: 400px;" />
+<img src="./src/img/a1.png" alt=" ranki" style="max-width: 400px;" />
+<img src="./src/img/b.png" alt=" filtro" style="max-width: 400px;" />
+<img src="./src/img/c.png" alt="all pokemon" style="max-width: 400px;" />
+<img src="./src/img/d.png" alt="search" style="max-width: 400px;" />
+<img src="./src/img/e.png" alt="orden z-a" style="max-width: 400px;" />
+
+
 ### Versión tableta 
 Esta es la interfaz final de la aplicación web en la vista de tableta equivalente a _720 px_.
-
+<img src="./src/img/t1.png" alt="pag inicial" style="max-width: 400px;" />
+<img src="./src/img/t2.png" alt=" ranki" style="max-width: 400px;" />
+<img src="./src/img/t3.png" alt=" filtro" style="max-width: 400px;" />
 ### Versión móvil
 Esta es la interfaz final de la aplicación web en la vista de movil equivalente a _480 px_. 
+<img src="./src/img/i1.png" alt="pag inicial" style="max-width: 400px;" />
+<img src="./src/img/i2.png" alt=" ranki" style="max-width: 400px;" />
+<img src="./src/img/i3.png" alt=" filtro" style="max-width: 400px;" />
 
 ## 9. Desarrolladoras
 
