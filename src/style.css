@@ -44,10 +44,10 @@
 
 .header {
 
-    display: flex;
+    
     align-items: center;
     justify-content: space-between;
-    padding: 2rem;
+    padding: 1rem;
     box-shadow: 0 4px 5px var(--nav-background);
 
     position: fixed;
@@ -76,6 +76,8 @@ body{
     padding-top: 60px;
     position: relative;
 }
+
+
 
 
 /* ////////  MENU  ////////*/
@@ -129,7 +131,7 @@ body{
 .menu__link {
     color: #fff;
     text-decoration: none;
-    padding: 0 30px;
+    padding: 0 20px;
     display: flex;
     height: 100%;
     align-items: center;
@@ -196,10 +198,10 @@ body{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     align-content: center;
-    margin: 50px 10px;
+    margin: 180px 10px;
 }
 
 .card {

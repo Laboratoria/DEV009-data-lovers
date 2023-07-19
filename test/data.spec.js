@@ -1,5 +1,3 @@
-
-
 import funcionesPokemon from '../src/data';
 
 const pokemon = [
@@ -7,6 +5,7 @@ const pokemon = [
   { "num": '002', "name": 'ivysaur', "spawn-chance": 0.042, "type": ['grass', 'poison'] },
   { "num": '005', "name": 'charmeleon', "spawn-chance": 0.012, "type": ['fire'] },
 ];
+
 
 
 // ------  Comprueba la funcion buscar pokemon por Name
@@ -37,7 +36,6 @@ describe('funcionesPokemon', () => {
 
 
   // ------   Comprueba funcion para ordenar pokemon de A a Z
-
 
   describe('funcionesPokemon', () => {
     describe('funcionesPokemon.orderPokemonAz', () => {

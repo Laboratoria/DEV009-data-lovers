@@ -37,7 +37,7 @@ const menu = {
     {
       "title": "Top Spawn Chance",
       "class": "menu__link",
-      "href":"#ranking-section"
+      "href": "#ranking-section"
     }
   ]
 }
@@ -46,7 +46,7 @@ const body = document.querySelector('body');
 const tagFirst = body.firstChild;
 
 const header = document.createElement('header');
-header.classList.add("header");
+header.classList.add("header", "item");
 const nav = document.createElement('nav');
 nav.classList.add("menu");
 const section = document.createElement('section');
@@ -58,6 +58,8 @@ logo.classList.add("logo");
 logo.width = 180;
 logo.height = 80;
 logo.alt = "Logo Pokémon Lab Go";
+
+
 
 const ul = document.createElement('ul');
 ul.classList.add("menu__links");
@@ -144,22 +146,12 @@ const root = document.getElementById("root");
 
 
 const displayPokemon = (dataPokemon, filter) => {
-  //let tipePokemon = "";
   root.innerHTML = '';
-  //tipePokemon = '';
   if (filter) {
     dataPokemon = dataPokemon.filter(pokemon => pokemon.type && pokemon.type.includes(filter));
-  // tipePokemon = filter;
   }
 
-  /*   switch (orden) {
-    case "az":
-      dataPokemon = dataPokemon.sort(funcionesPokemon);
-      break;
-    case "za":
-      dataPokemon = dataPokemon.sort((a, b) => funcionesPokemon.sortBy(b, a));
-      break;
-    } */
+
 
   dataPokemon.forEach((pokemon) => {
 
@@ -276,7 +268,6 @@ const displayPokemon = (dataPokemon, filter) => {
       attack.textContent = `Special Attack: ${attackName.join(", ")}`;
       datosPoke.appendChild(attack)
 
-      //mostrar huevos
       const imgEgg = document.createElement("img");
       imgEgg.src = "./assets/egg.svg";
       imgEgg.alt = "Egss";
@@ -301,8 +292,6 @@ const displayPokemon = (dataPokemon, filter) => {
       modalContent.append(pokemonId, pokemonName, imgPokemonModal, datosPoke);
       modal.appendChild(modalContent);
       root.appendChild(modal);
-
-
     });
   });
 
