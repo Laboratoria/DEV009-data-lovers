@@ -245,6 +245,66 @@ describe('test para filtrar por orden', () => {
     ]
     expect(filteredOrder(orderDesc, order)).toEqual(orderEsperadoDesc);
   });
+  it('test para comprobar si tiene un undefined', () => {
+    const order = 'AZ'
+    const orderUndefined = [
+      {
+        "name": "Secretary of the Interior",
+      },
+      {
+        "name": "Loggins",
+      },
+      { "name": undefined
+      },
+      {
+        "name": "Abradolf Lincler",
+      },
+    ];
+    const orderEsperadoUndefined = [
+      {
+        "name": "Abradolf Lincler",
+      },
+      {
+        "name": "Loggins",
+      },
+      {
+        "name": "Secretary of the Interior",
+      },
+      { "name": undefined
+      } 
+    ];
+    expect(filteredOrder(orderUndefined, order)).toEqual(orderEsperadoUndefined);
+  });
+  it('test para comprobar si tiene un undefined orden descendente', () => {
+    const order = 'ZA'
+    const orderUndefinedDesc = [
+      {
+        "name": "Abradolf Lincler",
+      },
+      {
+        "name": "Loggins",
+      },
+      { "name": undefined
+      }, 
+      {
+        "name": "Secretary of the Interior",
+      },
+    ];
+    const orderEsperadoUndefinedDesc = [
+      {
+        "name": "Secretary of the Interior",
+      },
+      {
+        "name": "Loggins",
+      },
+      {
+        "name": "Abradolf Lincler",
+      },
+      { "name": undefined
+      }
+    ];
+    expect(filteredOrder(orderUndefinedDesc, order)).toEqual(orderEsperadoUndefinedDesc);
+  });
 });
 
 describe('test para buscar en el proyecto', () => {
@@ -257,6 +317,17 @@ describe('test para buscar en el proyecto', () => {
     ];
     const searchDataEsperado = filteredSearch(searchData, "ric");
     expect(searchDataEsperado).toEqual([{name: "Rick Sanchez"}]);
+  });
+  it('test para buscar un personaje con undefined', () => {
+    //const search = "ri";
+    const searchDataUndefined = [
+      { "name": "Secretary of the Interior"}, 
+      { "name": "Rick Sanchez" }, 
+      { "name": "Abradolf Lincler"},
+      { "name": undefined}
+    ];
+    const searchDataEsperadoUndefined = filteredSearch(searchDataUndefined, "ric");
+    expect(searchDataEsperadoUndefined).toEqual([{name: "Rick Sanchez"}]);
   });
 });
   
