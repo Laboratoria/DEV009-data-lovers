@@ -219,7 +219,9 @@ function todos() {
       });
   }
 }
+
 //funciones para que el buscador funcione
+
 const searchInput = document.getElementById("searchInput"); //se selecciona un elemento HTML con el ID "searchInput" y se almacena en la variable searchInput
 searchInput.addEventListener("input", function () {
   //se agrega un "escuchador de eventos" al elemento searchInputque se activará cada vez q se detecte un cambio en su valor.
@@ -244,6 +246,7 @@ searchInput.addEventListener("input", function () {
     //sino se cumple todo lo de arriba nos da ese error
   }
 });
+
 ///////////////////////////////ESTADISTICAS/////////////////////////////////////
 // Obtener estadísticas de roles
 const roles = calcularRoles(champions); //se llama a la funcion calcularRole pasando el objeto champion como argumento
@@ -254,8 +257,8 @@ const rolesLabels = Object.keys(roles); //rolesLabaels contiene las claves del o
 // Crear elemento canvas para el gráfico
 const chartCanvas = document.createElement("canvas"); //se crea un elemento canvas, este elemento se reafirmo para mostrar el grafico
 chartCanvas.id = "roles-chart"; //se le crea un ID a canvas
-chartCanvas.width = 400; //se le crea un ancho a canvas
-chartCanvas.height = 400; //se le crea un alto a canvas
+chartCanvas.width = 300; //se le crea un ancho a canvas
+chartCanvas.height = 300; //se le crea un alto a canvas
 document.querySelector(".info-estadistica-izquierda").appendChild(chartCanvas);
 //se llama a la clase info.estadisticas-izquieras y se le agrega dentro de el el elemento canvas creado
 // Obtener contexto del canvas
