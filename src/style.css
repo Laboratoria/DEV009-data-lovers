@@ -141,14 +141,6 @@ body{
     background-color: var(--pokemon-type-unknown);
 }
 
-
-.menu__arrow {
-    transform: var(--transform);
-    transition: transform .3s;
-    display: block;
-    margin-left: 3px;
-}
-
 .menu__nesting {
     list-style: none;
     transition: clip-path .3s;

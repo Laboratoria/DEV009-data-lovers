@@ -11,8 +11,7 @@ const tiposUnicos = data.pokemon.filter(pokemon => pokemon.type).flatMap(pokemon
 const subMenu = tiposUnicos.map(tipo => ({
   type: tipo,
   img: `./assets/${tipo.toLowerCase()}.svg`,
-  href: '#',
-  action: 'acción1'
+  href: '#'
 }));
 
 const menu = {
@@ -41,7 +40,7 @@ const menu = {
     }
   ]
 }
-//    /////MENU/////    //
+
 const body = document.querySelector('body');
 const tagFirst = body.firstChild;
 
@@ -217,7 +216,6 @@ const displayPokemon = (dataPokemon, filter) => {
       const modalContent = document.createElement("div");
       modalContent.classList.add("modal-content");
 
-      //////////////////////////////
       const pokemonId = document.createElement("div");
       pokemonId.classList.add("IdPokemon");
       pokemonId.textContent = `N.º ${pokemon.num}`;
@@ -246,6 +244,10 @@ const displayPokemon = (dataPokemon, filter) => {
       resistantModal.innerHTML = `Resistant: ${pokemon.resistant.join(", ")}`;
       datosPoke.appendChild(resistantModal);
 
+      const weaknessesModal = document.createElement("div");
+      weaknessesModal.textContent = `Weaknesses: ${pokemon.weaknesses.join(", ")}`;
+      datosPoke.appendChild(weaknessesModal);
+
       const quickMoveModal = document.createElement("div");
       const quickMove = pokemon["quick-move"];
       const quickData = [];
@@ -254,10 +256,6 @@ const displayPokemon = (dataPokemon, filter) => {
       }
       quickMoveModal.textContent = `Quick Move: ${quickData.join(", ")}`;
       datosPoke.appendChild(quickMoveModal);
-
-      const weaknessesModal = document.createElement("div");
-      weaknessesModal.textContent = `Weaknesses: ${pokemon.weaknesses.join(", ")}`;
-      datosPoke.appendChild(weaknessesModal);
 
       const attack = document.createElement("div");
       const specialAttackData = pokemon["special-attack"];
@@ -270,7 +268,7 @@ const displayPokemon = (dataPokemon, filter) => {
 
       const imgEgg = document.createElement("img");
       imgEgg.src = "./assets/egg.svg";
-      imgEgg.alt = "Egss";
+      imgEgg.alt = "Eggs";
 
       const eggs = document.createElement("p");
       eggs.innerHTML = pokemon.egg;
@@ -371,7 +369,7 @@ topPokemon.forEach((pokemon, index) => {
   const row = document.createElement('tr');
 
   const position = document.createElement('td');
-  position.textContent = `#${rank}`;
+  position.textContent = `# ${rank}`;
 
   const pokemonImg = document.createElement('img');
   pokemonImg.src = pokemon.img;
