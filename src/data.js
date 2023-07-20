@@ -4,7 +4,7 @@ export const sortName = (arr, option) => {
       return a.name.localeCompare(b.name);
     }
     if (option === "za") {
-      return b.name.localeCompare(a.name); 
+      return b.name.localeCompare(a.name);
     }
   });
   return arr;
@@ -21,9 +21,6 @@ export const sortNum = (arr, option) => {
   });
   return arr;
 }
-
-
-
 //filtro por nombre
 export function resultName(arr, filterName) {
   const results = arr.filter(element => {

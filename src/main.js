@@ -38,7 +38,6 @@ menu.addEventListener("change", () => {
   }
 });
 
-
 //filtro de buscar por nombre
 document.getElementById('pokeNames').addEventListener('keyup', () => {
   const filterName = document.getElementById('pokeNames').value;

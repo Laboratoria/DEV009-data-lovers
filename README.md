@@ -99,7 +99,7 @@ Para: conocer el tipo de pokemon predominante.
 
 *Cómo la página web resuelve las historias de usuari@s?*
 
-Creamos una página web sencilla, pero que cumpla con todos los requisitos visuales, para que el usuario pueda tener una interacción eficaz en la web. Enfocándonos en las historias de usuari@s, y poder dar respuesta a las necesidades dadas. 
+Creamos una página web sencilla, pero que cumpla con todos los requisitos visuales, para que el usuario pueda tener una interacción eficaz en la web. Enfocándonos en las historias de usuari@s, y poder dar respuesta a las necesidades dadas. [FIGMA-Baja Fidelidad](https://www.figma.com/file/gqW6SvOqoDEJ4Ip2wD1MXo/Untitled?type=design&mode=design&t=ugoF4yeD9hgB253j-0)
 
  *Proceso de diseño*
  - Dimos respuesta a las preguntas generales.
@@ -109,7 +109,7 @@ Creamos una página web sencilla, pero que cumpla con todos los requisitos visua
 ![Prototipo-baja](image-4.png)
 
 
- - Creamos un prototipo de alta fidelidad, donde pautamos como deseamos que se viera nuestra web de una manera dinámica.
+ - Creamos un prototipo de alta fidelidad, donde pautamos como deseamos que se viera nuestra web de una manera dinámica. [FIGMA-MOBILE](https://www.figma.com/proto/vlCD1tjFgenRNyuADNATll/Untitled?type=design&node-id=9-137&t=bIiAfbsmAOjNCb0q-0&scaling=scale-down&page-id=0%3A1&starting-point-node-id=2%3A4&show-proto-sidebar=1)      /  [FIGMA-ESCRITORIO](https://www.figma.com/proto/vlCD1tjFgenRNyuADNATll/Untitled?type=design&node-id=11-389&t=bIiAfbsmAOjNCb0q-0&scaling=min-zoom&page-id=11%3A388&starting-point-node-id=11%3A495)
 
 
  ![Prototipo-alta](prototipo_alta.png)
