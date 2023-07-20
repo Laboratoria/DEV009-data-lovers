@@ -413,25 +413,25 @@ display: block;
   height: 100vh;
 }
 #splashImage {
-  width: 70vw;
-  height: 75vh;
-  margin-top: 8px;
+  width: 58vw;
+  height: 35vh;
+  margin-top:-130px;
 }
 #championTitle {
   color: #fff;
-  width: 70%;
-  height: 10%;
+  width: 50%;
+  height: 8%;
   text-align: center;
-  margin: auto;
   -webkit-text-stroke: 2px #5E5C5C;
   font-family: 'Knewave', cursive;
-  font-size: 40px;
+  font-size: 20px;
+  margin-top: 5px;
 }
 #championBlurb {
   color: #fff;
   width: 80%;
   height: 20%;
-  margin: auto;
+  margin-top: 10px;
 }
 footer {
   width: 100vw;
@@ -443,6 +443,70 @@ footer {
 .footer-estaditicas{
   margin-top: 35px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /***********++++++++++++**************@MEDIA PARA TABLET***********++++++++++++++******************************/
 @media (min-width:640px){
@@ -708,7 +772,87 @@ footer {
   margin-top: 40px;
   justify-content: center;
 }
+
+
+
+
+  /*informacion q se muestra al darle click a los campeones*/
+  #splashImage {
+    width: 75vw;
+    height: 55vh;
+    margin-top: 10px;
+    }
+  
+  
+  #championTitle {
+    width: 70%;
+    height: 10%;
+    font-size: 40px;
+  }
+
+  #championBlurb {
+    margin-top: -20px;
+    font-size: 20px;
+  }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /***********++++++++++++**************@MEDIA PARA EL ESCRITORIO***********++++++++++++++******************************/
 @media (min-width: 1280px) {
@@ -994,6 +1138,25 @@ footer {
   }
   #championTitle {
     font-size: 25px;
+  }
+
+  /*informacion q se muestra al darle click a los campeones*/
+  #splashImage {
+    width: 75vw;
+    height: 60vh;
+    margin-top: 10px;
+    }
+  
+  
+  #championTitle {
+    width: 70%;
+    height: 10%;
+    font-size: 40px;
+  }
+
+  #championBlurb {
+    margin-top: 3px;
+    font-size: 20px;
   }
   }
 
