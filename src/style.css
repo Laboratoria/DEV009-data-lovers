@@ -105,6 +105,10 @@ p {
     padding: 10px;
 }
 
+::placeholder{
+    color: #4B4B4B;
+}
+
 .footer {
     color: black;
     background-color: #82BF45;
