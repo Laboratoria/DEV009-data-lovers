@@ -52,7 +52,7 @@ Luego de realizar la encuesta correspondiente, analizamos los resultados para as
 
 Al tener las cuatro historias de Usuario empezamos con el prototipo de baja fidelidad: 
 
-<img src="src/bajafidelidad.jpg" alt="Prototipo de baja fidelidad" style="height: 280px">
+<img src="src/bajafidelidad.jpg" alt="Prototipo de baja fidelidad" style="height: 480px">
 
 ### Prototipo de alta fidelidad
 
@@ -60,15 +60,15 @@ Al tener esto, empezamos a iterar las distintas opciones para que nuestro proyec
 
 **Vista completa**
 
-<img src="src/PROTO ALTA.png" alt="Prototipo de Alta fidelidad" style="height: 280px">
+<img src="src/PROTO ALTA.png" alt="Prototipo de Alta fidelidad" style="height: 480px">
 
 **Vista desktop**
 
-<img src="src/protodesktop.png" alt="Prototipo de Alta fidelidad/Desktop" style="height: 280px">
+<img src="src/protodesktop.png" alt="Prototipo de Alta fidelidad/Desktop" style="height: 480px">
 
 **Vista Android**
 
-<img src="src/prototelf.png" alt="Prototipo de Alta fidelidad/Android" style="height: 280px">
+<img src="src/prototelf.png" alt="Prototipo de Alta fidelidad/Android" style="height: 480px">
 
 Puedes ver nuestro Figma [aquí](https://www.figma.com/proto/wPeetqLIez79gNBU77c0Vl/Prototipo-de-alta-fidelidad?type=design&node-id=144-103&t=AsGXROdn6ArSImXI-1&scaling=scale-down&page-id=0%3A1&mode=design)
 
