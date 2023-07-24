@@ -465,11 +465,7 @@ export default {
       },
       {
           "id": 16,
-          "name": "Amish Cyborg",
-          "status": "Dead",
-          "species": "Alien",
-          "type": "Parasite, Cyborg",
-          "gender": "Male",
+
           "origin": {
               "name": "unknown",
               "url": ""
