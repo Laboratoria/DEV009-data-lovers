@@ -1,4 +1,4 @@
-<div align="center" font-family ="Quicksand">
+<div font-family ="Quicksand">
 
 
 
