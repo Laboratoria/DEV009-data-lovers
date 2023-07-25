@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0; /* relleno */
     box-sizing: border-box;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Calibri', 'Trebuchet MS', sans-serif;
 }
 
 #logo{
@@ -93,7 +93,7 @@ footer {
     
   }
 
-  #people-list, #films-list, #films-list-year, #people-list-film, #films-list-director, #people-list-age, #people-specie {
+  #people-list, #films-list, #films-list-year, #people-list-film, #films-list-director, #people-list-age, #people-specie, #home-content {
     background-color: rgba(255, 255, 255, 0.5);
     margin-top: 40px;
     margin-bottom: 60px;
@@ -135,6 +135,18 @@ img {
     height:fit-content;
     
   }
+
+  #home-content img {
+    width: 350px;
+  }
+
+  #home-content p {
+    font-size: 22px;
+    text-align: justify;
+    font-weight: 400;
+    font-family: 'Calibri', 'Trebuchet MS', sans-serif;
+   
+  }
   
 /* Estilos para dispositivos con un ancho máximo de 768 píxeles */
   @media screen and (max-width: 930px) {
@@ -154,7 +166,7 @@ img {
 
     }
 
-    #people-list, #films-list, #films-list-year, #people-list-film, #films-list-director, #people-list-age, #people-specie {
+    #people-list, #films-list, #films-list-year, #people-list-film, #films-list-director, #people-list-age, #people-specie, #home-content {
       background-color: rgba(255, 255, 255, 0.5);
       margin-top: 40px;
       margin-bottom: 60px;
@@ -178,6 +190,12 @@ img {
       height:fit-content;
       
     }
+
+    #home-content img {
+      width: 300px;
+    }
+
+  
     
   }
 

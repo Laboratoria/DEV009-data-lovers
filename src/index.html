@@ -1,76 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  
-  <body>
 
-    <header>
-      <!--"./" : imagen se encuentra en ruta relativa aunque muestra su ruta actual-->
-      <!--alt : no olvidar colocarle a las imágenes textos alternativos, en caso de que se usen lectores de pantalla-->
-      <img id="logo" src="./imagenes/pngwing.com.png" alt="Logo Studio Ghibli">
-    </header>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-    <!--<nav> definir una sección de navegación: permiten a los usuarios moverse dentro de un sitio web - su apariencia se define en CSS -->
-    <nav>
-      <ul class="menu-horizontal">
-        <li><a href="#">Home</a></li>
-        <li>
-          <!--<a> : etiqueta ancla: para que los usuarios puedan navegar entre diferentes partes del contenido-->
-          <!--href dentro de la etiqueta <a> : para especificar el destino del enlace-->
-          <a href="#">Películas</a>
-          <ul class="menu-vertical">
-            <!--al no agregarle target las opciones se abrirán en la misma pestaña o ventana del navegador, según lo tenga configurado el usuario por defecto-->
-            <li><a href="#" id="orden-date-films">Por año</a></li>
-            <li><a href="#" id="orden-director-films">Por director</a></li>
-            <li><a href="#" id="orden-alfabetico-films">Orden alfabético</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#">Personajes</a>
-          <ul class="menu-vertical">
+<body>
+
+  <header>
+    <!--"./" : imagen se encuentra en ruta relativa aunque muestra su ruta actual-->
+    <!--alt : no olvidar colocarle a las imágenes textos alternativos, en caso de que se usen lectores de pantalla-->
+    <img id="logo" src="./imagenes/pngwing.com.png" alt="Logo Studio Ghibli">
+  </header>
+
+  <!--<nav> definir una sección de navegación: permiten a los usuarios moverse dentro de un sitio web - su apariencia se define en CSS -->
+  <nav>
+    <ul class="menu-horizontal">
+      <li id="home-link"><a href="#">Home</a></li>
+      <li>
+        <!--<a> : etiqueta ancla: para que los usuarios puedan navegar entre diferentes partes del contenido-->
+        <!--href dentro de la etiqueta <a> : para especificar el destino del enlace-->
+        <a href="#">Películas</a>
+        <ul class="menu-vertical">
+          <!--al no agregarle target las opciones se abrirán en la misma pestaña o ventana del navegador, según lo tenga configurado el usuario por defecto-->
+          <li><a href="#" id="orden-date-films">Por año</a></li>
+          <li><a href="#" id="orden-director-films">Por director</a></li>
+          <li><a href="#" id="orden-alfabetico-films">Orden alfabético</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Personajes</a>
+        <ul class="menu-vertical">
           <li><a href="#" id="orden-people-films">Por película</a></li>
           <li><a href="#" id="orden-people-age">Por grupo etario</a></li>
           <li><a href="#" id="orden-alfabetico-people">Orden alfabético</a></li>
-        </ul>                                  
-        </li>
-        <li><a href="#">Curiosidades</a>
-          <ul class="menu-vertical">
-            <li><a href="#" id="people-specie-prom">Total de especies</a></li>
-            <li><a href="#" id="vehicles-prom">Total de Vehículos</a></li>
-            <li><a href="#" id="prom-prom">Rotten Tomatoes</a></li>
-          </ul>
-        </li>
-          </ul>
-        
-        </li>
-      </ul>
-    </nav>
+        </ul>
+      </li>
+      <li><a href="#">Curiosidades</a>
+        <ul class="menu-vertical">
+          <li><a href="#" id="people-specie-prom">Total de especies</a></li>
+          <li><a href="#" id="vehicles-prom">Total de Vehículos</a></li>
+          <li><a href="#" id="prom-prom">Rotten Tomatoes</a></li>
+        </ul>
+      </li>
+    </ul>
 
-    <div class="image-grid" id="contenedor">
-      <div id="films-list-year"></div>
-      <div id="films-list-director"></div>
-      <div id="films-list"></div>
-      <div id="people-list-film"></div>
-      <div id="people-list-age"></div>
-      <div id="people-list"></div>
-      <div id="vehicles"></div>
-      <div id="people-specie"></div>
-      <div id="prom"></div>
+
+  </nav>
+
+  <div class="image-grid" id="contenedor">
+    <div id="home-content" style="display: none;" >
+      <p>
+        <strong>Studio Ghibli</strong> es un estudio de animación japonés, con sede en Tokio. Fue fundado en 1985 por <em>Hayao Miyazaki y Isao Takahata</em>, y a día de hoy, han realizado más de 20 películas, además de otras clases de trabajos (cortometrajes, anuncios publicitarios, ...). 
+        <br>
+        <br>
+        Es considerado por la crítica especializada y muchos cinéfilos como uno de los mejores estudios de animación del mundo en la actualidad. Seis de las películas de Studio Ghibli se encuentran entre las 10 películas de anime más taquilleras realizadas en Japón, siendo <em>El Viaje de Chihiro (2001)</em> la segunda más alta, recaudando más de 360 millones de dólares en todo el mundo. 
+        <br>
+        <br>
+        El <em>Ghibli deriva de la palabra italiana «ghibli»,</em>  basada en el nombre del viento cálido del desierto que sopla en Libia.
+      </p>
+      <img src="https://static.wikia.nocookie.net/dab99649-5c0d-4e99-85d7-d5dc3fe3fa1a/scale-to-width-down/800" alt="Studio Ghibli" />
+
     </div>
-    
-    
+    <div id="films-list-year"></div>
+    <div id="films-list-director"></div>
+    <div id="films-list"></div>
+    <div id="people-list-film"></div>
+    <div id="people-list-age"></div>
+    <div id="people-list"></div>
+    <div id="vehicles"></div>
+    <div id="people-specie"></div>
+    <div id="prom"></div>
+  </div>
 
-    <footer>
-      <p> Elaborado por Conny y Oli en Laboratoria </p>
-    </footer>
-      
-    <script src="main.js" type="module"></script>
 
-  </body>
+
+  <footer>
+    <p> Elaborado por Oli en Laboratoria </p>
+  </footer>
+
+  <script src="main.js" type="module"></script>
+
+</body>
+
 </html>
-

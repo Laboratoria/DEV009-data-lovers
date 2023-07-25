@@ -2,14 +2,14 @@
 //se importa un objeto que llamaremos data desde el archivo './data/ghibli/ghibli.js' - el objeto tiene una exportación default
 import data from './data/ghibli/ghibli.js';
 
-import { prom, countSpecies, countVehicles, alphabeticalOrderPeople, alphabeticalOrderFilms } from './data.js';
+import { prom, alphabeticalOrderPeople, alphabeticalOrderFilms, yearOrderMovies, directorOrderMovies, countSpecies, countVehicles, moviesOrderPeople } from './data.js';
 
 //______PERSONAJES ORDENADOS ALFABÉTICAMENTE
 
 const people = alphabeticalOrderPeople(data.films);
 
-console.log("estoy ordenando personas",people);
-console.log("estoy mostrando la data", data);
+//console.log("estoy ordenando personas",people);
+//console.log("estoy mostrando la data", data);
 
 //HTML de la lista de personas
 const peopleList = document.getElementById('people-list');
@@ -45,6 +45,7 @@ ordenAlfabeticoPeopleLink.addEventListener('click', function(event) {
     filmsListDirector.style.display = 'none';
     peopleListAge.style.display = 'none';
     filmsListSpecie.style.display = 'none';
+    homeContent.style.display = 'none';
   } 
 });
 
@@ -53,7 +54,7 @@ ordenAlfabeticoPeopleLink.addEventListener('click', function(event) {
 const films = data.films;
 
 alphabeticalOrderFilms(films);
-console.log("estoy ordenando películas", films);
+//console.log("estoy ordenando películas", films);
 
 const filmsList = document.getElementById('films-list');
 //filmsList.innerHTML = '';
@@ -85,18 +86,17 @@ ordenAlfabeticoFilmsLink.addEventListener('click', function(event) {
     filmsListDirector.style.display = 'none';
     peopleListAge.style.display = 'none';
     filmsListSpecie.style.display = 'none';
+    homeContent.style.display = 'none';
   }
 });
 
 
 //______PELÍCULAS ORDENADAS POR AÑO ('release_date')
 
-const filmsDate = data.films ;
+const filmsDate = data.films;
 
-data.films.filter(film => film.release_date);
-
-filmsDate.sort((a, b) => a.release_date.localeCompare(b.release_date));
-console.log("estoy ordenando películas por año", filmsDate);
+yearOrderMovies(filmsDate);
+//console.log("estoy ordenando películas por año", filmsDate);
 
 const filmsDateList = document.getElementById('films-list-year');
 //filmsList.innerHTML = '';
@@ -132,37 +132,46 @@ ordenDateFilmsLink.addEventListener('click', function(event) {
     filmsListDirector.style.display = 'none';
     peopleListAge.style.display = 'none';
     filmsListSpecie.style.display = 'none';
+    homeContent.style.display = 'none';
   }
 });
 
 //______PERSONAJES ORDENADOS POR PELÍCULA ('people' y 'film')
+const peopleFilm = data.films;
+moviesOrderPeople(peopleFilm);
 
-const peopleFilm = [];
-data.films.forEach(film => {
-  film.people.filter(people => people.name).forEach(({ name, img }) => peopleFilm.push({ name, film: film.title, img }));
-});
+//console.log("Estoy clasificando personajes por película", data.films);
+//console.log(data.films);
+/*const peopleFilm = [];*/
+//data.films.forEach(film => {
+//film.people.filter(people => people.name).forEach(({ name, img }) => peopleFilm.push({ name, film: film.title, img }));
+//});
 
-peopleFilm.sort((a, b) => a.film.localeCompare(b.film));
-console.log("Estoy clasificando personajes por película", peopleFilm);
+
+//peopleFilm.sort((a, b) => a.film.localeCompare(b.film));
+//console.log("Estoy clasificando personajes por película", peopleFilm);
 
 const peopleFilmList = document.getElementById('people-list-film');
 
 // Recorrer el arreglo ordenado y crear elementos HTML para cada personaje
-peopleFilm.forEach(people => {
+
+peopleFilm.forEach(film => {
   const peopleItem = document.createElement('div');
   const peopleImage = document.createElement('img');
   const peopleName = document.createElement('p');
   const peopleFilm = document.createElement('p');
+  film.people.forEach (people=> {
+    peopleImage.src = people.img;
+    peopleName.textContent = people.name;
+    peopleFilm.textContent = people.film;
 
-  peopleImage.src = people.img;
-  peopleName.textContent = people.name;
-  peopleFilm.textContent = people.film;
+    peopleItem.appendChild(peopleImage);
+    peopleItem.appendChild(peopleName);
+    peopleItem.appendChild(peopleFilm);
+    peopleFilmList.appendChild(peopleItem);
 
-  peopleItem.appendChild(peopleImage);
-  peopleItem.appendChild(peopleName);
-  peopleItem.appendChild(peopleFilm);
-  peopleFilmList.appendChild(peopleItem);
-});
+  })}, 
+);
 
 //______CLICK PERSONAJES ORDENADOS POR PELÍCULA ('people' y 'film')
 
@@ -179,16 +188,17 @@ ordenPeopleFilmsLink.addEventListener('click', function(event) {
     filmsListDirector.style.display = 'none';
     peopleListAge.style.display = 'none';
     filmsListSpecie.style.display = 'none';
+    homeContent.style.display = 'none';
 
   }
 });
 
 //______PELÍCULAS ORDENADAS POR DIRECTOR ('director')
 
-const filmsDirector = data.films.filter(film => film.director);
+const filmsDirector = data.films;
 
-filmsDirector.sort((a, b) => a.director.localeCompare(b.director));
-console.log("estoy ordenando películas por director", filmsDirector);
+directorOrderMovies(filmsDirector);
+//console.log("estoy ordenando películas por director", filmsDirector);
 
 const filmsListDirector = document.getElementById('films-list-director')
 
@@ -224,6 +234,7 @@ ordenDirectorFilmsLink.addEventListener('click', function(event) {
     peopleFilmList.style.display = 'none';
     peopleListAge.style.display = 'none';
     filmsListSpecie.style.display = 'none';
+    homeContent.style.display = 'none';
 
   }
 });
@@ -247,7 +258,7 @@ agePeople.sort((a, b) => {
   return 0;
 });
   
-console.log("estoy ordenando personajes por edad", agePeople);
+//console.log("estoy ordenando personajes por edad", agePeople);
 
 agePeople.forEach(people => {
   const peopleItem = document.createElement('div');
@@ -280,6 +291,7 @@ ordenPeopleAgeLink.addEventListener('click', function(event) {
     filmsListDirector.style.display = 'none';
     peopleFilmList.style.display = 'none';
     filmsListSpecie.style.display = 'none';
+    homeContent.style.display = 'none';
 
   }
 });
@@ -294,7 +306,7 @@ data.films.forEach(film => {
 const filmsListSpecie = document.getElementById("people-specie")
 
 peopleSpecie.sort((a, b) => a.specie.localeCompare(b.specie));
-console.log("Estoy ordenando por especie", peopleSpecie);
+//console.log("Estoy ordenando por especie", peopleSpecie);
 
 peopleSpecie.forEach(specie => {
   const specieItem = document.createElement('div');
@@ -327,26 +339,51 @@ ordenSpecieFilmsLink.addEventListener('click', function(event) {
     filmsListDirector.style.display = 'none'; // Oculta peliculas por director
     peopleListAge.style.display = 'none';
     peopleFilmList.style.display = 'none';
+    homeContent.style.display = 'none';
 
   }
 });
 
 //______________TOTAL DE ESPECIES
 
-const speciesCount = countSpecies(data.films);
-console.log("Estoy mostrando el total de especies", speciesCount);
+countSpecies(data.films);
+//console.log("Estoy mostrando el total de especies", data.films);
 
 //______________TOTAL DE VEHÍCULOS
 
-const vehiclesCount = countVehicles(data.films);
-console.log("Estoy mostrando el total de vehículos", vehiclesCount);
+countVehicles(data.films);
+//console.log("Estoy mostrando el total de vehículos", data.films);
 
 //______________SCORE PROMEDIO EN ROTTEN TOMATOES ('rt_score')
 
-const rtScore = data.films.flatMap(films => ({
-  score: films.rt_score
-}));
+prom(data.films);
+//console.log("Estoy mostrando el promedio en rotten tomatoes", prom(data.films));
 
-prom(rtScore);
 
-console.log("Estoy mostrando el promedio en rotten tomatoes", prom(rtScore));
+
+//______CLICK home
+const homeContent = document.getElementById('home-content')
+const homeLink = document.getElementById('home-link');
+
+function showHomeContent() {
+  homeContent.style.display = 'grid'; // Muestra homeContent
+  // Oculta otros elementos si es necesario
+}
+
+// Mostrar homeContent al iniciar la página
+showHomeContent();
+
+homeLink.addEventListener('click', function(event) {
+  event.preventDefault(); // Evita que el enlace realice la acción predeterminada
+
+  if (homeContent.style.display === '' || homeContent.style.display === 'none') { 
+    homeContent.style.display = 'grid'; // Muestra peopleList
+    peopleList.style.display = 'none';
+    filmsDateList.style.display = 'none'; // Oculta filmsDateList
+    filmsList.style.display = 'none'; // Oculta filmsList
+    peopleFilmList.style.display = 'none';
+    filmsListDirector.style.display = 'none';
+    peopleListAge.style.display = 'none';
+    filmsListSpecie.style.display = 'none';
+  } 
+});
