@@ -9,19 +9,19 @@ function prom(array) {
   let contador = 0;
 
   for (let i = 0; i < array.length; i++) {
-    const score = parseFloat(array[i].rt_score);
-    if (!isNaN(score)) {
+    const score = parseFloat(array[i].rt_score);//convertir array en número
+    if (!isNaN(score)) { //...si es un número
       suma = suma + score;
       contador++;
     }
   }
 
-  return contador === 0 ? 0 : suma / contador;
+  return contador === 0 ? 0 : suma / contador; //operador ternario los dos puntos separan las dos alternativas
 }
 
 //______________TOTAL DE ESPECIES
 function countSpecies(array) {
-  const uniqueSpecies = new Set();
+  const uniqueSpecies = new Set();//para crear conjunto único
   array.forEach(film => {
     film.people.filter(people => people.specie).forEach(person => {
       const specie = person.specie;
@@ -32,17 +32,6 @@ function countSpecies(array) {
 }
 
 //______________TOTAL DE VEHÍCULOS
-/*function countVehicles(array) {
-  const uniqueVehicles = new Set();
-  array.forEach(film => {
-    film.vehicles.forEach(vehicles => {
-      const arrayVehicles = Object.keys(vehicles);
-      arrayVehicles.forEach(vehicles => uniqueVehicles.add(vehicles));
-    });
-  });
-  return uniqueVehicles.size;
-}*/
-
 function countVehicles(array) {
   const uniqueVehicles = new Set();
   array.forEach(film => {
@@ -53,7 +42,7 @@ function countVehicles(array) {
       });
     }
   });
-  return uniqueVehicles.size;
+  return uniqueVehicles.size; 
 }
 
 //______PERSONAJES ORDENADOS ALFABÉTICAMENTE
@@ -65,7 +54,7 @@ function alphabeticalOrderPeople(array) {
       result.push({ name, film: film.title, img });
     });
   });
-  result.sort((a, b) => a.name.localeCompare(b.name));
+  result.sort((a, b) => a.name.localeCompare(b.name));//método sort para ordenar el arreglo result
   return result;
 }
 
@@ -83,7 +72,12 @@ function yearOrderMovies(array) {
   
   array.sort((a, b) => a.release_date.localeCompare(b.release_date));
  
-  return array;
+  const orderedMoviesAge = array.map(film => ({
+    title: film.title,
+    release_date: film.release_date,
+  }));
+
+  return orderedMoviesAge;
 }
 
 //______PELÍCULAS ORDENADAS POR DIRECTOR
@@ -94,7 +88,14 @@ function directorOrderMovies(array) {
   
   filteredMovies.sort((a, b) => a.director.localeCompare(b.director));
 
+  const orderedMoviesDirector = array.map(film => ({
+    title: film.title,
+    director: film.director,
+  }));
+
+  return orderedMoviesDirector;
 }
+
 
 
 //_____________________________________________________________________________________
@@ -102,12 +103,12 @@ function directorOrderMovies(array) {
 //______PERSONAJES ORDENADOS POR PELÍCULA
 
 function moviesOrderPeople(array) {
-
   const resultArray = [];
+
   array.forEach(film => {
     film.people.filter(people => people.name).forEach(({ name, img }) => resultArray.push({ name, film: film.title, img }));
   });
-  
+
   resultArray.sort((a, b) => a.film.localeCompare(b.film));
 
   return resultArray;

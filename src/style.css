@@ -111,25 +111,6 @@ footer {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 
-
-  /*#contenedor {
-    background-color: rgba(255, 255, 255, 0.5);
-    margin-top: 40px;
-    margin-bottom: 60px;
-    margin-left: 120px;
-    margin-right: 120px;
-    display:flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    padding: 30px;
-    cursor: pointer; 
-    border-radius: 40px;
-    text-align: center;
-    font-weight: bold;
-    justify-content: space-between;
-
-  }*/
-
 img {
     width: 150px;
     height:fit-content;
@@ -146,6 +127,24 @@ img {
     font-weight: 400;
     font-family: 'Calibri', 'Trebuchet MS', sans-serif;
    
+  }
+/*#vehicles, #people-specie, #prom*/
+  #prom, #vehicles {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 30px;
+    font-size: 16px;
+    font-weight: bold; 
+    border-radius: 40px;
+    display:none;
+  }
+
+  .total-species {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 30px;
+    font-size: 16px;
+    font-weight: bold; 
+    border-radius: 40px;
+    display:none;
   }
   
 /* Estilos para dispositivos con un ancho máximo de 768 píxeles */
