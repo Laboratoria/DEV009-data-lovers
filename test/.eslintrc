@@ -1,5 +1,19 @@
 {
   "env": {
-    "jest": true
+    "jest": true,
+    "node": true
+  },
+  "rules": {
+    "no-restricted-syntax": [
+      "error",
+      {
+        "selector": "NewExpression[callee.name='Set']",
+        "message": "Sets are not allowed."
+      }
+    ]
+  },
+  "parserOptions": {
+    "ecmaVersion": 6
   }
+
 }
