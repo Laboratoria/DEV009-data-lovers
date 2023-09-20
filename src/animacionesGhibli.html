@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Indica el tamaño de la pantalla-->
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="root"></div>
+  <script src="main.js" type="module"></script>
+
+  <header class="temaPeli">
+    <h1 class="tituloPrincipal"> Films Studio Ghibli</h1>
+  </header>
+  <nav class="navegacion">
+    <select id="ordenaPor" class="selector">
+      <option value="0">Sort By</option>
+      <option value="1">A-Z</option>
+      <option value="2">Z-A</option>
+      <option value="3">Year Recent First</option>
+      <option value="4">Year Old First</option>
+      <option value="5">Score Hightest First</option>
+      <option value="6">Score Lowest First</option>
+
+    </select>
+    <select id="Producers" class="selector">
+      <option value="Producers">Producers</option>
+      <option value="Isao Takahata">Isao Takahata</option>
+      <option value="Hayao Miyazaki">Hayao Miyazaki</option>
+      <option value="Toru Hara">Toru Hara</option>
+      <option value="Toshio Suzuki">Toshio Suzuki</option>
+      <option value="Yoshiaki Nishimura">Yoshiaki Nishimura</option>
+    </select>
+
+    <select id="Directors" class="selector">
+      <option value="Directors">Directors</option>
+      <option value="Hayao Miyazaki">Hayao Miyazaki</option>
+      <option value="Isao Takahata">Isao Takahata</option>
+      <option value="Yoshifumi Kondō">Yoshifumi Kondō</option>
+      <option value="Hiroyuki Morita">Hiroyuki Morita</option>
+      <option value="Gorō Miyazaki">Gorō Miyazaki</option>
+      <option value="Hiromasa Yonebayashi">Hiromasa Yonebayashi</option>
+    </select>
+    <button id="principal">Back to Main Page</button>
+  </nav>
+  <main style="padding: 1px;;">
+    <section class="cards"> </section>
+  </main>
+  <footer>
+    <p>Creada por: Nancy Nallely Martinez Dominguez y Fabiola Granados</p>
+  </footer>
+  <script src="main.js" type="module"></script>
+</body>
+
+</html>
