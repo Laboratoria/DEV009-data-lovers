@@ -268,6 +268,8 @@ const chartContext = chartCanvas.getContext("2d"); //chartCanvas representa el l
 /*.getContext("2d")es un método del elemento <canvas>que se utiliza para obtener el contexto de dibujo en 2D. El contexto de dibujo es una
 interfaz de programación que proporciona métodos y propiedades para dibujar y manipular gráficos en el <canvas>.*/
 // Crear gráfico de torta
+
+// eslint-disable-next-line
 new Chart(chartContext, {
   //se crea una instancia de la clase chart del paquete chart.js, pasando el contexto del canvas
   type: "pie", //se especifica el tipo de grafico en este caso el de pie

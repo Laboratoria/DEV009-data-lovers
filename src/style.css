@@ -9,7 +9,7 @@ body {
 }
 /**********************************CAMBIOS EN EL HEADER***************************************/
 .header{
-  background: url(fondo_pagina0.jpg);
+  background: url(../img/fondo_pagina0.jpg);
   object-fit: cover;
   display: flex;/*se utiliza para convertir un contenedor en un contenedor flexible, lo que permite una disposición flexible y controlada de
   los elementos secundarios dentro del mismo.*/
@@ -387,7 +387,7 @@ display: block;
 #section6 {
   display: none;
   position: relative;
-  background: url(fondo.jpg);
+  background: url(../img/fondo.jpg);
   background-size: cover;
   width: 100vw;
   height: 100vh;
@@ -861,7 +861,7 @@ display: block;
   }
   /**********************************CAMBIOS EN EL HEADER***************************************/
   .header{
-    background: url(fondo-pag1.jpg);
+    background: url(../img/fondo-pag1.jpg);
   }
   #container_title{
     font-size: 40px;
