@@ -1,6 +1,6 @@
 # DATA LOVERS  💚💻  - página Web del Juego Legue of the Legends  🎮
 
-Link Proyecto: [Ir a la Página Web](https://andreasoncco.github.io/DEV009-data-lovers/)
+Link del Proyecto: [Ir a la Página Web](https://andreasoncco.github.io/DEV009-data-lovers/)
 
 ## Índice
 
@@ -286,9 +286,9 @@ Según el testeo nos dimos cuenta que:
 ## 5. HERRAMIENTAS DE ELABORACIÓN
 👩‍🔧👩‍🎨
 
-- JAVASCRIPT para darle funcionalidad a la página
-- HTML producir la estructura de la interfaz
-- CSS para implementar el diseño
-- Librería Chart.js para implementar el gráfico de pie
-- FIGMA para planear el diseño
-- TRELLO para planificar el tiempo y dividir las tareas
+- Javascript: Para darle funcionalidad a la página
+- HTML: Para producir la estructura de la interfaz
+- CSS: Para implementar el diseño
+- Librería Chart.js: Para implementar el gráfico de pie
+- Figma: Para planear el diseño
+- Trello: Para planificar el tiempo y dividir las tareas
