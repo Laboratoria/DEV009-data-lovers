@@ -13,12 +13,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg",
       blurb:
-        "Aatrox is a legendary warrior, one of only five that remain of an ancient race known as the Darkin. He wields his massive blade with grace and poise, slicing through legions in a style that is hypnotic to behold. With each foe felled, Aatrox's ...",
+        "Aatrox y sus hermanos, otrora respetados defensores de Shurima contra el Vacío, acabarían convirtiéndose en una amenaza aún mayor para Runaterra y solo conocieron la derrota ante el uso astuto de hechizos mortales. No obstante, tras siglos de reclusión, Aatrox fue el primero en recuperar su libertad y se dedicó a corromper y transformar a cualquier necio que intentase empuñar el arma mágica que contenía su esencia. Ahora, envuelto en carne y huesos que no le pertenecen y que ha transformado en una horrenda aproximación de su antiguo aspecto, recorre Runaterra en busca de la apocalíptica venganza que tanto anhela.",
       info: {
         attack: 8,
         defense: 4,
         magic: 3,
-        difficulty: 4
+        difficulty: 4,
       },
       image: {
         full: "Aatrox.png",
@@ -27,7 +27,7 @@ export default {
         x: 0,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Tank"],
       partype: "BloodWell",
@@ -51,8 +51,8 @@ export default {
         attackdamage: 60.376,
         attackdamageperlevel: 3.2,
         attackspeedoffset: -0.04,
-        attackspeedperlevel: 3
-      }
+        attackspeedperlevel: 3,
+      },
     },
     Ahri: {
       version: "6.24.1",
@@ -64,12 +64,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ahri_0.jpg",
       blurb:
-        "Unlike other foxes that roamed the woods of southern Ionia, Ahri had always felt a strange connection to the magical world around her; a connection that was somehow incomplete. Deep inside, she felt the skin she had been born into was an ill fit for ...",
+        "Ahri es una vastaya de aspecto vulpino conectada de forma innata a la magia del reino de los espíritus; puede manipular las emociones de sus presas y consumir su esencia, por lo que recibe fragmentos de su memoria y conocimiento de cada alma que consume. Ahri antes era una depredadora poderosa y descarriada, pero ahora viaja por el mundo en busca de vestigios de sus antepasados, mientras intenta sustituir los recuerdos que robó de sus víctimas por otros creados por ella misma.",
       info: {
         attack: 3,
         defense: 4,
         magic: 8,
-        difficulty: 5
+        difficulty: 5,
       },
       image: {
         full: "Ahri.png",
@@ -78,7 +78,7 @@ export default {
         x: 48,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage", "Assassin"],
       partype: "MP",
@@ -102,8 +102,8 @@ export default {
         attackdamage: 53.04,
         attackdamageperlevel: 3,
         attackspeedoffset: -0.065,
-        attackspeedperlevel: 2
-      }
+        attackspeedperlevel: 2,
+      },
     },
     Akali: {
       version: "6.24.1",
@@ -115,12 +115,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Akali_0.jpg",
       blurb:
-        "There exists an ancient order originating in the Ionian Isles dedicated to the preservation of balance. Order, chaos, light, darkness -- all things must exist in perfect harmony for such is the way of the universe. This order is known as the Kinkou ...",
+        "Tras abandonar la orden de los Kinkou y su título de Puño de la Sombra, Akali actúa ahora en solitario y está lista para convertirse en el arma mortal que necesita su gente. Aunque no renuncia a las enseñanzas de Shen, su maestro, ha jurado defender Jonia de sus enemigos, asesinándolos uno a uno. Los ataques de Akali son silenciosos, pero su mensaje se escucha con toda claridad: temed a la asesina sin maestro.",
       info: {
         attack: 5,
         defense: 3,
         magic: 8,
-        difficulty: 7
+        difficulty: 7,
       },
       image: {
         full: "Akali.png",
@@ -129,7 +129,7 @@ export default {
         x: 96,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Assassin"],
       partype: "Energy",
@@ -153,8 +153,8 @@ export default {
         attackdamage: 58.376,
         attackdamageperlevel: 3.2,
         attackspeedoffset: -0.1,
-        attackspeedperlevel: 3.1
-      }
+        attackspeedperlevel: 3.1,
+      },
     },
     Alistar: {
       version: "6.24.1",
@@ -166,12 +166,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Alistar_0.jpg",
       blurb:
-        "As the mightiest warrior to ever emerge from the Minotaur tribes of the Great Barrier, Alistar defended his tribe from Valoran's many dangers; that is, until the coming of the Noxian army. Alistar was lured from his village by the machinations of ...",
+        "Alistar, un poderoso guerrero con una reputación temible, busca venganza por la muerte de su clan a manos del imperio noxiano. Aunque fue esclavizado y forzado a vivir como gladiador, fue su voluntad inquebrantable lo que le impidió convertirse en una verdadera bestia. Ahora, libre de las cadenas de sus antiguos amos, lucha en nombre de los oprimidos y los desfavorecidos, y empuña su furia como un arma, igual de peligrosa que sus cuernos, puños y pezuñas.",
       info: {
         attack: 6,
         defense: 9,
         magic: 5,
-        difficulty: 7
+        difficulty: 7,
       },
       image: {
         full: "Alistar.png",
@@ -180,7 +180,7 @@ export default {
         x: 144,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Tank", "Support"],
       partype: "MP",
@@ -204,8 +204,8 @@ export default {
         attackdamage: 61.1116,
         attackdamageperlevel: 3.62,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.125
-      }
+        attackspeedperlevel: 2.125,
+      },
     },
     Amumu: {
       version: "6.24.1",
@@ -217,12 +217,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Amumu_0.jpg",
       blurb:
-        "''Solitude can be lonelier than death.''<br><br>A lonely and melancholy soul from ancient Shurima, Amumu roams the world in search of a friend. Cursed by an ancient spell, he is doomed to remain alone forever, as his touch is death and his affection ...",
+        "Cuenta la leyenda que Amumu es un alma solitaria y melancólica de la vieja Shurima que vaga por el mundo en busca de un amigo. Condenado por una maldición ancestral, su destino es permanecer solo para siempre, pues su tacto es muerte y su cariño, la perdición. Aquellos que afirman haberlo visto lo describen como un cadáver viviente, menudo y cubierto de vendajes. Amumu ha suscitado mitos, canciones y folclore transmitidos de generación en generación, hasta tal punto que ya es imposible separar la realidad de la ficción.",
       info: {
         attack: 2,
         defense: 6,
         magic: 8,
-        difficulty: 3
+        difficulty: 3,
       },
       image: {
         full: "Amumu.png",
@@ -231,7 +231,7 @@ export default {
         x: 192,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Tank", "Mage"],
       partype: "MP",
@@ -255,8 +255,8 @@ export default {
         attackdamage: 53.384,
         attackdamageperlevel: 3.8,
         attackspeedoffset: -0.02,
-        attackspeedperlevel: 2.18
-      }
+        attackspeedperlevel: 2.18,
+      },
     },
     Anivia: {
       version: "6.24.1",
@@ -268,12 +268,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Anivia_0.jpg",
       blurb:
-        "Anivia is a being of the coldest winter, a mystical embodiment of ice magic, and an ancient protector of the Freljord. She commands all the power and fury of the land itself, calling the snow and bitter wind to defend her home from those who would ...",
+        "Anivia es un espíritu alado benevolente que soporta ciclos interminables de vida, muerte y nacimiento para proteger Freljord. Semidiosa nacida del hielo implacable y los vientos crueles, canaliza estos poderes elementales para anular a cualquiera que se atreva a perturbar su hogar. Anivia guía y protege a las tribus del severo norte, donde la veneran como un símbolo de esperanza y un presagio de grandes cambios. Ella lo da todo en la lucha sabiendo que, a través de su sacrificio, su memoria perdurará y renacerá en un nuevo mañana.",
       info: {
         attack: 1,
         defense: 4,
         magic: 10,
-        difficulty: 10
+        difficulty: 10,
       },
       image: {
         full: "Anivia.png",
@@ -282,7 +282,7 @@ export default {
         x: 240,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage", "Support"],
       partype: "MP",
@@ -306,8 +306,8 @@ export default {
         attackdamage: 51.376,
         attackdamageperlevel: 3.2,
         attackspeedoffset: 0,
-        attackspeedperlevel: 1.68
-      }
+        attackspeedperlevel: 1.68,
+      },
     },
     Annie: {
       version: "6.24.1",
@@ -319,12 +319,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Annie_0.jpg",
       blurb:
-        "There have always been those within Noxus who did not agree with the evils perpetrated by the Noxian High Command. The High Command had just put down a coup attempt from the self-proclaimed Crown Prince Raschallion, and a crackdown on any form of ...",
+        "Peligrosa pero encantadoramente precoz, Annie es una pequeña maga con un inmenso poder piromántico. Incluso en los parajes montañosos al norte de Noxus es una hechicera sin precedentes. Su afinidad natural con el fuego se manifestó a temprana edad en arrebatos emocionales e impredecibles, aunque finalmente aprendió a controlar esos trucos traviesos. Uno de sus favoritos es invocar a su adorado osito de peluche Tibbers; una bestia protectora envuelta en llamas. Atrapada en la perpetua inocencia de la niñez, Annie vaga por bosques oscuros, siempre buscando a alguien con quien jugar.",
       info: {
         attack: 2,
         defense: 3,
         magic: 10,
-        difficulty: 6
+        difficulty: 6,
       },
       image: {
         full: "Annie.png",
@@ -333,7 +333,7 @@ export default {
         x: 288,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage"],
       partype: "MP",
@@ -357,8 +357,8 @@ export default {
         attackdamage: 50.41,
         attackdamageperlevel: 2.625,
         attackspeedoffset: 0.08,
-        attackspeedperlevel: 1.36
-      }
+        attackspeedperlevel: 1.36,
+      },
     },
     Ashe: {
       version: "6.24.1",
@@ -370,12 +370,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ashe_0.jpg",
       blurb:
-        "With each arrow she fires from her ancient ice-enchanted bow, Ashe proves she is a master archer. She chooses each target carefully, waits for the right moment, and then strikes with power and precision. It is with this same vision and focus that she ...",
+        "Ashe, comandante hija del hielo de la tribu de Avarosa, lidera las hordas más numerosas del norte. Impasible, inteligente e idealista, aunque incómoda en su papel de líder, utiliza los poderes mágicos ancestrales de su linaje para empuñar un arco de Hielo Puro. Su gente cree que Ashe es la heroína mitológica Avarosa reencarnada, y ella espera unificar Freljord una vez más al recuperar sus antiguas tierras tribales.",
       info: {
         attack: 7,
         defense: 3,
         magic: 2,
-        difficulty: 4
+        difficulty: 4,
       },
       image: {
         full: "Ashe.png",
@@ -384,7 +384,7 @@ export default {
         x: 336,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Marksman", "Support"],
       partype: "MP",
@@ -408,8 +408,8 @@ export default {
         attackdamage: 56.508,
         attackdamageperlevel: 2.26,
         attackspeedoffset: -0.05,
-        attackspeedperlevel: 3.33
-      }
+        attackspeedperlevel: 3.33,
+      },
     },
     AurelionSol: {
       version: "6.24.1",
@@ -421,12 +421,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/AurelionSol_0.jpg",
       blurb:
-        "Aurelion Sol once graced the vast emptiness of the cosmos with celestial wonders of his own devising. Now, he is forced to wield his awesome power at the behest of a space-faring empire that tricked him into servitude. Desiring a return to his ...",
+        "Aurelion Sol solía agraciar al vasto vacío del cosmos con las maravillas celestiales que él mismo ideaba. Ahora, se ve forzado a hacer uso de su increíble poder para satisfacer los deseos de un imperio espacial que lo ha engañado para convertirlo en su esclavo. Aurelion Sol desea regresar a su vida como forjador de estrellas, por lo que no dudará en hacer uso del mismísimo firmamento para recuperar su libertad.",
       info: {
         attack: 2,
         defense: 3,
         magic: 8,
-        difficulty: 7
+        difficulty: 7,
       },
       image: {
         full: "AurelionSol.png",
@@ -435,7 +435,7 @@ export default {
         x: 384,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage", "Fighter"],
       partype: "MP",
@@ -459,8 +459,8 @@ export default {
         attackdamage: 57,
         attackdamageperlevel: 3.2,
         attackspeedoffset: 0,
-        attackspeedperlevel: 1.36
-      }
+        attackspeedperlevel: 1.36,
+      },
     },
     Azir: {
       version: "6.24.1",
@@ -472,12 +472,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Azir_0.jpg",
       blurb:
-        "''Shurima was once the glory of Runeterra. I will make it so again.''<br><br>Azir was a mortal emperor of Shurima in a far distant age, a proud man who stood at the cusp of immortality. His hubris saw him betrayed and murdered at the moment of his ...",
+        "Azir, emperador de Shurima en un pasado remoto, fue un hombre orgulloso que estuvo a punto de alcanzar la inmortalidad. Dominado por la arrogancia, fue traicionado y asesinado en la hora de su mayor triunfo, pero ahora, milenios después, ha renacido como un ser Ascendido de inmenso poder. Su enterrada ciudad ha resurgido en medio de las arenas y Azir está decidido a restaurar la antigua gloria de Shurima.",
       info: {
         attack: 6,
         defense: 3,
         magic: 8,
-        difficulty: 9
+        difficulty: 9,
       },
       image: {
         full: "Azir.png",
@@ -486,7 +486,7 @@ export default {
         x: 432,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage", "Marksman"],
       partype: "MP",
@@ -510,8 +510,8 @@ export default {
         attackdamage: 52,
         attackdamageperlevel: 2.8,
         attackspeedoffset: -0.02,
-        attackspeedperlevel: 1.5
-      }
+        attackspeedperlevel: 1.5,
+      },
     },
     Bard: {
       version: "6.24.1",
@@ -523,12 +523,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Bard_0.jpg",
       blurb:
-        "Bard travels through realms beyond the imagination of mortal beings. Some of Valoran's greatest scholars have spent their lives trying to understand the mysteries he embodies. This enigmatic spirit has been given many names throughout the history of ...",
+        "Bardo, un viajero de más allá de las estrellas, es un agente de la serendipia que lucha para mantener un equilibrio en el que la vida pueda soportar la indiferencia del caos. Muchos habitantes de Runaterra cantan canciones que hablan de su naturaleza extraordinaria, pero todos están de acuerdo en que el vagabundo cósmico se siente atraído por los artefactos de gran poder mágico. Rodeado por un jubiloso coro de meeps, espíritus serviciales, es imposible creer que sus acciones son malévolas, ya que Bardo siempre sirve al bien mayor... a su manera.",
       info: {
         attack: 4,
         defense: 4,
         magic: 5,
-        difficulty: 9
+        difficulty: 9,
       },
       image: {
         full: "Bard.png",
@@ -537,7 +537,7 @@ export default {
         x: 0,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Support", "Mage"],
       partype: "MP",
@@ -561,8 +561,8 @@ export default {
         attackdamage: 52,
         attackdamageperlevel: 3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2
-      }
+        attackspeedperlevel: 2,
+      },
     },
     Blitzcrank: {
       version: "6.24.1",
@@ -574,12 +574,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Blitzcrank_0.jpg",
       blurb:
-        "Zaun is a place where both magic and science have gone awry, and the unchecked nature of experimentation has taken its toll. However, Zaun's lenient restrictions allow their researchers and inventors the leeway to push the bounds of science at an ...",
+        "Blitzcrank es un autómata enorme, casi indestructible, creado originalmente para el tratamiento de residuos tóxicos. Sin embargo, este propósito original le parecía demasiado restrictivo, así que se automodificó para servir mejor a los débiles del sumidero. Blitzcrank no duda en emplear su fuerza y su resistencia para proteger a los demás, con su práctico puño de metal o con un estallido de energía para someter a cualquiera que cause problemas.",
       info: {
         attack: 4,
         defense: 8,
         magic: 5,
-        difficulty: 4
+        difficulty: 4,
       },
       image: {
         full: "Blitzcrank.png",
@@ -588,7 +588,7 @@ export default {
         x: 48,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Tank", "Fighter"],
       partype: "MP",
@@ -612,8 +612,8 @@ export default {
         attackdamage: 61.54,
         attackdamageperlevel: 3.5,
         attackspeedoffset: 0,
-        attackspeedperlevel: 1.13
-      }
+        attackspeedperlevel: 1.13,
+      },
     },
     Brand: {
       version: "6.24.1",
@@ -625,12 +625,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Brand_0.jpg",
       blurb:
-        "In a faraway place known as Lokfar there was a seafaring marauder called Kegan Rodhe. As was his people's way, Kegan sailed far and wide with his fellows, stealing treasures from those unlucky enough to catch their attention. To some, he was a ...",
+        "Brand, antiguo miembro de la tribu Kegan Rodhe del helado Freljord, es una lección sobre la tentación de un poder mayor. En busca de una de las legendarias Runas Geogénicas, Kegan traicionó a sus compañeros y se quedó con la runa. El hombre desapareció al instante. Su alma se consumió y su cuerpo pasó a ser un recipiente de llamas vivas. Ahora, Brand recorre Valoran en busca de otras Runas Geogénicas, jurando vengarse por las calamidades que posiblemente jamás habría podido sufrir en una docena de vidas mortales.",
       info: {
         attack: 2,
         defense: 2,
         magic: 9,
-        difficulty: 4
+        difficulty: 4,
       },
       image: {
         full: "Brand.png",
@@ -639,7 +639,7 @@ export default {
         x: 96,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage"],
       partype: "MP",
@@ -663,8 +663,8 @@ export default {
         attackdamage: 57.04,
         attackdamageperlevel: 3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 1.36
-      }
+        attackspeedperlevel: 1.36,
+      },
     },
     Braum: {
       version: "6.24.1",
@@ -676,12 +676,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Braum_0.jpg",
       blurb:
-        "''Would you like a bedtime story?''<br><br>''Grandma, I'm too old for that.''<br><br>''You're never too old to be told a story.''<br><br>The girl reluctantly crawls into bed and waits, knowing she won't win this battle. A bitter wind howls outside, ...",
+        "Bendecido con bíceps enormes y un corazón aún más grande, Braum es un héroe muy apreciado en Freljord. Todas las tabernas al norte del Fuerte Helado brindan por su fuerza legendaria. Se dice que taló un bosque de robles en una sola noche y convirtió una montaña entera en escombros. Cargando una puerta acorazada encantada a sus espaldas como escudo, Braum recorre el gélido norte luciendo una sonrisa bigotuda tan grande como sus músculos: un verdadero amigo para todos los necesitados.",
       info: {
         attack: 3,
         defense: 9,
         magic: 4,
-        difficulty: 3
+        difficulty: 3,
       },
       image: {
         full: "Braum.png",
@@ -690,7 +690,7 @@ export default {
         x: 144,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Support", "Tank"],
       partype: "MP",
@@ -714,8 +714,8 @@ export default {
         attackdamage: 55.376,
         attackdamageperlevel: 3.2,
         attackspeedoffset: -0.03,
-        attackspeedperlevel: 3.5
-      }
+        attackspeedperlevel: 3.5,
+      },
     },
     Caitlyn: {
       version: "6.24.1",
@@ -727,12 +727,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Caitlyn_0.jpg",
       blurb:
-        "''Go ahead, run. I'll give you a five minute head start.''<br><br>One of the reasons Piltover is known as the City of Progress is because it has an extraordinarily low crime rate. This hasn't always been the case; brigands and thieves of all sorts ...",
+        "Reconocida como la mejor pacificadora, Caitlyn también es la mejor oportunidad de Piltóver para deshacerse de los elementos criminales elusivos de su ciudad. A veces hace equipo con Vi y es un buen contrapunto para la naturaleza más impulsiva de su compañera. Aunque carga un rifle hextech único, el arma más poderosa de Caitlyn es su intelecto superior, el cual le permite tender trampas elaboradas para malhechores que son suficientemente tontos para operar en la Ciudad del Progreso.",
       info: {
         attack: 8,
         defense: 2,
         magic: 2,
-        difficulty: 6
+        difficulty: 6,
       },
       image: {
         full: "Caitlyn.png",
@@ -741,7 +741,7 @@ export default {
         x: 192,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Marksman"],
       partype: "MP",
@@ -765,8 +765,8 @@ export default {
         attackdamage: 53.66,
         attackdamageperlevel: 2.18,
         attackspeedoffset: 0.1,
-        attackspeedperlevel: 4
-      }
+        attackspeedperlevel: 4,
+      },
     },
     Camille: {
       version: "6.24.1",
@@ -778,12 +778,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Camille_0.jpg",
       blurb:
-        "Weaponized to execute outside the boundaries of the law, Camille Ferros is an elegant and elite operative who ensures the commerce of the Piltover machine with its Zaunite underbelly runs smoothly. Raised among manners and money, she is the Principal ...",
+        "Armada para operar fuera de los límites de la ley, Camille es la principal inteligencia del Clan Ferros: una elegante agente de élite que se asegura de que la máquina de Piltóver y el submundo zaunita funcione sin problemas. Al ser adaptable y precisa, ella ve las técnicas torpes como una vergüenza que necesita ponerse en línea. Con una mente tan brillante y afilada como las cuchillas que porta, la búsqueda de Camille por la superioridad a través de las mejoras de cuerpo de hextech, han hecho que la gente se pregunte si es más máquina que mujer.",
       info: {
         attack: 8,
         defense: 6,
         magic: 3,
-        difficulty: 4
+        difficulty: 4,
       },
       image: {
         full: "Camille.png",
@@ -792,7 +792,7 @@ export default {
         x: 144,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Tank"],
       partype: "MP",
@@ -816,8 +816,8 @@ export default {
         attackdamage: 62,
         attackdamageperlevel: 3.5,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.5
-      }
+        attackspeedperlevel: 2.5,
+      },
     },
     Cassiopeia: {
       version: "6.24.1",
@@ -829,12 +829,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Cassiopeia_0.jpg",
       blurb:
-        "Cassiopeia is a terrifying creature - half woman, half snake - whose slightest glance brings death. The youngest daughter of one of Noxus' most influential families, she was once a beautiful and cunning temptress capable of manipulating the hardest ...",
+        "Cassiopeia es una criatura mortífera que disfruta manipular a otros para que hagan su voluntad siniestra. La más joven y más hermosa hija de la familia noble de Du Couteau de Noxus, se aventuró a las profundidades de la cripta debajo de Shurima en búsqueda de un poder antiguo. Ahí la mordió un espantoso guardián de la tumba y su veneno la transformó en un depredador similar a una víbora. Astuta y ágil, Cassiopeia ahora se desliza bajo el velo de la noche y petrifica a sus enemigos con su maléfica mirada.",
       info: {
         attack: 2,
         defense: 3,
         magic: 9,
-        difficulty: 10
+        difficulty: 10,
       },
       image: {
         full: "Cassiopeia.png",
@@ -843,7 +843,7 @@ export default {
         x: 240,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage"],
       partype: "MP",
@@ -867,8 +867,8 @@ export default {
         attackdamage: 53,
         attackdamageperlevel: 3,
         attackspeedoffset: -0.034,
-        attackspeedperlevel: 1.5
-      }
+        attackspeedperlevel: 1.5,
+      },
     },
     Chogath: {
       version: "6.24.1",
@@ -880,12 +880,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Chogath_0.jpg",
       blurb:
-        "There is a place between dimensions, between worlds. To some it is known as the Outside, to others it is the Unknown. To those that truly know, however, it is called the Void. Despite its name, the Void is not an empty place, but rather the home of ...",
+        "Desde el momento que Cho'Gath emergió por primera vez a la fuerte luz del sol de Runaterra, la bestia se vio consumida por el hambre más pura e insaciable. Como una expresión perfecta del deseo del Vacío para consumir toda vida conocida, la biología compleja de Cho'Gath convierte rápidamente la materia en más crecimiento para su cuerpo, aumentando su masa y densidad muscular o endureciendo su caparazón como diamante orgánico. Cuando crecer más no cumple con las necesidades del engendro del Vacío, este vomita el material excedente en forma de espinas filosas como navajas, dejando a la presa como brocheta, lista para comerse más tarde.",
       info: {
         attack: 3,
         defense: 7,
         magic: 7,
-        difficulty: 5
+        difficulty: 5,
       },
       image: {
         full: "Chogath.png",
@@ -894,7 +894,7 @@ export default {
         x: 288,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Tank", "Mage"],
       partype: "MP",
@@ -918,8 +918,8 @@ export default {
         attackdamage: 61.156,
         attackdamageperlevel: 4.2,
         attackspeedoffset: 0,
-        attackspeedperlevel: 1.44
-      }
+        attackspeedperlevel: 1.44,
+      },
     },
     Corki: {
       version: "6.24.1",
@@ -931,12 +931,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Corki_0.jpg",
       blurb:
-        "When Heimerdinger and his yordle colleagues migrated to Piltover, they embraced science as a way of life, and they immediately made several groundbreaking contributions to the techmaturgical community. What yordles lack in stature, they make up for ...",
+        "Corki, el piloto yordle, adora dos cosas sobre todo lo demás: volar y su glamoroso bigote... aunque no siempre en ese orden. Luego de dejar la Ciudad de Bandle, se estableció en Piltóver y se enamoró de las máquinas maravillosas que encontró ahí. Se dedicó al desarrollo de artilugios voladores, liderando una fuerza de defensa área de veteranos que se conocen como Serpientes Aulladoras. Corki, quien mantiene la calma bajo fuego enemigo, patrulla los cielos alrededor de su hogar adoptivo y nunca ha encontrado un problema que unos cuantos misiles no puedan resolver.",
       info: {
         attack: 8,
         defense: 3,
         magic: 6,
-        difficulty: 6
+        difficulty: 6,
       },
       image: {
         full: "Corki.png",
@@ -945,7 +945,7 @@ export default {
         x: 336,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Marksman"],
       partype: "MP",
@@ -969,8 +969,8 @@ export default {
         attackdamage: 56,
         attackdamageperlevel: 3.5,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.3
-      }
+        attackspeedperlevel: 2.3,
+      },
     },
     Darius: {
       version: "6.24.1",
@@ -982,12 +982,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Darius_0.jpg",
       blurb:
-        "There is no greater symbol of Noxian might than Darius, the nation's most feared and battle-hardened warrior. Orphaned at a young age, Darius had to fight to keep himself and his younger brother alive. By the time he joined the military, he had ...",
+        "No hay símbolo más grande del poder noxiano que Darius, el líder más temido y con más experiencia en la guerra. Desde sus orígenes humildes hasta convertirse en la Mano de Noxus, Darius acaba con los enemigos del imperio, de los cuales, muchos también son noxianos. Al saber que él nunca dudará si su causa es justa y que no titubeará una vez que levanta su hacha, quienes se enfrentan al comandante de la Legión Trifariana saben no les tendrá misericordia.",
       info: {
         attack: 9,
         defense: 5,
         magic: 1,
-        difficulty: 2
+        difficulty: 2,
       },
       image: {
         full: "Darius.png",
@@ -996,7 +996,7 @@ export default {
         x: 384,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Tank"],
       partype: "MP",
@@ -1020,8 +1020,8 @@ export default {
         attackdamage: 56,
         attackdamageperlevel: 5,
         attackspeedoffset: 0,
-        attackspeedperlevel: 1
-      }
+        attackspeedperlevel: 1,
+      },
     },
     Diana: {
       version: "6.24.1",
@@ -1033,12 +1033,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Diana_0.jpg",
       blurb:
-        "''I am the light coursing in the soul of the moon.''<br><br>Bearing her crescent moonblade, Diana fights as a warrior of the Lunari, a faith all but quashed in the lands around Mount Targon. Clad in shimmering armor the color of winter snow at night, ...",
+        "Portando su hoja lunar creciente, Diana pelea como una guerrera de los Lunari, una poderosa fe que impera en las tierras alrededor del Monte Targón. Blindada con una armadura reluciente del color de la nieve de invierno durante la noche, ella es la encarnación viviente del poder de la luna de plata. Imbuida con la esencia de un Aspecto que viene de más allá de la cúspide de torres de Targón, Diana ya no es completamente humana, y le cuesta entender su poder y propósito en este mundo",
       info: {
         attack: 7,
         defense: 6,
         magic: 8,
-        difficulty: 4
+        difficulty: 4,
       },
       image: {
         full: "Diana.png",
@@ -1047,7 +1047,7 @@ export default {
         x: 432,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Mage"],
       partype: "MP",
@@ -1071,8 +1071,8 @@ export default {
         attackdamage: 53.04,
         attackdamageperlevel: 3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.25
-      }
+        attackspeedperlevel: 2.25,
+      },
     },
     Draven: {
       version: "6.24.1",
@@ -1084,12 +1084,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Draven_0.jpg",
       blurb:
-        "Unlike his brother Darius, victory in battle was never enough for Draven. He craved recognition, acclaim, and glory. He first sought greatness in the Noxian military, but his flair for the dramatic went severely underappreciated. Thirsting for a ...",
+        "En Noxus, los guerreros llamados ''jueces'' se enfrentan unos a otros en arenas donde la sangre corre y la fuerza se pone a prueba, pero nadie ha sido tan celebrado como Draven. Este exsoldado encontró que el público en verdad apreciaba su habilidad para el melodrama y su talento sinigual para manejar hachas giratorias. Adicto al espectáculo de su propia creación audaz, Draven juró vencer a quien sea necesario para asegurar que su nombre se cante por todo el imperio durante toda la eternidad.",
       info: {
         attack: 9,
         defense: 3,
         magic: 1,
-        difficulty: 8
+        difficulty: 8,
       },
       image: {
         full: "Draven.png",
@@ -1098,7 +1098,7 @@ export default {
         x: 0,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Marksman"],
       partype: "MP",
@@ -1122,8 +1122,8 @@ export default {
         attackdamage: 55.8,
         attackdamageperlevel: 2.91,
         attackspeedoffset: -0.08,
-        attackspeedperlevel: 2.7
-      }
+        attackspeedperlevel: 2.7,
+      },
     },
     DrMundo: {
       version: "6.24.1",
@@ -1135,12 +1135,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/DrMundo_0.jpg",
       blurb:
-        "''Beware the Madman of Zaun. In his eyes, you are already dead''<br><br>It is said that the man now known as Dr. Mundo was born without any sort of conscience. Instead, he had an unquenchable desire to inflict pain through experimentation. By the time ...",
+        "El Dr. Mundo, completamente demente, trágicamente homicida y espeluznantemente morado, es la razón por la que los ciudadanos de Zaun permanecen en sus casas en las noches particularmente oscuras. Ahora un médico autoproclamado, en otra vida fue un paciente del manicomio más infame de Zaun. Después de ''curar'' a todo el personal, el Dr. Mundo estableció su consultorio en los pabellones vacíos que alguna vez lo albergaron y comenzó a imitar los procedimientos muy poco éticos que tantas veces había recibido él mismo. Con un armario lleno de medicamentos y cero conocimiento médico, cada inyección que se aplica aumenta su monstruosidad y aterroriza a los desafortunados ''pacientes'' que deambulan cerca de su consultorio.",
       info: {
         attack: 5,
         defense: 7,
         magic: 6,
-        difficulty: 5
+        difficulty: 5,
       },
       image: {
         full: "DrMundo.png",
@@ -1149,7 +1149,7 @@ export default {
         x: 48,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Tank"],
       partype: "None",
@@ -1173,8 +1173,8 @@ export default {
         attackdamage: 61.27,
         attackdamageperlevel: 3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.8
-      }
+        attackspeedperlevel: 2.8,
+      },
     },
     Ekko: {
       version: "6.24.1",
@@ -1186,12 +1186,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ekko_0.jpg",
       blurb:
-        "A prodigy from the rough streets of Zaun, Ekko manipulates time to spin any situation to his advantage. Using his own invention, the Zero-Drive, he explores the branching possibilities of reality. As well as experimenting with multi-dimensional ...",
+        "Ekko, un prodigio surgido de las duras calles de Zaun, es capaz de manipular el tiempo para su propio beneficio. Usando una máquina de su invención llamada Pulsar-Z, explora las distintas posibilidades de la realidad para crear el momento perfecto. Aunque adora su libertad, si algo amenaza a sus amigos hará lo que sea para defenderlos. Para quien no sepa quién es en realidad este muchacho, su capacidad de hacer lo imposible una y otra vez resulta increíble.",
       info: {
         attack: 5,
         defense: 3,
         magic: 7,
-        difficulty: 8
+        difficulty: 8,
       },
       image: {
         full: "Ekko.png",
@@ -1200,7 +1200,7 @@ export default {
         x: 96,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Assassin", "Fighter"],
       partype: "MP",
@@ -1224,8 +1224,8 @@ export default {
         attackdamage: 55,
         attackdamageperlevel: 3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 3.3
-      }
+        attackspeedperlevel: 3.3,
+      },
     },
     Elise: {
       version: "6.24.1",
@@ -1237,12 +1237,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Elise_0.jpg",
       blurb:
-        "''Beauty is power too, and can strike swifter than any sword.''<br><br>Elise is a deadly predator who dwells in a shuttered, lightless palace, deep in the Immortal Bastion of Noxus. Once she was mortal, the mistress of a once-powerful house, but the ...",
+        "Elise es una depredadora mortífera que reside en un palacio cerrado y sin luz, en las profundidades de la ciudad más vieja de Noxus. Cuando era mortal era la señora de una poderosa casa, pero la mordida de un vil semidiós la transformó en algo hermoso, pero inhumano: una criatura con forma de araña, quien manda a sus ignorantes presas hacia su telaraña. Para mantener la juventud eterna, Elise ahora prefiere alimentarse de los ingenuos e inocentes y pocos pueden resistirse a su encanto.",
       info: {
         attack: 6,
         defense: 5,
         magic: 7,
-        difficulty: 9
+        difficulty: 9,
       },
       image: {
         full: "Elise.png",
@@ -1251,7 +1251,7 @@ export default {
         x: 144,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage", "Fighter"],
       partype: "MP",
@@ -1275,8 +1275,8 @@ export default {
         attackdamage: 50.54,
         attackdamageperlevel: 3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 1.75
-      }
+        attackspeedperlevel: 1.75,
+      },
     },
     Evelynn: {
       version: "6.24.1",
@@ -1288,12 +1288,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Evelynn_0.jpg",
       blurb:
-        "Swift and lethal, Evelynn is one of the most deadly - and expensive - assassins in all of Runeterra. Able to merge with the shadows at will, she patiently stalks her prey, waiting for the right moment to strike. While Evelynn is clearly not entirely ...",
+        "Dentro de las oscuras vetas de Runaterra, la demonio Evelynn acecha a su siguiente víctima. Seduce a su presa con la apariencia voluptuosa de una mujer humana, pero una vez que alguien sucumbe ante sus encantos, Evelynn revela su verdadera forma. Es en ese momento somete a su víctima a un inimaginable tormento y se deleita con su dolor. Para el demonio, estos encuentros son amoríos inocentes. Para el resto de Runaterra, son historias macabras de lujuria que terminaron mal y atroces recordatorios del costo que tiene el deseo lascivo.",
       info: {
         attack: 4,
         defense: 2,
         magic: 7,
-        difficulty: 10
+        difficulty: 10,
       },
       image: {
         full: "Evelynn.png",
@@ -1302,7 +1302,7 @@ export default {
         x: 192,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Assassin", "Mage"],
       partype: "MP",
@@ -1326,8 +1326,8 @@ export default {
         attackdamage: 53.88,
         attackdamageperlevel: 3.5,
         attackspeedoffset: 0,
-        attackspeedperlevel: 3.6
-      }
+        attackspeedperlevel: 3.6,
+      },
     },
     Ezreal: {
       version: "6.24.1",
@@ -1339,12 +1339,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ezreal_0.jpg",
       blurb:
-        "The intrepid young adventurer Ezreal has explored some of the most remote and abandoned locations on Runeterra. During an expedition to the buried ruins of ancient Shurima, he recovered an amulet of incredible mystical power. Likely constructed to be ...",
+        "Un aventurero deslumbrante, inconscientemente talentoso para las artes mágicas, Ezreal saquea catacumbas hace mucho tiempo perdidas, se enreda en antiguas maldiciones y supera probabilidades aparentemente imposibles con ligereza. Su valentía no conoce límite, pero prefiere improvisar su manera de escapar de cualquier situación, sobre todo confiando en su ingenio, pero más que nada en su místico guantelete shurimano, que usa para desatar impactos arcanos devastadores. Una cosa es cierta: cada vez que Ezreal está cerca, los problemas no demoran en llegar. O incluso se adelantan. Seguramente están en todos lados.",
       info: {
         attack: 7,
         defense: 2,
         magic: 6,
-        difficulty: 7
+        difficulty: 7,
       },
       image: {
         full: "Ezreal.png",
@@ -1353,7 +1353,7 @@ export default {
         x: 240,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Marksman", "Mage"],
       partype: "MP",
@@ -1377,8 +1377,8 @@ export default {
         attackdamage: 55.66,
         attackdamageperlevel: 2.41,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.8
-      }
+        attackspeedperlevel: 2.8,
+      },
     },
     FiddleSticks: {
       version: "6.24.1",
@@ -1390,12 +1390,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Fiddlesticks_0.jpg",
       blurb:
-        "For nearly twenty years, Fiddlesticks has stood alone in the easternmost summoning chamber of the Institute of War. Only the burning emerald light of his unearthly gaze pierces the musty darkness of his dust-covered home. It is here that the Harbinger ...",
+        "Algo ha despertado en Runaterra. Algo ancestral. Algo terrible. El horror eterno conocido como Fiddlesticks acecha los bordes de la sociedad mortal, atraído por los espacios en donde la paranoia abunda, en los que se alimenta de sus aterradas víctimas. Acompañado de una guadaña dentada, la criatura demacrada y burda siega el miedo mismo y reduce a añicos las mentes de los desafortunados sobrevivientes tras su paso. Cuidado con el graznido del cuervo o con el suspiro de la forma que parece ser <i>casi</i> humana: Fiddlesticks ha vuelto.",
       info: {
         attack: 2,
         defense: 3,
         magic: 9,
-        difficulty: 9
+        difficulty: 9,
       },
       image: {
         full: "FiddleSticks.png",
@@ -1404,7 +1404,7 @@ export default {
         x: 288,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage", "Support"],
       partype: "MP",
@@ -1428,8 +1428,8 @@ export default {
         attackdamage: 48.36,
         attackdamageperlevel: 2.625,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.11
-      }
+        attackspeedperlevel: 2.11,
+      },
     },
     Fiora: {
       version: "6.24.1",
@@ -1441,12 +1441,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Fiora_0.jpg",
       blurb:
-        "''I have come to kill you for the sake of honor. And though you possess none, still you die.''<br>The most feared duelist in all Valoran, Fiora is as renowned for her brusque manner and cunning mind as she is for the speed of her bluesteel rapier. ...",
+        "Fiora, la duelista más temida de Valoran, se hizo famosa por sus modales bruscos y su astucia, además de la rapidez y destreza con la que maneja su florete. Nacida en el seno de la Casa Laurent de Demacia, tomó el control de la familia de su padre en medio de un escándalo que casi los destruye. La reputación de la Casa Laurent quedó desquebrajada, pero Fiora pone todo su empeño para restaurar el honor de su familia y devolverla al lugar donde corresponde: en lo más alto de Demacia.",
       info: {
         attack: 10,
         defense: 4,
         magic: 2,
-        difficulty: 3
+        difficulty: 3,
       },
       image: {
         full: "Fiora.png",
@@ -1455,7 +1455,7 @@ export default {
         x: 336,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Assassin"],
       partype: "MP",
@@ -1479,8 +1479,8 @@ export default {
         attackdamage: 60,
         attackdamageperlevel: 3.3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 3.2
-      }
+        attackspeedperlevel: 3.2,
+      },
     },
     Fizz: {
       version: "6.24.1",
@@ -1492,12 +1492,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Fizz_0.jpg",
       blurb:
-        "Centuries ago, an ancient water-dwelling race built a hidden city beneath a mountain in the sea. Though these creatures had their enemies, the city was an impenetrable fortress, and, in the safety it provided, they grew complacent. Fizz, however, ...",
+        "Fizz es un yordle anfibio que habita en los arrecifes alrededor de Aguasturbias. A menudo recupera y regresa las monedas lanzadas al mar por capitanes supersticiosos, pero hasta los más escépticos marinos saben que no deben contrariarlo; hay muchas historias de aquellos que subestimaron a este escurridizo personaje. Fizz, a veces confundido con un caprichoso espíritu del océano, comanda la enorme y carnívora bestia de las profundidades, y le gusta confundir a sus aliados y enemigos por igual.",
       info: {
         attack: 6,
         defense: 4,
         magic: 7,
-        difficulty: 6
+        difficulty: 6,
       },
       image: {
         full: "Fizz.png",
@@ -1506,7 +1506,7 @@ export default {
         x: 384,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Assassin", "Fighter"],
       partype: "MP",
@@ -1530,8 +1530,8 @@ export default {
         attackdamage: 58.04,
         attackdamageperlevel: 3,
         attackspeedoffset: -0.05,
-        attackspeedperlevel: 3.1
-      }
+        attackspeedperlevel: 3.1,
+      },
     },
     Galio: {
       version: "6.24.1",
@@ -1543,12 +1543,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Galio_0.jpg",
       blurb:
-        "''There is no such thing as redemption. Only penance.''<br><br>Long before the regulation of magic, mages experimented with the creation of artificial life. Now forbidden, instilling golems with reason was once not so uncommon a practice amongst the ...",
+        "En las afueras de la resplandeciente ciudad de Demacia, el coloso de piedra Galio se mantiene en guardia constante. Construido como un baluarte contra los magos enemigos, se mantiene inmóvil durante décadas hasta que la presencia de magia poderosa lo despierta. Una vez activado, Galio pasa la mayor parte del tiempo saboreando la emoción de la pelea y el excepcional honor de defender a sus compatriotas. Pero sus triunfos siempre son agridulces, pues la magia que él destruye es también la fuente de su reanimación y cada victoria lo desactiva una vez más.",
       info: {
         attack: 3,
         defense: 7,
         magic: 6,
-        difficulty: 3
+        difficulty: 3,
       },
       image: {
         full: "Galio.png",
@@ -1557,7 +1557,7 @@ export default {
         x: 432,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Tank", "Mage"],
       partype: "MP",
@@ -1581,8 +1581,8 @@ export default {
         attackdamage: 61.97,
         attackdamageperlevel: 3.375,
         attackspeedoffset: -0.02,
-        attackspeedperlevel: 1.2
-      }
+        attackspeedperlevel: 1.2,
+      },
     },
     Gangplank: {
       version: "6.24.1",
@@ -1594,12 +1594,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Gangplank_0.jpg",
       blurb:
-        "''I was cutting throats and sinking Noxian war galleys when you were still pissing your britches, boy. You don't want to take me on.''<br><br>As unpredictable as he is brutal, the dethroned reaver king known as Gangplank is feared far and wide. Where ...",
+        "Tan impredecible como brutal, el saqueador y rey destronado Gangplank es temido por todo el mundo. Alguna vez gobernó la ciudad portuaria de Aguasturbias y aunque su reino terminó, hay quienes creen que esto solo lo hizo más peligroso. Gangplank prefiere ver a Aguasturbias bañada en sangre antes de dejar que alguien más la tome; y ahora, armado con pistola, un sable y barriles de pólvora, está determinado a reclamar aquello que perdió.",
       info: {
         attack: 7,
         defense: 6,
         magic: 4,
-        difficulty: 9
+        difficulty: 9,
       },
       image: {
         full: "Gangplank.png",
@@ -1608,7 +1608,7 @@ export default {
         x: 0,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter"],
       partype: "MP",
@@ -1632,8 +1632,8 @@ export default {
         attackdamage: 56,
         attackdamageperlevel: 3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 3.2
-      }
+        attackspeedperlevel: 3.2,
+      },
     },
     Garen: {
       version: "6.24.1",
@@ -1645,12 +1645,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Garen_0.jpg",
       blurb:
-        "Throughout Valoran, the resolve of Demacia's military is alternately celebrated or despised, but always respected. Their ''zero tolerance'' moral code is strictly upheld by civilians and soldiers alike. In combat, this means Demacian troops may not ...",
+        "Como un orgulloso y noble guerrero, Garen forma parte de la Vanguardia Valerosa. Es popular entre sus compañeros y bastante respetado por sus enemigos. Es descendiente de la prestigiosa familia Guardia de la Corona y se le confió la tarea de defender a Demacia y sus ideales. Vistiendo una armadura resistente a la magia y empuñando una gran espada, Garen está listo para enfrentar a los magos y hechiceros en el campo de batalla con su imparable remolino de acero justiciero.",
       info: {
         attack: 7,
         defense: 7,
         magic: 1,
-        difficulty: 5
+        difficulty: 5,
       },
       image: {
         full: "Garen.png",
@@ -1659,7 +1659,7 @@ export default {
         x: 48,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Tank"],
       partype: "None",
@@ -1683,8 +1683,8 @@ export default {
         attackdamage: 57.88,
         attackdamageperlevel: 4.5,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.9
-      }
+        attackspeedperlevel: 2.9,
+      },
     },
     Gnar: {
       version: "6.24.1",
@@ -1696,12 +1696,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Gnar_0.jpg",
       blurb:
-        "The jungle does not forgive blindness. Every broken branch tells a story.<br><br>I've hunted every creature this jungle has to offer. I was certain there were no challenges left here, but now there is something new. Each track is the size of a ...",
+        "Gnar es un yordle primitivo cuyos jugueteos bobos pueden transformarse en un berrinche de infante en un instante, transformándolo así en una bestia masiva que disfruta la destrucción. Congelado en Hielo Puro por miles de años, la curiosa criatura se escapó y ahora está libre en un mundo cambiado que percibe tan exótico como maravilloso. Encantado con el peligro, Gnar arroja lo que puede a sus enemigos, ya sea su búmeran hecho de colmillos o una construcción cercana.",
       info: {
         attack: 6,
         defense: 5,
         magic: 5,
-        difficulty: 8
+        difficulty: 8,
       },
       image: {
         full: "Gnar.png",
@@ -1710,7 +1710,7 @@ export default {
         x: 96,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Tank"],
       partype: "Gnarfury",
@@ -1734,8 +1734,8 @@ export default {
         attackdamage: 51,
         attackdamageperlevel: 3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 6
-      }
+        attackspeedperlevel: 6,
+      },
     },
     Gragas: {
       version: "6.24.1",
@@ -1747,12 +1747,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Gragas_0.jpg",
       blurb:
-        "The only thing more important to Gragas than fighting is drinking. His unquenchable thirst for stronger ale has led him in search of the most potent and unconventional ingredients to toss in his still. Impulsive and unpredictable, this rowdy carouser ...",
+        "Gragas, tan alegre como imponente, es un masivo y ruidoso maestro cervecero en su propia misión por encontrar el perfecto tarro de cerveza. Procedente de un lugar desconocido, ahora busca ingredientes poco comunes entre los inmaculados páramos de Fréljord, probando todas las recetas en su camino. A veces borracho y extremadamente impulsivo, Gragas es famoso por las batallas que inicia, las cuales a veces terminan en fiestas de toda la noche y mucho daño a la propiedad. Cualquier aparición de Gragas presagia bebida y destrucción; en ese orden.",
       info: {
         attack: 4,
         defense: 7,
         magic: 6,
-        difficulty: 5
+        difficulty: 5,
       },
       image: {
         full: "Gragas.png",
@@ -1761,7 +1761,7 @@ export default {
         x: 144,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Mage"],
       partype: "MP",
@@ -1785,8 +1785,8 @@ export default {
         attackdamage: 61.38,
         attackdamageperlevel: 3.5,
         attackspeedoffset: -0.04,
-        attackspeedperlevel: 2.05
-      }
+        attackspeedperlevel: 2.05,
+      },
     },
     Graves: {
       version: "6.24.1",
@@ -1798,12 +1798,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Graves_0.jpg",
       blurb:
-        "Malcolm Graves is a wanted man in every realm, city and empire he has visited. Tough, strong-willed, and above all, relentless, through his life of crime he has amassed (then invariably lost) a small fortune.",
+        "Malcolm Graves es un reconocido mercenario, apostador y ladrón: un hombre al que se le busca en cada ciudad e imperio que ha visitado. Aunque tiene un temperamento explosivo, posee un estricto sentido de honor criminal que hace valer con el poder de su escopeta de dos cañones, Destino. En años recientes concretó una problemática alianza con Twisted Fate y juntos prosperaron una vez más dentro del caos que son las entrañas criminales de Aguasturbias.",
       info: {
         attack: 8,
         defense: 5,
         magic: 3,
-        difficulty: 3
+        difficulty: 3,
       },
       image: {
         full: "Graves.png",
@@ -1812,7 +1812,7 @@ export default {
         x: 192,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Marksman"],
       partype: "MP",
@@ -1836,8 +1836,8 @@ export default {
         attackdamage: 60.83,
         attackdamageperlevel: 2.41,
         attackspeedoffset: 0.3,
-        attackspeedperlevel: 2.6
-      }
+        attackspeedperlevel: 2.6,
+      },
     },
     Hecarim: {
       version: "6.24.1",
@@ -1850,12 +1850,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Hecarim_0.jpg",
       blurb:
-        "''Break their ranks and ride them down without mercy. Crush the living and feast on their terror.''<br><br>Hecarim is an armored colossus who charges from the Shadow Isles at the head of a deathly host of spectral horsemen to hunt the living. A ...",
+        "Hecarim es una fusión espectral de un hombre y una bestia condenada a llevar las almas de los vivos por toda la eternidad. Cuando las Islas Bendecidas cayeron en oscuridad, este orgulloso caballero fue arrasado por la destructiva energía de la Ruina junto a su caballería y sus monturas. Ahora, cuando la Niebla Negra se esparce por Runaterra, él encabeza la devastadora carga, se deleita en la matanza que causa y aplasta al enemigo bajo sus pezuñas acorazadas.",
       info: {
         attack: 8,
         defense: 6,
         magic: 4,
-        difficulty: 6
+        difficulty: 6,
       },
       image: {
         full: "Hecarim.png",
@@ -1864,7 +1864,7 @@ export default {
         x: 240,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Tank"],
       partype: "MP",
@@ -1888,8 +1888,8 @@ export default {
         attackdamage: 58,
         attackdamageperlevel: 3.2,
         attackspeedoffset: -0.0672,
-        attackspeedperlevel: 2.5
-      }
+        attackspeedperlevel: 2.5,
+      },
     },
     Heimerdinger: {
       version: "6.24.1",
@@ -1901,12 +1901,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Heimerdinger_0.jpg",
       blurb:
-        "From the Journal of Professor Cecil B. Heimerdinger<br><br>10.14<br><br>09:15<br><br>Current meteorological conditions in Bandle City seem optimal. Atmospheric pressure is ideal for today's experiments!<br><br>Running a fifth trial for my ...",
+        "El Profesor Cecil B. Heimerdinger, brillante y a veces excéntrico científico yordle, es uno de los inventores más innovadores que Piltóver ha conocido. Implacable en su trabajo hasta llegar a niveles de neurótica obsesión, se alegra en poder contestar las preguntas más impenetrables del universo. Aunque sus teorías a veces parecieran esotéricas, Heimerdinger ha construido varias de las piezas de maquinaría más milagrosas y letales de Piltóver, y constantemente interviene sus invenciones para hacerlas más eficientes.",
       info: {
         attack: 2,
         defense: 6,
         magic: 8,
-        difficulty: 8
+        difficulty: 8,
       },
       image: {
         full: "Heimerdinger.png",
@@ -1915,7 +1915,7 @@ export default {
         x: 288,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage", "Support"],
       partype: "MP",
@@ -1939,8 +1939,8 @@ export default {
         attackdamage: 55.536,
         attackdamageperlevel: 2.7,
         attackspeedoffset: 0,
-        attackspeedperlevel: 1.36
-      }
+        attackspeedperlevel: 1.36,
+      },
     },
     Illaoi: {
       version: "6.24.1",
@@ -1952,12 +1952,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Illaoi_0.jpg",
       blurb:
-        "''I'm not big on sermons. Broken bones teach better lessons.''<br>Illaoi's powerful physique is dwarfed only by her indomitable faith. As the prophet of the Great Kraken, she uses a huge, golden idol to rip her foes' spirits from their bodies and ...",
+        "El poderoso físico de Illaoi solo se ve disminuido por su indomable fe. Como profeta del Gran Kraken, ella usa un enorme ídolo dorado para arrebatarles el espíritu a sus enemigos y destrozar su percepción de la realidad. Todo aquel que desafíe a la ''Portadora de la Verdad de Nagakabouros'' descubrirá muy pronto que Illaoi jamás pelea sola: el dios de las Islas de las Serpiente combate a su lado.",
       info: {
         attack: 8,
         defense: 6,
         magic: 3,
-        difficulty: 4
+        difficulty: 4,
       },
       image: {
         full: "Illaoi.png",
@@ -1966,7 +1966,7 @@ export default {
         x: 336,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Tank"],
       partype: "MP",
@@ -1990,8 +1990,8 @@ export default {
         attackdamage: 60,
         attackdamageperlevel: 5,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.5
-      }
+        attackspeedperlevel: 2.5,
+      },
     },
     Irelia: {
       version: "6.24.1",
@@ -2003,12 +2003,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Irelia_0.jpg",
       blurb:
-        "''The sword flourishes, as though painting with blood.''<br><br>The Ionians have developed some of the most breathtaking and deadly martial arts in all of Runeterra - just one manifestation of their pursuit of enlightenment. The most remarkable blade ...",
+        "La invasión de Jonia a manos de Noxus produjo muchos héroes, pero ninguno fue tan improbable como la joven Irelia de Navori. Entrenada en las ancestrales danzas de su región, adaptó su arte para la guerra y ahora usa sus movimientos refinados y llenos de gracia para controlar un arsenal de cuchillas letales. Después de demostrar ser una guerrera, se le asignó el papel de líder y ejemplo de la resistencia. Hoy en día, sigue dedicada a defender su territorio.",
       info: {
         attack: 7,
         defense: 4,
         magic: 5,
-        difficulty: 5
+        difficulty: 5,
       },
       image: {
         full: "Irelia.png",
@@ -2017,7 +2017,7 @@ export default {
         x: 384,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Assassin"],
       partype: "MP",
@@ -2041,8 +2041,8 @@ export default {
         attackdamage: 61.544,
         attackdamageperlevel: 3.3,
         attackspeedoffset: -0.06,
-        attackspeedperlevel: 3.2
-      }
+        attackspeedperlevel: 3.2,
+      },
     },
     Ivern: {
       version: "6.24.1",
@@ -2054,12 +2054,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ivern_0.jpg",
       blurb:
-        "Ivern Bramblefoot, known to many as the Green Father, is a peculiar half man, half tree who roams Runeterra's forests, cultivating life everywhere he goes. He knows the secrets of the natural world, and holds deep friendships with all things that grow,...",
+        "Ivern Pies de Espino, conocido por muchos como el Árbol Padre, es un ser peculiar, mitad humano y mitad árbol, que deambula por los bosques de Runaterra y cultiva vida dondequiera que va. Conoce los secretos del mundo natural y es buen amigo de todo lo que crece, vuela o se oculta en él. Ivern vaga por el mundo natural compartiendo su curiosa sabiduría con quienes conoce, rejuvenece los bosques y, de vez en cuando, confía sus secretos a mariposas indiscretas.",
       info: {
         attack: 3,
         defense: 5,
         magic: 7,
-        difficulty: 7
+        difficulty: 7,
       },
       image: {
         full: "Ivern.png",
@@ -2068,7 +2068,7 @@ export default {
         x: 96,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Support", "Mage"],
       partype: "MP",
@@ -2092,8 +2092,8 @@ export default {
         attackdamage: 50,
         attackdamageperlevel: 3,
         attackspeedoffset: -0.03,
-        attackspeedperlevel: 3.4
-      }
+        attackspeedperlevel: 3.4,
+      },
     },
     Janna: {
       version: "6.24.1",
@@ -2105,12 +2105,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Janna_0.jpg",
       blurb:
-        "There are those sorcerers who give themselves over to the primal powers of nature, forgoing the learned practice of magic. Such a sorceress is Janna, who first learned magic as an orphan growing up amidst the chaos that is the city-state of Zaun. ...",
+        "Janna es un poderoso y misterioso espíritu del viento que protege a los desvalidos de Zaun con la tempestad de Runaterra. Algunos creen que las súplicas de los marineros pidiendo vientos favorables mientras navegaban a través de las aguas traicioneras y las violentas tempestades dieron vida a Janna. Se convirtió en el símbolo de la esperanza de los necesitados, y su favor y protección alcanzan a todos hasta las profundidades de Zaun. Nadie sabe dónde o cuándo aparecerá, pero con frecuencia ella acude al llamado de ayuda.",
       info: {
         attack: 3,
         defense: 5,
         magic: 7,
-        difficulty: 7
+        difficulty: 7,
       },
       image: {
         full: "Janna.png",
@@ -2119,7 +2119,7 @@ export default {
         x: 432,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Support", "Mage"],
       partype: "MP",
@@ -2143,8 +2143,8 @@ export default {
         attackdamage: 51.956,
         attackdamageperlevel: 2.95,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.61
-      }
+        attackspeedperlevel: 2.61,
+      },
     },
     JarvanIV: {
       version: "6.24.1",
@@ -2156,12 +2156,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/JarvanIV_0.jpg",
       blurb:
-        "''There is only one truth, and you will find it at the point of my lance.''<br><br>As the royal family of Demacia for centuries, members of the Lightshield line have spent their lives waging war against any who opposed Demacian ethics. It is said that ...",
+        "El príncipe Jarvan, vástago de la dinastía Escudo de Luz, es heredero del trono de Demacia. Criado para ser un modelo de las virtudes más grandes de su nación, se ve forzado a balancear las grandes expectativas que se tienen de él y su propio deseo de pelear en el frente. Jarvan inspira a sus tropas con su temible valentía y desinteresada determinación, levantando alto los colores de su familia y revelando su verdadera fuerza como un líder futuro de su gente.",
       info: {
         attack: 6,
         defense: 8,
         magic: 3,
-        difficulty: 5
+        difficulty: 5,
       },
       image: {
         full: "JarvanIV.png",
@@ -2170,7 +2170,7 @@ export default {
         x: 0,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Tank", "Fighter"],
       partype: "MP",
@@ -2194,8 +2194,8 @@ export default {
         attackdamage: 55.712,
         attackdamageperlevel: 3.4,
         attackspeedoffset: -0.05,
-        attackspeedperlevel: 2.5
-      }
+        attackspeedperlevel: 2.5,
+      },
     },
     Jax: {
       version: "6.24.1",
@@ -2207,12 +2207,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jax_0.jpg",
       blurb:
-        "It is seldom the case where a champion is defined by his actions after joining the League of Legends rather than before. Such is the case with Jax, for whom the argument could be made that he is the most prolific tournament fighter currently at the ...",
+        "Inigualable tanto en sus habilidades de armamentos únicos como en su mordaz sarcasmo, Jax es el último maestro de armas conocido de Icathia. Después de que su tierra natal fue destruida por su propia arrogancia al desencadenar el Vacío, Jax y su especie juraron proteger lo poco que quedó. Mientras la magia aumenta en el mundo, la amenaza durmiente se agita una vez más, y Jax vaga por Valoran, portando la última luz de Icathia y poniendo a prueba a todos los guerreros que conoce para ver si son suficientemente fuertes para erguirse a su lado...",
       info: {
         attack: 7,
         defense: 5,
         magic: 7,
-        difficulty: 5
+        difficulty: 5,
       },
       image: {
         full: "Jax.png",
@@ -2221,7 +2221,7 @@ export default {
         x: 48,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Assassin"],
       partype: "MP",
@@ -2245,8 +2245,8 @@ export default {
         attackdamage: 61.97,
         attackdamageperlevel: 3.375,
         attackspeedoffset: -0.02,
-        attackspeedperlevel: 3.4
-      }
+        attackspeedperlevel: 3.4,
+      },
     },
     Jayce: {
       version: "6.24.1",
@@ -2258,12 +2258,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jayce_0.jpg",
       blurb:
-        "Armed with wit, charm, and his signature transforming hammer, Jayce lives to protect his native Piltover. Long before his nation called him a hero, however, he was a promising young inventor. When Piltover commissioned him to study a rare arcane ...",
+        "Jayce es un brillante inventor que comprometió su vida a la defensa de Piltóver y a su firme búsqueda del progreso. Con su martillo hextech transformable en mano, Jayce utiliza su fuerza, valor y considerable inteligencia para proteger su ciudad natal. Aunque lo veneran como a un héroe, no se ha tomado bien toda la atención que conlleva el heroísmo. Aun así, el corazón de Jayce es bondadoso e incluso quienes envidian sus habilidades innatas agradecen la protección que le otorga a la Ciudad del Progreso.",
       info: {
         attack: 8,
         defense: 4,
         magic: 3,
-        difficulty: 7
+        difficulty: 7,
       },
       image: {
         full: "Jayce.png",
@@ -2272,7 +2272,7 @@ export default {
         x: 96,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Marksman"],
       partype: "MP",
@@ -2296,8 +2296,8 @@ export default {
         attackdamage: 50.38,
         attackdamageperlevel: 3.5,
         attackspeedoffset: -0.05,
-        attackspeedperlevel: 3
-      }
+        attackspeedperlevel: 3,
+      },
     },
     Jhin: {
       version: "6.24.1",
@@ -2309,12 +2309,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jhin_0.jpg",
       blurb:
-        "''Art requires a certain...cruelty.''<br><br>Jhin is a meticulous criminal psychopath who believes murder is art. Once an Ionian prisoner, but freed by shadowy elements within Ionia's ruling council, the serial killer now works as their cabal's ...",
+        "Jhin es un psicópata meticuloso que cree que el asesinato es un arte. Alguna vez un prisionero jonio, pero liberado por elementos sombríos dentro del concejo líder de Jonia, el asesino en serie ahora presta sus servicios como sicario a esa camarilla. Utilizando su arma como un pincel, Jhin crea obras de arte brutales que horrorizan a sus víctimas y testigos. Mostrar sus obras de horripilante drama le causa un placer retorcido, lo que lo convierte en la mejor opción para mandar el más poderoso de los mensajes: el terror.",
       info: {
         attack: 10,
         defense: 2,
         magic: 6,
-        difficulty: 6
+        difficulty: 6,
       },
       image: {
         full: "Jhin.png",
@@ -2323,7 +2323,7 @@ export default {
         x: 144,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Marksman", "Assassin"],
       partype: "MP",
@@ -2347,8 +2347,8 @@ export default {
         attackdamage: 53,
         attackdamageperlevel: 4,
         attackspeedoffset: 0,
-        attackspeedperlevel: 0
-      }
+        attackspeedperlevel: 0,
+      },
     },
     Jinx: {
       version: "6.24.1",
@@ -2360,12 +2360,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jinx_0.jpg",
       blurb:
-        "Jinx lives to wreak havoc without a thought for the consequences, leaving a trail of mayhem and panic in her wake. A manic and impulsive criminal, she despises nothing more than boredom, and gleefully brings her own volatile brand of pandemonium to ...",
+        "Jinx, una maniática e impulsiva criminal de Zaun, vive para sembrar el caos sin pararse a pensar en las consecuencias. Con un arsenal de juguetes letales a su disposición, desata las explosiones más brillantes y los estallidos más ruidosos para dejar un rastro de caos y pánico a su paso. Jinx detesta el aburrimiento y con una gran alegría deja su marca de pandemonio a dondequiera que vaya.",
       info: {
         attack: 9,
         defense: 2,
         magic: 4,
-        difficulty: 6
+        difficulty: 6,
       },
       image: {
         full: "Jinx.png",
@@ -2374,7 +2374,7 @@ export default {
         x: 192,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Marksman"],
       partype: "MP",
@@ -2398,8 +2398,8 @@ export default {
         attackdamage: 58.46,
         attackdamageperlevel: 2.41,
         attackspeedoffset: 0,
-        attackspeedperlevel: 1
-      }
+        attackspeedperlevel: 1,
+      },
     },
     Kalista: {
       version: "6.24.1",
@@ -2411,12 +2411,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kalista_0.jpg",
       blurb:
-        "''When wronged, we seek justice. When hurt, we strike back. When betrayed, the Spear of Vengeance strikes!''<br><br>A specter of wrath and retribution, Kalista is the undying spirit of vengeance, an armored nightmare summoned from the Shadow Isles to ...",
+        "Kalista, espectro de ira y retribución, es el espíritu eterno de la venganza, una pesadilla armada invocada de las Islas de la Sombra para cazar impostores y traidores. Los traicionados pueden llorar ensangrentados clamando venganza, pero Kalista solo escucha a los que están dispuestos a pagar con sus propias almas. Aquellos que se convierten en presa de la ira de Kalista, deben estar en paz, pues cada pacto sellado con esta cazadora terminará con el frío y penetrante fuego de sus lanzas de alma.",
       info: {
         attack: 8,
         defense: 2,
         magic: 4,
-        difficulty: 7
+        difficulty: 7,
       },
       image: {
         full: "Kalista.png",
@@ -2425,7 +2425,7 @@ export default {
         x: 240,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Marksman"],
       partype: "MP",
@@ -2449,8 +2449,8 @@ export default {
         attackdamage: 63,
         attackdamageperlevel: 2.9,
         attackspeedoffset: -0.03,
-        attackspeedperlevel: 2.5
-      }
+        attackspeedperlevel: 2.5,
+      },
     },
     Karma: {
       version: "6.24.1",
@@ -2462,12 +2462,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Karma_0.jpg",
       blurb:
-        "Karma is a woman of indomitable will and unbound spiritual power. She is the soul of Ionia made manifest and an inspiring presence on the battlefield, shielding her allies and turning back her foes. A strong leader torn between tradition and ...",
+        "Ningún mortal es capaz de ilustrar mejor las tradiciones espirituales de Jonia que Karma. Ella es la personificación de un alma antigua que ha reencarnado innumerables veces, transmitiendo sus recuerdos acumulados en cada una de las vidas nuevas, bendecida con un poder que muy pocos pueden comprender. Ha dado lo mejor de sí para guiar a su gente en los tiempos de crisis recientes, aunque sabe bien que la paz y la armonía tienen un costo considerable, tanto para ella como para la tierra que atesora como lo más preciado.",
       info: {
         attack: 1,
         defense: 7,
         magic: 8,
-        difficulty: 5
+        difficulty: 5,
       },
       image: {
         full: "Karma.png",
@@ -2476,7 +2476,7 @@ export default {
         x: 288,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage", "Support"],
       partype: "MP",
@@ -2500,8 +2500,8 @@ export default {
         attackdamage: 53.544,
         attackdamageperlevel: 3.3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.3
-      }
+        attackspeedperlevel: 2.3,
+      },
     },
     Karthus: {
       version: "6.24.1",
@@ -2513,12 +2513,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Karthus_0.jpg",
       blurb:
-        "''Death is not the end of the journey, it is just the beginning...''<br><br>The harbinger of oblivion, Karthus is an undying spirit whose haunting songs are a prelude to the horror of his nightmarish appearance. The living fear the eternity of undeath,...",
+        "Karthus, heraldo del olvido, es un espíritu inmortal cuyas canciones pavorosas preceden el horror de su dantesca aparición. Los vivos temen la eternidad de la no-muerte, pero Karthus solo ve hermosura y pureza en su abrazo, una comunión perfecta entre la vida y la muerte. Cuando emerge de las Islas de la Sombra es para llevar la dicha de la muerte a los mortales como apóstol de la no-vida.",
       info: {
         attack: 2,
         defense: 2,
         magic: 10,
-        difficulty: 7
+        difficulty: 7,
       },
       image: {
         full: "Karthus.png",
@@ -2527,7 +2527,7 @@ export default {
         x: 336,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage"],
       partype: "MP",
@@ -2551,8 +2551,8 @@ export default {
         attackdamage: 45.66,
         attackdamageperlevel: 3.25,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.11
-      }
+        attackspeedperlevel: 2.11,
+      },
     },
     Kassadin: {
       version: "6.24.1",
@@ -2564,12 +2564,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kassadin_0.jpg",
       blurb:
-        "There is a place between dimensions and between worlds. To some it is known as the Outside, to others it is the Unknown. To most, however, it is called the Void. Despite its name, the Void is not an empty place, but rather the home of unspeakable ...",
+        "Al abrirse paso a través de los lugares más oscuros del mundo, Kassadin sabe que sus días están contados. Aunque alguna vez fue un experimentado guía y aventurero de Shurima, eligió vivir en el anonimato y tener una familia en las pacíficas tribus del sur... hasta el día que el Vacío consumió su aldea. Kassadin juró venganza, y combinó numerosos artefactos arcanos y tecnologías prohibidas para el peligro que se avecinaba. Así, Kassadin se dirigió por fin a las tierras olvidadas de Icathia, listo para enfrentar a cualquier monstruoso ser del Vacío en su búsqueda del autoproclamado profeta, Malzahar.",
       info: {
         attack: 3,
         defense: 5,
         magic: 8,
-        difficulty: 8
+        difficulty: 8,
       },
       image: {
         full: "Kassadin.png",
@@ -2578,7 +2578,7 @@ export default {
         x: 384,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Assassin", "Mage"],
       partype: "MP",
@@ -2602,8 +2602,8 @@ export default {
         attackdamage: 58.852,
         attackdamageperlevel: 3.9,
         attackspeedoffset: -0.023,
-        attackspeedperlevel: 3.7
-      }
+        attackspeedperlevel: 3.7,
+      },
     },
     Katarina: {
       version: "6.24.1",
@@ -2615,12 +2615,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Katarina_0.jpg",
       blurb:
-        "Driven by an intense killer instinct, Katarina uses her talents as an assassin for the glory of Noxus, and the continued elevation of her family. While her fervor drives her to ever-greater feats, it can sometimes lead her astray.<br><br>From ...",
+        "Decisiva en su juicio y letal en combate, Katarina es una asesina noxiana del más alto calibre. Como la hija mayor del legendario General Du Couteau, ella hizo que reconocieran sus talentos con agiles muertes a sus enemigos desprevenidos. Su feroz ambición la ha llevado a buscar blancos fuertemente protegidos aunque tenga que poner en riesgo a sus aliados; sin embargo, sin importar la misión, Katarina no dudará al ejecutar su deber en medio de un torbellino de dagas.",
       info: {
         attack: 4,
         defense: 3,
         magic: 9,
-        difficulty: 8
+        difficulty: 8,
       },
       image: {
         full: "Katarina.png",
@@ -2629,7 +2629,7 @@ export default {
         x: 432,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Assassin", "Mage"],
       partype: "None",
@@ -2653,8 +2653,8 @@ export default {
         attackdamage: 58,
         attackdamageperlevel: 3.2,
         attackspeedoffset: -0.05,
-        attackspeedperlevel: 2.74
-      }
+        attackspeedperlevel: 2.74,
+      },
     },
     Kayle: {
       version: "6.24.1",
@@ -2666,12 +2666,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kayle_0.jpg",
       blurb:
-        "In a world far away where an ancient war still rages, Kayle was a great hero - the strongest of an immortal race committed to destroying evil wherever it could be found. For ten thousand years, Kayle fought tirelessly for her people, wielding her ...",
+        "Nacida de un Aspecto targoniano durante el punto culminante de las Guerras Rúnicas, Kayle honra el legado de su madre al pelear por la justicia con sus alas de fuego divino. Ella y su hermana gemela, Morgana, fueron las protectoras de Demacia durante años... hasta que las constantes fallas de los mortales decepcionaron a Kayle, y decidió abandonar este reino para siempre. Hasta el día de hoy se cuentan leyendas sobre cómo castigó a los injustos con sus espadas ardientes, y muchos esperan que algún día regrese.",
       info: {
         attack: 6,
         defense: 6,
         magic: 7,
-        difficulty: 7
+        difficulty: 7,
       },
       image: {
         full: "Kayle.png",
@@ -2680,7 +2680,7 @@ export default {
         x: 0,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Support"],
       partype: "MP",
@@ -2704,8 +2704,8 @@ export default {
         attackdamage: 51,
         attackdamageperlevel: 2.8,
         attackspeedoffset: -0.02,
-        attackspeedperlevel: 2.2
-      }
+        attackspeedperlevel: 2.2,
+      },
     },
     Kennen: {
       version: "6.24.1",
@@ -2717,12 +2717,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kennen_0.jpg",
       blurb:
-        "There exists an ancient order originating in the Ionian Isles dedicated to the preservation of balance. Order, chaos, light, darkness -- all things must exist in perfect harmony for such is the way of the universe. This order is known as the Kinkou ...",
+        "Además de ser un rápido ejecutor del balance Jonio, Kennen es el único miembro yordle del Kinkou. A pesar de su pequeña y peluda estatura, está ansioso por enfrentarse a cualquier amenaza con una tormenta de shuriken y desbordante entusiasmo. A lado de su maestro, Shen, Kennen patrulla el reino espiritual, utilizando devastadora energía eléctrica para eliminar a sus enemigos.",
       info: {
         attack: 6,
         defense: 4,
         magic: 7,
-        difficulty: 4
+        difficulty: 4,
       },
       image: {
         full: "Kennen.png",
@@ -2731,7 +2731,7 @@ export default {
         x: 48,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage", "Marksman"],
       partype: "Energy",
@@ -2755,8 +2755,8 @@ export default {
         attackdamage: 50.544,
         attackdamageperlevel: 3.3,
         attackspeedoffset: -0.0947,
-        attackspeedperlevel: 3.4
-      }
+        attackspeedperlevel: 3.4,
+      },
     },
     Khazix: {
       version: "6.24.1",
@@ -2768,12 +2768,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Khazix_0.jpg",
       blurb:
-        "A vicious Void predator, Kha'Zix infiltrated Valoran to devour the land's most promising creatures. With each kill he absorbs his prey's strength, evolving to grow more powerful. Kha'Zix hungers most to conquer and consume Rengar, the one beast he ...",
+        "El Vacío crece y el Vacío se adapta. En ninguna de sus múltiples manifestaciones estas verdades son más evidentes que en Kha'Zix. La evolución es la esencia de este mutante horror que nació para sobrevivir y acabar con los más fuertes. Cuando se le dificulta esa tarea, desarrolla nuevas y más efectivas maneras para contrarrestar y asesinar a su presa. Aunque inicialmente era una bestia sin mente, la inteligencia de Kha'Zix se desarrolló tanto como su cuerpo. Ahora, la criatura planea sus cacerías e incluso aprovecha el terror visceral que genera en sus víctimas.",
       info: {
         attack: 9,
         defense: 4,
         magic: 3,
-        difficulty: 6
+        difficulty: 6,
       },
       image: {
         full: "Khazix.png",
@@ -2782,7 +2782,7 @@ export default {
         x: 96,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Assassin", "Fighter"],
       partype: "MP",
@@ -2806,8 +2806,8 @@ export default {
         attackdamage: 55.21,
         attackdamageperlevel: 3.1,
         attackspeedoffset: -0.065,
-        attackspeedperlevel: 2.7
-      }
+        attackspeedperlevel: 2.7,
+      },
     },
     Kindred: {
       version: "6.24.1",
@@ -2819,12 +2819,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kindred_0.jpg",
       blurb:
-        "''Tell me again, little Lamb, which things are ours to take?''<br>''All things, Dear Wolf.''<br>Separate, but never parted, Kindred represents the twin essences of death. Lamb's arrow offers a swift release for those who accept their fate. Wolf hunts ...",
+        "''Tell me again, little Lamb, which things are ours to take?''<br>''All things, Dear Wolf.''<br>Separate, but never parted, Kindred represents the twin essences of death. Lamb's arrow offers a swift release for those who accept their fate. Wolf hunts ...Separados, pero nunca divididos, los Kindred representan las esencias hermanas de la muerte. La flecha de la Oveja ofrece una vía de escape rápida para los mortales que acepten su destino. El Lobo sale a la caza de los que huyen de su final y les proporciona un fin violento con sus fauces implacables. Aunque las interpretaciones de la naturaleza de los Kindred difieren a lo largo y ancho de Runaterra, todos los mortales deben elegir el verdadero rostro de su muerte.",
       info: {
         attack: 8,
         defense: 2,
         magic: 2,
-        difficulty: 4
+        difficulty: 4,
       },
       image: {
         full: "Kindred.png",
@@ -2833,7 +2833,7 @@ export default {
         x: 144,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Marksman"],
       partype: "MP",
@@ -2857,8 +2857,8 @@ export default {
         attackdamage: 54,
         attackdamageperlevel: 1.7,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.5
-      }
+        attackspeedperlevel: 2.5,
+      },
     },
     Kled: {
       version: "6.24.1",
@@ -2870,12 +2870,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kled_0.jpg",
       blurb:
-        "''A sane man would run . . . but I ain't the runnin' kind!''<br><br>A warrior as fearless as he is ornery, Kled is a popular folk hero in Noxus. Embodying the furious bravado of his nation, he is an icon beloved by the empire's soldiers, distrusted by ...",
+        "El yordle Kled, guerrero tan temerario como insoportable, es la encarnación de la bravuconería de Noxus. Es un ícono amado por los soldados del imperio, que se ha ganado la desconfianza de sus oficiales y el desprecio de la nobleza. Muchos aseguran que Kled ha peleado en cada campaña que ha librado la legión, que ha adquirido todo título militar y que nunca ha escapado de una batalla. Aunque la verdad de eso último es cuestionable, algo es innegable: cargando hacia la batalla sobe su desconfiable corcel, Skaarl, Kled pelea para proteger lo que es suyo... y tomar lo que pueda.",
       info: {
         attack: 8,
         defense: 2,
         magic: 2,
-        difficulty: 7
+        difficulty: 7,
       },
       image: {
         full: "Kled.png",
@@ -2884,7 +2884,7 @@ export default {
         x: 48,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Tank"],
       partype: "Gnarfury",
@@ -2908,8 +2908,8 @@ export default {
         attackdamage: 55,
         attackdamageperlevel: 3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 3.5
-      }
+        attackspeedperlevel: 3.5,
+      },
     },
     KogMaw: {
       version: "6.24.1",
@@ -2921,12 +2921,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/KogMaw_0.jpg",
       blurb:
-        "''If that's just hungry, I don't want to see angry.''<br><br>When the prophet Malzahar was reborn in Icathia, he was led there by an ominous voice which thereafter anchored itself to his psyche. From within, this voice bestowed upon him terrible ...",
+        "Arrojada desde una incursión de un Vacío putrefacto en las profundidades de los deshechos de Icathia, Kog'Maw es una criatura inquisitiva pero pútrida, con una boca ácida y enorme. Este particular engendro del Vacío necesita roer y babear todo para entenderlo de verdad. Aunque no es inherentemente malvada, la ingenuidad seductora de Kog'Maw es peligrosa, ya que posteriormente viene un frenesí de alimentación; no para su sustento, sino para satisfacer su curiosidad sin límites.",
       info: {
         attack: 8,
         defense: 2,
         magic: 5,
-        difficulty: 6
+        difficulty: 6,
       },
       image: {
         full: "KogMaw.png",
@@ -2935,7 +2935,7 @@ export default {
         x: 192,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Marksman", "Mage"],
       partype: "MP",
@@ -2959,8 +2959,8 @@ export default {
         attackdamage: 57.46,
         attackdamageperlevel: 2.41,
         attackspeedoffset: -0.06,
-        attackspeedperlevel: 2.65
-      }
+        attackspeedperlevel: 2.65,
+      },
     },
     Leblanc: {
       version: "6.24.1",
@@ -2972,12 +2972,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Leblanc_0.jpg",
       blurb:
-        "Every city has its dark side, even one whose reputation is already of a questionable hue. Noxus - though its name is already invoked with a mixture of reverence and revulsion - is no exception to this simple truth. Deep within the winding dungeons ...",
+        "Misteriosa hasta para los otros miembros de Rosa Negra, LeBlanc es uno de los tantos nombres de una mujer pálida que ha manipulado personas y eventos desde los primeros días de Noxus. Usando su magia para reflejarse a sí misma, esta hechicera puede aparecérsele a cualquiera, en cualquier sitio y estar en muchos lugares al mismo tiempo. Al siempre estar conspirando en las sombras, los verdaderos objetivos de LeBlanc son tan herméticos como su identidad cambiante.",
       info: {
         attack: 1,
         defense: 4,
         magic: 10,
-        difficulty: 9
+        difficulty: 9,
       },
       image: {
         full: "Leblanc.png",
@@ -2986,7 +2986,7 @@ export default {
         x: 240,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Assassin", "Mage"],
       partype: "MP",
@@ -3010,8 +3010,8 @@ export default {
         attackdamage: 54.88,
         attackdamageperlevel: 3.5,
         attackspeedoffset: 0,
-        attackspeedperlevel: 1.4
-      }
+        attackspeedperlevel: 1.4,
+      },
     },
     LeeSin: {
       version: "6.24.1",
@@ -3023,12 +3023,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/LeeSin_0.jpg",
       blurb:
-        "As a young teen, Lee Sin was intent on becoming a summoner. His will and dedication were unmatched by any of his peers, and his skill drew the attention of Reginald Ashram, the League's High Councilor at the time. While studying at the Arcanum Majoris,...",
+        "Lee Sin, maestro de las antiguas artes marciales jonianas, es un peleador ejemplar que canaliza la esencia del espíritu del dragón para enfrentar cualquier desafío que se le presente. A pesar de que perdió la vista hace muchos años, el monje guerrero ha dedicado su vida a proteger su ciudad natal contra cualquiera que se atreva a perturbar su sagrado equilibrio. Los enemigos que subestiman su apariencia meditativa deberán soportar sus legendarios puños de fuego y sus patadas circulares abrasadoras.",
       info: {
         attack: 8,
         defense: 5,
         magic: 3,
-        difficulty: 6
+        difficulty: 6,
       },
       image: {
         full: "LeeSin.png",
@@ -3037,7 +3037,7 @@ export default {
         x: 288,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Assassin"],
       partype: "Energy",
@@ -3061,8 +3061,8 @@ export default {
         attackdamage: 61.176,
         attackdamageperlevel: 3.2,
         attackspeedoffset: -0.04,
-        attackspeedperlevel: 3
-      }
+        attackspeedperlevel: 3,
+      },
     },
     Leona: {
       version: "6.24.1",
@@ -3074,12 +3074,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Leona_0.jpg",
       blurb:
-        "''If you would shine like a sun, first you must burn like one.''<br><br>Imbued with the fire of the sun, Leona is a warrior templar of the Solari who defends Mount Targon with her Zenith Blade and Shield of Daybreak. Her skin shimmers with starfire ...",
+        "Leona es una guerrera imbuida con fuego solar y templaria de los Solari que defiende el Monte Targón con la Espada del Cénit y el Escudo del Amanecer. Su piel resplandece con el brillo de una estrella y sus ojos arden con el poder del aspecto celestial que lleva dentro. Leona, que viste una armadura de oro y soporta una terrible carga de conocimiento ancestral, lleva iluminación a algunos y muerte a otros.",
       info: {
         attack: 4,
         defense: 8,
         magic: 3,
-        difficulty: 4
+        difficulty: 4,
       },
       image: {
         full: "Leona.png",
@@ -3088,7 +3088,7 @@ export default {
         x: 336,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Tank", "Support"],
       partype: "MP",
@@ -3112,8 +3112,8 @@ export default {
         attackdamage: 60.04,
         attackdamageperlevel: 3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.9
-      }
+        attackspeedperlevel: 2.9,
+      },
     },
     Lissandra: {
       version: "6.24.1",
@@ -3125,12 +3125,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lissandra_0.jpg",
       blurb:
-        "Lissandra's magic twists the pure power of ice into something dark and terrible. With the force of her black ice, she does more than freeze - she impales and crushes those who oppose her. To the terrified denizens of the north, she is known only as ...",
+        "La magia de Lissandra transforma el poder del hielo en algo oscuro y terrible. Con la fuerza de su hielo negro, además de congelar a aquellos que la enfrentan, los empala y los destruye sin mostrar piedad. Se le conoce como ''la Bruja de Hielo'' entre los aterrados habitantes del norte. Pero la verdad es mucho más siniestra: Lissandra es una corruptora de la naturaleza que pretende desencadenar una era glacial en el mundo.",
       info: {
         attack: 2,
         defense: 5,
         magic: 8,
-        difficulty: 6
+        difficulty: 6,
       },
       image: {
         full: "Lissandra.png",
@@ -3139,7 +3139,7 @@ export default {
         x: 384,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage"],
       partype: "MP",
@@ -3163,8 +3163,8 @@ export default {
         attackdamage: 50.536,
         attackdamageperlevel: 2.7,
         attackspeedoffset: 0,
-        attackspeedperlevel: 1.36
-      }
+        attackspeedperlevel: 1.36,
+      },
     },
     Lucian: {
       version: "6.24.1",
@@ -3176,12 +3176,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lucian_0.jpg",
       blurb:
-        "Lucian wields relic weapons imbued with ancient power and stands a stalwart guardian against the undead. His cold conviction never wavers, even in the face of the maddening horrors he destroys beneath his hail of purifying fire. Lucian walks alone on ...",
+        "Lucian es un Centinela de la Luz y un sombrío cazador de espíritus inmortales, a los que persigue incansablemente y aniquila con sus dos pistolas reliquia. Después de que el espectro Thresh matara a su esposa, Lucian se embarcó en el camino de la venganza. A pesar del retorno a la vida de Senna, su rabia permanece indemne. Despiadado y firme, nada detendrá a Lucian en su misión por proteger a los vivos de los horrores ancestrales de la Niebla Negra.",
       info: {
         attack: 8,
         defense: 5,
         magic: 3,
-        difficulty: 6
+        difficulty: 6,
       },
       image: {
         full: "Lucian.png",
@@ -3190,7 +3190,7 @@ export default {
         x: 432,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Marksman"],
       partype: "MP",
@@ -3214,8 +3214,8 @@ export default {
         attackdamage: 57.46,
         attackdamageperlevel: 2.41,
         attackspeedoffset: -0.02,
-        attackspeedperlevel: 3.3
-      }
+        attackspeedperlevel: 3.3,
+      },
     },
     Lulu: {
       version: "6.24.1",
@@ -3227,12 +3227,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lulu_0.jpg",
       blurb:
-        "Perhaps more than any other champion in the League, Lulu marches to the beat of her own drum. During her youth in Bandle City, she spent most of her time wandering alone in the forest or lost in a daydream. It wasn't that she was antisocial; the ...",
+        "La maga yordle, Lulu, es conocida por conjurar ilusiones oníricas y extravagantes criaturas mientras vaga por Runaterra con su hada compañera, Pix. Lulu puede darle forma a la realidad a su antojo, deformando el tejido del mundo, y lo que ve como los límites del ámbito físico y mundano. Aunque otros podrían considerar su magia antinatural y peligrosa, ella cree que cualquiera necesita un toque de encantamiento.",
       info: {
         attack: 4,
         defense: 5,
         magic: 7,
-        difficulty: 5
+        difficulty: 5,
       },
       image: {
         full: "Lulu.png",
@@ -3241,7 +3241,7 @@ export default {
         x: 0,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Support", "Mage"],
       partype: "MP",
@@ -3265,8 +3265,8 @@ export default {
         attackdamage: 46.368,
         attackdamageperlevel: 2.6,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.25
-      }
+        attackspeedperlevel: 2.25,
+      },
     },
     Lux: {
       version: "6.24.1",
@@ -3278,12 +3278,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lux_0.jpg",
       blurb:
-        "Born to the prestigious Crownguards, the paragon family of Demacian service, Luxanna was destined for greatness. She grew up as the family's only daughter, and she immediately took to the advanced education and lavish parties required of families as ...",
+        "Luxanna Guardia de la Corona proviene de Demacia, un reino aislado en el que la gente observa con terror y sospecha a las habilidades mágicas. Con el talento de manipular la luz a su voluntad, Lux creció temiendo que la descubrieran y exiliaran, lo que la obligó a mantener su poder en secreto para conservar el estado de nobleza de su familia. Sin embargo, su optimismo y resistencia la llevaron a aceptar sus talentos únicos y ahora los utiliza en secreto para servir a su tierra.",
       info: {
         attack: 2,
         defense: 4,
         magic: 9,
-        difficulty: 5
+        difficulty: 5,
       },
       image: {
         full: "Lux.png",
@@ -3292,7 +3292,7 @@ export default {
         x: 48,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage", "Support"],
       partype: "MP",
@@ -3316,8 +3316,8 @@ export default {
         attackdamage: 53.544,
         attackdamageperlevel: 3.3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 1.36
-      }
+        attackspeedperlevel: 1.36,
+      },
     },
     Malphite: {
       version: "6.24.1",
@@ -3329,12 +3329,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Malphite_0.jpg",
       blurb:
-        "There is a world of perfect harmony, where all are part of the whole. The Monolith is the essence of all creation, and its denizens are but singular pieces of it. It is beautiful in its symmetry, and in its almost complete lack of uncertainty. The ...",
+        "Como una criatura masiva de piedra viviente, Malphite lucha para imponer orden bendito en un mundo caótico. Nacido como un fragmento originario de un obelisco sobrenatural llamado Monolito, usó su tremendo poderío elemental para mantener y proteger a su progenitor, pero falló. Como el único sobreviviente de la destrucción que le siguió, Malphite ahora debe soportar a los hombres de piel suave de Runaterra y sus temperamentos cambiantes, mientras se esfuerza por buscar un rol digno para el último de su especie.",
       info: {
         attack: 5,
         defense: 9,
         magic: 7,
-        difficulty: 2
+        difficulty: 2,
       },
       image: {
         full: "Malphite.png",
@@ -3343,7 +3343,7 @@ export default {
         x: 96,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Tank", "Fighter"],
       partype: "MP",
@@ -3367,8 +3367,8 @@ export default {
         attackdamage: 61.97,
         attackdamageperlevel: 3.375,
         attackspeedoffset: -0.02,
-        attackspeedperlevel: 3.4
-      }
+        attackspeedperlevel: 3.4,
+      },
     },
     Malzahar: {
       version: "6.24.1",
@@ -3380,12 +3380,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Malzahar_0.jpg",
       blurb:
-        "Many men have gone mad beneath the glare of the Shurima sun, but it was during the night's chilling embrace that Malzahar relinquished his sanity. Malzahar was born a seer, blessed with the gift of prophecy. His talent, though unrefined, promised to ...",
+        "Como vidente fanático dedicado a la unificación de toda la vida, Malzahar realmente cree que el recién emergido Vacío es el camino a la salvación de Runaterra. En los páramos desérticos de Shurima, siguió los susurros en su mente que lo llevaron a la antigua Icathia. En las ruinas de aquella tierra, miró hacia el oscuro corazón del mismísimo Vacío, lo que le otorgó nuevos poderes y un propósito. Ahora, Malzahar cree que es un pastor con el poder de llevar a otros al rebaño... o de desatar las criaturas del Vacío que moran debajo.",
       info: {
         attack: 2,
         defense: 2,
         magic: 9,
-        difficulty: 6
+        difficulty: 6,
       },
       image: {
         full: "Malzahar.png",
@@ -3394,7 +3394,7 @@ export default {
         x: 144,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage", "Assassin"],
       partype: "MP",
@@ -3418,8 +3418,8 @@ export default {
         attackdamage: 55,
         attackdamageperlevel: 3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 1.5
-      }
+        attackspeedperlevel: 1.5,
+      },
     },
     Maokai: {
       version: "6.24.1",
@@ -3431,12 +3431,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Maokai_0.jpg",
       blurb:
-        "''All around me are empty husks, soulless and unafraid... but I will bring them fear.''<br><br>Maokai is a rageful, towering treant who fights the unnatural horrors of the Shadow Isles. He was twisted into a force of vengeance after a magical ...",
+        "Maokai es un imponente y feroz treant que lucha contra los horrores antinaturales de las Islas de la Sombra. Las ansias de venganza lo inundaron después de que un cataclismo mágico destruyera su hogar y sobrevive a la podredumbre únicamente gracias las aguas de vida imbuidas en su duramen. Maokai, antaño un pacífico espíritu de la naturaleza, lucha ahora con fiereza para desterrar la plaga de no-vida de las Islas de la Sombra y restituir la anterior belleza de su hogar.",
       info: {
         attack: 3,
         defense: 8,
         magic: 6,
-        difficulty: 3
+        difficulty: 3,
       },
       image: {
         full: "Maokai.png",
@@ -3445,7 +3445,7 @@ export default {
         x: 192,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Tank", "Mage"],
       partype: "MP",
@@ -3469,8 +3469,8 @@ export default {
         attackdamage: 63.544,
         attackdamageperlevel: 3.3,
         attackspeedoffset: -0.1,
-        attackspeedperlevel: 2.125
-      }
+        attackspeedperlevel: 2.125,
+      },
     },
     MasterYi: {
       version: "6.24.1",
@@ -3482,12 +3482,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/MasterYi_0.jpg",
       blurb:
-        "Through the ancient martial art of Wuju, Master Yi has tempered his body and sharpened his mind until thought and action have become one. Though he chooses to enter into violence as a last resort, the grace and speed with which he wields his blade ...",
+        "El Maestro Yi templó su cuerpo y afinó su mente para que su forma de pensar y actuar se convirtieran casi en uno. A pesar de que solo elige actuar con violencia como último recurso, la gracia y la velocidad de su espada garantizan que la resolución siempre sea ágil. Como uno de los últimos practicantes del arte jonio de Wuju, Yi ha dedicado su vida a continuar el legado de su gente y a buscar posibles nuevos discípulos con las Siete Gafas del Saber para identificar a los más dignos.",
       info: {
         attack: 10,
         defense: 4,
         magic: 2,
-        difficulty: 4
+        difficulty: 4,
       },
       image: {
         full: "MasterYi.png",
@@ -3496,7 +3496,7 @@ export default {
         x: 240,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Assassin", "Fighter"],
       partype: "MP",
@@ -3520,8 +3520,8 @@ export default {
         attackdamage: 60.04,
         attackdamageperlevel: 3,
         attackspeedoffset: -0.08,
-        attackspeedperlevel: 2
-      }
+        attackspeedperlevel: 2,
+      },
     },
     MissFortune: {
       version: "6.24.1",
@@ -3533,12 +3533,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/MissFortune_0.jpg",
       blurb:
-        "''The bigger the risk, the bigger the bounty.''<br><br>Beauty and danger: There are few who can match Miss Fortune in either. One of Bilgewater's most infamous bounty hunters, she built her legend upon a swathe of bullet-riddled corpses and captured ...",
+        "Sarah Fortune, capitana de Aguasturbias famosa por su apariencia, pero temida por su brutalidad, es una figura severa entre los criminales más duros de la ciudad portuaria. Cuando era niña fue testigo de cómo el rey Gangplank asesinó a su familia, un acto que vengó brutalmente años después, explotando su barco mientras él estaba a bordo. Aquellos que la subestiman tendrán que enfrentar a un oponente seductor e impredecible... y probablemente una bala o dos en sus entrañas.",
       info: {
         attack: 8,
         defense: 2,
         magic: 5,
-        difficulty: 1
+        difficulty: 1,
       },
       image: {
         full: "MissFortune.png",
@@ -3547,7 +3547,7 @@ export default {
         x: 288,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Marksman"],
       partype: "MP",
@@ -3571,8 +3571,8 @@ export default {
         attackdamage: 46,
         attackdamageperlevel: 1,
         attackspeedoffset: -0.04734,
-        attackspeedperlevel: 3
-      }
+        attackspeedperlevel: 3,
+      },
     },
     MonkeyKing: {
       version: "6.24.1",
@@ -3584,12 +3584,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/MonkeyKing_0.jpg",
       blurb:
-        "During the chaos of the Rune Wars, an enormous runestone was lost deep within the Plague Jungles. It remained there, untouched for centuries, emanating a potent magic which infused nearby wildlife with sentience and vitality. A group of monkeys who ...",
+        "Wukong es un vastaya embaucador que usa su fuerza, agilidad e inteligencia para confundir a sus oponentes y obtener la ventaja. Tras encontrar un amigo de por vida en el guerrero conocido como Maestro Yi, Wukong se convirtió en el último aprendiz de la antigua arte marcial conocida como Wuju. Armado con un bastón encantado, Wukong busca impedir que Jonia caiga en la ruina.",
       info: {
         attack: 8,
         defense: 5,
         magic: 2,
-        difficulty: 3
+        difficulty: 3,
       },
       image: {
         full: "MonkeyKing.png",
@@ -3598,7 +3598,7 @@ export default {
         x: 336,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Tank"],
       partype: "MP",
@@ -3622,8 +3622,8 @@ export default {
         attackdamage: 59.876,
         attackdamageperlevel: 3.2,
         attackspeedoffset: -0.05,
-        attackspeedperlevel: 3
-      }
+        attackspeedperlevel: 3,
+      },
     },
     Mordekaiser: {
       version: "6.24.1",
@@ -3635,12 +3635,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Mordekaiser_0.jpg",
       blurb:
-        "''All things must die... and yet I live on.''<br><br>The baleful revenant Mordekaiser is among the most terrifying and hateful spirits haunting the Shadow Isles. He has existed for countless centuries, shielded from true death by necromantic sorcery ...",
+        "Asesinado dos veces y renacido tres, Mordekaiser es un señor de la guerra brutal de una época olvidada, quien usa su brujería nigromántica para atar almas a una esclavitud eterna. Quedan muy pocos que recuerden sus conquistas precedentes o que conozcan el verdadero alcance de sus poderes, pero las antiguas almas que lo hacen, temen que llegue el día que regrese para reclamar el dominio sobre vivos y muertos.",
       info: {
         attack: 4,
         defense: 6,
         magic: 7,
-        difficulty: 4
+        difficulty: 4,
       },
       image: {
         full: "Mordekaiser.png",
@@ -3649,7 +3649,7 @@ export default {
         x: 384,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter"],
       partype: "None",
@@ -3673,8 +3673,8 @@ export default {
         attackdamage: 61,
         attackdamageperlevel: 5,
         attackspeedoffset: 0.04,
-        attackspeedperlevel: 2.2
-      }
+        attackspeedperlevel: 2.2,
+      },
     },
     Morgana: {
       version: "6.24.1",
@@ -3686,12 +3686,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Morgana_0.jpg",
       blurb:
-        "There is a world far away populated by graceful and beautiful winged beings gifted with immortality, where an ancient conflict still rages. Like so many conflicts, this war split families. One side proclaimed themselves as beings of perfect order and ...",
+        "Atribulada entre su naturaleza celestial y mortal, Morgana ató sus alas para aceptar su humanidad e inflige su dolor y amargura en los deshonestos y los corruptos. Rechaza las leyes y tradiciones que considera injustas y pelea por la verdad desde las sombras de Demacia con escudos y cadenas de fuego oscuro, aun cuando otros tratan de reprimirla. Pero, ante todo, Morgana cree que incluso los parias y los desterrados serán capaces de elevarse de nuevo un día.",
       info: {
         attack: 1,
         defense: 6,
         magic: 8,
-        difficulty: 1
+        difficulty: 1,
       },
       image: {
         full: "Morgana.png",
@@ -3700,7 +3700,7 @@ export default {
         x: 432,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage", "Support"],
       partype: "MP",
@@ -3724,8 +3724,8 @@ export default {
         attackdamage: 55.46,
         attackdamageperlevel: 3.5,
         attackspeedoffset: 0,
-        attackspeedperlevel: 1.53
-      }
+        attackspeedperlevel: 1.53,
+      },
     },
     Nami: {
       version: "6.24.1",
@@ -3737,12 +3737,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Nami_0.jpg",
       blurb:
-        "Nami channels the primal energies of the ocean, harnessing its mystical restorative properties and commanding the raw power of the tides themselves. Though many doubted her, Nami had the bravery and determination to take on a dangerous quest when no ...",
+        "Como una joven y obstinada vastaya de los mares, Nami fue la primera de la tribu Marai en dejar las olas y aventurarse a tierra firme cuando se quebrantó el ancestral acuerdo con los targonianos. Sin ninguna otra opción, se dedicó a la tarea de completar el sagrado ritual que garantizaría la seguridad de su gente. En medio del caos de esta nueva era, Nami se enfrenta a un futuro incierto con valor y determinación junto a su báculo invocador de mareas para blandir la fuerza de los mismos océanos.",
       info: {
         attack: 4,
         defense: 3,
         magic: 7,
-        difficulty: 5
+        difficulty: 5,
       },
       image: {
         full: "Nami.png",
@@ -3751,7 +3751,7 @@ export default {
         x: 0,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Support", "Mage"],
       partype: "MP",
@@ -3775,8 +3775,8 @@ export default {
         attackdamage: 51.208,
         attackdamageperlevel: 3.1,
         attackspeedoffset: -0.03,
-        attackspeedperlevel: 2.61
-      }
+        attackspeedperlevel: 2.61,
+      },
     },
     Nasus: {
       version: "6.24.1",
@@ -3788,12 +3788,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Nasus_0.jpg",
       blurb:
-        "''What was fallen will be great again.''<br><br>Nasus is an imposing, jackal-headed Ascended being from ancient Shurima, a heroic figure regarded as a demigod by the people of the desert. Fiercely intelligent, he was a guardian of knowledge and ...",
+        "Nasus es una imponente criatura Ascendida con cabeza de chacal procedente de la antigua Shurima; una figura heroica a la que la gente del desierto encumbró al nivel de semidiós. Poseedor de una increíble inteligencia, fue un guardián del saber y estratega sin igual cuya sabiduría guio durante siglos al antiguo imperio de Shurima hasta alcanzar la cumbre de su grandeza. Tras la caída del imperio, se sometió a un exilio autoimpuesto, lo que terminó por convertirlo en leyenda. Ahora que la antigua ciudad de Shurima resurgió de sus cenizas, su héroe ha regresado para asegurarse de que nunca vuelva a caer.",
       info: {
         attack: 7,
         defense: 5,
         magic: 6,
-        difficulty: 6
+        difficulty: 6,
       },
       image: {
         full: "Nasus.png",
@@ -3802,7 +3802,7 @@ export default {
         x: 48,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Tank"],
       partype: "MP",
@@ -3826,8 +3826,8 @@ export default {
         attackdamage: 59.18,
         attackdamageperlevel: 3.5,
         attackspeedoffset: -0.02,
-        attackspeedperlevel: 3.48
-      }
+        attackspeedperlevel: 3.48,
+      },
     },
     Nautilus: {
       version: "6.24.1",
@@ -3839,12 +3839,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Nautilus_0.jpg",
       blurb:
-        "Once, Nautilus was a sailor commissioned by the Institute of War to explore the uncharted reaches of the Guardian's Sea. This expedition took him deep into unknown waters where he and his crew found a vast section of black oozing liquid that none of ...",
+        "Una solitaria leyenda tan antigua como los primeros muelles hundidos de Aguasturbias, el gigante en armadura conocido como Nautilus deambula las oscuras aguas de la costa de las Islas de la Llama Azul. Motivado por una traición ya olvidada, ataca sin advertencia y barre su enorme ancla de un lado a otro para salvar a los desafortunados y llevar a los codiciosos a su perdición. Dicen que viene por los que olvidan pagar el ''tributo de Aguasturbias'', para llevarlos debajo de las olas con él. Se ha vuelto un recordatorio de hierro de que nadie puede escapar de las profundidades.",
       info: {
         attack: 4,
         defense: 6,
         magic: 6,
-        difficulty: 6
+        difficulty: 6,
       },
       image: {
         full: "Nautilus.png",
@@ -3853,7 +3853,7 @@ export default {
         x: 96,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Tank", "Fighter"],
       partype: "MP",
@@ -3877,8 +3877,8 @@ export default {
         attackdamage: 57.544,
         attackdamageperlevel: 3.3,
         attackspeedoffset: 0.02,
-        attackspeedperlevel: 1
-      }
+        attackspeedperlevel: 1,
+      },
     },
     Nidalee: {
       version: "6.24.1",
@@ -3890,12 +3890,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Nidalee_0.jpg",
       blurb:
-        "There are few dwellers, let alone champions, residing in the blasted and dangerous lands that lie south of the Great Barrier. Much of that world still bears the scars of past Runes Wars, especially the mysterious Kumungu Jungle. There are ...",
+        "Criada en las profundidades de la jungla, Nidalee es una rastreadora maestra que puede transformarse en puma a su voluntad. Ni mujer, ni bestia, ella defiende salvajemente su territorio de todos y cada uno de los intrusos, con trampas cuidadosamente colocadas y lanzas a distancia. Ella paraliza a su presa antes de atacarla en su forma felina; los pocos que sobreviven cuentan sobre una salvaje mujer con instintos agudos y garras muy filosas...",
       info: {
         attack: 5,
         defense: 4,
         magic: 7,
-        difficulty: 8
+        difficulty: 8,
       },
       image: {
         full: "Nidalee.png",
@@ -3904,7 +3904,7 @@ export default {
         x: 144,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Assassin", "Fighter"],
       partype: "MP",
@@ -3928,8 +3928,8 @@ export default {
         attackdamage: 53,
         attackdamageperlevel: 3.5,
         attackspeedoffset: -0.02,
-        attackspeedperlevel: 3.22
-      }
+        attackspeedperlevel: 3.22,
+      },
     },
     Nocturne: {
       version: "6.24.1",
@@ -3941,12 +3941,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Nocturne_0.jpg",
       blurb:
-        "Before Nocturne, people believed that dreams were figments of their imagination, meaningless images that flashed through the mind when one slept. This belief was put to the test when a rash of sleep-related incidents started afflicting summoners of ...",
+        "Nocturne, una fusión demoniaca traída de las pesadillas que aterran a todas las mentes conscientes, se convirtió en una fuerza primigenia de maldad pura. Su aspecto de caos líquido es el de una sombra sin rostro con ojos crueles y armado con unas cuchillas diabólicas. Después de liberarse a sí mismo del reino espiritual, Nocturne descendió al mundo de los despiertos para alimentarse del terror que prospera en la auténtica oscuridad.",
       info: {
         attack: 9,
         defense: 5,
         magic: 2,
-        difficulty: 4
+        difficulty: 4,
       },
       image: {
         full: "Nocturne.png",
@@ -3955,7 +3955,7 @@ export default {
         x: 192,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Assassin", "Fighter"],
       partype: "MP",
@@ -3979,8 +3979,8 @@ export default {
         attackdamage: 59.208,
         attackdamageperlevel: 3.1,
         attackspeedoffset: -0.065,
-        attackspeedperlevel: 2.7
-      }
+        attackspeedperlevel: 2.7,
+      },
     },
     Nunu: {
       version: "6.24.1",
@@ -3992,12 +3992,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Nunu_0.jpg",
       blurb:
-        "Sometimes bonds of friendship become stronger than even bonds of blood. When those bonds link a fearless boy to a fearsome Yeti, the bond becomes a force to be reckoned with. Given the responsibility of taming a terrifying beast, Nunu forged a ...",
+        "Había una vez un niño que quería demostrar que era un héroe al matar a un temible monstruo... solo para descubrir que la bestia, un yeti solitario y mágico, simplemente necesitaba un amigo. Unidos por un poder ancestral y el amor compartido por las bolas de nieve, Nunu y Willump ahora pasean salvajes por todo el Fréljord y les dan vida a aventuras imaginarias. Tienen la esperanza que en algún sitio allá afuera, puedan encontrar a la madre de Nunu. Después de todo, si logran salvarla, tal vez se vuelvan héroes...",
       info: {
         attack: 4,
         defense: 6,
         magic: 7,
-        difficulty: 4
+        difficulty: 4,
       },
       image: {
         full: "Nunu.png",
@@ -4006,7 +4006,7 @@ export default {
         x: 240,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Support", "Fighter"],
       partype: "MP",
@@ -4030,8 +4030,8 @@ export default {
         attackdamage: 59,
         attackdamageperlevel: 4,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.25
-      }
+        attackspeedperlevel: 2.25,
+      },
     },
     Olaf: {
       version: "6.24.1",
@@ -4043,12 +4043,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Olaf_0.jpg",
       blurb:
-        "Most men would say that death is a thing to be feared; none of those men would be Olaf. The Berserker lives only for the roar of a battle cry and the clash of steel. Spurred on by his hunger for glory and the looming curse of a forgettable death, Olaf ...",
+        "Como una fuerza imparable de destrucción, el portador de hachas Olaf no quiere nada más que morir en glorioso combate. Proveniente de la brutal península freljordiana de Lokfar, alguna vez recibió una profecía que predecía su muerte pacífica, que es el destino del cobarde y un gran insulto entre su gente. Buscando la muerte e impulsado por la ira, Olaf masacró todo cuanto encontró en la tierra, eliminando un gran número de guerreros y bestias legendarias en busca de un oponente que lo detuviera. Ahora, como elemento brutal de la Garra Invernal, busca su fin en las grandes guerras que se acercan.",
       info: {
         attack: 9,
         defense: 5,
         magic: 3,
-        difficulty: 3
+        difficulty: 3,
       },
       image: {
         full: "Olaf.png",
@@ -4057,7 +4057,7 @@ export default {
         x: 288,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Tank"],
       partype: "MP",
@@ -4081,8 +4081,8 @@ export default {
         attackdamage: 59.98,
         attackdamageperlevel: 3.5,
         attackspeedoffset: -0.1,
-        attackspeedperlevel: 2.7
-      }
+        attackspeedperlevel: 2.7,
+      },
     },
     Orianna: {
       version: "6.24.1",
@@ -4094,12 +4094,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Orianna_0.jpg",
       blurb:
-        "There once was a Piltovian man named Corin Reveck who had a daughter named Orianna, whom he loved more than anything else in the world. Though Orianna had incredible talent for dancing, she was deeply fascinated by the champions of the League of ...",
+        "Aunque una vez una curiosa chica de carne y hueso, Orianna es ahora una maravilla tecnológica hecha completamente de relojería. Sufrió una terrible enfermedad después de un accidente en los bajos distritos de Zaun y su deteriorado cuerpo tuvo que ser reemplazado con refinados artilugios, parte por parte. Acompañada de una extraordinaria esfera de latón que construyó para su compañía y protección, Orianna ahora es libre de explorar las maravillas de Piltóver y más allá.",
       info: {
         attack: 4,
         defense: 3,
         magic: 9,
-        difficulty: 7
+        difficulty: 7,
       },
       image: {
         full: "Orianna.png",
@@ -4108,7 +4108,7 @@ export default {
         x: 336,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage", "Support"],
       partype: "MP",
@@ -4132,8 +4132,8 @@ export default {
         attackdamage: 40.368,
         attackdamageperlevel: 2.6,
         attackspeedoffset: -0.05,
-        attackspeedperlevel: 3.5
-      }
+        attackspeedperlevel: 3.5,
+      },
     },
     Pantheon: {
       version: "6.24.1",
@@ -4145,12 +4145,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Pantheon_0.jpg",
       blurb:
-        "''Bring forth one true champion, or a hundred more like you, and then we shall have a battle that will be spoken of until the end of time.''<br><br>The peerless warrior known as Pantheon is a nigh-unstoppable paragon of battle. He was born among the ...",
+        "Antaño un reticente huésped del Aspecto de la guerra, Atreus sobrevivió cuando el poder celestial en su interior fue asesinado, negándose a sucumbir ante un golpe que, de un desgarro, borró estrellas de los cielos. Con el tiempo, aprendió a aceptar el poder de su propia mortalidad, así como la terca resiliencia implícita en ella. Ahora, Atreus combate lo divino como el renacido Pantheon, con una voluntad implacable que alimenta las armas del aspecto caído en el campo de batalla.",
       info: {
         attack: 9,
         defense: 4,
         magic: 3,
-        difficulty: 4
+        difficulty: 4,
       },
       image: {
         full: "Pantheon.png",
@@ -4159,7 +4159,7 @@ export default {
         x: 384,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Assassin"],
       partype: "MP",
@@ -4183,8 +4183,8 @@ export default {
         attackdamage: 55.572,
         attackdamageperlevel: 2.9,
         attackspeedoffset: -0.03,
-        attackspeedperlevel: 2.95
-      }
+        attackspeedperlevel: 2.95,
+      },
     },
     Poppy: {
       version: "6.24.1",
@@ -4196,12 +4196,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Poppy_0.jpg",
       blurb:
-        "''I'm no hero. Just a yordle with a hammer.''<br><br>Runeterra has no shortage of valiant champions, but few are as tenacious as Poppy. Bearing a hammer twice the length of her body, this determined yordle has spent untold years searching for the ...",
+        "A Runaterra no le hacen falta campeones valientes, pero pocos son tan tenaces como Poppy. Como portadora del legendario martillo de Orlon, un arma que la supera al doble de tamaño, esta determinada yordle ha pasado años en búsqueda del aclamado ''Héroe de Demacia'', quien se dice es su legítimo dueño. Hasta entonces, ella se dirige con diligencia hacia la batalla y repele a los enemigos del reino con cada impacto giratorio.",
       info: {
         attack: 6,
         defense: 7,
         magic: 2,
-        difficulty: 6
+        difficulty: 6,
       },
       image: {
         full: "Poppy.png",
@@ -4210,7 +4210,7 @@ export default {
         x: 432,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Tank", "Fighter"],
       partype: "MP",
@@ -4234,8 +4234,8 @@ export default {
         attackdamage: 56,
         attackdamageperlevel: 4,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.5
-      }
+        attackspeedperlevel: 2.5,
+      },
     },
     Quinn: {
       version: "6.24.1",
@@ -4247,12 +4247,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Quinn_0.jpg",
       blurb:
-        "Quinn and Valor are an elite ranger team. With crossbow and claw, they undertake their nation's most dangerous missions deep within enemy territory, from swift reconnaissance to lethal strikes. The pair's unbreakable bond is deadly on the battlefield, ...",
+        "Quinn es una caballero y exploradora de Demacia que se embarca en misiones que la llevan al mismo núcleo del territorio enemigo. Comparte un vínculo inquebrantable con su legendaria águila, Valor, y sus enemigos a menudo quedan derrotados antes de darse cuenta de que peleaban contra no uno, sino dos de los más grandes héroes del reino. Con agilidad y acrobacias cuando la situación lo amerita, Quinn empuña su ballesta mientras que Valor marca a sus escurridizos objetivos desde los cielos, lo que los vuelve un dúo letal en el campo de batalla.",
       info: {
         attack: 9,
         defense: 4,
         magic: 2,
-        difficulty: 5
+        difficulty: 5,
       },
       image: {
         full: "Quinn.png",
@@ -4261,7 +4261,7 @@ export default {
         x: 0,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Marksman", "Fighter"],
       partype: "MP",
@@ -4285,8 +4285,8 @@ export default {
         attackdamage: 54.46,
         attackdamageperlevel: 2.41,
         attackspeedoffset: -0.065,
-        attackspeedperlevel: 3.1
-      }
+        attackspeedperlevel: 3.1,
+      },
     },
     Rammus: {
       version: "6.24.1",
@@ -4298,12 +4298,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Rammus_0.jpg",
       blurb:
-        "''OK.''<br><br>Idolized by many, dismissed by some, mystifying to all, the curious being, Rammus, is an enigma. Protected by a spiked shell, Rammus inspires increasingly disparate theories on his origin wherever he goes - from demigod, to sacred ...",
+        "Idolatrado por muchos, desdeñado por algunos, mistificado por todos, el curioso ser Rammus, es un enigma. Protegido por un caparazón con púas, Rammus inspira teorías cada vez más disparatadas sobre su origen a dondequiera que vaya: desde semidiós hasta oráculo sagrado y hasta una mera bestia transformada por la magia. No importa cuál sea la verdad, Rammus es reservado y no se detiene ante nadie mientras cruza el desierto de Shurima.",
       info: {
         attack: 4,
         defense: 10,
         magic: 5,
-        difficulty: 5
+        difficulty: 5,
       },
       image: {
         full: "Rammus.png",
@@ -4312,7 +4312,7 @@ export default {
         x: 48,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Tank", "Fighter"],
       partype: "MP",
@@ -4336,8 +4336,8 @@ export default {
         attackdamage: 55.88,
         attackdamageperlevel: 3.5,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.215
-      }
+        attackspeedperlevel: 2.215,
+      },
     },
     RekSai: {
       version: "6.24.1",
@@ -4349,12 +4349,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/RekSai_0.jpg",
       blurb:
-        "The largest and fiercest of her species, Rek'Sai is a merciless predator that tunnels through the earth to ambush and devour her prey. Her insatiable hunger has laid waste to entire regions of the once-great Shuriman empire. Merchants, traders and ...",
+        "Rek'Sai es una depredadora sin piedad y un engendro del Vacío que se mueve debajo de la tierra para emboscar y devorar a las presas desprevenidas. Su hambre insaciable ha dejado en calidad de desecho a regiones enteras del antes gran imperio de Shurima. Comerciantes, mercaderes y hasta caravanas armadas viajan se desvían cientos de kilómetros de su camino para evitar sus tierras de caza y las de sus descendientes. Todos saben que cuando Rek'Sai aparece en el horizonte, es una garantía que la muerte vendrá desde abajo.",
       info: {
         attack: 8,
         defense: 5,
         magic: 2,
-        difficulty: 3
+        difficulty: 3,
       },
       image: {
         full: "RekSai.png",
@@ -4363,7 +4363,7 @@ export default {
         x: 96,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter"],
       partype: "Battlefury",
@@ -4387,8 +4387,8 @@ export default {
         attackdamage: 55.628,
         attackdamageperlevel: 3.35,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2
-      }
+        attackspeedperlevel: 2,
+      },
     },
     Renekton: {
       version: "6.24.1",
@@ -4400,12 +4400,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Renekton_0.jpg",
       blurb:
-        "''Blood and vengeance.''<br><br>Renekton is a terrifying, rage-fueled Ascended being from the scorched deserts of Shurima. Once, he was his empire's most esteemed warrior, leading the armies of Shurima to countless victories. However, after the ...",
+        "Renekton es una terrorífica criatura Ascendida movida por la ira y procedente de los desiertos abrasadores de Shurima. Antaño fue el guerrero más admirado del imperio, un líder que condujo a los ejércitos shurimanos a incontables victorias. Sin embargo, tras la caída del imperio, Renekton quedó sepultado bajo las arenas, donde lentamente sucumbió a la locura mientras el mundo seguía girando y cambiando. Ahora, libre de nuevo, le carcome el ansia de hallar a su hermano Nasus y acabar con él, pues lo culpa en su locura de los siglos pasados entre las tinieblas.",
       info: {
         attack: 8,
         defense: 5,
         magic: 2,
-        difficulty: 3
+        difficulty: 3,
       },
       image: {
         full: "Renekton.png",
@@ -4414,7 +4414,7 @@ export default {
         x: 144,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Tank"],
       partype: "Rage",
@@ -4438,8 +4438,8 @@ export default {
         attackdamage: 58.328,
         attackdamageperlevel: 3.1,
         attackspeedoffset: -0.06,
-        attackspeedperlevel: 2.65
-      }
+        attackspeedperlevel: 2.65,
+      },
     },
     Rengar: {
       version: "6.24.1",
@@ -4451,12 +4451,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Rengar_0.jpg",
       blurb:
-        "On every wall of his den, the trophy hunter Rengar mounts the heads, horns, claws, and fangs of the most lethal creatures in Valoran. Though his collection is extensive, he remains unsatisfied, tirelessly seeking greater game. He takes time with every ...",
+        "Rengar es un feroz vastaya cazador de trofeos que vive para sentir la emoción de rastrear y asesinar a criaturas peligrosas. Recorre el mundo en búsqueda de las bestias más salvajes que puede encontrar y en particular persigue cualquier rastro de Kha'Zix, la criatura del vacío que le arrancó el ojo. Rengar caza a sus presas no para alimentarse ni por la gloria, sino simplemente por la belleza de la persecución.",
       info: {
         attack: 7,
         defense: 4,
         magic: 2,
-        difficulty: 8
+        difficulty: 8,
       },
       image: {
         full: "Rengar.png",
@@ -4465,7 +4465,7 @@ export default {
         x: 192,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Assassin", "Fighter"],
       partype: "Ferocity",
@@ -4489,8 +4489,8 @@ export default {
         attackdamage: 60,
         attackdamageperlevel: 1.5,
         attackspeedoffset: 0,
-        attackspeedperlevel: 3.5
-      }
+        attackspeedperlevel: 3.5,
+      },
     },
     Riven: {
       version: "6.24.1",
@@ -4502,12 +4502,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Riven_0.jpg",
       blurb:
-        "''There is a place between war and murder in which our demons lurk.''<br><br>In Noxus, any citizen may rise to power regardless of race, gender, or social standing - strength is all that matters. It was with committed faith in this ideal that Riven ...",
+        "Riven, que anteriormente era una líder de los guerreros de Noxus, está exiliada en una tierra que alguna vez intentó conquistar. Ascendió por los rangos con la fuerza de su convicción y brutal eficiencia, lo cual la recompensó con su legendaria espada rúnica y una tropa propia. Sin embargo, en el frente jonio, la fe de Riven en su tierra fue puesta a prueba y finalmente se quebró. Cortó todos sus lazos con el imperio y ahora busca encontrar su lugar en un mundo en pedazos, incluso con rumores que mencionan que Noxus ha sido reforjado...",
       info: {
         attack: 8,
         defense: 5,
         magic: 1,
-        difficulty: 8
+        difficulty: 8,
       },
       image: {
         full: "Riven.png",
@@ -4516,7 +4516,7 @@ export default {
         x: 240,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Assassin"],
       partype: "None",
@@ -4540,8 +4540,8 @@ export default {
         attackdamage: 56.04,
         attackdamageperlevel: 3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 3.5
-      }
+        attackspeedperlevel: 3.5,
+      },
     },
     Rumble: {
       version: "6.24.1",
@@ -4553,12 +4553,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Rumble_0.jpg",
       blurb:
-        "''Ugh, it's gonna take forever to scrape your face off my suit!''<br><br>Even amongst yordles, Rumble was always the runt of the litter. As such, he was used to being bullied. In order to survive, he had to be scrappier and more resourceful than his ...",
+        "Rumble es un joven inventor con un peculiar temperamento. Con nada más que sus dos manos y un montón de chatarra, el yordle construyó un colosal traje mecánico equipado con un arsenal de arpones electrificados y cohetes incendiarios. Aunque otros se burlan de sus creaciones hechas de chatarra, a Rumble no le importa porque, al final, él es quien tiene el escupellamas.",
       info: {
         attack: 3,
         defense: 6,
         magic: 8,
-        difficulty: 10
+        difficulty: 10,
       },
       image: {
         full: "Rumble.png",
@@ -4567,7 +4567,7 @@ export default {
         x: 288,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Mage"],
       partype: "Heat",
@@ -4591,8 +4591,8 @@ export default {
         attackdamage: 61.036,
         attackdamageperlevel: 3.2,
         attackspeedoffset: -0.03,
-        attackspeedperlevel: 1.85
-      }
+        attackspeedperlevel: 1.85,
+      },
     },
     Ryze: {
       version: "6.24.1",
@@ -4604,12 +4604,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ryze_0.jpg",
       blurb:
-        "''Take care with this world. What is made can be unmade.''<br><br>Widely considered one of the most adept sorcerers on Runeterra, Ryze is an ancient, hard-bitten archmage with an impossibly heavy burden to bear. Armed with a boundless constitution and ...",
+        "Ryze, considerado por muchos como uno de los hechiceros más expertos en Runaterra, es un antiguo y endurecido archimago con una responsabilidad casi imposible de llevar. Armado con una constitución sin igual y una gran gama de conocimiento místico, se pasa la vida buscando Runas del Mundo, fragmentos de magia pura que alguna vez moldearon el mundo a partir de la nada. Debe recuperar esos glifos antes de que caigan en las manos equivocadas porque, aunque alguna vez se usaron para construir a Runaterra, también se pueden utilizar para destruirla.",
       info: {
         attack: 2,
         defense: 2,
         magic: 10,
-        difficulty: 7
+        difficulty: 7,
       },
       image: {
         full: "Ryze.png",
@@ -4618,7 +4618,7 @@ export default {
         x: 336,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage", "Fighter"],
       partype: "MP",
@@ -4642,8 +4642,8 @@ export default {
         attackdamage: 55.04,
         attackdamageperlevel: 3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.112
-      }
+        attackspeedperlevel: 2.112,
+      },
     },
     Sejuani: {
       version: "6.24.1",
@@ -4655,12 +4655,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Sejuani_0.jpg",
       blurb:
-        "Sejuani was weaned on hardship and reared on barbarity. Where others succumbed to the harshness of the Freljord, she was tempered by it until pain became power, hunger an encouragement, and frost an ally in culling the weak. Through her ordeals, she ...",
+        "Sejuani es la brutal e implacable Hija del Hielo y líder de la Garra Invernal, una de las tribus más temidas del Fréljord. La supervivencia de su gente es una constante y desesperada batalla contra los elementos, lo que los obliga a invadir a noxianos, demacianos y avarosanos por igual para sobrevivir a los duros inviernos. Sejuani encabeza los más peligrosos de esos ataques montada en su jabalí, Bristle, mientras blande su mangual de Hielo Puro para congelar y quebrar a sus enemigos.",
       info: {
         attack: 5,
         defense: 7,
         magic: 6,
-        difficulty: 4
+        difficulty: 4,
       },
       image: {
         full: "Sejuani.png",
@@ -4669,7 +4669,7 @@ export default {
         x: 384,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Tank", "Fighter"],
       partype: "MP",
@@ -4693,8 +4693,8 @@ export default {
         attackdamage: 57.544,
         attackdamageperlevel: 3.3,
         attackspeedoffset: -0.0672,
-        attackspeedperlevel: 1.44
-      }
+        attackspeedperlevel: 1.44,
+      },
     },
     Shaco: {
       version: "6.24.1",
@@ -4706,12 +4706,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Shaco_0.jpg",
       blurb:
-        "Most would say that death isn't funny. It isn't, unless you're Shaco - then it's hysterical. He is Valoran's first fully functioning homicidal comic; he jests until someone dies, and then he laughs. The figure that has come to be known as the Demon ...",
+        "Creado hace mucho tiempo como un juguete para un solitario príncipe, la marioneta encantada Shaco ahora se deleita con la matanza y el caos. Corrompido por una oscura magia y la pérdida de su querido dueño, la que alguna vez fue una gentil marioneta ahora encuentra placer en la miseria de las pobres almas que atormenta. Usa juguetes y trucos simples con letal eficacia, y cree que los resultados de sus sangrientos ''juegos'' son divertidos. Para los que escuchan una siniestra carcajada en la mitad de la noche, podría ser que el Bufón Siniestro los marcó como sus próximos juguetes.",
       info: {
         attack: 8,
         defense: 4,
         magic: 6,
-        difficulty: 9
+        difficulty: 9,
       },
       image: {
         full: "Shaco.png",
@@ -4720,7 +4720,7 @@ export default {
         x: 432,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Assassin"],
       partype: "MP",
@@ -4744,8 +4744,8 @@ export default {
         attackdamage: 57.58,
         attackdamageperlevel: 3.5,
         attackspeedoffset: -0.1,
-        attackspeedperlevel: 3
-      }
+        attackspeedperlevel: 3,
+      },
     },
     Shen: {
       version: "6.24.1",
@@ -4757,12 +4757,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Shen_0.jpg",
       blurb:
-        "''The Eye is blind to fear, to hate, to love - to all things that would sway equilibrium.''<br><br>Leader of a secret clan of mystic warriors, Shen serves as the Eye of Twilight, entrusted to enforce equilibrium in the world. Longing to remain free ...",
+        "Entre los secretos guerreros jonios conocidos como los Kinkou, Shen sirve como su líder, el Ojo del Crepúsculo. Desea mantenerse libre de las confusiones que provocan la emoción, los prejuicios y el ego, y camina por la senda oculta del juicio imparcial entre el mundo espiritual y el mundo real. Al estar encargado del balance entre ellos, Shen blande hojas de acero y energía arcana contra cualquiera que lo amenace.",
       info: {
         attack: 3,
         defense: 9,
         magic: 3,
-        difficulty: 4
+        difficulty: 4,
       },
       image: {
         full: "Shen.png",
@@ -4771,7 +4771,7 @@ export default {
         x: 0,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Tank", "Melee"],
       partype: "Energy",
@@ -4795,8 +4795,8 @@ export default {
         attackdamage: 60,
         attackdamageperlevel: 3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2
-      }
+        attackspeedperlevel: 2,
+      },
     },
     Shyvana: {
       version: "6.24.1",
@@ -4808,12 +4808,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Shyvana_0.jpg",
       blurb:
-        "A half-breed born from the union between dragon and human, Shyvana searched all her life for belonging. Persecution forged her into a brutal warrior, and those who dare stand against Shyvana face the fiery beast lurking just beneath her skin....",
+        "Shyvana es una criatura que tiene la magia de un fragmento rúnico ardiendo dentro de su corazón. Aunque a menudo parece humanoide, puede tomar su verdadera forma como un dragón mientras incinera a sus enemigos con su aliento en llamas. Después de salvarle la vida al príncipe Jarvan IV, Shyvana ahora sirve en su guardia real mientras busca la aceptación de la desconfiada gente de Demacia.",
       info: {
         attack: 8,
         defense: 6,
         magic: 3,
-        difficulty: 4
+        difficulty: 4,
       },
       image: {
         full: "Shyvana.png",
@@ -4822,7 +4822,7 @@ export default {
         x: 48,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Tank"],
       partype: "Dragonfury",
@@ -4846,8 +4846,8 @@ export default {
         attackdamage: 60.712,
         attackdamageperlevel: 3.4,
         attackspeedoffset: -0.05,
-        attackspeedperlevel: 2.5
-      }
+        attackspeedperlevel: 2.5,
+      },
     },
     Singed: {
       version: "6.24.1",
@@ -4859,12 +4859,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Singed_0.jpg",
       blurb:
-        "Singed descended from a long line of Zaun's revered chemists. Even in his youth, his talent for concocting potions far outstripped that of his peers, and he quickly distinguished himself from his less extraordinary chemist compatriots. It came as no ...",
+        "Singed es un alquimista de Zaun con un intelecto inigualable que ha dedicado su vida a superar los límites del conocimiento sin importar el costo, incluso si este es su propia cordura. ¿Su locura será calculada? Sus pociones rara vez fallan, pero a muchos les parece que Singed perdió todo sentido de humanidad y dejó atrás un rastro tóxico de miseria y terror a su paso.",
       info: {
         attack: 4,
         defense: 8,
         magic: 7,
-        difficulty: 5
+        difficulty: 5,
       },
       image: {
         full: "Singed.png",
@@ -4873,7 +4873,7 @@ export default {
         x: 96,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Tank", "Fighter"],
       partype: "MP",
@@ -4897,8 +4897,8 @@ export default {
         attackdamage: 62.32,
         attackdamageperlevel: 3.375,
         attackspeedoffset: 0.02,
-        attackspeedperlevel: 1.81
-      }
+        attackspeedperlevel: 1.81,
+      },
     },
     Sion: {
       version: "6.24.1",
@@ -4910,12 +4910,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Sion_0.jpg",
       blurb:
-        "BLOOD.<br><br>SMELL IT.<br><br>WANT. ACHING. NEED!<br><br>CLOSE NOW. THEY COME.<br><br>NO CHAINS? FREE! KILL!<br><br>IN REACH. YES! DIE! DIE!<br><br>Gone. Too quick. No fight. More. I want... more.<br><br>A voice? Unfamiliar. I see him. The Grand ...",
+        "Como héroe de guerra de una época antigua, Sion era venerado en Noxus por quitarle la vida al rey demaciano con sus propias manos. Sin embargo, se le negó el descanso eterno y lo resucitaron para servir a su imperio incluso en la muerte. Su matanza indiscriminada costó la vida de todos los que estuvieron en su camino sin importar sus lealtades, lo que demostró que ya no conservaba su humanidad. Aun así, con una tosca armadura atornillada a su podrida carne, Sion continúa dirigiéndose a la batalla con temerario desenfreno y sufre al intentar recordar su verdadero ser entre cada corte de su poderosa hacha.",
       info: {
         attack: 5,
         defense: 9,
         magic: 3,
-        difficulty: 5
+        difficulty: 5,
       },
       image: {
         full: "Sion.png",
@@ -4924,7 +4924,7 @@ export default {
         x: 144,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Tank", "Fighter"],
       partype: "MP",
@@ -4948,8 +4948,8 @@ export default {
         attackdamage: 59.72,
         attackdamageperlevel: 4,
         attackspeedoffset: -0.08,
-        attackspeedperlevel: 1.3
-      }
+        attackspeedperlevel: 1.3,
+      },
     },
     Sivir: {
       version: "6.24.1",
@@ -4961,12 +4961,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Sivir_0.jpg",
       blurb:
-        "''I don't care what face is on your coin, as long as it pays.''<br><br>Sivir is a renowned fortune hunter and mercenary captain who plies her trade in the deserts of Shurima. Armed with her legendary jeweled crossblade, she has fought and won ...",
+        "Sivir es una afamada buscadora de tesoros y capitana mercenaria que se gana la vida en el desierto de Shurima. Provista de una legendaria arma en forma de cruz e incrustada con gemas, ha peleado y ganado innumerables batallas para los que pueden permitirse su exorbitante precio. Conocida por su temeraria determinación y por una ambición sin fin, se jacta de poder recuperar los tesoros enterrados de las peligrosas tumbas de Shurima a cambio de una generosa recompensa. Ahora que unas fuerzas ancestrales agitan las arenas de Shurima, Sivir se encuentra dividida entre destinos opuestos.",
       info: {
         attack: 9,
         defense: 3,
         magic: 1,
-        difficulty: 4
+        difficulty: 4,
       },
       image: {
         full: "Sivir.png",
@@ -4975,7 +4975,7 @@ export default {
         x: 192,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Marksman"],
       partype: "MP",
@@ -4999,8 +4999,8 @@ export default {
         attackdamage: 57.46,
         attackdamageperlevel: 2.41,
         attackspeedoffset: 0,
-        attackspeedperlevel: 1.6
-      }
+        attackspeedperlevel: 1.6,
+      },
     },
     Skarner: {
       version: "6.24.1",
@@ -5012,12 +5012,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Skarner_0.jpg",
       blurb:
-        "''We are one. We cannot be shattered.''<br><br>Skarner is an immense crystalline scorpion from a hidden valley in Shurima. Part of the ancient Brackern race, Skarner and his kin are known for their great wisdom and deep connection to the land, as ...",
+        "Skarner es un gigantesco escorpión cristalino procedente de un oculto valle de Shurima. La antigua raza a la que pertenece, los brackern, es famosa por su sabiduría y su profunda conexión con la tierra, pues sus almas están fundidas con poderosos cristales vitales que albergan los pensamientos y recuerdos de sus antepasados. En una época ya ancestral, los brackern entraron en estado de hibernación para evitar un terrible desastre de naturaleza mágica; pero, recientemente, unos sucesos amenazantes despertaron a Skarner. Ahora, el único de los brackern que no sigue dormido lucha por proteger a sus hermanos contra quienes quieren hacerles daño.",
       info: {
         attack: 7,
         defense: 6,
         magic: 5,
-        difficulty: 5
+        difficulty: 5,
       },
       image: {
         full: "Skarner.png",
@@ -5026,7 +5026,7 @@ export default {
         x: 240,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Tank"],
       partype: "MP",
@@ -5050,8 +5050,8 @@ export default {
         attackdamage: 57.156,
         attackdamageperlevel: 4.5,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.1
-      }
+        attackspeedperlevel: 2.1,
+      },
     },
     Sona: {
       version: "6.24.1",
@@ -5063,12 +5063,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Sona_0.jpg",
       blurb:
-        "Sona has no memories of her true parents. As an infant, she was found abandoned on the doorstep of an Ionian adoption house, nestled atop an ancient instrument in an exquisite case of unknown origins. She was an unusually well-behaved child, always ...",
+        "Sona es la virtuosa demaciana más destacada del encordado etwahl. Habla solo a través de sus agraciados acordes y vibrantes arias. Estos elegantes modales la volvieron muy querida por la aristocracia, pero otros sospechan que sus hechizantes melodías en verdad emanan magia, un tabú en Demacia. Silenciosa con los extraños pero de algún modo comprendida por sus compañeros cercanos, Sona utiliza sus armonías no solo para curar a aliados heridos, sino también para acabar con enemigos desprevenidos.",
       info: {
         attack: 5,
         defense: 2,
         magic: 8,
-        difficulty: 4
+        difficulty: 4,
       },
       image: {
         full: "Sona.png",
@@ -5077,7 +5077,7 @@ export default {
         x: 288,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Support", "Mage"],
       partype: "MP",
@@ -5101,8 +5101,8 @@ export default {
         attackdamage: 50.04,
         attackdamageperlevel: 3,
         attackspeedoffset: -0.03,
-        attackspeedperlevel: 2.3
-      }
+        attackspeedperlevel: 2.3,
+      },
     },
     Soraka: {
       version: "6.24.1",
@@ -5114,12 +5114,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Soraka_0.jpg",
       blurb:
-        "A healer gifted with the magic of the stars, Soraka holds all living creatures close to her heart. She was once a celestial being, but she sacrificed her immortality and entered the world of mortals. So long as evil threatens life in Valoran, Soraka ...",
+        "Como nómada de las dimensiones celestiales más allá de Monte Targón, Soraka renunció a su inmortalidad para proteger a las razas mortales de sus mismos instintos más violentos. Se dedica a compartir las virtudes de la compasión y la misericordia a todos los que encuentra, e incluso cura a aquellos que desean hacerle daño. A pesar de todo lo que ha visto en este mundo, todavía cree que la gente de Runaterra tiene potencial por alcanzar.",
       info: {
         attack: 2,
         defense: 5,
         magic: 7,
-        difficulty: 3
+        difficulty: 3,
       },
       image: {
         full: "Soraka.png",
@@ -5128,7 +5128,7 @@ export default {
         x: 336,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Support", "Mage"],
       partype: "MP",
@@ -5152,8 +5152,8 @@ export default {
         attackdamage: 50.04,
         attackdamageperlevel: 3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.14
-      }
+        attackspeedperlevel: 2.14,
+      },
     },
     Swain: {
       version: "6.24.1",
@@ -5165,12 +5165,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Swain_0.jpg",
       blurb:
-        "The earliest account of Swain's existence comes from a Noxian infirmary doctor's notes. According to them, Swain limped into the ward without cry or complaint; his right leg was snapped in half, with bone protruding from the skin. A small, scowling ...",
+        "Jericho Swain es el visionario gobernante de una nación expansionista que solo venera a la fuerza. Aunque lo derribaron, incapacitaron y perdió su brazo izquierdo en las guerras jonias, tomó control del imperio con una inquebrantable determinación... y una nueva mano demoniaca. Ahora, Swain dirige a sus guerreros desde las filas delanteras y marcha contra una oscuridad que se avecina y que solo él puede ver... entre apariciones rodeadas de cuervos oscuros que se alimentan de los cadáveres a su alrededor. En un torbellino de sacrificios y secretos, el más grande de ellos es que el peor enemigo está dentro.",
       info: {
         attack: 2,
         defense: 6,
         magic: 9,
-        difficulty: 8
+        difficulty: 8,
       },
       image: {
         full: "Swain.png",
@@ -5179,7 +5179,7 @@ export default {
         x: 384,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage", "Fighter"],
       partype: "MP",
@@ -5203,8 +5203,8 @@ export default {
         attackdamage: 52.04,
         attackdamageperlevel: 3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.11
-      }
+        attackspeedperlevel: 2.11,
+      },
     },
     Syndra: {
       version: "6.24.1",
@@ -5216,12 +5216,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Syndra_0.jpg",
       blurb:
-        "Born with immense magical potential, Syndra loves nothing more than exercising the incredible power at her command. With each passing day, her mastery of magical force grows more potent and devastating. Refusing any notion of balance or restraint, ...",
+        "Syndra es una temible maga de Jonia con un extraordinario poder bajo su comando. Cuando era pequeña, alteró a los maestros de su aldea con su magia salvaje e imprudente. La enviaron lejos para que aprendiera a tener un mayor control, pero con el tiempo descubrió que su supuesto mentor había restringido sus habilidades. Convirtiendo sus sentimientos de traición y dolor en esferas oscuras de energía, Syndra juró destruir a todo aquel que intente controlarla.",
       info: {
         attack: 2,
         defense: 3,
         magic: 9,
-        difficulty: 8
+        difficulty: 8,
       },
       image: {
         full: "Syndra.png",
@@ -5230,7 +5230,7 @@ export default {
         x: 432,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage", "Support"],
       partype: "MP",
@@ -5254,8 +5254,8 @@ export default {
         attackdamage: 53.872,
         attackdamageperlevel: 2.9,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2
-      }
+        attackspeedperlevel: 2,
+      },
     },
     TahmKench: {
       version: "6.24.1",
@@ -5267,12 +5267,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/TahmKench_0.jpg",
       blurb:
-        "''The whole world's a river, and I'm its king.''<br>Tahm Kench travels Runeterra's waterways, feeding his insatiable appetite with the misery of the unsuspecting. The singularly charming gourmand savors every moment of his victims' suffering.  A deal ...",
+        "Conocido por muchos nombres a lo largo de la historia, el demonio Tahm Kench viaja a través de las aguas de Runaterra mientras alimenta su insaciable apetito con la miseria de otros. Aunque pudiera parecer particularmente encantador y orgulloso, se pasea por el mundo físico como un vagabundo en búsqueda de su próxima presa inocente. Su lengua puede aturdir incluso a un guerrero con una gran armadura a una docena de pasos de distancia, y caer dentro de su barriga es llegar a un abismo del cual hay poca esperanza de salir.",
       info: {
         attack: 3,
         defense: 9,
         magic: 6,
-        difficulty: 5
+        difficulty: 5,
       },
       image: {
         full: "TahmKench.png",
@@ -5281,7 +5281,7 @@ export default {
         x: 0,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Support", "Tank"],
       partype: "MP",
@@ -5305,8 +5305,8 @@ export default {
         attackdamage: 56,
         attackdamageperlevel: 3.2,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.5
-      }
+        attackspeedperlevel: 2.5,
+      },
     },
     Taliyah: {
       version: "6.24.1",
@@ -5318,12 +5318,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Taliyah_0.jpg",
       blurb:
-        "Taliyah is a nomadic mage from Shurima who weaves stone with energetic enthusiasm and raw determination. Torn between teenage wonder and adult responsibility, she has crossed nearly all of Valoran on a journey to learn the true nature of her growing ...",
+        "Taliyah es una maga nómada de Shurima que se siente dividida entre la libertad de la adolescencia y las responsabilidades adultas. Ha cruzado casi todo Valoran en un viaje para conocer la verdadera naturaleza de sus crecientes poderes, aunque más recientemente regresó a proteger a su tribu. Algunos han confundido su compasión por debilidad y pagaron el precio, pues detrás de la juvenil actitud de Taliyah yace una voluntad tan fuerte como para mover montañas y un espíritu lo suficiente feroz para causar estruendos en la tierra.",
       info: {
         attack: 1,
         defense: 7,
         magic: 8,
-        difficulty: 5
+        difficulty: 5,
       },
       image: {
         full: "Taliyah.png",
@@ -5332,7 +5332,7 @@ export default {
         x: 48,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage", "Support"],
       partype: "MP",
@@ -5356,8 +5356,8 @@ export default {
         attackdamage: 56,
         attackdamageperlevel: 3.3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 1.36
-      }
+        attackspeedperlevel: 1.36,
+      },
     },
     Talon: {
       version: "6.24.1",
@@ -5369,12 +5369,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Talon_0.jpg",
       blurb:
-        "''The three deadliest blademasters in all of Valoran are bound to the house of Du Couteau: my father, myself, and Talon. Challenge us, if you dare.''<br>-- Katarina Du Couteau<br><br>Talon's earliest memories are the darkness of Noxus' underground ...",
+        "Talon es el filo que yace en la oscuridad y un despiadado asesino que ataca sin advertencia solo para escapar antes de que alguien note su presencia. Se hizo de una reputación peligrosa en las brutales calles de Noxus, donde se vio obligado a pelear, matar y robar para sobrevivir. Después de ser adoptado por la notable familia Du Couteau, dispuso su mortal oficio a la orden del imperio, donde asesina líderes, capitanes y héroes enemigos... así como a cualquier noxiano que sea lo suficiente tonto como para ganarse el desprecio de sus amos.",
       info: {
         attack: 9,
         defense: 3,
         magic: 1,
-        difficulty: 7
+        difficulty: 7,
       },
       image: {
         full: "Talon.png",
@@ -5383,7 +5383,7 @@ export default {
         x: 96,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Assassin", "Fighter"],
       partype: "MP",
@@ -5407,8 +5407,8 @@ export default {
         attackdamage: 60,
         attackdamageperlevel: 3.1,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.9
-      }
+        attackspeedperlevel: 2.9,
+      },
     },
     Taric: {
       version: "6.24.1",
@@ -5420,12 +5420,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Taric_0.jpg",
       blurb:
-        "''The best weapons are beautiful.''<br><br>Taric is the Aspect of the Protector, wielding incredible power as Runeterra's guardian of life, love, and beauty. Shamed by a dereliction of duty and exiled from his homeland Demacia, Taric ascended Mount ...",
+        "Taric es el Aspecto del Protector y, gracias a su increíble poder, es el guardián de la vida, el amor y la belleza en Runaterra. Caído en desgracia debido a la negligencia de su deber y exiliado de su tierra, Demacia, Taric ascendió el Monte Targón buscando la redención y lo que encontró en la cima fue el llamado de las estrellas. Imbuido con el poder del Targón ancestral, el Escudo de Valoran no descansa en su deber de vigilar la traicionera corrupción del Vacío.",
       info: {
         attack: 4,
         defense: 8,
         magic: 5,
-        difficulty: 3
+        difficulty: 3,
       },
       image: {
         full: "Taric.png",
@@ -5434,7 +5434,7 @@ export default {
         x: 144,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Support", "Fighter"],
       partype: "MP",
@@ -5458,8 +5458,8 @@ export default {
         attackdamage: 55,
         attackdamageperlevel: 3.5,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2
-      }
+        attackspeedperlevel: 2,
+      },
     },
     Teemo: {
       version: "6.24.1",
@@ -5471,12 +5471,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Teemo_0.jpg",
       blurb:
-        "Teemo is a legend among his yordle brothers and sisters in Bandle City. As far as yordles are concerned, there is something just slightly off about him. While Teemo enjoys the companionship of other yordles, he also insists on frequent solo missions ...",
+        "Teemo no se inmuta ante los obstáculos más peligrosos y amenazadores mientras explora el mundo con un entusiasmo infinito y un espíritu lleno de alegría. Es un yordle con una moralidad inquebrantable que se enorgullece de seguir el código de los exploradores de Bandle, a veces con tanto ímpetu que no se percata de las consecuencias de sus acciones. Aunque algunos dicen que la existencia de los exploradores es cuestionable, algo es seguro: no hay que meterse con la convicción de Teemo.",
       info: {
         attack: 5,
         defense: 3,
         magic: 7,
-        difficulty: 6
+        difficulty: 6,
       },
       image: {
         full: "Teemo.png",
@@ -5485,7 +5485,7 @@ export default {
         x: 192,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Marksman", "Assassin"],
       partype: "MP",
@@ -5509,8 +5509,8 @@ export default {
         attackdamage: 49.54,
         attackdamageperlevel: 3,
         attackspeedoffset: -0.0947,
-        attackspeedperlevel: 3.38
-      }
+        attackspeedperlevel: 3.38,
+      },
     },
     Thresh: {
       version: "6.24.1",
@@ -5522,12 +5522,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Thresh_0.jpg",
       blurb:
-        "''The mind is a wondrous thing to tear apart.''<br><br>Sadistic and cunning, Thresh is a restless spirit who prides himself on tormenting mortals and breaking them with slow, excruciating inventiveness. His victims suffer far beyond the point of death,...",
+        "Sádico y astuto, Thresh es un espíritu ambicioso e incansable de las Islas de la Sombra. Otrora el custodio de incontables secretos arcanos, fue consumido por un poder mayor a la vida o la muerte. Ahora, se alimenta del tormento y quebranta a otros con sus lentas e insoportables torturas. Sus víctimas sufren más allá de su breve transición desde el mundo mortal cuando Thresh inflige agonía en sus almas y las aprisiona en su linterna maldita para torturarlas por toda la eternidad.",
       info: {
         attack: 5,
         defense: 6,
         magic: 6,
-        difficulty: 7
+        difficulty: 7,
       },
       image: {
         full: "Thresh.png",
@@ -5536,7 +5536,7 @@ export default {
         x: 240,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Support", "Fighter"],
       partype: "MP",
@@ -5560,8 +5560,8 @@ export default {
         attackdamage: 47.696,
         attackdamageperlevel: 2.2,
         attackspeedoffset: 0,
-        attackspeedperlevel: 3.5
-      }
+        attackspeedperlevel: 3.5,
+      },
     },
     Tristana: {
       version: "6.24.1",
@@ -5573,12 +5573,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Tristana_0.jpg",
       blurb:
-        "Greatness comes in all shapes and sizes, as proven by this diminutive, cannon-wielding yordle. In a world fraught with turmoil, Tristana refuses to back down from any challenge. She represents the pinnacle of martial proficiency, unwavering courage, ...",
+        "Mientras que otros yordles usan su energía para hacer descubrimientos, inventos o simplemente travesuras, Tristana siempre estuvo inspirada por las aventuras de los grandes guerreros. Ella había escuchado mucho de Runaterra, sus facciones y sus guerras, y creía que su raza también podía ser merecedora de leyendas. Al poner el pie por primera vez en el mundo, tomó su confiable cañón, Boomer, y ahora salta hacia la batalla con una firme valentía y optimismo.",
       info: {
         attack: 9,
         defense: 3,
         magic: 5,
-        difficulty: 4
+        difficulty: 4,
       },
       image: {
         full: "Tristana.png",
@@ -5587,7 +5587,7 @@ export default {
         x: 288,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Marksman", "Assassin"],
       partype: "MP",
@@ -5611,8 +5611,8 @@ export default {
         attackdamage: 56.96,
         attackdamageperlevel: 2.41,
         attackspeedoffset: -0.04734,
-        attackspeedperlevel: 1.5
-      }
+        attackspeedperlevel: 1.5,
+      },
     },
     Trundle: {
       version: "6.24.1",
@@ -5624,12 +5624,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Trundle_0.jpg",
       blurb:
-        "Trundle is a hulking and devious troll with a mischievous streak. There is nothing he can't beat into submission and bend to his will, not even the ice itself. With his massive, frozen club, he chills his enemies to the core and runs them through with ...",
+        "Trundle es un corpulento y retorcido trol con una voraz actitud, y no hay nada que no pueda aplastar hasta someterlo, ni siquiera el mismo Fréljord. Feroz y territorial, persigue a cualquiera que sea lo suficiente tonto como para entrar a su dominio. Entonces, con su enorme mazo de Hielo Puro, congela a sus enemigos hasta los huesos y los atraviesa con pilares congelados y dentados mientras se ríe cuando se desangran en la tundra.",
       info: {
         attack: 7,
         defense: 6,
         magic: 2,
-        difficulty: 5
+        difficulty: 5,
       },
       image: {
         full: "Trundle.png",
@@ -5638,7 +5638,7 @@ export default {
         x: 336,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Tank"],
       partype: "MP",
@@ -5662,8 +5662,8 @@ export default {
         attackdamage: 60.04,
         attackdamageperlevel: 3,
         attackspeedoffset: -0.0672,
-        attackspeedperlevel: 2.9
-      }
+        attackspeedperlevel: 2.9,
+      },
     },
     Tryndamere: {
       version: "6.24.1",
@@ -5675,12 +5675,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Tryndamere_0.jpg",
       blurb:
-        "Fueled by his unbridled fury and rage, Tryndamere cuts his way through the tundra, mastering the art of battle by challenging the Freljord's greatest warriors. The wrathful barbarian seeks revenge on the one who decimated his clan and strikes down all ...",
+        "Impulsado por la ira, Tryndamere alguna vez emprendió su camino por Fréljord y desafió abiertamente a los más grandes guerreros del norte preparándose para los días más oscuros que se avecinaban. Por mucho tiempo, el iracundo bárbaro ha buscado la venganza por la aniquilación de su clan, aunque más recientemente encontró la compañía de Ashe, la líder de Avarosa, así como un hogar con su gente. Su fuerza casi inhumana y su resistencia son legendarias, atributos que le han otorgado incontables victorias a él y sus aliados incluso en situaciones desfavorables.",
       info: {
         attack: 10,
         defense: 5,
         magic: 2,
-        difficulty: 5
+        difficulty: 5,
       },
       image: {
         full: "Tryndamere.png",
@@ -5689,7 +5689,7 @@ export default {
         x: 384,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Assassin"],
       partype: "Battlefury",
@@ -5713,8 +5713,8 @@ export default {
         attackdamage: 61.376,
         attackdamageperlevel: 3.2,
         attackspeedoffset: -0.0672,
-        attackspeedperlevel: 2.9
-      }
+        attackspeedperlevel: 2.9,
+      },
     },
     TwistedFate: {
       version: "6.24.1",
@@ -5726,12 +5726,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Maokai_0.jpg",
       blurb:
-        "Twisted Fate is an infamous card sharp and swindler who has gambled and charmed his way across much of the known world, earning the enmity and admiration of the rich and foolish alike. He rarely takes things seriously, greeting each day with a mocking ...",
+        "Twisted Fate es un afamado experto en juegos de cartas y estafador. Ha apostado y usado su encanto en gran parte del mundo conocido, lo que le ha hecho ganarse el odio y la admiración de ricos y tontos por igual. Rara vez se toma las cosas en serio, despierta cada día con una burlesca sonrisa y un descuidado aire de fanfarrón. Por donde se vea, Twisted Fate siempre tiene un as bajo la manga.",
       info: {
         attack: 6,
         defense: 2,
         magic: 6,
-        difficulty: 9
+        difficulty: 9,
       },
       image: {
         full: "TwistedFate.png",
@@ -5740,7 +5740,7 @@ export default {
         x: 432,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage"],
       partype: "MP",
@@ -5764,8 +5764,8 @@ export default {
         attackdamage: 49.954,
         attackdamageperlevel: 3.3,
         attackspeedoffset: -0.04,
-        attackspeedperlevel: 3.22
-      }
+        attackspeedperlevel: 3.22,
+      },
     },
     Twitch: {
       version: "6.24.1",
@@ -5777,12 +5777,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Twitch_0.jpg",
       blurb:
-        "H.I.V.E. Incident Report<br>Code Violation: Industrial Homicide<br>Casefile Status: Unsolved<br>Investigating Agent: Rol, P.<br><br>Team responded to report of suspicious character, criminal activity; proceeded to Sump Works, Sector 90TZ. Sector 90TZ ...",
+        "Una rata zaunita de nacimiento, pero conocedor de la más fina suciedad por pasión. Twitch no tiene miedo de ensuciarse las patas. Apunta una ballesta potenciada con químicos hacia el centro de Piltóver y jura mostrarles a los que habitan arriba en la ciudad lo sucios que verdaderamente son. Siempre es escurridizo, y cuando no se encuentra deambulando por las alcantarillas, está hurgando en la basura de otras personas en busca de tesoros desechados... y tal vez un sándwich mohoso.",
       info: {
         attack: 9,
         defense: 2,
         magic: 3,
-        difficulty: 6
+        difficulty: 6,
       },
       image: {
         full: "Twitch.png",
@@ -5791,7 +5791,7 @@ export default {
         x: 0,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Marksman", "Assassin"],
       partype: "MP",
@@ -5815,8 +5815,8 @@ export default {
         attackdamage: 55.46,
         attackdamageperlevel: 2.41,
         attackspeedoffset: -0.08,
-        attackspeedperlevel: 3.38
-      }
+        attackspeedperlevel: 3.38,
+      },
     },
     Udyr: {
       version: "6.24.1",
@@ -5828,12 +5828,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Udyr_0.jpg",
       blurb:
-        "Udyr is more than a man; he is a vessel for the untamed power of four primal animal spirits. When tapping into the spirits' bestial natures, Udyr can harness their unique strengths: the tiger grants him speed and ferocity, the turtle resilience, the ...",
+        "Al ser el cambiapieles más poderoso que existe, Udyr tiene la capacidad de comunicarse con todos los espíritus del Fréljord, ya sea al entender de forma empática sus necesidades o al transformar su energía etérea en su propio estilo de lucha salvaje. Busca el equilibrio interno para que su mente no se pierda entre otras, pero también busca el equilibrio externo, ya que el paisaje místico del Fréljord solo puede prosperar con el crecimiento que nace del conflicto y de la lucha, y Udyr sabe que se deben hacer sacrificios para mantener a raya el estancamiento pacífico.",
       info: {
         attack: 8,
         defense: 7,
         magic: 4,
-        difficulty: 7
+        difficulty: 7,
       },
       image: {
         full: "Udyr.png",
@@ -5842,7 +5842,7 @@ export default {
         x: 48,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Tank"],
       partype: "MP",
@@ -5866,8 +5866,8 @@ export default {
         attackdamage: 58.286,
         attackdamageperlevel: 3.2,
         attackspeedoffset: -0.05,
-        attackspeedperlevel: 2.67
-      }
+        attackspeedperlevel: 2.67,
+      },
     },
     Urgot: {
       version: "6.24.1",
@@ -5879,12 +5879,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Urgot_0.jpg",
       blurb:
-        "There are warriors who become great for their strength, cunning, or skill with arms. Others simply refuse to die. Urgot, once a great soldier of Noxus, may constitute a case in support of the latter. Prone to diving headlong into enemy battle lines, ...",
+        "Urgot, quien fue alguna vez un poderoso verdugo noxiano, había sido traicionado por el imperio que lo hizo matar a tantos en su nombre. Atado con cadenas de hierro, lo forzaron a aprender el verdadero significado de la fuerza en el Dragado, una mina de prisioneros en las profundidades de Zaun, de donde emergió como un desastre que propaga caos por toda la ciudad y proyecta una imponente sombra sobre el submundo criminal. Levantando a sus víctimas con las mismas cadenas que alguna vez lo esclavizaron, purgará su nuevo hogar de los indignos y lo convertirá en un crisol de dolor.",
       info: {
         attack: 8,
         defense: 5,
         magic: 3,
-        difficulty: 8
+        difficulty: 8,
       },
       image: {
         full: "Urgot.png",
@@ -5893,7 +5893,7 @@ export default {
         x: 96,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Marksman", "Fighter"],
       partype: "MP",
@@ -5917,8 +5917,8 @@ export default {
         attackdamage: 54.05,
         attackdamageperlevel: 3.6,
         attackspeedoffset: -0.03,
-        attackspeedperlevel: 2.9
-      }
+        attackspeedperlevel: 2.9,
+      },
     },
     Varus: {
       version: "6.24.1",
@@ -5930,12 +5930,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Varus_0.jpg",
       blurb:
-        "''The life of an arrow is fleeting, built of nothing but direction and intent.''<br><br>For his incomparable skill with the bow and his unquestioned sense of honor, Varus was chosen to be the warden of a sacred Ionian temple. The temple was built to ...",
+        "Varus, como uno de los antiguos darkin, era un mortal asesino que amaba atormentar a sus enemigos y los llevaba casi hasta la locura antes de darles el flechazo final. Lo encerraron al final de la Gran Guerra Darkin, pero escapó siglos después en un cuerpo manipulado que pertenecía a dos cazadores jonios que lo liberaron sin saberlo y fueron condenados a blandir el arco que contenía su esencia atrapada. Ahora, Varus busca a quienes lo encerraron para llevar a cabo su brutal venganza, pero las almas de los mortales dentro de él todavía se resisten a cada paso.",
       info: {
         attack: 7,
         defense: 3,
         magic: 4,
-        difficulty: 2
+        difficulty: 2,
       },
       image: {
         full: "Varus.png",
@@ -5944,7 +5944,7 @@ export default {
         x: 144,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Marksman", "Mage"],
       partype: "MP",
@@ -5968,8 +5968,8 @@ export default {
         attackdamage: 54.66,
         attackdamageperlevel: 2.41,
         attackspeedoffset: -0.05,
-        attackspeedperlevel: 3
-      }
+        attackspeedperlevel: 3,
+      },
     },
     Vayne: {
       version: "6.24.1",
@@ -5981,12 +5981,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Vayne_0.jpg",
       blurb:
-        "The world is not always as civilized as people might think. There are still those who would follow the blackest paths of magic and become corrupted by the darker powers that flow through Runeterra. Shauna Vayne knows this fact well.<br><br>As a young ...",
+        "Shauna Vayne es una mortal e implacable cazadora de monstruos demaciana que ha dedicado su vida a encontrar y destruir al demonio que asesinó a su familia. Armada con una ballesta que lleva montada en la muñeca y un corazón lleno de venganza, solo es verdaderamente feliz cuando acaba con practicantes o creaciones de las artes oscuras mientras ataca desde las sombras con una lluvia de proyectiles de plata.",
       info: {
         attack: 10,
         defense: 1,
         magic: 1,
-        difficulty: 8
+        difficulty: 8,
       },
       image: {
         full: "Vayne.png",
@@ -5995,7 +5995,7 @@ export default {
         x: 192,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Marksman", "Assassin"],
       partype: "MP",
@@ -6019,8 +6019,8 @@ export default {
         attackdamage: 55.88,
         attackdamageperlevel: 1.66,
         attackspeedoffset: -0.05,
-        attackspeedperlevel: 4
-      }
+        attackspeedperlevel: 4,
+      },
     },
     Veigar: {
       version: "6.24.1",
@@ -6032,12 +6032,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Veigar_0.jpg",
       blurb:
-        "To most, thoughts of yordles do not conjure images to be feared. The easygoing half-pint race, though fierce, is often regarded with some degree of joviality. Their high-pitched voices and naturally cute forms inspire something of a protective ...",
+        "Veigar, entusiasta maestro de la magia oscura, se adaptó a poderes que pocos mortales se atreven a explorar. Como un habitante de espíritu libre de Ciudad de Bandle, deseaba rebasar las limitaciones de la magia yordle. Así fue como llegó a unos textos arcanos que habían permanecido ocultos por miles de años. Ahora Veigar es una criatura necia con una interminable fascinación por los misterios del universo y a menudo es subestimado por otros. Aunque él cree que verdaderamente es malvado, posee una moralidad interna que hace dudar a los demás sobre sus motivaciones reales.",
       info: {
         attack: 2,
         defense: 2,
         magic: 10,
-        difficulty: 7
+        difficulty: 7,
       },
       image: {
         full: "Veigar.png",
@@ -6046,7 +6046,7 @@ export default {
         x: 240,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage"],
       partype: "MP",
@@ -6070,8 +6070,8 @@ export default {
         attackdamage: 50.71,
         attackdamageperlevel: 2.625,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.24
-      }
+        attackspeedperlevel: 2.24,
+      },
     },
     Velkoz: {
       version: "6.24.1",
@@ -6083,12 +6083,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Velkoz_0.jpg",
       blurb:
-        "I pass into the sudden glare. Blink. Blink, blink, blink. My eyes adjust and evaluate the landscape before me.<br><br>There's a scurrying. I look down to find a small, white creature standing on its hind legs, sniffing at my body. It intrigues me....",
+        "No está claro si Vel'Koz fue la primera manifestación del Vacío que emergió en Runaterra, pero ciertamente no ha habido ninguna que llegue a su nivel de cruel y calculadora conciencia. Mientras que los suyos devoran o corrompen todo a su alrededor, él busca indagar y estudiar el mundo físico y a los extraños seres guerreros que habitan allí para encontrar cualquier debilidad que los seres del Vacío puedan aprovechar. Pero Vel'Koz no es un observador pasivo, pues ataca a sus enemigos con un mortífero plasma y altera las leyes del mismo mundo.",
       info: {
         attack: 2,
         defense: 2,
         magic: 10,
-        difficulty: 8
+        difficulty: 8,
       },
       image: {
         full: "Velkoz.png",
@@ -6097,7 +6097,7 @@ export default {
         x: 288,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage"],
       partype: "MP",
@@ -6121,8 +6121,8 @@ export default {
         attackdamage: 54.9379,
         attackdamageperlevel: 3.14159,
         attackspeedoffset: 0,
-        attackspeedperlevel: 1.36
-      }
+        attackspeedperlevel: 1.36,
+      },
     },
     Vi: {
       version: "6.24.1",
@@ -6134,12 +6134,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Vi_0.jpg",
       blurb:
-        "To Vi, every problem is just another brick wall to punch through with her gigantic hextech gauntlets. Though she grew up on the wrong side of the law, Vi now uses her criminal know-how to serve Piltover's police force. Vi's brash attitude, abrasive ...",
+        "Vi es una antigua criminal de las calles de Zaun impulsiva e imponente con un respeto hacia las autoridades casi nulo. Vi creció sola y desarrolló un instinto de supervivencia muy fino, así como un sentido del humor retorcido. Ahora trabaja con los Protectores de Piltóver para mantener la paz y utiliza unos poderosos guanteletes hextech que pueden atravesar muros y golpear a los sospechosos con la misma facilidad.",
       info: {
         attack: 8,
         defense: 5,
         magic: 3,
-        difficulty: 4
+        difficulty: 4,
       },
       image: {
         full: "Vi.png",
@@ -6148,7 +6148,7 @@ export default {
         x: 336,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Assassin"],
       partype: "MP",
@@ -6172,8 +6172,8 @@ export default {
         attackdamage: 55.88,
         attackdamageperlevel: 3.5,
         attackspeedoffset: -0.03,
-        attackspeedperlevel: 2.5
-      }
+        attackspeedperlevel: 2.5,
+      },
     },
     Viktor: {
       version: "6.24.1",
@@ -6185,12 +6185,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Viktor_0.jpg",
       blurb:
-        "Early in life, Viktor discovered his passion for science and invention, particularly in the field of mechanical automation. He attended Zaun's prestigious College of Techmaturgy and led the team that constructed Blitzcrank - a scientific breakthrough ...",
+        "Como heraldo de una nueva era tecnológica, Viktor ha dedicado su vida al progreso de la humanidad. Es un idealista que busca elevar a la gente de Zaun a un nuevo nivel de comprensión y cree que la humanidad solo podrá alcanzar todo su potencial una vez que haya aceptado la gloriosa evolución de la tecnología. Con un cuerpo amplificado con acero y ciencia, Viktor encabeza una cruzada para un futuro más brillante.",
       info: {
         attack: 2,
         defense: 4,
         magic: 10,
-        difficulty: 9
+        difficulty: 9,
       },
       image: {
         full: "Viktor.png",
@@ -6199,7 +6199,7 @@ export default {
         x: 384,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage"],
       partype: "MP",
@@ -6223,8 +6223,8 @@ export default {
         attackdamage: 52.04,
         attackdamageperlevel: 3,
         attackspeedoffset: -0.05,
-        attackspeedperlevel: 2.11
-      }
+        attackspeedperlevel: 2.11,
+      },
     },
     Vladimir: {
       version: "6.24.1",
@@ -6236,12 +6236,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Vladimir_0.jpg",
       blurb:
-        "There is a temple hidden in the mountains between Noxus and the Tempest Flats, where the secrets of an ancient and terrifying sorcery are kept. The area surrounding the temple is littered with the exsanguinated corpses of those who have mistakenly ...",
+        "Vladimir, un demonio con sed de sangre mortal, ha influenciado la política de Noxus desde los primeros días del imperio. Además de extender su vida de manera sobrenatural, su maestría de la hemomancia le permite controlar las mentes y cuerpos de otros tan fácil como los suyos. En las extravagantes salas de la aristocracia de Noxus, esto le ha permitido hacerse de una fama y personalidad a su alrededor mientras que en los callejones más bajos le permite desangrar a sus enemigos hasta secarlos.",
       info: {
         attack: 2,
         defense: 6,
         magic: 8,
-        difficulty: 7
+        difficulty: 7,
       },
       image: {
         full: "Vladimir.png",
@@ -6250,7 +6250,7 @@ export default {
         x: 432,
         y: 96,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage", "Tank"],
       partype: "Gnarfury",
@@ -6274,8 +6274,8 @@ export default {
         attackdamage: 52,
         attackdamageperlevel: 3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2
-      }
+        attackspeedperlevel: 2,
+      },
     },
     Volibear: {
       version: "6.24.1",
@@ -6287,12 +6287,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Volibear_0.jpg",
       blurb:
-        "The unforgiving northern reaches of the Freljord are home to the Ursine, a fierce and warlike race that has endured the barren tundra for thousands of years. Their leader is a furious adversary who commands the force of lightning to strike fear within ...",
+        "Para quienes aún lo veneran, Volibear es la encarnación de la tormenta. Destructivo, salvaje y con una determinación obstinada, existió antes de que los mortales caminaran sobre la tundra del Fréljord. Protege salvajemente las tierras que él y los demás semidioses de su familia crearon. Tras cultivar un odio profundo hacia la civilización y sus debilidades, ahora pelea para restaurar las viejas costumbres, aquellos tiempos cuando la tierra era indómita y la sangre se derramaba libremente. Combate con avidez a todos aquellos que se le oponen, con garras, dientes y un estruendoso poderío.",
       info: {
         attack: 7,
         defense: 7,
         magic: 4,
-        difficulty: 3
+        difficulty: 3,
       },
       image: {
         full: "Volibear.png",
@@ -6301,7 +6301,7 @@ export default {
         x: 0,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Tank"],
       partype: "MP",
@@ -6325,8 +6325,8 @@ export default {
         attackdamage: 59.544,
         attackdamageperlevel: 3.3,
         attackspeedoffset: -0.05,
-        attackspeedperlevel: 2.67
-      }
+        attackspeedperlevel: 2.67,
+      },
     },
     Warwick: {
       version: "6.24.1",
@@ -6338,12 +6338,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Warwick_0.jpg",
       blurb:
-        "Warwick was once a man revered for his ability to track down human specimens for the darkest types of scientific research. When his ambitions exceeded his physical limits, he drank a dangerous elixir to transform himself into an unstoppable manhunter. ...",
+        "Warwick es un monstruo que ronda por los callejones grises de Zaun. Víctima de agonizantes experimentos, su cuerpo está fusionado con un sistema complejo de cámaras y bombas, una maquinaria que llena sus venas con furia alquímica. Warwick emerge de las sombras y ataca a los criminales que aterrorizan las profundidades de la ciudad. Lo atrae la sangre y su aroma lo vuelve loco. Nadie que la derrame puede escapar de él.",
       info: {
         attack: 7,
         defense: 4,
         magic: 4,
-        difficulty: 3
+        difficulty: 3,
       },
       image: {
         full: "Warwick.png",
@@ -6352,7 +6352,7 @@ export default {
         x: 48,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Tank"],
       partype: "MP",
@@ -6376,8 +6376,8 @@ export default {
         attackdamage: 62.43,
         attackdamageperlevel: 3.375,
         attackspeedoffset: -0.08,
-        attackspeedperlevel: 2.88
-      }
+        attackspeedperlevel: 2.88,
+      },
     },
     Xerath: {
       version: "6.24.1",
@@ -6389,12 +6389,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Xerath_0.jpg",
       blurb:
-        "''A lifetime as a slave has prepared me for eternity as your master.''<br><br>Xerath is an Ascended Magus of ancient Shurima, a being of arcane energy writhing in the broken shards of a magical sarcophagus. For millennia, he was trapped beneath the ...",
+        "Xerath es un mago Ascendido de la antigua Shurima, un ser con energía arcana retorciéndose en los quebrados fragmentos de un sarcófago mágico. Estuvo atrapado durante milenios bajo las arenas del desierto, pero el ascenso de Shurima lo liberó de su prisión ancestral. Arrastrado a la locura por el poder, ahora busca recuperar lo que cree que le pertenece y reemplazar las civilizaciones soberbias del mundo con una diseñada a su imagen y semejanza.",
       info: {
         attack: 1,
         defense: 3,
         magic: 10,
-        difficulty: 8
+        difficulty: 8,
       },
       image: {
         full: "Xerath.png",
@@ -6403,7 +6403,7 @@ export default {
         x: 96,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage", "Assassin"],
       partype: "MP",
@@ -6427,8 +6427,8 @@ export default {
         attackdamage: 54.7,
         attackdamageperlevel: 3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 1.36
-      }
+        attackspeedperlevel: 1.36,
+      },
     },
     XinZhao: {
       version: "6.24.1",
@@ -6440,12 +6440,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/XinZhao_0.jpg",
       blurb:
-        "''Death is inevitable, one can only avoid defeat.''<br><br>Whenever Jarvan III, the king of Demacia, delivers one of his rallying speeches from the glinting marble balcony atop the Royal Palace, Xin Zhao is at his side. Coined the Seneschal of Demacia,...",
+        "Xin Zhao es un determinado guerrero y leal a la dinastía regente de los Escudo de Luz. Alguna vez condenado al coliseo de combate de Noxus, sobrevivió a un sin fin de batallas de gladiadores, pero después de ser liberado por fuerzas demacianas, juró su vida y lealtad a sus valientes liberadores. Armado con su lanza favorita de tres filos, Xin Zhao ahora combate por su reino adoptado y reta con audacia a cualquier enemigo sin importar la situación.",
       info: {
         attack: 8,
         defense: 6,
         magic: 3,
-        difficulty: 2
+        difficulty: 2,
       },
       image: {
         full: "XinZhao.png",
@@ -6454,7 +6454,7 @@ export default {
         x: 144,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Assassin"],
       partype: "MP",
@@ -6478,8 +6478,8 @@ export default {
         attackdamage: 57.544,
         attackdamageperlevel: 3.3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.6
-      }
+        attackspeedperlevel: 2.6,
+      },
     },
     Yasuo: {
       version: "6.24.1",
@@ -6491,12 +6491,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yasuo_0.jpg",
       blurb:
-        "Yasuo is a man of resolve, an agile swordsman who wields the wind itself to cut down his foes. This once-proud warrior has been disgraced by a false accusation and forced into a desperate fight for survival. With the world turned against him, he will ...",
+        "Yasuo, un jonio de gran determinación, es un ágil espadachín entrenado para empuñar al mismo viento contra sus enemigos. Cuando era joven y orgulloso, lo acusaron de asesinar a su maestro, algo que no era verdad. Al no poder demostrar su inocencia, se vio obligado a tomar la vida de su hermano en defensa propia. Incluso después de que el verdadero asesino de su maestro quedara revelado, Yasuo sigue sin poder perdonarse a sí mismo por todo lo que ha hecho. Ahora, deambula en su tierra natal y solo cuenta con el viento para guiar su espada.",
       info: {
         attack: 8,
         defense: 4,
         magic: 4,
-        difficulty: 10
+        difficulty: 10,
       },
       image: {
         full: "Yasuo.png",
@@ -6505,7 +6505,7 @@ export default {
         x: 192,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Assassin"],
       partype: "Wind",
@@ -6529,8 +6529,8 @@ export default {
         attackdamage: 55.376,
         attackdamageperlevel: 3.2,
         attackspeedoffset: -0.067,
-        attackspeedperlevel: 2.5
-      }
+        attackspeedperlevel: 2.5,
+      },
     },
     Yorick: {
       version: "6.24.1",
@@ -6542,12 +6542,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yorick_0.jpg",
       blurb:
-        "''These isles… How they scream.''<br>The last survivor of a long-forgotten religious order, Yorick is both blessed and cursed with power over the dead. Trapped on the Shadow Isles, his only companions are the rotting corpses and shrieking spirits that ...",
+        "Yorick, el último superviviente de una orden religiosa olvidada hace tiempo, carga con la bendición y la maldición del poder sobre los muertos. Atrapado en las Islas de la Sombra, sus únicos compañeros son cadáveres en descomposición y los espíritus aullantes que atrae. Sus monstruosos actos ocultan un objetivo noble: liberar a su hogar de la maldición de la Ruina.",
       info: {
         attack: 6,
         defense: 6,
         magic: 4,
-        difficulty: 6
+        difficulty: 6,
       },
       image: {
         full: "Yorick.png",
@@ -6556,7 +6556,7 @@ export default {
         x: 240,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Fighter", "Tank"],
       partype: "MP",
@@ -6580,8 +6580,8 @@ export default {
         attackdamage: 57,
         attackdamageperlevel: 5,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2
-      }
+        attackspeedperlevel: 2,
+      },
     },
     Zac: {
       version: "6.24.1",
@@ -6593,12 +6593,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zac_0.jpg",
       blurb:
-        "Zac is the product of a Zaun experiment to manufacture a hexchem-engineered supersoldier - the Zaun Amorphous Combatant. Combining brute strength with limitless flexibility, he is a versatile juggernaut: a creative fighter who bounces over obstacles ...",
+        "Zac es el producto de un derrame tóxico que pasó por una soldadura quimtech y que cayó en una caverna aislada en lo profundo del Sumidero de Zaun. A pesar de su humilde origen, Zac pasó de ser un fluido primigenio a un ser pensante que vive en las tuberías de la ciudad y que emerge de vez en cuando para ayudar a quienes lo necesitan o para reconstruir la infraestructura rota de Zaun.",
       info: {
         attack: 3,
         defense: 7,
         magic: 7,
-        difficulty: 8
+        difficulty: 8,
       },
       image: {
         full: "Zac.png",
@@ -6607,7 +6607,7 @@ export default {
         x: 288,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Tank", "Fighter"],
       partype: "None",
@@ -6631,8 +6631,8 @@ export default {
         attackdamage: 59.67,
         attackdamageperlevel: 3.375,
         attackspeedoffset: -0.02,
-        attackspeedperlevel: 1.6
-      }
+        attackspeedperlevel: 1.6,
+      },
     },
     Zed: {
       version: "6.24.1",
@@ -6644,12 +6644,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zed_0.jpg",
       blurb:
-        "Zed is the first ninja in 200 years to unlock the ancient, forbidden ways. He defied his clan and master, casting off the balance and discipline that had shackled him all his life. Zed now offers power to those who embrace knowledge of the shadows, ...",
+        "Implacable y despiadado, Zed es el líder de la Orden de la Sombra, una organización que él creó con la intención de militarizar las tradiciones de artes marciales y mágicas de Jonia para repeler a los invasores noxianos. Durante la guerra, la desesperación lo llevó a revelar la forma secreta de las sombras, una malévola magia espiritual tan poderosa como corrupta y peligrosa. Zed dominó todas esas técnicas prohibidas para destruir cualquier amenaza para su nación o su nueva orden.",
       info: {
         attack: 9,
         defense: 2,
         magic: 1,
-        difficulty: 7
+        difficulty: 7,
       },
       image: {
         full: "Zed.png",
@@ -6658,7 +6658,7 @@ export default {
         x: 336,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Assassin", "Fighter"],
       partype: "Energy",
@@ -6682,8 +6682,8 @@ export default {
         attackdamage: 54.712,
         attackdamageperlevel: 3.4,
         attackspeedoffset: -0.03,
-        attackspeedperlevel: 2.1
-      }
+        attackspeedperlevel: 2.1,
+      },
     },
     Ziggs: {
       version: "6.24.1",
@@ -6695,12 +6695,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ziggs_0.jpg",
       blurb:
-        "Ziggs was born with a talent for tinkering, but his chaotic, hyperactive nature was unusual among yordle scientists. Aspiring to be a revered inventor like Heimerdinger, he rattled through ambitious projects with manic zeal, emboldened by both his ...",
+        "Con un amor por las grandes bombas y los fusibles cortos, el yordle Ziggs es una explosiva fuerza de la naturaleza. Como asistente de un inventor en Piltóver, estaba aburrido de su predecible vida y se hizo amigo de una loca bombardera de cabello azul llamada Jinx. Después de una loca noche en la ciudad, Ziggs tomó su consejo y se mudó a Zaun, donde ahora explora sus fascinaciones con más libertad, aterrorizando tanto a los químicos como a ciudadanos comunes en su misión incansable de hacer estallar las cosas.",
       info: {
         attack: 2,
         defense: 4,
         magic: 9,
-        difficulty: 4
+        difficulty: 4,
       },
       image: {
         full: "Ziggs.png",
@@ -6709,7 +6709,7 @@ export default {
         x: 384,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage"],
       partype: "MP",
@@ -6733,8 +6733,8 @@ export default {
         attackdamage: 54.208,
         attackdamageperlevel: 3.1,
         attackspeedoffset: -0.04734,
-        attackspeedperlevel: 2
-      }
+        attackspeedperlevel: 2,
+      },
     },
     Zilean: {
       version: "6.24.1",
@@ -6746,12 +6746,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zilean_0.jpg",
       blurb:
-        "In the wastelands of Urtistan, there was once a great city. It perished long ago in a terrible Rune War, like most of the lands below the Great Barrier. Nevertheless, one man survived: a sorcerer named Zilean. Being obsessed with time, it was only ...",
+        "Anteriormente un poderoso mago de Icathia, Zilean se obsesionó con el paso del tiempo después de presenciar la destrucción de su tierra por el Vacío. No dando ni un minuto para lamentar la catastrófica pérdida, invocó a ancestrales magias del tiempo para revelar todos los posibles resultados. Habiéndose convertido en un inmortal funcionalmente, Zilean ahora se mueve entre pasado, presente y futuro, manipulando y distorsionando el flujo del tiempo a su alrededor, siempre en búsqueda de ese escurridizo momento que regresará el reloj y revertirá la destrucción de Icathia.",
       info: {
         attack: 2,
         defense: 5,
         magic: 8,
-        difficulty: 6
+        difficulty: 6,
       },
       image: {
         full: "Zilean.png",
@@ -6760,7 +6760,7 @@ export default {
         x: 432,
         y: 0,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Support", "Mage"],
       partype: "MP",
@@ -6784,8 +6784,8 @@ export default {
         attackdamage: 51.64,
         attackdamageperlevel: 3,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.13
-      }
+        attackspeedperlevel: 2.13,
+      },
     },
     Zyra: {
       version: "6.24.1",
@@ -6797,12 +6797,12 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zyra_0.jpg",
       blurb:
-        "Longing to take control of her fate, the ancient, dying plant Zyra transferred her consciousness into a human body for a second chance at life. Centuries ago, she and her kind dominated the Kumungu Jungle, using thorns and vines to consume any animal ...",
+        "Nacida en una antigua y mágica catástrofe, Zyra es la manifestación de la ira de la naturaleza: una seductora mezcla entre planta y humana que crea vida nueva a cada paso. Ve a los mortales de Valoran como poco más que presa para su progenie de semillas y no le molesta acabarlos con lluvias de mortales espinas. Aunque su verdadero propósito no se ha revelado, Zyra recorre el mundo satisfaciendo sus más básicas necesidades de colonizarlo y despojarlo de cualquier otra forma de vida.",
       info: {
         attack: 4,
         defense: 3,
         magic: 8,
-        difficulty: 7
+        difficulty: 7,
       },
       image: {
         full: "Zyra.png",
@@ -6811,7 +6811,7 @@ export default {
         x: 0,
         y: 48,
         w: 48,
-        h: 48
+        h: 48,
       },
       tags: ["Mage", "Support"],
       partype: "MP",
@@ -6835,8 +6835,8 @@ export default {
         attackdamage: 53.376,
         attackdamageperlevel: 3.2,
         attackspeedoffset: 0,
-        attackspeedperlevel: 2.11
-      }
-    }
-  }
+        attackspeedperlevel: 2.11,
+      },
+    },
+  },
 };

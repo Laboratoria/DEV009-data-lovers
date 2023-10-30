@@ -9,7 +9,7 @@
     "pretest": "npm run eslint && npm run htmlhint",
     "test": "jest --verbose --coverage",
     "open-coverage-report": "opener ./coverage/lcov-report/index.html",
-    "start": "serve src/",
+    "start": "serve src/ -p 5000",
     "deploy": "gh-pages -d src"
   },
   "devDependencies": {
@@ -21,7 +21,7 @@
     "htmlhint": "^1.0.0",
     "jest": "^27.0.1",
     "opener": "^1.5.1",
-    "serve": "^13.0.2"
+    "serve": "^14.2.0"
   },
   "engines": {
     "node": ">=16.x"
@@ -30,5 +30,8 @@
     "createdAt": "2023-06-07T21:05:53.200Z",
     "version": "6.3.0",
     "commit": "19ca89e6e299d9b55d5e47f92352b74ee10a3c0a"
+  },
+  "dependencies": {
+    "chart.js": "^4.3.0"
   }
 }
